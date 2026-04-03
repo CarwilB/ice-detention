@@ -1,0 +1,169 @@
+---
+title: "Wikipedia Wikitext Generator"
+subtitle: "Copyable {{Infobox prison}} and {{Bar chart}} wikitext for ICE detention facilities"
+format:
+  html:
+    code-fold: true
+    toc: true
+    toc-depth: 2
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+# Default quarto command to render to quarto-website:
+# quarto render infobox-generator.qmd --output-dir ../quarto-website/docs/private/
+library(targets)
+library(dplyr)
+library(htmltools)
+source("R/crosswalk.R")
+source("R/wikipedia.R")
+source("scripts/gh-copy-assets.R")
+
+fw   <- tar_read(facilities_fy26_wiki)
+fp   <- tar_read(facility_presence)
+cf   <- tar_read(panel_facilities)
+geo  <- tar_read(facilities_geocoded_full)
+panel <- tar_read(facilities_panel)
+xwalk <- tar_read(facility_crosswalk)
+```
+
+```{r}
+#| label: helpers
+#| include: false
+
+wikitext_block <- function(id, label, content) {
+  tagList(
+    tags$div(
+      style = "margin: 8px 0;",
+      tags$button(
+        class = "copy-btn",
+        onclick = sprintf("copyTableToClipboard('%s', this)", id),
+        label
+      )
+    ),
+    tags$pre(
+      tags$code(content),
+      style = "background-color: #f6f8fa; padding: 12px; border-radius: 6px; overflow-x: auto; font-size: 13px;"
+    ),
+    tags$textarea(
+      id = id,
+      style = "position: absolute; left: -9999px; height: 0; width: 0; overflow: hidden;",
+      readonly = TRUE,
+      content
+    )
+  )
+}
+
+wiki_link <- function(slug) {
+  if (is.null(slug) || is.na(slug) || slug == "") return(NULL)
+  url <- paste0("https://en.wikipedia.org/wiki/", gsub(" ", "_", slug))
+  tags$a(href = url, target = "_blank", slug, style = "margin-left: 8px; font-size: 13px;")
+}
+
+facility_block <- function(cid, facility_name, facility_city, facility_state,
+                           wiki_slug = NA_character_) {
+  ib <- generate_infobox(
+    cid,
+    panel_facilities = cf,
+    presence = fp,
+    geocoded = geo,
+    panel = panel,
+    crosswalk = xwalk,
+    wiki_matches = fw
+  )
+
+  bar <- generate_adp_bar_chart(cid, panel, fp)
+
+  tagList(
+    tags$details(
+      tags$summary(
+        tags$strong(facility_name),
+        tags$span(
+          paste0(" — ", facility_city, ", ", facility_state),
+          style = "color: #586069;"
+        ),
+        wiki_link(wiki_slug)
+      ),
+      wikitext_block(paste0("ib_", cid), "Copy Infobox", ib),
+      if (nzchar(bar)) wikitext_block(paste0("bar_", cid), "Copy Bar Chart", bar)
+    ),
+    tags$hr(style = "border: none; border-top: 1px solid #e1e4e8; margin: 6px 0;")
+  )
+}
+
+render_facility_blocks <- function(df) {
+  blocks <- purrr::pmap(
+    df |> select(canonical_id, facility_name, facility_city, facility_state,
+                 wiki_slug),
+    \(canonical_id, facility_name, facility_city, facility_state, wiki_slug)
+      facility_block(canonical_id, facility_name, facility_city, facility_state,
+                     wiki_slug)
+  )
+  tagList(blocks)
+}
+```
+
+```{r}
+#| label: classify-facilities
+#| include: false
+
+has_article <- fw |>
+  filter(!is.na(wiki_slug), wiki_slug != "") |>
+  arrange(facility_name)
+
+has_match_only <- fw |>
+  filter((is.na(wiki_slug) | wiki_slug == ""),
+         !is.na(wiki_match), wiki_match != "") |>
+  arrange(facility_name)
+
+redlinks <- fw |>
+  filter(is.na(wiki_slug) | wiki_slug == "",
+         is.na(wiki_match) | wiki_match == "") |>
+  arrange(facility_name)
+```
+
+```{r}
+#| label: copy-assets
+#| echo: false
+#| results: asis
+include_table_assets()
+```
+
+## Existing Wikipedia articles
+
+**`r nrow(has_article)`** facilities with a confirmed Wikipedia article. Use these to add or update infoboxes and population charts on existing pages.
+
+```{r}
+#| label: existing-articles
+#| echo: false
+#| results: asis
+render_facility_blocks(has_article)
+```
+
+## Unmatched facilities with a fuzzy Wikipedia match
+
+**`r nrow(has_match_only)`** facilities matched to a Wikipedia title by name similarity but not confirmed as the correct article. Check the linked page before using.
+
+```{r}
+#| label: fuzzy-matches
+#| echo: false
+#| results: asis
+
+# Show the fuzzy wiki_match as the link for review
+render_facility_blocks(
+  has_match_only |> mutate(wiki_slug = wiki_match)
+)
+```
+
+## Red-link facilities
+
+**`r nrow(redlinks)`** facilities with no Wikipedia article or match. Each section contains wikitext ready to paste into a new article.
+
+```{r}
+#| label: redlinks
+#| echo: false
+#| results: asis
+render_facility_blocks(redlinks)
+```

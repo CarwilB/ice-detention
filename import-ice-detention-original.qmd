@@ -62,7 +62,7 @@ This code for the download only needs to executed once. The `eval: false` option
 
 # Simple single-file version
 data_url <- "https://www.ice.gov/doclib/detention/FY26_detentionStats02022026.xlsx"
-local_file <- "data/FY26_detentionStats02022026.xlsx"
+local_file <- "data/ice/FY26_detentionStats02022026.xlsx"
 sheet_name <- "Facilities FY26"
 
 httr::GET(data_url, write_disk(local_file, overwrite = TRUE))
@@ -86,14 +86,14 @@ data_file_info <- tibble(
     "https://www.ice.gov/doclib/detention/FY24_detentionStats.xlsx",
     "https://www.ice.gov/doclib/detention/FY25_detentionStats09242025.xlsx",
     "https://www.ice.gov/doclib/detention/FY26_detentionStats02022026.xlsx"),
-  local_file = c("data/FY19-detentionstats.xlsx",
-    "data/FY20-detentionstats.xlsx",
-    "data/FY21-detentionstats.xlsx",
-    "data/FY22-detentionStats.xlsx",
-    "data/FY23_detentionStats.xlsx",
-    "data/FY24_detentionStats.xlsx",
-    "data/FY25_detentionStats09242025.xlsx",
-    "data/FY26_detentionStats02022026.xlsx"),
+  local_file = c("data/ice/FY19-detentionstats.xlsx",
+    "data/ice/FY20-detentionstats.xlsx",
+    "data/ice/FY21-detentionstats.xlsx",
+    "data/ice/FY22-detentionStats.xlsx",
+    "data/ice/FY23_detentionStats.xlsx",
+    "data/ice/FY24_detentionStats.xlsx",
+    "data/ice/FY25_detentionStats09242025.xlsx",
+    "data/ice/FY26_detentionStats02022026.xlsx"),
   sheet_name = c("Facilities FY19", "Facilities EOYFY20 ", "Facilities FY21 YTD",
     "Facilities FY22", "Facilities EOFY23",
     "Facilities EOFY24", "Facilities FY25", "Facilities FY26"),
@@ -460,7 +460,7 @@ aggregate_facilties_data <- function(facilities_data) {
         str_detect(facility_type_detailed, "DIGSA") ~ "Dedicated Migrant Detention Center",
         str_detect(facility_type_detailed, "STATE") ~ "State Migrant Detention Center",
         str_detect(facility_type_detailed, "BOP") ~ "Federal Prison",
-        str_detect(facility_type_detailed, "Family") ~ "Private Family Detention Center",
+        str_detect(facility_type_detailed, "FAMILY") ~ "Private Family Detention Center",
         str_detect(facility_type_detailed, "CDF") ~ "Private Migrant Detention Center",
         str_detect(facility_type_detailed, "USMS CDF") ~ "Private Migrant Detention Center",
         str_detect(facility_type_detailed, "SPC") ~ "ICE Migrant Detention Center",
@@ -1020,7 +1020,7 @@ Next step is to check for how many of the items with Wikipedia links are in thes
 Further step is to merge these tables together and integrate the Wikipedia links and useful Wikipedia data, which is mostly the Management column.
 
 ```{r search-wikipedia-for-matches-to-fy26}
-source("src/add-wikipedia-matches.R")
+source("R/add-wikipedia-matches.R")
 
 # To generate this table, we're actually inserting this code
 # AFTER the next chunk (add-match-table-to-fy26-ice-data), but
@@ -1239,7 +1239,7 @@ get_wikitable <- function(df, caption = NULL, class = "wikitable sortable",
 ```
 
 ```{r enable-copy-to-wikitext, echo=FALSE}
-source(here::here("src","gh-copy-assets.R"), local = knitr::knit_global())
+source(here::here("R","gh-copy-assets.R"), local = knitr::knit_global())
 include_table_assets() # This injects the CSS and JS once
 ```
 
@@ -1260,8 +1260,7 @@ get_wikitable(facilities_wikitable,
 
 Update complete.
 
-:::{.column-screen-inset-right}
-
+::: column-screen-inset-right
 ```{r treemap}
 #| fig-width: 14  # Increase this to fill the inset/screen space
 #| fig-asp: 0.618 # Controls the height relative to width

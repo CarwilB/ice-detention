@@ -1,8 +1,9 @@
-library(htmltools)
+# Copy-to-clipboard button helpers for Quarto HTML output.
+# Not part of the targets pipeline — lives in scripts/ for interactive use.
 
 include_table_assets <- function() {
-  tagList(
-    tags$style(HTML("
+  htmltools::tagList(
+    htmltools::tags$style(htmltools::HTML("
       .copy-btn {
         background-color: #24292e;
         color: white;
@@ -18,7 +19,7 @@ include_table_assets <- function() {
       .copy-btn:hover { background-color: #0366d6; }
       .copy-btn:active { transform: scale(0.98); }
     ")),
-    tags$script(HTML("
+    htmltools::tags$script(htmltools::HTML("
       function copyTableToClipboard(id, btn) {
         var textArea = document.getElementById(id);
         textArea.select();

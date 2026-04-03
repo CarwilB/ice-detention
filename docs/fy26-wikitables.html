@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>FY26 Wikipedia Tables</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="fy26-wikitables_files/libs/clipboard/clipboard.min.js"></script>
+<script src="fy26-wikitables_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="fy26-wikitables_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="fy26-wikitables_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="fy26-wikitables_files/libs/quarto-html/popper.min.js"></script>
+<script src="fy26-wikitables_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="fy26-wikitables_files/libs/quarto-html/anchor.min.js"></script>
+<link href="fy26-wikitables_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="fy26-wikitables_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="fy26-wikitables_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="fy26-wikitables_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="fy26-wikitables_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">FY26 Wikipedia Tables</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Preview of 10 rows from each table variant, followed by a button to copy the full wikitext to clipboard.</p>
+<section id="standard-wikitable" class="level2">
+<h2 class="anchored" data-anchor-id="standard-wikitable">Standard wikitable</h2>
+<p>Links are validated against the live Wikipedia API via <code>check_wiki_articles()</code>. Only titles confirmed to exist become wikilinks; non-existent titles (parenthetical display names, red links in the source table) fall through to plain text.</p>
+<pre><code>validate_slugs: clearing 44 non-existent Wikipedia title(s): Adelanto ICE Processing Center, Broward Transitional Center(formerly Wackenhut Corrections Corporation), Butler County Jail, Cass County Jail, Chase County Jail, Chippewa County Jail, Clinton County Correctional Facility, Clinton County Jail, Aurora Contract Detention Facility(ICE Processing Center), Dodge County Detention Facility(Dodge County Jail), El Paso Service Processing Center, Elizabeth Detention Center, Eloy Detention Center(Eloy Federal Contract Facility), Etowah County Jail, Farmville Detention Center, Grayson County Jail, Hardin County Jail, Limestone County Detention Center, Lincoln County Jail, Linn County Correctional Center(Linn County Jail), Madison County Jail, Marion County Jail, Miller County Jail, Minicassia Detention Center, Minnehaha County Jail, Natrona County Jail, Niagara County Jail, Northern Regional Jail, Otero County Processing Center(formerly Otero County Prison), Pine Prairie Correctional Center, Plymouth County Correctional(Plymouth House of Corrections), Polk County Jail, Riverside Regional Jail, Rockingham County Jail, Sebastian County Detention Center, Seneca County Jail, Sherburne County Jail, T. Don Hutto Family Residential Facility(Hutto CCA), Torrance County Detention Facility(Torrance / Estancia, NM), Val Verde Correctional Facility and County Jail(Val Verde Detention Center), Purgatory Correctional Facility (Washington County Jail), Washoe County Jail, Weber County Jail, West Tennessee Detention Facility</code></pre>
+<pre><code>{| class="wikitable sortable"
+|+ ICE Detention Facilities in FY26
+! Facility Name !! Status (year) !! Location !! Facility Type !! Authority !! Management !! Average Daily Population !! Minimum Capacity !! Demographics
+|-
+| [[Adams County Correctional Center]] || Active (FY19 – FY26) || [[Natchez, MS]] || Jail || DIGSA || CoreCivic || 2162 || 1436 || Male
+|-
+| [[Adelanto Detention Center|Adelanto ICE Processing Center]] || Active (FY11 – FY26) || [[Adelanto, CA]] || Private Migrant Detention Center || CDF || GEO Group || 1807 ||  640 || Male
+|-
+| Alexandria Staging Facility || Active (FY19 – FY26) || [[Alexandria, LA]] || ICE Short-Term Migrant Detention Center || STAGING || GEO Group ||  413 ||  || Male
+|-
+| Allegany County Jail || Active (FY25 – FY26) || [[Belmont, NY]] || Jail || USMS IGA || County (Sheriff) ||    5 ||  || Female/Male
+|-
+| Allen Parish Public Safety Complex || Active (FY16 – FY26) || [[Oberlin, LA]] || Jail || IGSA || County ||  150 ||  170 || Male
+|-
+| Anchorage Correctional Complex || Active (FY26) || [[Anchorage, AK]] || Jail || USMS IGA || County (Corrections) ||    3 ||  || Male
+|-
+| [[Baker Correctional Institution]] || Active (FY26) || [[Sanderson, FL]] || State Migrant Detention Center || STATE || Florida Department of Corrections ||  859 ||  || Male
+|-
+| Baker County Sheriff Department. || Active (FY10 – FY26) || [[Macclenny, FL]] || Jail || IGSA || County ||  287 ||  250 || Female/Male
+|-
+| Baldwin County Correctional Center || Active (FY26) || [[Bay Minette, AL]] || Jail || USMS IGA || County (Sheriff) ||   19 ||  || Female/Male
+|-
+| Berlin Federal. Correctional. Institution. || Active (FY25 – FY26) || [[Berlin, NH]] || Federal Prison || BOP ||  ||  202 ||  || Male
+|-
+| [[Bluebonnet Detention Center|Bluebonnet Detention Center]] || Active (FY20 – FY26) || [[Anson, TX]] || Jail || DIGSA ||  || 1044 ||  750 || Female/Male
+|}</code></pre>
+<div class="cell">
+<div class="cell-output-display">
+<style>
+      .copy-btn {
+        background-color: #24292e;
+        color: white;
+        border: 1px solid rgba(27,31,35,.15);
+        padding: 5px 12px;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-bottom: 8px;
+        transition: 0.2s;
+      }
+      .copy-btn:hover { background-color: #0366d6; }
+      .copy-btn:active { transform: scale(0.98); }
+    </style>
+<script>
+      function copyTableToClipboard(id, btn) {
+        var textArea = document.getElementById(id);
+        textArea.select();
+        textArea.setSelectionRange(0, 99999); // For mobile
+        document.execCommand('copy');
+        
+        var originalText = btn.innerText;
+        btn.innerText = '✔️ Copied!';
+        btn.style.backgroundColor = '#28a745';
+        
+        setTimeout(function() {
+          btn.innerText = originalText;
+          btn.style.backgroundColor = '#24292e';
+        }, 2000);
+      }
+    </script>
+</div>
+<div class="cell-output-display">
+<button class="copy-btn" onclick="copyTableToClipboard('copy_target_5819', this)">Copy Wikitext (Standard)</button>
+<textarea id="copy_target_5819" style="position: absolute; left: -9999px; height: 0; width: 0; overflow: hidden;" readonly="TRUE">{| class="wikitable sortable"
+|+ ICE Detention Facilities in FY26
+! Facility Name !! Status (year) !! Location !! Facility Type !! Authority !! Management !! Average Daily Population !! Minimum Capacity !! Demographics
+|-
+| [[Adams County Correctional Center]] || Active (FY19 – FY26) || [[Natchez, MS]] || Jail || DIGSA || CoreCivic || 2162 || 1436 || Male
+|-
+| [[Adelanto Detention Center|Adelanto ICE Processing Center]] || Active (FY11 – FY26) || [[Adelanto, CA]] || Private Migrant Detention Center || CDF || GEO Group || 1807 ||  640 || Male
+|-
+| Alexandria Staging Facility || Active (FY19 – FY26) || [[Alexandria, LA]] || ICE Short-Term Migrant Detention Center || STAGING || GEO Group ||  413 ||  || Male
+|-
+| Allegany County Jail || Active (FY25 – FY26) || [[Belmont, NY]] || Jail || USMS IGA || County (Sheriff) ||    5 ||  || Female/Male
+|-
+| Allen Parish Public Safety Complex || Active (FY16 – FY26) || [[Oberlin, LA]] || Jail || IGSA || County ||  150 ||  170 || Male
+|-
+| Anchorage Correctional Complex || Active (FY26) || [[Anchorage, AK]] || Jail || USMS IGA || County (Corrections) ||    3 ||  || Male
+|-
+| [[Baker Correctional Institution]] || Active (FY26) || [[Sanderson, FL]] || State Migrant Detention Center || STATE || Florida Department of Corrections ||  859 ||  || Male
+|-
+| Baker County Sheriff Department. || Active (FY10 – FY26) || [[Macclenny, FL]] || Jail || IGSA || County ||  287 ||  250 || Female/Male
+|-
+| Baldwin County Correctional Center || Active (FY26) || [[Bay Minette, AL]] || Jail || USMS IGA || County (Sheriff) ||   19 ||  || Female/Male
+|-
+| Berlin Federal. Correctional. Institution. || Active (FY25 – FY26) || [[Berlin, NH]] || Federal Prison || BOP ||  ||  202 ||  || Male
+|-
+| [[Bluebonnet Detention Center|Bluebonnet Detention Center]] || Active (FY20 – FY26) || [[Anson, TX]] || Jail || DIGSA ||  || 1044 ||  750 || Female/Male
+|-
+| [[Boone County Jail]] || Active (FY10 – FY26) || [[Burlington, KY]] || Jail || USMS IGA || Boone County Sheriff's Department ||  201 ||  || Female/Male
+|-
+| Brooklyn MDC || Active (FY25 – FY26) || [[Brooklyn, NY]] || Federal Prison || BOP ||  ||  111 ||  || Female/Male
+|-
+| Broome County Jail || Active (FY25 – FY26) || [[Binghamton, NY]] || Jail || USMS IGA ||  ||   47 ||  || Female/Male
+|-
+| Broward County Jail || Active (FY26) || [[Fort Lauderdale, FL]] || Jail || IGSA ||  ||    3 ||  || Female/Male
+|-
+| [[Broward Transitional Center]] || Active (FY10 – FY26) || [[Pompano Beach, FL]] || Private Migrant Detention Center || CDF || GEO Group ||  679 ||  700 || Female/Male
+|-
+| Buffalo Service Processing Center || Active (FY10 – FY26) || [[Batavia, NY]] || ICE Migrant Detention Center || SPC || Ahtna Global Services ||  738 ||  400 || Male
+|-
+| Burleigh County || Active (FY25 – FY26) || [[Bismarck, ND]] || Jail || USMS IGA ||  ||   17 ||  || Female/Male
+|-
+| Butler County Jail || Active (FY25 – FY26) || [[Hamilton, OH]] || Jail || USMS IGA || County (Sheriff) ||  360 ||  || Female/Male
+|-
+| Calhoun County Correctional Center || Active (FY10 – FY26) || [[Battle Creek, MI]] || Jail || IGSA || County (Sheriff) ||  173 ||   75 || Female/Male
+|-
+| California City Immigration Processing Center || Active (FY25 – FY26) || [[California City, CA]] || Private Migrant Detention Center || CDF || CoreCivic || 1036 || 2560 || Female/Male
+|-
+| [[Cambria County Jail|Cambria County Prison]] || Active (FY26) || [[Ebensburg, PA]] || Jail || USMS IGA || Cambria County ||   31 ||  || Male
+|-
+| Campbell County Detention Center || Active (FY25 – FY26) || [[Newport, KY]] || Jail || USMS IGA ||  ||  140 ||  || Female/Male
+|-
+| Caroline Detention Facility || Active (FY19 – FY26) || [[Bowling Green, VA]] || Jail || DIGSA ||  ||  344 ||  224 || Female/Male
+|-
+| Cascade County Jail, Montana || Active (FY26) || [[Great Falls, MT]] || Jail || USMS IGA || County (Sheriff) ||    4 ||  || Male
+|-
+| Cass County Jail || Active (FY25 – FY26) || [[Plattsmouth, NE]] || Jail || USMS IGA || County (Sheriff) ||   15 ||  || Female/Male
+|-
+| [[Central Arizona Florence Correctional Complex|Central Arizona Florence Correctional Complex]] || Active (FY10 – FY26) || [[Florence, AZ]] || Private Migrant Detention Center || USMS CDF || CoreCivic ||  517 ||  || Male
+|-
+| [[LaSalle Detention Center|Central Louisiana ICE Processing Center (CLIPC)]] || Active (FY10 – FY26) || [[Jena, LA]] || Jail || IGSA || GEO Group || 1173 || 1170 || Male
+|-
+| Chase County Jail || Active (FY10 – FY26) || [[Cottonwood Falls, KS]] || Jail || IGSA || County (Sheriff) ||  112 ||  || Female/Male
+|-
+| Chavez Detention Center || Active (FY26) || [[Roswell, NM]] || Jail || USMS IGA ||  ||    2 ||  || Female/Male
+|-
+| Chippewa County SSM || Active (FY10 – FY26) || [[Sault Ste. Marie, MI]] || Jail || IGSA || Chippewa County Sheriff's Department ||   38 ||  || Male
+|-
+| Chittenden Regional Correctional Facility || Active (FY25 – FY26) || [[South Burlington, VT]] || Jail || USMS IGA ||  ||    5 ||  || Female/Male
+|-
+| Christian County Jail || Active (FY26) || [[Hopkinsville, KY]] || Jail || USMS IGA ||  ||  101 ||  || Female/Male
+|-
+| [[Cibola County Correctional Center]] || Active (FY17 – FY26) || [[Milan, NM]] || Jail || IGSA || CoreCivic ||  231 ||  || Male
+|-
+| Cimmarron Correctional Facility || Active (FY25 – FY26) || [[Cushing, OK]] || Jail || USMS IGA ||  ||  588 ||  || Male
+|-
+| Clark County Jail (Indiana) || Active (FY25 – FY26) || [[Jeffersonville, IN]] || Jail || USMS IGA ||  ||   94 ||  || Female/Male
+|-
+| Clay County Justice Center || Active (FY13 – FY26) || [[Brazil, IN]] || Jail || USMS IGA || County (Sheriff) ||  238 ||  || Female/Male
+|-
+| Clinton County Correctional Facility || Active (FY24 – FY26) || [[McElhattan, PA]] || Jail || USMS IGA ||  ||   92 ||  || Female/Male
+|-
+| Clinton County Jail || Active (FY24 – FY26) || [[Plattsburgh, NY]] || Jail || USMS IGA || County (Sheriff) ||    4 ||  || Female/Male
+|-
+| Clinton County Jail || Active (FY25 – FY26) || [[Frankfort, IN]] || Jail || USMS IGA ||  ||   26 ||  || Female/Male
+|-
+| Coastal Bend Detention Facility || Active (FY17 – FY26) || [[Robstown, TX]] || Jail || USMS IGA || GEO Group ||   56 ||  || Female/Male
+|-
+| Collier County Naples Jail Center || Active (FY10 – FY26) || [[Naples, FL]] || Jail || IGSA || County (Sheriff) ||   39 ||  || Female/Male
+|-
+| Correctional. Center of Northwest Ohio || Active (FY25 – FY26) || [[Stryker, OH]] || Jail || USMS IGA ||  ||   72 ||  || Male
+|-
+| Crow Wing County Jail || Active (FY26) || [[Brainerd, MN]] || Jail || USMS IGA ||  ||   22 ||  || Female/Male
+|-
+| [[Cumberland County Jail]] || Active (FY22 – FY26) || [[Portland, ME]] || Jail || USMS IGA || County (Sheriff) ||   62 ||  || Female/Male
+|-
+| Dakota County Jail || Active (FY25 – FY26) || [[Dakota City, NE]] || Jail || USMS IGA || County (Sheriff) ||   27 ||  || Female/Male
+|-
+| Dallas County Jail - Lew Sterrett Justice Center || Active (FY19 – FY26) || [[Dallas, TX]] || Jail || USMS IGA || CoreCivic ||    1 ||  || Female/Male
+|-
+| Daviess County Detention || Active (FY26) || [[Owensboro, KY]] || Jail || USMS IGA ||  ||   25 ||  || Female/Male
+|-
+| Davis County || Active (FY26) || [[Farmington, UT]] || Jail || IGSA ||  ||    4 ||  || Female/Male
+|-
+| [[Delaney Hall|Delaney Hall Detention Facility]] || Active (FY25 – FY26) || [[Newark, NJ]] || Private Migrant Detention Center || CDF || GEO Group ||  905 ||  700 || Female/Male
+|-
+| Denver Contract Detention Facility || Active (FY10 – FY26) || [[Aurora, CO]] || Private Migrant Detention Center || CDF || GEO Group || 1226 ||  600 || Female/Male
+|-
+| Department of Corrections Hagatna || Active (FY19 – FY26) || [[Hagatna, GU]] || Jail || USMS IGA ||  ||   16 ||  || Male
+|-
+| Desert View Annex || Active (FY11 – FY26) || [[Adelanto, CA]] || Private Migrant Detention Center || CDF || GEO Group ||  411 ||  480 || Male
+|-
+| Diamondback Correctional Facility || Active (FY26) || [[Watonga, OK]] || Jail || DIGSA || CoreCivic ||   64 || 1200 || Female/Male
+|-
+| [[South Texas Family Residential Center|Dilley Immigration Processing Center]] || Active (FY25 – FY26) || [[Dilley, TX]] || Family Detention Center || FAMILY || CoreCivic ||  867 || 2400 || Female/Male
+|-
+| Dodge County Jail || Active (FY10 – FY26) || [[Juneau, WI]] || Jail || USMS IGA || Dodge County Sheriff's Department ||  100 ||  || Female/Male
+|-
+| Dona Ana County Detention Center || Active (FY26) || [[Las Cruces, NM]] || Jail || USMS IGA ||  ||    1 ||  || Female/Male
+|-
+| Douglas County || Active (FY25 – FY26) || [[Superior, WI]] || Jail || USMS IGA ||  ||   27 ||  || Female/Male
+|-
+| East Hidalgo Detention Center || Active (FY25 – FY26) || [[La Villa, TX]] || Jail || USMS IGA || GEO Group ||    3 ||  || Female/Male
+|-
+| Daviess County Detention || Active (FY26) || [[Martinsburg, WV]] || Jail || IGSA ||  ||   13 ||  || Female/Male
+|-
+| [[Eden Detention Center]] || Active (FY19 – FY26) || [[Eden, TX]] || Jail || USMS IGA || CoreCivic ||  476 ||  || Male
+|-
+| El Paso County Detention Facility || Active (FY26) || [[El Paso, TX]] || Jail || IGSA ||  ||    2 ||  || Female/Male
+|-
+| El Paso Service Processing Center || Active (FY10 – FY26) || [[El Paso, TX]] || ICE Migrant Detention Center || SPC || ICE ||  805 ||  450 || Female/Male
+|-
+| El Valle Detention Facility || Active (FY19 – FY26) || [[Raymondville, TX]] || Jail || DIGSA ||  ||  941 ||  600 || Female/Male
+|-
+| Elizabeth Detention Center || Active (FY10 – FY26) || [[Elizabeth, NJ]] || Private Migrant Detention Center || CDF || CoreCivic ||  305 ||  285 || Female/Male
+|-
+| Elmore County Jail || Active (FY25 – FY26) || [[Mountain Home, ID]] || Jail || USMS IGA || County (Sheriff) ||    9 ||  || Female/Male
+|-
+| [[Eloy Detention Center]] || Active (FY10 – FY26) || [[Eloy, AZ]] || Jail || DIGSA || CoreCivic || 1332 ||  900 || Female/Male
+|-
+| [[Erie County Jail]] || Active (FY25 – FY26) || [[Erie, PA]] || Jail || USMS IGA || Erie County Sheriff's Office ||   15 ||  || Male
+|-
+| [[Camp East Montana]] || Active (FY25 – FY26) || [[El Paso, TX]] || Private Migrant Detention Center || CDF || Acquisition Logistics LLC || 2952 ||  || Female/Male
+|-
+| Etowah County Jail || Active (FY25 – FY26) || [[Gadsden, AL]] || Jail || USMS IGA || Etowah County Sheriff's Department ||   74 ||  || Male
+|-
+| Farmville Detention Center || Active (FY10 – FY26) || [[Farmville, VA]] || Jail || DIGSA || CoreCivic ||  714 ||  459 || Male
+|-
+| Fayette County Detention Center || Active (FY24 – FY26) || [[Lexington, KY]] || Jail || USMS IGA || County ||    2 ||  || Female/Male
+|-
+| FCI Atlanta || Active (FY25 – FY26) || [[Atlanta, GA]] || Federal Prison || BOP ||  ||  107 ||  || Female/Male
+|-
+| FDC Philadelphia || Active (FY25 – FY26) || [[Philadelphia, PA]] || Federal Prison || BOP ||  ||   98 ||  || Female/Male
+|-
+| Finney County Jail || Active (FY26) || [[Garden City, KS]] || Jail || IGSA ||  ||    2 ||  || Female/Male
+|-
+| Florence Service Processing Center || Active (FY10 – FY26) || [[Florence, AZ]] || ICE Migrant Detention Center || SPC || Asset Protection &amp; Security Services ||  330 ||  392 || Female/Male
+|-
+| Florence Staging Facility || Active (FY19 – FY26) || [[Florence, AZ]] || ICE Short-Term Migrant Detention Center || STAGING ||  ||  339 ||  || Male
+|-
+| Florida Soft-Sided Facility || Active (FY26) || [[Ochopee, FL]] || State Migrant Detention Center || STATE ||  || 1341 ||  || Male
+|-
+| Floyd County Jail || Active (FY25 – FY26) || [[Rome, GA]] || Jail || USMS IGA ||  ||    1 ||  || Female/Male
+|-
+| Folkston Annex IPC || Active (FY19 – FY26) || [[Folkston, GA]] || Jail || DIGSA ||  ||  276 ||  338 || Male
+|-
+| Folkston ICE Processing Center || Active (FY25 – FY26) || [[Folkston, GA]] || Jail || DIGSA ||  ||  942 || 1308 || Male
+|-
+| Folkston Main IPC || Active (FY19 – FY26) || [[Folkston, GA]] || Jail || DIGSA ||  ||  700 ||  544 || Male
+|-
+| [[Franklin County Jail (Chambersburg, Pennsylvania)|Franklin County Jail]] || Active (FY26) || [[Chambersburg, PA]] || Jail || USMS IGA ||  ||    1 ||  || 
+|-
+| Freeborn County Adult Detention Center || Active (FY10 – FY26) || [[Albert Lea, MN]] || Jail || IGSA || County (Sheriff) ||   82 ||  || Male
+|-
+| Fulton County Jail Indiana || Active (FY26) || [[Rochester, IN]] || Jail || USMS IGA ||  ||    5 ||  || Female/Male
+|-
+| Geauga County Jail || Active (FY11 – FY26) || [[Chardon, OH]] || Jail || USMS IGA || County (Sheriff) ||   21 ||  || Female/Male
+|-
+| [[Glades County Detention Center]] || Active (FY25 – FY26) || [[Moore Haven, FL]] || Jail || IGSA || Glades County Sheriff's Department ||  468 ||  500 || Female/Male
+|-
+| Golden State Annex || Active (FY20 – FY26) || [[McFarland, CA]] || Private Migrant Detention Center || CDF || GEO Group ||  620 ||  560 || Male
+|-
+| Grand Forks County Correctional Facility || Active (FY25 – FY26) || [[Grand Forks, ND]] || Jail || USMS IGA || County (Sheriff) ||   20 ||  || Female/Male
+|-
+| Grayson County Jail || Active (FY24 – FY26) || [[Leitchfield, KY]] || Jail || USMS IGA || County (Jailer) ||  158 ||  || Female/Male
+|-
+| Greene County Jail || Active (FY25 – FY26) || [[Springfield, MO]] || Jail || USMS IGA ||  ||  270 ||  || Female/Male
+|-
+| Hall County Department of Corrections || Active (FY25 – FY26) || [[Grand Island, NE]] || Jail || USMS IGA || County (Sheriff) ||   13 ||  || Female/Male
+|-
+| Hancock County Public Safety Complex || Active (FY20 – FY26) || [[Bay St. Louis, MS]] || Jail || IGSA ||  ||   27 ||  || Female/Male
+|-
+| Hardin County Jail || Active (FY25 – FY26) || [[Eldora, IA]] || Jail || USMS IGA || County (Sheriff) ||   42 ||  || Female/Male
+|-
+| Henderson Detention || Active (FY11 – FY26) || [[Henderson, NV]] || Jail || USMS IGA || City ||   91 ||  || Female/Male
+|-
+| Hillsborough County Jail || Active (FY26) || [[Tampa, FL]] || Jail || IGSA ||  ||    4 ||  || Female/Male
+|-
+| [[Federal Detention Center, Honolulu|Honolulu Federal Detention Center]] || Active (FY19 – FY26) || [[Honolulu, HI]] || Federal Prison || BOP || Federal Bureau of Prisons ||   80 ||  || Female/Male
+|-
+| Hopkins County Jail || Active (FY25 – FY26) || [[Madisonville, KY]] || Jail || USMS IGA ||  ||  164 ||  || Female/Male
+|-
+| Houston Processing Center || Active (FY10 – FY26) || [[Houston, TX]] || Private Migrant Detention Center || CDF || CoreCivic ||  883 ||  750 || Female/Male
+|-
+| IAH Secure Adult Detention Facility (Polk) || Active (FY10 – FY26) || [[Livingston, TX]] || Jail || DIGSA || Management &amp; Training Corp (MTC) ||  872 ||  350 || Male
+|-
+| Imperial Regional Detention Facility || Active (FY14 – FY26) || [[Calexico, CA]] || Private Migrant Detention Center || CDF || Management &amp; Training Corp (MTC) ||  674 ||  640 || Female/Male
+|-
+| [[Irwin County Detention Center]] || Active (FY26) || [[Ocilla, GA]] || Jail || USMS IGA || LaSalle Corrections ||  128 ||  || Female/Male
+|-
+| Jackson Parish Correctional Center || Active (FY19 – FY26) || [[Jonesboro, LA]] || Jail || IGSA ||  || 1192 ||  500 || Male
+|-
+| [[Jefferson County Jail]] || Active (FY25 – FY26) || [[Rigby, ID]] || Jail || IGSA || County ||    7 ||  || Female/Male
+|-
+| Joe Corley Processing Center || Active (FY10 – FY26) || [[Conroe, TX]] || Jail || IGSA || GEO Group ||  942 ||  || Male
+|-
+| JTF Camp Six || Active (FY25 – FY26) || [[Guantanamo Bay, Cuba]] || Military Detention Center || DOD ||  ||   11 ||  || Male
+|-
+| Kandiyohi County Jail || Active (FY19 – FY26) || [[Willmar, MN]] || Jail || IGSA ||  ||  112 ||  || Female/Male
+|-
+| Kansas City Holdroom || Active (FY26) || [[Kansas City, MO]] || Private Migrant Detention Center || CDF ||  ||    3 ||  || Female/Male
+|-
+| Karnes County Correctional Center || Active (FY26) || [[Karnes City, TX]] || Jail || USMS IGA || GEO Group ||    2 ||  || Female/Male
+|-
+| Karnes County Immigration Processing Center || Active (FY22 – FY26) || [[Karnes City, TX]] || Jail || DIGSA || GEO Group || 1199 ||  928 || Female/Male
+|-
+| Kay County Justice Facility || Active (FY19 – FY26) || [[Newkirk, OK]] || Jail || IGSA ||  ||  158 ||  || Female/Male
+|-
+| Kenton County Jail || Active (FY25 – FY26) || [[Covington, KY]] || Jail || USMS IGA ||  ||  109 ||  || Male
+|-
+| Knox County Detention Facility || Active (FY22 – FY26) || [[Knoxville, TN]] || Jail || USMS IGA ||  ||   33 ||  || Female/Male
+|-
+| Krome North Service Processing Center || Active (FY10 – FY26) || [[Miami, FL]] || ICE Migrant Detention Center || SPC || Ahtna Global Services ||  866 ||  450 || Male
+|-
+| La Salle County Regional Detention Center || Active (FY25 – FY26) || [[Encinal, TX]] || Jail || USMS IGA || County ||  255 ||  || Male
+|-
+| Lake County Jail || Active (FY25 – FY26) || [[Tavares, FL]] || Jail || IGSA ||  ||    1 ||  || Female/Male
+|-
+| Laramie County Jail || Active (FY26) || [[Cheyenne, WY]] || Jail || USMS IGA ||  ||    4 ||  || Female/Male
+|-
+| Laredo Processing Center || Active (FY10 – FY26) || [[Laredo, TX]] || Jail || DIGSA || CoreCivic ||  368 ||  || Female/Male
+|-
+| Laurel County Correctional Center || Active (FY25 – FY26) || [[London, KY]] || Jail || USMS IGA ||  ||    1 ||  || Female/Male
+|-
+| Lawrence County || Active (FY26) || [[Deadwood, SD]] || Jail || USMS IGA ||  ||   10 ||  || Female/Male
+|-
+| Leavenworth US Penitentiary || Active (FY25 – FY26) || [[Leavenworth, KS]] || Federal Prison || BOP ||  ||   58 ||  || Male
+|-
+| Lexington County Jail || Active (FY23 – FY26) || [[Lexington, SC]] || Jail || USMS IGA || County (Sheriff) ||    5 ||  || Female/Male
+|-
+| Limestone County Detention Center || Active (FY23 – FY26) || [[Groesbeck, TX]] || Jail || USMS IGA || Community Education Centers Inc. ||  254 ||  || Male
+|-
+| Lincoln County Jail || Active (FY25 – FY26) || [[North Platte, NE]] || Jail || USMS IGA ||  ||   27 ||  || Female/Male
+|-
+| Linn County Jail || Active (FY25 – FY26) || [[Cedar Rapids, IA]] || Jail || USMS IGA || Linn County Sheriff ||   39 ||  || Female/Male
+|-
+| Logan County Jail || Active (FY25 – FY26) || [[Guthrie, OK]] || Jail || USMS IGA ||  ||    5 ||  || Female/Male
+|-
+| Louisiana ICE Processing || Active (FY25 – FY26) || [[Angola, LA]] || Jail || IGSA ||  ||  180 ||  208 || Male
+|-
+| Lubbock County Detention Center || Active (FY25 – FY26) || [[Lubbock, TX]] || Jail || USMS IGA || County (Sheriff) ||    3 ||  || Female/Male
+|-
+| Madison County Jail || Active (FY25 – FY26) || [[Canton, MS]] || Jail || USMS IGA ||  ||    9 ||  || Female/Male
+|-
+| Mahoning County Jail || Active (FY25 – FY26) || [[Youngstown, OH]] || Jail || USMS IGA ||  ||   89 ||  || Female/Male
+|-
+| Marion County Jail || Active (FY25 – FY26) || [[Indianapolis, IN]] || Jail || USMS IGA || County (Sheriff) ||   55 ||  || Female/Male
+|-
+| Martin County Jail || Active (FY26) || [[Stuart, FL]] || Jail || USMS IGA ||  ||    6 ||  || Female/Male
+|-
+| Mccook Detention Center || Active (FY26) || [[McCook, NE]] || Jail || DIGSA ||  ||   77 ||  300 || Male
+|-
+| Mesa Verde ICE Processing Center || Active (FY15 – FY26) || [[Bakersfield, CA]] || Private Migrant Detention Center || CDF || GEO Group ||  377 ||  320 || Male
+|-
+| Miami Correctional Center || Active (FY26) || [[Bunker Hill, IN]] || Jail || IGSA ||  ||  405 ||  || Male
+|-
+| Miami Federal Detention || Active (FY25 – FY26) || [[Miami, FL]] || Federal Prison || BOP ||  ||  459 ||  || Female/Male
+|-
+| Miami Staging Facility || Active (FY26) || [[Miami, FL]] || ICE Short-Term Migrant Detention Center || STAGING ||  ||   20 ||  || Female/Male
+|-
+| Miller County Jail || Active (FY25 – FY26) || [[Texarkana, AR]] || Jail || USMS IGA || County (Sheriff) ||    5 ||  || Female/Male
+|-
+| Minicassia Detention Center || Active (FY26) || [[Burley, ID]] || Jail || USMS IGA || County (Sheriff) ||    4 ||  || Female/Male
+|-
+| Minnehaha County Jail || Active (FY25 – FY26) || [[Sioux Falls, SD]] || Jail || USMS IGA ||  ||    5 ||  || Female/Male
+|-
+| Monroe County Detention-Dorm || Active (FY14 – FY26) || [[Monroe, MI]] || Jail || IGSA || County (Sheriff) ||  124 ||  || Male
+|-
+| Montgomery ICE Processing Center || Active (FY19 – FY26) || [[Conroe, TX]] || Private Migrant Detention Center || CDF || GEO Group || 1227 ||  750 || Male
+|-
+| [[Moshannon Valley Correctional Center|Moshannon Valley Processing Center]] || Active (FY22 – FY26) || [[Philipsburg, Centre County, Pennsylvania|Philipsburg, PA]] || Jail || DIGSA || GEO Group || 1655 ||  800 || Female/Male
+|-
+| Muscatine County Jail || Active (FY25 – FY26) || [[Muscatine, IA]] || Jail || USMS IGA ||  ||   19 ||  || Female/Male
+|-
+| Nassau County Correctional Center || Active (FY25 – FY26) || [[East Meadow, NY]] || Jail || USMS IGA ||  ||   12 ||  || Female/Male
+|-
+| Natrona County Jail || Active (FY25 – FY26) || [[Casper, WY]] || Jail || USMS IGA || County (Sheriff) ||   14 ||  || Female/Male
+|-
+| Nelson Coleman Correction || Active (FY25 – FY26) || [[Killona, LA]] || Jail || USMS IGA ||  ||    3 ||  || Male
+|-
+| Nevada Southern Detention Center || Active (FY16 – FY26) || [[Pahrump, NV]] || Private Migrant Detention Center || USMS CDF || CoreCivic ||  457 ||  || Male
+|-
+| New Hanover County Jail || Active (FY26) || [[Castle Hayne, NC]] || Jail || USMS IGA || County (Sheriff) ||    4 ||  || Female/Male
+|-
+| Niagara County Jail || Active (FY25 – FY26) || [[Lockport, NY]] || Jail || USMS IGA || New York State Commission of Correction ||   12 ||  || Female/Male
+|-
+| North Central Regional Jail || Active (FY26) || [[Greenwood, Doddridge County, West Virginia|Greenwood, WV]] || Jail || IGSA ||  ||    3 ||  || 
+|-
+| [[North Lake Correctional Facility]] || Active (FY25 – FY26) || [[Baldwin, MI]] || Private Migrant Detention Center || CDF || GEO Group || 1413 || 1800 || Female/Male
+|-
+| [[Northeast Ohio Correctional Center]] || Active (FY25 – FY26) || [[Youngstown, OH]] || Jail || USMS IGA || CoreCivic ||  208 ||  || Male
+|-
+| Northern Regional Jail || Active (FY25 – FY26) || [[Moundsville, WV]] || Jail || IGSA || County (Corrections) ||   28 ||  || Female/Male
+|-
+| Northwest ICE Processing Center || Active (FY10 – FY26) || [[Tacoma, WA]] || Private Migrant Detention Center || CDF || GEO Group || 1380 || 1181 || Female/Male
+|-
+| Northwest Regional Corrections Center || Active (FY25 – FY26) || [[Crookston, MN]] || Jail || USMS IGA ||  ||   15 ||  || Female/Male
+|-
+| Northwest State Correctional Center || Active (FY23 – FY26) || [[Swanton, VT]] || Jail || USMS IGA || County (Corrections) ||   12 ||  || Female/Male
+|-
+| Oldham County Detention Center || Active (FY25 – FY26) || [[La Grange, KY]] || Jail || USMS IGA ||  ||  128 ||  || Female/Male
+|-
+| Orange County Jail (Florida) || Active (FY24 – FY26) || [[Orlando, FL]] || Jail || USMS IGA || County ||   71 ||  || Female/Male
+|-
+| Orange County Jail (New York) || Active (FY10 – FY26) || [[Goshen, NY]] || Jail || IGSA || County (Corrections) ||  166 ||  || Male
+|-
+| [[Otay Mesa Detention Center]] || Active (FY10 – FY26) || [[San Diego, CA]] || Private Migrant Detention Center || CDF || CoreCivic || 1487 ||  750 || Female/Male
+|-
+| [[Otero County Prison Facility|Otero County Processing Center]] || Active (FY10 – FY26) || [[Chaparral, NM]] || Jail || DIGSA || Management &amp; Training Corp (MTC) ||  896 ||  500 || Female/Male
+|-
+| Ozark County Sheriff's Office || Active (FY25 – FY26) || [[Gainesville, MO]] || Jail || IGSA ||  ||   21 ||  || 
+|-
+| Pennington County Jail (South Dakota) || Active (FY25 – FY26) || [[Rapid City, SD]] || Jail || USMS IGA || County (Sheriff) ||    4 ||  || Female/Male
+|-
+| Phelps County Jail (Missouri) || Active (FY25 – FY26) || [[Rolla, MO]] || Jail || USMS IGA ||  ||   15 ||  || Female/Male
+|-
+| Phelps County Jail (Nebraska) || Active (FY10 – FY26) || [[Holdrege, NE]] || Jail || USMS IGA || County (Sheriff) ||   24 ||  || Female/Male
+|-
+| Pickens County Detention Center || Active (FY20 – FY26) || [[Carrollton, AL]] || Jail || IGSA ||  ||   43 ||  || Female/Male
+|-
+| Pike County Jail || Active (FY10 – FY26) || [[Lords Valley, PA]] || Jail || IGSA || County (Sheriff) ||  241 ||  100 || Male
+|-
+| Pine Prairie ICE Processing Center || Active (FY16 – FY26) || [[Pine Prairie, LA]] || Jail || DIGSA || GEO Group ||  903 ||  || Male
+|-
+| [[Pinellas County Jail]] || Active (FY21 – FY26) || [[Clearwater, FL]] || Jail || USMS IGA || County (Sheriff) ||   38 ||  || Female/Male
+|-
+| [[Plymouth House of Correction|Plymouth County Correctional Facility]] || Active (FY10 – FY26) || [[Plymouth, MA]] || Jail || IGSA || Plymouth County ||  506 ||  || Male
+|-
+| Polk County Jail || Active (FY10 – FY26) || [[Des Moines, IA]] || Jail || USMS IGA || County (Sheriff) ||   53 ||  || Female/Male
+|-
+| [[Port Isabel Detention Center|Port Isabel Detention Center]] || Active (FY10 – FY26) || [[Los Fresnos, TX]] || ICE Migrant Detention Center || SPC || Ahtna Global Services || 1274 ||  650 || Female/Male
+|-
+| [[Pottawattamie County Jail]] || Active (FY21 – FY26) || [[Council Bluffs, IA]] || Jail || USMS IGA || Pottawattamie County Sheriff ||   31 ||  || Female/Male
+|-
+| Prairieland Detention Center || Active (FY17 – FY26) || [[Alvarado, TX]] || Jail || DIGSA || LaSalle Corrections ||  960 ||  525 || Female/Male
+|-
+| Putnam County Sheriff || Active (FY25 – FY26) || [[Cookeville, TN]] || Jail || USMS IGA ||  ||   18 ||  || 
+|-
+| [[Richwood Correctional Center]] || Active (FY19 – FY26) || [[Monroe, LA]] || Jail || IGSA ||  || 1084 ||  677 || Female/Male
+|-
+| [[Rio Grande Detention Center]] || Active (FY14 – FY26) || [[Laredo, TX]] || Private Migrant Detention Center || USMS CDF || GEO Group ||  623 ||  275 || Male
+|-
+| River Correctional Center || Active (FY19 – FY26) || [[Ferriday, LA]] || Jail || IGSA ||  ||  586 ||  361 || Male
+|-
+| Riverside Regional Jail || Active (FY25 – FY26) || [[Hopewell, VA]] || Jail || USMS IGA ||  ||   99 ||  || Female/Male
+|-
+| Roanoke City Jail || Active (FY26) || [[Roanoke, VA]] || Jail || USMS IGA || City ||    1 ||  || Female/Male
+|-
+| Robert A. Deyton Detention Center || Active (FY19 – FY26) || [[Lovejoy, GA]] || Jail || USMS IGA ||  ||   12 ||  || Male
+|-
+| Rockingham County Jail || Active (FY25 – FY26) || [[Harrisonburg, VA]] || Jail || USMS IGA || County (Sheriff) ||    1 ||  || Female/Male
+|-
+| Saipan Department of Corrections (Susupe) || Active (FY19 – FY26) || [[Saipan, MP]] || Jail || USMS IGA ||  ||   21 ||  || Female/Male
+|-
+| San Diego District Staging || Active (FY26) || [[San Diego, CA]] || ICE Short-Term Migrant Detention Center || STAGING ||  ||   11 ||  || Female/Male
+|-
+| San Juan Staging || Active (FY23 – FY26) || [[Guaynabo, PR]] || ICE Short-Term Migrant Detention Center || STAGING ||  ||   17 ||  100 || Female/Male
+|-
+| San Luis Regional Detention Center || Active (FY13 – FY26) || [[San Luis, AZ]] || Jail || IGSA || LaSalle Corrections ||  337 ||  100 || Female/Male
+|-
+| Sarpy County Jail || Active (FY25 – FY26) || [[Papillion, NE]] || Jail || USMS IGA ||  ||   21 ||  || Female/Male
+|-
+| Sauk County Sheriff || Active (FY25 – FY26) || [[Baraboo, WI]] || Jail || USMS IGA ||  ||   14 ||  || Female/Male
+|-
+| Sebastian County Detention Center || Active (FY24 – FY26) || [[Fort Smith, AR]] || Jail || USMS IGA || County (Sheriff) ||    2 ||  || Female/Male
+|-
+| Seneca County Jail || Active (FY10 – FY26) || [[Tiffin, OH]] || Jail || IGSA || Seneca County Sheriff's Office ||   60 ||  || Female/Male
+|-
+| Sherburne County Jail || Active (FY10 – FY26) || [[Elk River, MN]] || Jail || USMS IGA || Sherburne County Sheriff's Department ||  102 ||  || Male
+|-
+| Sioux County Jail || Active (FY26) || [[Orange City, IA]] || Jail || USMS IGA ||  ||   12 ||  || Female/Male
+|-
+| South Central Regional Jail || Active (FY22 – FY26) || [[Charleston, WV]] || Jail || IGSA || County (Corrections) ||   32 ||  || Male
+|-
+| [[South Louisiana ICE Processing Center]] || Active (FY19 – FY26) || [[Basile, LA]] || Jail || DIGSA || GEO Group ||  978 ||  700 || Female/Male
+|-
+| South Texas ICE Processing Center || Active (FY10 – FY26) || [[Pearsall, TX]] || Private Migrant Detention Center || CDF || GEO Group || 1756 || 1350 || Female/Male
+|-
+| Southern Regional || Active (FY26) || [[Beaver, WV]] || Jail || IGSA ||  ||    1 ||  || Female/Male
+|-
+| Southwestern Regional Jail || Active (FY26) || [[Holden, WV]] || Jail || IGSA ||  ||    1 ||  || 
+|-
+| St. Clair County Jail || Active (FY10 – FY26) || [[Port Huron, MI]] || Jail || IGSA || County (Sheriff) ||   47 ||  || Male
+|-
+| Ste. Genevieve County Sheriff/Jail || Active (FY25 – FY26) || [[Ste. Genevieve, MO]] || Jail || USMS IGA ||  ||  114 ||  || Female/Male
+|-
+| [[Stewart Detention Center]] || Active (FY10 – FY26) || [[Lumpkin, GA]] || Jail || DIGSA || CoreCivic || 2011 || 1600 || Female/Male
+|-
+| Strafford County Corrections || Active (FY10 – FY26) || [[Dover, NH]] || Jail || IGSA || County (Corrections) ||  146 ||  || Female/Male
+|-
+| Sweetwater County Jail || Active (FY25 – FY26) || [[Rock Springs, WY]] || Jail || USMS IGA ||  ||    9 ||  || Female/Male
+|-
+| [[T. Don Hutto Residential Center|T. Don Hutto Detention Center]] || Active (FY19 – FY26) || [[Taylor, TX]] || Private Migrant Detention Center || CDF || CoreCivic ||  458 ||  461 || Male
+|-
+| Tooele County Jail || Active (FY25 – FY26) || [[Tooele, UT]] || Jail || USMS IGA ||  ||   10 ||  || Female/Male
+|-
+| Torrance County Detention Facility || Active (FY16 – FY26) || [[Estancia, NM]] || Jail || IGSA || CoreCivic ||  371 ||  505 || Male
+|-
+| Tulsa County Jail (David L. Moss Justice Center) || Active (FY21 – FY26) || [[Tulsa, OK]] || Jail || IGSA || County (Sheriff) ||   43 ||  || Female/Male
+|-
+| Turner Guilford Knight (TGK) Jail || Active (FY26) || [[Miami, FL]] || Jail || IGSA ||  ||   10 ||  || Female/Male
+|-
+| Two Bridges Regional Jail || Active (FY25 – FY26) || [[Wiscasset, ME]] || Jail || USMS IGA ||  ||    8 ||  || Male
+|-
+| Uinta County Jail || Active (FY25 – FY26) || [[Evanston, WY]] || Jail || USMS IGA ||  ||   23 ||  || Female/Male
+|-
+| [[Val Verde Correctional Facility]] || Active (FY26) || [[Del Rio, TX]] || Jail || USMS IGA || GEO Group ||    3 ||  || Female/Male
+|-
+| Victoria County Jail || Active (FY25 – FY26) || [[Victoria, TX]] || Jail || USMS IGA ||  ||   14 ||  || Female/Male
+|-
+| Walton County Jail || Active (FY25 – FY26) || [[Defuniak Springs, FL]] || Jail || USMS IGA ||  ||   27 ||  || Female/Male
+|-
+| Ward County Jail || Active (FY25 – FY26) || [[Minot, ND]] || Jail || USMS IGA ||  ||    2 ||  || Female/Male
+|-
+| [[Washington County Jail (Fayetteville, Arkansas)|Washington County Detention Center]] || Active (FY24 – FY26) || [[Fayetteville, AR]] || Jail || USMS IGA ||  ||    6 ||  || Female/Male
+|-
+| [[Purgatory Correctional Facility|Washington County Jail (Purgatory Correctional Facility)]] || Active (FY25 – FY26) || [[Hurricane, UT]] || Jail || USMS IGA || County (Sheriff) ||   12 ||  || Female/Male
+|-
+| Washoe County Jail || Active (FY10 – FY26) || [[Reno, NV]] || Jail || USMS IGA || Washoe County Sheriff's Office ||   51 ||  || Female/Male
+|-
+| Waukesha County Jail || Active (FY25 – FY26) || [[Waukesha, WI]] || Jail || USMS IGA ||  ||    3 ||  || Female/Male
+|-
+| Webb County Detention Center (CCA) || Active (FY17 – FY26) || [[Laredo, TX]] || Jail || DIGSA || CoreCivic ||  443 ||  250 || Female/Male
+|-
+| Weber County Jail || Active (FY26) || [[Ogden, UT]] || Jail || USMS IGA ||  ||    6 ||  || Female/Male
+|-
+| Western Regional Jail And Correctional Facility || Active (FY26) || [[Barboursville, WV]] || Jail || IGSA ||  ||    8 ||  || Female/Male
+|-
+| Western Tennessee Detention Facility || Active (FY26) || [[Mason, TN]] || Jail || DIGSA || CoreCivic ||  275 ||  450 || Female/Male
+|-
+| [[Winn Correctional Center]] || Active (FY19 – FY26) || [[Winnfield, LA]] || Jail || DIGSA ||  || 1546 ||  946 || Male
+|-
+| Woodbury County Jail || Active (FY25 – FY26) || [[Sioux City, IA]] || Jail || USMS IGA ||  ||   63 ||  || Female/Male
+|-
+| [[Donald W. Wyatt Detention Facility|Wyatt Detention Center]] || Active (FY19 – FY26) || [[Central Falls, RI]] || Jail || USMS IGA || Central Falls Detention Facility Corp. ||  114 ||  || Female/Male
+|}</textarea>
+</div>
+</div>
+</section>
+<section id="all-links-wikitable-with-red-links" class="level2">
+<h2 class="anchored" data-anchor-id="all-links-wikitable-with-red-links">All-links wikitable (with red links)</h2>
+<p>Every facility name is wikilinked. Facilities without a confirmed article get a bare <code>[[Name]]</code> link, which renders as a red link on Wikipedia.</p>
+<pre><code>{| class="wikitable sortable"
+|+ ICE Detention Facilities in FY26
+! Facility Name !! Status (year) !! Location !! Facility Type !! Authority !! Management !! Average Daily Population !! Minimum Capacity !! Demographics
+|-
+| [[Adams County Correctional Center]] || Active (FY19 – FY26) || [[Natchez, MS]] || Jail || DIGSA || CoreCivic || 2162 || 1436 || Male
+|-
+| [[Adelanto Detention Center|Adelanto ICE Processing Center]] || Active (FY11 – FY26) || [[Adelanto, CA]] || Private Migrant Detention Center || CDF || GEO Group || 1807 ||  640 || Male
+|-
+| [[Alexandria Staging Facility]] || Active (FY19 – FY26) || [[Alexandria, LA]] || ICE Short-Term Migrant Detention Center || STAGING || GEO Group ||  413 ||  || Male
+|-
+| [[Allegany County Jail]] || Active (FY25 – FY26) || [[Belmont, NY]] || Jail || USMS IGA || County (Sheriff) ||    5 ||  || Female/Male
+|-
+| [[Allen Parish Public Safety Complex]] || Active (FY16 – FY26) || [[Oberlin, LA]] || Jail || IGSA || County ||  150 ||  170 || Male
+|-
+| [[Anchorage Correctional Complex]] || Active (FY26) || [[Anchorage, AK]] || Jail || USMS IGA || County (Corrections) ||    3 ||  || Male
+|-
+| [[Baker Correctional Institution]] || Active (FY26) || [[Sanderson, FL]] || State Migrant Detention Center || STATE || Florida Department of Corrections ||  859 ||  || Male
+|-
+| [[Baker County Sheriff Department.]] || Active (FY10 – FY26) || [[Macclenny, FL]] || Jail || IGSA || County ||  287 ||  250 || Female/Male
+|-
+| [[Baldwin County Correctional Center]] || Active (FY26) || [[Bay Minette, AL]] || Jail || USMS IGA || County (Sheriff) ||   19 ||  || Female/Male
+|-
+| [[Berlin Federal. Correctional. Institution.]] || Active (FY25 – FY26) || [[Berlin, NH]] || Federal Prison || BOP ||  ||  202 ||  || Male
+|-
+| [[Bluebonnet Detention Center|Bluebonnet Detention Center]] || Active (FY20 – FY26) || [[Anson, TX]] || Jail || DIGSA ||  || 1044 ||  750 || Female/Male
+|}</code></pre>
+<div class="cell">
+<div class="cell-output-display">
+<button class="copy-btn" onclick="copyTableToClipboard('copy_target_4040', this)">Copy Wikitext (All Links)</button>
+<textarea id="copy_target_4040" style="position: absolute; left: -9999px; height: 0; width: 0; overflow: hidden;" readonly="TRUE">{| class="wikitable sortable"
+|+ ICE Detention Facilities in FY26
+! Facility Name !! Status (year) !! Location !! Facility Type !! Authority !! Management !! Average Daily Population !! Minimum Capacity !! Demographics
+|-
+| [[Adams County Correctional Center]] || Active (FY19 – FY26) || [[Natchez, MS]] || Jail || DIGSA || CoreCivic || 2162 || 1436 || Male
+|-
+| [[Adelanto Detention Center|Adelanto ICE Processing Center]] || Active (FY11 – FY26) || [[Adelanto, CA]] || Private Migrant Detention Center || CDF || GEO Group || 1807 ||  640 || Male
+|-
+| [[Alexandria Staging Facility]] || Active (FY19 – FY26) || [[Alexandria, LA]] || ICE Short-Term Migrant Detention Center || STAGING || GEO Group ||  413 ||  || Male
+|-
+| [[Allegany County Jail]] || Active (FY25 – FY26) || [[Belmont, NY]] || Jail || USMS IGA || County (Sheriff) ||    5 ||  || Female/Male
+|-
+| [[Allen Parish Public Safety Complex]] || Active (FY16 – FY26) || [[Oberlin, LA]] || Jail || IGSA || County ||  150 ||  170 || Male
+|-
+| [[Anchorage Correctional Complex]] || Active (FY26) || [[Anchorage, AK]] || Jail || USMS IGA || County (Corrections) ||    3 ||  || Male
+|-
+| [[Baker Correctional Institution]] || Active (FY26) || [[Sanderson, FL]] || State Migrant Detention Center || STATE || Florida Department of Corrections ||  859 ||  || Male
+|-
+| [[Baker County Sheriff Department.]] || Active (FY10 – FY26) || [[Macclenny, FL]] || Jail || IGSA || County ||  287 ||  250 || Female/Male
+|-
+| [[Baldwin County Correctional Center]] || Active (FY26) || [[Bay Minette, AL]] || Jail || USMS IGA || County (Sheriff) ||   19 ||  || Female/Male
+|-
+| [[Berlin Federal. Correctional. Institution.]] || Active (FY25 – FY26) || [[Berlin, NH]] || Federal Prison || BOP ||  ||  202 ||  || Male
+|-
+| [[Bluebonnet Detention Center|Bluebonnet Detention Center]] || Active (FY20 – FY26) || [[Anson, TX]] || Jail || DIGSA ||  || 1044 ||  750 || Female/Male
+|-
+| [[Boone County Jail]] || Active (FY10 – FY26) || [[Burlington, KY]] || Jail || USMS IGA || Boone County Sheriff's Department ||  201 ||  || Female/Male
+|-
+| [[Brooklyn MDC]] || Active (FY25 – FY26) || [[Brooklyn, NY]] || Federal Prison || BOP ||  ||  111 ||  || Female/Male
+|-
+| [[Broome County Jail]] || Active (FY25 – FY26) || [[Binghamton, NY]] || Jail || USMS IGA ||  ||   47 ||  || Female/Male
+|-
+| [[Broward County Jail]] || Active (FY26) || [[Fort Lauderdale, FL]] || Jail || IGSA ||  ||    3 ||  || Female/Male
+|-
+| [[Broward Transitional Center]] || Active (FY10 – FY26) || [[Pompano Beach, FL]] || Private Migrant Detention Center || CDF || GEO Group ||  679 ||  700 || Female/Male
+|-
+| [[Buffalo Service Processing Center]] || Active (FY10 – FY26) || [[Batavia, NY]] || ICE Migrant Detention Center || SPC || Ahtna Global Services ||  738 ||  400 || Male
+|-
+| [[Burleigh County]] || Active (FY25 – FY26) || [[Bismarck, ND]] || Jail || USMS IGA ||  ||   17 ||  || Female/Male
+|-
+| [[Butler County Jail|Butler County Jail]] || Active (FY25 – FY26) || [[Hamilton, OH]] || Jail || USMS IGA || County (Sheriff) ||  360 ||  || Female/Male
+|-
+| [[Calhoun County Correctional Center]] || Active (FY10 – FY26) || [[Battle Creek, MI]] || Jail || IGSA || County (Sheriff) ||  173 ||   75 || Female/Male
+|-
+| [[California City Immigration Processing Center]] || Active (FY25 – FY26) || [[California City, CA]] || Private Migrant Detention Center || CDF || CoreCivic || 1036 || 2560 || Female/Male
+|-
+| [[Cambria County Jail|Cambria County Prison]] || Active (FY26) || [[Ebensburg, PA]] || Jail || USMS IGA || Cambria County ||   31 ||  || Male
+|-
+| [[Campbell County Detention Center]] || Active (FY25 – FY26) || [[Newport, KY]] || Jail || USMS IGA ||  ||  140 ||  || Female/Male
+|-
+| [[Caroline Detention Facility]] || Active (FY19 – FY26) || [[Bowling Green, VA]] || Jail || DIGSA ||  ||  344 ||  224 || Female/Male
+|-
+| [[Cascade County Jail, Montana]] || Active (FY26) || [[Great Falls, MT]] || Jail || USMS IGA || County (Sheriff) ||    4 ||  || Male
+|-
+| [[Cass County Jail|Cass County Jail]] || Active (FY25 – FY26) || [[Plattsmouth, NE]] || Jail || USMS IGA || County (Sheriff) ||   15 ||  || Female/Male
+|-
+| [[Central Arizona Florence Correctional Complex|Central Arizona Florence Correctional Complex]] || Active (FY10 – FY26) || [[Florence, AZ]] || Private Migrant Detention Center || USMS CDF || CoreCivic ||  517 ||  || Male
+|-
+| [[LaSalle Detention Center|Central Louisiana ICE Processing Center (CLIPC)]] || Active (FY10 – FY26) || [[Jena, LA]] || Jail || IGSA || GEO Group || 1173 || 1170 || Male
+|-
+| [[Chase County Jail|Chase County Jail]] || Active (FY10 – FY26) || [[Cottonwood Falls, KS]] || Jail || IGSA || County (Sheriff) ||  112 ||  || Female/Male
+|-
+| [[Chavez Detention Center]] || Active (FY26) || [[Roswell, NM]] || Jail || USMS IGA ||  ||    2 ||  || Female/Male
+|-
+| [[Chippewa County Jail|Chippewa County SSM]] || Active (FY10 – FY26) || [[Sault Ste. Marie, MI]] || Jail || IGSA || Chippewa County Sheriff's Department ||   38 ||  || Male
+|-
+| [[Chittenden Regional Correctional Facility]] || Active (FY25 – FY26) || [[South Burlington, VT]] || Jail || USMS IGA ||  ||    5 ||  || Female/Male
+|-
+| [[Christian County Jail]] || Active (FY26) || [[Hopkinsville, KY]] || Jail || USMS IGA ||  ||  101 ||  || Female/Male
+|-
+| [[Cibola County Correctional Center]] || Active (FY17 – FY26) || [[Milan, NM]] || Jail || IGSA || CoreCivic ||  231 ||  || Male
+|-
+| [[Cimmarron Correctional Facility]] || Active (FY25 – FY26) || [[Cushing, OK]] || Jail || USMS IGA ||  ||  588 ||  || Male
+|-
+| [[Clark County Jail (Indiana)]] || Active (FY25 – FY26) || [[Jeffersonville, IN]] || Jail || USMS IGA ||  ||   94 ||  || Female/Male
+|-
+| [[Clay County Justice Center]] || Active (FY13 – FY26) || [[Brazil, IN]] || Jail || USMS IGA || County (Sheriff) ||  238 ||  || Female/Male
+|-
+| [[Clinton County Correctional Facility|Clinton County Correctional Facility]] || Active (FY24 – FY26) || [[McElhattan, PA]] || Jail || USMS IGA ||  ||   92 ||  || Female/Male
+|-
+| [[Clinton County Jail|Clinton County Jail]] || Active (FY24 – FY26) || [[Plattsburgh, NY]] || Jail || USMS IGA || County (Sheriff) ||    4 ||  || Female/Male
+|-
+| [[Clinton County Jail|Clinton County Jail]] || Active (FY25 – FY26) || [[Frankfort, IN]] || Jail || USMS IGA ||  ||   26 ||  || Female/Male
+|-
+| [[Coastal Bend Detention Facility]] || Active (FY17 – FY26) || [[Robstown, TX]] || Jail || USMS IGA || GEO Group ||   56 ||  || Female/Male
+|-
+| [[Collier County Naples Jail Center]] || Active (FY10 – FY26) || [[Naples, FL]] || Jail || IGSA || County (Sheriff) ||   39 ||  || Female/Male
+|-
+| [[Correctional. Center of Northwest Ohio]] || Active (FY25 – FY26) || [[Stryker, OH]] || Jail || USMS IGA ||  ||   72 ||  || Male
+|-
+| [[Crow Wing County Jail]] || Active (FY26) || [[Brainerd, MN]] || Jail || USMS IGA ||  ||   22 ||  || Female/Male
+|-
+| [[Cumberland County Jail]] || Active (FY22 – FY26) || [[Portland, ME]] || Jail || USMS IGA || County (Sheriff) ||   62 ||  || Female/Male
+|-
+| [[Dakota County Jail]] || Active (FY25 – FY26) || [[Dakota City, NE]] || Jail || USMS IGA || County (Sheriff) ||   27 ||  || Female/Male
+|-
+| [[Dallas County Jail - Lew Sterrett Justice Center]] || Active (FY19 – FY26) || [[Dallas, TX]] || Jail || USMS IGA || CoreCivic ||    1 ||  || Female/Male
+|-
+| [[Daviess County Detention]] || Active (FY26) || [[Owensboro, KY]] || Jail || USMS IGA ||  ||   25 ||  || Female/Male
+|-
+| [[Davis County]] || Active (FY26) || [[Farmington, UT]] || Jail || IGSA ||  ||    4 ||  || Female/Male
+|-
+| [[Delaney Hall|Delaney Hall Detention Facility]] || Active (FY25 – FY26) || [[Newark, NJ]] || Private Migrant Detention Center || CDF || GEO Group ||  905 ||  700 || Female/Male
+|-
+| [[Aurora Contract Detention Facility(ICE Processing Center)|Denver Contract Detention Facility]] || Active (FY10 – FY26) || [[Aurora, CO]] || Private Migrant Detention Center || CDF || GEO Group || 1226 ||  600 || Female/Male
+|-
+| [[Department of Corrections Hagatna]] || Active (FY19 – FY26) || [[Hagatna, GU]] || Jail || USMS IGA ||  ||   16 ||  || Male
+|-
+| [[Desert View Annex]] || Active (FY11 – FY26) || [[Adelanto, CA]] || Private Migrant Detention Center || CDF || GEO Group ||  411 ||  480 || Male
+|-
+| [[Diamondback Correctional Facility]] || Active (FY26) || [[Watonga, OK]] || Jail || DIGSA || CoreCivic ||   64 || 1200 || Female/Male
+|-
+| [[South Texas Family Residential Center|Dilley Immigration Processing Center]] || Active (FY25 – FY26) || [[Dilley, TX]] || Family Detention Center || FAMILY || CoreCivic ||  867 || 2400 || Female/Male
+|-
+| [[Dodge County Detention Facility(Dodge County Jail)|Dodge County Jail]] || Active (FY10 – FY26) || [[Juneau, WI]] || Jail || USMS IGA || Dodge County Sheriff's Department ||  100 ||  || Female/Male
+|-
+| [[Dona Ana County Detention Center]] || Active (FY26) || [[Las Cruces, NM]] || Jail || USMS IGA ||  ||    1 ||  || Female/Male
+|-
+| [[Douglas County]] || Active (FY25 – FY26) || [[Superior, WI]] || Jail || USMS IGA ||  ||   27 ||  || Female/Male
+|-
+| [[East Hidalgo Detention Center]] || Active (FY25 – FY26) || [[La Villa, TX]] || Jail || USMS IGA || GEO Group ||    3 ||  || Female/Male
+|-
+| [[Daviess County Detention]] || Active (FY26) || [[Martinsburg, WV]] || Jail || IGSA ||  ||   13 ||  || Female/Male
+|-
+| [[Eden Detention Center]] || Active (FY19 – FY26) || [[Eden, TX]] || Jail || USMS IGA || CoreCivic ||  476 ||  || Male
+|-
+| [[El Paso County Detention Facility]] || Active (FY26) || [[El Paso, TX]] || Jail || IGSA ||  ||    2 ||  || Female/Male
+|-
+| [[El Paso Service Processing Center|El Paso Service Processing Center]] || Active (FY10 – FY26) || [[El Paso, TX]] || ICE Migrant Detention Center || SPC || ICE ||  805 ||  450 || Female/Male
+|-
+| [[El Valle Detention Facility]] || Active (FY19 – FY26) || [[Raymondville, TX]] || Jail || DIGSA ||  ||  941 ||  600 || Female/Male
+|-
+| [[Elizabeth Detention Center|Elizabeth Detention Center]] || Active (FY10 – FY26) || [[Elizabeth, NJ]] || Private Migrant Detention Center || CDF || CoreCivic ||  305 ||  285 || Female/Male
+|-
+| [[Elmore County Jail]] || Active (FY25 – FY26) || [[Mountain Home, ID]] || Jail || USMS IGA || County (Sheriff) ||    9 ||  || Female/Male
+|-
+| [[Eloy Detention Center]] || Active (FY10 – FY26) || [[Eloy, AZ]] || Jail || DIGSA || CoreCivic || 1332 ||  900 || Female/Male
+|-
+| [[Erie County Jail]] || Active (FY25 – FY26) || [[Erie, PA]] || Jail || USMS IGA || Erie County Sheriff's Office ||   15 ||  || Male
+|-
+| [[Camp East Montana]] || Active (FY25 – FY26) || [[El Paso, TX]] || Private Migrant Detention Center || CDF || Acquisition Logistics LLC || 2952 ||  || Female/Male
+|-
+| [[Etowah County Jail|Etowah County Jail]] || Active (FY25 – FY26) || [[Gadsden, AL]] || Jail || USMS IGA || Etowah County Sheriff's Department ||   74 ||  || Male
+|-
+| [[Farmville Detention Center|Farmville Detention Center]] || Active (FY10 – FY26) || [[Farmville, VA]] || Jail || DIGSA || CoreCivic ||  714 ||  459 || Male
+|-
+| [[Fayette County Detention Center]] || Active (FY24 – FY26) || [[Lexington, KY]] || Jail || USMS IGA || County ||    2 ||  || Female/Male
+|-
+| [[FCI Atlanta]] || Active (FY25 – FY26) || [[Atlanta, GA]] || Federal Prison || BOP ||  ||  107 ||  || Female/Male
+|-
+| [[FDC Philadelphia]] || Active (FY25 – FY26) || [[Philadelphia, PA]] || Federal Prison || BOP ||  ||   98 ||  || Female/Male
+|-
+| [[Finney County Jail]] || Active (FY26) || [[Garden City, KS]] || Jail || IGSA ||  ||    2 ||  || Female/Male
+|-
+| [[Florence Service Processing Center]] || Active (FY10 – FY26) || [[Florence, AZ]] || ICE Migrant Detention Center || SPC || Asset Protection &amp; Security Services ||  330 ||  392 || Female/Male
+|-
+| [[Florence Staging Facility]] || Active (FY19 – FY26) || [[Florence, AZ]] || ICE Short-Term Migrant Detention Center || STAGING ||  ||  339 ||  || Male
+|-
+| [[Florida Soft-Sided Facility]] || Active (FY26) || [[Ochopee, FL]] || State Migrant Detention Center || STATE ||  || 1341 ||  || Male
+|-
+| [[Floyd County Jail]] || Active (FY25 – FY26) || [[Rome, GA]] || Jail || USMS IGA ||  ||    1 ||  || Female/Male
+|-
+| [[Folkston Annex IPC]] || Active (FY19 – FY26) || [[Folkston, GA]] || Jail || DIGSA ||  ||  276 ||  338 || Male
+|-
+| [[Folkston ICE Processing Center]] || Active (FY25 – FY26) || [[Folkston, GA]] || Jail || DIGSA ||  ||  942 || 1308 || Male
+|-
+| [[Folkston Main IPC]] || Active (FY19 – FY26) || [[Folkston, GA]] || Jail || DIGSA ||  ||  700 ||  544 || Male
+|-
+| [[Franklin County Jail (Chambersburg, Pennsylvania)|Franklin County Jail]] || Active (FY26) || [[Chambersburg, PA]] || Jail || USMS IGA ||  ||    1 ||  || 
+|-
+| [[Freeborn County Adult Detention Center]] || Active (FY10 – FY26) || [[Albert Lea, MN]] || Jail || IGSA || County (Sheriff) ||   82 ||  || Male
+|-
+| [[Fulton County Jail Indiana]] || Active (FY26) || [[Rochester, IN]] || Jail || USMS IGA ||  ||    5 ||  || Female/Male
+|-
+| [[Geauga County Jail]] || Active (FY11 – FY26) || [[Chardon, OH]] || Jail || USMS IGA || County (Sheriff) ||   21 ||  || Female/Male
+|-
+| [[Glades County Detention Center]] || Active (FY25 – FY26) || [[Moore Haven, FL]] || Jail || IGSA || Glades County Sheriff's Department ||  468 ||  500 || Female/Male
+|-
+| [[Golden State Annex]] || Active (FY20 – FY26) || [[McFarland, CA]] || Private Migrant Detention Center || CDF || GEO Group ||  620 ||  560 || Male
+|-
+| [[Grand Forks County Correctional Facility]] || Active (FY25 – FY26) || [[Grand Forks, ND]] || Jail || USMS IGA || County (Sheriff) ||   20 ||  || Female/Male
+|-
+| [[Grayson County Jail|Grayson County Jail]] || Active (FY24 – FY26) || [[Leitchfield, KY]] || Jail || USMS IGA || County (Jailer) ||  158 ||  || Female/Male
+|-
+| [[Greene County Jail]] || Active (FY25 – FY26) || [[Springfield, MO]] || Jail || USMS IGA ||  ||  270 ||  || Female/Male
+|-
+| [[Hall County Department of Corrections]] || Active (FY25 – FY26) || [[Grand Island, NE]] || Jail || USMS IGA || County (Sheriff) ||   13 ||  || Female/Male
+|-
+| [[Hancock County Public Safety Complex]] || Active (FY20 – FY26) || [[Bay St. Louis, MS]] || Jail || IGSA ||  ||   27 ||  || Female/Male
+|-
+| [[Hardin County Jail|Hardin County Jail]] || Active (FY25 – FY26) || [[Eldora, IA]] || Jail || USMS IGA || County (Sheriff) ||   42 ||  || Female/Male
+|-
+| [[Henderson Detention]] || Active (FY11 – FY26) || [[Henderson, NV]] || Jail || USMS IGA || City ||   91 ||  || Female/Male
+|-
+| [[Hillsborough County Jail]] || Active (FY26) || [[Tampa, FL]] || Jail || IGSA ||  ||    4 ||  || Female/Male
+|-
+| [[Federal Detention Center, Honolulu|Honolulu Federal Detention Center]] || Active (FY19 – FY26) || [[Honolulu, HI]] || Federal Prison || BOP || Federal Bureau of Prisons ||   80 ||  || Female/Male
+|-
+| [[Hopkins County Jail]] || Active (FY25 – FY26) || [[Madisonville, KY]] || Jail || USMS IGA ||  ||  164 ||  || Female/Male
+|-
+| [[Houston Processing Center]] || Active (FY10 – FY26) || [[Houston, TX]] || Private Migrant Detention Center || CDF || CoreCivic ||  883 ||  750 || Female/Male
+|-
+| [[IAH Secure Adult Detention Facility (Polk)]] || Active (FY10 – FY26) || [[Livingston, TX]] || Jail || DIGSA || Management &amp; Training Corp (MTC) ||  872 ||  350 || Male
+|-
+| [[Imperial Regional Detention Facility]] || Active (FY14 – FY26) || [[Calexico, CA]] || Private Migrant Detention Center || CDF || Management &amp; Training Corp (MTC) ||  674 ||  640 || Female/Male
+|-
+| [[Irwin County Detention Center]] || Active (FY26) || [[Ocilla, GA]] || Jail || USMS IGA || LaSalle Corrections ||  128 ||  || Female/Male
+|-
+| [[Jackson Parish Correctional Center]] || Active (FY19 – FY26) || [[Jonesboro, LA]] || Jail || IGSA ||  || 1192 ||  500 || Male
+|-
+| [[Jefferson County Jail]] || Active (FY25 – FY26) || [[Rigby, ID]] || Jail || IGSA || County ||    7 ||  || Female/Male
+|-
+| [[Joe Corley Processing Center]] || Active (FY10 – FY26) || [[Conroe, TX]] || Jail || IGSA || GEO Group ||  942 ||  || Male
+|-
+| [[JTF Camp Six]] || Active (FY25 – FY26) || [[Guantanamo Bay, Cuba]] || Military Detention Center || DOD ||  ||   11 ||  || Male
+|-
+| [[Kandiyohi County Jail]] || Active (FY19 – FY26) || [[Willmar, MN]] || Jail || IGSA ||  ||  112 ||  || Female/Male
+|-
+| [[Kansas City Holdroom]] || Active (FY26) || [[Kansas City, MO]] || Private Migrant Detention Center || CDF ||  ||    3 ||  || Female/Male
+|-
+| [[Karnes County Correctional Center]] || Active (FY26) || [[Karnes City, TX]] || Jail || USMS IGA || GEO Group ||    2 ||  || Female/Male
+|-
+| [[Karnes County Immigration Processing Center]] || Active (FY22 – FY26) || [[Karnes City, TX]] || Jail || DIGSA || GEO Group || 1199 ||  928 || Female/Male
+|-
+| [[Kay County Justice Facility]] || Active (FY19 – FY26) || [[Newkirk, OK]] || Jail || IGSA ||  ||  158 ||  || Female/Male
+|-
+| [[Kenton County Jail]] || Active (FY25 – FY26) || [[Covington, KY]] || Jail || USMS IGA ||  ||  109 ||  || Male
+|-
+| [[Knox County Detention Facility]] || Active (FY22 – FY26) || [[Knoxville, TN]] || Jail || USMS IGA ||  ||   33 ||  || Female/Male
+|-
+| [[Krome North Service Processing Center]] || Active (FY10 – FY26) || [[Miami, FL]] || ICE Migrant Detention Center || SPC || Ahtna Global Services ||  866 ||  450 || Male
+|-
+| [[La Salle County Regional Detention Center]] || Active (FY25 – FY26) || [[Encinal, TX]] || Jail || USMS IGA || County ||  255 ||  || Male
+|-
+| [[Lake County Jail]] || Active (FY25 – FY26) || [[Tavares, FL]] || Jail || IGSA ||  ||    1 ||  || Female/Male
+|-
+| [[Laramie County Jail]] || Active (FY26) || [[Cheyenne, WY]] || Jail || USMS IGA ||  ||    4 ||  || Female/Male
+|-
+| [[Laredo Processing Center]] || Active (FY10 – FY26) || [[Laredo, TX]] || Jail || DIGSA || CoreCivic ||  368 ||  || Female/Male
+|-
+| [[Laurel County Correctional Center]] || Active (FY25 – FY26) || [[London, KY]] || Jail || USMS IGA ||  ||    1 ||  || Female/Male
+|-
+| [[Lawrence County]] || Active (FY26) || [[Deadwood, SD]] || Jail || USMS IGA ||  ||   10 ||  || Female/Male
+|-
+| [[Leavenworth US Penitentiary]] || Active (FY25 – FY26) || [[Leavenworth, KS]] || Federal Prison || BOP ||  ||   58 ||  || Male
+|-
+| [[Lexington County Jail]] || Active (FY23 – FY26) || [[Lexington, SC]] || Jail || USMS IGA || County (Sheriff) ||    5 ||  || Female/Male
+|-
+| [[Limestone County Detention Center|Limestone County Detention Center]] || Active (FY23 – FY26) || [[Groesbeck, TX]] || Jail || USMS IGA || Community Education Centers Inc. ||  254 ||  || Male
+|-
+| [[Lincoln County Jail|Lincoln County Jail]] || Active (FY25 – FY26) || [[North Platte, NE]] || Jail || USMS IGA ||  ||   27 ||  || Female/Male
+|-
+| [[Linn County Correctional Center(Linn County Jail)|Linn County Jail]] || Active (FY25 – FY26) || [[Cedar Rapids, IA]] || Jail || USMS IGA || Linn County Sheriff ||   39 ||  || Female/Male
+|-
+| [[Logan County Jail]] || Active (FY25 – FY26) || [[Guthrie, OK]] || Jail || USMS IGA ||  ||    5 ||  || Female/Male
+|-
+| [[Louisiana ICE Processing]] || Active (FY25 – FY26) || [[Angola, LA]] || Jail || IGSA ||  ||  180 ||  208 || Male
+|-
+| [[Lubbock County Detention Center]] || Active (FY25 – FY26) || [[Lubbock, TX]] || Jail || USMS IGA || County (Sheriff) ||    3 ||  || Female/Male
+|-
+| [[Madison County Jail|Madison County Jail]] || Active (FY25 – FY26) || [[Canton, MS]] || Jail || USMS IGA ||  ||    9 ||  || Female/Male
+|-
+| [[Mahoning County Jail]] || Active (FY25 – FY26) || [[Youngstown, OH]] || Jail || USMS IGA ||  ||   89 ||  || Female/Male
+|-
+| [[Marion County Jail|Marion County Jail]] || Active (FY25 – FY26) || [[Indianapolis, IN]] || Jail || USMS IGA || County (Sheriff) ||   55 ||  || Female/Male
+|-
+| [[Martin County Jail]] || Active (FY26) || [[Stuart, FL]] || Jail || USMS IGA ||  ||    6 ||  || Female/Male
+|-
+| [[Mccook Detention Center]] || Active (FY26) || [[McCook, NE]] || Jail || DIGSA ||  ||   77 ||  300 || Male
+|-
+| [[Mesa Verde ICE Processing Center]] || Active (FY15 – FY26) || [[Bakersfield, CA]] || Private Migrant Detention Center || CDF || GEO Group ||  377 ||  320 || Male
+|-
+| [[Miami Correctional Center]] || Active (FY26) || [[Bunker Hill, IN]] || Jail || IGSA ||  ||  405 ||  || Male
+|-
+| [[Miami Federal Detention]] || Active (FY25 – FY26) || [[Miami, FL]] || Federal Prison || BOP ||  ||  459 ||  || Female/Male
+|-
+| [[Miami Staging Facility]] || Active (FY26) || [[Miami, FL]] || ICE Short-Term Migrant Detention Center || STAGING ||  ||   20 ||  || Female/Male
+|-
+| [[Miller County Jail|Miller County Jail]] || Active (FY25 – FY26) || [[Texarkana, AR]] || Jail || USMS IGA || County (Sheriff) ||    5 ||  || Female/Male
+|-
+| [[Minicassia Detention Center|Minicassia Detention Center]] || Active (FY26) || [[Burley, ID]] || Jail || USMS IGA || County (Sheriff) ||    4 ||  || Female/Male
+|-
+| [[Minnehaha County Jail|Minnehaha County Jail]] || Active (FY25 – FY26) || [[Sioux Falls, SD]] || Jail || USMS IGA ||  ||    5 ||  || Female/Male
+|-
+| [[Monroe County Detention-Dorm]] || Active (FY14 – FY26) || [[Monroe, MI]] || Jail || IGSA || County (Sheriff) ||  124 ||  || Male
+|-
+| [[Montgomery ICE Processing Center]] || Active (FY19 – FY26) || [[Conroe, TX]] || Private Migrant Detention Center || CDF || GEO Group || 1227 ||  750 || Male
+|-
+| [[Moshannon Valley Correctional Center|Moshannon Valley Processing Center]] || Active (FY22 – FY26) || [[Philipsburg, Centre County, Pennsylvania|Philipsburg, PA]] || Jail || DIGSA || GEO Group || 1655 ||  800 || Female/Male
+|-
+| [[Muscatine County Jail]] || Active (FY25 – FY26) || [[Muscatine, IA]] || Jail || USMS IGA ||  ||   19 ||  || Female/Male
+|-
+| [[Nassau County Correctional Center]] || Active (FY25 – FY26) || [[East Meadow, NY]] || Jail || USMS IGA ||  ||   12 ||  || Female/Male
+|-
+| [[Natrona County Jail|Natrona County Jail]] || Active (FY25 – FY26) || [[Casper, WY]] || Jail || USMS IGA || County (Sheriff) ||   14 ||  || Female/Male
+|-
+| [[Nelson Coleman Correction]] || Active (FY25 – FY26) || [[Killona, LA]] || Jail || USMS IGA ||  ||    3 ||  || Male
+|-
+| [[Nevada Southern Detention Center]] || Active (FY16 – FY26) || [[Pahrump, NV]] || Private Migrant Detention Center || USMS CDF || CoreCivic ||  457 ||  || Male
+|-
+| [[New Hanover County Jail]] || Active (FY26) || [[Castle Hayne, NC]] || Jail || USMS IGA || County (Sheriff) ||    4 ||  || Female/Male
+|-
+| [[Niagara County Jail|Niagara County Jail]] || Active (FY25 – FY26) || [[Lockport, NY]] || Jail || USMS IGA || New York State Commission of Correction ||   12 ||  || Female/Male
+|-
+| [[North Central Regional Jail]] || Active (FY26) || [[Greenwood, Doddridge County, West Virginia|Greenwood, WV]] || Jail || IGSA ||  ||    3 ||  || 
+|-
+| [[North Lake Correctional Facility]] || Active (FY25 – FY26) || [[Baldwin, MI]] || Private Migrant Detention Center || CDF || GEO Group || 1413 || 1800 || Female/Male
+|-
+| [[Northeast Ohio Correctional Center]] || Active (FY25 – FY26) || [[Youngstown, OH]] || Jail || USMS IGA || CoreCivic ||  208 ||  || Male
+|-
+| [[Northern Regional Jail|Northern Regional Jail]] || Active (FY25 – FY26) || [[Moundsville, WV]] || Jail || IGSA || County (Corrections) ||   28 ||  || Female/Male
+|-
+| [[Northwest ICE Processing Center]] || Active (FY10 – FY26) || [[Tacoma, WA]] || Private Migrant Detention Center || CDF || GEO Group || 1380 || 1181 || Female/Male
+|-
+| [[Northwest Regional Corrections Center]] || Active (FY25 – FY26) || [[Crookston, MN]] || Jail || USMS IGA ||  ||   15 ||  || Female/Male
+|-
+| [[Northwest State Correctional Center]] || Active (FY23 – FY26) || [[Swanton, VT]] || Jail || USMS IGA || County (Corrections) ||   12 ||  || Female/Male
+|-
+| [[Oldham County Detention Center]] || Active (FY25 – FY26) || [[La Grange, KY]] || Jail || USMS IGA ||  ||  128 ||  || Female/Male
+|-
+| [[Orange County Jail (Florida)]] || Active (FY24 – FY26) || [[Orlando, FL]] || Jail || USMS IGA || County ||   71 ||  || Female/Male
+|-
+| [[Orange County Jail (New York)]] || Active (FY10 – FY26) || [[Goshen, NY]] || Jail || IGSA || County (Corrections) ||  166 ||  || Male
+|-
+| [[Otay Mesa Detention Center]] || Active (FY10 – FY26) || [[San Diego, CA]] || Private Migrant Detention Center || CDF || CoreCivic || 1487 ||  750 || Female/Male
+|-
+| [[Otero County Prison Facility|Otero County Processing Center]] || Active (FY10 – FY26) || [[Chaparral, NM]] || Jail || DIGSA || Management &amp; Training Corp (MTC) ||  896 ||  500 || Female/Male
+|-
+| [[Ozark County Sheriff's Office]] || Active (FY25 – FY26) || [[Gainesville, MO]] || Jail || IGSA ||  ||   21 ||  || 
+|-
+| [[Pennington County Jail (South Dakota)]] || Active (FY25 – FY26) || [[Rapid City, SD]] || Jail || USMS IGA || County (Sheriff) ||    4 ||  || Female/Male
+|-
+| [[Phelps County Jail (Missouri)]] || Active (FY25 – FY26) || [[Rolla, MO]] || Jail || USMS IGA ||  ||   15 ||  || Female/Male
+|-
+| [[Phelps County Jail (Nebraska)]] || Active (FY10 – FY26) || [[Holdrege, NE]] || Jail || USMS IGA || County (Sheriff) ||   24 ||  || Female/Male
+|-
+| [[Pickens County Detention Center]] || Active (FY20 – FY26) || [[Carrollton, AL]] || Jail || IGSA ||  ||   43 ||  || Female/Male
+|-
+| [[Pike County Jail]] || Active (FY10 – FY26) || [[Lords Valley, PA]] || Jail || IGSA || County (Sheriff) ||  241 ||  100 || Male
+|-
+| [[Pine Prairie Correctional Center|Pine Prairie ICE Processing Center]] || Active (FY16 – FY26) || [[Pine Prairie, LA]] || Jail || DIGSA || GEO Group ||  903 ||  || Male
+|-
+| [[Pinellas County Jail]] || Active (FY21 – FY26) || [[Clearwater, FL]] || Jail || USMS IGA || County (Sheriff) ||   38 ||  || Female/Male
+|-
+| [[Plymouth House of Correction|Plymouth County Correctional Facility]] || Active (FY10 – FY26) || [[Plymouth, MA]] || Jail || IGSA || Plymouth County ||  506 ||  || Male
+|-
+| [[Polk County Jail|Polk County Jail]] || Active (FY10 – FY26) || [[Des Moines, IA]] || Jail || USMS IGA || County (Sheriff) ||   53 ||  || Female/Male
+|-
+| [[Port Isabel Detention Center|Port Isabel Detention Center]] || Active (FY10 – FY26) || [[Los Fresnos, TX]] || ICE Migrant Detention Center || SPC || Ahtna Global Services || 1274 ||  650 || Female/Male
+|-
+| [[Pottawattamie County Jail]] || Active (FY21 – FY26) || [[Council Bluffs, IA]] || Jail || USMS IGA || Pottawattamie County Sheriff ||   31 ||  || Female/Male
+|-
+| [[Prairieland Detention Center]] || Active (FY17 – FY26) || [[Alvarado, TX]] || Jail || DIGSA || LaSalle Corrections ||  960 ||  525 || Female/Male
+|-
+| [[Putnam County Sheriff]] || Active (FY25 – FY26) || [[Cookeville, TN]] || Jail || USMS IGA ||  ||   18 ||  || 
+|-
+| [[Richwood Correctional Center]] || Active (FY19 – FY26) || [[Monroe, LA]] || Jail || IGSA ||  || 1084 ||  677 || Female/Male
+|-
+| [[Rio Grande Detention Center]] || Active (FY14 – FY26) || [[Laredo, TX]] || Private Migrant Detention Center || USMS CDF || GEO Group ||  623 ||  275 || Male
+|-
+| [[River Correctional Center]] || Active (FY19 – FY26) || [[Ferriday, LA]] || Jail || IGSA ||  ||  586 ||  361 || Male
+|-
+| [[Riverside Regional Jail|Riverside Regional Jail]] || Active (FY25 – FY26) || [[Hopewell, VA]] || Jail || USMS IGA ||  ||   99 ||  || Female/Male
+|-
+| [[Roanoke City Jail]] || Active (FY26) || [[Roanoke, VA]] || Jail || USMS IGA || City ||    1 ||  || Female/Male
+|-
+| [[Robert A. Deyton Detention Center]] || Active (FY19 – FY26) || [[Lovejoy, GA]] || Jail || USMS IGA ||  ||   12 ||  || Male
+|-
+| [[Rockingham County Jail|Rockingham County Jail]] || Active (FY25 – FY26) || [[Harrisonburg, VA]] || Jail || USMS IGA || County (Sheriff) ||    1 ||  || Female/Male
+|-
+| [[Saipan Department of Corrections (Susupe)]] || Active (FY19 – FY26) || [[Saipan, MP]] || Jail || USMS IGA ||  ||   21 ||  || Female/Male
+|-
+| [[San Diego District Staging]] || Active (FY26) || [[San Diego, CA]] || ICE Short-Term Migrant Detention Center || STAGING ||  ||   11 ||  || Female/Male
+|-
+| [[San Juan Staging]] || Active (FY23 – FY26) || [[Guaynabo, PR]] || ICE Short-Term Migrant Detention Center || STAGING ||  ||   17 ||  100 || Female/Male
+|-
+| [[San Luis Regional Detention Center]] || Active (FY13 – FY26) || [[San Luis, AZ]] || Jail || IGSA || LaSalle Corrections ||  337 ||  100 || Female/Male
+|-
+| [[Sarpy County Jail]] || Active (FY25 – FY26) || [[Papillion, NE]] || Jail || USMS IGA ||  ||   21 ||  || Female/Male
+|-
+| [[Sauk County Sheriff]] || Active (FY25 – FY26) || [[Baraboo, WI]] || Jail || USMS IGA ||  ||   14 ||  || Female/Male
+|-
+| [[Sebastian County Detention Center|Sebastian County Detention Center]] || Active (FY24 – FY26) || [[Fort Smith, AR]] || Jail || USMS IGA || County (Sheriff) ||    2 ||  || Female/Male
+|-
+| [[Seneca County Jail|Seneca County Jail]] || Active (FY10 – FY26) || [[Tiffin, OH]] || Jail || IGSA || Seneca County Sheriff's Office ||   60 ||  || Female/Male
+|-
+| [[Sherburne County Jail|Sherburne County Jail]] || Active (FY10 – FY26) || [[Elk River, MN]] || Jail || USMS IGA || Sherburne County Sheriff's Department ||  102 ||  || Male
+|-
+| [[Sioux County Jail]] || Active (FY26) || [[Orange City, IA]] || Jail || USMS IGA ||  ||   12 ||  || Female/Male
+|-
+| [[South Central Regional Jail]] || Active (FY22 – FY26) || [[Charleston, WV]] || Jail || IGSA || County (Corrections) ||   32 ||  || Male
+|-
+| [[South Louisiana ICE Processing Center]] || Active (FY19 – FY26) || [[Basile, LA]] || Jail || DIGSA || GEO Group ||  978 ||  700 || Female/Male
+|-
+| [[South Texas ICE Processing Center]] || Active (FY10 – FY26) || [[Pearsall, TX]] || Private Migrant Detention Center || CDF || GEO Group || 1756 || 1350 || Female/Male
+|-
+| [[Southern Regional]] || Active (FY26) || [[Beaver, WV]] || Jail || IGSA ||  ||    1 ||  || Female/Male
+|-
+| [[Southwestern Regional Jail]] || Active (FY26) || [[Holden, WV]] || Jail || IGSA ||  ||    1 ||  || 
+|-
+| [[St. Clair County Jail]] || Active (FY10 – FY26) || [[Port Huron, MI]] || Jail || IGSA || County (Sheriff) ||   47 ||  || Male
+|-
+| [[Ste. Genevieve County Sheriff/Jail]] || Active (FY25 – FY26) || [[Ste. Genevieve, MO]] || Jail || USMS IGA ||  ||  114 ||  || Female/Male
+|-
+| [[Stewart Detention Center]] || Active (FY10 – FY26) || [[Lumpkin, GA]] || Jail || DIGSA || CoreCivic || 2011 || 1600 || Female/Male
+|-
+| [[Strafford County Corrections]] || Active (FY10 – FY26) || [[Dover, NH]] || Jail || IGSA || County (Corrections) ||  146 ||  || Female/Male
+|-
+| [[Sweetwater County Jail]] || Active (FY25 – FY26) || [[Rock Springs, WY]] || Jail || USMS IGA ||  ||    9 ||  || Female/Male
+|-
+| [[T. Don Hutto Residential Center|T. Don Hutto Detention Center]] || Active (FY19 – FY26) || [[Taylor, TX]] || Private Migrant Detention Center || CDF || CoreCivic ||  458 ||  461 || Male
+|-
+| [[Tooele County Jail]] || Active (FY25 – FY26) || [[Tooele, UT]] || Jail || USMS IGA ||  ||   10 ||  || Female/Male
+|-
+| [[Torrance County Detention Facility(Torrance / Estancia, NM)|Torrance County Detention Facility]] || Active (FY16 – FY26) || [[Estancia, NM]] || Jail || IGSA || CoreCivic ||  371 ||  505 || Male
+|-
+| [[Tulsa County Jail (David L. Moss Justice Center)]] || Active (FY21 – FY26) || [[Tulsa, OK]] || Jail || IGSA || County (Sheriff) ||   43 ||  || Female/Male
+|-
+| [[Turner Guilford Knight (TGK) Jail]] || Active (FY26) || [[Miami, FL]] || Jail || IGSA ||  ||   10 ||  || Female/Male
+|-
+| [[Two Bridges Regional Jail]] || Active (FY25 – FY26) || [[Wiscasset, ME]] || Jail || USMS IGA ||  ||    8 ||  || Male
+|-
+| [[Uinta County Jail]] || Active (FY25 – FY26) || [[Evanston, WY]] || Jail || USMS IGA ||  ||   23 ||  || Female/Male
+|-
+| [[Val Verde Correctional Facility]] || Active (FY26) || [[Del Rio, TX]] || Jail || USMS IGA || GEO Group ||    3 ||  || Female/Male
+|-
+| [[Victoria County Jail]] || Active (FY25 – FY26) || [[Victoria, TX]] || Jail || USMS IGA ||  ||   14 ||  || Female/Male
+|-
+| [[Walton County Jail]] || Active (FY25 – FY26) || [[Defuniak Springs, FL]] || Jail || USMS IGA ||  ||   27 ||  || Female/Male
+|-
+| [[Ward County Jail]] || Active (FY25 – FY26) || [[Minot, ND]] || Jail || USMS IGA ||  ||    2 ||  || Female/Male
+|-
+| [[Washington County Jail (Fayetteville, Arkansas)|Washington County Detention Center]] || Active (FY24 – FY26) || [[Fayetteville, AR]] || Jail || USMS IGA ||  ||    6 ||  || Female/Male
+|-
+| [[Purgatory Correctional Facility|Washington County Jail (Purgatory Correctional Facility)]] || Active (FY25 – FY26) || [[Hurricane, UT]] || Jail || USMS IGA || County (Sheriff) ||   12 ||  || Female/Male
+|-
+| [[Washoe County Jail|Washoe County Jail]] || Active (FY10 – FY26) || [[Reno, NV]] || Jail || USMS IGA || Washoe County Sheriff's Office ||   51 ||  || Female/Male
+|-
+| [[Waukesha County Jail]] || Active (FY25 – FY26) || [[Waukesha, WI]] || Jail || USMS IGA ||  ||    3 ||  || Female/Male
+|-
+| [[Webb County Detention Center (CCA)]] || Active (FY17 – FY26) || [[Laredo, TX]] || Jail || DIGSA || CoreCivic ||  443 ||  250 || Female/Male
+|-
+| [[Weber County Jail|Weber County Jail]] || Active (FY26) || [[Ogden, UT]] || Jail || USMS IGA ||  ||    6 ||  || Female/Male
+|-
+| [[Western Regional Jail And Correctional Facility]] || Active (FY26) || [[Barboursville, WV]] || Jail || IGSA ||  ||    8 ||  || Female/Male
+|-
+| [[West Tennessee Detention Facility|Western Tennessee Detention Facility]] || Active (FY26) || [[Mason, TN]] || Jail || DIGSA || CoreCivic ||  275 ||  450 || Female/Male
+|-
+| [[Winn Correctional Center]] || Active (FY19 – FY26) || [[Winnfield, LA]] || Jail || DIGSA ||  || 1546 ||  946 || Male
+|-
+| [[Woodbury County Jail]] || Active (FY25 – FY26) || [[Sioux City, IA]] || Jail || USMS IGA ||  ||   63 ||  || Female/Male
+|-
+| [[Donald W. Wyatt Detention Facility|Wyatt Detention Center]] || Active (FY19 – FY26) || [[Central Falls, RI]] || Jail || USMS IGA || Central Falls Detention Facility Corp. ||  114 ||  || Female/Male
+|}</textarea>
+</div>
+</div>
+</section>
+<section id="red-links-only" class="level2">
+<h2 class="anchored" data-anchor-id="red-links-only">Red links only</h2>
+<p>Only facilities with <strong>no</strong> Wikipedia link (<code>wiki_slug</code> and <code>wiki_match</code> both missing). All names are wikilinked as red links.</p>
+<pre><code>{| class="wikitable sortable"
+|+ ICE Detention Facilities in FY26
+! Facility Name !! Status (year) !! Location !! Facility Type !! Authority !! Management !! Average Daily Population !! Minimum Capacity !! Demographics
+|-
+| [[Alexandria Staging Facility]] || Active (FY19 – FY26) || [[Alexandria, LA]] || ICE Short-Term Migrant Detention Center || STAGING || GEO Group ||  413 ||  || Male
+|-
+| [[Allegany County Jail]] || Active (FY25 – FY26) || [[Belmont, NY]] || Jail || USMS IGA || County (Sheriff) ||    5 ||  || Female/Male
+|-
+| [[Allen Parish Public Safety Complex]] || Active (FY16 – FY26) || [[Oberlin, LA]] || Jail || IGSA || County ||  150 ||  170 || Male
+|-
+| [[Anchorage Correctional Complex]] || Active (FY26) || [[Anchorage, AK]] || Jail || USMS IGA || County (Corrections) ||    3 ||  || Male
+|-
+| [[Baker County Sheriff Department.]] || Active (FY10 – FY26) || [[Macclenny, FL]] || Jail || IGSA || County ||  287 ||  250 || Female/Male
+|-
+| [[Baldwin County Correctional Center]] || Active (FY26) || [[Bay Minette, AL]] || Jail || USMS IGA || County (Sheriff) ||   19 ||  || Female/Male
+|-
+| [[Berlin Federal. Correctional. Institution.]] || Active (FY25 – FY26) || [[Berlin, NH]] || Federal Prison || BOP ||  ||  202 ||  || Male
+|-
+| [[Brooklyn MDC]] || Active (FY25 – FY26) || [[Brooklyn, NY]] || Federal Prison || BOP ||  ||  111 ||  || Female/Male
+|-
+| [[Broome County Jail]] || Active (FY25 – FY26) || [[Binghamton, NY]] || Jail || USMS IGA ||  ||   47 ||  || Female/Male
+|-
+| [[Broward County Jail]] || Active (FY26) || [[Fort Lauderdale, FL]] || Jail || IGSA ||  ||    3 ||  || Female/Male
+|-
+| [[Buffalo Service Processing Center]] || Active (FY10 – FY26) || [[Batavia, NY]] || ICE Migrant Detention Center || SPC || Ahtna Global Services ||  738 ||  400 || Male
+|}</code></pre>
+<p>147 of 225 FY26 facilities have no Wikipedia link.</p>
+<div class="cell">
+<div class="cell-output-display">
+<button class="copy-btn" onclick="copyTableToClipboard('copy_target_6563', this)">Copy Wikitext (Red Links Only)</button>
+<textarea id="copy_target_6563" style="position: absolute; left: -9999px; height: 0; width: 0; overflow: hidden;" readonly="TRUE">{| class="wikitable sortable"
+|+ ICE Detention Facilities in FY26
+! Facility Name !! Status (year) !! Location !! Facility Type !! Authority !! Management !! Average Daily Population !! Minimum Capacity !! Demographics
+|-
+| [[Alexandria Staging Facility]] || Active (FY19 – FY26) || [[Alexandria, LA]] || ICE Short-Term Migrant Detention Center || STAGING || GEO Group ||  413 ||  || Male
+|-
+| [[Allegany County Jail]] || Active (FY25 – FY26) || [[Belmont, NY]] || Jail || USMS IGA || County (Sheriff) ||    5 ||  || Female/Male
+|-
+| [[Allen Parish Public Safety Complex]] || Active (FY16 – FY26) || [[Oberlin, LA]] || Jail || IGSA || County ||  150 ||  170 || Male
+|-
+| [[Anchorage Correctional Complex]] || Active (FY26) || [[Anchorage, AK]] || Jail || USMS IGA || County (Corrections) ||    3 ||  || Male
+|-
+| [[Baker County Sheriff Department.]] || Active (FY10 – FY26) || [[Macclenny, FL]] || Jail || IGSA || County ||  287 ||  250 || Female/Male
+|-
+| [[Baldwin County Correctional Center]] || Active (FY26) || [[Bay Minette, AL]] || Jail || USMS IGA || County (Sheriff) ||   19 ||  || Female/Male
+|-
+| [[Berlin Federal. Correctional. Institution.]] || Active (FY25 – FY26) || [[Berlin, NH]] || Federal Prison || BOP ||  ||  202 ||  || Male
+|-
+| [[Brooklyn MDC]] || Active (FY25 – FY26) || [[Brooklyn, NY]] || Federal Prison || BOP ||  ||  111 ||  || Female/Male
+|-
+| [[Broome County Jail]] || Active (FY25 – FY26) || [[Binghamton, NY]] || Jail || USMS IGA ||  ||   47 ||  || Female/Male
+|-
+| [[Broward County Jail]] || Active (FY26) || [[Fort Lauderdale, FL]] || Jail || IGSA ||  ||    3 ||  || Female/Male
+|-
+| [[Buffalo Service Processing Center]] || Active (FY10 – FY26) || [[Batavia, NY]] || ICE Migrant Detention Center || SPC || Ahtna Global Services ||  738 ||  400 || Male
+|-
+| [[Burleigh County]] || Active (FY25 – FY26) || [[Bismarck, ND]] || Jail || USMS IGA ||  ||   17 ||  || Female/Male
+|-
+| [[Calhoun County Correctional Center]] || Active (FY10 – FY26) || [[Battle Creek, MI]] || Jail || IGSA || County (Sheriff) ||  173 ||   75 || Female/Male
+|-
+| [[California City Immigration Processing Center]] || Active (FY25 – FY26) || [[California City, CA]] || Private Migrant Detention Center || CDF || CoreCivic || 1036 || 2560 || Female/Male
+|-
+| [[Campbell County Detention Center]] || Active (FY25 – FY26) || [[Newport, KY]] || Jail || USMS IGA ||  ||  140 ||  || Female/Male
+|-
+| [[Caroline Detention Facility]] || Active (FY19 – FY26) || [[Bowling Green, VA]] || Jail || DIGSA ||  ||  344 ||  224 || Female/Male
+|-
+| [[Cascade County Jail, Montana]] || Active (FY26) || [[Great Falls, MT]] || Jail || USMS IGA || County (Sheriff) ||    4 ||  || Male
+|-
+| [[Chavez Detention Center]] || Active (FY26) || [[Roswell, NM]] || Jail || USMS IGA ||  ||    2 ||  || Female/Male
+|-
+| [[Chittenden Regional Correctional Facility]] || Active (FY25 – FY26) || [[South Burlington, VT]] || Jail || USMS IGA ||  ||    5 ||  || Female/Male
+|-
+| [[Christian County Jail]] || Active (FY26) || [[Hopkinsville, KY]] || Jail || USMS IGA ||  ||  101 ||  || Female/Male
+|-
+| [[Cimmarron Correctional Facility]] || Active (FY25 – FY26) || [[Cushing, OK]] || Jail || USMS IGA ||  ||  588 ||  || Male
+|-
+| [[Clark County Jail (Indiana)]] || Active (FY25 – FY26) || [[Jeffersonville, IN]] || Jail || USMS IGA ||  ||   94 ||  || Female/Male
+|-
+| [[Clay County Justice Center]] || Active (FY13 – FY26) || [[Brazil, IN]] || Jail || USMS IGA || County (Sheriff) ||  238 ||  || Female/Male
+|-
+| [[Coastal Bend Detention Facility]] || Active (FY17 – FY26) || [[Robstown, TX]] || Jail || USMS IGA || GEO Group ||   56 ||  || Female/Male
+|-
+| [[Collier County Naples Jail Center]] || Active (FY10 – FY26) || [[Naples, FL]] || Jail || IGSA || County (Sheriff) ||   39 ||  || Female/Male
+|-
+| [[Correctional. Center of Northwest Ohio]] || Active (FY25 – FY26) || [[Stryker, OH]] || Jail || USMS IGA ||  ||   72 ||  || Male
+|-
+| [[Crow Wing County Jail]] || Active (FY26) || [[Brainerd, MN]] || Jail || USMS IGA ||  ||   22 ||  || Female/Male
+|-
+| [[Dakota County Jail]] || Active (FY25 – FY26) || [[Dakota City, NE]] || Jail || USMS IGA || County (Sheriff) ||   27 ||  || Female/Male
+|-
+| [[Dallas County Jail - Lew Sterrett Justice Center]] || Active (FY19 – FY26) || [[Dallas, TX]] || Jail || USMS IGA || CoreCivic ||    1 ||  || Female/Male
+|-
+| [[Daviess County Detention]] || Active (FY26) || [[Owensboro, KY]] || Jail || USMS IGA ||  ||   25 ||  || Female/Male
+|-
+| [[Davis County]] || Active (FY26) || [[Farmington, UT]] || Jail || IGSA ||  ||    4 ||  || Female/Male
+|-
+| [[Department of Corrections Hagatna]] || Active (FY19 – FY26) || [[Hagatna, GU]] || Jail || USMS IGA ||  ||   16 ||  || Male
+|-
+| [[Desert View Annex]] || Active (FY11 – FY26) || [[Adelanto, CA]] || Private Migrant Detention Center || CDF || GEO Group ||  411 ||  480 || Male
+|-
+| [[Diamondback Correctional Facility]] || Active (FY26) || [[Watonga, OK]] || Jail || DIGSA || CoreCivic ||   64 || 1200 || Female/Male
+|-
+| [[Dona Ana County Detention Center]] || Active (FY26) || [[Las Cruces, NM]] || Jail || USMS IGA ||  ||    1 ||  || Female/Male
+|-
+| [[Douglas County]] || Active (FY25 – FY26) || [[Superior, WI]] || Jail || USMS IGA ||  ||   27 ||  || Female/Male
+|-
+| [[East Hidalgo Detention Center]] || Active (FY25 – FY26) || [[La Villa, TX]] || Jail || USMS IGA || GEO Group ||    3 ||  || Female/Male
+|-
+| [[Daviess County Detention]] || Active (FY26) || [[Martinsburg, WV]] || Jail || IGSA ||  ||   13 ||  || Female/Male
+|-
+| [[El Paso County Detention Facility]] || Active (FY26) || [[El Paso, TX]] || Jail || IGSA ||  ||    2 ||  || Female/Male
+|-
+| [[El Valle Detention Facility]] || Active (FY19 – FY26) || [[Raymondville, TX]] || Jail || DIGSA ||  ||  941 ||  600 || Female/Male
+|-
+| [[Elmore County Jail]] || Active (FY25 – FY26) || [[Mountain Home, ID]] || Jail || USMS IGA || County (Sheriff) ||    9 ||  || Female/Male
+|-
+| [[Fayette County Detention Center]] || Active (FY24 – FY26) || [[Lexington, KY]] || Jail || USMS IGA || County ||    2 ||  || Female/Male
+|-
+| [[FCI Atlanta]] || Active (FY25 – FY26) || [[Atlanta, GA]] || Federal Prison || BOP ||  ||  107 ||  || Female/Male
+|-
+| [[FDC Philadelphia]] || Active (FY25 – FY26) || [[Philadelphia, PA]] || Federal Prison || BOP ||  ||   98 ||  || Female/Male
+|-
+| [[Finney County Jail]] || Active (FY26) || [[Garden City, KS]] || Jail || IGSA ||  ||    2 ||  || Female/Male
+|-
+| [[Florence Service Processing Center]] || Active (FY10 – FY26) || [[Florence, AZ]] || ICE Migrant Detention Center || SPC || Asset Protection &amp; Security Services ||  330 ||  392 || Female/Male
+|-
+| [[Florence Staging Facility]] || Active (FY19 – FY26) || [[Florence, AZ]] || ICE Short-Term Migrant Detention Center || STAGING ||  ||  339 ||  || Male
+|-
+| [[Florida Soft-Sided Facility]] || Active (FY26) || [[Ochopee, FL]] || State Migrant Detention Center || STATE ||  || 1341 ||  || Male
+|-
+| [[Floyd County Jail]] || Active (FY25 – FY26) || [[Rome, GA]] || Jail || USMS IGA ||  ||    1 ||  || Female/Male
+|-
+| [[Folkston Annex IPC]] || Active (FY19 – FY26) || [[Folkston, GA]] || Jail || DIGSA ||  ||  276 ||  338 || Male
+|-
+| [[Folkston ICE Processing Center]] || Active (FY25 – FY26) || [[Folkston, GA]] || Jail || DIGSA ||  ||  942 || 1308 || Male
+|-
+| [[Folkston Main IPC]] || Active (FY19 – FY26) || [[Folkston, GA]] || Jail || DIGSA ||  ||  700 ||  544 || Male
+|-
+| [[Freeborn County Adult Detention Center]] || Active (FY10 – FY26) || [[Albert Lea, MN]] || Jail || IGSA || County (Sheriff) ||   82 ||  || Male
+|-
+| [[Fulton County Jail Indiana]] || Active (FY26) || [[Rochester, IN]] || Jail || USMS IGA ||  ||    5 ||  || Female/Male
+|-
+| [[Geauga County Jail]] || Active (FY11 – FY26) || [[Chardon, OH]] || Jail || USMS IGA || County (Sheriff) ||   21 ||  || Female/Male
+|-
+| [[Golden State Annex]] || Active (FY20 – FY26) || [[McFarland, CA]] || Private Migrant Detention Center || CDF || GEO Group ||  620 ||  560 || Male
+|-
+| [[Grand Forks County Correctional Facility]] || Active (FY25 – FY26) || [[Grand Forks, ND]] || Jail || USMS IGA || County (Sheriff) ||   20 ||  || Female/Male
+|-
+| [[Greene County Jail]] || Active (FY25 – FY26) || [[Springfield, MO]] || Jail || USMS IGA ||  ||  270 ||  || Female/Male
+|-
+| [[Hall County Department of Corrections]] || Active (FY25 – FY26) || [[Grand Island, NE]] || Jail || USMS IGA || County (Sheriff) ||   13 ||  || Female/Male
+|-
+| [[Hancock County Public Safety Complex]] || Active (FY20 – FY26) || [[Bay St. Louis, MS]] || Jail || IGSA ||  ||   27 ||  || Female/Male
+|-
+| [[Henderson Detention]] || Active (FY11 – FY26) || [[Henderson, NV]] || Jail || USMS IGA || City ||   91 ||  || Female/Male
+|-
+| [[Hillsborough County Jail]] || Active (FY26) || [[Tampa, FL]] || Jail || IGSA ||  ||    4 ||  || Female/Male
+|-
+| [[Hopkins County Jail]] || Active (FY25 – FY26) || [[Madisonville, KY]] || Jail || USMS IGA ||  ||  164 ||  || Female/Male
+|-
+| [[Houston Processing Center]] || Active (FY10 – FY26) || [[Houston, TX]] || Private Migrant Detention Center || CDF || CoreCivic ||  883 ||  750 || Female/Male
+|-
+| [[IAH Secure Adult Detention Facility (Polk)]] || Active (FY10 – FY26) || [[Livingston, TX]] || Jail || DIGSA || Management &amp; Training Corp (MTC) ||  872 ||  350 || Male
+|-
+| [[Imperial Regional Detention Facility]] || Active (FY14 – FY26) || [[Calexico, CA]] || Private Migrant Detention Center || CDF || Management &amp; Training Corp (MTC) ||  674 ||  640 || Female/Male
+|-
+| [[Jackson Parish Correctional Center]] || Active (FY19 – FY26) || [[Jonesboro, LA]] || Jail || IGSA ||  || 1192 ||  500 || Male
+|-
+| [[Joe Corley Processing Center]] || Active (FY10 – FY26) || [[Conroe, TX]] || Jail || IGSA || GEO Group ||  942 ||  || Male
+|-
+| [[JTF Camp Six]] || Active (FY25 – FY26) || [[Guantanamo Bay, Cuba]] || Military Detention Center || DOD ||  ||   11 ||  || Male
+|-
+| [[Kandiyohi County Jail]] || Active (FY19 – FY26) || [[Willmar, MN]] || Jail || IGSA ||  ||  112 ||  || Female/Male
+|-
+| [[Kansas City Holdroom]] || Active (FY26) || [[Kansas City, MO]] || Private Migrant Detention Center || CDF ||  ||    3 ||  || Female/Male
+|-
+| [[Karnes County Correctional Center]] || Active (FY26) || [[Karnes City, TX]] || Jail || USMS IGA || GEO Group ||    2 ||  || Female/Male
+|-
+| [[Karnes County Immigration Processing Center]] || Active (FY22 – FY26) || [[Karnes City, TX]] || Jail || DIGSA || GEO Group || 1199 ||  928 || Female/Male
+|-
+| [[Kay County Justice Facility]] || Active (FY19 – FY26) || [[Newkirk, OK]] || Jail || IGSA ||  ||  158 ||  || Female/Male
+|-
+| [[Kenton County Jail]] || Active (FY25 – FY26) || [[Covington, KY]] || Jail || USMS IGA ||  ||  109 ||  || Male
+|-
+| [[Knox County Detention Facility]] || Active (FY22 – FY26) || [[Knoxville, TN]] || Jail || USMS IGA ||  ||   33 ||  || Female/Male
+|-
+| [[Krome North Service Processing Center]] || Active (FY10 – FY26) || [[Miami, FL]] || ICE Migrant Detention Center || SPC || Ahtna Global Services ||  866 ||  450 || Male
+|-
+| [[La Salle County Regional Detention Center]] || Active (FY25 – FY26) || [[Encinal, TX]] || Jail || USMS IGA || County ||  255 ||  || Male
+|-
+| [[Lake County Jail]] || Active (FY25 – FY26) || [[Tavares, FL]] || Jail || IGSA ||  ||    1 ||  || Female/Male
+|-
+| [[Laramie County Jail]] || Active (FY26) || [[Cheyenne, WY]] || Jail || USMS IGA ||  ||    4 ||  || Female/Male
+|-
+| [[Laredo Processing Center]] || Active (FY10 – FY26) || [[Laredo, TX]] || Jail || DIGSA || CoreCivic ||  368 ||  || Female/Male
+|-
+| [[Laurel County Correctional Center]] || Active (FY25 – FY26) || [[London, KY]] || Jail || USMS IGA ||  ||    1 ||  || Female/Male
+|-
+| [[Lawrence County]] || Active (FY26) || [[Deadwood, SD]] || Jail || USMS IGA ||  ||   10 ||  || Female/Male
+|-
+| [[Leavenworth US Penitentiary]] || Active (FY25 – FY26) || [[Leavenworth, KS]] || Federal Prison || BOP ||  ||   58 ||  || Male
+|-
+| [[Lexington County Jail]] || Active (FY23 – FY26) || [[Lexington, SC]] || Jail || USMS IGA || County (Sheriff) ||    5 ||  || Female/Male
+|-
+| [[Logan County Jail]] || Active (FY25 – FY26) || [[Guthrie, OK]] || Jail || USMS IGA ||  ||    5 ||  || Female/Male
+|-
+| [[Louisiana ICE Processing]] || Active (FY25 – FY26) || [[Angola, LA]] || Jail || IGSA ||  ||  180 ||  208 || Male
+|-
+| [[Lubbock County Detention Center]] || Active (FY25 – FY26) || [[Lubbock, TX]] || Jail || USMS IGA || County (Sheriff) ||    3 ||  || Female/Male
+|-
+| [[Mahoning County Jail]] || Active (FY25 – FY26) || [[Youngstown, OH]] || Jail || USMS IGA ||  ||   89 ||  || Female/Male
+|-
+| [[Martin County Jail]] || Active (FY26) || [[Stuart, FL]] || Jail || USMS IGA ||  ||    6 ||  || Female/Male
+|-
+| [[Mccook Detention Center]] || Active (FY26) || [[McCook, NE]] || Jail || DIGSA ||  ||   77 ||  300 || Male
+|-
+| [[Mesa Verde ICE Processing Center]] || Active (FY15 – FY26) || [[Bakersfield, CA]] || Private Migrant Detention Center || CDF || GEO Group ||  377 ||  320 || Male
+|-
+| [[Miami Correctional Center]] || Active (FY26) || [[Bunker Hill, IN]] || Jail || IGSA ||  ||  405 ||  || Male
+|-
+| [[Miami Federal Detention]] || Active (FY25 – FY26) || [[Miami, FL]] || Federal Prison || BOP ||  ||  459 ||  || Female/Male
+|-
+| [[Miami Staging Facility]] || Active (FY26) || [[Miami, FL]] || ICE Short-Term Migrant Detention Center || STAGING ||  ||   20 ||  || Female/Male
+|-
+| [[Monroe County Detention-Dorm]] || Active (FY14 – FY26) || [[Monroe, MI]] || Jail || IGSA || County (Sheriff) ||  124 ||  || Male
+|-
+| [[Montgomery ICE Processing Center]] || Active (FY19 – FY26) || [[Conroe, TX]] || Private Migrant Detention Center || CDF || GEO Group || 1227 ||  750 || Male
+|-
+| [[Muscatine County Jail]] || Active (FY25 – FY26) || [[Muscatine, IA]] || Jail || USMS IGA ||  ||   19 ||  || Female/Male
+|-
+| [[Nassau County Correctional Center]] || Active (FY25 – FY26) || [[East Meadow, NY]] || Jail || USMS IGA ||  ||   12 ||  || Female/Male
+|-
+| [[Nelson Coleman Correction]] || Active (FY25 – FY26) || [[Killona, LA]] || Jail || USMS IGA ||  ||    3 ||  || Male
+|-
+| [[Nevada Southern Detention Center]] || Active (FY16 – FY26) || [[Pahrump, NV]] || Private Migrant Detention Center || USMS CDF || CoreCivic ||  457 ||  || Male
+|-
+| [[New Hanover County Jail]] || Active (FY26) || [[Castle Hayne, NC]] || Jail || USMS IGA || County (Sheriff) ||    4 ||  || Female/Male
+|-
+| [[North Central Regional Jail]] || Active (FY26) || [[Greenwood, Doddridge County, West Virginia|Greenwood, WV]] || Jail || IGSA ||  ||    3 ||  || 
+|-
+| [[Northwest ICE Processing Center]] || Active (FY10 – FY26) || [[Tacoma, WA]] || Private Migrant Detention Center || CDF || GEO Group || 1380 || 1181 || Female/Male
+|-
+| [[Northwest Regional Corrections Center]] || Active (FY25 – FY26) || [[Crookston, MN]] || Jail || USMS IGA ||  ||   15 ||  || Female/Male
+|-
+| [[Northwest State Correctional Center]] || Active (FY23 – FY26) || [[Swanton, VT]] || Jail || USMS IGA || County (Corrections) ||   12 ||  || Female/Male
+|-
+| [[Oldham County Detention Center]] || Active (FY25 – FY26) || [[La Grange, KY]] || Jail || USMS IGA ||  ||  128 ||  || Female/Male
+|-
+| [[Orange County Jail (Florida)]] || Active (FY24 – FY26) || [[Orlando, FL]] || Jail || USMS IGA || County ||   71 ||  || Female/Male
+|-
+| [[Orange County Jail (New York)]] || Active (FY10 – FY26) || [[Goshen, NY]] || Jail || IGSA || County (Corrections) ||  166 ||  || Male
+|-
+| [[Ozark County Sheriff's Office]] || Active (FY25 – FY26) || [[Gainesville, MO]] || Jail || IGSA ||  ||   21 ||  || 
+|-
+| [[Pennington County Jail (South Dakota)]] || Active (FY25 – FY26) || [[Rapid City, SD]] || Jail || USMS IGA || County (Sheriff) ||    4 ||  || Female/Male
+|-
+| [[Phelps County Jail (Missouri)]] || Active (FY25 – FY26) || [[Rolla, MO]] || Jail || USMS IGA ||  ||   15 ||  || Female/Male
+|-
+| [[Phelps County Jail (Nebraska)]] || Active (FY10 – FY26) || [[Holdrege, NE]] || Jail || USMS IGA || County (Sheriff) ||   24 ||  || Female/Male
+|-
+| [[Pickens County Detention Center]] || Active (FY20 – FY26) || [[Carrollton, AL]] || Jail || IGSA ||  ||   43 ||  || Female/Male
+|-
+| [[Pike County Jail]] || Active (FY10 – FY26) || [[Lords Valley, PA]] || Jail || IGSA || County (Sheriff) ||  241 ||  100 || Male
+|-
+| [[Prairieland Detention Center]] || Active (FY17 – FY26) || [[Alvarado, TX]] || Jail || DIGSA || LaSalle Corrections ||  960 ||  525 || Female/Male
+|-
+| [[Putnam County Sheriff]] || Active (FY25 – FY26) || [[Cookeville, TN]] || Jail || USMS IGA ||  ||   18 ||  || 
+|-
+| [[River Correctional Center]] || Active (FY19 – FY26) || [[Ferriday, LA]] || Jail || IGSA ||  ||  586 ||  361 || Male
+|-
+| [[Roanoke City Jail]] || Active (FY26) || [[Roanoke, VA]] || Jail || USMS IGA || City ||    1 ||  || Female/Male
+|-
+| [[Robert A. Deyton Detention Center]] || Active (FY19 – FY26) || [[Lovejoy, GA]] || Jail || USMS IGA ||  ||   12 ||  || Male
+|-
+| [[Saipan Department of Corrections (Susupe)]] || Active (FY19 – FY26) || [[Saipan, MP]] || Jail || USMS IGA ||  ||   21 ||  || Female/Male
+|-
+| [[San Diego District Staging]] || Active (FY26) || [[San Diego, CA]] || ICE Short-Term Migrant Detention Center || STAGING ||  ||   11 ||  || Female/Male
+|-
+| [[San Juan Staging]] || Active (FY23 – FY26) || [[Guaynabo, PR]] || ICE Short-Term Migrant Detention Center || STAGING ||  ||   17 ||  100 || Female/Male
+|-
+| [[San Luis Regional Detention Center]] || Active (FY13 – FY26) || [[San Luis, AZ]] || Jail || IGSA || LaSalle Corrections ||  337 ||  100 || Female/Male
+|-
+| [[Sarpy County Jail]] || Active (FY25 – FY26) || [[Papillion, NE]] || Jail || USMS IGA ||  ||   21 ||  || Female/Male
+|-
+| [[Sauk County Sheriff]] || Active (FY25 – FY26) || [[Baraboo, WI]] || Jail || USMS IGA ||  ||   14 ||  || Female/Male
+|-
+| [[Sioux County Jail]] || Active (FY26) || [[Orange City, IA]] || Jail || USMS IGA ||  ||   12 ||  || Female/Male
+|-
+| [[South Central Regional Jail]] || Active (FY22 – FY26) || [[Charleston, WV]] || Jail || IGSA || County (Corrections) ||   32 ||  || Male
+|-
+| [[South Texas ICE Processing Center]] || Active (FY10 – FY26) || [[Pearsall, TX]] || Private Migrant Detention Center || CDF || GEO Group || 1756 || 1350 || Female/Male
+|-
+| [[Southern Regional]] || Active (FY26) || [[Beaver, WV]] || Jail || IGSA ||  ||    1 ||  || Female/Male
+|-
+| [[Southwestern Regional Jail]] || Active (FY26) || [[Holden, WV]] || Jail || IGSA ||  ||    1 ||  || 
+|-
+| [[St. Clair County Jail]] || Active (FY10 – FY26) || [[Port Huron, MI]] || Jail || IGSA || County (Sheriff) ||   47 ||  || Male
+|-
+| [[Ste. Genevieve County Sheriff/Jail]] || Active (FY25 – FY26) || [[Ste. Genevieve, MO]] || Jail || USMS IGA ||  ||  114 ||  || Female/Male
+|-
+| [[Strafford County Corrections]] || Active (FY10 – FY26) || [[Dover, NH]] || Jail || IGSA || County (Corrections) ||  146 ||  || Female/Male
+|-
+| [[Sweetwater County Jail]] || Active (FY25 – FY26) || [[Rock Springs, WY]] || Jail || USMS IGA ||  ||    9 ||  || Female/Male
+|-
+| [[Tooele County Jail]] || Active (FY25 – FY26) || [[Tooele, UT]] || Jail || USMS IGA ||  ||   10 ||  || Female/Male
+|-
+| [[Tulsa County Jail (David L. Moss Justice Center)]] || Active (FY21 – FY26) || [[Tulsa, OK]] || Jail || IGSA || County (Sheriff) ||   43 ||  || Female/Male
+|-
+| [[Turner Guilford Knight (TGK) Jail]] || Active (FY26) || [[Miami, FL]] || Jail || IGSA ||  ||   10 ||  || Female/Male
+|-
+| [[Two Bridges Regional Jail]] || Active (FY25 – FY26) || [[Wiscasset, ME]] || Jail || USMS IGA ||  ||    8 ||  || Male
+|-
+| [[Uinta County Jail]] || Active (FY25 – FY26) || [[Evanston, WY]] || Jail || USMS IGA ||  ||   23 ||  || Female/Male
+|-
+| [[Victoria County Jail]] || Active (FY25 – FY26) || [[Victoria, TX]] || Jail || USMS IGA ||  ||   14 ||  || Female/Male
+|-
+| [[Walton County Jail]] || Active (FY25 – FY26) || [[Defuniak Springs, FL]] || Jail || USMS IGA ||  ||   27 ||  || Female/Male
+|-
+| [[Ward County Jail]] || Active (FY25 – FY26) || [[Minot, ND]] || Jail || USMS IGA ||  ||    2 ||  || Female/Male
+|-
+| [[Waukesha County Jail]] || Active (FY25 – FY26) || [[Waukesha, WI]] || Jail || USMS IGA ||  ||    3 ||  || Female/Male
+|-
+| [[Webb County Detention Center (CCA)]] || Active (FY17 – FY26) || [[Laredo, TX]] || Jail || DIGSA || CoreCivic ||  443 ||  250 || Female/Male
+|-
+| [[Western Regional Jail And Correctional Facility]] || Active (FY26) || [[Barboursville, WV]] || Jail || IGSA ||  ||    8 ||  || Female/Male
+|-
+| [[Woodbury County Jail]] || Active (FY25 – FY26) || [[Sioux City, IA]] || Jail || USMS IGA ||  ||   63 ||  || Female/Male
+|}</textarea>
+</div>
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

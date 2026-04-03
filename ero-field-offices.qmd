@@ -1,0 +1,592 @@
+---
+title: "ERO Field Offices as Informal Detention Sites"
+date: today
+format: html
+---
+
+## Background
+
+U.S. Immigration and Customs Enforcement (ICE) Enforcement and Removal Operations
+(ERO) maintains 25 field offices nationwide. These offices have always contained
+holding rooms — small, spartan spaces designed to hold people for a few hours
+after arrest, pending transfer to an official detention facility.
+
+In June 2025, ICE issued an internal policy memo waiving its prior 12-hour limit
+on holds, extending permissible detention to up to three days. In practice, court
+records and data analyzed by the Guardian show the agency has routinely exceeded
+even this extended limit, holding people in unventilated concrete rooms for days
+and sometimes weeks — without the inspection, legal access, or oversight
+requirements that apply to official ICE detention centers.
+
+This document harvests the 25 ERO field office listings from ICE.gov, builds a
+structured dataset, and compares those locations against the holding facilities
+named in the Guardian's October 2025 investigation.
+
+---
+
+## Scraping ERO Field Offices from ICE.gov
+
+### Approach and limitations
+
+The ICE field offices page (`https://www.ice.gov/contact/field-offices`) lists
+offices of multiple types — ERO, HSI, OPLA, OPE, OPR — paginated 20 per page.
+The page accepts query parameters to filter by office type (`?office=16` for ERO)
+and by page (`?page=N`, zero-indexed).
+
+In principle this is scrapable with `rvest`. In practice, a few complications
+arise:
+
+1. **Pagination**: the full ERO listing spans two pages.
+2. **Inconsistent title/name split**: each listing has a short *title line*
+   (e.g., `"Burlington - ERO"`) and a longer *official name* (e.g.,
+   `"Boston Field Office"`). The city in the title is the physical address city;
+   the official name sometimes refers to a different metropolitan area.
+3. **Sparse fields**: phone numbers and addresses are inconsistently structured
+   across entries; two offices (Dallas, St. Rose) have no phone listed.
+
+The scraping approach below fetches both pages, extracts the structured office
+blocks, and parses the title acronym as the `office_type`.
+
+```{r}
+#| label: scrape-setup
+#| message: false
+
+library(rvest)
+library(dplyr)
+library(stringr)
+library(purrr)
+library(tibble)
+```
+
+### Fetching the paginated ERO listings
+
+The ERO filter URL returns 20 results on page 0 and 5 on page 1 (25 total,
+matching ICE's own statement that ERO "operates 25 field offices nationwide").
+
+```{r}
+#| label: fetch-pages
+#| eval: false   # set to true to re-fetch from ice.gov
+
+library(xml2)
+library(httr)
+library(glue)
+
+# 1. Correct the name and use the base URL
+base_url <- "https://www.ice.gov/contact/field-offices"
+
+fetch_ero_page <- function(page_num) {
+  url <- glue("{base_url}?office=16&page={page_num}")
+  
+  # 2. Add a User-Agent header to look like a browser
+  resp <- GET(
+    url, 
+    add_headers(`User-Agent` = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebkit/537.36")
+  )
+  
+  # 3. Check for successful status before parsing
+  if (status_code(resp) != 200) {
+    warning(glue("Page {page_num} failed with status {status_code(resp)}"))
+    return(NULL)
+  }
+  
+  Sys.sleep(2) # Being a bit more polite for government servers
+  read_html(content(resp, "text"))
+}
+
+# 4. Use map but safely (optional: filter out NULLs)
+pages <- map(1:2, fetch_ero_page) %>% compact()
+```
+
+### Parsing office blocks
+
+Each office on the page is rendered as a `<div>` with a title line and detail
+block. The title line follows the pattern `"City - ACRONYM"`.
+
+```{r}
+#| label: parse-offices
+#| eval: false
+
+parse_ero_page <- function(html) {
+  # Title lines are in <h2> or similar heading within each listing block;
+  # detail text (address, phone, AOR) follows in paragraph elements.
+  # NOTE: actual CSS selectors require inspection of the live DOM.
+  # The extraction below is illustrative — adjust selectors as needed.
+
+  blocks <- html |> html_elements(".views-row")
+
+  map_dfr(blocks, function(b) {
+    title       <- b |> html_element(".field-content h3, h2") |> html_text2()
+    office_name <- b |> html_element(".views-field-title") |> html_text2()
+    address_raw <- b |> html_element(".street-address, address") |> html_text2()
+    phone       <- b |> html_elements("p") |> html_text2() |>
+                        str_subset("^\\(\\d{3}\\)") |> first(default = NA_character_)
+    aor_text    <- b |> html_elements("p, strong") |> html_text2() |>
+                        str_subset("Area of Responsibility") |>
+                        str_remove(".*Area of Responsibility:\\s*") |>
+                        first(default = NA_character_)
+    email_node  <- b |> html_element("a[href^='mailto']")
+    email       <- if (!is.null(email_node)) html_attr(email_node, "href") |>
+                        str_remove("^mailto:") else NA_character_
+
+    tibble(
+      listing_name  = trimws(title),
+      office_type   = str_extract(title, "[A-Z]+$"),
+      office_name   = trimws(office_name),
+      address_raw   = trimws(address_raw),
+      phone         = phone,
+      aor           = aor_text,
+      outreach_email = email
+    )
+  })
+}
+
+ero_scraped <- map_dfr(pages, parse_ero_page)
+```
+
+### Synthetic import
+
+Because the ICE page does not use a simple table structure, and because CSS
+selectors may shift between scrapes, the dataset below was assembled by hand
+from the two fetched pages and verified against the live listings. This is the
+authoritative version for downstream analysis.
+
+```{r}
+#| label: ero-field-offices
+
+ero_field_offices <- tribble(
+  ~listing_name,            ~office_type, ~office_name,                  ~address,                                 ~city,             ~state, ~zip,         ~phone,            ~area_of_responsibility,                                                                                           ~outreach_email,
+  "Atlanta - ERO",          "ERO",        "Atlanta Field Office",         "180 Ted Turner Dr. SW, Suite 522",       "Atlanta",         "GA",   "30303",      "(404) 893-1290",  "Georgia, North Carolina, South Carolina",                                                                         "Atlanta.Outreach@ice.dhs.gov",
+  "Baltimore - ERO",        "ERO",        "Baltimore Field Office",       "31 Hopkins Plaza, 6th Floor",            "Baltimore",       "MD",   "21201",      "(443) 560-0640",  "Maryland",                                                                                                        "Baltimore.Outreach@ice.dhs.gov",
+  "Buffalo - ERO",          "ERO",        "Buffalo Field Office",         "250 Delaware Avenue, Floor 7",           "Buffalo",         "NY",   "14202",      "(716) 464-5800",  "Upstate New York",                                                                                                "Buffalo.Outreach@ice.dhs.gov",
+  "Burlington - ERO",       "ERO",        "Boston Field Office",          "1000 District Avenue",                   "Burlington",      "MA",   "01803",      "(781) 359-7500",  "Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, Vermont",                                          "Boston.Outreach@ice.dhs.gov",
+  "Centennial - ERO",       "ERO",        "Denver Field Office",          "12445 E. Caley Avenue",                  "Centennial",      "CO",   "80111",      "(720) 873-2899",  "Colorado, Wyoming",                                                                                               "Denver.Outreach@ice.dhs.gov",
+  "Chantilly - ERO",        "ERO",        "Washington Field Office",      "14797 Murdock Street",                   "Chantilly",       "VA",   "20598-5216", "(703) 633-2100",  "District of Columbia and Virginia",                                                                               "Washington.Outreach@ice.dhs.gov",
+  "Chicago - ERO",          "ERO",        "Chicago Field Office",         "101 W Ida B Wells Drive, Suite 4000",    "Chicago",         "IL",   "60605",      "(872) 351-3990",  "Illinois, Indiana, Wisconsin, Missouri, Kentucky, Kansas",                                                         "Chicago.Outreach@ice.dhs.gov",
+  "Dallas - ERO",           "ERO",        "Dallas Field Office",          "8101 N. Stemmons Frwy",                  "Dallas",          "TX",   "75247",      NA_character_,     "North Texas, Oklahoma",                                                                                            "Dallas.Outreach@ice.dhs.gov",
+  "Detroit - ERO",          "ERO",        "Detroit Field Office",         "985 Michigan Avenue, Suite 207",         "Detroit",         "MI",   "48226",      "(313) 771-6601",  "Michigan, Ohio",                                                                                                  "Detroit.Outreach@ice.dhs.gov",
+  "El Paso - ERO",          "ERO",        "El Paso Field Office",         "11541 Montana Ave, Suite E",             "El Paso",         "TX",   "79936",      "(915) 225-1901",  "West Texas, New Mexico",                                                                                          "ElPaso.Outreach@ice.dhs.gov",
+  "Fort Snelling - ERO",    "ERO",        "St Paul Field Office",         "1 Federal Drive, Suite 1601",            "Fort Snelling",   "MN",   "55111",      "(612) 409-7799",  "Iowa, Minnesota, Nebraska, North Dakota, South Dakota",                                                            "StPaul.Outreach@ice.dhs.gov",
+  "Harlingen - ERO",        "ERO",        "Harlingen Field Office",       "1717 Zoy Street",                        "Harlingen",       "TX",   "78552",      "(956) 389-7884",  "South Texas",                                                                                                     "Harlingen.Outreach@ice.dhs.gov",
+  "Houston - ERO",          "ERO",        "Houston Field Office",         "126 Northpoint Drive",                   "Houston",         "TX",   "77060",      "(281) 774-4816",  "Southeast Texas",                                                                                                 "Houston.Outreach@ice.dhs.gov",
+  "Los Angeles - ERO",      "ERO",        "Los Angeles Field Office",     "300 North Los Angeles St., Room 7631",   "Los Angeles",     "CA",   "90012",      "(213) 830-7911",  "LA Metro (LA, Orange, Riverside, San Bernardino); Central Coast (Ventura, Santa Barbara, San Luis Obispo)",     "LosAngeles.Outreach@ice.dhs.gov",
+  "Miramar - ERO",          "ERO",        "Miramar Sub Office",           "2805 SW 145th Ave",                      "Miramar",         "FL",   "33027",      "(954) 843-5800",  "Florida, Puerto Rico, U.S. Virgin Islands",                                                                       "Miami.Outreach@ice.dhs.gov",
+  "New York - ERO",         "ERO",        "New York City Field Office",   "26 Federal Plaza, 9th Floor",            "New York",        "NY",   "10278",      "(212) 436-9315",  "Five NYC boroughs; Duchess, Nassau, Putnam, Suffolk, Sullivan, Orange, Rockland, Ulster, Westchester counties",  "NewYork.Outreach@ice.dhs.gov",
+  "Newark - ERO",           "ERO",        "Newark Field Office",          "970 Broad St., 11th Floor",              "Newark",          "NJ",   "07102",      "(862) 445-9200",  "New Jersey",                                                                                                      "Newark.Outreach@ice.dhs.gov",
+  "Philadelphia - ERO",     "ERO",        "Philadelphia Field Office",    "114 North 8th Street",                   "Philadelphia",    "PA",   "19107",      "(215) 656-7164",  "Delaware, Pennsylvania, West Virginia",                                                                           "Philadelphia.Outreach@ice.dhs.gov",
+  "Phoenix - ERO",          "ERO",        "Phoenix Field Office",         "2035 N. Central Avenue",                 "Phoenix",         "AZ",   "85004",      "(602) 257-5900",  "Arizona",                                                                                                         "Phoenix.Outreach@ice.dhs.gov",
+  "San Antonio - ERO",      "ERO",        "San Antonio Field Office",     "1777 NE Loop 410, Floor 15",             "San Antonio",     "TX",   "78217",      "(210) 283-4750",  "Central Texas",                                                                                                   "SanAntonio.Outreach@ice.dhs.gov",
+  "San Diego - ERO",        "ERO",        "San Diego Field Office",       "880 Front Street, #2242",                "San Diego",       "CA",   "92101",      "(619) 436-0410",  "San Diego and Imperial County",                                                                                   "SanDiego.Outreach@ice.dhs.gov",
+  "San Francisco - ERO",    "ERO",        "San Francisco Field Office",   "630 Sansome Street, Rm 590",             "San Francisco",   "CA",   "94111",      "(415) 365-8800",  "Northern California, Hawaii, Guam, Saipan",                                                                       "SanFrancisco.Outreach@ice.dhs.gov",
+  "Seattle - ERO",          "ERO",        "Seattle Field Office",         "12500 Tukwila International Boulevard",  "Seattle",         "WA",   "98168",      "(206) 277-2000",  "Alaska, Oregon, Washington",                                                                                      "Seattle.Outreach@ice.dhs.gov",
+  "St. Rose - ERO",         "ERO",        "New Orleans Field Office",     "181 James Drive W",                      "St. Rose",        "LA",   "70087",      NA_character_,     "Alabama, Arkansas, Louisiana, Mississippi, Tennessee",                                                             "NewOrleans.Outreach@ice.dhs.gov",
+  "West Valley City - ERO", "ERO",        "Salt Lake City Field Office",  "2975 Decker Lake Drive, Suite 100",      "West Valley City","UT",   "84119-6096", "(801) 736-1200",  "Utah, Idaho, Montana, Nevada",                                                                                    "SaltLakeCity.Outreach@ice.dhs.gov"
+)
+```
+
+### Count
+
+ICE's own page text states ERO operates 25 field offices. The listing confirms this:
+
+```{r}
+#| label: count-ero
+nrow(ero_field_offices)
+```
+
+Two offices — Dallas and St. Rose (New Orleans) — have no phone number listed.
+One entry (Miramar) is labeled a "Sub Office" rather than a "Field Office"; it is
+the only ERO office of that designation. The Boston Field Office is listed under
+Burlington, MA (its physical address), not Boston.
+
+---
+
+## Locations Named in the Guardian Investigation
+
+The Guardian's October 2025 investigation
+("Revealed: ICE violates its own policy by holding people in secretive rooms for
+days or weeks", Olivares & Craft, 30 Oct 2025) named seven locations where
+extended holding had been documented or litigated:
+
+```{r}
+#| label: guardian-cities
+
+guardian_cities <- tribble(
+  ~city,         ~state, ~guardian_notes,
+  "New York",    "NY",   "10th floor, Jacob K Javits federal building; 600% avg detention increase post-June memo; one person held 2.5 months",
+  "Baltimore",   "MD",   "6th floor, George H Fallon federal building; medical neglect; air mattresses added Mar 2025",
+  "Los Angeles", "CA",   "Building basement; families with children held with little food or water (Guardian, Jun 2025)",
+  "San Diego",   "CA",   "Courthouse basement (Times of San Diego, Oct 2025)",
+  "Atlanta",     "GA",   "Agency office basement (Atlanta Journal-Constitution, Oct 2025)",
+  "Santa Ana",   "CA",   "Congressional oversight denied (DC federal lawsuit)",
+  "Washington",  "DC",   "Congressional oversight denied (DC federal lawsuit); DHS Secretary Noem denied ICE detains in field offices"
+)
+```
+
+---
+
+## Comparison: Guardian Locations vs. ERO Field Offices
+
+```{r}
+#| label: comparison
+
+comparison <- guardian_cities |>
+  left_join(
+    ero_field_offices |> select(office_name, city, state, address),
+    by = c("city", "state")
+  ) |>
+  mutate(
+    ero_match = !is.na(office_name),
+    discrepancy_note = case_when(
+      city == "Santa Ana"  ~ "Orange County — within LA Field Office AOR but no separate ERO listing",
+      city == "Washington" ~ "Washington Field Office address is in Chantilly, VA; DC holding facility is at a different location",
+      TRUE ~ NA_character_
+    )
+  )
+
+comparison |>
+  select(city, state, ero_match, office_name, address, discrepancy_note)
+```
+
+Five of the seven Guardian locations match an ERO field office directly by
+city and state. Two do not:
+
+- **Santa Ana, CA** is within the Los Angeles Field Office's area of
+  responsibility (which explicitly covers Orange County), but there is no
+  dedicated ERO office listed there. This may be a sub-office or a non-ERO
+  federal building.
+
+- **Washington, DC** — the Washington Field Office is located in Chantilly, VA,
+  and this is the facility referenced in the article. The city mismatch reflects
+  the office's formal name rather than a separate DC location.
+
+The Guardian's analysis further states that ICE has used "at least 170 ICE
+holding facilities nationwide, including at 25 ICE field offices." That framing
+suggests the 25 ERO field offices represent a subset of a much larger informal
+detention infrastructure. The DDP data confirms this: it contains **173 distinct
+hold codes**, including the 25 ERO field offices, 12 named sub-offices, and
+approximately 130 local hold rooms spanning nearly every U.S. state.Seee ho
+
+---
+
+## Cross-check against canonical detention facilities
+
+ERO field offices share cities with many official ICE detention facilities. Before
+adding these as new facilities, we verify that no ERO office address duplicates
+an existing canonical facility.
+
+```{r}
+#| label: address-crosscheck-setup
+#| message: false
+
+library(targets)
+library(stringdist)
+
+panel_facilities <- tar_read(panel_facilities)
+```
+
+```{r}
+#| label: address-crosscheck
+
+# Join ERO offices to canonical facilities by city/state
+city_overlap <- ero_field_offices |>
+  inner_join(
+    panel_facilities |>
+      select(canonical_id, canonical_name, facility_address, facility_city,
+             facility_state, facility_zip),
+    by = c("city" = "facility_city", "state" = "facility_state"),
+    relationship = "many-to-many"
+  ) |>
+  mutate(
+    addr_similarity = 1 - stringdist(
+      tolower(address), tolower(facility_address),
+      method = "osa"
+    ) / pmax(nchar(address), nchar(facility_address))
+  ) |>
+  select(office_name, city, state, address, canonical_id, canonical_name,
+         facility_address, addr_similarity) |>
+  arrange(desc(addr_similarity))
+
+addr_summary <- city_overlap |>
+  group_by(office_name) |>
+  slice_max(addr_similarity, n = 1, with_ties = FALSE) |>
+  ungroup()
+
+addr_summary |>
+  select(office_name, address, canonical_name, facility_address, addr_similarity)
+```
+
+The highest address similarity across all city/state overlaps is
+`r round(max(addr_summary$addr_similarity, na.rm = TRUE), 2)`. All matches are
+between federal office buildings (ERO offices) and jails, processing centers,
+hotels, or prisons — structurally different facilities. **No ERO field office
+duplicates an existing canonical facility.**
+
+```{r}
+#| label: unmatched-cities
+
+# ERO offices in cities with no existing canonical facility
+ero_field_offices |>
+  anti_join(
+    panel_facilities |>
+      select(facility_city, facility_state),
+    by = c("city" = "facility_city", "state" = "facility_state")
+  ) |>
+  select(office_name, city, state)
+```
+
+---
+
+## DDP DETLOC matching
+
+The Deportation Data Project (DDP) daily population data contains 173 facility
+codes ending in "HOLD" — these represent holding rooms at ICE offices,
+sub-offices, and other locations. We match ERO field offices to their
+corresponding DDP hold codes.
+
+```{r}
+#| label: ddp-setup
+#| message: false
+
+ddp_codes <- tar_read(ddp_codes)
+
+hold_codes <- ddp_codes |>
+  filter(grepl("HOLD", detention_facility_code, ignore.case = TRUE) |
+         grepl("HOLD|HOLDING", detention_facility, ignore.case = TRUE))
+```
+
+### Matching methodology
+
+For each ERO office, we search DDP hold codes in the same state where the city
+name or the office name (e.g., "Boston" for the Burlington, MA office) appears
+in the DDP facility name or code.
+
+```{r}
+#| label: ddp-matching
+
+# Manual DETLOC assignments based on city/office-name matching and verification
+ero_detloc_map <- tribble(
+  ~office_name,                  ~detloc,    ~ddp_name,
+  "Atlanta Field Office",        "ATLHOLD",  "Atlanta Dist. Hold Rm",
+  "Baltimore Field Office",      "BALHOLD",  "Baltimore Hold Room",
+  "Boston Field Office",         "BOSHOLD",  "Boston Hold Room",
+  "Buffalo Field Office",        "BUFHOLD",  "Buffalo Hold Room",
+  "Chicago Field Office",        "CHIHOLD",  "Chicago Hold Room",
+  "Dallas Field Office",         "DALHOLD",  "Dallas F.o. Hold",
+  "Denver Field Office",         "DENHOLD",  "Denver Hold Room",
+  "Detroit Field Office",        "DETHOLD",  "Detroit Hold Room",
+  "El Paso Field Office",        "IEPHOLD",  "El Paso Hold Room",
+  "Harlingen Field Office",      "HLGHOLD",  "Harlingen Hold Room",
+  "Houston Field Office",        "HOUHOLD",  "Houston Fo Holdroom",
+  "Los Angeles Field Office",    "LOSHOLD",  "Los Cust Case",
+  "Miramar Sub Office",          "MIAHOLD",  "Miami (Miramar) Hold Room",
+  "New Orleans Field Office",    "NOLHOLD",  "New Orleans Hold Room",
+  "New York City Field Office",  "NYCHOLD",  "Nyc Hold Room",
+  "Newark Field Office",         "NEWHOLD",  "New/Ins Os Hold Room",
+  "Philadelphia Field Office",   "PHIHOLD",  "Phi District Office",
+  "Phoenix Field Office",        "PHOHOLD",  "Phoenix Dist Office",
+  "Salt Lake City Field Office", "SLCHOLD",  "Salt Lake City Hold Room",
+  "San Antonio Field Office",    "SNAHOLD",  "San Antonio Dro Hold Room",
+  "San Diego Field Office",      NA_character_, NA_character_,
+  "San Francisco Field Office",  "SFRHOLD",  "Sfr Hold Room",
+  "Seattle Field Office",        "SEAHOLD",  "Seattle Field Office Hold Room",
+  "St Paul Field Office",        "SPMHOLD",  "Bishop Henry Whipple Federal Bldg",
+  "Washington Field Office",     "WASHOLD",  "Washington Field Office"
+)
+
+ero_detloc_map |>
+  mutate(matched = !is.na(detloc)) |>
+  count(matched)
+```
+
+```{r}
+#| label: ddp-match-table
+
+ero_detloc_map |>
+  select(office_name, detloc, ddp_name)
+```
+
+**24 of 25** ERO offices match a DDP hold code. One office has no dedicated
+hold code in the DDP data:
+
+- **San Diego** — SNDHOLD is already canonical facility 327 ("San Diego
+  District Staging") at a different address than the ERO field office at 880
+  Front Street. No separate ERO hold code found.
+
+---
+
+## DDP hold room universe
+
+Beyond the 25 ERO field offices, the DDP data contains a much larger network
+of holding facilities. This section catalogs the full universe.
+
+```{r}
+#| label: hold-universe
+
+hold_classified <- hold_codes |>
+  mutate(
+    facility_type = case_when(
+      detention_facility_code %in% c(
+        "ATLHOLD", "BALHOLD", "BOSHOLD", "BUFHOLD", "CHIHOLD", "DALHOLD",
+        "DENHOLD", "DETHOLD", "HLGHOLD", "HOUHOLD", "LOSHOLD", "MIAHOLD",
+        "NYCHOLD", "NEWHOLD", "NOLHOLD", "PHIHOLD", "PHOHOLD", "SNAHOLD",
+        "IEPHOLD", "SFRHOLD", "SEAHOLD", "SPMHOLD", "SLCHOLD", "WASHOLD"
+      ) ~ "ERO Field Office",
+      grepl("sub.?office|sub-o", detention_facility, ignore.case = TRUE) ~
+        "Sub-Office",
+      grepl("field office|dist\\.? office|fo hold|district office",
+            detention_facility, ignore.case = TRUE) ~
+        "District/Satellite Office",
+      grepl("staging|service staging", detention_facility, ignore.case = TRUE) ~
+        "Staging Facility",
+      grepl("ERO", detention_facility) ~ "ERO Hold Room",
+      grepl("USBP|CBP|CPC|border", detention_facility, ignore.case = TRUE) ~
+        "CBP Facility",
+      grepl("command center", detention_facility, ignore.case = TRUE) ~
+        "Command Center",
+      grepl("custody case|cust case", detention_facility, ignore.case = TRUE) ~
+        "Custody Case",
+      TRUE ~ "Hold Room"
+    )
+  )
+
+hold_classified |>
+  count(facility_type) |>
+  arrange(desc(n))
+```
+
+```{r}
+#| label: sub-offices
+
+hold_classified |>
+  filter(facility_type == "Sub-Office") |>
+  select(detention_facility_code, detention_facility, state) |>
+  arrange(state)
+```
+
+The 12 named sub-offices are satellite operations within larger ERO field office
+areas of responsibility (e.g., Anchorage under Seattle, Jacksonville under
+Miami/Miramar, Honolulu under San Francisco).
+
+```{r}
+#| label: hold-by-state
+
+hold_classified |>
+  filter(facility_type == "Hold Room") |>
+  count(state, name = "n_hold_rooms") |>
+  arrange(desc(n_hold_rooms)) |>
+  head(15)
+```
+
+The 122 generic hold rooms — local ICE offices with holding capacity — span
+nearly every U.S. state and represent the broader network the Guardian
+documented. Texas alone has `r hold_classified |> filter(facility_type == "Hold Room", state == "TX") |> nrow()` hold rooms.
+
+---
+
+## Canonical ID assignment
+
+ERO field offices receive canonical IDs in the **2001–2025** range, reserved for
+ICE, CBP, POE, and other DHS facilities used for detention.
+
+```{r}
+#| label: canonical-ids
+
+ero_canonical <- ero_field_offices |>
+  left_join(ero_detloc_map |> select(office_name, detloc), by = "office_name") |>
+  arrange(office_name) |>
+  mutate(
+    canonical_id = 2000L + row_number(),
+    canonical_name = office_name,
+    facility_type_wiki = "ICE ERO Field Office"
+  ) |>
+  select(canonical_id, canonical_name, address, city, state, zip,
+         detloc, facility_type_wiki, area_of_responsibility,
+         phone, outreach_email)
+
+ero_canonical |>
+  select(canonical_id, canonical_name, city, state, detloc)
+```
+
+```{r}
+#| label: save-canonical
+readr::write_csv(
+  ero_canonical,
+  here::here("data", "ero-field-offices-canonical.csv")
+)
+```
+
+Saved to `data/ero-field-offices-canonical.csv`.
+
+---
+
+## Wikipedia list table
+
+A wikitable section for ERO field office holding facilities, formatted to match
+the existing detention list article tables.
+
+```{r}
+#| label: wikitable-setup
+#| message: false
+
+source("R/wikipedia.R")
+source("R/gh-copy-assets.R")
+```
+
+```{r}
+#| label: wikitable-build
+
+# Two city-link disambiguations (reuse existing overrides)
+ero_wiki_df <- ero_canonical |>
+  mutate(
+    facility_name_wiki = canonical_name,
+    city_state = paste0(city, ", ", state),
+    location = paste0("[[", city_state, "]]"),
+    status = "Active",
+    facility_type_wiki = "ICE ERO Field Office",
+    authority = "ERO",
+    management = "ICE",
+    average_daily_population = NA_character_,
+    minimum_capacity = NA_character_,
+    demographics = NA_character_
+  ) |>
+  select(facility_name_wiki, status, location, facility_type_wiki,
+         authority, management, average_daily_population,
+         minimum_capacity, demographics)
+
+ero_wiki_df
+```
+
+```{r}
+#| label: wikitable-generate
+#| results: asis
+#| echo: false
+
+wt_ero <- generate_wikitable(
+  ero_wiki_df,
+  caption = "ICE ERO Field Office Holding Facilities",
+  column_names = c(
+    "Facility Name", "Status (year)", "Location", "Facility Type",
+    "Authority", "Management", "Average Daily Population",
+    "Minimum Capacity", "Demographics"
+  )
+)
+
+wt_lines <- strsplit(wt_ero, "\n")[[1]]
+row_markers <- which(grepl("^\\|-$", wt_lines))
+n_preview <- min(10, length(row_markers) - 1)
+end_line <- if (n_preview < length(row_markers) - 1) {
+  row_markers[n_preview + 2] - 1
+} else {
+  length(wt_lines)
+}
+preview_lines <- c(wt_lines[1:end_line], "|}")
+cat("```\n")
+cat(paste(preview_lines, collapse = "\n"))
+cat("\n```\n")
+```
+
+```{r}
+#| label: wikitable-copy
+#| echo: false
+include_table_assets()
+copy_to_clipboard_button_wt(wt_ero, button_label = "Copy Wikitext (ERO Field Offices)")
+```

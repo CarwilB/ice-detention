@@ -1,0 +1,322 @@
+---
+title: "ICE detention facility summary"
+date: last-modified
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-fold: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+::: {.callout-note}
+This report was generated using AI under general human direction. At the time of generation, the contents have not been comprehensively reviewed by a human analyst.
+
+<!--
+To indicate human review: Delete the line above about contents not being reviewed, and replace this comment with:
+The contents have been reviewed and validated by [Your Name], [Your Role] on [Date].
+-->
+:::
+
+```{r}
+#| label: load-packages
+library(targets)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(scales)
+library(knitr)
+```
+
+```{r}
+#| label: load-data
+source_presence   <- tar_read(source_presence)
+facility_presence <- tar_read(facility_presence)
+facilities_panel  <- tar_read(facilities_panel)
+hold_canonical    <- tar_read(hold_canonical_data)
+ero_canonical     <- tar_read(ero_canonical)
+```
+
+## Overview
+
+This report summarizes the ICE detention facility data assembled by the `targets` pipeline, covering `r length(unique(facilities_panel$fiscal_year))` fiscal years of data. The pipeline tracks facilities across multiple data sources and assigns each a canonical identifier.
+
+```{r}
+#| label: count-by-id-range
+source_presence |>
+  count(id_range) |>
+  mutate(id_range = factor(id_range,
+    levels = c("panel", "dmcp_only", "ddp_other", "ero", "hold", "medical"),
+    labels = c("FY panel (1\u2013398)", "DMCP-only (1001\u20131053)",
+               "DDP other (1054\u20131203)", "ERO offices (2001\u20132025)",
+               "Hold facilities (2026\u20132186)", "Medical (3001\u20133226)")
+  )) |>
+  kable(col.names = c("ID range", "Facilities"))
+```
+
+The pipeline contains **`r nrow(source_presence)`** canonical facilities in total. Of these, **`r sum(source_presence$id_range == "panel")`** appear in the FY annual statistics panel (FY10--FY26, minus FY18).
+
+### Active vs. closed (panel facilities)
+
+```{r}
+#| label: active-closed
+most_recent <- tail(sort(unique(facilities_panel$fiscal_year)), 1)
+
+facility_presence |>
+  count(trajectory) |>
+  arrange(desc(n)) |>
+  kable(col.names = c("Trajectory", "Facilities"))
+```
+
+In `r most_recent`, **`r sum(facility_presence$last_seen == most_recent)`** panel facilities were active.
+
+## Facility types
+
+```{r}
+#| label: types-active
+active_types <- facilities_panel |>
+  filter(fiscal_year == most_recent) |>
+  count(facility_type_wiki, sort = TRUE) |>
+  mutate(pct = n / sum(n))
+
+active_types |>
+  mutate(pct = percent(pct, accuracy = 0.1)) |>
+  kable(col.names = c("Type", "Facilities", "Share"))
+```
+
+```{r}
+#| label: fig-types-bar
+#| fig-cap: !expr paste("Facility types among active", most_recent, "facilities")
+#| fig-height: 4
+ggplot(active_types, aes(x = n, y = reorder(facility_type_wiki, n))) +
+  geom_col() +
+  labs(x = "Facilities", y = NULL)
+```
+
+### Type distribution over time
+
+```{r}
+#| label: fig-types-time
+#| fig-cap: "Facility type counts by fiscal year"
+#| fig-height: 5
+facilities_panel |>
+  filter(!is.na(facility_type_wiki)) |>
+  count(fiscal_year, facility_type_wiki) |>
+  ggplot(aes(x = fiscal_year, y = n, fill = facility_type_wiki)) +
+  geom_col() +
+  labs(x = NULL, y = "Facilities", fill = "Type") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+## Source coverage
+
+The pipeline draws on five data sources. The table below shows how many canonical facilities appear in each.
+
+```{r}
+#| label: source-coverage-summary
+source_cols <- c("in_fy_panel", "in_faclist15", "in_faclist17",
+                 "in_ddp", "in_marshall", "in_vera")
+source_labels <- c("FY annual stats", "DMCP 2015 (faclist15)",
+                   "DMCP 2017 (faclist17)", "DDP daily population",
+                   "Marshall Project", "Vera Institute")
+
+tibble(
+  Source     = source_labels,
+  Facilities = colSums(source_presence[source_cols]),
+  Share      = percent(Facilities / nrow(source_presence), accuracy = 0.1)
+) |>
+  kable()
+```
+
+### Supplementary coverage
+
+```{r}
+#| label: supplementary-coverage
+tibble(
+  Attribute    = c("Has DETLOC code", "Is geocoded"),
+  Facilities   = c(sum(source_presence$has_detloc),
+                   sum(source_presence$is_geocoded)),
+  Share        = percent(Facilities / nrow(source_presence), accuracy = 0.1)
+) |>
+  kable()
+```
+
+#### Geocode sources
+
+The pipeline assembles geocoded coordinates from three sources: Google Maps API (panel and ERO facilities), The Marshall Project (hold rooms with known addresses), and the Vera Institute (backfill for hold rooms without Marshall coverage).
+
+```{r}
+#| label: geocode-source-breakdown
+source_presence |>
+  filter(is_geocoded) |>
+  count(geocode_source, sort = TRUE) |>
+  mutate(share = percent(n / sum(n), accuracy = 0.1)) |>
+  kable(col.names = c("Geocode source", "Facilities", "Share"))
+```
+
+### Vera Institute coverage
+
+```{r}
+#| label: vera-not-canonical
+vera_facilities <- tar_read(vera_facilities)
+detloc_lookup   <- tar_read(detloc_lookup)
+
+n_vera_total   <- n_distinct(vera_facilities$detloc)
+n_vera_matched <- sum(unique(vera_facilities$detloc) %in% unique(detloc_lookup$detloc))
+n_vera_outside <- n_vera_total - n_vera_matched
+
+vera_outside <- vera_facilities |>
+  filter(!detloc %in% unique(detloc_lookup$detloc)) |>
+  count(type_grouped, sort = TRUE) |>
+  mutate(share = percent(n / sum(n), accuracy = 0.1))
+
+vera_outside |>
+  kable(col.names = c("Vera facility type", "Facilities", "Share"))
+```
+
+The Vera Institute facility list contains **`r n_vera_total`** distinct facility codes, of which **`r n_vera_matched`** match a canonical facility DETLOC. The remaining **`r n_vera_outside`** Vera codes are not in the canonical dataset. These are predominantly jails and county facilities used for short-term detention ("Non-Dedicated"), medical facilities, and federal prisons not tracked in the ICE annual statistics.
+
+### Sources per facility
+
+```{r}
+#| label: fig-n-sources
+#| fig-cap: "Number of data sources per facility"
+#| fig-height: 3.5
+source_presence |>
+  count(n_sources) |>
+  ggplot(aes(x = factor(n_sources), y = n)) +
+  geom_col() +
+  geom_text(aes(label = n), vjust = -0.3, size = 3) +
+  labs(x = "Number of data sources", y = "Facilities")
+```
+
+### Source overlap by ID range
+
+```{r}
+#| label: source-overlap-by-range
+source_presence |>
+  group_by(id_range) |>
+  summarise(
+    n          = n(),
+    fy_panel   = sum(in_fy_panel),
+    faclist15  = sum(in_faclist15),
+    faclist17  = sum(in_faclist17),
+    ddp        = sum(in_ddp),
+    marshall   = sum(in_marshall),
+    vera       = sum(in_vera),
+    .groups = "drop"
+  ) |>
+  mutate(id_range = factor(id_range,
+    levels = c("panel", "dmcp_only", "ddp_other", "ero", "hold", "medical"),
+    labels = c("Panel", "DMCP-only", "DDP other", "ERO", "Hold", "Medical")
+  )) |>
+  kable(col.names = c("ID range", "Total", "FY panel", "faclist15",
+                       "faclist17", "DDP", "Marshall", "Vera"))
+```
+
+## Source overlap analysis
+
+The pipeline draws on four broad data source families. This section consolidates the two ICE-published sources (FY19–26 annual statistics and FY10–17 DMCP summary listings) into a single "ICE" category and compares overlap with DDP, Vera Institute, and Marshall Project.
+
+```{r}
+#| label: source-overlap-prep
+library(ggVennDiagram)
+
+sp_overlap <- source_presence |>
+  mutate(in_ice = in_fy_panel | in_faclist15 | in_faclist17)
+
+source_sets <- list(
+  "ICE" = sp_overlap$canonical_id[sp_overlap$in_ice],
+  "DDP" = sp_overlap$canonical_id[sp_overlap$in_ddp],
+  "Vera" = sp_overlap$canonical_id[sp_overlap$in_vera],
+  "Marshall" = sp_overlap$canonical_id[sp_overlap$in_marshall]
+)
+```
+
+### Venn diagram
+
+```{r}
+#| label: fig-venn-diagram
+#| fig-cap: "Source coverage across canonical facilities"
+#| fig-height: 5.5
+#| fig-width: 6
+ggVennDiagram(source_sets, label_alpha = 0) +
+  scale_fill_gradient(low = "white", high = "#4292C6") +
+  theme(legend.position = "none")
+```
+
+### Pairwise overlap
+
+```{r}
+#| label: pairwise-overlap
+src_names <- names(source_sets)
+pair_mat <- matrix(NA_integer_, length(src_names), length(src_names),
+                   dimnames = list(src_names, src_names))
+for (i in seq_along(src_names)) {
+  for (j in seq_along(src_names)) {
+    pair_mat[i, j] <- length(intersect(source_sets[[i]], source_sets[[j]]))
+  }
+}
+kable(pair_mat)
+```
+
+### Intersection patterns
+
+```{r}
+#| label: intersection-patterns
+sp_patterns <- sp_overlap |>
+  count(in_ice, in_ddp, in_vera, in_marshall, sort = TRUE) |>
+  mutate(
+    pattern = paste0(
+      if_else(in_ice,      "ICE", ""),
+      if_else(in_ddp,      " + DDP", ""),
+      if_else(in_vera,     " + Vera", ""),
+      if_else(in_marshall,  " + Marshall", "")
+    ) |> stringr::str_remove("^\\s\\+\\s") |> trimws(),
+    n_sources = in_ice + in_ddp + in_vera + in_marshall
+  ) |>
+  arrange(desc(n))
+
+sp_patterns |>
+  select(pattern, n_sources, n) |>
+  kable(col.names = c("Sources present", "Count", "Facilities"))
+```
+
+```{r}
+#| label: fig-intersection-upset
+#| fig-cap: "Facility counts by source combination"
+#| fig-height: 5
+sp_patterns |>
+  filter(n >= 1, pattern != "") |>
+  mutate(pattern = forcats::fct_reorder(pattern, n)) |>
+  ggplot(aes(x = n, y = pattern)) +
+  geom_col() +
+  geom_text(aes(label = n), hjust = -0.2, size = 3) +
+  labs(x = "Number of facilities", y = NULL) +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.15)))
+```
+
+**`r sum(sp_overlap$in_ice & sp_overlap$in_ddp & sp_overlap$in_vera & sp_overlap$in_marshall)`** facilities (`r scales::percent(sum(sp_overlap$in_ice & sp_overlap$in_ddp & sp_overlap$in_vera & sp_overlap$in_marshall) / nrow(sp_overlap), accuracy = 0.1)`) appear in all four source families. **`r sum(!sp_overlap$in_ice & sp_overlap$in_ddp & sp_overlap$in_vera & sp_overlap$in_marshall)`** appear in DDP + Vera + Marshall but not any ICE-published source — these are primarily hold rooms and staging facilities that ICE does not include in its published statistics. **`r sum(sp_overlap$in_ice & !sp_overlap$in_ddp & !sp_overlap$in_vera & !sp_overlap$in_marshall)`** facilities appear only in ICE-published data with no external corroboration; these are mostly closed or short-lived sites with no DETLOC code.
+
+## Coverage gaps
+
+Panel facilities (IDs 1--398) with limited source coverage:
+
+```{r}
+#| label: coverage-gaps
+panel_gaps <- source_presence |>
+  filter(id_range == "panel") |>
+  filter(n_sources <= 1) |>
+  select(canonical_id, canonical_name, in_fy_panel, in_faclist15,
+         in_faclist17, in_ddp, in_marshall, in_vera, has_detloc) |>
+  arrange(canonical_id)
+
+panel_gaps |>
+  kable(col.names = c("ID", "Name", "FY panel", "FL15", "FL17",
+                       "DDP", "Marshall", "Vera", "DETLOC"))
+```
+
+**`r nrow(panel_gaps)`** panel facilities appear in only one data source. Of these, **`r sum(!panel_gaps$has_detloc)`** have no DETLOC code, limiting the ability to link them across datasets.

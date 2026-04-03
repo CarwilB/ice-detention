@@ -1,0 +1,124 @@
+---
+title: "Address merge re-write"
+author: "Carwil Bjork-James"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## **Summary of Findings**
+
+Based on my exploration of `build_hold_canonical()` in `R/themarshallproject-locations.R`, here's a comprehensive analysis:
+
+### **Overview of the Function**
+
+The `build_hold_canonical()` function is designed to:
+
+1.  **Classify hold-type facilities** from DDP (Department of Detention and Prosecution) codes
+
+2.  **Cross-reference against Marshall Project locations** for address/geocoding data
+
+3.  **Assign canonical IDs** (2026+) to hold facilities
+
+4.  **Map ERO field offices** that overlap with hold codes to canonical IDs 2001-2025
+
+### **How Hold Facilities Get Addresses (4-Step Process)**
+
+#### **Step 1: Classification (Lines 186-220)**
+
+The function identifies hold-type DDP codes using two complementary filters:
+
+-   **Primary**: DETLOC pattern matching for codes containing "HOLD", "STAGING", or "CPC"
+
+-   **Secondary**: Vera Institute classification for short-code staging facilities (STK, AGC, etc.) not caught by the regex pattern
+
+Classified facilities are assigned a `facility_type` from 8 categories: sub_office, field_office, ero_hold, staging, command_center, cbp, custody_case, or hold_room.
+
+#### **Step 2: Marshall Project Matching (Lines 223-229)**
+
+A LEFT JOIN matches DDP codes against Marshall Project locations on DETLOC field:
+
+```         
+hold_codes LEFT JOIN marshall_locations ON detention_facility_code = detloc
+```
+
+This retrieves facility_address, facility_city, facility_county, facility_zip, lat/lon, aor, and date_first_use/date_last_use when available.
+
+#### **Step 3: Split into Two Groups (Lines 258-261)**
+
+-   **`hold_with_addr`**: Records with BOTH `facility_address` AND `facility_city` present
+
+-   **`hold_stubs`**: Records with EITHER missing (NAs trigger inclusion as stubs)
+
+#### **Step 4: Manual Patches for Stubs (Lines 263-284)**
+
+The `hold_stub_address_patches()` function provides addresses for 6 facility codes that couldn't be matched by DETLOC but were confirmed through other sources:
+
+-   **5 codes via ERO directory** (city/state matching): IMPHOLD, CINHOLD, PROHOLD, CBPHOLD, EPCPCTX
+
+-   **1 code via Marshall Project city match** (Batavia, NY): CMDHOLD
+
+### **Facilities WITHOUT Addresses (Why They End Up as Stubs)**
+
+**27 facilities remain without addresses** (canonical IDs 2146-2173), marked with `address_source = "ddp_stub"`. These include:
+
+| **Count** | **Location Types** | **Examples** |
+|:---|:---|:---|
+| 21 | Hold Rooms | Mobile (AL), Redding (CA), Las Cruces (NM), Corpus Christi (TX), Wenatchee (WA) |
+| 3 | Sub-Offices | Anchorage (AK), Santa Maria (CA), Roanoke (VA) |
+| 1 | CPC (Correctional Partnership) | Arizona State Prison - Yuma (AZ) |
+| 1 | Staging | (Broadview was addressed from Marshall data) |
+| \~2 | Staging locations | Mount Laurel (NJ), other variations |
+
+**Root Causes for Missing Addresses:**
+
+1.  **Not in Marshall Project database** (\~1,479 facilities, 1978-2017): These 27 hold facilities' DETLOCs either:
+
+    -   Don't exist in the Marshall Project CSV
+
+    -   Represent newer facilities (post-2017)
+
+    -   Are DDP-only codes without Marshall Project coverage
+
+2.  **Not matched by manual patches**:
+
+    -   The 6 manual patches in `hold_stub_address_patches()` only cover those with confirmed ERO directory or city-level Marshall matches
+
+    -   Remaining 21 lack sufficient confirming evidence to justify manual patching
+
+3.  **DDP provides facility name + state only**:
+
+    -   DDP facility name: e.g., "Mobile Holdroom"
+
+    -   DDP state code: e.g., "AL"
+
+    -   No address, city, or geocoding provided by DDP
+
+### **Canonical ID Assignment Strategy**
+
+-   **IDs 2026-2121** (\~96 records): Hold facilities WITH addresses from Marshall Project or patches
+
+    -   Includes patched ERO directory addresses (lat/lon left as NA)
+
+    -   `address_source = "marshall_project"` or specific patch source (ero_directory, marshall_city_match)
+
+-   **IDs 2122-2173** (27 records): Hold facilities WITHOUT addresses (stubs)
+
+    -   All fields (address, city, zip, county, lat, lon, aor, date_first_use, date_last_use) set to NA
+
+    -   `address_source = "ddp_stub"` (lowest priority)
+
+### **Key Design Insight**
+
+The function implements a **confidence-ranked fallback strategy**:
+
+1.  Marshall Project DETLOC match (highest confidence)
+
+2.  Manual patches (medium confidence)
+
+3.  DDP name + state only (lowest confidence)
+
+Records at level 1-2 get IDs 2026+; level 3 continues sequentially but marked as stubs. This preserves data transparency while separating validated addresses from unverified ones.

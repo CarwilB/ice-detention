@@ -1,8 +1,13 @@
-# Import facility data from ICE Excel spreadsheets.
+# Import facility data from ICE spreadsheets and supplemental DMCP listings.
 #
-# Two-step process:
+# Annual FY stats (FY19–FY26): two-step process:
 #   1. Read the two-row headers and combine into clean variable names.
 #   2. Read the data rows using those names.
+#
+# Supplemental DMCP listings (2015 XLSX, 2017 PDF): each is a separate
+# point-in-time roster of authorized facilities with contract and historical
+# ADP data across multiple fiscal years per row. See rename_dmcp_columns()
+# in clean.R for the column harmonization step.
 
 # ── Header extraction ────────────────────────────────────────────────────────
 
@@ -99,4 +104,93 @@ import_all_years <- function(data_file_info, clean_names_list) {
   })
   names(facilities_data_list) <- data_file_info$year_name
   facilities_data_list
+}
+
+# ── Supplemental DMCP facility listings ──────────────────────────────────────
+#
+# The DMCP (Detention Management Compliance Program) lists are authorization
+# rosters that capture contract, operator, and multi-year ADP data for each
+# facility in a single row. They are a different document type from the annual
+# FY stats files and are handled by their own import functions.
+#
+# Both functions return raw data with minimal transformation. Apply
+# rename_dmcp_columns() + clean_dmcp_data() (from clean.R) as the next step.
+
+# ── Import December 2015 DMCP facility listing (XLSX) ────────────────────────
+# Snapshot dated 2015-12-08. Contains FY2010–FY2016 ADP history per facility.
+# Named for the snapshot date, not a fiscal year, because it covers 70+ days
+# of FY2016 (Oct 1–Dec 8, 2015) as well as end-of-year data for FY2010–FY2015.
+
+import_faclist15 <- function(path) {
+  # Rows 1–6 are document title/metadata. Row 7 is the column header row.
+  # Row 8+ is facility data.
+  readxl::read_xlsx(
+    path,
+    sheet = "Facility List - Main",
+    skip  = 6,
+    col_names = TRUE
+  ) |>
+    # Drop blank trailing rows (no state or city)
+    dplyr::filter(!is.na(State), !is.na(City))
+}
+
+# ── Column names for the 2017 DMCP PDF ───────────────────────────────────────
+
+.dmcp_pdf_col_names <- c(
+  "detloc", "name", "address", "city", "county", "state", "zip",
+  "type", "type_detailed", "male_female", "levels",
+  "capacity", "population_count",
+  "fy17_adp", "fy16_adp", "fy15_adp", "fy14_adp", "fy13_adp",
+  "fy12_adp", "fy11_adp", "fy10_adp",
+  "facility_operator", "facility_owner",
+  "contract_initiation_date", "contract_expiration_date",
+  "per_diem_rate_detailed", "authorizing_authority",
+  "over_under_72", "last_inspection_type", "last_inspection_standard",
+  "last_inspection_rating_final", "last_inspection_date",
+  "cy16_rating", "cy15_rating", "cy14_rating", "cy13_rating",
+  "cy12_rating", "cy11_rating", "cy10_rating", "dsm_assigned"
+)
+
+# Column x-positions used as tabulapdf boundaries (inherited from the original
+# pdftools/bounding-box analysis of header tokens; coordinates are in points
+# from the top-left of the page).
+.dmcp_pdf_col_breaks <- c(
+   34, 101, 151, 179, 206, 218, 232, 246, 263, 286,
+  302,   # capacity
+  320,   # population_count
+  341,   # fy17_adp
+  353,   # fy16_adp
+  365,   # fy15_adp
+  377,   # fy14_adp
+  389,   # fy13_adp
+  401,   # fy12_adp
+  413,   # fy11_adp
+  426,   # fy10_adp
+  437,   # facility_operator
+  469, 483, 510, 536, 622, 642, 669, 687, 706, 734,
+  754, 782, 811, 840, 869, 898, 920, 944
+)
+
+# ── Import 2017 DMCP facility list (PDF) ─────────────────────────────────────
+#
+# Uses tabulapdf::extract_tables() with explicit column boundaries to extract
+# the facility table from pages 1–2. Column positions are passed directly so
+# Tabula does not attempt to guess boundaries, which previously caused 4 narrow
+# ADP columns to be merged into one on page 1.
+
+import_faclist17 <- function(path) {
+  tabs <- tabulapdf::extract_tables(
+    path,
+    pages   = 1:2,
+    columns = list(.dmcp_pdf_col_breaks),
+    guess   = FALSE,
+    output  = "matrix"
+  )
+
+  do.call(rbind, tabs) |>
+    tibble::as_tibble(.name_repair = "minimal") |>
+    stats::setNames(.dmcp_pdf_col_names) |>
+    # Keep only rows with a valid DETLOC code (all-caps alphanumeric, no spaces)
+    # and a non-missing state; filters out page headers/footers/footnotes.
+    dplyr::filter(grepl("^[A-Z0-9]+$", detloc), !is.na(state), detloc != "DETLOC")
 }

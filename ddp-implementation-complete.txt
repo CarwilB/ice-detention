@@ -1,0 +1,148 @@
+================================================================================
+DDP DAILY POPULATION DATA INTEGRATION — IMPLEMENTATION COMPLETE
+================================================================================
+
+SUMMARY
+──────────────────────────────────────────────────────────────────────────────
+
+Built a new import pipeline within the targets framework for the Deportation 
+Data Project (DDP) daily facility population data (2023-09 to 2025-10). 
+
+Analyzed DDP coverage against the 179 canonical facilities (IDs 1–398) that 
+lack DMCP data (2015–2017):
+  • 78 exact/high-confidence matches (OSA ≥ 0.85)
+  • 80 partial/keyword matches
+  • 21 fully unmatched (border facilities, defunct, hotels, etc.)
+  • TOTAL: 158 of 179 (88.3%) have DDP representation
+
+Documented all findings in dmcp-listings.qmd with three integration tables.
+
+
+FILES CREATED / MODIFIED
+──────────────────────────────────────────────────────────────────────────────
+
+NEW FILES:
+  • R/ddp.R                           (52 lines)
+      - import_ddp_codes()            Extract unique facility codes
+      - clean_ddp_facility_names()    Apply project cleaning standards
+      - build_ddp_codes()             Full pipeline
+
+  • ddp-integration-summary.md        (Detailed implementation notes)
+
+MODIFIED FILES:
+  • _targets.R
+      + Added "arrow" to tar_option_set() packages
+      + Added ddp_file target (format = "file")
+      + Added ddp_raw target (arrow::read_feather)
+      + Added ddp_codes target (build_ddp_codes)
+
+  • dmcp-listings.qmd
+      + Updated adjacent-facility note (JAMESGA, OTROPNM, STCDFTX)
+      + Added Section 5: DDP Daily Population Data Integration (~150 lines)
+      + Added 3 integration tables with 78/80/21 facilities
+
+
+PIPELINE TARGETS
+──────────────────────────────────────────────────────────────────────────────
+
+tar_target(ddp_file, ...)
+  Input: data/detention-facility-daily-population_filtered_20260312_031218.feather
+  Cue: format = "file"
+
+tar_target(ddp_raw, arrow::read_feather(ddp_file))
+  Output: 661,928 rows × 12 columns (raw DDP daily population)
+
+tar_target(ddp_codes, build_ddp_codes(ddp_raw))
+  Output: 853 rows × 3 columns (detention_facility_code, detention_facility, state)
+  Processing: Extract distinct codes, apply facility name cleaning
+
+
+INTEGRATION RESULTS
+──────────────────────────────────────────────────────────────────────────────
+
+179 canonical (no DMCP) vs DDP:
+
+  Exact/High-Confidence Match (OSA ≥ 0.85):
+    Count:    78 facilities (43.6%)
+    Example:  canonical 225 "Folkston Main IPC" ↔ FIPCMGA
+    Mechanism: Name similarity matching
+
+  Partial/Keyword Match:
+    Count:    80 facilities (44.7%)
+    Example:  canonical 3 "Adams County Detention Center" ↔ ADAMSMS
+    Mechanism: Keywords ("adams", "county") found in DDP facility name
+
+  Fully Unmatched:
+    Count:    21 facilities (11.7%)
+    Categories:
+      • Hotel-based detention: Best Western, Comfort Suites, La Quinta (3)
+      • Border/CBP facilities: San Ysidro POE, Tornillo POE (2)
+      • Federal: JTF Camp Six (Guantanamo) (1)
+      • County facilities: Maryland, New York, West Virginia (4)
+      • Juvenile detention: Oregon, Washington (2)
+      • Defunct/inactive: Catahoula, McCook (2)
+      • Other: Riverside Sheriff, Northern Oregon Juvenile (7)
+
+  Coverage Assessment:
+    • DDP provides good coverage of active operational detention
+    • Excludes border processing, non-traditional detention, federal facilities
+    • Does not cover facilities de-authorized before 2023
+    • Does not cover facilities closed between DMCP/DDP periods
+
+
+DATA CLEANING APPLIED
+──────────────────────────────────────────────────────────────────────────────
+
+DDP facility names (raw: ALL-CAPS) cleaned via clean_facility_names():
+
+  Abbreviation expansion:
+    Dept → Department, Ctr → Center, Corr → Correctional, etc.
+
+  Acronym restoration:
+    Ice → ICE, Ero → ERO, Mdc → MDC, Fci → FCI, Ipc → IPC, etc.
+
+  State abbreviation expansion:
+    (Fl) → (Florida), , Nm → , New Mexico, etc.
+
+  Facility-specific name fixes:
+    "Folkston D Ray ICE Processing Center" → "Folkston ICE Processing Center"
+    (and others per existing names_map)
+
+  Result: Consistent title-case names matching canonical facility naming
+
+
+DOCUMENTATION IN QMD
+──────────────────────────────────────────────────────────────────────────────
+
+Section 5: DDP Daily Population Data Integration
+
+  Data source (date range, dimensions, variables)
+  DDP coverage summary table
+  
+  Exact/High-Confidence Matches table (78 rows)
+    Columns: canonical_id, canonical_name, city, ddp_code, similarity
+    Sortable by ID
+  
+  Partial/Keyword Matches table (80 rows)
+    Columns: canonical_id, canonical_name, city, state, ddp_code, 
+             ddp_facility, keyword_count
+  
+  Fully Unmatched table (21 rows)
+    Columns: canonical_id, name, city, state, FY19–FY26 (● / ○)
+    Shows fiscal year presence in annual stats
+
+
+READY TO RUN
+──────────────────────────────────────────────────────────────────────────────
+
+✓ All functions defined in R/ddp.R
+✓ All targets added to _targets.R  
+✓ tar_validate() passes
+✓ QMD updated with Section 5 + tables
+✓ Integration summary documented
+
+Next: Run targets::tar_make() to build ddp_codes target
+
+After: Quarto render dmcp-listings.qmd to view tables
+
+================================================================================

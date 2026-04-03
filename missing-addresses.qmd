@@ -1,0 +1,253 @@
+
+---
+title: "Facilities missing addresses"
+author: "Posit Assistant"
+date: "2026-03-29"
+format: html
+---
+
+::: {.callout-note}
+This report was generated using AI under general human direction. At the time of generation, the contents have not been comprehensively reviewed by a human analyst.
+
+<!--
+To indicate human review: Delete the line above about contents not being reviewed, and replace this comment with:
+The contents have been reviewed and validated by [Your Name], [Your Role] on [Date].
+-->
+:::
+
+```{r}
+#| label: load-packages
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(glue)
+library(httr)
+library(pdftools)
+library(png)
+library(knitr)
+```
+
+```{r}
+#| label: load-data
+roster <- targets::tar_read(facility_roster)
+vera_facilities <- targets::tar_read(vera_facilities)
+```
+
+## Facilities missing addresses
+
+The facility roster should have an address and city for every facility. This document investigates the facilities that are currently missing one or both.
+
+```{r}
+#| label: identify-missing
+no_addr <- roster |>
+  filter(is.na(facility_address) | facility_address == "" |
+         is.na(facility_city) | facility_city == "") |>
+  select(canonical_id, canonical_name, facility_city, facility_state,
+         facility_type_wiki, detloc, id_range)
+```
+
+There are `{r} nrow(no_addr)` facilities in the roster with no `facility_address` or `facility_city`.
+
+```{r}
+#| label: tbl-missing
+no_addr |>
+  select(canonical_id, canonical_name, facility_state, facility_type_wiki, id_range) |>
+  kable(col.names = c("ID", "Name", "State", "Type", "ID range"))
+```
+
+Most are hold rooms and sub-offices (IDs 2026+), plus a handful of medical facilities (IDs 3001+) and one CBP facility.
+
+## Vera Institute coverage
+
+The Vera Institute facility database contains 1,464 facility codes with addresses and geocoded coordinates. We can join by DETLOC to check whether Vera has address data for these missing facilities.
+
+```{r}
+#| label: vera-join
+vera_check <- vera_facilities |>
+  filter(detloc %in% no_addr$detloc) |>
+  select(detloc, vera_name = facility_name,
+         vera_address = facility_address, vera_city = facility_city,
+         vera_state = facility_state, vera_zip = facility_zip)
+
+no_addr_vera <- no_addr |>
+  left_join(vera_check, by = "detloc")
+```
+
+```{r}
+#| label: vera-coverage-summary
+vera_summary <- no_addr_vera |>
+  summarise(
+    total = n(),
+    vera_has_address = sum(!is.na(vera_address)),
+    vera_has_city = sum(!is.na(vera_city)),
+    vera_has_neither = sum(is.na(vera_address) & is.na(vera_city))
+  )
+
+vera_summary |> kable()
+```
+
+Vera has street addresses for `{r} vera_summary$vera_has_address` of the `{r} vera_summary$total` facilities and city names for `{r} vera_summary$vera_has_city`. Only `{r} vera_summary$vera_has_neither` have no address information in Vera at all.
+
+```{r}
+#| label: tbl-vera-detail
+no_addr_vera |>
+  transmute(
+    canonical_id,
+    canonical_name,
+    state = facility_state,
+    vera_address = replace_na(vera_address, "—"),
+    vera_city = replace_na(vera_city, "—")
+  ) |>
+  kable(col.names = c("ID", "Name", "State", "Vera address", "Vera city"))
+```
+
+## ERO field offices PDF
+
+ICE publishes a map of ERO field offices and sub-field offices. The PDF is image-based (no extractable text), but we can render it and visually compare the cities shown on the map against our missing-address list.
+
+```{r}
+#| label: download-ero-pdf
+pdf_path <- here::here("data", "ice", "eroFieldOffices.pdf")
+
+if (!file.exists(pdf_path)) {
+  resp <- GET(
+    "https://www.ice.gov/doclib/about/offices/ero/pdf/eroFieldOffices.pdf",
+    add_headers(`User-Agent` = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)")
+  )
+  writeBin(content(resp, "raw"), pdf_path)
+}
+```
+
+```{r}
+#| label: fig-ero-map
+#| fig-cap: "FY 2023 ERO Field Offices (last updated 02/09/2024). Stars are the 25 AOR field offices; dots are 181 sub-field offices and other ERO presence locations."
+#| out-width: "100%"
+png_path <- here::here("data", "ice", "eroFieldOffices-page1.png")
+
+if (!file.exists(png_path)) {
+  img <- pdf_render_page(pdf_path, page = 1, dpi = 150)
+  writePNG(img, png_path)
+}
+
+knitr::include_graphics(png_path)
+```
+
+### Comparison against missing-address facilities
+
+The map shows 25 AOR field offices (stars) and 181 sub-field offices/other ERO presence locations (dots). I extracted city names from the map by visual inspection and compared them against the Vera-sourced city for each missing-address facility.
+
+```{r}
+#| label: ero-map-cities
+# Cities visible on the ERO Field Offices PDF map, extracted by visual
+# inspection of the rendered image
+ero_pdf_cities <- c(
+  # AOR field offices (stars)
+  "Seattle", "San Francisco", "Los Angeles", "San Diego", "Phoenix",
+  "Salt Lake City", "Denver", "El Paso", "Dallas", "San Antonio",
+  "Harlingen", "Houston", "New Orleans", "Chicago", "St. Paul",
+  "Detroit", "Buffalo", "Boston", "New York City", "Newark",
+  "Philadelphia", "Baltimore", "Washington", "Atlanta", "Miramar",
+  # Sub-field offices / other ERO presence (dots)
+  "Anchorage", "Ferndale", "Wenatchee", "Spokane", "Richland",
+  "Tacoma", "Yakima", "Portland", "Eugene", "Medford",
+  "Sacramento", "San Jose", "Stockton", "Fresno", "Bakersfield",
+  "Santa Maria", "Camarillo", "San Bernardino", "Santa Ana",
+  "Otay Mesa", "El Centro", "Calexico", "Reno", "Las Vegas",
+  "St. George", "Boise", "Twin Falls", "Idaho Falls", "Helena",
+  "Billings", "Ogden", "Orem", "Yuma", "Tucson",
+  "Casper", "Cheyenne", "Craig", "Grand Junction", "Glenwood Springs",
+  "Frederick", "Aurora", "Florence", "Durango", "Alamosa",
+  "Colorado Springs", "Albuquerque", "Roswell", "Las Cruces", "Chaparral",
+  "Pecos", "Midland", "Big Spring", "Lubbock", "Amarillo",
+  "Waco", "Austin", "Del Rio", "Laredo", "Corpus Christi",
+  "Edinburg", "Los Fresnos", "San Angelo", "Alvarado", "Athens",
+  "Texarkana", "Oklahoma City", "Tulsa", "Wichita", "Garden City",
+  "Kansas City", "Stratford", "St. Louis", "Rock Island", "Broadview",
+  "Madison", "Milwaukee", "Cedar Rapids", "Sioux City", "Des Moines",
+  "Omaha", "North Platte", "Grand Island", "Sioux Falls", "Rapid City",
+  "Grand Forks", "Fort Wayne", "Indianapolis", "Columbus", "Cleveland",
+  "Cincinnati", "Louisville", "Bowling Green", "Fort Smith",
+  "Fayetteville", "Little Rock", "Jonesboro", "Bossier City",
+  "Winnfield", "Alexandria", "Oakdale", "Lafayette", "Baton Rouge",
+  "Jena", "Pearl", "Gulfport", "Memphis", "Nashville", "Knoxville",
+  "Chattanooga", "Gadsden", "Birmingham", "Montgomery", "Mobile",
+  "Huntsville", "Conroe", "Houston",
+  "Tallahassee", "Panama City", "Jacksonville", "Orlando", "Tampa",
+  "Stuart", "Ft. Myers", "Pompano Beach", "Miami",
+  "Greensboro", "Raleigh", "Charlotte", "Wilmington", "Columbia",
+  "Charleston", "Savannah", "Lumpkin", "Folkston",
+  "Hendersonville", "Greer", "Dalton",
+  "Harrisonburg", "Roanoke", "Richmond", "Norfolk", "Bowling Green",
+  "Salisbury", "Dover", "Mt. Laurel",
+  "Pike", "Williamsport", "Moshannon", "Pittsburgh", "York",
+  "Champlain", "Syracuse", "Batavia", "Albany", "Newburgh",
+  "Central Islip", "Scarborough", "St. Albans", "Manchester",
+  "Hartford", "Warwick", "Sault Saint Marie",
+  "Honolulu", "Saipan", "Guam", "Tamuning",
+  "Aguadilla", "Guaynabo", "St. Thomas"
+)
+```
+
+```{r}
+#| label: tbl-ero-comparison
+ero_cities_lower <- tolower(ero_pdf_cities)
+
+no_addr_compare <- no_addr_vera |>
+  mutate(
+    best_city = coalesce(vera_city, facility_city),
+    on_ero_map = tolower(best_city) %in% ero_cities_lower |
+      (best_city == "Mount Laurel" & "mt. laurel" %in% ero_cities_lower) |
+      (best_city == "N Syracuse" & "syracuse" %in% ero_cities_lower)
+  )
+
+no_addr_compare |>
+  transmute(
+    canonical_name,
+    best_city = replace_na(best_city, "—"),
+    state = facility_state,
+    on_ero_map = case_when(
+      is.na(on_ero_map) ~ "—",
+      on_ero_map ~ "Yes",
+      TRUE ~ "No"
+    ),
+    vera_address = replace_na(vera_address, "—")
+  ) |>
+  kable(col.names = c("Facility", "City", "State", "On ERO map?", "Vera address"))
+```
+
+`{r} sum(no_addr_compare$on_ero_map, na.rm = TRUE)` of the `{r} nrow(no_addr_compare)` facilities have a city that appears on the ERO map. The map confirms city-level locations but does not provide street addresses beyond what Vera already has.
+
+### Facilities not on the ERO map
+
+```{r}
+#| label: tbl-not-on-map
+no_addr_compare |>
+  filter(!on_ero_map | is.na(on_ero_map)) |>
+  transmute(
+    canonical_name,
+    best_city = replace_na(best_city, "—"),
+    state = facility_state,
+    vera_address = replace_na(vera_address, "—")
+  ) |>
+  kable(col.names = c("Facility", "City", "State", "Vera address"))
+```
+
+These include 4 medical facilities with no city in any source, 1 CBP facility with no location information, and 7 hold rooms/police departments in smaller cities — though Vera has addresses for 5 of these 7.
+
+## Summary and next steps
+
+| Category | Count |
+|---|---|
+| Total facilities missing addresses | `{r} nrow(no_addr)` |
+| Vera has street address | `{r} vera_summary$vera_has_address` |
+| Vera has city only (no street) | `{r} vera_summary$vera_has_city - vera_summary$vera_has_address` |
+| No address in any source | `{r} vera_summary$vera_has_neither` |
+| City appears on ERO map | `{r} sum(no_addr_compare$on_ero_map, na.rm = TRUE)` |
+
+The most actionable next step is to **revise `build_facility_roster()`** to backfill missing addresses from Vera, joined by DETLOC. This would resolve the majority of missing addresses. The pipeline revision should also flag cases where Vera and the primary source (ICE stats, DMCP, or Marshall Project) provide conflicting addresses for the same facility — for example, the Wenatchee Hold Room roster entry is associated with Yakima in Vera.
+
+::: {.callout-note}
+### Notable discrepancy: Wenatchee / Yakima
+
+The facility named "Wenatchee Hold Room" (DETLOC `WNTHOLD`) has `vera_city = "Yakima"`, not Wenatchee. Wenatchee and Yakima are ~85 miles apart. This is the kind of mismatch the pipeline revision should surface.
+:::

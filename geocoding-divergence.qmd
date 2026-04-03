@@ -1,0 +1,364 @@
+---
+title: "Geocoding divergence report"
+date: last-modified
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    page-layout: article
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+::: {.callout-note}
+This report was generated using AI under general human direction. At the time of generation, the contents have not been comprehensively reviewed by a human analyst.
+
+<!--
+To indicate human review: Delete the line above about contents not being reviewed, and replace this comment with:
+The contents have been reviewed and validated by [Your Name], [Your Role] on [Date].
+-->
+:::
+
+```{r}
+#| label: load-packages
+library(targets)
+library(dplyr)
+library(sf)
+library(leaflet)
+library(leaflet.extras)
+library(htmltools)
+library(knitr)
+```
+
+```{r}
+#| label: load-data
+# Source R/ functions so geocode_source_preference() is available
+tar_source()
+facilities_geocoded_all <- tar_read(facilities_geocoded_all)
+```
+
+## Summary
+
+```{r}
+#| label: summary-geocode-source
+facilities_geocoded_all |>
+  count(geocode_source, name = "facilities") |>
+  arrange(desc(facilities)) |>
+  kable(col.names = c("Geocode source", "Facilities"))
+```
+
+```{r}
+#| label: summary-address-quality
+facilities_geocoded_all |>
+  count(address_quality, name = "facilities") |>
+  arrange(desc(facilities)) |>
+  kable(col.names = c("Address quality", "Facilities"))
+```
+
+```{r}
+#| label: summary-divergent-by-source
+facilities_geocoded_all |>
+  filter(divergent) |>
+  count(source_name, name = "divergent_facilities") |>
+  arrange(desc(divergent_facilities)) |>
+  kable(col.names = c("Source", "Divergent facilities"))
+```
+
+## Divergence map
+
+Each line segment connects the Google Maps geocode (blue) to the source-provided coordinate (red) for facilities where the two locations differ by more than 1 km. The map is searchable by facility name, city, or state.
+
+```{r}
+#| label: build-map-data
+divergent <- facilities_geocoded_all |>
+  filter(divergent) |>
+  mutate(
+    divergence_km = round(divergence_km, 1),
+    search_label = paste0(canonical_name, " (", facility_city, ", ", facility_state, ")"),
+    popup_html = paste0(
+      "<b>", htmlEscape(canonical_name), "</b> (ID ", canonical_id, ")<br>",
+      ifelse(is.na(facility_address), "", paste0(htmlEscape(facility_address), "<br>")),
+      htmlEscape(facility_city), ", ", facility_state,
+      ifelse(is.na(facility_zip), "", paste0(" ", facility_zip)),
+      "<br>Source: ", source_name,
+      "<br>Divergence: ", divergence_km, " km"
+    )
+  )
+
+# Read source preferences from the pipeline's single source of truth
+prefs <- geocode_source_preference()
+
+divergent <- divergent |>
+  left_join(prefs, by = "canonical_id") |>
+  mutate(
+    recommendation = case_when(
+      preferred_source == "google_maps"      ~ "rec: Google",
+      preferred_source == "vera_institute"   ~ "rec: Vera/source",
+      preferred_source == "marshall_project" ~ "rec: Marshall",
+      preferred_source == "manual"           ~ "rec: manual",
+      TRUE                                   ~ "unreviewed"
+    )
+  ) |>
+  select(-preferred_source)
+```
+
+::: {.column-page-inset}
+
+```{r}
+#| label: divergence-map
+#| fig-height: 8
+# Build line segments
+line_features <- lapply(seq_len(nrow(divergent)), function(i) {
+  row <- divergent[i, ]
+  st_linestring(matrix(
+    c(row$google_lon, row$source_lon, row$google_lat, row$source_lat),
+    ncol = 2
+  ))
+}) |> st_sfc(crs = 4326)
+
+google_pts <- divergent |> filter(!is.na(google_lat))
+source_pts <- divergent |> filter(!is.na(source_lat))
+
+# Recommendation subsets
+rec_google_d   <- divergent |> filter(recommendation == "rec: Google")
+rec_vera_d     <- divergent |> filter(recommendation == "rec: Vera/source")
+rec_marshall_d <- divergent |> filter(recommendation == "rec: Marshall")
+
+# Helper: build line sfc from a divergent subset
+make_lines <- function(df) {
+  lapply(seq_len(nrow(df)), function(i) {
+    row <- df[i, ]
+    st_linestring(matrix(
+      c(row$google_lon, row$source_lon, row$google_lat, row$source_lat),
+      ncol = 2
+    ))
+  }) |> st_sfc(crs = 4326)
+}
+
+# Helper: add a recommendation layer group (line + preferred point + grey rejected point)
+add_rec_layer <- function(map, df, group, preferred_color) {
+  if (nrow(df) == 0) return(map)
+  prefer_google <- group == "Rec: Google"
+
+  map |>
+    # Connecting line
+    addPolylines(
+      data = st_sf(df, geometry = make_lines(df)),
+      color = preferred_color, weight = 2, opacity = 0.5,
+      group = group, popup = ~popup_html
+    ) |>
+    # Preferred point (colored)
+    addCircleMarkers(
+      data = df,
+      lng = if (prefer_google) ~google_lon else ~source_lon,
+      lat = if (prefer_google) ~google_lat else ~source_lat,
+      radius = 7, color = preferred_color, fillColor = preferred_color,
+      fillOpacity = 0.9, weight = 2, opacity = 0.9,
+      group = group, label = ~search_label, popup = ~popup_html
+    ) |>
+    # Rejected point (grey)
+    addCircleMarkers(
+      data = df,
+      lng = if (prefer_google) ~source_lon else ~google_lon,
+      lat = if (prefer_google) ~source_lat else ~google_lat,
+      radius = 5, color = "#999", fillColor = "#bbb",
+      fillOpacity = 0.6, weight = 1, opacity = 0.6,
+      group = group, label = ~search_label, popup = ~popup_html
+    )
+}
+
+m <- leaflet() |>
+  addProviderTiles(providers$CartoDB.Positron) |>
+  # Line segments connecting Google ↔ source for each facility
+  addPolylines(
+    data = st_sf(divergent, geometry = line_features),
+    color = "#333", weight = 3, opacity = 0.7,
+    group = "Divergence lines",
+    popup = ~popup_html
+  ) |>
+  # Google points (blue)
+  addCircleMarkers(
+    data = google_pts,
+    lng = ~google_lon, lat = ~google_lat,
+    radius = 5, color = "steelblue", fillColor = "steelblue",
+    fillOpacity = 0.8, weight = 1, opacity = 0.8,
+    group = "Google",
+    label = ~search_label,
+    popup = ~popup_html
+  ) |>
+  # Source points (red)
+  addCircleMarkers(
+    data = source_pts,
+    lng = ~source_lon, lat = ~source_lat,
+    radius = 5, color = "firebrick", fillColor = "firebrick",
+    fillOpacity = 0.8, weight = 1, opacity = 0.8,
+    group = "Source",
+    label = ~search_label,
+    popup = ~popup_html
+  ) |>
+  # Recommendation review layers (each shows line + preferred + grey rejected)
+  add_rec_layer(rec_google_d,   "Rec: Google",   "steelblue") |>
+  add_rec_layer(rec_vera_d,     "Rec: Vera",     "firebrick") |>
+  add_rec_layer(rec_marshall_d, "Rec: Marshall",  "#e90") |>
+  addLayersControl(
+    overlayGroups = c("Divergence lines", "Google", "Source",
+                      "Rec: Google", "Rec: Vera", "Rec: Marshall"),
+    options = layersControlOptions(collapsed = FALSE)
+  ) |>
+  # Hide recommendation layers by default
+  hideGroup("Rec: Google") |>
+  hideGroup("Rec: Vera") |>
+  hideGroup("Rec: Marshall") |>
+  addSearchFeatures(
+    targetGroups = c("Google", "Source"),
+    options = searchFeaturesOptions(
+      zoom = 9,
+      openPopup = TRUE,
+      position = "topleft",
+      hideMarkerOnCollapse = TRUE
+    )
+  )
+
+m
+```
+
+:::
+
+## Operational significance of divergent facilities
+
+How much does geocoding divergence matter? This section classifies divergent facilities by their presence in the FY26 annual stats panel and/or DDP daily population data, then summarizes peak ADP to gauge operational significance.
+
+```{r}
+#| label: divergent-presence
+# Classify divergent facilities by data presence
+facility_presence <- tar_read(facility_presence)
+source_presence <- tar_read(source_presence)
+facilities_panel <- tar_read(facilities_panel)
+ddp_fy25_summary <- tar_read(ddp_fy25_summary)
+detloc_lookup <- tar_read(detloc_lookup)
+
+# FY26 presence from facility_presence (panel IDs 1-398)
+fy26_ids <- facility_presence |>
+  filter(FY26) |>
+  pull(canonical_id)
+
+# DDP presence from source_presence
+ddp_ids <- source_presence |>
+  filter(in_ddp) |>
+  pull(canonical_id)
+
+# Peak ADP from panel data (max across all fiscal years)
+peak_adp_panel <- facilities_panel |>
+  group_by(canonical_id) |>
+  summarise(peak_adp_panel = max(adp, na.rm = TRUE), .groups = "drop") |>
+  mutate(peak_adp_panel = ifelse(is.infinite(peak_adp_panel), NA_real_, peak_adp_panel))
+
+# DDP ADP via detloc_lookup join
+ddp_adp <- ddp_fy25_summary |>
+  inner_join(detloc_lookup, by = c("detention_facility_code" = "detloc")) |>
+  group_by(canonical_id) |>
+  summarise(
+    ddp_adp = max(adp_total, na.rm = TRUE),
+    ddp_peak = max(peak_population, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+divergent_classified <- divergent |>
+  mutate(
+    in_fy26 = canonical_id %in% fy26_ids,
+    in_ddp = canonical_id %in% ddp_ids,
+    presence = case_when(
+      in_fy26 & in_ddp  ~ "Both FY26 + DDP",
+      in_fy26 & !in_ddp ~ "FY26 only",
+      !in_fy26 & in_ddp ~ "DDP only",
+      TRUE               ~ "Neither"
+    )
+  ) |>
+  left_join(peak_adp_panel, by = "canonical_id") |>
+  left_join(ddp_adp, by = "canonical_id") |>
+  mutate(
+    # Best available ADP: panel peak, then DDP peak
+    best_peak_adp = coalesce(peak_adp_panel, ddp_peak)
+  )
+```
+
+```{r}
+#| label: presence-summary
+divergent_classified |>
+  group_by(presence) |>
+  summarise(
+    n = n(),
+    median_peak_adp = round(median(best_peak_adp, na.rm = TRUE)),
+    max_peak_adp = round(max(best_peak_adp, na.rm = TRUE)),
+    median_divergence_km = round(median(divergence_km, na.rm = TRUE), 1),
+    max_divergence_km = round(max(divergence_km, na.rm = TRUE), 1),
+    n_reviewed = sum(recommendation != "unreviewed"),
+    .groups = "drop"
+  ) |>
+  arrange(desc(n)) |>
+  kable(col.names = c("Presence", "Facilities", "Median peak ADP",
+                       "Max peak ADP", "Median div. (km)", "Max div. (km)",
+                       "Reviewed"))
+```
+
+The **Both FY26 + DDP** group contains the most operationally significant facilities — active detention centers with substantial daily populations. These should be prioritized for geocoding review. The **Neither** group is mostly inactive federal prisons, hold rooms, and medical facilities where divergence is less consequential.
+
+```{r}
+#| label: presence-review-status
+divergent_classified |>
+  count(presence, recommendation) |>
+  tidyr::pivot_wider(names_from = recommendation, values_from = n, values_fill = 0) |>
+  arrange(desc(unreviewed)) |>
+  kable()
+```
+
+### High-priority unreviewed facilities
+
+Divergent facilities in the **Both FY26** or **DDP** group that have not yet been assigned a geocode source preference, sorted by peak ADP:
+
+```{r}
+#| label: high-priority-unreviewed
+divergent_classified |>
+  filter(presence %in% c("Both FY26 + DDP", "DDP only", "FY26 only"),
+         recommendation == "unreviewed") |>
+  arrange(desc(best_peak_adp)) |>
+  select(
+    `ID` = canonical_id,
+    `Facility` = canonical_name,
+    `City` = facility_city,
+    `State` = facility_state,
+    `Source` = source_name,
+    `Peak ADP` = best_peak_adp,
+    `Divergence (km)` = divergence_km
+  ) |>
+  kable()
+```
+
+## All divergent facilities
+
+```{r}
+#| label: divergent-table
+divergent_classified |>
+  arrange(desc(divergence_km)) |>
+  select(
+    `ID` = canonical_id,
+    `Facility` = canonical_name,
+    `Address` = facility_address,
+    `City` = facility_city,
+    `State` = facility_state,
+    `ZIP` = facility_zip,
+    `Source` = source_name,
+    `Presence` = presence,
+    `Rec` = recommendation,
+    `Divergence (km)` = divergence_km,
+    `Peak ADP` = best_peak_adp,
+    `Google lat` = google_lat,
+    `Google lon` = google_lon,
+    `Source lat` = source_lat,
+    `Source lon` = source_lon
+  ) |>
+  kable()
+```

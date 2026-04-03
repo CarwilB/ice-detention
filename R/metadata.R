@@ -21,14 +21,14 @@ build_data_file_info <- function() {
       "https://www.ice.gov/doclib/detention/FY26_detentionStats02022026.xlsx"
     ),
     local_file = c(
-      "data/FY19-detentionstats.xlsx",
-      "data/FY20-detentionstats.xlsx",
-      "data/FY21-detentionstats.xlsx",
-      "data/FY22-detentionStats.xlsx",
-      "data/FY23_detentionStats.xlsx",
-      "data/FY24_detentionStats.xlsx",
-      "data/FY25_detentionStats09242025.xlsx",
-      "data/FY26_detentionStats02022026.xlsx"
+      "data/ice/FY19-detentionstats.xlsx",
+      "data/ice/FY20-detentionstats.xlsx",
+      "data/ice/FY21-detentionstats.xlsx",
+      "data/ice/FY22-detentionStats.xlsx",
+      "data/ice/FY23_detentionStats.xlsx",
+      "data/ice/FY24_detentionStats.xlsx",
+      "data/ice/FY25_detentionStats09242025.xlsx",
+      "data/ice/FY26_detentionStats02022026.xlsx"
     ),
     sheet_name = c(
       "Facilities FY19", "Facilities EOYFY20 ", "Facilities FY21 YTD",

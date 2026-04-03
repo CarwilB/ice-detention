@@ -1,0 +1,197 @@
+---
+title: "Detention List Wikipedia Tables"
+format: html
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(targets)
+library(dplyr)
+source("R/wiki-match.R")
+source("R/wikipedia.R")
+source("R/gh-copy-assets.R")
+fw <- tar_read(facilities_fy26_wiki)
+fp <- tar_read(facility_presence)
+panel <- tar_read(facilities_panel)
+cwm <- tar_read(canonical_wiki_match)
+```
+
+Preview of 10 rows from each table variant, followed by a button to copy the full wikitext to clipboard.
+
+## Standard wikitable
+
+Links are validated against the live Wikipedia API via `check_wiki_articles()`. Only titles confirmed to exist become wikilinks; non-existent titles (parenthetical display names, red links in the source table) fall through to plain text.
+
+```{r}
+#| label: standard
+#| results: asis
+#| echo: false
+wt_standard <- generate_fy26_wikitable(fw, facility_presence = fp)
+
+# Preview first 10 data rows (skip header lines, take 10 row blocks)
+wt_lines <- strsplit(wt_standard, "\n")[[1]]
+# Header = lines up to first "|-\n| " data row; each data row starts with "|-"
+row_markers <- which(grepl("^\\|-$", wt_lines))
+# First row marker is before the header, data rows start from marker 2
+n_preview <- min(10, length(row_markers) - 1)
+# Keep everything up to the end of the 10th data row + closing tag
+end_line <- if (n_preview < length(row_markers) - 1) {
+  row_markers[n_preview + 2] - 1
+} else {
+  length(wt_lines)
+}
+preview_lines <- c(wt_lines[1:end_line], "|}")
+cat("```\n")
+cat(paste(preview_lines, collapse = "\n"))
+cat("\n```\n")
+```
+
+```{r}
+#| label: standard-copy
+#| echo: false
+include_table_assets()
+copy_to_clipboard_button_wt(wt_standard, button_label = "Copy Wikitext (Standard)")
+```
+
+
+## All-links wikitable (with red links)
+
+Every facility name is wikilinked. Facilities without a confirmed article get a bare `[[Name]]` link, which renders as a red link on Wikipedia.
+
+```{r}
+#| label: redlinks
+#| results: asis
+#| echo: false
+wt_redlinks <- generate_fy26_wikitable(fw, facility_presence = fp,
+                                       include_redlinks = TRUE)
+
+wt_lines <- strsplit(wt_redlinks, "\n")[[1]]
+row_markers <- which(grepl("^\\|-$", wt_lines))
+n_preview <- min(10, length(row_markers) - 1)
+end_line <- if (n_preview < length(row_markers) - 1) {
+  row_markers[n_preview + 2] - 1
+} else {
+  length(wt_lines)
+}
+preview_lines <- c(wt_lines[1:end_line], "|}")
+cat("```\n")
+cat(paste(preview_lines, collapse = "\n"))
+cat("\n```\n")
+```
+
+```{r}
+#| label: redlinks-copy
+#| echo: false
+copy_to_clipboard_button_wt(wt_redlinks, button_label = "Copy Wikitext (All Links)")
+```
+
+
+## Red links only
+
+Only facilities with **no** Wikipedia link (`wiki_slug` and `wiki_match` both missing). All names are wikilinked as red links.
+
+```{r}
+#| label: redlinks-only
+#| results: asis
+#| echo: false
+fw_unlinked <- fw |>
+  filter(is.na(wiki_slug) | wiki_slug == "",
+         is.na(wiki_match) | wiki_match == "")
+
+wt_redonly <- generate_fy26_wikitable(fw_unlinked, facility_presence = fp,
+                                      include_redlinks = TRUE)
+
+wt_lines <- strsplit(wt_redonly, "\n")[[1]]
+row_markers <- which(grepl("^\\|-$", wt_lines))
+n_preview <- min(10, length(row_markers) - 1)
+end_line <- if (n_preview < length(row_markers) - 1) {
+  row_markers[n_preview + 2] - 1
+} else {
+  length(wt_lines)
+}
+preview_lines <- c(wt_lines[1:end_line], "|}")
+cat("```\n")
+cat(paste(preview_lines, collapse = "\n"))
+cat("\n```\n")
+```
+
+```{r}
+#| label: redlinks-only-copy
+#| echo: false
+n_unlinked <- nrow(fw_unlinked)
+n_total <- nrow(fw)
+```
+
+`r n_unlinked` of `r n_total` FY26 facilities have no Wikipedia link.
+
+```{r}
+#| label: redlinks-only-copy-btn
+#| echo: false
+copy_to_clipboard_button_wt(wt_redonly, button_label = "Copy Wikitext (Red Links Only)")
+```
+
+
+## Closed facilities
+
+Facilities present in earlier fiscal years but absent from FY26. Status shows the first-seen to last-seen span. Wikipedia links use canonical-level matches where available.
+
+```{r}
+#| label: closed
+#| results: asis
+#| echo: false
+wt_closed <- generate_closed_wikitable(panel, fp,
+                                        canonical_wiki_match = cwm)
+
+wt_lines <- strsplit(wt_closed, "\n")[[1]]
+row_markers <- which(grepl("^\\|-$", wt_lines))
+n_preview <- min(10, length(row_markers) - 1)
+end_line <- if (n_preview < length(row_markers) - 1) {
+  row_markers[n_preview + 2] - 1
+} else {
+  length(wt_lines)
+}
+preview_lines <- c(wt_lines[1:end_line], "|}")
+cat("```\n")
+cat(paste(preview_lines, collapse = "\n"))
+cat("\n```\n")
+```
+
+```{r}
+#| label: closed-copy
+#| echo: false
+copy_to_clipboard_button_wt(wt_closed, button_label = "Copy Wikitext (Closed Facilities)")
+```
+
+
+## Closed facilities (with red links)
+
+Same as above, but every facility name is wikilinked.
+
+```{r}
+#| label: closed-redlinks
+#| results: asis
+#| echo: false
+wt_closed_red <- generate_closed_wikitable(panel, fp,
+                                            canonical_wiki_match = cwm,
+                                            include_redlinks = TRUE)
+
+wt_lines <- strsplit(wt_closed_red, "\n")[[1]]
+row_markers <- which(grepl("^\\|-$", wt_lines))
+n_preview <- min(10, length(row_markers) - 1)
+end_line <- if (n_preview < length(row_markers) - 1) {
+  row_markers[n_preview + 2] - 1
+} else {
+  length(wt_lines)
+}
+preview_lines <- c(wt_lines[1:end_line], "|}")
+cat("```\n")
+cat(paste(preview_lines, collapse = "\n"))
+cat("\n```\n")
+```
+
+```{r}
+#| label: closed-redlinks-copy
+#| echo: false
+copy_to_clipboard_button_wt(wt_closed_red, button_label = "Copy Wikitext (Closed, All Links)")
+```

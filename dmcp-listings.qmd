@@ -1,0 +1,450 @@
+---
+title: "ICE DMCP Facility Listings: Data Documentation and Integration"
+date: last-modified
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-fold: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+```{r setup}
+library(targets)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(knitr)
+
+tar_source()  # load all R/ functions, including dmcp_manual_matches()
+tar_load(c(faclist15, faclist17))
+```
+
+## Overview
+
+This document records the addition of two supplemental data sources to the ICE detention pipeline: point-in-time DMCP (Detention Management Compliance Program) facility authorization rosters from December 2015 and July 2017.
+
+These are a different document type from the annual FY stats spreadsheets (FY2019–FY2026) that form the main panel. Rather than single-year snapshots, each is an authorization roster showing all currently authorized ICE detention facilities at a point in time, with historical ADP data spanning multiple fiscal years per row, alongside contract, operator, and inspection metadata.
+
+The two lists are tracked as pipeline targets `faclist15` and `faclist17` (see `_targets.R`). Full provenance metadata is in `data/dmcp-listings.yml`.
+
+---
+
+## Data sources
+
+### faclist15 — December 2015 XLSX
+
+- **Title:** 2015 ICE Detention Facility Listing
+- **Source:** ICE FOIA reading room (`ice.gov/foia`)
+- **URL:** `https://www.ice.gov/doclib/foia/dfs/2015IceDetentionFacilityListing.xlsx`
+- **File:** `data/ice/2015IceDetentionFacilityListing.xlsx`
+- **Data as of:** December 8, 2015
+- **Currency note:** FY2016 data reflects IIDS as of 12/08/2015 (approximately the first 70 days of FY2016); FY2015 and earlier reflect end-of-fiscal-year figures.
+- **Fiscal years covered:** FY2010–FY2016 (ADP columns `fy10_adp`–`fy16_adp`)
+
+### faclist17 — July 2017 PDF
+
+- **Title:** ICE DMCP Facility List — ERO Custody Management Division, FY2017
+- **Source:** Prison Legal News document library
+- **URL:** `https://www.prisonlegalnews.org/media/publications/ICE_DMCP_Facility_List_ERO_Custody_Management_Division_2017.pdf`
+- **File:** `data/ice/ICE_DMCP_Facility_List_2017.pdf`
+- **Data as of:** July 10, 2017
+- **Currency note:** ADP figures reflect IIDS as of 07/10/2017; EID data through 07/08/2017.
+- **Fiscal years covered:** FY2010–FY2017 (ADP columns `fy10_adp`–`fy17_adp`)
+- **Parsing:** Extracted with `tabulapdf::extract_tables()` using explicit column boundaries derived from bounding-box coordinates of the PDF header row.
+
+---
+
+## Dataset summaries
+
+```{r summaries}
+bind_rows(
+  faclist15 |> summarise(
+    source = "faclist15",
+    rows = n(),
+    cols = ncol(faclist15),
+    fy_range = "FY2010–FY2016",
+    adp_cols = 7L
+  ),
+  faclist17 |> summarise(
+    source = "faclist17",
+    rows = n(),
+    cols = ncol(faclist17),
+    fy_range = "FY2010–FY2017",
+    adp_cols = 8L
+  )
+) |> kable(col.names = c("Source", "Rows", "Columns", "ADP range", "ADP columns"))
+```
+
+### Facility type breakdown
+
+```{r type-breakdown}
+bind_rows(
+  faclist15 |> count(facility_type_detailed, sort = TRUE) |> mutate(source = "faclist15"),
+  faclist17 |> count(facility_type_detailed, sort = TRUE) |> mutate(source = "faclist17")
+) |>
+  pivot_wider(names_from = source, values_from = n, values_fill = 0L) |>
+  arrange(desc(faclist15)) |>
+  kable(col.names = c("Type", "faclist15", "faclist17"))
+```
+
+**Type key:** IGSA = Intergovernmental Service Agreement (local jail); USMS IGA = USMS intergovernmental agreement; DIGSA = Dedicated IGSA (private, ICE-dedicated); CDF = Contract Detention Facility (private); SPC = Service Processing Center (ICE-operated); USMS CDF = USMS contract detention facility.
+
+### Column schema
+
+faclist17 has two additional columns not in faclist15: `fy17_adp` (inserted after `facility_population_count`) and `cy16_rating` (inserted before `cy15_rating`). All other columns are shared.
+
+---
+
+## Overlap analysis
+
+### Summary
+
+```{r overlap-counts}
+both_codes   <- intersect(faclist15$detloc, faclist17$detloc)
+only15_codes <- setdiff(faclist15$detloc,   faclist17$detloc)
+only17_codes <- setdiff(faclist17$detloc,   faclist15$detloc)
+
+tibble::tibble(
+  Category = c("Shared (both lists)", "Only in faclist15", "Only in faclist17"),
+  Count    = c(length(both_codes), length(only15_codes), length(only17_codes))
+) |> kable()
+```
+
+Of faclist15's 209 facilities, **`r scales::percent(length(both_codes)/nrow(faclist15), accuracy=1)`** (180) also appear in faclist17. Of faclist17's 201 facilities, **`r scales::percent(length(both_codes)/nrow(faclist17), accuracy=1)`** (180) also appear in faclist15.
+
+### Location consistency for shared facilities
+
+After applying all data cleaning, shared facilities should have identical city, state, and ZIP values across the two lists. The table below shows any discrepancies.
+
+```{r location-check}
+location_check <- inner_join(
+  select(faclist15, detloc,
+         city15 = facility_city, state15 = facility_state, zip15 = facility_zip),
+  select(faclist17, detloc,
+         city17 = facility_city, state17 = facility_state, zip17 = facility_zip),
+  by = "detloc"
+) |>
+  mutate(
+    city_diff  = city15  != city17,
+    state_diff = state15 != state17,
+    zip_diff   = zip15   != zip17
+  )
+
+tibble::tibble(
+  Field  = c("City", "State", "ZIP"),
+  Mismatches = c(sum(location_check$city_diff),
+                 sum(location_check$state_diff),
+                 sum(location_check$zip_diff))
+) |> kable()
+```
+
+### Facility renames between 2015 and 2017
+
+Five facilities appear in both lists under different names. All are plausible renames, not data errors.
+
+```{r name-changes}
+inner_join(
+  select(faclist15, detloc, state = facility_state, `Name (2015)` = facility_name),
+  select(faclist17, detloc, `Name (2017)` = facility_name),
+  by = "detloc"
+) |>
+  filter(`Name (2015)` != `Name (2017)`) |>
+  kable()
+```
+
+---
+
+## Facilities unique to each list
+
+The 29 facilities only in faclist15 and 21 only in faclist17 represent facilities that were either de-authorized between December 2015 and July 2017, or newly authorized in that window. The tables below are formatted for visual inspection to confirm that none of the "only" facilities are the same physical location appearing under a different DETLOC code.
+
+### Only in faclist15 (absent from faclist17)
+
+These 29 facilities were authorized in December 2015 but not in July 2017 — likely de-authorized or contract-lapsed in the intervening period. Nearly all are USMS IGA or IGSA facilities (local county jails under intergovernmental agreements), consistent with a contraction of the USMS jail-use model.
+
+```{r only15}
+faclist15 |>
+  filter(detloc %in% only15_codes) |>
+  select(detloc, facility_name, facility_city, facility_state, facility_type_detailed) |>
+  arrange(facility_state, facility_name) |>
+  kable(col.names = c("DETLOC", "Name", "City", "State", "Type"))
+```
+
+### Only in faclist17 (absent from faclist15)
+
+These 21 facilities were authorized by July 2017 but not in December 2015. The four DIGSAs (dedicated ICE private facilities) in this group — Folkston IPC (GA), Pine Prairie (LA), Cibola (NM), and Prairieland (TX) — are particularly notable, representing new large-capacity contracted facilities added between 2015 and 2017. Texas accounts for five of the 21 new entries.
+
+```{r only17}
+faclist17 |>
+  filter(detloc %in% only17_codes) |>
+  select(detloc, facility_name, facility_city, facility_state, facility_type_detailed) |>
+  arrange(facility_state, facility_name) |>
+  kable(col.names = c("DETLOC", "Name", "City", "State", "Type"))
+```
+
+---
+
+## Section 4: Integration with canonical facility list {#sec-integration}
+
+```{r integration-setup}
+tar_load(c(dmcp_canonical_map, faclist15_keyed, faclist17_keyed))
+```
+
+Each of the 230 combined DMCP facilities has been matched to the FY2019–FY2026 canonical list using a three-pass approach. Canonical IDs are drawn from `data/canonical_id_registry.csv`.
+
+### Match summary
+
+```{r match-summary}
+dmcp_canonical_map |>
+  dplyr::count(match_type) |>
+  dplyr::mutate(
+    match_type = dplyr::recode(match_type,
+      exact  = "Exact name+city+state",
+      manual = "Manually confirmed (renamed/truncated)",
+      new    = "New — not in FY19–FY26 panel"
+    )
+  ) |>
+  kable(col.names = c("Match type", "Facilities"))
+```
+
+**164** facilities matched exactly to a known name variant in the FY2019–FY2026 crosswalk. **13** more were confirmed by address inspection as renamed or retitled facilities. **53** have no counterpart in the annual stats panel and received new canonical IDs in the 1001–1053 range.
+
+### Manually confirmed matches
+
+These thirteen facilities did not match exactly because the DMCP name differs from the canonical name used in the FY19–26 data. All were verified by street address and/or ZIP code.
+
+```{r manual-matches}
+library(targets)
+
+# Pull addresses for display
+tar_load(panel_facilities)
+
+manual_detail <- dmcp_manual_matches() |>
+  dplyr::left_join(
+    dmcp_canonical_map |> dplyr::select(detloc, canonical_id, canonical_name),
+    by = c("detloc", "canonical_id")
+  ) |>
+  dplyr::left_join(
+    dplyr::bind_rows(
+      faclist17 |> dplyr::select(detloc, dmcp_name = facility_name,
+                                  dmcp_address = facility_address),
+      faclist15 |> dplyr::select(detloc, dmcp_name = facility_name,
+                                  dmcp_address = facility_address)
+    ) |> dplyr::distinct(detloc, .keep_all = TRUE),
+    by = "detloc"
+  ) |>
+  dplyr::left_join(
+    panel_facilities |> dplyr::select(canonical_id,
+                                           canon_address = facility_address),
+    by = "canonical_id"
+  ) |>
+  dplyr::select(detloc, dmcp_name, dmcp_address, canonical_name, canon_address, match_basis)
+
+manual_detail |>
+  kable(col.names = c("DETLOC", "DMCP name", "DMCP address",
+                       "Canonical name", "Canonical address", "Basis"))
+```
+
+### New canonical facilities (IDs 1001–1053)
+
+These 53 facilities appear in the DMCP lists but have no counterpart in the FY2019–FY2026 annual stats panel. They were likely de-authorized before FY2019, opened after the DMCP snapshots, or represent facilities that participated in USMS/IGSA arrangements but were never part of the ICE-reported detention stats during the panel period. Of these, 27 had zero ADP in their most recent two fiscal years in the DMCP data, suggesting minimal or no active ICE use at the time of the snapshot.
+
+```{r new-facilities}
+# Combined source lookup: faclist17 for shared/17-only; faclist15 for 15-only
+only15_codes <- setdiff(faclist15$detloc, faclist17$detloc)
+faclist_meta <- dplyr::bind_rows(
+  faclist17 |> dplyr::select(detloc, facility_state, facility_type_detailed) |>
+    dplyr::mutate(src = "faclist17"),
+  faclist15 |> dplyr::filter(detloc %in% only15_codes) |>
+    dplyr::select(detloc, facility_state, facility_type_detailed) |>
+    dplyr::mutate(src = "faclist15")
+)
+
+dmcp_canonical_map |>
+  dplyr::filter(match_type == "new") |>
+  dplyr::left_join(faclist_meta, by = "detloc") |>
+  dplyr::select(canonical_id, detloc, canonical_name, facility_state,
+                facility_type_detailed, src) |>
+  dplyr::arrange(canonical_id) |>
+  kable(col.names = c("ID", "DETLOC", "Name", "State", "Type", "Source"))
+```
+
+### Note on two unmatched adjacent-facility DETLOCs
+
+Two facilities — `JAMESGA` (Folkston IPC / D. Ray James, GA) and `OTROPNM` (Otero County Prison, NM) — share a city and road with canonical FY19–26 facilities but have distinct street addresses, indicating separate buildings within the same detention complex. These are kept as distinct entries in the canonical list pending confirmation of whether the companion buildings have their own separate operational roles in the current DDP data. (A third facility, `STCDFTX` / South Texas Detention Complex, was originally in this group but was subsequently confirmed as the same facility as canonical 343 / South Texas ICE Processing Center at 566 Veterans Drive, Pearsall TX.)
+
+### Placeholder: DMCP fiscal-year ADP tables
+
+A future step will pivot the wide-format ADP columns in `faclist15` and `faclist17` into long-format per-facility-per-year rows (`faclist15_adp_long`, `faclist17_adp_long`). Because both lists share FY2010–FY2016, those years will appear in two sources and will require cross-checking for ADP consistency. FY2017 is faclist17-only. This work depends on canonical IDs being stable — which they now are.
+
+---
+
+## Section 5: DDP Daily Population Data Integration
+
+```{r ddp-setup}
+tar_load(c(ddp_codes, ddp_canonical_map, facility_presence, facilities_keyed,
+           panel_facilities, dmcp_canonical_map))
+
+# Most-recent-year facility type for each canonical ID
+type_lookup <- bind_rows(facilities_keyed, .id = "year") |>
+  arrange(desc(year)) |>
+  distinct(canonical_id, .keep_all = TRUE) |>
+  select(canonical_id, facility_type_detailed, facility_type_wiki)
+
+# Canonical facilities not in DMCP (scope for DDP matching)
+dmcp_matched_ids <- unique(dmcp_canonical_map$canonical_id)
+canonical_no_dmcp <- panel_facilities |>
+  filter(!(canonical_id %in% dmcp_matched_ids))
+```
+
+The Deportation Data Project (DDP) provides daily detention facility population data spanning September 2023 to October 2025. This represents real-time operational detention, and includes 853 distinct facility codes. Of the `r nrow(canonical_no_dmcp)` canonical FY2019–FY2026 facilities that do NOT appear in DMCP data (2015–2017), `r n_distinct(ddp_canonical_map$canonical_id)` have representation in the DDP data.
+
+### Data source
+
+- **Title:** Deportation Data Project daily population data
+- **Date range:** 2023-09-01 to 2025-10-15 (776 days)
+- **Distinct facilities:** 853 facility codes across all states + territories
+- **Variables:** detention_facility_code, detention_facility (name), state, date, population counts by gender/criminal status/age
+
+The DDP data was imported as a feather file and cleaned using the same facility name standardization rules applied to DMCP data (abbreviation expansion, acronym restoration, truncation correction).
+
+### Building DDP match tables
+
+The matching logic lives in `build_ddp_canonical_map()` (in `R/ddp.R`) and runs as a pipeline target. Manual strong matches are defined in `ddp_manual_strong_matches()`. Below we derive display tables from the pipeline target `ddp_canonical_map`.
+
+```{r ddp-match-construction}
+# Derive display tables from the pipeline target.
+# Join canonical name/city for display.
+ddp_display <- ddp_canonical_map |>
+  left_join(
+    canonical_no_dmcp |> select(canonical_id, canonical_name, facility_city,
+                                 facility_state),
+    by = "canonical_id"
+  )
+
+ddp_exact_matches <- ddp_display |>
+  filter(match_type == "exact") |>
+  rename(can_state = facility_state, ddp_code = detloc) |>
+  arrange(can_state, canonical_name)
+
+ddp_county_matches <- ddp_display |>
+  filter(match_type == "partial_county") |>
+  rename(can_state = facility_state, ddp_code = detloc) |>
+  arrange(can_state, canonical_name)
+
+ddp_keyword_matches <- ddp_display |>
+  filter(match_type == "partial_keyword") |>
+  rename(can_state = facility_state, ddp_code = detloc) |>
+  arrange(can_state, canonical_name)
+
+# Fully unmatched: not in DMCP and not in DDP
+all_matched_ids <- unique(ddp_canonical_map$canonical_id)
+
+ddp_fully_unmatched <- canonical_no_dmcp |>
+  filter(!(canonical_id %in% all_matched_ids)) |>
+  left_join(
+    facility_presence |> select(canonical_id, FY19:FY26),
+    by = "canonical_id"
+  ) |>
+  select(canonical_id, canonical_name, facility_city, facility_state,
+         FY19:FY26) |>
+  arrange(facility_state, canonical_name)
+```
+
+### DDP coverage of non-DMCP canonical facilities
+
+```{r ddp-summary-table}
+# Count unique canonical facilities (not rows, since 1:many matches exist)
+n_exact   <- n_distinct(ddp_exact_matches$canonical_id)
+n_county  <- n_distinct(ddp_county_matches$canonical_id)
+n_keyword <- n_distinct(ddp_keyword_matches$canonical_id)
+n_unmatched <- nrow(ddp_fully_unmatched)
+n_total   <- nrow(canonical_no_dmcp)
+
+tibble(
+  `Match type`  = c("Exact match (fuzzy OSA ≥ 0.85 + manual)",
+                     "Partial: county name",
+                     "Partial: keyword (non-county)",
+                     "**Total with DDP representation**",
+                     "Fully unmatched (no DDP code)"),
+  Count         = c(n_exact, n_county, n_keyword,
+                     n_exact + n_county + n_keyword, n_unmatched),
+  `% of total`  = sprintf("%.1f%%", Count / n_total * 100)
+) |> kable(format = "markdown")
+```
+
+#### Exact/High-Confidence DDP Matches
+
+These `r n_exact` facilities (`r nrow(ddp_exact_matches)` rows, including multi-code facilities) include both fuzzy string matches (OSA ≥ 0.85) and manually verified strong matches based on visual inspection of facility names and codes. The `ddp_role` column distinguishes 1:1 matches ("sole") from one-to-many mappings where a single canonical facility spans multiple DDP codes ("primary" + "component"); sum components for facility-level totals.
+
+```{r ddp-exact-table}
+ddp_exact_matches |>
+  select(can_state, canonical_id, canonical_name, facility_city,
+         ddp_code, ddp_name, ddp_role) |>
+  kable(
+    col.names = c("State", "ID", "Canonical name", "City",
+                   "DDP code", "DDP facility", "Role"),
+    format = "markdown"
+  )
+```
+
+#### Partial: County Name Matches
+
+These `r n_county` facilities have "County" in their canonical name. For each, the word immediately before "county" was extracted and required to appear in the DDP facility name.
+
+```{r ddp-county-table}
+ddp_county_matches |>
+  select(can_state, canonical_id, canonical_name, facility_city, ddp_code, ddp_name) |>
+  kable(
+    col.names = c("State", "ID", "Canonical name", "City", "DDP code", "DDP facility"),
+    format = "markdown"
+  )
+```
+
+#### Partial: Keyword Matches (Non-County)
+
+These `r n_keyword` facilities do not have "County" in their name. Matching used the first meaningful keyword (≥ 4 characters, excluding generic detention terms) found in a same-state DDP facility name.
+
+```{r ddp-keyword-table}
+ddp_keyword_matches |>
+  select(can_state, canonical_id, canonical_name, facility_city,
+         ddp_code, ddp_name) |>
+  kable(
+    col.names = c("State", "ID", "Canonical name", "City",
+                   "DDP code", "DDP facility"),
+    format = "markdown"
+  )
+```
+
+#### Fully Unmatched Canonical Facilities
+
+These `r n_unmatched` canonical facilities have no representation in either DMCP data (2015–2017) or DDP data (2023–2025). They likely represent:
+
+- Border/CBP processing facilities (San Ysidro POE)
+- Non-traditional detention (hotel-based detention centers)
+- Facilities de-authorized before 2023 or closed between operational periods
+- Specialized facilities (Guantanamo, juvenile detention)
+
+```{r ddp-unmatched-table}
+ddp_fully_unmatched |>
+  left_join(type_lookup, by = "canonical_id") |>
+  select(facility_type_wiki, canonical_id, canonical_name, facility_city,
+         facility_state, FY19:FY26) |>
+  mutate(
+    facility_type_wiki = replace_na(facility_type_wiki, "Unknown"),
+    across(FY19:FY26, ~if_else(., "●", "○"))
+  ) |>
+  arrange(facility_type_wiki, facility_state, canonical_name) |>
+  kable(
+    col.names = c("Type", "ID", "Name", "City", "State",
+                   "FY19", "FY20", "FY21", "FY22", "FY23", "FY24", "FY25", "FY26"),
+    format = "markdown",
+    caption = "Legend: ● = present, ○ = absent"
+  )
+```
+
+---
