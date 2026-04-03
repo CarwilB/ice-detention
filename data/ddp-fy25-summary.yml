@@ -1,0 +1,69 @@
+---
+# Provenance metadata for DDP FY25 Facility Summary
+
+source:
+  title: "Deportation Data Project — Daily Detained Population"
+  publisher: "Deportation Data Project"
+  url: "https://deportationdataproject.org"
+  notes: >
+    Daily detainee population counts by facility, sourced from ICE detention
+    monitoring data via FOIA. The raw feather file contains one row per
+    facility-day with counts broken down by sex, criminality, and age.
+
+data:
+  filename: "data/ddp-fy25-summary.csv"
+  format: "CSV"
+  rows: 853
+  columns: 15
+  unit_of_observation: "One row per ICE detention facility code (DETLOC)"
+  temporal_coverage:
+    fiscal_year: 2025
+    date_from: "2024-10-01"
+    date_to: "2025-09-30"
+    n_days: 365
+  distinct_detlocs: 853
+  distinct_states: 51
+
+  derivation: >
+    Summarized from the DDP daily population feather file (ddp_raw target)
+    filtered to the FY25 window (2024-10-01 through 2025-09-30). Each ADP
+    column is the mean of the corresponding daily count column over the 365
+    observation days. All facilities have the full 365 days; days with zero
+    detainees are included in the average.
+
+  column_mapping:
+    adp_total: "mean(n_detained)"
+    adp_midnight: "mean(n_detained_at_midnight)"
+    adp_male: "mean(n_detained_male)"
+    adp_female: "mean(n_detained_female)"
+    adp_convicted_criminal: "mean(n_detained_convicted_criminal)"
+    adp_possibly_under_18: "mean(n_detained_possibly_under_18)"
+    adp_non_criminal: "adp_total - adp_convicted_criminal"
+    share_non_crim: "adp_non_criminal / adp_total"
+    share_female: "adp_female / adp_total"
+    peak_population: "max(n_detained)"
+    peak_date: "date of max(n_detained)"
+
+  notes:
+    - >
+      adp_total vs adp_midnight: adp_total reflects the broadest daily detained
+      count, which includes individuals booked in and out within the same day.
+      adp_midnight captures only those physically present at midnight and is
+      typically lower.
+    - >
+      Criminality classification: adp_convicted_criminal reflects ICE's
+      classification of detainees with criminal convictions. The complementary
+      adp_non_criminal captures all others, including those with pending
+      charges, immigration-only violations, or no criminal history.
+    - >
+      Coverage vs ICE annual statistics: The ICE FY25 spreadsheet covers
+      approximately 225 facilities. This DDP summary covers 853 facility codes,
+      including hold rooms, staging facilities, federal prisons, and other
+      sites where ICE holds detainees but which are excluded from the published
+      annual spreadsheet.
+
+import:
+  source_target: "ddp_raw (arrow::read_feather)"
+  source_file: "data/ddp/ddp-daily-population.feather"
+  summary_generated: "Interactively in R session; not yet wired as a pipeline target"
+  date: "2026-03-28"

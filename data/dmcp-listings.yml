@@ -1,0 +1,213 @@
+---
+# Provenance metadata for ICE DMCP Authorized Facility Listings
+# Two point-in-time snapshots: 2015 XLSX from ice.gov, 2017 PDF from Prison Legal News.
+
+source:
+  title: "ERO Custody Management Division — Authorized DMCP Facility List"
+  institution: "U.S. Immigration and Customs Enforcement (ICE), Enforcement and Removal Operations"
+  program: "Detention Management Compliance Program (DMCP)"
+  notes: >
+    These documents are authorization rosters, not annual snapshots. Each row
+    represents one authorized facility and contains contract metadata, operator
+    and owner information, and ADP figures across multiple prior fiscal years.
+    They are a different document type from the annual FY stats spreadsheets
+    (FY19–FY26) that form the main pipeline panel.
+
+faclist15:
+  title: "ICE Detention Facility Data — December 8, 2015 Snapshot"
+  url: "https://www.ice.gov/doclib/foia/dfs/2015IceDetentionFacilityListing.xlsx"
+  obtained_via: "ICE FOIA reading room (ice.gov/foia)"
+  format: "XLSX"
+  naming_note: >
+    Named for the snapshot date (Dec 8, 2015), not a fiscal year. The FY2016
+    column covers approximately the first 70 days of FY2016 (Oct 1–Dec 8, 2015),
+    making "fy15" a misnomer. The document also spans FY2010–FY2016, so no
+    single fiscal year label is appropriate.
+  data_as_of: "2015-12-08"
+  data_currency:
+    fy2016: "IIDS as of 12/08/2015; EID data through 12/05/2015"
+    fy2015: "IIDS as of 10/5/15; EID data through 10/2/15"
+    fy2014: "IIDS as of 10/6/14; EID data through 10/3/14"
+    fy2013: "IIDS as of 10/6/13; EID data through 10/4/13"
+    fy2012: "IIDS as of 10/8/12; EID data through 10/5/12"
+    fy2011: "IIDS as of 10/7/11; EID data through 10/5/11"
+    fy2004_2010: "IIDS as of 10/05/10; EID data through 09/30/10"
+  fiscal_years_covered: [2010, 2011, 2012, 2013, 2014, 2015, 2016]
+
+  adp_notes: >
+    FY10–FY15 ADP values are stored as floating-point in the XLSX (e.g. 62.5).
+    The FY17 PDF reports the same underlying data as integers, rounding to the
+    nearest whole number. All discrepancies between the two sources for FY10–FY15
+    are ≤ 0.5 and attributable to this rounding. FL17 is used as the primary
+    source for FY10–FY15 where available; FL15 supplements for the 28 facilities
+    present only in FL15.
+
+    FY16 ADP in this document covers only the first ~70 days of the fiscal year
+    (Oct 1 – Dec 8, 2015) and is NOT comparable to the full-year FY16 ADP
+    reported in the FY17 listing. The FL17 full-year value is authoritative
+    for FY16; the FL15 partial-year value is retained only for reference.
+
+  raw_file:
+    filename: "data/ice/2015IceDetentionFacilityListing.xlsx"
+    sheet: "Facility List - Main"
+    header_rows: "Rows 1–6 are document title and metadata; row 7 is the column header row; data begins at row 8."
+    rows: 209
+    columns: 38
+
+  outputs:
+    - target: faclist15_raw
+      description: >
+        Raw tibble read directly from the XLSX with original column names
+        (Title Case with spaces, e.g. "Type Detailed", "Male/Female").
+        209 rows × 38 columns. Blank trailing rows filtered on State/City.
+    - target: faclist15
+      description: >
+        Cleaned tibble with project-schema column names (snake_case,
+        facility_/inspections_ prefixes). Facility names title-cased and
+        abbreviations expanded. ADP columns as numeric. 209 rows × 38 columns.
+      columns_added_vs_raw:
+        - >
+          facility_capacity_as_needed (logical): TRUE for the 49 facilities
+          whose raw Capacity cell contains "AS NEEDED" rather than a numeric
+          bed count. These are smaller IGSA jails that accept ICE detainees on
+          demand with no fixed authorized capacity. Derived in clean_dmcp_data()
+          before the as.integer() coercion; facility_capacity is NA for these rows.
+      columns_not_in_fy_panel: >
+        detloc, facility_county, facility_type, facility_levels,
+        facility_capacity, facility_population_count, fy10_adp–fy16_adp,
+        facility_operator, facility_owner, contract_initiation_date,
+        contract_expiration_date, per_diem_rate_detailed,
+        authorizing_authority, over_under_72, cy10_rating–cy15_rating,
+        dsm_assigned
+
+fy17_listing:
+  title: "ICE DMCP Facility List — ERO Custody Management Division, FY2017"
+  url: "https://www.prisonlegalnews.org/media/publications/ICE_DMCP_Facility_List_ERO_Custody_Management_Division_2017.pdf"
+  obtained_via: "Prison Legal News document library"
+  original_source: "ICE / ERO Custody Management Division"
+  format: "PDF (4 pages, fixed-width table)"
+  data_as_of: "2017-07-10"
+  data_currency: >
+    FY2017 data: IIDS as of 07/10/2017; EID data through 07/08/2017.
+    FY2016 and prior years reflect end-of-fiscal-year snapshots.
+  fiscal_years_covered: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017]
+
+  adp_notes: >
+    This listing is the authoritative source for FY10–FY16 ADP (all full fiscal
+    years). FY17 ADP is partial-year only, covering approximately the first 9.5
+    months (Oct 2016 – Jul 8, 2017). FY10–FY15 values are integer-rounded from
+    the same underlying data as the FL15 XLSX (which retains fractional values).
+
+    For the `facilities_annual_sums` pipeline target, FL17 is the primary source
+    for all years (FY10–FY17). FL15 supplements FY10–FY15 only for the 28
+    facilities present in FL15 but absent from FL17.
+
+  raw_file:
+    filename: "data/ice/ICE_DMCP_Facility_List_2017.pdf"
+    pages: 4
+    rows_parsed: 271
+    rows_after_filter: 201
+    columns: 40
+
+  parsing_method: >
+    Extracted using tabulapdf::extract_tables() (Java-based Tabula) with
+    explicit column boundary x-coordinates supplied via the `columns` parameter
+    and `guess = FALSE`. Column positions (stored in .dmcp_pdf_col_breaks in
+    R/import.R) were originally derived from pdftools::pdf_data() header token
+    x-coordinates and reused here. Pages 1–2 are extracted as matrices,
+    row-bound, named with .dmcp_pdf_col_names, then filtered to valid DETLOC
+    rows. An earlier pdftools bounding-box parser was replaced because its
+    y-gap row-grouping logic (diff(y) > 1) caused two adjacent facilities to
+    merge into one record in ~90 rows across the older ADP columns (fy10–fy11),
+    producing space-concatenated values like "4 128" that failed numeric coercion.
+
+  filtering:
+    valid_detloc: "Rows retained only where detloc matches ^[A-Z0-9]+$ (all-caps alphanumeric, no spaces)."
+    non_null_state: "Rows retained only where state is not NA."
+    removed: >
+      70 rows removed: page header/footer text, column header repetitions,
+      and footnote paragraphs that were parsed as records before filtering.
+
+  outputs:
+    - target: faclist17_raw
+      description: >
+        Raw tibble from PDF parsing, snake_case column names as assigned
+        by the PDF parser. 201 rows × 40 columns.
+    - target: faclist17
+      description: >
+        Cleaned tibble with project-schema column names. Facility names
+        title-cased and abbreviations expanded. ADP columns parsed from
+        comma-formatted character strings to numeric. Columns in canonical
+        DMCP order (.dmcp_col_order in R/clean.R). 201 rows × 40 columns.
+      columns_added_vs_raw:
+        - >
+          facility_capacity_as_needed (logical): TRUE for the 98 facilities
+          whose raw capacity cell contains "AS NEEDED". Derived in
+          clean_dmcp_data() before as.integer() coercion; facility_capacity
+          is NA for these rows.
+      columns_vs_dec2015: >
+        Adds fy17_adp and cy16_rating relative to the Dec 2015 listing.
+        Adds facility_capacity_as_needed (present in both).
+        All other columns are identical in name and meaning.
+      date_bleed_repair: >
+        repair_fl17_date_bleed() (R/clean.R) runs before clean_dmcp_data()
+        to fix a systematic PDF column-boundary artifact. The tabulapdf
+        column breaks are slightly too narrow in two zones, causing the last
+        digit of a date field to bleed into the adjacent column to its right.
+        Zone 1: contract_initiation_date → contract_expiration_date →
+        per_diem_rate_detailed (42 rows affected in the exp/rate columns;
+        all 200 rows with initiation dates were truncated).
+        Zone 2: inspections_last_inspection_date → cy16_rating (175 rows
+        affected). After reassembly, all three date columns are converted to
+        Date type. The remaining cy16_rating truncation ("Special Review -
+        Pre-Oc", 9 rows) is a text-width limit in the PDF itself, not a
+        bleed artifact. The repair is safe to call on fl15 data (returns
+        unchanged).
+
+import:
+  pipeline: "_targets.R"
+  functions:
+    download: "download_faclist15(), download_faclist17() — R/download.R"
+    import:   "import_faclist15(path), import_faclist17(path) — R/import.R"
+    rename:   "rename_dmcp_columns() — R/clean.R"
+    repair:   "repair_fl17_date_bleed() — R/clean.R (fl17 only, before clean)"
+    clean:    "clean_dmcp_data() — R/clean.R"
+  targets:
+    - faclist15_file   # format: file, cue: never
+    - faclist17_file   # format: file, cue: never
+    - faclist15_raw
+    - faclist17_raw
+    - faclist15
+    - faclist17
+  date: "2026-03-21"
+  handling_notes:
+    - >
+      Both sources share the same DMCP schema. The FY17 PDF adds two columns
+      (fy17_adp, cy16_rating) relative to the FY15 XLSX. rename_dmcp_columns()
+      handles both with a single code path via dplyr::any_of().
+    - >
+      Column "Capacity" in the DMCP lists is total authorized beds, not the
+      contracted guaranteed minimum. It is named facility_capacity to
+      distinguish it from inspections_guaranteed_minimum in the FY panel.
+      49 facilities in FY15 and 98 in FY17 carry "AS NEEDED" rather than a
+      numeric value; these are IGSA jails with no fixed authorized capacity.
+      The companion column facility_capacity_as_needed (logical) captures this
+      distinction; facility_capacity is NA for these rows.
+    - >
+      "Best Known Contract Initiation/Expiration Date" in the XLSX becomes
+      contract_initiation_date / contract_expiration_date (prefix stripped).
+      The PDF parser already uses the shorter names.
+    - >
+      FY15 XLSX ADP values are floating-point (readxl parses numeric cells
+      directly). FY17 PDF ADP values are character strings with commas
+      (e.g. "1,876"). clean_dmcp_data() handles both via parse_adp().
+    - >
+      Inspection columns are prefixed inspections_ to match the main panel:
+      last_inspection_type → inspections_last_inspection_type, etc.
+    - >
+      facility_type (broad ICE category: IGSA, CDF, SPC, USMS IGA) is a
+      4-value grouping present in the raw DMCP data alongside
+      facility_type_detailed. It collapses DIGSA into IGSA (the only
+      difference). Retained in faclist15/faclist17 outputs but not propagated
+      into downstream pipeline products (annual sums, panel, roster), which
+      use only facility_type_detailed.

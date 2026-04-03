@@ -1,0 +1,230 @@
+---
+# Provenance metadata for ICE Annual Detention Facility Statistics (FY2019–FY2026)
+# Eight annual Excel workbooks published by ICE on ice.gov, each containing a
+# single "Facilities" worksheet with per-facility detention statistics.
+
+source:
+  title: "ICE Detention Facility Statistics"
+  institution: "U.S. Immigration and Customs Enforcement (ICE), Enforcement and Removal Operations"
+  publisher: "U.S. Department of Homeland Security"
+  url_pattern: "https://www.ice.gov/doclib/detention/FY{nn}-detentionstats.xlsx"
+  notes: >
+    Annual workbooks reporting per-facility detention statistics including average
+    daily population (ADP) by classification level, criminality, gender, and ICE
+    threat level; average length of stay; facility type; inspection results; and
+    guaranteed minimum bed capacity. Each file covers one fiscal year (Oct 1 –
+    Sep 30), except FY25 and FY26 which are partial-year snapshots.
+
+files:
+  FY19:
+    title: "ICE Detention Statistics FY 2019"
+    url: "https://www.ice.gov/doclib/detention/FY19-detentionstats.xlsx"
+    local_file: "data/ice/FY19-detentionstats.xlsx"
+    format: "XLSX"
+    sheet: "Facilities FY19"
+    header_rows: [5, 7]
+    right_column: "AE"
+    data_as_of: "2019-09-30"
+    fiscal_year: 2019
+    citation: >
+      {{Cite web
+      | publisher = U.S. Department of Homeland Security
+      | last = U.S. Immigration and Customs Enforcement
+      | title = ICE Detention Statistics FY 2019
+      | date = 2019-09-30
+      | url = https://www.ice.gov/doclib/detention/FY19-detentionstats.xlsx}}
+
+  FY20:
+    title: "ICE Detention Statistics FY 2020"
+    url: "https://www.ice.gov/doclib/detention/FY20-detentionstats.xlsx"
+    local_file: "data/ice/FY20-detentionstats.xlsx"
+    format: "XLSX"
+    sheet: "Facilities EOYFY20 "
+    header_rows: [5, 7]
+    right_column: "AE"
+    data_as_of: "2020-09-30"
+    fiscal_year: 2020
+    citation: >
+      {{Cite web
+      | publisher = U.S. Department of Homeland Security
+      | last = U.S. Immigration and Customs Enforcement
+      | title = ICE Detention Statistics FY 2020
+      | date = 2020-09-30
+      | url = https://www.ice.gov/doclib/detention/FY20-detentionstats.xlsx}}
+
+  FY21:
+    title: "ICE Detention Statistics FY 2021"
+    url: "https://www.ice.gov/doclib/detention/FY21-detentionstats.xlsx"
+    local_file: "data/ice/FY21-detentionstats.xlsx"
+    format: "XLSX"
+    sheet: "Facilities FY21 YTD"
+    header_rows: [5, 7]
+    right_column: "AE"
+    data_as_of: "2021-09-30"
+    fiscal_year: 2021
+    citation: >
+      {{Cite web
+      | publisher = U.S. Department of Homeland Security
+      | last = U.S. Immigration and Customs Enforcement
+      | title = ICE Detention Statistics FY 2021
+      | date = 2021-09-30
+      | url = https://www.ice.gov/doclib/detention/FY21-detentionstats.xlsx}}
+
+  FY22:
+    title: "ICE Detention Statistics FY 2022"
+    url: "https://www.ice.gov/doclib/detention/FY22-detentionStats.xlsx"
+    local_file: "data/ice/FY22-detentionStats.xlsx"
+    format: "XLSX"
+    sheet: "Facilities FY22"
+    header_rows: [5, 7]
+    right_column: "AD"
+    data_as_of: "2022-09-30"
+    fiscal_year: 2022
+    citation: >
+      {{Cite web
+      | publisher = U.S. Department of Homeland Security
+      | last = U.S. Immigration and Customs Enforcement
+      | title = ICE Detention Statistics FY 2022
+      | date = 2022-09-30
+      | url = https://www.ice.gov/doclib/detention/FY22-detentionStats.xlsx}}
+
+  FY23:
+    title: "ICE Detention Statistics FY 2023"
+    url: "https://www.ice.gov/doclib/detention/FY23_detentionStats.xlsx"
+    local_file: "data/ice/FY23_detentionStats.xlsx"
+    format: "XLSX"
+    sheet: "Facilities EOFY23"
+    header_rows: [4, 6]
+    right_column: "AG"
+    data_as_of: "2023-09-30"
+    fiscal_year: 2023
+    citation: >
+      {{Cite web
+      | publisher = U.S. Department of Homeland Security
+      | last = U.S. Immigration and Customs Enforcement
+      | title = ICE Detention Statistics FY 2023
+      | date = 2023-09-30
+      | url = https://www.ice.gov/doclib/detention/FY23_detentionStats.xlsx}}
+
+  FY24:
+    title: "ICE Detention Statistics FY 2024"
+    url: "https://www.ice.gov/doclib/detention/FY24_detentionStats.xlsx"
+    local_file: "data/ice/FY24_detentionStats.xlsx"
+    format: "XLSX"
+    sheet: "Facilities EOFY24"
+    header_rows: [5, 7]
+    right_column: "AB"
+    data_as_of: "2024-09-30"
+    fiscal_year: 2024
+    citation: >
+      {{Cite web
+      | publisher = U.S. Department of Homeland Security
+      | last = U.S. Immigration and Customs Enforcement
+      | title = ICE Detention Statistics FY 2024
+      | date = 2024-09-30
+      | url = https://www.ice.gov/doclib/detention/FY24_detentionStats.xlsx}}
+
+  FY25:
+    title: "ICE Detention Statistics FY 2025"
+    url: "https://www.ice.gov/doclib/detention/FY25_detentionStats09242025.xlsx"
+    local_file: "data/ice/FY25_detentionStats09242025.xlsx"
+    format: "XLSX"
+    sheet: "Facilities FY25"
+    header_rows: [5, 7]
+    right_column: "AB"
+    data_as_of: "2025-09-24"
+    fiscal_year: 2025
+    partial_year: true
+    citation: >
+      {{Cite web
+      | publisher = U.S. Department of Homeland Security
+      | last = U.S. Immigration and Customs Enforcement
+      | title = ICE Detention Statistics FY 2025
+      | date = 2025-09-24
+      | url = https://www.ice.gov/doclib/detention/FY25_detentionStats09242025.xlsx}}
+
+  FY26:
+    title: "ICE Detention Statistics FY 2026"
+    url: "https://www.ice.gov/doclib/detention/FY26_detentionStats02022026.xlsx"
+    local_file: "data/ice/FY26_detentionStats02022026.xlsx"
+    format: "XLSX"
+    sheet: "Facilities FY26"
+    header_rows: [9, 10]
+    right_column: "AA"
+    data_as_of: "2026-02-02"
+    fiscal_year: 2026
+    partial_year: true
+    citation: >
+      {{Cite web
+      | publisher = U.S. Department of Homeland Security
+      | last = U.S. Immigration and Customs Enforcement
+      | title = ICE Detention Statistics FY 2026
+      | date = 2026-02-02
+      | url = https://www.ice.gov/doclib/detention/FY26_detentionStats02022026.xlsx}}
+
+raw_file_structure:
+  description: >
+    Each XLSX has a single "Facilities FY{nn}" worksheet with a 2-row merged
+    header. The first header row contains group labels (e.g. "ADP Detainee
+    Classification Level", "ADP Criminality"); the second row contains individual
+    column names (e.g. "Level A", "Male Crim"). Header row positions and the
+    rightmost data column vary by year; all are encoded in build_data_file_info().
+  naming_variation: >
+    URL filename conventions changed over time: FY19–FY21 use hyphens and
+    lowercase "detentionstats"; FY22–FY23 use mixed-case "detentionStats" with
+    hyphens then underscores; FY24 uses underscores; FY25–FY26 append a
+    date suffix (MMDDYYYY). Sheet names also vary (e.g. "EOYFY20 " with
+    trailing space, "FY21 YTD", "EOFY23", "EOFY24").
+  column_variation: >
+    FY22 drops one column vs. FY19–FY21 (right_column AD vs. AE). FY23 adds
+    columns (AG). FY24–FY26 have fewer columns (AB or AA). FY26 shifts header
+    rows to 9–10 (from 4–7 in prior years). clean_variable_names_from_header()
+    and build_clean_names() handle all variants.
+
+import:
+  pipeline: "_targets.R"
+  functions:
+    metadata: "build_data_file_info() — R/metadata.R"
+    download: "download_ice_spreadsheets(data_file_info) — R/download.R"
+    import: "header_rows(), clean_variable_names_from_header(), build_clean_names(), read_facilities_data(), import_all_years() — R/import.R"
+    clean: "clean_facility_names(), fix_city_names(), clean_facilities_data(), clean_all_years() — R/clean.R"
+    aggregate: "aggregate_facilities_data(), aggregate_all_years() — R/aggregate.R"
+    crosswalk: "build_facility_crosswalk(), attach_canonical_ids(), merge_keyed_lists(), build_facility_presence(), build_panel(), build_canonical_facilities(), save_outputs() — R/crosswalk.R"
+  targets:
+    - data_file_info
+    - raw_xlsx_files         # format: file, cue: never
+    - clean_names_list
+    - facilities_raw
+    - facilities_clean
+    - facilities_aggregated
+    - facility_crosswalk
+    - facilities_keyed
+    - facilities_all_keyed
+    - facility_presence
+    - facilities_panel
+    - canonical_facilities
+    - facilities_geocoded    # cue: never
+    - saved_files            # format: file
+  date: "2026-03-27"
+
+handling_notes:
+  - >
+    Each year's raw spreadsheet has a 2-row merged header that is read by
+    header_rows() and reassembled by clean_variable_names_from_header() into
+    a single set of clean snake_case column names. The mapping is year-specific
+    because column labels shift between releases.
+  - >
+    Guantanamo Bay (canonical ID 83) is patched in clean_all_years(): its city
+    is set to "Guantanamo Bay" and state to "CU" (Cuba) rather than the varying
+    raw entries.
+  - >
+    FY25 and FY26 are partial-year snapshots — ADP values are not directly
+    comparable to full-year FY19–FY24 figures without adjustment.
+  - >
+    aggregate_all_years() computes sum_classification_levels (total ADP from
+    level A–D), share_non_crim, share_no_threat, and facility_type_wiki.
+  - >
+    The crosswalk uses exact (name, city, state) matching followed by fuzzy
+    address matching (OSA similarity ≥ 0.80 within same ZIP), with union-find
+    merging and manual overrides. Canonical IDs 1–398 are frozen in
+    data/canonical_id_registry.csv.

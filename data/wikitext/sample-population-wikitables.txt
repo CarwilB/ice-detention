@@ -1,0 +1,555 @@
+=== Stewart Detention Center ===
+{| class="wikitable" style="text-align:right"
+|+ Average daily detainee population at Stewart Detention Center, FY 2019–FY 2026
+|-
+! style="text-align:left" | Fiscal year !! FY 2019<ref name="ice-detention-fy19">{{Citation | vauthors=U.S. Immigration and Customs Enforcement | year=2019 | title=ICE Detention Statistics FY 2019 | publisher=U.S. Department of Homeland Security | url=https://www.ice.gov/doclib/detention/FY19-detentionstats.xlsx}}</ref> !! FY 2020<ref name="ice-detention-fy20">{{Citation | vauthors=U.S. Immigration and Customs Enforcement | year=2020 | title=ICE Detention Statistics FY 2020 | publisher=U.S. Department of Homeland Security | url=https://www.ice.gov/doclib/detention/FY20-detentionstats.xlsx}}</ref> !! FY 2021{{efn|YTD snapshot}}<ref name="ice-detention-fy21">{{Citation | vauthors=U.S. Immigration and Customs Enforcement | year=2021 | title=ICE Detention Statistics FY 2021 | publisher=U.S. Department of Homeland Security | url=https://www.ice.gov/doclib/detention/FY21-detentionstats.xlsx}}</ref> !! FY 2022<ref name="ice-detention-fy22">{{Citation | vauthors=U.S. Immigration and Customs Enforcement | year=2022 | title=ICE Detention Statistics FY 2022 | publisher=U.S. Department of Homeland Security | url=https://www.ice.gov/doclib/detention/FY22-detentionStats.xlsx}}</ref> !! FY 2023<ref name="ice-detention-fy23">{{Citation | vauthors=U.S. Immigration and Customs Enforcement | year=2023 | title=ICE Detention Statistics FY 2023 | publisher=U.S. Department of Homeland Security | url=https://www.ice.gov/doclib/detention/FY23_detentionStats.xlsx}}</ref> !! FY 2024<ref name="ice-detention-fy24">{{Citation | vauthors=U.S. Immigration and Customs Enforcement | year=2024 | title=ICE Detention Statistics FY 2024 | publisher=U.S. Department of Homeland Security | url=https://www.ice.gov/doclib/detention/FY24_detentionStats.xlsx}}</ref> !! FY 2025{{efn|YTD snapshot}}<ref name="ice-detention-fy25">{{Cite| publisher = U.S. Department of Homeland Security| last = U.S. Immigration and Customs Enforcement| title = ICE Detention Statistics FY 2025| date = 2025-09-24}}</ref> !! FY 2026{{efn|YTD snapshot}}<ref name="ice-detention-fy26">{{Cite| publisher = U.S. Department of Homeland Security| last = U.S. Immigration and Customs Enforcement| title = ICE Detention Statistics FY 2026| date = 2026-02-02}}</ref>
+|-
+| style="text-align:left" | Total detainee population
+| 1,910
+| 1,352
+| 769
+| 1,076
+| 1,232
+| 1,533
+| 1,921
+| 2,011
+|-
+| style="text-align:left" | … with a criminal record
+| 883
+| 747
+| 352
+| 376
+| 578
+| 664
+| 800
+| 641
+|-
+| style="text-align:left" | … with no criminal record
+| 1,027
+| 605
+| 417
+| 700
+| 654
+| 870
+| 1,121
+| 1,369
+|-
+| style="text-align:left" | Male detainees
+| 1,910
+| 1,351
+| 604
+| 745
+| 1,085
+| 1,342
+| 1,681
+| 1,700
+|-
+| style="text-align:left" | Female detainees
+| 0
+| 0
+| 165
+| 331
+| 147
+| 191
+| 240
+| 310
+|-
+| colspan="9" style="font-size:90%;text-align:left" | {{notelist}}
+|}
+
+=== Adelanto ICE Processing Center ===
+{| class="wikitable" style="text-align:right"
+|+ Average daily detainee population at Adelanto ICE Processing Center, FY 2019–FY 2026
+|-
+! style="text-align:left" | Fiscal year !! FY 2019<ref name="ice-detention-fy19"/> !! FY 2020<ref name="ice-detention-fy20"/> !! FY 2021{{efn|YTD snapshot}}<ref name="ice-detention-fy21"/> !! FY 2022<ref name="ice-detention-fy22"/> !! FY 2023<ref name="ice-detention-fy23"/> !! FY 2024<ref name="ice-detention-fy24"/> !! FY 2025{{efn|YTD snapshot}}<ref name="ice-detention-fy25"/> !! FY 2026{{efn|YTD snapshot}}<ref name="ice-detention-fy26"/>
+|-
+| style="text-align:left" | Total detainee population
+| 1,711
+| 1,291
+| 229
+| 42
+| 204
+| 5
+| 576
+| 1,807
+|-
+| style="text-align:left" | … with a criminal record
+| 732
+| 771
+| 203
+| 39
+| 136
+| 5
+| 312
+| 743
+|-
+| style="text-align:left" | … with no criminal record
+| 979
+| 520
+| 26
+| 3
+| 68
+| 0
+| 264
+| 1,064
+|-
+| style="text-align:left" | Male detainees
+| 1,453
+| 1,100
+| 206
+| 38
+| 203
+| 5
+| 523
+| 1,548
+|-
+| style="text-align:left" | Female detainees
+| 258
+| 192
+| 23
+| 4
+| 1
+| 0
+| 53
+| 259
+|-
+| colspan="9" style="font-size:90%;text-align:left" | {{notelist}}
+|}
+
+=== Adams County Detention Center (Mississippi) ===
+{| class="wikitable" style="text-align:right"
+|+ Average daily detainee population at Adams County Detention Center (Mississippi), FY 2019–FY 2026
+|-
+! style="text-align:left" | Fiscal year !! FY 2019<ref name="ice-detention-fy19"/> !! FY 2020<ref name="ice-detention-fy20"/> !! FY 2021{{efn|YTD snapshot}}<ref name="ice-detention-fy21"/> !! FY 2022<ref name="ice-detention-fy22"/> !! FY 2023<ref name="ice-detention-fy23"/> !! FY 2024<ref name="ice-detention-fy24"/> !! FY 2025{{efn|YTD snapshot}}<ref name="ice-detention-fy25"/> !! FY 2026{{efn|YTD snapshot}}<ref name="ice-detention-fy26"/>
+|-
+| style="text-align:left" | Total detainee population
+| 110
+| 891
+| 716
+| 830
+| 909
+| 1,536
+| 2,171
+| 2,162
+|-
+| style="text-align:left" | … with a criminal record
+| 20
+| 196
+| 68
+| 12
+| 16
+| 14
+| 59
+| 191
+|-
+| style="text-align:left" | … with no criminal record
+| 90
+| 696
+| 649
+| 818
+| 893
+| 1,522
+| 2,112
+| 1,970
+|-
+| style="text-align:left" | Male detainees
+| 98
+| 654
+| 701
+| 830
+| 909
+| 1,536
+| 2,170
+| 2,162
+|-
+| style="text-align:left" | Female detainees
+| 12
+| 237
+| 15
+| 0
+| 0
+| 0
+| 0
+| 0
+|-
+| colspan="9" style="font-size:90%;text-align:left" | {{notelist}}
+|}
+
+=== Camp East Montana ===
+{| class="wikitable" style="text-align:right"
+|+ Average daily detainee population at Camp East Montana, FY 2025–FY 2026
+|-
+! style="text-align:left" | Fiscal year !! FY 2025{{efn|YTD snapshot}}<ref name="ice-detention-fy25"/> !! FY 2026{{efn|YTD snapshot}}<ref name="ice-detention-fy26"/>
+|-
+| style="text-align:left" | Total detainee population
+| 107
+| 2,952
+|-
+| style="text-align:left" | … with a criminal record
+| 30
+| 550
+|-
+| style="text-align:left" | … with no criminal record
+| 76
+| 2,402
+|-
+| style="text-align:left" | Male detainees
+| 104
+| 2,672
+|-
+| style="text-align:left" | Female detainees
+| 2
+| 280
+|-
+| colspan="3" style="font-size:90%;text-align:left" | {{notelist}}
+|}
+
+=== Moshannon Valley Processing Center ===
+{| class="wikitable" style="text-align:right"
+|+ Average daily detainee population at Moshannon Valley Processing Center, FY 2022–FY 2026
+|-
+! style="text-align:left" | Fiscal year !! FY 2022<ref name="ice-detention-fy22"/> !! FY 2023<ref name="ice-detention-fy23"/> !! FY 2024<ref name="ice-detention-fy24"/> !! FY 2025{{efn|YTD snapshot}}<ref name="ice-detention-fy25"/> !! FY 2026{{efn|YTD snapshot}}<ref name="ice-detention-fy26"/>
+|-
+| style="text-align:left" | Total detainee population
+| 404
+| 948
+| 1,236
+| 1,404
+| 1,655
+|-
+| style="text-align:left" | … with a criminal record
+| 236
+| 607
+| 731
+| 718
+| 441
+|-
+| style="text-align:left" | … with no criminal record
+| 168
+| 341
+| 504
+| 686
+| 1,214
+|-
+| style="text-align:left" | Male detainees
+| 394
+| 917
+| 1,187
+| 1,356
+| 1,607
+|-
+| style="text-align:left" | Female detainees
+| 9
+| 31
+| 48
+| 48
+| 48
+|-
+| colspan="6" style="font-size:90%;text-align:left" | {{notelist}}
+|}
+
+=== North Lake Correctional Facility ===
+{| class="wikitable" style="text-align:right"
+|+ Average daily detainee population at North Lake Correctional Facility, FY 2025–FY 2026
+|-
+! style="text-align:left" | Fiscal year !! FY 2025{{efn|YTD snapshot}}<ref name="ice-detention-fy25"/> !! FY 2026{{efn|YTD snapshot}}<ref name="ice-detention-fy26"/>
+|-
+| style="text-align:left" | Total detainee population
+| 116
+| 1,413
+|-
+| style="text-align:left" | … with a criminal record
+| 20
+| 147
+|-
+| style="text-align:left" | … with no criminal record
+| 96
+| 1,266
+|-
+| style="text-align:left" | Male detainees
+| 115
+| 1,301
+|-
+| style="text-align:left" | Female detainees
+| 1
+| 112
+|-
+| colspan="3" style="font-size:90%;text-align:left" | {{notelist}}
+|}
+
+=== Delaney Hall Detention Facility ===
+{| class="wikitable" style="text-align:right"
+|+ Average daily detainee population at Delaney Hall Detention Facility, FY 2019–FY 2026
+|-
+! style="text-align:left" | Fiscal year !! FY 2019<ref name="ice-detention-fy19"/> !! FY 2020<ref name="ice-detention-fy20"/> !! FY 2021{{efn|YTD snapshot}}<ref name="ice-detention-fy21"/> !! FY 2022<ref name="ice-detention-fy22"/> !! FY 2023<ref name="ice-detention-fy23"/> !! FY 2024<ref name="ice-detention-fy24"/> !! FY 2025{{efn|YTD snapshot}}<ref name="ice-detention-fy25"/> !! FY 2026{{efn|YTD snapshot}}<ref name="ice-detention-fy26"/>
+|-
+| style="text-align:left" | Total detainee population
+| 781
+| 506
+| —
+| —
+| —
+| —
+| 234
+| 905
+|-
+| style="text-align:left" | … with a criminal record
+| 455
+| 310
+| —
+| —
+| —
+| —
+| 33
+| 71
+|-
+| style="text-align:left" | … with no criminal record
+| 326
+| 196
+| —
+| —
+| —
+| —
+| 201
+| 834
+|-
+| style="text-align:left" | Male detainees
+| 781
+| 506
+| —
+| —
+| —
+| —
+| 215
+| 847
+|-
+| style="text-align:left" | Female detainees
+| 0
+| 0
+| —
+| —
+| —
+| —
+| 20
+| 58
+|-
+| colspan="9" style="font-size:90%;text-align:left" | {{notelist}}
+|}
+
+=== Glades County Detention Center ===
+{| class="wikitable" style="text-align:right"
+|+ Average daily detainee population at Glades County Detention Center, FY 2019–FY 2026
+|-
+! style="text-align:left" | Fiscal year !! FY 2019<ref name="ice-detention-fy19"/> !! FY 2020<ref name="ice-detention-fy20"/> !! FY 2021{{efn|YTD snapshot}}<ref name="ice-detention-fy21"/> !! FY 2022<ref name="ice-detention-fy22"/> !! FY 2023<ref name="ice-detention-fy23"/> !! FY 2024<ref name="ice-detention-fy24"/> !! FY 2025{{efn|YTD snapshot}}<ref name="ice-detention-fy25"/> !! FY 2026{{efn|YTD snapshot}}<ref name="ice-detention-fy26"/>
+|-
+| style="text-align:left" | Total detainee population
+| 423
+| 380
+| 187
+| —
+| —
+| —
+| 133
+| 468
+|-
+| style="text-align:left" | … with a criminal record
+| 323
+| 292
+| 140
+| —
+| —
+| —
+| 53
+| 48
+|-
+| style="text-align:left" | … with no criminal record
+| 99
+| 87
+| 47
+| —
+| —
+| —
+| 79
+| 420
+|-
+| style="text-align:left" | Male detainees
+| 363
+| 324
+| 156
+| —
+| —
+| —
+| 132
+| 468
+|-
+| style="text-align:left" | Female detainees
+| 60
+| 56
+| 31
+| —
+| —
+| —
+| 0
+| 0
+|-
+| colspan="9" style="font-size:90%;text-align:left" | {{notelist}}
+|}
+
+=== Butler County Jail ===
+{| class="wikitable" style="text-align:right"
+|+ Average daily detainee population at Butler County Jail, FY 2019–FY 2026
+|-
+! style="text-align:left" | Fiscal year !! FY 2019<ref name="ice-detention-fy19"/> !! FY 2020<ref name="ice-detention-fy20"/> !! FY 2021{{efn|YTD snapshot}}<ref name="ice-detention-fy21"/> !! FY 2022<ref name="ice-detention-fy22"/> !! FY 2023<ref name="ice-detention-fy23"/> !! FY 2024<ref name="ice-detention-fy24"/> !! FY 2025{{efn|YTD snapshot}}<ref name="ice-detention-fy25"/> !! FY 2026{{efn|YTD snapshot}}<ref name="ice-detention-fy26"/>
+|-
+| style="text-align:left" | Total detainee population
+| 120
+| 103
+| —
+| —
+| —
+| —
+| 158
+| 360
+|-
+| style="text-align:left" | … with a criminal record
+| 76
+| 68
+| —
+| —
+| —
+| —
+| 38
+| 65
+|-
+| style="text-align:left" | … with no criminal record
+| 44
+| 35
+| —
+| —
+| —
+| —
+| 119
+| 295
+|-
+| style="text-align:left" | Male detainees
+| 110
+| 95
+| —
+| —
+| —
+| —
+| 142
+| 333
+|-
+| style="text-align:left" | Female detainees
+| 9
+| 8
+| —
+| —
+| —
+| —
+| 15
+| 27
+|-
+| colspan="9" style="font-size:90%;text-align:left" | {{notelist}}
+|}
+
+=== La Palma Correctional Center ===
+{| class="wikitable" style="text-align:right"
+|+ Average daily detainee population at La Palma Correctional Center, FY 2019–FY 2022
+|-
+! style="text-align:left" | Fiscal year !! FY 2019<ref name="ice-detention-fy19"/> !! FY 2020<ref name="ice-detention-fy20"/> !! FY 2021{{efn|YTD snapshot}}<ref name="ice-detention-fy21"/> !! FY 2022<ref name="ice-detention-fy22"/>
+|-
+| style="text-align:left" | Total detainee population
+| 1,222
+| 974
+| 629
+| 689
+|-
+| style="text-align:left" | … with a criminal record
+| 283
+| 244
+| 71
+| 15
+|-
+| style="text-align:left" | … with no criminal record
+| 939
+| 730
+| 557
+| 674
+|-
+| style="text-align:left" | Male detainees
+| 1,221
+| 973
+| 629
+| 689
+|-
+| style="text-align:left" | Female detainees
+| 0
+| 0
+| 0
+| 0
+|-
+| colspan="5" style="font-size:90%;text-align:left" | {{notelist}}
+|}
+
+=== South Texas Family Residential Center ===
+{| class="wikitable" style="text-align:right"
+|+ Average daily detainee population at South Texas Family Residential Center, FY 2019–FY 2021
+|-
+! style="text-align:left" | Fiscal year !! FY 2019<ref name="ice-detention-fy19"/> !! FY 2020<ref name="ice-detention-fy20"/> !! FY 2021{{efn|YTD snapshot}}<ref name="ice-detention-fy21"/>
+|-
+| style="text-align:left" | Total detainee population
+| 1,075
+| 726
+| 484
+|-
+| style="text-align:left" | … with a criminal record
+| 3
+| 4
+| 1
+|-
+| style="text-align:left" | … with no criminal record
+| 1,072
+| 722
+| 482
+|-
+| style="text-align:left" | Male detainees
+| 266
+| 191
+| 173
+|-
+| style="text-align:left" | Female detainees
+| 809
+| 535
+| 310
+|-
+| colspan="4" style="font-size:90%;text-align:left" | {{notelist}}
+|}
+
+=== Tallahatchie County Correctional Facility ===
+{| class="wikitable" style="text-align:right"
+|+ Average daily detainee population at Tallahatchie County Correctional Facility, FY 2019–FY 2020
+|-
+! style="text-align:left" | Fiscal year !! FY 2019<ref name="ice-detention-fy19"/> !! FY 2020<ref name="ice-detention-fy20"/>
+|-
+| style="text-align:left" | Total detainee population
+| 1,111
+| 125
+|-
+| style="text-align:left" | … with a criminal record
+| 141
+| 16
+|-
+| style="text-align:left" | … with no criminal record
+| 969
+| 110
+|-
+| style="text-align:left" | Male detainees
+| 1,110
+| 125
+|-
+| style="text-align:left" | Female detainees
+| 0
+| 0
+|}

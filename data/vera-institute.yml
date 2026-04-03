@@ -1,0 +1,37 @@
+vera_facilities:
+  title: "Vera Institute ICE Detention Trends — Facility Metadata"
+  url: "https://github.com/vera-institute/ice-detention-trends/blob/main/metadata/facilities.csv"
+  repository: "https://github.com/vera-institute/ice-detention-trends"
+  obtained_via: "Public GitHub repository"
+  license: "Custom (see repository License.md)"
+  downloaded: "2025-03-23"
+
+  description: >
+    Lookup table mapping each ICE detention_facility_code (DETLOC) to facility
+    name, geocoded location, address, county, state, area of responsibility (AOR),
+    and facility type. Compiled by the Vera Institute of Justice from ICE FOIA
+    datasets, supplemented with geocoding and type classifications from additional
+    public sources (HRW, TRAC, NIJC, ILRC, the Marshall Project, and The Guardian).
+    Covers 1,464 distinct facility codes appearing in ICE detention records from
+    FY 2009 through early FY 2026.
+
+  data_currency: >
+    Reflects facility codes present in ICE detention data from October 1, 2008,
+    through October 15, 2025 (FY 2009–FY 2026). Facility type assignments draw
+    from supplemental ICE sources where available; unassigned codes are categorized
+    as "Other/Unknown". Last updated by Vera in December 2025.
+
+  raw_file:
+    filename: "data/vera-institute/facilities.csv"
+    format: "CSV"
+    rows: 1464
+    columns: 12
+
+  credits: >
+    Data analysis: Noelle Smart, Zachary Lawrence, Neil Agarwal.
+    AOR mapping originally by Will Craft (The Guardian US).
+    Contact: urep@vera.org
+
+  pipeline_targets:
+    - vera_facilities_file: "Tracks the CSV (format = 'file')"
+    - vera_facilities: "Cleaned tibble of 1,464 facility codes with type, location, AOR"

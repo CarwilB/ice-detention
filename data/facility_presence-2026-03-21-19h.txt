@@ -1,0 +1,6 @@
+Archived:     2026-03-21 19:37:29 CDT
+File:         facility_presence-2026-03-21-19h.rds
+Rows:         347
+Columns:      16
+Column names: canonical_id, canonical_name, FY19, FY20, FY21, FY22, FY23, FY24, FY25, FY26, n_years, first_seen, last_seen, trajectory, n_years_current, n_years_initial
+MD5:          377de89d10f3b02c468ea4cd19db2ad1

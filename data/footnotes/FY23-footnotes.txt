@@ -1,0 +1,9 @@
+Non-facility rows extracted from FY23 spreadsheet
+Extracted: 2026-04-02 23:04:54
+
+<empty row>
+[1] (STFRCTX) SOUTH TEXAS FAMILY RESIDENTIAL CENTER houses single adults and no longer house family units as of 12/11/21.
+[2] (KRNRCTX) KARNES COUNTY IMMIGRATION PROCESSING CENTER houses single adults and no longer house family units as of 11/10/21.
+(*) Denotes no inspection completed as of the date of the report
+ODO inspections are conducted on a semi-annual basis. The reportable inspections are listed.
+ODO Inspection End Date is the date the final report was issued.

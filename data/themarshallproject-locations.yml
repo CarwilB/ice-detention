@@ -1,0 +1,72 @@
+---
+# Provenance metadata for The Marshall Project detention facility locations dataset
+
+source:
+  title: "Detained — Immigration Detention Facility Locations"
+  publisher: "The Marshall Project"
+  authors:
+    - "Andrew R. Calderon"
+    - "Emily Kassie"
+    - "Weihua Li"
+    - "Tom Meagher"
+  url: "https://github.com/themarshallproject/dhs_immigration_detention"
+  article_url: "https://www.themarshallproject.org/2019/09/24/detained"
+  date_published: "2019-09-24"
+  license: "Not explicitly stated; published as open data on GitHub"
+  notes: >
+    Facility location data that the National Immigrant Justice Center obtained
+    via FOIA request to ICE. Covers calendar year 1978 through November 2017.
+    Includes DETLOC codes, addresses, AOR assignments, first/last use dates,
+    and geocoded lat/lon. The Marshall Project verified and corrected the
+    geocoding using the Google Maps Geocoding API.
+
+data:
+  filename: "data/marshall/themarshallproject_locations.csv"
+  format: "CSV"
+  rows: 1479
+  columns: 12
+  distinct_detlocs: 1477
+  states_territories: 56
+  date_range_first_use: "1980-06-06 to 2017-10-30"
+  date_range_last_use: "1987-11-11 to 2017-11-04"
+  geocoded: "1472 of 1479 facilities have lat/lon"
+  original_columns:
+    - DETLOC
+    - Name
+    - Address
+    - City
+    - County
+    - State
+    - Zip
+    - AOR
+    - "Date of Last Use"
+    - "Date of First Use"
+    - Lat
+    - Lng
+
+  cleaning_applied:
+    - "Column names standardized to snake_case (detloc, facility_name, etc.)"
+    - "Date strings parsed from DD/MM/YY and DD/MM/YYYY to Date type"
+    - "Year-only entries (e.g. '1985') parsed as YYYY-01-01"
+    - "ZIP codes zero-padded to 5 digits"
+    - "Invalid UTF-8 characters replaced via iconv()"
+
+import:
+  script: "themarshallproject-locations.R"
+  functions:
+    download: "download_marshall_locations() — one-time GitHub download"
+    import: "import_marshall_locations(path) — raw CSV import"
+    clean: "clean_marshall_locations(df) — snake_case names, date parsing, ZIP padding"
+  targets:
+    - marshall_locations_file   # format: file, cue: never
+    - marshall_locations_raw    # raw tibble
+    - marshall_locations        # cleaned tibble
+  date: "2026-03-22"
+
+relevance_to_project: >
+  Provides DETLOC codes and addresses for 1,479 facilities used for immigration
+  detention between 1978 and 2017. Key uses: (1) DETLOC lookup for facilities
+  not covered by DMCP or DDP sources, including ERO field office hold rooms
+  (e.g., IEPHOLD for El Paso); (2) historical first/last-use dates for
+  trajectory analysis; (3) AOR assignments for geographic analysis;
+  (4) geocoded coordinates as a backup/cross-check for ggmap geocoding.

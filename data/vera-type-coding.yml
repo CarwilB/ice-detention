@@ -1,0 +1,67 @@
+---
+# Provenance metadata for Vera Institute facility type groupings (Table 2)
+
+source:
+  title: "ICE Detention Trends: Technical Appendix"
+  table: "Table 2: Facility Type Groupings"
+  publisher: "Vera Institute of Justice"
+  authors:
+    - "Noelle Smart"
+    - "Zachary Lawrence"
+  url: "https://web.archive.org/web/20250711155006/https://www.vera.org/ice-detention-trends/files/dashboard_appendix.pdf"
+  original_url: "https://vera-institute.files.svdcdn.com/production/downloads/dashboard_appendix.pdf"
+  date_published: "2023-05-01"
+  access_date: "2026-03-31"
+  license: "Custom (see Vera repository License.md)"
+  citation: >
+    Smart, Noelle, and Zachary Lawrence. "ICE Detention Trends: Technical
+    Appendix." New York: Vera Institute of Justice, May 1, 2023.
+  notes: >
+    Table 2 maps ICE facility_type_detailed codes to Vera's 8-category
+    facility type groupings used in the ICE Detention Trends dashboard.
+    Manually transcribed into an R tribble from the PDF appendix.
+
+data:
+  filename: "data/vera-institute/vera-type-coding.R"
+  format: "R script (tibble::tribble)"
+  object_name: "facility_types_vera"
+  rows: 14
+  columns:
+    - category_vera: "Vera's 8-value facility type grouping"
+    - type_detailed_ice: "ICE facility_type_detailed code"
+    - description_ice: "Plain-language description of the ICE type code"
+
+  vera_categories:
+    - "Non-Dedicated"
+    - "Dedicated"
+    - "Federal"
+    - "Hold/Staging"
+    - "Family/Youth"
+    - "Medical"
+    - "Hotel"
+    - "Other/Unknown"
+
+  ice_codes_mapped:
+    Non-Dedicated: ["IGSA"]
+    Dedicated: ["DIGSA", "CDF", "SPC"]
+    Federal: ["BOP", "USMS CDF", "USMS IGA", "DOD", "MOC"]
+    Hold/Staging: ["Hold", "Staging"]
+    Family/Youth: ["Family", "Juvenile"]
+    Medical: ["Hospital"]
+    Hotel: ["Hotel"]
+    Other/Unknown: ["Other", "Unknown"]
+
+pipeline:
+  function: "classify_vera_category() — R/aggregate.R"
+  description: >
+    Maps facility_type_detailed → Vera category using the Table 2 rules,
+    extended with three ICE codes not in Vera's vocabulary: TAP-ICE →
+    Family/Youth, FAMILY STAGING → Hotel, STATE → Dedicated.
+  date: "2026-03-31"
+
+relevance_to_project: >
+  Provides the authoritative Vera-to-ICE type mapping used by
+  classify_vera_category() to assign Vera facility categories to any
+  facility with a known facility_type_detailed code. Complements the
+  inverse mapping (.vera_type_to_wiki in crosswalk.R) which goes from
+  Vera categories to wiki-friendly labels.

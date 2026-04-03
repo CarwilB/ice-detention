@@ -1,0 +1,6 @@
+Archived:     2026-03-21 19:37:30 CDT
+File:         facility_crosswalk-2026-03-21-19h.rds
+Rows:         398
+Columns:      8
+Column names: facility_id, canonical_id, canonical_name, canonical_city, canonical_state, facility_name, facility_city, facility_state
+MD5:          25b78713930f49cea55e77b75de2127f

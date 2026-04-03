@@ -1,0 +1,26 @@
+canonical_id,canonical_name,address,city,state,zip,detloc,facility_type_wiki,area_of_responsibility,phone,outreach_email
+2001,Atlanta Field Office,"180 Ted Turner Dr. SW, Suite 522",Atlanta,GA,30303,ATLHOLD,ICE ERO Field Office,"Georgia, North Carolina, South Carolina",(404) 893-1290,Atlanta.Outreach@ice.dhs.gov
+2002,Baltimore Field Office,"31 Hopkins Plaza, 6th Floor",Baltimore,MD,21201,BALHOLD,ICE ERO Field Office,Maryland,(443) 560-0640,Baltimore.Outreach@ice.dhs.gov
+2003,Boston Field Office,1000 District Avenue,Burlington,MA,01803,BOSHOLD,ICE ERO Field Office,"Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, Vermont",(781) 359-7500,Boston.Outreach@ice.dhs.gov
+2004,Buffalo Field Office,"250 Delaware Avenue, Floor 7",Buffalo,NY,14202,BUFHOLD,ICE ERO Field Office,Upstate New York,(716) 464-5800,Buffalo.Outreach@ice.dhs.gov
+2005,Chicago Field Office,"101 W Ida B Wells Drive, Suite 4000",Chicago,IL,60605,CHIHOLD,ICE ERO Field Office,"Illinois, Indiana, Wisconsin, Missouri, Kentucky, Kansas",(872) 351-3990,Chicago.Outreach@ice.dhs.gov
+2006,Dallas Field Office,8101 N. Stemmons Frwy,Dallas,TX,75247,DALHOLD,ICE ERO Field Office,"North Texas, Oklahoma",NA,Dallas.Outreach@ice.dhs.gov
+2007,Denver Field Office,12445 E. Caley Avenue,Centennial,CO,80111,DENHOLD,ICE ERO Field Office,"Colorado, Wyoming",(720) 873-2899,Denver.Outreach@ice.dhs.gov
+2008,Detroit Field Office,"985 Michigan Avenue, Suite 207",Detroit,MI,48226,DETHOLD,ICE ERO Field Office,"Michigan, Ohio",(313) 771-6601,Detroit.Outreach@ice.dhs.gov
+2009,El Paso Field Office,"11541 Montana Ave, Suite E",El Paso,TX,79936,NA,ICE ERO Field Office,"West Texas, New Mexico",(915) 225-1901,ElPaso.Outreach@ice.dhs.gov
+2010,Harlingen Field Office,1717 Zoy Street,Harlingen,TX,78552,HLGHOLD,ICE ERO Field Office,South Texas,(956) 389-7884,Harlingen.Outreach@ice.dhs.gov
+2011,Houston Field Office,126 Northpoint Drive,Houston,TX,77060,HOUHOLD,ICE ERO Field Office,Southeast Texas,(281) 774-4816,Houston.Outreach@ice.dhs.gov
+2012,Los Angeles Field Office,"300 North Los Angeles St., Room 7631",Los Angeles,CA,90012,LOSHOLD,ICE ERO Field Office,"LA Metro (LA, Orange, Riverside, San Bernardino); Central Coast (Ventura, Santa Barbara, San Luis Obispo)",(213) 830-7911,LosAngeles.Outreach@ice.dhs.gov
+2013,Miramar Sub Office,2805 SW 145th Ave,Miramar,FL,33027,MIAHOLD,ICE ERO Field Office,"Florida, Puerto Rico, U.S. Virgin Islands",(954) 843-5800,Miami.Outreach@ice.dhs.gov
+2014,New Orleans Field Office,181 James Drive W,St. Rose,LA,70087,NOLHOLD,ICE ERO Field Office,"Alabama, Arkansas, Louisiana, Mississippi, Tennessee",NA,NewOrleans.Outreach@ice.dhs.gov
+2015,New York City Field Office,"26 Federal Plaza, 9th Floor",New York,NY,10278,NYCHOLD,ICE ERO Field Office,"Five NYC boroughs; Duchess, Nassau, Putnam, Suffolk, Sullivan, Orange, Rockland, Ulster, Westchester counties",(212) 436-9315,NewYork.Outreach@ice.dhs.gov
+2016,Newark Field Office,"970 Broad St., 11th Floor",Newark,NJ,07102,NEWHOLD,ICE ERO Field Office,New Jersey,(862) 445-9200,Newark.Outreach@ice.dhs.gov
+2017,Philadelphia Field Office,114 North 8th Street,Philadelphia,PA,19107,PHIHOLD,ICE ERO Field Office,"Delaware, Pennsylvania, West Virginia",(215) 656-7164,Philadelphia.Outreach@ice.dhs.gov
+2018,Phoenix Field Office,2035 N. Central Avenue,Phoenix,AZ,85004,PHOHOLD,ICE ERO Field Office,Arizona,(602) 257-5900,Phoenix.Outreach@ice.dhs.gov
+2019,Salt Lake City Field Office,"2975 Decker Lake Drive, Suite 100",West Valley City,UT,84119-6096,SLCHOLD,ICE ERO Field Office,"Utah, Idaho, Montana, Nevada",(801) 736-1200,SaltLakeCity.Outreach@ice.dhs.gov
+2020,San Antonio Field Office,"1777 NE Loop 410, Floor 15",San Antonio,TX,78217,SNAHOLD,ICE ERO Field Office,Central Texas,(210) 283-4750,SanAntonio.Outreach@ice.dhs.gov
+2021,San Diego Field Office,"880 Front Street, #2242",San Diego,CA,92101,NA,ICE ERO Field Office,San Diego and Imperial County,(619) 436-0410,SanDiego.Outreach@ice.dhs.gov
+2022,San Francisco Field Office,"630 Sansome Street, Rm 590",San Francisco,CA,94111,SFRHOLD,ICE ERO Field Office,"Northern California, Hawaii, Guam, Saipan",(415) 365-8800,SanFrancisco.Outreach@ice.dhs.gov
+2023,Seattle Field Office,12500 Tukwila International Boulevard,Seattle,WA,98168,SEAHOLD,ICE ERO Field Office,"Alaska, Oregon, Washington",(206) 277-2000,Seattle.Outreach@ice.dhs.gov
+2024,St Paul Field Office,"1 Federal Drive, Suite 1601",Fort Snelling,MN,55111,SPMHOLD,ICE ERO Field Office,"Iowa, Minnesota, Nebraska, North Dakota, South Dakota",(612) 409-7799,StPaul.Outreach@ice.dhs.gov
+2025,Washington Field Office,14797 Murdock Street,Chantilly,VA,20598-5216,WASHOLD,ICE ERO Field Office,District of Columbia and Virginia,(703) 633-2100,Washington.Outreach@ice.dhs.gov

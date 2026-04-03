@@ -1,0 +1,102 @@
+{| class="wikitable sortable"
+|-
+! Name !! City !! State !! Type
+|-
+| [[United States Penitentiary, Allenwood|Allenwood U.S. Penitentiary]] || White Deer Township || Pennsylvania || Prison
+|-
+| [[Arthur Kill Correctional Facility]] || Staten Island || New York || Prison
+|-
+| [[Barnstable County]] || Barnstable || Massachusetts || Prison
+|-
+| [[Beaumont Federal Correctional Complex]] || Beaumont || Texas || Prison
+|-
+| [[Federal Correctional Institution, Big Spring]] || Big Spring || Texas || Prison
+|-
+| [[Msgr. Bryan Walsh Children's Village]] || Miami || Florida || Other - shelter
+|-
+| [[Federal Correctional Complex, Butner|Butner Federal Corrections Institution]] || Butner || North Carolina || Prison
+|-
+| [[Camp Dodge]] || Johnston || Iowa || Ad hoc - facilities at Iowa National Guard
+|-
+| [[Canadian County Jail]] || El Reno || Oklahoma || Prison
+|-
+| [[Casa Padre]] || Brownsville || Texas || Other - shelter
+|-
+| [[Casa San Diego]] || El Cajon || California || Other - shelter
+|-
+| [[Children's Village|Children's Village-Dobbs Ferry]] || Dobbs Ferry || New York || Other - shelter
+|-
+| [[Children's Village|Children's Village-Queens]] || Flushing || Queens, New York || Other - shelter
+|-
+| [[Citrus County Detention Facility]] || Lecanto || Florida || Prison
+|-
+| [[Colquitt County Jail]] || Moultrie || Georgia || Prison
+|-
+| [[Columbia County Jail]] || St. Helens || Oregon || Prison
+|-
+| [[Dorado Beach Airport]] || Isla Verde || Puerto Rico || Transit Zone - Airport
+|-
+| [[Erie County Holding Center]] || Buffalo || New York || Prison
+|-
+| [[Federal Correctional Institution, Cumberland|Federal Correctional Institution - Cumberland]] || Cumberland || Maryland || Prison
+|-
+| [[Federal Medical Center, Devens|Federal Medical Center - Devens]] || Ayer || Massachusetts || Prison - hospital
+|-
+| [[Florence Federal Correctional Complex]] || Florence || Colorado || Prison
+|-
+| [[Guam Department of Corrections]] || Agana || Guam || Prison
+|-
+| [[Harris County Jail]] || Hamilton || Georgia || Prison
+|-
+| [[Hartford Correctional Center]] || Hartford || Connecticut || Prison
+|-
+| [[His House Children's Home]] || Miami Gardens || Florida || Other - shelter
+|-
+| [[Homestead Temporary Shelter for Unaccompanied Children]] || Homestead || Florida || Other - shelter
+|-
+| [[Leavenworth Detention Center]] || Leavenworth || Kansas || Prison
+|-
+| [[Federal Correctional Institution, Memphis|Federal Correctional Institution - Memphis]] || Memphis || Tennessee || Prison
+|-
+| [[Federal Detention Center, Oakdale|Oakdale Federal Detention Center]] || Oakdale || Louisiana || Prison
+|-
+| [[Orleans Parish Prison]] || New Orleans || Louisiana || Prison
+|-
+| [[Perry County Correctional Facility]] || Uniontown || Alabama || Prison
+|-
+| [[United States Penitentiary, Pollock|Pollock U.S. Penitentiary]] || Pollock || Louisiana || Prison
+|-
+| [[Ray Brook Federal Correctional Institution]] || Ray Brook || New York || Prison
+|-
+| [[Rochester Federal Medical Center]] || Rochester || Minnesota || Prison - hospital
+|-
+| [[Sacramento County Jail]] || Sacramento || California || Prison
+|-
+| [[Federal Detention Center, SeaTac|Seatac Federal Detention Center]] || Seattle || Washington || Prison
+|-
+| [[United States Medical Center for Federal Prisoners|Springfield U.S. Medical Center for Federal Prisoners]] || Springfield || Missouri || Prison - hospital
+|-
+| [[United States Penitentiary, Terre Haute|Terre Haute U.S. Penitentiary]] || Terre Haute || Indiana || Prison
+|-
+| [[Tornillo tent city]] || Tornillo || Texas || Other - shelter
+|-
+| [[Ursula (detention center)|Ursula detention center]] || McAllen || Texas || Migrant detention center
+|-
+| [[USP Marion]] || Marion || Illinois || Prison
+|-
+| [[Vermont Department of Corrections]] || Waterbury || Vermont || Prison
+|-
+| [[Virginia Beach]] || Virginia Beach || Virginia || 
+|-
+| [[Washington Field Office]] || Fairfax || Virginia || Immigration office
+|-
+| [[Wayne County Jail]] || Lyons || New York || Prison
+|-
+| [[Williamson County Jail]] || Franklin || Tennessee || Prison
+|-
+| [[Alexandria International Airport (Louisiana)|Alexandria International Airport]] ||  ||  || 
+|-
+| [[Broadview ICE Facility]] ||  ||  || 
+|-
+| [[Newark immigration detention center incident|Delaney Hall]] ||  ||  || 
+|}

@@ -1,359 +1,391 @@
-"canonical_id","canonical_name","FY19","FY20","FY21","FY22","FY23","FY24","FY25","FY26","n_years","first_seen","last_seen","trajectory","n_years_current","n_years_initial"
-352,"Stewart Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-347,"South Texas ICE Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-107,"Adelanto ICE Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-125,"Eloy Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-361,"Northwest ICE Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-317,"Port Isabel Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-201,"La Palma Correctional Center",TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,4,"FY19","FY22","closed",0,4
-210,"Central Louisiana ICE Processing Center (CLIPC)",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-362,"Tallahatchie County Correctional Facility",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-345,"South Texas Family Residential Center",TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY21","closed",0,3
-285,"Otay Mesa Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-287,"Otero County Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-246,"Montgomery ICE Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-173,"IAH Secure Adult Detention Facility (Polk)",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-170,"Houston Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-103,"Denver Contract Detention Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-296,"Pine Prairie ICE Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-177,"Irwin County Detention Center",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,3,"FY19","FY26","persistent_gaps",1,2
-184,"Joe Corley Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-121,"El Paso Service Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-127,"Delaney Hall Detention Facility",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,4,"FY19","FY26","persistent_gaps",2,2
-199,"Krome North Service Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-227,"Folkston Main IPC",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-401,"York County Prison",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-122,"El Valle Detention Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-307,"Farmville Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-306,"Prairieland Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-176,"Imperial Regional Detention Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-38,"Broward Transitional Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-316,"Rio Grande Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-40,"Buffalo (Batavia) Service Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-389,"West Texas Detention Facility",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-367,"Tornillo-Guadalupe Poe",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-180,"Jackson Parish Correctional Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-360,"T. Don Hutto Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-172,"Hudson County Correctional Center",TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY21","closed",0,3
-395,"Winn Correctional Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-192,"Karnes County Residential Center",TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY21","closed",0,3
-152,"Glades County Detention Center",TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,5,"FY19","FY26","persistent_gaps",2,3
-136,"Florence Service Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-22,"Bergen County Jail",TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY21","closed",0,3
-387,"Webb County Detention Center (CCA)",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-314,"Richwood Correctional Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-233,"Mesa Verde ICE Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-76,"Cibola County Correctional Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-208,"Laredo Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-63,"Central Arizona Florence Correctional Complex",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-185,"Johnson County Corrections Center",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-365,"Theo Lacy Facility",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-318,"River Correctional Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-339,"Sherburne County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-300,"Plymouth County Correctional Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-123,"Elizabeth Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-264,"Northeast Ohio Correctional Center",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,3,"FY19","FY26","persistent_gaps",2,1
-129,"Etowah County Jail",TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,5,"FY19","FY26","persistent_gaps",2,3
-232,"Mchenry County Correctional Facility",TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY21","closed",0,3
-140,"Folkston Annex IPC",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-55,"Caroline Detention Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-18,"Baker County Sheriff's Office",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-333,"San Luis Regional Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-9,"Alexandria Staging Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-29,"Bossier Parish Cor. Center",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-104,"Denver Contract Detention Facility (Cdf) Ii",TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY21","closed",0,3
-256,"Nevada Southern Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-137,"Florence Staging Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-164,"Henderson Detention",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-86,"Coastal Bend Detention Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-277,"Okmulgee County Jail",TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY21","closed",0,3
-325,"Rolling Plains Detention Center",TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY21","closed",0,3
-295,"Pike County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-343,"South Louisiana ICE Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-32,"Bristol County Detention Center",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-48,"Calhoun County Correctional Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-402,"Yuba County Jail",TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,4,"FY19","FY22","closed",0,4
-195,"Kenosha County Detention Center",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-308,"Pulaski County Jail",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-283,"Orange County Jail (New York)",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-397,"Worcester County Jail",TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY21","closed",0,3
-187,"Kankakee County Jail (Jerome Combs Detention Center)",TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY21","closed",0,3
-355,"Suffolk County House of Corrections",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-181,"James A. Musick Facility",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-217,"Limestone County Detention Center",TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,7,"FY19","FY26","persistent_gaps",4,3
-28,"Boone County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-111,"Dodge County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-371,"Tulsa County Jail (David L. Moss Justice Center)",TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,7,"FY19","FY26","persistent_gaps",6,1
-44,"Butler County Jail",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,4,"FY19","FY26","persistent_gaps",2,2
-205,"La Salle County Regional Detention Center",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,4,"FY19","FY26","persistent_gaps",2,2
-5,"Adams County Detention Center (Mississippi)",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-354,"Strafford County Corrections",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-379,"Wakulla County Jail",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-375,"Val Verde Correctional Facility",TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,4,"FY19","FY26","persistent_gaps",1,2
-66,"Charleston County Detention Center",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-158,"Hall County Department of Corrections",TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,7,"FY19","FY26","persistent_gaps",2,5
-241,"Monroe County Detention Center",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-60,"Catahoula Correctional Center",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-171,"Howard County Detention Center",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-117,"East Hidalgo Detention Center",TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,6,"FY19","FY26","persistent_gaps",2,4
-68,"Chase County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-323,"Robert A. Deyton Detention Facility",TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,5,"FY19","FY23","closed",0,5
-147,"Freeborn County Adult Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-350,"St. Clair County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-242,"Monroe County Detention-Dorm",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-398,"Wyatt Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-12,"Allen Parish Public Safety Complex",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-119,"Eden Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-151,"Geauga County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-82,"Clinton County Correctional Facility",TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,5,"FY19","FY23","closed",0,5
-161,"Hardin County Jail",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,4,"FY19","FY26","persistent_gaps",2,2
-247,"Morgan County Adult Detention Center",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-337,"Seneca County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-186,"Kandiyohi County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-377,"Virginia Peninsula Regional Jail",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-81,"Clay County Justice Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-229,"Marshall County Jail",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-52,"Cambria County Prison",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,3,"FY19","FY26","persistent_gaps",1,2
-146,"Frederick County Detention Center",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-14,"Anne Arundel County Ordnance Road Correctional Center",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-46,"Cache County Jail",TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY22","closed",0,1
-8,"Albany County Jail",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-34,"Brooks County Detention Center",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-248,"Morrow County Correctional Facility",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-7,"Alamance County Detention Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,7,"FY19","FY25","closed",0,7
-253,"Natchitoches Parish Detention. Center",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-144,"Franklin County House of Correction",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-363,"Teller County Jail",TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY21","closed",0,3
-301,"Polk County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-72,"Chippewa County SSM",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-368,"Torrance County Detention Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-116,"Douglas County Department of Corrections",TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY21","closed",0,3
-168,"Honolulu Federal Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-100,"Dekalb County Detention Center",TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY21","closed",0,3
-24,"Berks County Residential Center1",TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY22","closed",0,2
-209,"Lasalle Correctional Center Olla",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-265,"Northern Oregon Correctional Facility",TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY22","closed",0,1
-47,"Caldwell County Detention Center",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-194,"Kay County Justice Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-245,"Montgomery County Jail",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-56,"Carver County Jail",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-59,"Cass County Jail",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,3,"FY19","FY26","persistent_gaps",2,1
-75,"Christian County Jail",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-385,"Washoe County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-298,"Platte County Detention Center",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-42,"Burnet County Jail",TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY21","closed",0,1
-62,"Cbp San Ysidro Poe",TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY21","closed",0,1
-88,"Collier County Naples Jail Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-220,"Linn County Jail",TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,6,"FY19","FY26","persistent_gaps",2,4
-105,"Department of Corrections Hagatna",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-273,"Nye County Detention Center (Nevada)",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,6,"FY19","FY24","closed",0,6
-292,"Phelps County Jail (Nebraska)",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-327,"Saint Tammany Parish Jail",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-304,"Pottawattamie County Jail",TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,7,"FY19","FY26","persistent_gaps",6,1
-21,"Bedford Municipal Detention Center",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-95,"Dallas County Jail - Lew Sterrett Justice Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-130,"Euless City Jail",TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY21","closed",0,3
-338,"Shawnee County Department of Corrections",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-43,"Butler County Jail",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-85,"Clinton County Jail",TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,7,"FY19","FY26","persistent_gaps",3,4
-96,"Davidson County Sheriff",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-124,"Elmore County Jail",TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,5,"FY19","FY26","persistent_gaps",2,2
-182,"Jefferson County Jail",TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,4,"FY19","FY26","persistent_gaps",2,1
-218,"Lincoln County Detention Center",TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY22","closed",0,1
-154,"Grand Forks County Correctional Facility",TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,4,"FY19","FY26","persistent_gaps",2,1
-341,"South Central Regional Jail",TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,7,"FY19","FY26","persistent_gaps",5,2
-297,"Pinellas County Jail",TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,7,"FY19","FY26","persistent_gaps",6,1
-225,"Madison County Jail",TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,6,"FY19","FY26","persistent_gaps",2,2
-202,"La Paz County Adult Detention Facility",TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,3,"FY19","FY25","closed",0,1
-399,"Yakima County Department of Corrections",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-19,"Baldwin County Correctional Center",TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,4,"FY19","FY26","persistent_gaps",1,1
-20,"Beaver County Jail",TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY22","closed",0,1
-77,"Cibola County Detention Center",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-69,"Chautauqua County Jail",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-91,"Cowlitz County Juvenile",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-94,"Dakota County Jail",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,4,"FY19","FY26","persistent_gaps",2,2
-157,"Guaynabo MDC (San Juan)",TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,5,"FY19","FY24","closed",0,4
-198,"Knox County Detention Facility",TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,6,"FY19","FY26","persistent_gaps",5,1
-239,"Minicassia Detention Center",TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,4,"FY19","FY26","persistent_gaps",1,2
-214,"Lehigh County Jail (Pennsylvania)",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-216,"Lexington County Jail",TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,7,"FY19","FY26","persistent_gaps",4,3
-102,"Delaware County Jail (George W. Hill)",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-384,"Washington County Jail (Purgatory Correctional Facility)",TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,5,"FY19","FY26","persistent_gaps",2,2
-391,"Western Tennessee Detention Facility",TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,3,"FY19","FY26","persistent_gaps",1,1
-134,"Fayette County Detention Center",TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,6,"FY19","FY26","persistent_gaps",3,1
-282,"Orange County Jail (Florida)",TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,5,"FY19","FY26","persistent_gaps",3,1
-312,"Rensselaer County Correctional Facility",TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY21","closed",0,3
-87,"Cobb County Jail",TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,3,"FY19","FY23","closed",0,2
-382,"Washington County Detention Center",TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,6,"FY19","FY26","persistent_gaps",3,2
-332,"San Juan Staging",TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,5,"FY19","FY26","persistent_gaps",4,1
-279,"Oldham County Jail",TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,3,"FY19","FY23","closed",0,1
-259,"Nobles County Jail",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-243,"Montgomery City Jail",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-310,"Randall County Jail",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-58,"Cascade County Jail, Montana",TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,4,"FY19","FY26","persistent_gaps",1,1
-149,"Garvin County Detention Center",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-321,"Roanoke City Jail",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,2,"FY19","FY26","persistent_gaps",1,1
-266,"Northern Oregon Juvenile Detention",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-222,"Lonoke Police Department",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-353,"Story County Jail",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-393,"Whitfield County Jail",TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY22","closed",0,1
-197,"Kittitas County Jail",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-378,"Wake County Sheriff Department",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-61,"Cbp Chula Vista Bps",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-257,"New Hanover County Jail",TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,5,"FY19","FY26","persistent_gaps",1,2
-311,"Red Roof Inn",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-3,"Abraxas Academy Detention Center",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-143,"Forsyth County Jail",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-400,"Yankton County Jail",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","closed",0,2
-179,"Jack Harwell Detention Center",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-93,"Cumberland County Jail",TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,7,"FY19","FY26","persistent_gaps",5,2
-65,"Central Texas Detention Facility",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","closed",0,1
-70,"Chavez Detention Center",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,2,"FY19","FY26","persistent_gaps",1,1
-328,"Saipan Department of Corrections (Susupe)",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","continuous",8,8
-27,"Bluebonnet Detention Center",FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,7,"FY20","FY26","new",7,0
-153,"Golden State Annex",FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,7,"FY20","FY26","new",7,0
-228,"Marion County Jail",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,3,"FY20","FY26","new",2,0
-357,"Sunny Glen Cld Home Ndr Center",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY20","FY20","transient",0,0
-330,"Salt Lake County Metro Jail",FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,5,"FY20","FY25","transient",0,0
-160,"Hancock County Public Safety Complex",FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,7,"FY20","FY26","new",7,0
-299,"Platte County Jail",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY20","FY20","transient",0,0
-11,"Allen County Jail",FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY20","FY21","transient",0,0
-276,"Ogle County Jail",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY20","FY20","transient",0,0
-162,"Henderson County Jail",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY20","FY20","transient",0,0
-293,"Pickens County Detention Center",FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,7,"FY20","FY26","new",7,0
-126,"Erie County Jail",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,3,"FY20","FY26","new",2,0
-315,"Rio Grande County Jail",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY20","FY20","transient",0,0
-166,"Holiday Inn Exp San Antonio",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY20","FY20","transient",0,0
-190,"Karnes County Correctional Center",FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,4,"FY20","FY26","new",1,0
-329,"Saline County Jail",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY20","FY20","transient",0,0
-364,"Tex Health Huguley Hosp",FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY20","FY21","transient",0,0
-167,"Holiday Inn Express-Casa De La Luz",FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY21","FY21","transient",0,0
-204,"La Quinta-Wyndham-Casa De Paz",FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY21","FY21","transient",0,0
-356,"Suites On Scottsdale-Casa De Alegría",FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY21","FY21","transient",0,0
-26,"Best Western-Casa De Estrella",FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY21","FY21","transient",0,0
-89,"Comfort Suites-Casa Consuelo",FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY21","FY21","transient",0,0
-394,"Wingate-Wyndham Casa Esperanza",FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY21","FY21","transient",0,0
-113,"Dorchester County Detention Center",FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY21","FY21","transient",0,0
-118,"East Mesa Detention Facility",FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY21","FY21","transient",0,0
-203,"La Quinta Inn By Wyndham Sna",FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY21","FY21","transient",0,0
-319,"Riverside County Sheriff",FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY21","FY21","transient",0,0
-31,"Bradford County Jail",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,1,"FY22","FY22","transient",0,0
-45,"Cabarrus County Jail",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,1,"FY22","FY22","transient",0,0
-155,"Grayson County Jail",FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,4,"FY22","FY26","new",3,0
-193,"Karnes County Immigration Processing Center",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,5,"FY22","FY26","new",5,0
-215,"Levy County Jail",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,1,"FY22","FY22","transient",0,0
-237,"Midland County Detention Center",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,1,"FY22","FY22","transient",0,0
-250,"Moshannon Valley Processing Center",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,5,"FY22","FY26","new",5,0
-370,"Dilley Immigration Processing Center",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,4,"FY22","FY26","new",2,0
-369,"Trusted Adult Karnes Fsc",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,1,"FY22","FY22","transient",0,0
-408,NA,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,2,"FY22","FY23","transient",0,0
-403,"[1] (Bcorcpa) Berks County Residential Center Houses Single Adults And No Longer House Family Units As of 11/27/21.",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,1,"FY22","FY22","transient",0,0
-406,"[2] (Krnrctx) Karnes County Residential Center Houses Single Adults And No Longer House Family Units As of 11/10/21.",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,1,"FY22","FY22","transient",0,0
-407,"[3] (Stfrctx) South Texas Family Residential Center Houses Single Adults And No Longer House Family Units As of 12/11/21.",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,1,"FY22","FY22","transient",0,0
-2,"*The Info. In This Report Is Subject To Change",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,1,"FY22","FY22","transient",0,0
-271,"Northwest State Correctional Center",FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,4,"FY23","FY26","new",4,0
-289,"Pennington County Jail (South Dakota)",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,3,"FY23","FY26","new",2,0
-139,"Floyd County Jail",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,3,"FY23","FY26","new",2,0
-150,"Gaston County Jail",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,1,"FY23","FY23","transient",0,0
-286,"Otero County Detention",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,1,"FY23","FY23","transient",0,0
-114,"Dorchester County Detention Center",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,1,"FY23","FY23","transient",0,0
-404,"[1] (Stfrctx) South Texas Family Residential Center Houses Single Adults And No Longer House Family Units As of 12/11/21.",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,1,"FY23","FY23","transient",0,0
-405,"[2] (Krnrctx) Karnes County Immigration Processing Center Houses Single Adults And No Longer House Family Units As of 11/10/21.",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,1,"FY23","FY23","transient",0,0
-1,"(*) Denotes No Inspection Completed As of The Date of The Report",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,1,"FY23","FY23","transient",0,0
-275,"Odo Inspections Are Conducted On A Semi-Annual Basis. The Reportable Inspections Are Listed.",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,1,"FY23","FY23","transient",0,0
-274,"Odo Inspection End Date Is The Date The Final Report Was Issued.",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,1,"FY23","FY23","transient",0,0
-83,"Clinton County Correctional Facility",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,3,"FY24","FY26","new",3,0
-322,"Robert A. Deyton Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,3,"FY24","FY26","new",3,0
-336,"Sebastian County Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,3,"FY24","FY26","new",3,0
-131,"FCI Atlanta",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-141,"Folkston ICE Processing Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-10,"Allegany County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-25,"Berlin Federal. Correctional. Institution.",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-30,"Bourbon County Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,1,"FY25","FY25","transient",0,0
-33,"Brooklyn MDC",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-36,"Broome County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-54,"Campbell County Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-73,"Chittenden Regional Correctional Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-79,"Clark County Jail (Indiana)",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-84,"Clinton County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-90,"Correctional. Center of Northwest Ohio",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-132,"FDC Philadelphia",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-156,"Greene County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-169,"Hopkins County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-196,"Kenton County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-211,"Laurel County Correctional Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-213,"Leavenworth US Penitentiary",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-226,"Mahoning County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-221,"Logan County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-224,"Lubbock County Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-78,"Cimmarron Correctional Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-254,"Natrona County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-358,"Sweetwater County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-244,"Montgomery County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,1,"FY25","FY25","transient",0,0
-252,"Nassau County Correctional Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-258,"Niagara County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-262,"North Lake Correctional Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-267,"Northern Regional Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-278,"Oldham County Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-288,"Ozark County Sheriff's Office",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-110,"Camp East Montana",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-376,"Victoria County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-235,"Miami Federal Detention",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-178,"JTF Camp Six",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-206,"Lake County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-380,"Walton County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-291,"Phelps County Jail (Missouri)",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-223,"Louisiana ICE Processing",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-238,"Miller County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-255,"Nelson Coleman Correction",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-309,"Putnam County Sheriff",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-335,"Sauk County Sheriff",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-351,"Ste. Genevieve County Sheriff/Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-373,"Two Bridges Regional Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-386,"Waukesha County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-50,"California City Immigration Processing Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-366,"Tooele County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-374,"Uinta County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-41,"Burleigh County",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-115,"Douglas County",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-219,"Lincoln County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-240,"Minnehaha County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-251,"Muscatine County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-270,"Northwest Regional Corrections Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-334,"Sarpy County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-381,"Ward County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-396,"Woodbury County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-324,"Rockingham County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-320,"Riverside Regional Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
-392,"Western Virginia Regional Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,1,"FY25","FY25","transient",0,0
-13,"Anchorage Correctional Complex",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-16,"Baker Correctional Institution",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-37,"Broward County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-74,"Christian County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-92,"Crow Wing County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-98,"Daviess County Detention",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-99,"Davis County",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-108,"Diamondback Correctional Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-112,"Dona Ana County Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-97,"Daviess County Detention",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-120,"El Paso County Detention Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-135,"Finney County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-138,"Florida Soft-Sided Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-145,"Franklin County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-148,"Fulton County Jail Indiana",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-165,"Hillsborough County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-188,"Kansas City Holdroom",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-207,"Laramie County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-212,"Lawrence County",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-230,"Martin County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-231,"Mccook Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-234,"Miami Correctional Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-236,"Miami Staging Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-260,"North Central Regional Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-331,"San Diego District Staging",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-340,"Sioux County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-348,"Southern Regional",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-349,"Southwestern Regional Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-372,"Turner Guilford Knight (TGK) Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-388,"Weber County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
-390,"Western Regional Jail And Correctional Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+"canonical_id","canonical_name","FY10","FY11","FY12","FY13","FY14","FY15","FY16","FY17","FY19","FY20","FY21","FY22","FY23","FY24","FY25","FY26","n_years","first_seen","last_seen","trajectory","n_years_current","n_years_initial"
+6,"Albany County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,9,"FY10","FY19","closed",0,9
+8,"Allegany County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,10,"FY10","FY26","persistent_gaps",2,8
+11,"Anchorage Correctional Complex",TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,4,"FY10","FY26","persistent_gaps",1,3
+16,"Baker County Sheriff's Office",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+19,"Bedford Municipal Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,10,"FY10","FY20","closed",0,10
+20,"Bergen County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,11,"FY10","FY21","closed",0,11
+26,"Boone County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+30,"Bristol County Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,10,"FY10","FY20","closed",0,10
+36,"Broward Transitional Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+38,"Buffalo (Batavia) Service Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+41,"Butler County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,9,"FY10","FY19","closed",0,9
+42,"Butler County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,12,"FY10","FY26","persistent_gaps",2,10
+43,"Cabarrus County Jail",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,3,"FY10","FY22","closed",0,2
+45,"Caldwell County Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,9,"FY10","FY19","closed",0,9
+46,"Calhoun County Correctional Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+50,"Cambria County Prison",TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,10,"FY10","FY26","persistent_gaps",1,5
+54,"Carver County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,10,"FY10","FY20","closed",0,10
+56,"Cascade County Jail, Montana",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,12,"FY10","FY26","persistent_gaps",1,9
+57,"Cass County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,11,"FY10","FY26","persistent_gaps",2,9
+61,"Central Arizona Florence Correctional Complex",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+63,"Central Texas Detention Facility",TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,6,"FY10","FY19","closed",0,5
+64,"Charleston County Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,10,"FY10","FY20","closed",0,10
+66,"Chase County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+67,"Chautauqua County Jail",TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,9,"FY10","FY20","closed",0,1
+70,"Chippewa County SSM",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+73,"Christian County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,10,"FY10","FY20","closed",0,10
+80,"Clinton County Correctional Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,13,"FY10","FY23","closed",0,13
+83,"Clinton County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,15,"FY10","FY26","persistent_gaps",3,12
+85,"Cobb County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,11,"FY10","FY23","closed",0,10
+86,"Collier County Naples Jail Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+91,"Cumberland County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,15,"FY10","FY26","persistent_gaps",5,10
+92,"Dakota County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,11,"FY10","FY26","persistent_gaps",2,5
+94,"Davidson County Sheriff",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,9,"FY10","FY19","closed",0,9
+98,"Dekalb County Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,11,"FY10","FY21","closed",0,11
+101,"Denver Contract Detention Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+109,"Dodge County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+114,"Douglas County Department of Corrections",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,11,"FY10","FY21","closed",0,11
+119,"El Paso Service Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+121,"Elizabeth Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+122,"Elmore County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,13,"FY10","FY26","persistent_gaps",2,10
+123,"Eloy Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+124,"Erie County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,11,"FY10","FY26","persistent_gaps",2,8
+125,"Delaney Hall Detention Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,12,"FY10","FY26","persistent_gaps",2,10
+127,"Etowah County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,13,"FY10","FY26","persistent_gaps",2,11
+128,"Euless City Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,11,"FY10","FY21","closed",0,11
+134,"Florence Service Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+142,"Franklin County House of Correction",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,10,"FY10","FY20","closed",0,10
+144,"Frederick County Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,9,"FY10","FY19","closed",0,9
+145,"Freeborn County Adult Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+147,"Garvin County Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,9,"FY10","FY20","closed",0,7
+148,"Gaston County Jail",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,3,"FY10","FY23","closed",0,2
+150,"Glades County Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,13,"FY10","FY26","persistent_gaps",2,11
+152,"Grand Forks County Correctional Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,12,"FY10","FY26","persistent_gaps",2,9
+156,"Hall County Department of Corrections",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,15,"FY10","FY26","persistent_gaps",2,13
+159,"Hardin County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,12,"FY10","FY26","persistent_gaps",2,10
+168,"Houston Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+169,"Howard County Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,10,"FY10","FY20","closed",0,10
+170,"Hudson County Correctional Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,11,"FY10","FY21","closed",0,11
+171,"IAH Secure Adult Detention Facility (Polk)",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+180,"Jefferson County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,12,"FY10","FY26","persistent_gaps",2,9
+182,"Joe Corley Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+183,"Johnson County Corrections Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,10,"FY10","FY20","closed",0,10
+188,"Karnes County Correctional Center",TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,11,"FY10","FY26","persistent_gaps",1,5
+193,"Kenosha County Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,9,"FY10","FY19","closed",0,9
+197,"Krome North Service Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+206,"Laredo Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+208,"Central Louisiana ICE Processing Center (CLIPC)",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+216,"Lincoln County Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,10,"FY10","FY22","closed",0,9
+218,"Linn County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,14,"FY10","FY26","persistent_gaps",2,12
+220,"Lonoke Police Department",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,10,"FY10","FY20","closed",0,10
+222,"Lubbock County Detention Center",TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,8,"FY10","FY26","persistent_gaps",2,2
+226,"Marion County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,11,"FY10","FY26","persistent_gaps",2,8
+230,"Mchenry County Correctional Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,11,"FY10","FY21","closed",0,11
+236,"Miller County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,9,"FY10","FY26","persistent_gaps",2,5
+237,"Minicassia Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,12,"FY10","FY26","persistent_gaps",1,10
+239,"Monroe County Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,9,"FY10","FY19","closed",0,9
+243,"Montgomery County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,10,"FY10","FY20","closed",0,10
+245,"Morgan County Adult Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,10,"FY10","FY20","closed",0,10
+246,"Morrow County Correctional Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,10,"FY10","FY20","closed",0,10
+252,"Natrona County Jail",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,4,"FY10","FY26","persistent_gaps",2,2
+257,"Nobles County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,9,"FY10","FY19","closed",0,9
+263,"Northern Oregon Correctional Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,10,"FY10","FY22","closed",0,9
+278,"Orange County Jail (Florida)",TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,12,"FY10","FY26","persistent_gaps",3,4
+279,"Orange County Jail (New York)",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+281,"Otay Mesa Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+283,"Otero County Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+285,"Pennington County Jail (South Dakota)",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,4,"FY10","FY26","persistent_gaps",2,1
+288,"Phelps County Jail (Nebraska)",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+291,"Pike County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+293,"Pinellas County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,13,"FY10","FY26","persistent_gaps",6,5
+294,"Platte County Detention Center",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,5,"FY10","FY20","closed",0,1
+295,"Platte County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,7,"FY10","FY20","closed",0,6
+296,"Plymouth County Correctional Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+297,"Polk County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+300,"Pottawattamie County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,15,"FY10","FY26","persistent_gaps",6,9
+303,"Farmville Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+304,"Pulaski County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,10,"FY10","FY20","closed",0,10
+306,"Randall County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,10,"FY10","FY20","closed",0,10
+313,"Port Isabel Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+321,"Rolling Plains Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,11,"FY10","FY21","closed",0,11
+332,"Sebastian County Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,11,"FY10","FY26","persistent_gaps",3,8
+333,"Seneca County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+334,"Shawnee County Department of Corrections",TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,8,"FY10","FY19","closed",0,5
+335,"Sherburne County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+337,"South Central Regional Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,15,"FY10","FY26","persistent_gaps",5,10
+339,"South Louisiana ICE Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,14,"FY10","FY26","persistent_gaps",8,6
+343,"South Texas ICE Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+346,"St. Clair County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+348,"Stewart Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+350,"Strafford County Corrections",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+351,"Suffolk County House of Corrections",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,9,"FY10","FY19","closed",0,9
+354,"Sweetwater County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,7,"FY10","FY26","persistent_gaps",2,5
+357,"Northwest ICE Processing Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+359,"Teller County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,10,"FY10","FY21","closed",0,7
+364,"Torrance County Detention Facility",TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,12,"FY10","FY26","persistent_gaps",10,1
+367,"Tulsa County Jail (David L. Moss Justice Center)",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,15,"FY10","FY26","persistent_gaps",6,9
+371,"Val Verde Correctional Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,12,"FY10","FY26","persistent_gaps",1,10
+374,"Wake County Sheriff Department",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,9,"FY10","FY19","closed",0,9
+375,"Wakulla County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,10,"FY10","FY20","closed",0,10
+380,"Washington County Jail (Purgatory Correctional Facility)",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,13,"FY10","FY26","persistent_gaps",2,10
+381,"Washoe County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,16,"FY10","FY26","continuous",16,16
+385,"West Texas Detention Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,9,"FY10","FY19","closed",0,9
+387,"Western Tennessee Detention Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,11,"FY10","FY26","persistent_gaps",1,9
+393,"Worcester County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,11,"FY10","FY21","closed",0,11
+395,"Yakima County Department of Corrections",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,9,"FY10","FY19","closed",0,9
+397,"York County Prison",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,10,"FY10","FY20","closed",0,10
+398,"Yuba County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,12,"FY10","FY22","closed",0,12
+1001,"Atlanta City Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,8,"FY10","FY17","closed",0,8
+1003,"Contra Costa County Jail West",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,8,"FY10","FY17","closed",0,8
+1005,"Otero County Prison Facility",TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,6,"FY10","FY17","closed",0,5
+1006,"York County Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,8,"FY10","FY17","closed",0,8
+1008,"Ramsey County Adult Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,8,"FY10","FY17","closed",0,8
+1009,"Dearborn Police Department",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,8,"FY10","FY17","closed",0,8
+1010,"Wayne County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,8,"FY10","FY17","closed",0,8
+1011,"Hall County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,8,"FY10","FY17","closed",0,8
+1012,"Mecklenburg County Detention Center North",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,8,"FY10","FY17","closed",0,8
+1014,"Josephine County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,8,"FY10","FY17","closed",0,8
+1015,"Rock Island County Correctional Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,8,"FY10","FY17","closed",0,8
+1016,"El Paso County Criminal Justice Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,8,"FY10","FY17","closed",0,8
+1017,"Elgin Police Department",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,8,"FY10","FY17","closed",0,8
+1018,"Moffat County Jail",TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,4,"FY10","FY13","closed",0,4
+1021,"Glendale Police Department",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY10","FY11","closed",0,2
+1023,"Yavapai County Detention Center",TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,4,"FY10","FY13","closed",0,4
+1024,"Dale G. Haile Detention Center",TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY10","FY13","closed",0,2
+1028,"Norfolk County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,6,"FY10","FY15","closed",0,6
+1032,"Alhambra City Jail",TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,5,"FY10","FY14","closed",0,5
+1033,"Allegheny County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,5,"FY10","FY14","closed",0,5
+1035,"Bedford Heights City Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,6,"FY10","FY15","closed",0,6
+1036,"Coconino County Detention Facility",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY10","FY10","closed",0,1
+1037,"Eastern Regional Jail",TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,5,"FY10","FY14","closed",0,5
+1038,"La Plata County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,6,"FY10","FY15","closed",0,6
+1040,"Mississippi County Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,6,"FY10","FY15","closed",0,6
+1041,"Montgomery County Correctional Facility",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,6,"FY10","FY15","closed",0,6
+1043,"Navajo County Sheriff",TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,4,"FY10","FY13","closed",0,4
+1044,"Ontario County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,6,"FY10","FY15","closed",0,6
+1046,"Pomona City Jail",TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,5,"FY10","FY14","closed",0,5
+1047,"Pueblo County Jail",TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,4,"FY10","FY13","closed",0,4
+1048,"Rice County Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,5,"FY10","FY14","closed",0,5
+1050,"San Bernardino County Jail",TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,4,"FY10","FY13","closed",0,4
+1051,"Santa Ana City Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,6,"FY10","FY15","closed",0,6
+1052,"Tensas Parish Detention Center",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,6,"FY10","FY15","closed",0,6
+1053,"Utah County Jail",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,6,"FY10","FY15","closed",0,6
+17,"Baldwin County Correctional Center",FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,11,"FY11","FY26","new",1,0
+105,"Adelanto ICE Processing Center",FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,15,"FY11","FY26","new",15,0
+149,"Geauga County Jail",FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,15,"FY11","FY26","new",15,0
+153,"Grayson County Jail",FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,11,"FY11","FY26","new",3,0
+162,"Henderson Detention",FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,15,"FY11","FY26","new",15,0
+175,"Irwin County Detention Center",FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,10,"FY11","FY26","new",1,0
+177,"Jack Harwell Detention Center",FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,6,"FY11","FY19","transient",0,0
+179,"James A. Musick Facility",FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,8,"FY11","FY19","transient",0,0
+203,"La Salle County Regional Detention Center",FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,11,"FY11","FY26","new",2,0
+214,"Lexington County Jail",FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,14,"FY11","FY26","new",4,0
+227,"Marshall County Jail",FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,8,"FY11","FY19","transient",0,0
+241,"Montgomery City Jail",FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,8,"FY11","FY19","transient",0,0
+317,"Roanoke City Jail",FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,7,"FY11","FY26","new",1,0
+361,"Theo Lacy Facility",FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,8,"FY11","FY19","transient",0,0
+389,"Whitfield County Jail",FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,9,"FY11","FY22","transient",0,0
+1019,"Orange County Intake Release Facility",FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY11","FY12","transient",0,0
+32,"Brooks County Detention Center",FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,7,"FY12","FY19","transient",0,0
+84,"Coastal Bend Detention Facility",FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,13,"FY12","FY26","new",9,0
+115,"East Hidalgo Detention Center",FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,12,"FY12","FY26","new",2,0
+269,"Northwest State Correctional Center",FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,6,"FY12","FY26","new",4,0
+323,"Saint Tammany Parish Jail",FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,7,"FY12","FY19","transient",0,0
+1025,"Sangamon County Jail",FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY12","FY14","transient",0,0
+1034,"Apache County Jail",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY12","FY13","transient",0,0
+79,"Clay County Justice Center",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,13,"FY13","FY26","new",13,0
+141,"Forsyth County Jail",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,6,"FY13","FY19","transient",0,0
+255,"New Hanover County Jail",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,8,"FY13","FY26","new",1,0
+329,"San Luis Regional Detention Center",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,13,"FY13","FY26","new",13,0
+40,"Burnet County Jail",FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,6,"FY14","FY21","transient",0,0
+174,"Imperial Regional Detention Facility",FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,12,"FY14","FY26","new",12,0
+200,"La Paz County Adult Detention Facility",FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,5,"FY14","FY25","transient",0,0
+240,"Monroe County Detention-Dorm",FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,12,"FY14","FY26","new",12,0
+312,"Rio Grande Detention Center",FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,12,"FY14","FY26","new",12,0
+373,"Virginia Peninsula Regional Jail",FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,5,"FY14","FY19","transient",0,0
+1004,"Rio Cosumnes Correctional. Center",FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,4,"FY14","FY17","transient",0,0
+1007,"Willacy County Regional Detention Facility",FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,4,"FY14","FY17","transient",0,0
+1020,"Kent County Jail",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY14","FY14","transient",0,0
+231,"Mesa Verde ICE Processing Center",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,11,"FY15","FY26","new",11,0
+275,"Oldham County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,6,"FY15","FY23","transient",0,0
+1013,"Alexandria City Jail",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY15","FY17","transient",0,0
+10,"Allen Parish Public Safety Complex",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,10,"FY16","FY26","new",10,0
+100,"Delaware County Jail (George W. Hill)",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY16","FY19","transient",0,0
+132,"Fayette County Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,8,"FY16","FY26","new",3,0
+254,"Nevada Southern Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,10,"FY16","FY26","new",10,0
+292,"Pine Prairie ICE Processing Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,10,"FY16","FY26","new",10,0
+74,"Cibola County Correctional Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,9,"FY17","FY26","new",9,0
+185,"Kankakee County Jail (Jerome Combs Detention Center)",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,4,"FY17","FY21","transient",0,0
+262,"Northeast Ohio Correctional Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,4,"FY17","FY26","new",2,0
+302,"Prairieland Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,9,"FY17","FY26","new",9,0
+383,"Webb County Detention Center (CCA)",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,9,"FY17","FY26","new",9,0
+1002,"Folkston ICE Processing Center (D. Ray James)",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY17","FY17","transient",0,0
+199,"La Palma Correctional Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,4,"FY19","FY22","transient",0,0
+358,"Tallahatchie County Correctional Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","transient",0,0
+341,"South Texas Family Residential Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY21","transient",0,0
+244,"Montgomery ICE Processing Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+225,"Folkston Main IPC",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+120,"El Valle Detention Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+363,"Tornillo-Guadalupe POE",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","transient",0,0
+178,"Jackson Parish Correctional Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+356,"T. Don Hutto Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+391,"Winn Correctional Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+190,"Karnes County Residential Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY21","transient",0,0
+310,"Richwood Correctional Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+314,"River Correctional Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+138,"Folkston Annex IPC",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+53,"Caroline Detention Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+7,"Alexandria Staging Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+27,"Bossier Parish Cor. Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","transient",0,0
+102,"Denver Contract Detention Facility (Cdf) Ii",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY21","transient",0,0
+135,"Florence Staging Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+273,"Okmulgee County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY21","transient",0,0
+215,"Limestone County Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,7,"FY19","FY26","new",4,0
+3,"Adams County Detention Center (Mississippi)",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+58,"Catahoula Correctional Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","transient",0,0
+318,"Robert A. Deyton Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+394,"Wyatt Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+117,"Eden Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+184,"Kandiyohi County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+12,"Anne Arundel County Ordnance Road Correctional Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","transient",0,0
+44,"Cache County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY22","transient",0,0
+5,"Alamance County Detention Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,7,"FY19","FY25","transient",0,0
+251,"Natchitoches Parish Detention. Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","transient",0,0
+166,"Honolulu Federal Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+22,"Berks County Residential Center1",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY22","transient",0,0
+207,"Lasalle Correctional Center Olla",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","transient",0,0
+192,"Kay County Justice Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+60,"CBP San Ysidro POE",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY21","transient",0,0
+103,"Department of Corrections Hagatna",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+271,"Nye County Detention Center (Nevada)",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,6,"FY19","FY24","transient",0,0
+93,"Dallas County Jail - Lew Sterrett Justice Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+223,"Madison County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,6,"FY19","FY26","new",2,0
+18,"Beaver County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY22","transient",0,0
+75,"Cibola County Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","transient",0,0
+89,"Cowlitz County Juvenile",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","transient",0,0
+155,"Guaynabo MDC (San Juan)",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,5,"FY19","FY24","transient",0,0
+196,"Knox County Detention Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,6,"FY19","FY26","new",5,0
+212,"Lehigh County Jail (Pennsylvania)",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","transient",0,0
+308,"Rensselaer County Correctional Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,3,"FY19","FY21","transient",0,0
+378,"Washington County Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,6,"FY19","FY26","new",3,0
+328,"San Juan Staging",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,5,"FY19","FY26","new",4,0
+264,"Northern Oregon Juvenile Detention",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","transient",0,0
+349,"Story County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","transient",0,0
+195,"Kittitas County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","transient",0,0
+59,"CBP Chula Vista BPS",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","transient",0,0
+307,"Red Roof Inn",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","transient",0,0
+1,"Abraxas Academy Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY19","FY19","transient",0,0
+396,"Yankton County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY19","FY20","transient",0,0
+68,"Chavez Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,2,"FY19","FY26","new",1,0
+324,"Saipan Department of Corrections (Susupe)",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,8,"FY19","FY26","new",8,0
+25,"Bluebonnet Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,7,"FY20","FY26","new",7,0
+151,"Golden State Annex",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,7,"FY20","FY26","new",7,0
+353,"Sunny Glen Cld Home NDR Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY20","FY20","transient",0,0
+326,"Salt Lake County Metro Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,5,"FY20","FY25","transient",0,0
+158,"Hancock County Public Safety Complex",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,7,"FY20","FY26","new",7,0
+9,"Allen County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY20","FY21","transient",0,0
+272,"Ogle County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY20","FY20","transient",0,0
+160,"Henderson County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY20","FY20","transient",0,0
+289,"Pickens County Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,7,"FY20","FY26","new",7,0
+311,"Rio Grande County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY20","FY20","transient",0,0
+164,"Holiday Inn Exp San Antonio",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY20","FY20","transient",0,0
+325,"Saline County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY20","FY20","transient",0,0
+360,"Texas Health Huguley Hospital",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,2,"FY20","FY21","transient",0,0
+165,"Holiday Inn Express-Casa De La Luz",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY21","FY21","transient",0,0
+202,"La Quinta-Wyndham-Casa De Paz",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY21","FY21","transient",0,0
+352,"Suites On Scottsdale-Casa De Alegría",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY21","FY21","transient",0,0
+24,"Best Western-Casa De Estrella",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY21","FY21","transient",0,0
+87,"Comfort Suites-Casa Consuelo",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY21","FY21","transient",0,0
+390,"Wingate-Wyndham Casa Esperanza",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY21","FY21","transient",0,0
+111,"Dorchester County Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY21","FY21","transient",0,0
+116,"East Mesa Detention Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY21","FY21","transient",0,0
+201,"La Quinta Inn By Wyndham SNA",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY21","FY21","transient",0,0
+315,"Riverside County Sheriff",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,1,"FY21","FY21","transient",0,0
+29,"Bradford County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,1,"FY22","FY22","transient",0,0
+191,"Karnes County Immigration Processing Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,5,"FY22","FY26","new",5,0
+213,"Levy County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,1,"FY22","FY22","transient",0,0
+235,"Midland County Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,1,"FY22","FY22","transient",0,0
+248,"Moshannon Valley Processing Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,5,"FY22","FY26","new",5,0
+366,"Dilley Immigration Processing Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,4,"FY22","FY26","new",2,0
+365,"Trusted Adult Karnes FSC",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,1,"FY22","FY22","transient",0,0
+137,"Floyd County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,3,"FY23","FY26","new",2,0
+282,"Otero County Detention",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,1,"FY23","FY23","transient",0,0
+112,"Dorchester County Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,1,"FY23","FY23","transient",0,0
+81,"Clinton County Correctional Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,3,"FY24","FY26","new",3,0
+129,"FCI Atlanta",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+139,"Folkston ICE Processing Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+23,"Berlin Federal Correctional Institution",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+28,"Bourbon County Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,1,"FY25","FY25","transient",0,0
+31,"Brooklyn MDC",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+34,"Broome County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+52,"Campbell County Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+71,"Chittenden Regional Correctional Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+77,"Clark County Jail (Indiana)",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+82,"Clinton County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+88,"Correctional. Center of Northwest Ohio",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+130,"FDC Philadelphia",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+154,"Greene County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+167,"Hopkins County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+194,"Kenton County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+209,"Laurel County Correctional Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+211,"Leavenworth US Penitentiary",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+224,"Mahoning County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+219,"Logan County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+76,"Cimmarron Correctional Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+242,"Montgomery County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,1,"FY25","FY25","transient",0,0
+250,"Nassau County Correctional Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+256,"Niagara County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+260,"North Lake Correctional Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+265,"Northern Regional Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+274,"Oldham County Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+284,"Ozark County Sheriff's Office",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+108,"Camp East Montana",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+372,"Victoria County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+233,"Miami Federal Detention",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+176,"JTF Camp Six",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+204,"Lake County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+376,"Walton County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+287,"Phelps County Jail (Missouri)",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+221,"Louisiana ICE Processing",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+253,"Nelson Coleman Correction",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+305,"Putnam County Sheriff",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+331,"Sauk County Sheriff",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+347,"Ste. Genevieve County Sheriff/Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+369,"Two Bridges Regional Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+382,"Waukesha County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+48,"California City Immigration Processing Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+362,"Tooele County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+370,"Uinta County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+39,"Burleigh County Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+113,"Douglas County",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+217,"Lincoln County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+238,"Minnehaha County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+249,"Muscatine County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+268,"Northwest Regional Corrections Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+330,"Sarpy County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+377,"Ward County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+392,"Woodbury County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+320,"Rockingham County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+316,"Riverside Regional Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,2,"FY25","FY26","new",2,0
+388,"Western Virginia Regional Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,1,"FY25","FY25","transient",0,0
+14,"Baker Correctional Institution",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+35,"Broward County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+72,"Christian County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+90,"Crow Wing County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+96,"Daviess County Detention",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+97,"Davis County",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+106,"Diamondback Correctional Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+110,"Dona Ana County Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+95,"Daviess County Detention",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+118,"El Paso County Detention Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+133,"Finney County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+136,"Florida Soft-Sided Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+143,"Franklin County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+146,"Fulton County Jail Indiana",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+163,"Hillsborough County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+186,"Kansas City Holdroom",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+205,"Laramie County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+210,"Lawrence County",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+228,"Martin County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+229,"Mccook Detention Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+232,"Miami Correctional Center",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+234,"Miami Staging Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+258,"North Central Regional Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+327,"San Diego District Staging",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+336,"Sioux County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+344,"Southern Regional",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+345,"Southwestern Regional Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+368,"Turner Guilford Knight (TGK) Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+384,"Weber County Jail",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
+386,"Western Regional Jail And Correctional Facility",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,1,"FY26","FY26","new",1,0
