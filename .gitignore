@@ -23,3 +23,7 @@ Thumbs.db
 # Data files (large; track selectively if desired)
 # data/*.xlsx
 # data/*.xls
+.positai
+
+/.quarto/
+**/*.quarto_ipynb
