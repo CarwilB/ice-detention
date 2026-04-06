@@ -1,5 +1,5 @@
 ---
-title: "DDP vs ICE FY25 annual statistics"
+title: "Unreported Detention: An analysis of ICE detention statistics not included in the FY 2025 annual detention report"
 description: "Comparing the Deportation Data Project's daily detention counts with ICE's published annual statistics to identify unreported facilities and track population changes"
 author: "Carwil Bjork-James"
 date: last-modified
@@ -15,9 +15,15 @@ execute:
   message: false
 ---
 
-::: {.callout-note}
-This report was generated using AI under general human direction. At the time of generation, the contents have not been comprehensively reviewed by a human analyst.
-:::
+This page offers an analysis of two forms of data on the population of people held by US Immigration and Customs Enforcement (ICE): summary data on detention published by ICE on its website and a detailed and granular dataset of arrests, removals, and overnight populations under ICE custody, released under the Freedom of Information Act and archived by the Deportation Data Project.
+
+The former data, is published online the [ICE Detention Management Division](https://www.ice.gov/detain/detention-management). I have also produced a map of reported facilities based on sixteen years of reporting (eight annual reports and two summary sheets) from ICE.
+
+The newer data covers "every ICE encounter, detainer request, arrest, book-in to detention, and removal" between September 1, 2022 and October 15, 2025.
+
+As becomes clear below, the more extensive data shows that ICE's public reporting is incomplete, and the uncounted population grew massively during 2025, from hundreds of individuals per night in the final months of the Biden administration to as many as five thousand individuals, and frequently in excess of four thousand in summer and early fall 2025. The network of ICE detention facilities includes
+
+*This page is part of a larger data project to gather, summarize, and analyze public data about immigration enforcement in the United States. The focus here is detention facilities used by US Immigration and Customs Enforcement (ICE).*
 
 ```{r}
 #| label: load-packages
