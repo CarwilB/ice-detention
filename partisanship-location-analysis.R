@@ -248,7 +248,7 @@ make_adp_sparkbar <- function(adp_values, fy_labels, chart_width = 260,
 jail_counties <- facility_counties |>
   filter(!is.na(fips), fips != "   NA") |>
   inner_join(facility_type_latest, by = "canonical_id") |>
-  filter(facility_type_wiki == "Jail") |>
+  filter(stringr::str_detect(facility_type_wiki, "Jail")) |>
   inner_join(county_full |> select(fips, population, pop_density, trump_share), by = "fips")
 
 jail_plot <- jail_counties |>
@@ -388,7 +388,7 @@ p_jail
 nonjail_counties <- facility_counties |>
   filter(!is.na(fips), fips != "   NA") |>
   inner_join(facility_type_latest, by = "canonical_id") |>
-  filter(facility_type_wiki != "Jail") |>
+  filter(!stringr::str_detect(facility_type_wiki, "Jail")) |>
   inner_join(county_full |> select(fips, population, pop_density, trump_share), by = "fips")
 
 nonjail_plot <- nonjail_counties |>

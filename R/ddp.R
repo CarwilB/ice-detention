@@ -514,8 +514,8 @@ build_ddp_facility_canonical <- function(ddp_codes, detloc_lookup_full,
 
 .ddp_facility_patches <- function() {
   dplyr::tribble(
-    ~detloc,    ~canonical_name,                ~facility_address,
-    "RAPPSVA",  "Rappahannock Regional Jail",   "1745 Jefferson Davis Highway"
+    ~detloc,    ~canonical_name,                ~facility_address,  ~facility_zip,
+    "RAPPSVA",  "Rappahannock Regional Jail",   "1745 Richmond Hwy", "22554"
   )
 }
 

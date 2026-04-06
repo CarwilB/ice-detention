@@ -90,7 +90,7 @@ classify_facility_type_combined <- function(facility_type_detailed,
 
   # ── Tier 4: Vera grouped category fallback ──
   from_vera_grouped <- dplyr::case_when(
-    type_grouped_corrected == "Non-Dedicated" ~ "Jail",
+    type_grouped_corrected == "Non-Dedicated" ~ "Jail/Prison",
     type_grouped_corrected == "Dedicated"     ~ "Private Migrant Detention Center",
     type_grouped_corrected == "Federal"       ~ "Federal Prison",
     type_grouped_corrected == "Family/Youth"  ~ "Family Detention Center",
@@ -108,8 +108,8 @@ classify_facility_type_combined <- function(facility_type_detailed,
 .classify_detailed <- function(type_code, facility_name = NULL) {
   dplyr::case_when(
     # ── ICE panel codes ──
-    type_code == "IGSA"           ~ "Jail",
-    type_code == "USMS IGA"       ~ "Jail",
+    type_code == "IGSA"           ~ "Jail/Prison",
+    type_code == "USMS IGA"       ~ "Jail/Prison",
     type_code == "DIGSA"          ~ "Dedicated Migrant Detention Center",
     type_code == "STATE"          ~ "State Migrant Detention Center",
     type_code == "BOP"            ~ "Federal Prison",
@@ -126,7 +126,8 @@ classify_facility_type_combined <- function(facility_type_detailed,
     type_code == "DOD"            ~ "Military Detention Center",
     type_code == "TAP-ICE"        ~ "Family Detention Center",
     # ── Internal project codes ──
-    type_code == "county_jail"    ~ "Jail",
+    type_code == "county_jail"    ~ "Jail/Prison",
+    type_code == "state_prison"   ~ "State Prison",
     type_code == "hold_room"      ~ "ICE Hold Room",
     type_code == "ero_hold"       ~ "ICE ERO Hold Room",
     type_code == "sub_office"     ~ "ICE ERO Sub-Office",
@@ -150,8 +151,8 @@ classify_facility_type_combined <- function(facility_type_detailed,
 # Used by aggregate_facilities_data() and merge_keyed_lists().
 classify_facility_type <- function(facility_type_detailed, .verbose=FALSE) {
   result <- dplyr::case_when(
-    facility_type_detailed == "IGSA"           ~ "Jail",
-    facility_type_detailed == "USMS IGA"       ~ "Jail",
+    facility_type_detailed == "IGSA"           ~ "Jail/Prison",
+    facility_type_detailed == "USMS IGA"       ~ "Jail/Prison",
     facility_type_detailed == "DIGSA"          ~ "Dedicated Migrant Detention Center",
     facility_type_detailed == "STATE"          ~ "State Migrant Detention Center",
     facility_type_detailed == "BOP"            ~ "Federal Prison",

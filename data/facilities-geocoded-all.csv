@@ -2,7 +2,7 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 1,Abraxas Academy Detention Center,1000 Academy Drive,Morgantown,PA,19543,40.1917752,-75.915868,google_maps+vera_institute,40.1917752,-75.915868,40.19177,-75.91592,vera_institute,0.0044545944716119276,full,FALSE
 3,Adams County Detention Center (Mississippi),20 Hobo Fork Rd.,Natchez,MS,39120,31.5574938,-91.2217027,preference:google_maps,31.5574938,-91.2217027,31.569175,-91.230469,vera_institute,1.5417361803382494,full,TRUE
 5,Alamance County Detention Facility,109 South Maple Street,Graham,NC,27253,36.0683261,-79.40356709999999,google_maps+vera_institute,36.0683261,-79.40356709999999,36.068555,-79.402463,vera_institute,0.10244907852694791,full,FALSE
-6,Albany County Jail,840 Albany Shaker Road,Albany,NY,12211,NA,NA,divergent,42.7068178,-73.7536695,42.75141,-73.81536,vera_institute,7.069411326556449,full,TRUE
+6,Albany County Jail,840 Albany Shaker Road,Albany,NY,12211,42.75141,-73.81536,preference:vera_institute,42.7068178,-73.7536695,42.75141,-73.81536,vera_institute,7.069411326556449,full,TRUE
 7,Alexandria Staging Facility,96 George Thompson Dr.,Alexandria,LA,71303,31.31734179999999,-92.5361202,google_maps+vera_institute,31.31734179999999,-92.5361202,31.31723,-92.5364,vera_institute,0.02934289730587321,full,FALSE
 8,Allegany County Jail,4884 State Route 19,Belmont,NY,14813,42.2127932,-78.01657519999999,google_maps+vera_institute,42.2127932,-78.01657519999999,42.21245,-78.01715,vera_institute,0.06080560909776743,full,FALSE
 9,Allen County Jail,417 S. Calhoun,Ft. Wayne,IN,46802,41.08328729999999,-85.13990869999999,google_maps+vera_institute,41.08328729999999,-85.13990869999999,41.083287,-85.139909,vera_institute,4.177337618699978e-5,full,FALSE
@@ -20,7 +20,7 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 24,Best Western-Casa De Estrella,6655 Gateway Blvd W.,El Paso,TX,79925,31.7797922,-106.3932017,google_maps+vera_institute,31.7797922,-106.3932017,31.779792,-106.393202,vera_institute,3.603762353653929e-5,full,FALSE
 25,Bluebonnet Detention Center,400 2nd Street,Anson,TX,79501,32.7676451,-99.8880841,preference:google_maps,32.7676451,-99.8880841,32.778038,-99.909668,vera_institute,2.325466336060952,full,TRUE
 26,Boone County Jail,3020 Conrad Lane,Burlington,KY,41005,39.035064,-84.72825,google_maps+vera_institute,39.035064,-84.72825,39.037326,-84.723667,vera_institute,0.4689880526703189,full,FALSE
-27,Bossier Parish Cor. Center,2984 Old Plain Dealing Highway,Plain Dealing,LA,71064,32.8388766,-93.74603530000002,auto:google_maps+vera_institute,32.8388766,-93.74603530000002,32.842674,-93.757324,vera_institute,1.1360232972041553,full,TRUE
+27,Bossier Parish Cor. Center,2984 Old Plain Dealing Highway,Plain Dealing,LA,71064,32.8388766,-93.74603530000002,preference:google_maps,32.8388766,-93.74603530000002,32.842674,-93.757324,vera_institute,1.1360232972041553,full,TRUE
 28,Bourbon County Detention Center,"Bourbon Co Courthouse, Main Street",Paris,KY,40361,38.2131205,-84.24984950000001,auto:google_maps+vera_institute,38.2131205,-84.24984950000001,38.223999,-84.246082,vera_institute,1.2536118751849312,full,TRUE
 29,Bradford County Jail,945 N Temple Ave,Starke,FL,32091,29.9542788,-82.1085483,google_maps+vera_institute,29.9542788,-82.1085483,29.954188,-82.108705,vera_institute,0.018161840748837952,full,FALSE
 30,Bristol County Detention Center,400 Faunce Corner Road,North Dartmouth,MA,2747,41.66567149999999,-70.99593159999999,google_maps+vera_institute,41.66567149999999,-70.99593159999999,41.665333,-70.995785,vera_institute,0.03956039410755452,full,FALSE
@@ -30,7 +30,7 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 35,Broward County Jail,555 SE 1st Avenue,Fort Lauderdale,FL,33301,26.1161559,-80.1424222,google_maps+vera_institute,26.1161559,-80.1424222,26.115173,-80.142769,vera_institute,0.11464724223365887,full,FALSE
 36,Broward Transitional Center,3900 North Powerline Road,Pompano Beach,FL,33073,26.277322,-80.151133,google_maps+vera_institute,26.277322,-80.151133,26.274772,-80.151971,vera_institute,0.2956011703923456,full,FALSE
 38,Buffalo (Batavia) Service Processing Center,4250 Federal Drive,Batavia,NY,14020,43.0201451,-78.2023932,google_maps+vera_institute,43.0201451,-78.2023932,43.020404,-78.202694,vera_institute,0.037772475518726714,full,FALSE
-39,Burleigh County Detention Center,P.o. Box 1416,Bismarck,ND,58502,NA,NA,divergent,46.85,-100.72,46.794465,-100.69387,vera_institute,6.487367983620613,po_box,TRUE
+39,Burleigh County Detention Center,4000 Apple Creek Road,Bismarck,ND,58504,46.79672799999999,-100.7270462,preference:google_maps,46.79672799999999,-100.7270462,46.794465,-100.69387,vera_institute,2.5380231539362827,full,TRUE
 40,Burnet County Jail,Jail Administrator,Burnet,TX,78611,NA,NA,divergent,30.75823759999999,-98.2283585,30.741522,-98.253048,vera_institute,3.0035585172767374,full,TRUE
 41,Butler County Jail,701 SE Stone Road,El Dorado,KS,67042,37.8120026,-96.8314151,google_maps+vera_institute,37.8120026,-96.8314151,37.81386,-96.830032,vera_institute,0.23962098958950692,full,FALSE
 42,Butler County Jail,705 Hanover Street,Hamilton,OH,45011,39.3875859,-84.5557427,google_maps+vera_institute,39.3875859,-84.5557427,39.38975,-84.553183,vera_institute,0.32602970581753277,full,FALSE
@@ -50,7 +50,7 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 60,CBP San Ysidro POE,720 E San Ysidro Blvd,San Ysidro,CA,92173,32.5436666,-117.0297398,google_maps,32.5436666,-117.0297398,NA,NA,NA,NA,full,FALSE
 61,Central Arizona Florence Correctional Complex,1100 Bowling Road,Florence,AZ,85232,33.0433427,-111.3720644,preference:google_maps,33.0433427,-111.3720644,33.064366,-111.378808,vera_institute,2.4206973449544975,full,TRUE
 63,Central Texas Detention Facility,218 S. Laredo St,San Antonio,TX,78207,29.4234143,-98.4970774,google_maps+vera_institute,29.4234143,-98.4970774,29.423532,-98.496982,vera_institute,0.016020562495089354,full,FALSE
-64,Charleston County Detention Center,3841 Leeds Avenue,North Charleston,SC,29405,32.8460024,-80.01401620000001,auto:google_maps+vera_institute,32.8460024,-80.01401620000001,32.858631,-80.008795,vera_institute,1.4865232571932059,full,TRUE
+64,Charleston County Detention Center,3841 Leeds Avenue,North Charleston,SC,29405,32.8460024,-80.01401620000001,preference:google_maps,32.8460024,-80.01401620000001,32.858631,-80.008795,vera_institute,1.4865232571932059,full,TRUE
 66,Chase County Jail,301 South Walnut Street,Cottonwood Falls,KS,66845,38.3678608,-96.5386769,google_maps+vera_institute,38.3678608,-96.5386769,38.375417,-96.538985,vera_institute,0.8406403020878218,full,FALSE
 67,Chautauqua County Jail,15 E. Chautauqua Street,Mayville,NY,14757,42.2544692,-79.503649,google_maps+vera_institute,42.2544692,-79.503649,42.254869,-79.50413,vera_institute,0.059527127521946235,full,FALSE
 68,Chavez Detention Center,3701 S. Atkinson,Roswell,NM,88201,33.3515168,-104.5043043,google_maps+vera_institute,33.3515168,-104.5043043,33.352159,-104.505543,vera_institute,0.13541253049002738,full,FALSE
@@ -122,7 +122,7 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 142,Franklin County House of Correction,160 Elm Street,Greenfield,MA,1301,42.596401,-72.6125319,google_maps+vera_institute,42.596401,-72.6125319,42.596402,-72.61246,vera_institute,0.005886424007787963,full,FALSE
 143,Franklin County Jail,625 Franklin Farm Ln,Chambersburg,PA,17201,40.001549,-77.64441,preference:vera_institute,39.9349618,-77.62632529999999,40.001549,-77.64441,vera_institute,7.562855827904908,full,TRUE
 144,Frederick County Detention Center,7300 Marcie's Choice Lane,Frederick,MD,21704,39.3658822,-77.41307570000001,google_maps+vera_institute,39.3658822,-77.41307570000001,39.36508,-77.41508,vera_institute,0.194023162702623,full,FALSE
-145,Freeborn County Adult Detention Center,411 South Broadway Avenue,Albert Lea,MN,56007,43.6459816,-93.3681003,google_maps+vera_institute,43.6459816,-93.3681003,43.646255,-93.367781,vera_institute,0.03980281606005651,full,FALSE
+145,Freeborn County Adult Detention Center,411 South Broadway Avenue,Albert Lea,MN,56007,43.6459816,-93.3681003,preference:google_maps,43.6459816,-93.3681003,43.646255,-93.367781,vera_institute,0.03980281606005651,full,FALSE
 146,Fulton County Jail Indiana,2006 Sweetgum Rd,Rochester,IN,46975,41.052251,-86.2317408,google_maps,41.052251,-86.2317408,NA,NA,NA,NA,full,FALSE
 147,Garvin County Detention Center,201 West Grant Avenue,Pauls Valley,OK,73075,34.7404942,-97.2220938,google_maps+vera_institute,34.7404942,-97.2220938,34.740003,-97.222229,vera_institute,0.05599860863525169,full,FALSE
 148,Gaston County Jail,425 North Marietta Street,Gastonia,NC,28052,35.257809,-81.1822263,auto:google_maps+vera_institute,35.257809,-81.1822263,35.2675,-81.182088,vera_institute,1.0776631889984774,full,TRUE
@@ -150,7 +150,7 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 174,Imperial Regional Detention Facility,1572 Gateway,Calexico,CA,92231,32.6901156,-115.3975363,google_maps+vera_institute,32.6901156,-115.3975363,32.690811,-115.397861,vera_institute,0.08308102307042932,full,FALSE
 175,Irwin County Detention Center,132 Cotton Drive,Ocilla,GA,31772,31.5798201,-83.25536380000001,google_maps+vera_institute,31.5798201,-83.25536380000001,31.580997,-83.254628,vera_institute,0.1482696918738484,full,FALSE
 176,JTF Camp Six,"Bldg 2144, U.S. Naval Station Guantanamo Bay",Guantanamo Bay,Cuba,34009,19.915,-75.22,preference:manual,19.9147787,-75.14977929999999,21.521757,-77.781167,vera_institute,326.8313521639691,full,TRUE
-177,Jack Harwell Detention Center,3101 Marlin Hwy,Waco,TX,76705,31.549304,-97.081435,auto:google_maps+vera_institute,31.549304,-97.081435,31.546298,-97.067347,vera_institute,1.3761981758029065,full,TRUE
+177,Jack Harwell Detention Center,3101 Marlin Hwy,Waco,TX,76705,31.549304,-97.081435,preference:google_maps,31.549304,-97.081435,31.546298,-97.067347,vera_institute,1.3761981758029065,full,TRUE
 178,Jackson Parish Correctional Center,327 Industrial Drive,Jonesboro,LA,71251,32.2154049,-92.7167189,preference:google_maps,32.2154049,-92.7167189,32.222096,-92.724609,vera_institute,1.0509464578302405,full,TRUE
 179,James A. Musick Facility,13502 Musick Road,Irvine,CA,92618,33.6636063,-117.6999484,google_maps+vera_institute,33.6636063,-117.6999484,33.663029,-117.700593,vera_institute,0.08763363177780165,full,FALSE
 180,Jefferson County Jail,219 East Fremont Avenue,Rigby,ID,83442,43.6734611,-111.9111853,google_maps+vera_institute,43.6734611,-111.9111853,43.673358,-111.910892,vera_institute,0.02622718259307116,full,FALSE
@@ -272,7 +272,7 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 315,Riverside County Sheriff,4095 Lemon Street,Riverside,CA,92225,33.9783467,-117.3744144,google_maps+vera_institute,33.9783467,-117.3744144,33.978135,-117.374052,vera_institute,0.04087517847014271,full,FALSE
 316,Riverside Regional Jail,1000 River Road,Hopewell,VA,23860,37.2989493,-77.33093749999999,google_maps+vera_institute,37.2989493,-77.33093749999999,37.295038,-77.321437,vera_institute,0.9462489960102596,full,FALSE
 317,Roanoke City Jail,340 Campbell Avenue Southwest,Roanoke,VA,24016,37.2711908,-79.9471628,google_maps+vera_institute,37.2711908,-79.9471628,37.271388,-79.947238,vera_institute,0.02291504789909812,full,FALSE
-318,Robert A. Deyton Detention Center,11866 Hastings Bridge Road P.o. Box 429,Lovejoy,GA,30250,33.43492120000001,-84.3064491,auto:google_maps+vera_institute,33.43492120000001,-84.3064491,33.440609,-84.320068,vera_institute,1.4131338274477965,full,TRUE
+318,Robert A. Deyton Detention Center,11866 Hastings Bridge Road P.o. Box 429,Lovejoy,GA,30250,33.43492120000001,-84.3064491,preference:google_maps,33.43492120000001,-84.3064491,33.440609,-84.320068,vera_institute,1.4131338274477965,full,TRUE
 320,Rockingham County Jail,25 South Liberty Street,Harrisonburg,VA,22801,38.44932,-78.8709058,google_maps+vera_institute,38.44932,-78.8709058,38.449565,-78.870468,vera_institute,0.04685810584731991,full,FALSE
 321,Rolling Plains Detention Center,118 County Road 206,Haskell,TX,79521,33.1771862,-99.7217295,google_maps+vera_institute,33.1771862,-99.7217295,33.176272,-99.721789,vera_institute,0.10180511917104042,full,FALSE
 323,Saint Tammany Parish Jail,701 North Columbia Street,Covington,LA,70433,30.4802794,-90.0963631,google_maps+vera_institute,30.4802794,-90.0963631,30.480421,-90.095379,vera_institute,0.09560985833795506,full,FALSE
@@ -325,7 +325,7 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 374,Wake County Sheriff Department,330 South Salisbury Street,Raleigh,NC,27601,35.7759236,-78.6408489,google_maps+vera_institute,35.7759236,-78.6408489,35.777722,-78.640222,vera_institute,0.20781617249911852,full,FALSE
 375,Wakulla County Jail,15 Oak Street,Crawfordville,FL,32327,30.1967424,-84.3771057,google_maps+vera_institute,30.1967424,-84.3771057,30.196089,-84.376921,vera_institute,0.07479176498482704,full,FALSE
 376,Walton County Jail,40 Sheriff Cir,Defuniak Springs,FL,32433,30.7835164,-86.10390129999999,google_maps+vera_institute,30.7835164,-86.10390129999999,30.783,-86.104445,vera_institute,0.0774262767712541,full,FALSE
-377,Ward County Jail,P.o. Box 907,Minot,ND,58702,NA,NA,divergent,48.14,-101.39,48.232976,-101.287401,vera_institute,12.834988904327817,po_box,TRUE
+377,Ward County Jail,P.o. Box 907,Minot,ND,58702,48.232976,-101.287401,preference:vera_institute,48.14,-101.39,48.232976,-101.287401,vera_institute,12.834988904327817,po_box,TRUE
 378,Washington County Detention Center,1155 West Clydesdale Drive,Fayetteville,AR,72701,36.0334327,-94.1772012,google_maps+vera_institute,36.0334327,-94.1772012,36.033504,-94.177109,vera_institute,0.011471328306215507,full,FALSE
 380,Washington County Jail (Purgatory Correctional Facility),750 South 5300 West,Hurricane,UT,84737,37.1373633,-113.4079986,auto:google_maps+vera_institute,37.1373633,-113.4079986,37.158273,-113.412336,vera_institute,2.3566194598640466,full,TRUE
 381,Washoe County Jail,911 Parr Blvd 775 328 3308,Reno,NV,89506,39.5711833,-119.8111143,google_maps+vera_institute,39.5711833,-119.8111143,39.572885,-119.810632,vera_institute,0.19368339303041474,full,FALSE
@@ -454,7 +454,7 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 1106,Putman County Jail,130 Orie Griffin Blvd,Palatka,FL,32177,29.6682055,-81.6627436,google_maps+vera_institute,29.6682055,-81.6627436,29.668206,-81.662744,vera_institute,6.771028919902181e-5,full,FALSE
 1107,Sarasota County Jail,2020 Main St,Sarasota,FL,34237,27.3362409,-82.52978929999999,google_maps+vera_institute,27.3362409,-82.52978929999999,27.336241,-82.529789,vera_institute,3.165077743902161e-5,full,FALSE
 1108,Seminole County Jail,211 Eslinger Way,Sanford,FL,32773,28.7476541,-81.2991837,google_maps+vera_institute,28.7476541,-81.2991837,28.74804,-81.300144,vera_institute,0.10298466302642922,full,FALSE
-1109,Santa Rosa County Jail,5755 East Milton Road,Milton,FL,32583,NA,NA,divergent,30.6157008,-87.0214957,30.643524,-86.97432,vera_institute,5.472302272756794,full,TRUE
+1109,Santa Rosa County Jail,5755 East Milton Road,Milton,FL,32583,30.643524,-86.97432,preference:vera_institute,30.6157008,-87.0214957,30.643524,-86.97432,vera_institute,5.472302272756794,full,TRUE
 1110,St. John's County Jail,3955 Lewis Speedway,St. Augustine,FL,32095,29.9402982,-81.3387994,google_maps+vera_institute,29.9402982,-81.3387994,29.940298,-81.338799,vera_institute,4.449802289514584e-5,full,FALSE
 1111,St. Lucie County Jail,900 N. Rock Rd,Fort Pierce,FL,34945,27.4533225,-80.40997569999999,google_maps+vera_institute,27.4533225,-80.40997569999999,27.453503,-80.409992,vera_institute,0.020135024483312676,full,FALSE
 1112,Sumter County Jail,219 E Anderson Avenue,Bushnell,FL,33513,28.6629244,-82.10955539999999,google_maps+vera_institute,28.6629244,-82.10955539999999,28.66272,-82.108544,vera_institute,0.10126468169549002,full,FALSE
@@ -507,7 +507,7 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 1159,"Lackawana Cnty Jail, PA",1371 North Washington Avenue,Scranton,PA,18509,41.4225808,-75.6483277,google_maps+vera_institute,41.4225808,-75.6483277,41.422344,-75.647865,vera_institute,0.046708882759039894,full,FALSE
 1160,Anderson County Det Center,1009 David Lee Coffee Pl Rd,Anderson,SC,29625,34.5336181,-82.6831717,google_maps+vera_institute,34.5336181,-82.6831717,34.533618,-82.683172,vera_institute,2.9644918986101917e-5,full,FALSE
 1161,Union County Jail,209 E Main St #250,Elk Point,SD,57025,42.6858559,-96.6825699,google_maps+vera_institute,42.6858559,-96.6825699,42.685396,-96.682676,vera_institute,0.051868689470207056,full,FALSE
-1162,Nashville Comm. Corr.,701 Broadway Street,Nashville,TN,37203,NA,NA,divergent,36.1587778,-86.781307,36.226218,-86.626766,vera_institute,15.765915964209968,full,TRUE
+1162,Nashville Comm. Corr.,701 Broadway Street,Nashville,TN,37203,36.1587778,-86.781307,preference:google_maps,36.1587778,-86.781307,36.226218,-86.626766,vera_institute,15.765915964209968,full,TRUE
 1163,Hamilton Co. Jail (Tenn),601 Justice Way,Chattanooga,TN,37421,35.0524861,-85.1333143,google_maps+vera_institute,35.0524861,-85.1333143,35.051205,-85.132546,vera_institute,0.1586935967695651,full,FALSE
 1164,Jackson County Sheriff,620 Hospital Dr,Gainesboro,TN,38562,36.348705,-85.65613,preference:vera_institute,36.3487051,-85.65612949999999,36.348705,-85.65613,vera_institute,4.613949854445244e-5,full,FALSE
 1165,Alamo Police Dept.,840 W Austin St,Alamo,TX,78516,26.181502,-98.119115,preference:vera_institute,26.181523,-98.1191204,26.181502,-98.119115,vera_institute,0.002396459297262274,full,FALSE
@@ -515,7 +515,7 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 1167,Cameron County Jail,954 E. Harrison,Brownsville,TX,78520,25.9075236,-97.4949386,google_maps+vera_institute,25.9075236,-97.4949386,25.904507,-97.490999,vera_institute,0.5174783797730867,full,FALSE
 1168,Edinburg Police Dept.,1702 S. Closner Blvd.,Edinburg,TX,78539,26.285612,-98.164573,preference:vera_institute,26.2856121,-98.1645731,26.285612,-98.164573,vera_institute,1.4934465131580243e-5,full,FALSE
 1169,El Paso County Jail (TX),12501 Montana Ave,El Paso,TX,79938,31.8093209,-106.2552476,google_maps+vera_institute,31.8093209,-106.2552476,31.81029,-106.253194,vera_institute,0.22196464684799017,full,FALSE
-1170,Hidalgo County Jail,3100 South Hwy 281,Edinburg,TX,78539,NA,NA,divergent,28.347474,-98.1278352,26.416723,-98.127738,vera_institute,214.6897160283813,full,TRUE
+1170,Hidalgo County Jail,3100 South Hwy 281,Edinburg,TX,78539,26.416723,-98.127738,preference:vera_institute,28.347474,-98.1278352,26.416723,-98.127738,vera_institute,214.6897160283813,full,TRUE
 1171,Harlingen Police Dept.,1018 Fair Park,Harlingen,TX,78550,26.2003819,-97.7056907,google_maps+vera_institute,26.2003819,-97.7056907,26.200493,-97.705624,vera_institute,0.014032104734185665,full,FALSE
 1172,Kinney County Jail,109 North Street,Brackettville,TX,78832,29.3116119,-100.4178839,google_maps+vera_institute,29.3116119,-100.4178839,29.311329,-100.418034,vera_institute,0.03466050220784521,full,FALSE
 1173,Lasalle County Jail,703 N Main Street,Cotulla,TX,78014,28.4438435,-99.23701280000002,google_maps+vera_institute,28.4438435,-99.23701280000002,28.444703,-99.236658,vera_institute,0.10167283689357723,full,FALSE
@@ -544,7 +544,7 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 1196,NW Reg Juv Det Ctr,145 Fort Collier Rd.,Winchester,VA,22603,39.1998421,-78.1450776,google_maps+vera_institute,39.1998421,-78.1450776,39.199842,-78.145078,vera_institute,3.621724222759343e-5,full,FALSE
 1197,Northwest Reg. Adult Det.,141 Fort Collier Road,Winchester,VA,22603,39.19883129999999,-78.1438831,google_maps+vera_institute,39.19883129999999,-78.1438831,39.198506,-78.146302,vera_institute,0.21155556150130822,full,FALSE
 1198,Piedmont Reg Jail,801 Industrial Park Road,Farmville,VA,23901,37.3243363,-78.4285541,google_maps+vera_institute,37.3243363,-78.4285541,37.320601,-78.425392,vera_institute,0.5006952714273176,full,FALSE
-1199,Rappahannock Regional Jail,1745 Jefferson Davis Highway,Stafford,VA,22554,NA,NA,divergent,38.4045514,-77.4192674,38.318495,-77.471987,vera_institute,10.61578622427167,full,TRUE
+1199,Rappahannock Regional Jail,1745 Richmond Hwy,Stafford,VA,22554,38.4068098,-77.42241709999999,preference:google_maps,38.4068098,-77.42241709999999,38.318495,-77.471987,vera_institute,10.729128487670025,full,TRUE
 1200,Virginia Beach,2501 James Madison Boulevard,Virginia Beach,VA,23456,36.7528158,-76.0614299,google_maps+vera_institute,36.7528158,-76.0614299,36.753146,-76.060064,vera_institute,0.1271090625691075,full,FALSE
 1201,Addison County Jail,35 Court Street,Middlebury,VT,05753,44.0115031,-73.16364829999999,google_maps+vera_institute,44.0115031,-73.16364829999999,44.011519,-73.163545,vera_institute,0.008448119561180675,full,FALSE
 1202,VT. Dept. Of Corrections,103 South Main Street,Waterbury,VT,05676,44.33216059999999,-72.754942,google_maps+vera_institute,44.33216059999999,-72.754942,44.333316,-72.751742,vera_institute,0.28510588509494866,full,FALSE
@@ -561,13 +561,13 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 2004,Buffalo Field Office,"250 Delaware Avenue, Floor 7",Buffalo,NY,14202,42.8911691,-78.8769453,google_maps+vera_institute,42.8911691,-78.8769453,42.888191,-78.878101,vera_institute,0.34427448378928543,full,FALSE
 2005,Chicago Field Office,"101 W Ida B Wells Drive, Suite 4000",Chicago,IL,60605,41.87539049999999,-87.6309402,preference:google_maps,41.87539049999999,-87.6309402,41.974839,-87.890021,vera_institute,24.118468140465648,full,TRUE
 2006,Dallas Field Office,8101 N. Stemmons Frwy,Dallas,TX,75247,32.8238894,-96.8720089,google_maps+vera_institute,32.8238894,-96.8720089,32.823622,-96.872156,vera_institute,0.032756910906700305,full,FALSE
-2007,Denver Field Office,12445 E. Caley Avenue,Centennial,CO,80111,NA,NA,divergent,39.6015038,-104.8449885,39.783607,-104.848777,vera_institute,20.251546387546167,full,TRUE
-2008,Detroit Field Office,"985 Michigan Avenue, Suite 207",Detroit,MI,48226,NA,NA,divergent,42.3310002,-83.05871789999999,42.408815,-83.037998,vera_institute,8.818451446991597,full,TRUE
+2007,Denver Field Office,12445 E. Caley Avenue,Centennial,CO,80111,39.6015038,-104.8449885,preference:google_maps,39.6015038,-104.8449885,39.783607,-104.848777,vera_institute,20.251546387546167,full,TRUE
+2008,Detroit Field Office,"985 Michigan Avenue, Suite 207",Detroit,MI,48226,42.3310002,-83.05871789999999,preference:google_maps,42.3310002,-83.05871789999999,42.408815,-83.037998,vera_institute,8.818451446991597,full,TRUE
 2009,El Paso Field Office,"11541 Montana Ave, Suite E",El Paso,TX,79936,31.80421399999999,-106.2910235,google_maps,31.80421399999999,-106.2910235,NA,NA,NA,NA,full,FALSE
 2010,Harlingen Field Office,1717 Zoy Street,Harlingen,TX,78552,26.1776479,-97.714091,google_maps+vera_institute,26.1776479,-97.714091,26.178023,-97.714124,vera_institute,0.04183901285160656,full,FALSE
 2011,Houston Field Office,126 Northpoint Drive,Houston,TX,77060,29.9375017,-95.40659,preference:google_maps,29.9375017,-95.40659,29.952045,-95.311156,vera_institute,9.336296961593666,full,TRUE
 2012,Los Angeles Field Office,"300 North Los Angeles St., Room 7631",Los Angeles,CA,90012,34.053793,-118.2397435,google_maps+vera_institute,34.053793,-118.2397435,34.054044,-118.239721,vera_institute,0.027986794516420957,full,FALSE
-2013,Miramar Sub Office,2805 SW 145th Ave,Miramar,FL,33027,NA,NA,divergent,25.9827432,-80.33946019999999,25.919958,-80.154961,vera_institute,19.723627664176213,full,TRUE
+2013,Miramar Sub Office,2805 SW 145th Ave,Miramar,FL,33027,25.9827432,-80.33946019999999,preference:google_maps,25.9827432,-80.33946019999999,25.919958,-80.154961,vera_institute,19.723627664176213,full,TRUE
 2014,New Orleans Field Office,181 James Drive W,St. Rose,LA,70087,29.9857549,-90.2854711,preference:google_maps,29.9857549,-90.2854711,29.948091,-90.077862,vera_institute,20.43273079719801,full,TRUE
 2015,New York City Field Office,"26 Federal Plaza, 9th Floor",New York,NY,10278,40.7152635,-74.0037546,google_maps+vera_institute,40.7152635,-74.0037546,40.715422,-74.003839,vera_institute,0.01900576035667222,full,FALSE
 2016,Newark Field Office,"970 Broad St., 11th Floor",Newark,NJ,07102,40.7304926,-74.1742312,google_maps+vera_institute,40.7304926,-74.1742312,40.730364,-74.174986,vera_institute,0.06518879349148723,full,FALSE
@@ -581,154 +581,154 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 2024,St Paul Field Office,"1 Federal Drive, Suite 1601",Fort Snelling,MN,55111,44.8941668,-93.1948264,preference:google_maps,44.8941668,-93.1948264,44.860123,-93.230675,vera_institute,4.723228663851287,full,TRUE
 2025,Washington Field Office,14797 Murdock Street,Chantilly,VA,20598-5216,38.9114848,-77.45867679999999,preference:google_maps,38.9114848,-77.45867679999999,38.880719,-77.22918,vera_institute,20.153453315910816,full,TRUE
 2026,Birmingham Hold Room,"1833 29th Ave S, Birmingham, AL 35209",HOMEWOOD,AL,35209,33.4792816,-86.7899669,google_maps+marshall_project,33.4792816,-86.7899669,33.479539,-86.79116,marshall_project,0.11429680101384088,full,FALSE
-2027,Etowah ERO Hold Room,UNAVAILABLE,GADSDEN,AL,35901,NA,NA,divergent,34.0530094,-85.9406745,34.016508,-86.012396,vera_institute,7.755738663006078,full,TRUE
-2028,Fayetteville Hold Room,P.O. BOX 1188 2887 N POINT CIRCLE,FAYETTEVILLE,AR,72701,36.10463,-94.178449,preference:marshall_project,35.9980929,-94.0899911,36.10463,-94.178449,marshall_project,14.268035692476817,po_box,TRUE
-2029,Fort Smith Holdroom,"4991 Old Greenwood Rd, Fort Smith, AR 72903",FORT SMITH,AR,72901,35.3354817,-94.3891997,google_maps+marshall_project,35.3354817,-94.3891997,35.3328677,-94.3878247,marshall_project,0.31629515015558896,full,FALSE
-2030,Little Rock Hold Room,UNAVAILABLE,LITTLE ROCK,AR,72201,NA,NA,divergent,34.7499657,-92.2852014,34.723782,-92.307733,vera_institute,3.565920875772875,full,TRUE
-2031,Texarkana Holdroom,100 NORTH STATELINE AVENUE,TEXARKANA,AR,71854,33.4208569,-94.0431833,google_maps+marshall_project,33.4208569,-94.0431833,33.420881,-94.043166,marshall_project,0.003123976346049955,full,FALSE
-2032,Az Rem Op Coord Center (Arocc),"130 N Robson, Mesa, AZ 85201",MESA,AZ,85204,33.4183833,-111.8375752,google_maps+marshall_project,33.4183833,-111.8375752,33.4180114,-111.8367566,marshall_project,0.08650067370891125,full,FALSE
-2033,Tucson Ins Hold Room,6431 SOUTH COUNTRY CLUB ROAD,TUCSON,AZ,85706,32.1356653,-110.9248046,google_maps+marshall_project,32.1356653,-110.9248046,32.1353209,-110.9260223,marshall_project,0.1208837503171537,full,FALSE
-2034,Yuma Holdroom,3911 S. PICO AVE.,YUMA,AZ,85365,32.6565319,-114.6117867,google_maps+marshall_project,32.6565319,-114.6117867,32.65579891,-114.6121807,marshall_project,0.08946260155716869,full,FALSE
-2035,Bakerfield Hold,800 TRUXTUN,BAKERSFIELD,CA,93301,35.3736714,-119.0112192,google_maps+marshall_project,35.3736714,-119.0112192,35.37372,-119.01121,marshall_project,0.0054680712331347334,full,FALSE
-2036,Fresno Holdroom,733 L STREET,FRESNO,CA,93721,36.7326978,-119.7856018,google_maps+marshall_project,36.7326978,-119.7856018,36.73267589,-119.7852956,marshall_project,0.02739569683592882,full,FALSE
-2037,Imperial Sub Office Hold Room,"2409 La Brucherie Road, Suite 3",Imperial,CA,92251,NA,NA,divergent,32.8266637,-115.5793027,32.678948,-115.498883,vera_institute,18.065078570473545,full,TRUE
-2038,Santa Ana Dro Holdroom,34 CIVIC CENTER PLAZA,SANTA ANA,CA,90701,33.7484501,-117.8749858,google_maps+marshall_project,33.7484501,-117.8749858,33.748562,-117.875155,marshall_project,0.019988652128662916,full,FALSE
-2039,Sacramento Hold,650 CAPITOL MALL,SACRAMENTO,CA,95814,38.57800230000001,-121.4999684,google_maps+marshall_project,38.57800230000001,-121.4999684,38.57813929,-121.4995672,marshall_project,0.038056848624618715,full,FALSE
-2040,San Bernardino Hold Room,655 WEST RIALTO AVENUE,SAN BERNADINO,CA,92410,34.1006917,-117.2972977,google_maps+marshall_project,34.1006917,-117.2972977,34.10077,-117.297624,marshall_project,0.031280291935838124,full,FALSE
-2041,Snj Hold Room,1887 MONTEREY ROAD,SAN JOSE,CA,95112,37.3080994,-121.8675044,preference:google_maps,37.3080994,-121.8675044,37.23883,-121.7742945,marshall_project,11.28491890710703,full,TRUE
-2042,Stockton Staging Facility,22 EAST MARKET STREET,STOCKTON,CA,95202,37.9512028,-121.2900671,google_maps+marshall_project,37.9512028,-121.2900671,37.9511281,-121.2899487,marshall_project,0.013295425966813332,full,FALSE
-2043,Ventura Custody Case,275 SKYWAY DRIVE,CAMARRILLO,CA,93010,34.2063593,-119.0772538,google_maps+marshall_project,34.2063593,-119.0772538,34.206389,-119.077197,marshall_project,0.00617978282142272,full,FALSE
-2044,Westminster Custody,8200 WESTMINSTER BOULEVARD,WESTMINSTER,CA,92683,33.7531536,-118.0010421,auto:google_maps+marshall_project,33.7531536,-118.0010421,33.75919,-117.9919216,marshall_project,1.0777196988227888,full,TRUE
-2045,Alamosa Holdroom,1921 STATE STREET,ALAMOSA,CO,81101,37.4893878,-105.8597721,google_maps+marshall_project,37.4893878,-105.8597721,37.487897,-105.8597891,marshall_project,0.16577618226882126,full,FALSE
-2046,Craig Holdroom,466 TUCKER STREET,CRAIG,CO,81625,40.5136142,-107.5451612,google_maps+marshall_project,40.5136142,-107.5451612,40.51362644,-107.5449635,marshall_project,0.0167681169723659,full,FALSE
-2047,Durango Holdroom,32 SHEPPARD DRIVE,DURANGO,CO,81303,37.2371432,-107.874248,google_maps+marshall_project,37.2371432,-107.874248,37.237142,-107.874147,marshall_project,0.008942170652972255,full,FALSE
-2048,Frederick Holdroom,3770 PURITAN WAY,FREDERICK,CO,80516,40.08207549999999,-104.9849103,google_maps+marshall_project,40.08207549999999,-104.9849103,40.08366084,-104.9842897,marshall_project,0.18401890883463587,full,FALSE
-2049,Grand Junction Holdroom,571 S. COMMERCIAL DRIVE,GRAND JUNCTION,CO,81501,39.0871873,-108.5858668,google_maps+marshall_project,39.0871873,-108.5858668,39.08742921,-108.5855331,marshall_project,0.03940889025228154,full,FALSE
-2050,Glenwood Springs Holdroom,100 MIDLAND AVENUE,GLENWOOD SPRINGS,CO,81601,NA,NA,divergent,39.5582742,-107.3582581,39.5150507,-107.3234023,marshall_project,5.659898768434913,full,TRUE
-2051,Pueblo Holdroom,"935 CO-67 Florence, CO 81226",FLORENCE,CO,81226,NA,NA,divergent,38.4265663,-105.1156314,38.393003,-105.116869,marshall_project,3.733626206814981,full,TRUE
-2052,Hartford Office,450 MAIN STREET,HARTFORD,CT,06103,41.7613805,-72.6734969,preference:google_maps,41.7613805,-72.6734969,41.65125491,-72.60366603,marshall_project,13.54823397673739,full,TRUE
-2053,Dover Holdroom,1305 MCD DRIVE,DOVER,DE,19901,39.1536338,-75.4882617,google_maps+marshall_project,39.1536338,-75.4882617,39.15450667,-75.48795118,marshall_project,0.10068412398205516,full,FALSE
-2054,Fort Myers ERO Holdroom,8860 SALROSE LANE,FORT MYERS,FL,33912,26.548482,-81.8109453,google_maps+marshall_project,26.548482,-81.8109453,26.5489061,-81.8083647,marshall_project,0.26098798381234506,full,FALSE
-2055,Jacksonville Sub-Office,4121 SOUTHPOINT BLVD,JACKSONVILLE,FL,32216,30.2566701,-81.5900041,google_maps+marshall_project,30.2566701,-81.5900041,30.25553186,-81.59002626,marshall_project,0.12658440856745645,full,FALSE
-2056,Krome/Miami Hub,CONCOURSE E SATELLITMIAMI INTERNATIONAL,MIAMI,FL,33299,25.75434,-80.48913,preference:marshall_project,25.7952677,-80.2834383,25.75434,-80.48913,marshall_project,21.09314566670867,full,TRUE
-2057,Krome Hold Room,18201 SW 12TH ST,MIAMI,FL,33194,25.7581461,-80.3509388,preference:marshall_project,25.7543477,-80.4891143,25.7581461,-80.3509388,marshall_project,13.844416860024188,full,TRUE
-2058,Orlando Hold Room,9403 TRADEPORT DRIVE,ORLANDO,FL,32827,28.4281216,-81.3331197,google_maps+marshall_project,28.4281216,-81.3331197,28.42749625,-81.3338145,marshall_project,0.09721815646657252,full,FALSE
-2059,Stuart Hold Room,3500 SE COMMERCE AVE,STUART,FL,34997,27.1628237,-80.221999,auto:google_maps+marshall_project,27.1628237,-80.221999,27.155589,-80.212243,marshall_project,1.2564968734964024,full,TRUE
-2060,Tallahassee Hold Room,1530 COMMONWEALTH BUSINESS BLVD,TALLAHASSEE,FL,32303,30.4719963,-84.35514119999999,google_maps+marshall_project,30.4719963,-84.35514119999999,30.471947,-84.354361,marshall_project,0.07497223450439545,full,FALSE
-2061,Tampa Hold Room,"1201 Orient Rd, Tampa, FL 33619",TAMPA,FL,33619,27.959392,-82.3720724,google_maps+marshall_project,27.959392,-82.3720724,27.959412,-82.372276,marshall_project,0.020120112715816655,full,FALSE
-2062,Guam ERO Hold Room,108 Herman Cortez Ave,Hag̴ṯa,GU,96910,13.4760946,144.750006,google_maps+marshall_project,13.4760946,144.750006,13.476607,144.747679,marshall_project,0.25799620897260683,full,FALSE
-2063,ERO Honolulu Sub-Office Hold Room,595 ALA MOANA BLVD,HONOLULU,HI,96813,21.2999288,-157.8638944,google_maps+marshall_project,21.2999288,-157.8638944,21.299633,-157.8631238,marshall_project,0.0863439558591686,full,FALSE
-2064,Cedar Rapids Hold Room,"53 3rd Ave Bridge, Cedar Rapids, IA 52401",CEDAR RAPIDS,IA,52401,41.9745858,-91.6691514,google_maps+marshall_project,41.9745858,-91.6691514,41.9752949,-91.6700847,marshall_project,0.11031583750030244,full,FALSE
-2065,Des Moines Hold Room,"222 5th Ave, Des Moines, IA 50309",DES MOINES,IA,50301,41.5856411,-93.6236008,google_maps+marshall_project,41.5856411,-93.6236008,41.5854892,-93.6232534,marshall_project,0.033468024564352224,full,FALSE
-2066,Sioux City Hold Room,1400 PIERCE STREET,SIOUX CITY,IA,51101,42.505249,-96.4047597,google_maps+marshall_project,42.505249,-96.4047597,42.505131,-96.404939,marshall_project,0.019702632386619835,full,FALSE
-2067,Boise Hold Room,1185 S. VINNELL WAY,BOISE,ID,83709,43.5942506,-116.2875233,google_maps+marshall_project,43.5942506,-116.2875233,43.5927664,-116.2860691,marshall_project,0.2023652661280106,full,FALSE
-2068,Idaho Falls Hold Room,2075 NORTH BOULEVARD,IDAHO FALLS,ID,83401,43.5147311,-112.0339375,google_maps+marshall_project,43.5147311,-112.0339375,43.51475817,-112.0337537,marshall_project,0.015123875857182188,full,FALSE
-2069,Twin Falls Hold Room,2496 ADDISON AVENUE EAST,TWIN FALLS,ID,83301,NA,NA,divergent,42.5625826,-114.4338469,42.5631215,-114.4790992,marshall_project,3.7066044187324048,full,TRUE
-2070,Broadview Service Staging,1930 BEACH STREET,BROADVIEW,IL,60155,41.8680102,-87.8659385,google_maps+marshall_project,41.8680102,-87.8659385,41.86852212,-87.86562002,marshall_project,0.06273501562082731,full,FALSE
-2071,Rock Island Hold Room,1317 3RD AVENUE,ROCK ISLAND,IL,61201,41.509035,-90.580909,google_maps+marshall_project,41.509035,-90.580909,41.50918615,-90.58073053,marshall_project,0.02243491752729303,full,FALSE
-2072,Indianapolis Hold Room,"40 S Alabama St, Indianapolis, IN 46204",INDIANAPOLIS,IN,46206,39.7659792,-86.15315729999999,google_maps+marshall_project,39.7659792,-86.15315729999999,39.765936,-86.1535844,marshall_project,0.036819573842347596,full,FALSE
-2073,Wichita Holdroom,217 W 3RD ST. NORTH,WICHITA,KS,67201,37.6912501,-97.3396394,google_maps+marshall_project,37.6912501,-97.3396394,37.69151228,-97.33959072,marshall_project,0.02946607613943304,full,FALSE
-2074,Louisville Hold Room,400 S 6TH STREET,LOUISVILLE,KY,40202,38.2531573,-85.7608169,google_maps+marshall_project,38.2531573,-85.7608169,38.25320155,-85.76107196,marshall_project,0.02280873813718887,full,FALSE
-2075,Oakdale Holding Room,1010 E WHATLEY ROAD,OAKDALE,LA,71463,30.8310871,-92.6503892,auto:google_maps+marshall_project,30.8310871,-92.6503892,30.832183,-92.63684,marshall_project,1.2994113675022647,full,TRUE
-2076,Shreveport Hold Room,"400 TEXAS STREET, SUITE 900",SHREVEPORT,LA,71101,32.5136216,-93.7492406,google_maps+marshall_project,32.5136216,-93.7492406,32.513789,-93.749198,marshall_project,0.019037799576661144,full,FALSE
-2077,"Portland, Me Holdroom",511 NORTHWEST BROADWAY,PORTLAND,ME,04101,NA,NA,divergent,43.670822,-70.28438249999999,43.63491743,-70.25004189,marshall_project,4.855149960069933,full,TRUE
-2078,Grand Rapids Holdroom,517 OTTAWA AVE NW,GRAND RAPIDS,MI,49503,42.97265429999999,-85.67052609999999,google_maps+marshall_project,42.97265429999999,-85.67052609999999,42.97268389,-85.67005197,marshall_project,0.038714804203560944,full,FALSE
-2079,ERO Hold Room (Springfield Mo),2401 W. OLD ROUTE 66,STRAFFORD,MO,65757,NA,NA,divergent,37.2518247,-93.1678639,37.2669575,-93.1294134,marshall_project,3.796189975862155,full,TRUE
-2080,St. Louis Holdroom,1222 SPRUCE STREET,ST. LOUIS,MO,63101,38.6243789,-90.2003828,google_maps+marshall_project,38.6243789,-90.2003828,38.62431814,-90.19991016,marshall_project,0.041611153523211916,full,FALSE
-2081,Saipain Hold,"Susupe, Saipan 96950, CNMI",SAIPAN,MP,96950,15.1567839,145.7028775,google_maps+marshall_project,15.1567839,145.7028775,15.156223,145.703679,marshall_project,0.10625353161644112,full,FALSE
-2082,Jackson Ms Hold Room,202 METROPLEX BLVD,PEARL,MS,39208,32.2902501,-90.0597098,google_maps+marshall_project,32.2902501,-90.0597098,32.2879592,-90.0604261,marshall_project,0.2634849140461453,full,FALSE
-2083,Billings Hold Room,2900 4TH AVE NORTH,BILLINGS,MT,59101,45.7836118,-108.5095733,google_maps+marshall_project,45.7836118,-108.5095733,45.783884,-108.509563,marshall_project,0.030277795384722684,full,FALSE
-2084,Hel District Custody,805 COLLEEN STREET,HELENA,MT,59601,46.5937137,-111.9724396,google_maps+marshall_project,46.5937137,-111.9724396,46.59349986,-111.9741765,marshall_project,0.13482918771854552,full,FALSE
-2085,Charlotte Hold Room,"601 E Trade St, Charlotte, NC 28202",CHARLOTTE,NC,28202,35.2226924,-80.83722440000001,google_maps+marshall_project,35.2226924,-80.83722440000001,35.222886,-80.837843,marshall_project,0.0601741784502539,full,FALSE
-2086,Hendersonville Hold Room,518 6TH AVE W,HENDERSONVILLE,NC,28792,35.3187546,-82.467828,google_maps+marshall_project,35.3187546,-82.467828,35.31880745,-82.46808227,marshall_project,0.023806465745095987,full,FALSE
-2087,Raleigh Hold Room,"120 Wilkinson Ave, Cary, NC 27513",CARY,NC,27512,35.789774800000004,-78.77960730000001,google_maps+marshall_project,35.789774800000004,-78.77960730000001,35.7897439,-78.7796076,marshall_project,0.003436029784163919,full,FALSE
-2088,Grand Forks Hold Room,124 NORTH 6TH STREET,GRAND FORKS,ND,58203,47.924267,-97.0353236,google_maps+marshall_project,47.924267,-97.0353236,47.92382012,-97.03497765,marshall_project,0.05597924041908875,full,FALSE
-2089,Grand Island Hold Room,220 N. WALNUT STREET,GRAND ISLAND,NE,68801,40.9242015,-98.3432364,google_maps+marshall_project,40.9242015,-98.3432364,40.924152,-98.343144,marshall_project,0.009516382351604357,full,FALSE
-2090,North Platte Hold Room,"300 East 3rd Street North Platte, NE 69101",NORTH PLATTE,NE,69101,41.1345586,-100.7607001,google_maps+marshall_project,41.1345586,-100.7607001,41.135013,-100.759979,marshall_project,0.07874015809212645,full,FALSE
-2091,Omaha Fo Hold,2323 AVENUE J,OMAHA,NE,68110,41.2820726,-95.8987599,google_maps+marshall_project,41.2820726,-95.8987599,41.2812941,-95.8987635,marshall_project,0.08656577306507668,full,FALSE
-2092,Manchester Holdroom,811 CANAL STREET,MANCHESTER,NH,03101,42.9984836,-71.46629639999999,google_maps+marshall_project,42.9984836,-71.46629639999999,42.99851926,-71.46659763,marshall_project,0.024816304709176725,full,FALSE
-2093,Albuquerque Hold Room,1720 RANDOLPH ROAD,ALBUQUERQUE,NM,87106,35.0522552,-106.6270349,google_maps+marshall_project,35.0522552,-106.6270349,35.0526543,-106.6292985,marshall_project,0.2107737803237501,full,FALSE
-2094,Las Vegas Hold Room,3373 PEPPER LANE,LAS VEGAS,NV,89120,NA,NA,divergent,36.0759542,-115.102069,36.0583473,-115.2251266,marshall_project,11.232587190557568,full,TRUE
-2095,Reno Hold Room,"911 E Parr Blvd, Reno, NV 89512",RENO,NV,89512,39.5711833,-119.8111143,google_maps+marshall_project,39.5711833,-119.8111143,39.5729049,-119.8094503,marshall_project,0.23872235741594583,full,FALSE
-2096,Albany Holdroom,1086 TROY-SCHENECTADY RD,LATHAM,NY,12110,NA,NA,divergent,42.7653031,-73.8121646,42.7533809,-73.769379,marshall_project,3.7361477946248725,full,TRUE
-2097,Buffalo Usbp Hold Room,250 Delaware Avenue Floor 7,Buffalo,NY,14202,42.8911691,-78.8769453,auto:google_maps+vera_institute,42.8911691,-78.8769453,42.875338,-78.849655,vera_institute,2.836001478147246,full,TRUE
-2098,Batavia Command Center Holdroom,4250 FEDERAL DRIVE,Batavia,NY,NA,43.0201451,-78.2023932,auto:google_maps+marshall_project,43.0201451,-78.2023932,43,-78.2,marshall_project,2.248468964241552,full,TRUE
-2099,Vrk Prcs,201 VARICK STREET,NEW YORK,NY,10014,40.7282753,-74.00556619999999,google_maps+marshall_project,40.7282753,-74.00556619999999,40.72829055,-74.00626961,marshall_project,0.059297016547207065,full,FALSE
-2100,Cincinnati Holdroom,9875 Redhill Drive,Blue Ash,OH,45242,39.2382289,-84.380236,google_maps+vera_institute,39.2382289,-84.380236,39.238322,-84.380325,vera_institute,0.012881007187835207,full,FALSE
-2101,Cleveland Hold Room,"1240 E. 9TH STREET, ROOM 585",CLEVELAND,OH,44199,41.5049609,-81.69177239999999,google_maps+marshall_project,41.5049609,-81.69177239999999,41.504901,-81.691781,marshall_project,0.006698966397720681,full,FALSE
-2102,Columbus Holdroom,50 WEST BROAD ST,COLUMBUS,OH,43215,39.9624569,-83.0021146,google_maps+marshall_project,39.9624569,-83.0021146,39.9623335,-83.00217974,marshall_project,0.014802014447256538,full,FALSE
-2103,Oklahoma City Hold Room.,4400 SW 44TH STREET,OKLAHOMA CITY,OK,73119,35.4236398,-97.5975192,google_maps+marshall_project,35.4236398,-97.5975192,35.42401994,-97.5967341,marshall_project,0.08274942600381872,full,FALSE
-2104,Eugene Holdroom,211 EAST 7TH AVENUE,EUGENE,OR,97401,44.0524622,-123.0885813,google_maps+marshall_project,44.0524622,-123.0885813,44.052201,-123.0893848,marshall_project,0.0704758323616153,full,FALSE
-2105,Medford Sub-Office,310 WEST 6TH STREET,MEDFORD,OR,97501,42.3255106,-122.8772236,google_maps+marshall_project,42.3255106,-122.8772236,42.32540398,-122.8769674,marshall_project,0.02416963629972575,full,FALSE
-2106,Portland District Office,1111 SOUTHWEST 2ND AVENUE,PORTLAND,OR,97204,45.51504569999999,-122.67631,google_maps+marshall_project,45.51504569999999,-122.67631,45.5150962,-122.6763292,marshall_project,0.005811204978612132,full,FALSE
-2107,Pittsburgh Holdroom,3000 SIDNEY ST SUITE 100,PITTSBURGH,PA,15203,40.4248324,-79.96081099999999,google_maps+marshall_project,40.4248324,-79.96081099999999,40.424825,-79.960811,marshall_project,8.228424573045022e-4,full,FALSE
-2108,Pike County ERO Hold Room,170 PIKE COUNTY BLVD,HAWLEY,PA,18428,41.3885184,-75.0724974,google_maps+marshall_project,41.3885184,-75.0724974,41.388359,-75.072108,marshall_project,0.037005895739383295,full,FALSE
-2109,Aguadilla SPC,"Maleza Baja, Aguadilla, Puerto Rico, Aguadilla 00604Puerto Rico",AGUADILLA,PR,00603,18.4962828,-67.1355075,google_maps+marshall_project,18.4962828,-67.1355075,18.49428,-67.14213,marshall_project,0.7330032933068429,full,FALSE
-2110,San Juan Sub-Office Hold Room,"7 Cll TabonucoGuaynabo, 00968, Puerto Rico",GUAYNABO,PR,00968,18.4078569,-66.1074296,google_maps+marshall_project,18.4078569,-66.1074296,18.406539,-66.106714,marshall_project,0.16484940026683825,full,FALSE
-2111,San Juan Airport Hold Room,LUIS MUNOZ MARIN IA,SAN JUAN,PR,00937,18.437531,-66.004703,preference:marshall_project,18.4075321,-66.0730507,18.437531,-66.004703,marshall_project,7.944648635770259,full,TRUE
-2112,Prohold,443 Jefferson Blvd North Suite,Warwick,RI,02886,41.7357562,-71.4411413,auto:google_maps+vera_institute,41.7357562,-71.4411413,41.726973,-71.457116,vera_institute,1.6465367171936147,full,TRUE
-2113,"Charleston, Sc Hold Room",3950 FABER PLACE DR,CHARLESTON,SC,29705,32.8463863,-80.0199001,google_maps+marshall_project,32.8463863,-80.0199001,32.846752,-80.019771,marshall_project,0.04241472435783822,full,FALSE
-2114,"Columbia, Sc Holdroom","1835 Assembly St Columbia, SC 29201",COLUMBIA,SC,29201,34.0088782,-81.0401775,google_maps+marshall_project,34.0088782,-81.0401775,34.009224,-81.038982,marshall_project,0.1167110383008689,full,FALSE
-2115,Greer Hold Room,"501 Pennsylvania Ave, Greer, SC 29650",GREER,SC,29650,34.9393051,-82.24697139999999,google_maps+marshall_project,34.9393051,-82.24697139999999,34.9371548,-82.2418822,marshall_project,0.5218958502757078,full,FALSE
-2116,Rapid City Hold Room,1675 SAMCO ROAD,RAPID CITY,SD,57702,44.1007278,-103.2667352,google_maps+marshall_project,44.1007278,-103.2667352,44.09919672,-103.2646852,marshall_project,0.23618023839791655,full,FALSE
-2117,Sioux Falls Hold Room,300 EAST 8TH STREET,SIOUX FALLS,SD,57103,43.5499676,-96.7233919,google_maps+marshall_project,43.5499676,-96.7233919,43.548712,-96.72369,marshall_project,0.14166827685152156,full,FALSE
-2118,Chattanooga Hold Room,"3117 Dayton Blvd, Red Bank, TN 37415",CHATTANOOGA,TN,37450,35.1059466,-85.2986177,google_maps+marshall_project,35.1059466,-85.2986177,35.106032,-85.297818,marshall_project,0.07336381017958639,full,FALSE
-2119,Knoxville Hold Room,UNAVAILABLE,KNOXVILLE,TN,37920,NA,NA,divergent,35.9113041,-83.8685072,35.960303,-83.916773,vera_institute,6.9690999723587925,full,TRUE
-2120,Memphis Hold Room,842 VIRGINIA RUN COVE,MEMPHIS,TN,38122,35.1563308,-89.88122030000001,google_maps+marshall_project,35.1563308,-89.88122030000001,35.15751129,-89.88252957,marshall_project,0.17719385063316,full,FALSE
-2121,Nashville Hold Room,UNAVAILABLE,NASHVILLE,TN,37201,36.1669968,-86.7780836,google_maps+vera_institute,36.1669968,-86.7780836,36.167759,-86.779278,vera_institute,0.13667017894735445,full,FALSE
-2122,Amarillo Hold Room,8601 E. AMARILLO BLVD,AMARILLO,TX,79801,NA,NA,divergent,35.2069816,-101.8320065,35.22253615,-101.7488485,marshall_project,7.750021677647471,full,TRUE
-2123,"Athens, Tx Hold Room",109 W CORSICANA STREET,ATHENS,TX,75751,32.2035715,-95.8558275,google_maps+marshall_project,32.2035715,-95.8558275,32.20444798,-95.85398128,marshall_project,0.19918032994202955,full,FALSE
-2124,Austin Dro Hold Room,300 EAST 8TH STREET,AUSTIN,TX,78701,30.2693858,-97.7390392,google_maps+marshall_project,30.2693858,-97.7390392,30.269638,-97.738978,marshall_project,0.02865263074273753,full,FALSE
-2125,Big Spring Hold Room,1701 APRON DRIVE,BIG SPRING,TX,79720,32.2248668,-101.5140425,google_maps+marshall_project,32.2248668,-101.5140425,32.225131,-101.514653,marshall_project,0.06450565897374859,full,FALSE
-2126,Del Rio Dro Hold Room,2401 DODSON AVENUE,DEL RIO,TX,78840,29.3927093,-100.8988898,google_maps+marshall_project,29.3927093,-100.8988898,29.393471,-100.899841,marshall_project,0.12516329085669764,full,FALSE
-2127,Egp Cpc Holding,11541 Montana Ave Suite E,El Paso,TX,79936,31.80421399999999,-106.2910235,google_maps,31.80421399999999,-106.2910235,NA,NA,NA,NA,full,FALSE
-2128,Lubbock Hold Room,"1205 TEXAS AVE, SUITE 605",LUBBOCK,TX,79401,33.5841136,-101.8450548,google_maps+marshall_project,33.5841136,-101.8450548,33.58437,-101.845109,marshall_project,0.028949085107738422,full,FALSE
-2129,Laredo Detention Center Hold Room,4702 EAST SAUNDERS STREET,LAREDO,TX,78041,27.5292214,-99.447934,google_maps+marshall_project,27.5292214,-99.447934,27.529078,-99.44792,marshall_project,0.016004998032209557,full,FALSE
-2130,Los Fresnos Hold Room,"213 Orive Blvd, Los Fresnos, TX 78566",LOS FRESNOS,TX,78566,26.0757281,-97.512372,google_maps+marshall_project,26.0757281,-97.512372,26.0745673,-97.5121806,marshall_project,0.13048300737698437,full,FALSE
-2131,"Midland, Tx ERO Holdroom",400 S. MAIN STREET,MIDLAND,TX,79701,31.994141,-102.0750416,google_maps+marshall_project,31.994141,-102.0750416,31.994252,-102.074372,marshall_project,0.06434131374555208,full,FALSE
-2132,Pecos Hold Room,250 EAST PALMER ROAD,PECOS,TX,79772,NA,NA,divergent,31.4229124,-103.4932293,31.3981762,-103.5214509,marshall_project,3.8390575493146417,full,TRUE
-2133,Pdn Hold Room,1000 S. EL PASO STREET,EL PASO,TX,79901,31.75103519999999,-106.4868749,google_maps+marshall_project,31.75103519999999,-106.4868749,31.74968832,-106.4867865,marshall_project,0.14999929319425484,full,FALSE
-2134,Prairieland Suboffice Hold Room,1209 SUNFLOWER LN,ALVARADO,TX,76009,32.4065312,-97.2116782,auto:google_maps+marshall_project,32.4065312,-97.2116782,32.42078539,-97.19690234,marshall_project,2.1061892623568617,full,TRUE
-2135,Rio Grande Valley Staging,27991 BUENA VISTA BLVD,LOS FRESNOS,TX,78566,26.1569011,-97.3505561,auto:google_maps+marshall_project,26.1569011,-97.3505561,26.155113,-97.338322,marshall_project,1.237145835301228,full,TRUE
-2136,San Angelo Holdroom,3197 EXECUTIVE DR,SAN ANGELO,TX,76904,31.4215029,-100.4638024,google_maps+marshall_project,31.4215029,-100.4638024,31.42195134,-100.4640316,marshall_project,0.05440072578736734,full,FALSE
-2137,South Texas/Pearsall Hold Room,566 VETERAN DRIVE,PEARSALL,TX,78061,28.8973835,-99.1187908,google_maps+marshall_project,28.8973835,-99.1187908,28.895232,-99.121238,marshall_project,0.33762475416389043,full,FALSE
-2138,Waco Dro Hold Room,800 FRANKLIN AVENUE,WACO,TX,76701,31.5532338,-97.1334651,google_maps+marshall_project,31.5532338,-97.1334651,31.553515,-97.133522,marshall_project,0.03172944426490772,full,FALSE
-2139,Ogden Hold Room,"2487 S. 1620 W., UNIT E.",OGDEN,UT,84401,41.2205835,-112.0191482,google_maps+marshall_project,41.2205835,-112.0191482,41.220537,-112.018854,marshall_project,0.025143805873878662,full,FALSE
-2140,Provo Hold Room,3075 NORTH MAIN,SPANISH FORK,UT,84660,40.1488668,-111.6597178,google_maps+marshall_project,40.1488668,-111.6597178,40.148962,-111.659712,marshall_project,0.010597229234570266,full,FALSE
-2141,"St. George, Ut Holdroom",UNAVAILABLE,SAINT GEORGE,UT,84770,NA,NA,divergent,37.19633719999999,-113.5966577,37.112707,-113.579872,vera_institute,9.417488786564718,full,TRUE
-2142,Harrisonburg Hold Room,"263 Neff Ave., Harrisonburg, VA 22801",HARRISONBURG,VA,22801,38.4271142,-78.8495901,google_maps+marshall_project,38.4271142,-78.8495901,38.4267988,-78.8483885,marshall_project,0.11039076868408217,full,FALSE
-2143,Norfolk Sub-Office Hold,5280 HENNEMAN DRIVE,NORFOLK,VA,23513,36.87616999999999,-76.2228761,google_maps+marshall_project,36.87616999999999,-76.2228761,36.8761636,-76.22287045,marshall_project,8.712109838689173e-4,full,FALSE
-2144,Richmond Sub-Office Hold,"400 N 8th St, Richmond, VA 23219",RICHMOND,VA,23219,37.5429144,-77.4340477,google_maps+marshall_project,37.5429144,-77.4340477,37.542324,-77.433933,marshall_project,0.0664238019796024,full,FALSE
-2145,Charlotte Amalie Holdroom,"5500, Veterans Dr, St Thomas 00801, U.S. Virgin Islands",ST. THOMAS,VI,00801,NA,NA,divergent,18.3403438,-64.9265683,18.3223,-64.9637,marshall_project,4.4030356565662165,full,TRUE
-2146,Saint Albans Hold Room,64 GRICEBROOK ROAD,SAINT ALBANS,VT,05478,44.8014691,-73.0734028,google_maps+marshall_project,44.8014691,-73.0734028,44.80115263,-73.07364169,marshall_project,0.039919656377175455,full,FALSE
-2147,Yakima Sub-Office,3701 RIVER ROAD,YAKIMA,WA,98902,46.6183336,-120.5593593,google_maps+marshall_project,46.6183336,-120.5593593,46.61803443,-120.5579912,marshall_project,0.10965634820445305,full,FALSE
-2148,Milwaukee Holdroom,310 E. KNAPP STREET,MILWAUKEE,WI,53201,43.0471532,-87.9080261,google_maps+marshall_project,43.0471532,-87.9080261,43.0475026,-87.9078194,marshall_project,0.04232683715144644,full,FALSE
-2149,Cheyenne Holdroom,308 W. 21ST STREET,CHEYENNE,WY,82001,41.1368016,-104.8198764,google_maps+marshall_project,41.1368016,-104.8198764,41.1368002,-104.8198995,marshall_project,0.0019407735782993331,full,FALSE
-2150,Casper Holdroom,150 E. B STREET,CASPER,WY,82601,42.8523725,-106.3242133,google_maps+marshall_project,42.8523725,-106.3242133,42.85207208,-106.3248983,marshall_project,0.0650692222027108,full,FALSE
-2151,Anchorage Sub-Office Hold Room,NA,NA,AK,NA,61.212362,-149.872299,vera_institute,NA,NA,61.212362,-149.872299,vera_institute,NA,no_address,FALSE
-2152,Mobile Holdroom,NA,NA,AL,NA,30.695111,-88.041554,vera_institute,NA,NA,30.695111,-88.041554,vera_institute,NA,no_address,FALSE
-2153,Arizona State Prison - Yuma,NA,NA,AZ,NA,33.452963,-112.025979,vera_institute,NA,NA,33.452963,-112.025979,vera_institute,NA,no_address,FALSE
-2154,Redding Hold Room,NA,NA,CA,NA,40.575012,-122.362639,vera_institute,NA,NA,40.575012,-122.362639,vera_institute,NA,no_address,FALSE
-2155,Santa Maria Sub Office ERO,NA,NA,CA,NA,34.918106,-120.444791,vera_institute,NA,NA,34.918106,-120.444791,vera_institute,NA,no_address,FALSE
-2156,Colo Springs Den Hsi Hold,NA,NA,CO,NA,38.83347,-104.81751,vera_institute,NA,NA,38.83347,-104.81751,vera_institute,NA,no_address,FALSE
-2157,Miami Border Patrol,NA,NA,FL,NA,25.773994,-80.195019,vera_institute,NA,NA,25.773994,-80.195019,vera_institute,NA,no_address,FALSE
-2158,Bowling Green Hold Room,NA,NA,KY,NA,38.049579,-77.346647,vera_institute,NA,NA,38.049579,-77.346647,vera_institute,NA,no_address,FALSE
-2159,Salisbury Hold Room,NA,NA,MD,NA,38.410507,-75.571609,vera_institute,NA,NA,38.410507,-75.571609,vera_institute,NA,no_address,FALSE
-2160,Duluth Hold Room,NA,NA,MN,NA,46.834333,-92.1561,vera_institute,NA,NA,46.834333,-92.1561,vera_institute,NA,no_address,FALSE
-2161,Mount Laurel Hold Room,NA,NA,NJ,NA,39.93288,-74.9575,vera_institute,NA,NA,39.93288,-74.9575,vera_institute,NA,no_address,FALSE
-2162,Las Cruces Hold Room,NA,NA,NM,NA,32.31994,-106.763654,vera_institute,NA,NA,32.31994,-106.763654,vera_institute,NA,no_address,FALSE
-2163,Roswell Hold Room,NA,NA,NM,NA,33.398085,-104.524837,vera_institute,NA,NA,33.398085,-104.524837,vera_institute,NA,no_address,FALSE
-2164,Champlain Hold Room,NA,NA,NY,NA,45.006527,-73.452829,vera_institute,NA,NA,45.006527,-73.452829,vera_institute,NA,no_address,FALSE
-2165,Central Islip Hold Room,NA,NA,NY,NA,40.759299,-73.190649,vera_institute,NA,NA,40.759299,-73.190649,vera_institute,NA,no_address,FALSE
-2166,Newburgh Holding,NA,NA,NY,NA,41.515748,-74.111023,vera_institute,NA,NA,41.515748,-74.111023,vera_institute,NA,no_address,FALSE
-2167,Syracuse Hold Room,NA,NA,NY,NA,43.111676,-76.123955,vera_institute,NA,NA,43.111676,-76.123955,vera_institute,NA,no_address,FALSE
-2168,Tulsa Hold Room,NA,NA,OK,NA,36.139538,-95.864309,vera_institute,NA,NA,36.139538,-95.864309,vera_institute,NA,no_address,FALSE
-2169,Williamsport Hold Room,NA,NA,PA,NA,41.223906,-77.071806,vera_institute,NA,NA,41.223906,-77.071806,vera_institute,NA,no_address,FALSE
-2170,York Hold Room,NA,NA,PA,NA,39.985618,-76.758593,vera_institute,NA,NA,39.985618,-76.758593,vera_institute,NA,no_address,FALSE
-2171,Corpus Christi Eor Hold Room,NA,NA,TX,NA,27.800583,-97.396381,vera_institute,NA,NA,27.800583,-97.396381,vera_institute,NA,no_address,FALSE
-2172,El Paso Soft Sided Facility,NA,NA,TX,NA,31.883642,-106.440946,vera_institute,NA,NA,31.883642,-106.440946,vera_institute,NA,no_address,FALSE
-2173,Mcallen Hold Room,NA,NA,TX,NA,26.263994,-98.198209,vera_institute,NA,NA,26.263994,-98.198209,vera_institute,NA,no_address,FALSE
-2174,Montgomery Hold Rm,NA,NA,TX,NA,30.344436,-95.449219,vera_institute,NA,NA,30.344436,-95.449219,vera_institute,NA,no_address,FALSE
+2027,Fayetteville Hold Room,P.O. BOX 1188 2887 N POINT CIRCLE,FAYETTEVILLE,AR,72701,35.9980929,-94.08999109999999,preference:google_maps,35.9980929,-94.08999109999999,36.10463,-94.178449,marshall_project,14.268035692477529,po_box,TRUE
+2028,Fort Smith Holdroom,"4991 Old Greenwood Rd, Fort Smith, AR 72903",FORT SMITH,AR,72901,35.3328677,-94.3878247,preference:marshall_project,35.3354817,-94.38919969999999,35.3328677,-94.3878247,marshall_project,0.3162951501550806,full,FALSE
+2029,Texarkana Holdroom,100 NORTH STATELINE AVENUE,TEXARKANA,AR,71854,33.4208569,-94.0431833,google_maps+marshall_project,33.4208569,-94.0431833,33.420881,-94.043166,marshall_project,0.003123976346049955,full,FALSE
+2030,Az Rem Op Coord Center (Arocc),"130 N Robson, Mesa, AZ 85201",MESA,AZ,85204,33.4183833,-111.8375752,google_maps+marshall_project,33.4183833,-111.8375752,33.4180114,-111.8367566,marshall_project,0.08650067370891125,full,FALSE
+2031,Tucson Ins Hold Room,6431 SOUTH COUNTRY CLUB ROAD,TUCSON,AZ,85706,32.1356653,-110.9248046,google_maps+marshall_project,32.1356653,-110.9248046,32.1353209,-110.9260223,marshall_project,0.1208837503171537,full,FALSE
+2032,Yuma Holdroom,3911 S. PICO AVE.,YUMA,AZ,85365,32.6565319,-114.6117867,google_maps+marshall_project,32.6565319,-114.6117867,32.65579891,-114.6121807,marshall_project,0.08946260155716869,full,FALSE
+2033,Bakerfield Hold,800 TRUXTUN,BAKERSFIELD,CA,93301,35.3736714,-119.0112192,google_maps+marshall_project,35.3736714,-119.0112192,35.37372,-119.01121,marshall_project,0.0054680712331347334,full,FALSE
+2034,Fresno Holdroom,733 L STREET,FRESNO,CA,93721,36.7326978,-119.7856018,google_maps+marshall_project,36.7326978,-119.7856018,36.73267589,-119.7852956,marshall_project,0.02739569683592882,full,FALSE
+2035,Imperial Sub Office Hold Room,"2409 La Brucherie Road, Suite 3",Imperial,CA,92251,NA,NA,divergent,32.8266637,-115.5793027,32.678948,-115.498883,vera_institute,18.065078570473545,full,TRUE
+2036,Santa Ana Dro Holdroom,34 CIVIC CENTER PLAZA,SANTA ANA,CA,90701,33.7484501,-117.8749858,google_maps+marshall_project,33.7484501,-117.8749858,33.748562,-117.875155,marshall_project,0.019988652128662916,full,FALSE
+2037,Sacramento Hold,650 CAPITOL MALL,SACRAMENTO,CA,95814,38.57800230000001,-121.4999684,preference:google_maps,38.57800230000001,-121.4999684,38.57813929,-121.4995672,marshall_project,0.038056848624618715,full,FALSE
+2038,San Bernardino Hold Room,655 WEST RIALTO AVENUE,SAN BERNADINO,CA,92410,34.1006917,-117.2972977,google_maps+marshall_project,34.1006917,-117.2972977,34.10077,-117.297624,marshall_project,0.031280291935838124,full,FALSE
+2039,Snj Hold Room,1887 MONTEREY ROAD,SAN JOSE,CA,95112,NA,NA,divergent,37.3080994,-121.8675044,37.23883,-121.7742945,marshall_project,11.28491890710703,full,TRUE
+2040,Stockton Staging Facility,22 EAST MARKET STREET,STOCKTON,CA,95202,37.9512028,-121.2900671,google_maps+marshall_project,37.9512028,-121.2900671,37.9511281,-121.2899487,marshall_project,0.013295425966813332,full,FALSE
+2041,Ventura Custody Case,275 SKYWAY DRIVE,CAMARRILLO,CA,93010,34.2063593,-119.0772538,preference:google_maps,34.2063593,-119.0772538,34.206389,-119.077197,marshall_project,0.00617978282142272,full,FALSE
+2042,Westminster Custody,8200 WESTMINSTER BOULEVARD,WESTMINSTER,CA,92683,33.7531536,-118.0010421,auto:google_maps+marshall_project,33.7531536,-118.0010421,33.75919,-117.9919216,marshall_project,1.0777196988227888,full,TRUE
+2043,Alamosa Holdroom,1921 STATE STREET,ALAMOSA,CO,81101,37.4893878,-105.8597721,google_maps+marshall_project,37.4893878,-105.8597721,37.487897,-105.8597891,marshall_project,0.16577618226882126,full,FALSE
+2044,Craig Holdroom,466 TUCKER STREET,CRAIG,CO,81625,40.5136142,-107.5451612,google_maps+marshall_project,40.5136142,-107.5451612,40.51362644,-107.5449635,marshall_project,0.0167681169723659,full,FALSE
+2045,Durango Holdroom,32 SHEPPARD DRIVE,DURANGO,CO,81303,37.2371432,-107.874248,google_maps+marshall_project,37.2371432,-107.874248,37.237142,-107.874147,marshall_project,0.008942170652972255,full,FALSE
+2046,Frederick Holdroom,3770 PURITAN WAY,FREDERICK,CO,80516,40.08207549999999,-104.9849103,google_maps+marshall_project,40.08207549999999,-104.9849103,40.08366084,-104.9842897,marshall_project,0.18401890883463587,full,FALSE
+2047,Grand Junction Holdroom,571 S. COMMERCIAL DRIVE,GRAND JUNCTION,CO,81501,39.0871873,-108.5858668,google_maps+marshall_project,39.0871873,-108.5858668,39.08742921,-108.5855331,marshall_project,0.03940889025228154,full,FALSE
+2048,Glenwood Springs Holdroom,100 MIDLAND AVENUE,GLENWOOD SPRINGS,CO,81601,NA,NA,divergent,39.5582742,-107.3582581,39.5150507,-107.3234023,marshall_project,5.659898768434913,full,TRUE
+2049,Pueblo Holdroom,"935 CO-67 Florence, CO 81226",FLORENCE,CO,81226,NA,NA,divergent,38.4265663,-105.1156314,38.393003,-105.116869,marshall_project,3.733626206814981,full,TRUE
+2050,Hartford Office,450 MAIN STREET,HARTFORD,CT,06103,41.7613805,-72.6734969,preference:google_maps,41.7613805,-72.6734969,41.65125491,-72.60366603,marshall_project,13.54823397673739,full,TRUE
+2051,Dover Holdroom,1305 MCD DRIVE,DOVER,DE,19901,39.1536338,-75.4882617,google_maps+marshall_project,39.1536338,-75.4882617,39.15450667,-75.48795118,marshall_project,0.10068412398205516,full,FALSE
+2052,Fort Myers ERO Holdroom,8860 SALROSE LANE,FORT MYERS,FL,33912,26.548482,-81.8109453,preference:google_maps,26.548482,-81.8109453,26.5489061,-81.8083647,marshall_project,0.26098798381234506,full,FALSE
+2053,Jacksonville Sub-Office,4121 SOUTHPOINT BLVD,JACKSONVILLE,FL,32216,30.2566701,-81.5900041,google_maps+marshall_project,30.2566701,-81.5900041,30.25553186,-81.59002626,marshall_project,0.12658440856745645,full,FALSE
+2054,Krome/Miami Hub,CONCOURSE E SATELLITMIAMI INTERNATIONAL,MIAMI,FL,33299,NA,NA,divergent,25.7952677,-80.2834383,25.75434,-80.48913,marshall_project,21.09314566670867,full,TRUE
+2055,Krome Hold Room,18201 SW 12TH ST,MIAMI,FL,33194,NA,NA,divergent,25.7543477,-80.4891143,25.7581461,-80.3509388,marshall_project,13.844416860024188,full,TRUE
+2056,Orlando Hold Room,9403 TRADEPORT DRIVE,ORLANDO,FL,32827,28.42749625,-81.3338145,preference:marshall_project,28.4281216,-81.3331197,28.42749625,-81.3338145,marshall_project,0.09721815646657252,full,FALSE
+2057,Stuart Hold Room,3500 SE COMMERCE AVE,STUART,FL,34997,27.155589,-80.212243,preference:marshall_project,27.1628237,-80.221999,27.155589,-80.212243,marshall_project,1.2564968734964024,full,TRUE
+2058,Tallahassee Hold Room,1530 COMMONWEALTH BUSINESS BLVD,TALLAHASSEE,FL,32303,30.4719963,-84.35514119999999,google_maps+marshall_project,30.4719963,-84.35514119999999,30.471947,-84.354361,marshall_project,0.07497223450439545,full,FALSE
+2059,Tampa Hold Room,"1201 Orient Rd, Tampa, FL 33619",TAMPA,FL,33619,27.959392,-82.3720724,google_maps+marshall_project,27.959392,-82.3720724,27.959412,-82.372276,marshall_project,0.020120112715816655,full,FALSE
+2060,Guam ERO Hold Room,108 Herman Cortez Ave,Hag̴ṯa,GU,96910,13.4760946,144.750006,google_maps+marshall_project,13.4760946,144.750006,13.476607,144.747679,marshall_project,0.25799620897260683,full,FALSE
+2061,ERO Honolulu Sub-Office Hold Room,595 ALA MOANA BLVD,HONOLULU,HI,96813,21.2999288,-157.8638944,google_maps+marshall_project,21.2999288,-157.8638944,21.299633,-157.8631238,marshall_project,0.0863439558591686,full,FALSE
+2062,Cedar Rapids Hold Room,"53 3rd Ave Bridge, Cedar Rapids, IA 52401",CEDAR RAPIDS,IA,52401,41.9745858,-91.66915139999999,google_maps+marshall_project,41.9745858,-91.66915139999999,41.9752949,-91.6700847,marshall_project,0.11031583750112403,full,FALSE
+2063,Des Moines Hold Room,"222 5th Ave, Des Moines, IA 50309",DES MOINES,IA,50301,41.5856411,-93.62360079999999,google_maps+marshall_project,41.5856411,-93.62360079999999,41.5854892,-93.6232534,marshall_project,0.033468024563331866,full,FALSE
+2064,Sioux City Hold Room,1400 PIERCE STREET,SIOUX CITY,IA,51101,42.505249,-96.40475970000001,google_maps+marshall_project,42.505249,-96.40475970000001,42.505131,-96.404939,marshall_project,0.0197026323857508,full,FALSE
+2065,Boise Hold Room,1185 S. VINNELL WAY,BOISE,ID,83709,43.5942506,-116.2875233,google_maps+marshall_project,43.5942506,-116.2875233,43.5927664,-116.2860691,marshall_project,0.2023652661280106,full,FALSE
+2066,Idaho Falls Hold Room,2075 NORTH BOULEVARD,IDAHO FALLS,ID,83401,43.5147311,-112.0339375,google_maps+marshall_project,43.5147311,-112.0339375,43.51475817,-112.0337537,marshall_project,0.015123875857182188,full,FALSE
+2067,Twin Falls Hold Room,2496 ADDISON AVENUE EAST,TWIN FALLS,ID,83301,NA,NA,divergent,42.5625826,-114.4338469,42.5631215,-114.4790992,marshall_project,3.7066044187324048,full,TRUE
+2068,Broadview Service Staging,1930 BEACH STREET,BROADVIEW,IL,60155,41.8680102,-87.8659385,google_maps+marshall_project,41.8680102,-87.8659385,41.86852212,-87.86562002,marshall_project,0.06273501562082731,full,FALSE
+2069,Rock Island Hold Room,1317 3RD AVENUE,ROCK ISLAND,IL,61201,41.509035,-90.58090899999999,google_maps+marshall_project,41.509035,-90.58090899999999,41.50918615,-90.58073053,marshall_project,0.022434917526509206,full,FALSE
+2070,Indianapolis Hold Room,"40 S Alabama St, Indianapolis, IN 46204",INDIANAPOLIS,IN,46206,39.7659792,-86.15315729999999,google_maps+marshall_project,39.7659792,-86.15315729999999,39.765936,-86.1535844,marshall_project,0.036819573842347596,full,FALSE
+2071,Wichita Holdroom,217 W 3RD ST. NORTH,WICHITA,KS,67201,37.6912501,-97.3396394,google_maps+marshall_project,37.6912501,-97.3396394,37.69151228,-97.33959072,marshall_project,0.02946607613943304,full,FALSE
+2072,Louisville Hold Room,400 S 6TH STREET,LOUISVILLE,KY,40202,38.2531573,-85.7608169,google_maps+marshall_project,38.2531573,-85.7608169,38.25320155,-85.76107196,marshall_project,0.02280873813718887,full,FALSE
+2073,Oakdale Holding Room,1010 E WHATLEY ROAD,OAKDALE,LA,71463,30.8310871,-92.65038919999999,auto:google_maps+marshall_project,30.8310871,-92.65038919999999,30.832183,-92.63684,marshall_project,1.2994113675009138,full,TRUE
+2074,Shreveport Hold Room,"400 TEXAS STREET, SUITE 900",SHREVEPORT,LA,71101,32.5136216,-93.7492406,google_maps+marshall_project,32.5136216,-93.7492406,32.513789,-93.749198,marshall_project,0.019037799576661144,full,FALSE
+2075,"Portland, Me Holdroom",511 NORTHWEST BROADWAY,PORTLAND,ME,04101,NA,NA,divergent,43.670822,-70.28438249999999,43.63491743,-70.25004189,marshall_project,4.855149960069933,full,TRUE
+2076,Grand Rapids Holdroom,517 OTTAWA AVE NW,GRAND RAPIDS,MI,49503,42.97265429999999,-85.67052609999999,google_maps+marshall_project,42.97265429999999,-85.67052609999999,42.97268389,-85.67005197,marshall_project,0.038714804203560944,full,FALSE
+2077,ERO Hold Room (Springfield Mo),2401 W. OLD ROUTE 66,STRAFFORD,MO,65757,37.2518247,-93.1678639,preference:google_maps,37.2518247,-93.1678639,37.2669575,-93.1294134,marshall_project,3.796189975862155,full,TRUE
+2078,St. Louis Holdroom,1222 SPRUCE STREET,ST. LOUIS,MO,63101,38.6243789,-90.2003828,google_maps+marshall_project,38.6243789,-90.2003828,38.62431814,-90.19991016,marshall_project,0.041611153523211916,full,FALSE
+2079,Saipain Hold,"Susupe, Saipan 96950, CNMI",SAIPAN,MP,96950,15.1567839,145.7028775,google_maps+marshall_project,15.1567839,145.7028775,15.156223,145.703679,marshall_project,0.10625353161644112,full,FALSE
+2080,Jackson Ms Hold Room,202 METROPLEX BLVD,PEARL,MS,39208,32.2902501,-90.0597098,google_maps+marshall_project,32.2902501,-90.0597098,32.2879592,-90.0604261,marshall_project,0.2634849140461453,full,FALSE
+2081,Billings Hold Room,2900 4TH AVE NORTH,BILLINGS,MT,59101,45.7836118,-108.5095733,google_maps+marshall_project,45.7836118,-108.5095733,45.783884,-108.509563,marshall_project,0.030277795384722684,full,FALSE
+2082,Hel District Custody,805 COLLEEN STREET,HELENA,MT,59601,46.5937137,-111.9724396,google_maps+marshall_project,46.5937137,-111.9724396,46.59349986,-111.9741765,marshall_project,0.13482918771854552,full,FALSE
+2083,Charlotte Hold Room,"601 E Trade St, Charlotte, NC 28202",CHARLOTTE,NC,28202,35.2226924,-80.83722440000001,google_maps+marshall_project,35.2226924,-80.83722440000001,35.222886,-80.837843,marshall_project,0.0601741784502539,full,FALSE
+2084,Hendersonville Hold Room,518 6TH AVE W,HENDERSONVILLE,NC,28792,35.3187546,-82.467828,google_maps+marshall_project,35.3187546,-82.467828,35.31880745,-82.46808227,marshall_project,0.023806465745095987,full,FALSE
+2085,Raleigh Hold Room,"120 Wilkinson Ave, Cary, NC 27513",CARY,NC,27512,35.789774800000004,-78.77960730000001,google_maps+marshall_project,35.789774800000004,-78.77960730000001,35.7897439,-78.7796076,marshall_project,0.003436029784163919,full,FALSE
+2086,Grand Forks Hold Room,124 NORTH 6TH STREET,GRAND FORKS,ND,58203,47.924267,-97.0353236,google_maps+marshall_project,47.924267,-97.0353236,47.92382012,-97.03497765,marshall_project,0.05597924041908875,full,FALSE
+2087,Grand Island Hold Room,220 N. WALNUT STREET,GRAND ISLAND,NE,68801,40.9242015,-98.3432364,google_maps+marshall_project,40.9242015,-98.3432364,40.924152,-98.343144,marshall_project,0.009516382351604357,full,FALSE
+2088,North Platte Hold Room,"300 East 3rd Street North Platte, NE 69101",NORTH PLATTE,NE,69101,41.1345586,-100.7607001,google_maps+marshall_project,41.1345586,-100.7607001,41.135013,-100.759979,marshall_project,0.07874015809212645,full,FALSE
+2089,Omaha Fo Hold,2323 AVENUE J,OMAHA,NE,68110,41.2820726,-95.8987599,google_maps+marshall_project,41.2820726,-95.8987599,41.2812941,-95.8987635,marshall_project,0.08656577306507668,full,FALSE
+2090,Manchester Holdroom,811 CANAL STREET,MANCHESTER,NH,03101,42.9984836,-71.46629639999999,google_maps+marshall_project,42.9984836,-71.46629639999999,42.99851926,-71.46659763,marshall_project,0.024816304709176725,full,FALSE
+2091,Albuquerque Hold Room,1720 RANDOLPH ROAD,ALBUQUERQUE,NM,87106,35.0522552,-106.6270349,google_maps+marshall_project,35.0522552,-106.6270349,35.0526543,-106.6292985,marshall_project,0.2107737803237501,full,FALSE
+2092,Las Vegas Hold Room,3373 PEPPER LANE,LAS VEGAS,NV,89120,NA,NA,divergent,36.0759542,-115.102069,36.0583473,-115.2251266,marshall_project,11.232587190557568,full,TRUE
+2093,Reno Hold Room,"911 E Parr Blvd, Reno, NV 89512",RENO,NV,89512,39.5711833,-119.8111143,google_maps+marshall_project,39.5711833,-119.8111143,39.5729049,-119.8094503,marshall_project,0.23872235741594583,full,FALSE
+2094,Albany Holdroom,1086 TROY-SCHENECTADY RD,LATHAM,NY,12110,42.7653031,-73.8121646,preference:google_maps,42.7653031,-73.8121646,42.7533809,-73.769379,marshall_project,3.7361477946248725,full,TRUE
+2095,Buffalo Usbp Hold Room,250 Delaware Avenue Floor 7,Buffalo,NY,14202,42.8911691,-78.8769453,auto:google_maps+vera_institute,42.8911691,-78.8769453,42.875338,-78.849655,vera_institute,2.836001478147246,full,TRUE
+2096,Batavia Command Center Holdroom,4250 FEDERAL DRIVE,Batavia,NY,NA,43.0201451,-78.2023932,auto:google_maps+marshall_project,43.0201451,-78.2023932,43,-78.2,marshall_project,2.248468964241552,full,TRUE
+2097,Vrk Prcs,201 VARICK STREET,NEW YORK,NY,10014,40.7282753,-74.00556619999999,google_maps+marshall_project,40.7282753,-74.00556619999999,40.72829055,-74.00626961,marshall_project,0.059297016547207065,full,FALSE
+2098,Cincinnati Holdroom,9875 Redhill Drive,Blue Ash,OH,45242,39.2382289,-84.380236,google_maps+vera_institute,39.2382289,-84.380236,39.238322,-84.380325,vera_institute,0.012881007187835207,full,FALSE
+2099,Cleveland Hold Room,"1240 E. 9TH STREET, ROOM 585",CLEVELAND,OH,44199,41.5049609,-81.69177239999999,google_maps+marshall_project,41.5049609,-81.69177239999999,41.504901,-81.691781,marshall_project,0.006698966397720681,full,FALSE
+2100,Columbus Holdroom,50 WEST BROAD ST,COLUMBUS,OH,43215,39.9624569,-83.0021146,google_maps+marshall_project,39.9624569,-83.0021146,39.9623335,-83.00217974,marshall_project,0.014802014447256538,full,FALSE
+2101,Oklahoma City Hold Room.,4400 SW 44TH STREET,OKLAHOMA CITY,OK,73119,35.4236398,-97.5975192,google_maps+marshall_project,35.4236398,-97.5975192,35.42401994,-97.5967341,marshall_project,0.08274942600381872,full,FALSE
+2102,Eugene Holdroom,211 EAST 7TH AVENUE,EUGENE,OR,97401,44.0524622,-123.0885813,google_maps+marshall_project,44.0524622,-123.0885813,44.052201,-123.0893848,marshall_project,0.0704758323616153,full,FALSE
+2103,Medford Sub-Office,310 WEST 6TH STREET,MEDFORD,OR,97501,42.3255106,-122.8772236,google_maps+marshall_project,42.3255106,-122.8772236,42.32540398,-122.8769674,marshall_project,0.02416963629972575,full,FALSE
+2104,Portland District Office,1111 SOUTHWEST 2ND AVENUE,PORTLAND,OR,97204,45.51504569999999,-122.67631,google_maps+marshall_project,45.51504569999999,-122.67631,45.5150962,-122.6763292,marshall_project,0.005811204978612132,full,FALSE
+2105,Pittsburgh Holdroom,3000 SIDNEY ST SUITE 100,PITTSBURGH,PA,15203,40.4248324,-79.96081099999999,google_maps+marshall_project,40.4248324,-79.96081099999999,40.424825,-79.960811,marshall_project,8.228424573045022e-4,full,FALSE
+2106,Pike County ERO Hold Room,170 PIKE COUNTY BLVD,HAWLEY,PA,18428,41.3885184,-75.0724974,google_maps+marshall_project,41.3885184,-75.0724974,41.388359,-75.072108,marshall_project,0.037005895739383295,full,FALSE
+2107,Aguadilla SPC,"Maleza Baja, Aguadilla, Puerto Rico, Aguadilla 00604Puerto Rico",AGUADILLA,PR,00603,18.4962828,-67.1355075,google_maps+marshall_project,18.4962828,-67.1355075,18.49428,-67.14213,marshall_project,0.7330032933068429,full,FALSE
+2108,San Juan Sub-Office Hold Room,"7 Cll TabonucoGuaynabo, 00968, Puerto Rico",GUAYNABO,PR,00968,18.4078569,-66.1074296,google_maps+marshall_project,18.4078569,-66.1074296,18.406539,-66.106714,marshall_project,0.16484940026683825,full,FALSE
+2109,San Juan Airport Hold Room,LUIS MUNOZ MARIN IA,SAN JUAN,PR,00937,NA,NA,divergent,18.4075321,-66.0730507,18.437531,-66.004703,marshall_project,7.944648635770259,full,TRUE
+2110,Prohold,443 Jefferson Blvd North Suite,Warwick,RI,02886,41.7357562,-71.4411413,auto:google_maps+vera_institute,41.7357562,-71.4411413,41.726973,-71.457116,vera_institute,1.6465367171936147,full,TRUE
+2111,"Charleston, Sc Hold Room",3950 FABER PLACE DR,CHARLESTON,SC,29705,32.846752,-80.019771,preference:marshall_project,32.8463863,-80.0199001,32.846752,-80.019771,marshall_project,0.04241472435783822,full,FALSE
+2112,"Columbia, Sc Holdroom","1835 Assembly St Columbia, SC 29201",COLUMBIA,SC,29201,34.0088782,-81.0401775,google_maps+marshall_project,34.0088782,-81.0401775,34.009224,-81.038982,marshall_project,0.1167110383008689,full,FALSE
+2113,Greer Hold Room,"501 Pennsylvania Ave, Greer, SC 29650",GREER,SC,29650,34.9393051,-82.24697139999999,google_maps+marshall_project,34.9393051,-82.24697139999999,34.9371548,-82.2418822,marshall_project,0.5218958502757078,full,FALSE
+2114,Rapid City Hold Room,1675 SAMCO ROAD,RAPID CITY,SD,57702,44.1007278,-103.2667352,google_maps+marshall_project,44.1007278,-103.2667352,44.09919672,-103.2646852,marshall_project,0.23618023839791655,full,FALSE
+2115,Sioux Falls Hold Room,300 EAST 8TH STREET,SIOUX FALLS,SD,57103,43.5499676,-96.7233919,google_maps+marshall_project,43.5499676,-96.7233919,43.548712,-96.72369,marshall_project,0.14166827685152156,full,FALSE
+2116,Chattanooga Hold Room,"3117 Dayton Blvd, Red Bank, TN 37415",CHATTANOOGA,TN,37450,35.1059466,-85.2986177,google_maps+marshall_project,35.1059466,-85.2986177,35.106032,-85.297818,marshall_project,0.07336381017958639,full,FALSE
+2117,Memphis Hold Room,842 VIRGINIA RUN COVE,MEMPHIS,TN,38122,35.1563308,-89.88122030000001,google_maps+marshall_project,35.1563308,-89.88122030000001,35.15751129,-89.88252957,marshall_project,0.17719385063316,full,FALSE
+2118,Amarillo Hold Room,8601 E. AMARILLO BLVD,AMARILLO,TX,79801,NA,NA,divergent,35.2069816,-101.8320065,35.22253615,-101.7488485,marshall_project,7.750021677647471,full,TRUE
+2119,"Athens, Tx Hold Room",109 W CORSICANA STREET,ATHENS,TX,75751,32.2035715,-95.85582749999999,preference:google_maps,32.2035715,-95.85582749999999,32.20444798,-95.85398128,marshall_project,0.19918032994086343,full,FALSE
+2120,Austin Dro Hold Room,300 EAST 8TH STREET,AUSTIN,TX,78701,30.2693858,-97.73903920000001,google_maps+marshall_project,30.2693858,-97.73903920000001,30.269638,-97.738978,marshall_project,0.02865263074301747,full,FALSE
+2121,Big Spring Hold Room,1701 APRON DRIVE,BIG SPRING,TX,79720,32.2248668,-101.5140425,google_maps+marshall_project,32.2248668,-101.5140425,32.225131,-101.514653,marshall_project,0.06450565897374859,full,FALSE
+2122,Del Rio Dro Hold Room,2401 DODSON AVENUE,DEL RIO,TX,78840,29.3927093,-100.8988898,preference:google_maps,29.3927093,-100.8988898,29.393471,-100.899841,marshall_project,0.12516329085669764,full,FALSE
+2123,Egp Cpc Holding,11541 Montana Ave Suite E,El Paso,TX,79936,31.80421399999999,-106.2910235,google_maps,31.80421399999999,-106.2910235,NA,NA,NA,NA,full,FALSE
+2124,Lubbock Hold Room,"1205 TEXAS AVE, SUITE 605",LUBBOCK,TX,79401,33.5841136,-101.8450548,google_maps+marshall_project,33.5841136,-101.8450548,33.58437,-101.845109,marshall_project,0.028949085107738422,full,FALSE
+2125,Laredo Detention Center Hold Room,4702 EAST SAUNDERS STREET,LAREDO,TX,78041,27.5292214,-99.44793399999999,google_maps+marshall_project,27.5292214,-99.44793399999999,27.529078,-99.44792,marshall_project,0.016004998032088696,full,FALSE
+2126,Los Fresnos Hold Room,"213 Orive Blvd, Los Fresnos, TX 78566",LOS FRESNOS,TX,78566,26.0757281,-97.512372,google_maps+marshall_project,26.0757281,-97.512372,26.0745673,-97.5121806,marshall_project,0.13048300737698437,full,FALSE
+2127,"Midland, Tx ERO Holdroom",400 S. MAIN STREET,MIDLAND,TX,79701,31.994141,-102.0750416,google_maps+marshall_project,31.994141,-102.0750416,31.994252,-102.074372,marshall_project,0.06434131374555208,full,FALSE
+2128,Pecos Hold Room,250 EAST PALMER ROAD,PECOS,TX,79772,NA,NA,divergent,31.4229124,-103.4932293,31.3981762,-103.5214509,marshall_project,3.8390575493146417,full,TRUE
+2129,Pdn Hold Room,1000 S. EL PASO STREET,EL PASO,TX,79901,31.75103519999999,-106.4868749,google_maps+marshall_project,31.75103519999999,-106.4868749,31.74968832,-106.4867865,marshall_project,0.14999929319425484,full,FALSE
+2130,Prairieland Suboffice Hold Room,1209 SUNFLOWER LN,ALVARADO,TX,76009,32.4065312,-97.2116782,auto:google_maps+marshall_project,32.4065312,-97.2116782,32.42078539,-97.19690234,marshall_project,2.1061892623568617,full,TRUE
+2131,Rio Grande Valley Staging,27991 BUENA VISTA BLVD,LOS FRESNOS,TX,78566,26.1569011,-97.35055609999999,auto:google_maps+marshall_project,26.1569011,-97.35055609999999,26.155113,-97.338322,marshall_project,1.2371458352998281,full,TRUE
+2132,San Angelo Holdroom,3197 EXECUTIVE DR,SAN ANGELO,TX,76904,31.4215029,-100.4638024,google_maps+marshall_project,31.4215029,-100.4638024,31.42195134,-100.4640316,marshall_project,0.05440072578736734,full,FALSE
+2133,South Texas/Pearsall Hold Room,566 VETERAN DRIVE,PEARSALL,TX,78061,28.8973835,-99.1187908,google_maps+marshall_project,28.8973835,-99.1187908,28.895232,-99.121238,marshall_project,0.33762475416389043,full,FALSE
+2134,Waco Dro Hold Room,800 FRANKLIN AVENUE,WACO,TX,76701,31.553515,-97.133522,preference:marshall_project,31.5532338,-97.1334651,31.553515,-97.133522,marshall_project,0.03172944426490772,full,FALSE
+2135,Ogden Hold Room,"2487 S. 1620 W., UNIT E.",OGDEN,UT,84401,41.2205835,-112.0191482,google_maps+marshall_project,41.2205835,-112.0191482,41.220537,-112.018854,marshall_project,0.025143805873878662,full,FALSE
+2136,Provo Hold Room,3075 NORTH MAIN,SPANISH FORK,UT,84660,40.1488668,-111.6597178,google_maps+marshall_project,40.1488668,-111.6597178,40.148962,-111.659712,marshall_project,0.010597229234570266,full,FALSE
+2137,Harrisonburg Hold Room,"263 Neff Ave., Harrisonburg, VA 22801",HARRISONBURG,VA,22801,38.4271142,-78.8495901,google_maps+marshall_project,38.4271142,-78.8495901,38.4267988,-78.8483885,marshall_project,0.11039076868408217,full,FALSE
+2138,Norfolk Sub-Office Hold,5280 HENNEMAN DRIVE,NORFOLK,VA,23513,36.87616999999999,-76.2228761,google_maps+marshall_project,36.87616999999999,-76.2228761,36.8761636,-76.22287045,marshall_project,8.712109838689173e-4,full,FALSE
+2139,Richmond Sub-Office Hold,"400 N 8th St, Richmond, VA 23219",RICHMOND,VA,23219,37.5429144,-77.4340477,google_maps+marshall_project,37.5429144,-77.4340477,37.542324,-77.433933,marshall_project,0.0664238019796024,full,FALSE
+2140,Charlotte Amalie Holdroom,"5500, Veterans Dr, St Thomas 00801, U.S. Virgin Islands",ST. THOMAS,VI,00801,NA,NA,divergent,18.3403438,-64.9265683,18.3223,-64.9637,marshall_project,4.4030356565662165,full,TRUE
+2141,Saint Albans Hold Room,64 GRICEBROOK ROAD,SAINT ALBANS,VT,05478,44.8014691,-73.0734028,preference:google_maps,44.8014691,-73.0734028,44.80115263,-73.07364169,marshall_project,0.039919656377175455,full,FALSE
+2142,Yakima Sub-Office,3701 RIVER ROAD,YAKIMA,WA,98902,46.6183336,-120.5593593,google_maps+marshall_project,46.6183336,-120.5593593,46.61803443,-120.5579912,marshall_project,0.10965634820445305,full,FALSE
+2143,Milwaukee Holdroom,310 E. KNAPP STREET,MILWAUKEE,WI,53201,43.0471532,-87.9080261,google_maps+marshall_project,43.0471532,-87.9080261,43.0475026,-87.9078194,marshall_project,0.04232683715144644,full,FALSE
+2144,Cheyenne Holdroom,308 W. 21ST STREET,CHEYENNE,WY,82001,41.1368016,-104.8198764,google_maps+marshall_project,41.1368016,-104.8198764,41.1368002,-104.8198995,marshall_project,0.0019407735782993331,full,FALSE
+2145,Casper Holdroom,150 E. B STREET,CASPER,WY,82601,42.8523725,-106.3242133,preference:google_maps,42.8523725,-106.3242133,42.85207208,-106.3248983,marshall_project,0.0650692222027108,full,FALSE
+2146,Anchorage Sub-Office Hold Room,NA,NA,AK,NA,61.212362,-149.872299,vera_institute,NA,NA,61.212362,-149.872299,vera_institute,NA,no_address,FALSE
+2147,Etowah ERO Hold Room,NA,NA,AL,NA,34.016508,-86.012396,vera_institute,NA,NA,34.016508,-86.012396,vera_institute,NA,no_address,FALSE
+2148,Mobile Holdroom,NA,NA,AL,NA,30.695111,-88.041554,vera_institute,NA,NA,30.695111,-88.041554,vera_institute,NA,no_address,FALSE
+2149,Little Rock Hold Room,NA,NA,AR,NA,34.723782,-92.307733,vera_institute,NA,NA,34.723782,-92.307733,vera_institute,NA,no_address,FALSE
+2150,Arizona State Prison - Yuma,NA,NA,AZ,NA,33.452963,-112.025979,vera_institute,NA,NA,33.452963,-112.025979,vera_institute,NA,no_address,FALSE
+2151,Redding Hold Room,NA,NA,CA,NA,40.575012,-122.362639,vera_institute,NA,NA,40.575012,-122.362639,vera_institute,NA,no_address,FALSE
+2152,Santa Maria Sub Office ERO,NA,NA,CA,NA,34.918106,-120.444791,vera_institute,NA,NA,34.918106,-120.444791,vera_institute,NA,no_address,FALSE
+2153,Colo Springs Den Hsi Hold,NA,NA,CO,NA,38.83347,-104.81751,vera_institute,NA,NA,38.83347,-104.81751,vera_institute,NA,no_address,FALSE
+2154,Miami Border Patrol,NA,NA,FL,NA,25.773994,-80.195019,vera_institute,NA,NA,25.773994,-80.195019,vera_institute,NA,no_address,FALSE
+2155,Bowling Green Hold Room,NA,NA,KY,NA,38.049579,-77.346647,vera_institute,NA,NA,38.049579,-77.346647,vera_institute,NA,no_address,FALSE
+2156,Salisbury Hold Room,NA,NA,MD,NA,38.410507,-75.571609,vera_institute,NA,NA,38.410507,-75.571609,vera_institute,NA,no_address,FALSE
+2157,Duluth Hold Room,NA,NA,MN,NA,46.834333,-92.1561,vera_institute,NA,NA,46.834333,-92.1561,vera_institute,NA,no_address,FALSE
+2158,Mount Laurel Hold Room,NA,NA,NJ,NA,39.93288,-74.9575,vera_institute,NA,NA,39.93288,-74.9575,vera_institute,NA,no_address,FALSE
+2159,Las Cruces Hold Room,NA,NA,NM,NA,32.31994,-106.763654,vera_institute,NA,NA,32.31994,-106.763654,vera_institute,NA,no_address,FALSE
+2160,Roswell Hold Room,NA,NA,NM,NA,33.398085,-104.524837,vera_institute,NA,NA,33.398085,-104.524837,vera_institute,NA,no_address,FALSE
+2161,Champlain Hold Room,NA,NA,NY,NA,45.006527,-73.452829,vera_institute,NA,NA,45.006527,-73.452829,vera_institute,NA,no_address,FALSE
+2162,Central Islip Hold Room,NA,NA,NY,NA,40.759299,-73.190649,vera_institute,NA,NA,40.759299,-73.190649,vera_institute,NA,no_address,FALSE
+2163,Newburgh Holding,NA,NA,NY,NA,41.515748,-74.111023,vera_institute,NA,NA,41.515748,-74.111023,vera_institute,NA,no_address,FALSE
+2164,Syracuse Hold Room,NA,NA,NY,NA,43.111676,-76.123955,vera_institute,NA,NA,43.111676,-76.123955,vera_institute,NA,no_address,FALSE
+2165,Tulsa Hold Room,NA,NA,OK,NA,36.139538,-95.864309,vera_institute,NA,NA,36.139538,-95.864309,vera_institute,NA,no_address,FALSE
+2166,Williamsport Hold Room,NA,NA,PA,NA,41.223906,-77.071806,vera_institute,NA,NA,41.223906,-77.071806,vera_institute,NA,no_address,FALSE
+2167,York Hold Room,NA,NA,PA,NA,39.985618,-76.758593,vera_institute,NA,NA,39.985618,-76.758593,vera_institute,NA,no_address,FALSE
+2168,Knoxville Hold Room,NA,NA,TN,NA,35.960303,-83.916773,vera_institute,NA,NA,35.960303,-83.916773,vera_institute,NA,no_address,FALSE
+2169,Nashville Hold Room,NA,NA,TN,NA,36.167759,-86.779278,vera_institute,NA,NA,36.167759,-86.779278,vera_institute,NA,no_address,FALSE
+2170,Corpus Christi Eor Hold Room,NA,NA,TX,NA,27.800583,-97.396381,vera_institute,NA,NA,27.800583,-97.396381,vera_institute,NA,no_address,FALSE
+2171,El Paso Soft Sided Facility,NA,NA,TX,NA,31.883642,-106.440946,vera_institute,NA,NA,31.883642,-106.440946,vera_institute,NA,no_address,FALSE
+2172,Mcallen Hold Room,NA,NA,TX,NA,26.263994,-98.198209,vera_institute,NA,NA,26.263994,-98.198209,vera_institute,NA,no_address,FALSE
+2173,Montgomery Hold Rm,NA,NA,TX,NA,30.344436,-95.449219,vera_institute,NA,NA,30.344436,-95.449219,vera_institute,NA,no_address,FALSE
+2174,"St. George, Ut Holdroom",NA,NA,UT,NA,37.112707,-113.579872,vera_institute,NA,NA,37.112707,-113.579872,vera_institute,NA,no_address,FALSE
 2175,"Lorton, Va Hold Room",NA,NA,VA,NA,38.880738,-77.232342,vera_institute,NA,NA,38.880738,-77.232342,vera_institute,NA,no_address,FALSE
 2176,Roanoke Sub-Office Hold Room,NA,NA,VA,NA,37.2926,-80.061161,vera_institute,NA,NA,37.2926,-80.061161,vera_institute,NA,no_address,FALSE
 2177,Ferndale Hold Room,NA,NA,WA,NA,48.846499,-122.591006,vera_institute,NA,NA,48.846499,-122.591006,vera_institute,NA,no_address,FALSE
@@ -781,7 +781,7 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 3044,Highlands Behavioral Health,8565 Poplar Way,Littleton,CO,80130,39.5626243,-104.9077281,google_maps+vera_institute,39.5626243,-104.9077281,39.56276,-104.90765,vera_institute,0.016507736946624482,full,FALSE
 3045,Saint Joseph Hospital,1375 E 19th Ave,Denver,CO,80218,39.7464934,-104.9716478,google_maps+vera_institute,39.7464934,-104.9716478,39.746693,-104.971246,vera_institute,0.04089820831417811,full,FALSE
 3046,Uchealth Unv Hosp Of Co,12605 E 16th Ave,Aurora,CO,80045,39.7421389,-104.8414821,google_maps+vera_institute,39.7421389,-104.8414821,39.742491,-104.841405,vera_institute,0.03970282400463763,full,FALSE
-3047,Atlantic Shores Hospital,4545 North Federal Highway,Fort Lauderdale,FL,33308,NA,NA,divergent,26.1846956,-80.1188678,26.122524,-80.137358,vera_institute,7.155262831657549,full,TRUE
+3047,Atlantic Shores Hospital,4545 North Federal Highway,Fort Lauderdale,FL,33308,26.1846956,-80.1188678,preference:google_maps,26.1846956,-80.1188678,26.122524,-80.137358,vera_institute,7.155262831657549,full,TRUE
 3048,Broward General Medical Center,1600 South Andrews Avenue,Ft. Lauderdale,FL,33316,26.1020662,-80.1408675,google_maps+vera_institute,26.1020662,-80.1408675,26.10273,-80.141167,vera_institute,0.07963967855305011,full,FALSE
 3049,Columbia Kendal Hospital,11750 S.W. Bird Rd.,Miami,FL,33175,25.7316502,-80.3858652,google_maps+vera_institute,25.7316502,-80.3858652,25.730701,-80.3856,vera_institute,0.10883792648814777,full,FALSE
 3050,Ed Fraser Memorial Hospital,159 N 3rd St,Macclenny,FL,32063,30.2861576,-82.118911,google_maps+vera_institute,30.2861576,-82.118911,30.286158,-82.118911,vera_institute,4.447797078255365e-5,full,FALSE

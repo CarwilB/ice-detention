@@ -1,5 +1,5 @@
 Non-facility rows extracted from FY23 spreadsheet
-Extracted: 2026-04-02 23:04:54
+Extracted: 2026-04-06 00:12:33
 
 <empty row>
 [1] (STFRCTX) SOUTH TEXAS FAMILY RESIDENTIAL CENTER houses single adults and no longer house family units as of 12/11/21.

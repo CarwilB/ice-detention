@@ -127,7 +127,7 @@ address_patches <- function() {
     ~facility_name,                 ~facility_address,         ~facility_city,    ~facility_state, ~facility_zip,
     "JTF Camp Six",                 "Bldg 2144, U.S. Naval Station Guantanamo Bay", "Guantanamo Bay", "Cuba", "34009",
     "San Diego District Staging",   "880 Front Street",        "San Diego",       "CA",            "92101",
-    "Burleigh County",              "4000 Apple Creek Road",   "Bismarck",        "ND",            "58504",
+    "Burleigh County Detention Center", "4000 Apple Creek Road", "Bismarck",       "ND",            "58504",
     "Lincoln County Jail",          "302 N Jeffers",           "North Platte",    "NE",            "69101",
     "Otero County Detention",       "1958 Dr M.L.K. Jr. Dr",  "Alamogordo",      "NM",            "88310",
     "Winn Correctional Center",     "180 Cca Blvd",            "Winnfield",       "LA",            "71483",

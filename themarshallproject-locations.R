@@ -170,6 +170,15 @@ hold_stub_address_patches <- function() {
 
     "LVHOLDNV", "manual", "501 S. Las Vegas Boulevard, Suite 100",
     "Las Vegas",   "89101", NA_character_,
+    NA_real_, NA_real_, NA_character_, as.Date(NA), as.Date(NA),
+
+    # Corrections for facilities with wrong Marshall Project addresses
+    "POMHOLDME", "manual", "40 Manson Libby Road, Suite 101",
+    "Scarborough",  "04074", NA_character_,
+    NA_real_, NA_real_, NA_character_, as.Date(NA), as.Date(NA),
+
+    "AMTHOLDTX", "manual", "9100 S Georgia St",
+    "Amarillo",    "79118", NA_character_,
     NA_real_, NA_real_, NA_character_, as.Date(NA), as.Date(NA)
   )
 }
@@ -266,39 +275,43 @@ build_hold_canonical <- function(ddp_codes, marshall_locations, ero_canonical,
   hold_new <- hold_marshall |>
     dplyr::filter(!detention_facility_code %in% already_canonical)
 
-  # ── Step 5: Split into addressed (Marshall) vs stubs (DDP only) ───────────
-  # Ensure address_source column exists for downstream patching
+  # ── Step 5: Apply manual address patches, then split ─────────────────────
+  # Patches override address fields for facilities with missing, UNAVAILABLE,
+
+  # or incorrect Marshall Project addresses. Applied to ALL hold facilities
+  # before the addressed/stub split so they can fix any category.
   if (!"address_source" %in% names(hold_new)) {
     hold_new <- hold_new |> dplyr::mutate(address_source = NA_character_)
   }
 
-  hold_with_addr <- hold_new |>
-    dplyr::filter(!is.na(facility_address), !is.na(facility_city))
-  hold_stubs <- hold_new |>
-    dplyr::filter(is.na(facility_address) | is.na(facility_city))
-
-  # ── Step 5b: Apply manual address patches to promote stubs ────────────────
   patches <- hold_stub_address_patches()
-  patched_codes <- intersect(hold_stubs$detention_facility_code,
+  patched_codes <- intersect(hold_new$detention_facility_code,
                              patches$detention_facility_code)
   if (length(patched_codes) > 0) {
-    # Overwrite address fields on matched stubs
-    patched <- hold_stubs |>
-      dplyr::filter(detention_facility_code %in% patched_codes) |>
-      dplyr::select(-facility_address, -facility_city, -facility_zip,
-                    -facility_county, -lat, -lon, -aor,
-                    -date_first_use, -date_last_use, -address_source) |>
-      dplyr::left_join(patches, by = "detention_facility_code")
-
-    hold_with_addr <- dplyr::bind_rows(hold_with_addr, patched)
-    hold_stubs <- hold_stubs |>
-      dplyr::filter(!detention_facility_code %in% patched_codes)
+    patch_cols <- c("facility_address", "facility_city", "facility_zip",
+                    "facility_county", "lat", "lon", "aor",
+                    "date_first_use", "date_last_use", "address_source")
+    hold_new <- hold_new |>
+      dplyr::filter(!detention_facility_code %in% patched_codes) |>
+      dplyr::bind_rows(
+        hold_new |>
+          dplyr::filter(detention_facility_code %in% patched_codes) |>
+          dplyr::select(-dplyr::any_of(patch_cols)) |>
+          dplyr::left_join(patches, by = "detention_facility_code")
+      )
 
     message(glue::glue(
       "Applied {length(patched_codes)} manual address patches: ",
       "{paste(patched_codes, collapse = ', ')}"
     ))
   }
+
+  # Split: "UNAVAILABLE" is treated as missing (not a real address)
+  has_address <- function(addr) !is.na(addr) & addr != "UNAVAILABLE"
+  hold_with_addr <- hold_new |>
+    dplyr::filter(has_address(facility_address), !is.na(facility_city))
+  hold_stubs <- hold_new |>
+    dplyr::filter(!has_address(facility_address) | is.na(facility_city))
 
   # ── Step 6: Assign canonical IDs ──────────────────────────────────────────
   n_addr <- nrow(hold_with_addr)
