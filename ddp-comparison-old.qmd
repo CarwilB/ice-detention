@@ -1,9 +1,6 @@
 ---
 title: "DDP vs ICE FY25 annual statistics"
-description: "Comparing the Deportation Data Project's daily detention counts with ICE's published annual statistics to identify unreported facilities and track population changes"
-author: "Carwil Bjork-James"
 date: last-modified
-image: ddp-comparison-thumbnail.png
 format:
   html:
     toc: true
@@ -21,6 +18,7 @@ This report was generated using AI under general human direction. At the time of
 
 ```{r}
 #| label: load-packages
+library(targets)
 library(dplyr)
 library(tidyr)
 library(ggplot2)
@@ -33,19 +31,47 @@ library(leafpop)
 
 ```{r}
 #| label: load-data
-# Pre-computed data from the ice-detention pipeline.
-# Run copy-data.sh to refresh from the pipeline project.
-ice_fy25          <- readRDS("data/ice_fy25.rds")
-ddp_fy25          <- readRDS("data/ddp_fy25.rds")
-ddp_fy25_keyed    <- readRDS("data/ddp_fy25_keyed.rds")
-daily_totals      <- readRDS("data/daily_totals.rds")
-unmatched         <- readRDS("data/unmatched.rds")
-daily_unmatched   <- readRDS("data/daily_unmatched.rds")
-monthly_unmatched <- readRDS("data/monthly_unmatched.rds")
-peak_fy25         <- readRDS("data/peak_fy25.rds")
-biden_unmatched   <- readRDS("data/biden_unmatched.rds")
-trump_unmatched   <- readRDS("data/trump_unmatched.rds")
-daily_unreported  <- readRDS("data/daily_unreported.rds")
+source("R/ddp.R")
+ddp_raw            <- tar_read(ddp_raw)
+facilities_keyed   <- tar_read(facilities_keyed)
+detloc_lookup      <- tar_read(detloc_lookup)
+detloc_lookup_full <- tar_read(detloc_lookup_full)
+vera_facilities    <- tar_read(vera_facilities)
+```
+
+```{r}
+#| label: prepare-comparison
+# Vera type lookup (one row per detloc).
+# Uses corrected types from the pipeline (see vera_type_overrides() in vera-institute.R).
+vera_type_lookup <- vera_facilities |>
+  select(detloc, type_grouped = type_grouped_corrected,
+         type_detailed = type_detailed_corrected, latitude, longitude) |>
+  distinct(detloc, .keep_all = TRUE)
+
+# ICE FY25 from pipeline
+ice_fy25 <- facilities_keyed[["FY25"]] |>
+  select(canonical_id, canonical_name, detloc, facility_name, facility_city,
+         facility_state, sum_classification_levels) |>
+  rename(ice_adp = sum_classification_levels)
+
+ice_fy25_ids <- unique(ice_fy25$canonical_id)
+
+# DDP facility-level summaries: Oct 1 2024 – Sep 24 2025
+# (matches the ICE FY25 spreadsheet currency date)
+ddp_fy25 <- ddp_facility_summary(ddp_raw,
+                                  from = "2024-10-01", to = "2025-09-24") |>
+  rename(ddp_adp = mean_pop)
+
+# Use detloc_lookup_full to map DDP facility codes to canonical IDs.
+# The 1:1 detloc_lookup picks only one code per canonical facility, but some
+# facilities have multiple DETLOCs across sources (e.g., DMCP vs DDP codes).
+# Using the full lookup ensures all codes contribute ADP to the right facility.
+ddp_detloc_map <- detloc_lookup_full |>
+  distinct(detloc, canonical_id)
+
+ddp_fy25_keyed <- ddp_fy25 |>
+  left_join(ddp_detloc_map, by = c("detention_facility_code" = "detloc")) |>
+  mutate(in_ice_fy25 = !is.na(canonical_id) & canonical_id %in% ice_fy25_ids)
 ```
 
 Throughout this report, facility-level summaries distinguish between facilities with **ADP ≥ 2** and those with **ADP < 2**. Facilities averaging fewer than two detainees per day---typically hospitals, occasional-use hold rooms, and other transient placements---account for many DDP facility codes but negligible population. Separating them keeps attention on facilities with substantive detention activity.
@@ -73,6 +99,15 @@ The DDP covers `r nrow(ddp_fy25)` facility codes while the ICE spreadsheet lists
 #| label: fig-daily-total
 #| fig-cap: "Total ICE detained population per day (DDP data, all facilities)"
 #| fig-height: 4
+daily_totals <- ddp_raw |>
+  group_by(date) |>
+  summarise(total_pop = sum(n_detained, na.rm = TRUE), .groups = "drop") |>
+  mutate(fiscal_year = if_else(
+    as.integer(format(date, "%m")) >= 10,
+    paste0("FY", as.integer(format(date, "%Y")) + 1 - 2000),
+    paste0("FY", as.integer(format(date, "%Y")) - 2000)
+  ))
+
 fy_breaks <- as.Date(c("2023-10-01", "2024-10-01", "2025-10-01"))
 fy_labels <- data.frame(
   x = as.Date(c("2024-04-01", "2025-04-01", "2025-10-08")),
@@ -95,12 +130,15 @@ We join the two datasets through canonical facility IDs. Each DDP facility code 
 ```{r}
 #| label: match-summary
 # Aggregate DDP by canonical_id for matched facilities.
+# Some canonical facilities have multiple DDP codes (e.g., Adelanto + Desert View Annex);
+# summing by canonical_id captures the full DDP population for comparison.
 ddp_by_canonical <- ddp_fy25_keyed |>
   filter(in_ice_fy25) |>
   group_by(canonical_id) |>
   summarise(ddp_adp = sum(ddp_adp), .groups = "drop")
 
 comparison <- ice_fy25 |>
+  # ICE FY25 can have multiple rows per canonical_id (e.g., Adelanto + Desert View Annex)
   group_by(canonical_id) |>
   summarise(
     canonical_name = first(canonical_name),
@@ -167,52 +205,6 @@ tibble(
 
 Among the `r nrow(both_nonzero)` matched facilities with nonzero ADP in both sources, `r sum(abs(both_nonzero$pct_diff) <= 10)` agree within 10%. The log-scale correlation is `r round(cor(log(both_nonzero$ice_adp), log(both_nonzero$ddp_adp)), 3)`.
 
-### Absolute ADP differences
-
-```{r}
-#| label: tbl-abs-diff
-#| tbl-cap: "Distribution of absolute ADP differences (DDP − ICE) among matched facilities"
-abs_diff <- abs(both_nonzero$diff)
-tibble(
-  `Difference band` = c("< 5", "5–25", "25–100", "100–500", "> 500"),
-  Facilities = c(
-    sum(abs_diff < 5),
-    sum(abs_diff >= 5 & abs_diff < 25),
-    sum(abs_diff >= 25 & abs_diff < 100),
-    sum(abs_diff >= 100 & abs_diff < 500),
-    sum(abs_diff >= 500)
-  ),
-  `Total excess ADP` = c(
-    round(sum(both_nonzero$diff[abs_diff < 5])),
-    round(sum(both_nonzero$diff[abs_diff >= 5 & abs_diff < 25])),
-    round(sum(both_nonzero$diff[abs_diff >= 25 & abs_diff < 100])),
-    round(sum(both_nonzero$diff[abs_diff >= 100 & abs_diff < 500])),
-    round(sum(both_nonzero$diff[abs_diff >= 500]))
-  )
-) |>
-  kable()
-```
-
-The net difference across all `r nrow(both_nonzero)` matched facilities is `r round(sum(both_nonzero$diff))` ADP (DDP minus ICE). Positive values indicate DDP counts higher than ICE.
-
-```{r}
-#| label: fig-diff-hist
-#| fig-cap: "Distribution of facility-level ADP differences (DDP − ICE) among matched facilities (log-modulus scale)"
-#| fig-height: 4
-# Log-modulus transform: sign(x) * log10(|x| + 1)
-log_mod <- function(x) sign(x) * log10(abs(x) + 1)
-log_mod_inv <- function(x) sign(x) * (10^abs(x) - 1)
-
-ggplot(both_nonzero, aes(x = diff)) +
-  geom_histogram(bins = 50) +
-  scale_x_continuous(
-    transform = scales::new_transform("logmod", log_mod, log_mod_inv),
-    breaks = c(-1000, -100, -10, 0, 10, 100, 1000),
-    labels = comma
-  ) +
-  labs(x = "ADP difference (DDP \u2212 ICE)", y = "Facilities")
-```
-
 ```{r}
 #| label: tbl-ice-only
 #| tbl-cap: "ICE FY25 facilities with no DDP match"
@@ -231,6 +223,20 @@ if (nrow(ice_only) > 0) {
 ## Unmatched facilities {#sec-unmatched}
 
 **`r sum(!ddp_fy25_keyed$in_ice_fy25)`** of `r nrow(ddp_fy25)` DDP facility codes do not appear in the ICE FY25 annual statistics. These are facilities where ICE holds detainees but which are excluded from the published spreadsheet.
+
+```{r}
+#| label: unmatched-setup
+unmatched <- ddp_fy25_keyed |>
+  filter(!in_ice_fy25) |>
+  left_join(
+    vera_type_lookup |> select(detloc, type_grouped, type_detailed),
+    by = c("detention_facility_code" = "detloc")
+  ) |>
+  mutate(
+    type_grouped = if_else(is.na(type_grouped), "Unclassified", type_grouped),
+    adp_class = if_else(ddp_adp >= 2, "ADP \u2265 2", "ADP < 2")
+  )
+```
 
 ### By facility type
 
@@ -275,11 +281,34 @@ if (nrow(dedicated_unmatched) > 0) {
 #| label: fig-daily-unmatched
 #| fig-cap: "Daily detained population in facilities not in ICE FY25 annual statistics"
 #| fig-height: 4
+daily_unmatched <- ddp_raw |>
+  filter(detention_facility_code %in% unmatched$detention_facility_code,
+         date >= as.Date("2024-10-01"), date <= as.Date("2025-09-24")) |>
+  group_by(date) |>
+  summarise(total_pop = sum(n_detained, na.rm = TRUE), .groups = "drop")
+
 ggplot(daily_unmatched, aes(x = date, y = total_pop)) +
   geom_line(linewidth = 0.3) +
   scale_y_continuous(labels = comma) +
   scale_x_date(date_labels = "%b %Y", date_breaks = "2 months") +
   labs(x = NULL, y = "Detained population (unmatched facilities)")
+```
+
+```{r}
+#| label: monthly-setup
+unmatched_codes <- unmatched$detention_facility_code
+
+monthly_unmatched <- ddp_raw |>
+  filter(detention_facility_code %in% unmatched_codes,
+         date >= as.Date("2024-10-01"), date <= as.Date("2025-09-24")) |>
+  left_join(
+    vera_type_lookup |> select(detloc, type_grouped),
+    by = c("detention_facility_code" = "detloc")
+  ) |>
+  mutate(
+    type_grouped = if_else(is.na(type_grouped), "Unclassified", type_grouped),
+    month = as.Date(format(date, "%Y-%m-01"))
+  )
 ```
 
 ```{r}
@@ -344,6 +373,22 @@ last60_by_type |>
 In the last 60 days, **`r format(last60_total, big.mark = ",")`** people per day were held in facilities absent from the ICE FY25 annual statistics.
 
 ### Peak FY25 population by facility
+
+```{r}
+#| label: peak-setup
+peak_fy25 <- ddp_facility_summary(ddp_raw,
+                                   from = "2024-10-01", to = "2025-09-24",
+                                   codes = unmatched_codes) |>
+  mutate(
+    mean_pop = round(mean_pop, 1),
+    adp_class = if_else(mean_pop >= 2, "ADP \u2265 2", "ADP < 2")
+  ) |>
+  left_join(
+    vera_type_lookup,
+    by = c("detention_facility_code" = "detloc")
+  ) |>
+  mutate(type_grouped = if_else(is.na(type_grouped), "Unclassified", type_grouped))
+```
 
 ```{r}
 #| label: tbl-peak-top20
@@ -432,6 +477,32 @@ trump_to   <- as.Date("2025-10-15")
 
 - **Biden final quarter**: `r biden_from` to `r biden_to` (92 days)
 - **Trump recent quarter**: `r trump_from` to `r trump_to` (91 days)
+
+```{r}
+#| label: period-unmatched-summaries
+# Summarise the unmatched facilities in each period
+biden_unmatched <- ddp_facility_summary(ddp_raw,
+                                         from = biden_from, to = biden_to,
+                                         codes = unmatched_codes) |>
+  left_join(vera_type_lookup |> select(detloc, type_grouped),
+            by = c("detention_facility_code" = "detloc")) |>
+  mutate(
+    type_grouped = if_else(is.na(type_grouped), "Unclassified", type_grouped),
+    adp_class = if_else(mean_pop >= 2, "ADP \u2265 2", "ADP < 2"),
+    period = "Biden"
+  )
+
+trump_unmatched <- ddp_facility_summary(ddp_raw,
+                                         from = trump_from, to = trump_to,
+                                         codes = unmatched_codes) |>
+  left_join(vera_type_lookup |> select(detloc, type_grouped),
+            by = c("detention_facility_code" = "detloc")) |>
+  mutate(
+    type_grouped = if_else(is.na(type_grouped), "Unclassified", type_grouped),
+    adp_class = if_else(mean_pop >= 2, "ADP \u2265 2", "ADP < 2"),
+    period = "Trump"
+  )
+```
 
 ### Aggregate unreported population
 
@@ -653,6 +724,28 @@ both_compare |>
 #| label: fig-daily-unreported-periods
 #| fig-cap: "Daily unreported detention population during both comparison periods, by facility type (ADP \u2265 2 facilities only)"
 #| fig-height: 5
+# Facility codes with ADP >= 2 in at least one period
+substantive_codes <- union(biden_active$detention_facility_code,
+                            trump_active$detention_facility_code)
+
+daily_unreported <- ddp_raw |>
+  filter(
+    detention_facility_code %in% substantive_codes,
+    (date >= biden_from & date <= biden_to) |
+      (date >= trump_from & date <= trump_to)
+  ) |>
+  left_join(vera_type_lookup |> select(detloc, type_grouped),
+            by = c("detention_facility_code" = "detloc")) |>
+  mutate(
+    type_grouped = if_else(is.na(type_grouped), "Unclassified", type_grouped),
+    period = case_when(
+      date >= biden_from & date <= biden_to ~ "Biden final quarter",
+      date >= trump_from & date <= trump_to ~ "Trump recent quarter"
+    )
+  ) |>
+  group_by(period, date, type_grouped) |>
+  summarise(total_pop = sum(n_detained, na.rm = TRUE), .groups = "drop")
+
 ggplot(daily_unreported, aes(x = date, y = total_pop, fill = type_grouped)) +
   geom_col() +
   facet_wrap(~period, scales = "free_x") +
