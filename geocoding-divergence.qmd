@@ -126,6 +126,7 @@ source_pts <- divergent |> filter(!is.na(source_lat))
 rec_google_d   <- divergent |> filter(recommendation == "rec: Google")
 rec_vera_d     <- divergent |> filter(recommendation == "rec: Vera/source")
 rec_marshall_d <- divergent |> filter(recommendation == "rec: Marshall")
+ambivalent_d    <- divergent |> filter(recommendation == "unreviewed")
 
 # Helper: build line sfc from a divergent subset
 make_lines <- function(df) {
@@ -139,6 +140,40 @@ make_lines <- function(df) {
 }
 
 # Helper: add a recommendation layer group (line + preferred point + grey rejected point)
+add_ambi_layer <- function(map, df, group = "unreviewed", 
+                          google_color = "steelblue", 
+                          source_color = "firebrick") {
+  if (nrow(df) == 0) return(map)
+  # prefer_google <- group == "Rec: Google"
+
+  map |>
+    # Connecting line
+    addPolylines(
+      data = st_sf(df, geometry = make_lines(df)),
+      color = "#333", weight = 2, opacity = 0.5,
+      group = group, popup = ~popup_html
+    ) |>
+    # Google point (colored)
+    addCircleMarkers(
+      data = df,
+      lng =  ~google_lon,
+      lat =  ~google_lat,
+      radius = 7, color = google_color, fillColor = google_color,
+      fillOpacity = 0.6, weight = 2, opacity = 0.9,
+      group = group, label = ~search_label, popup = ~popup_html
+    ) |>
+    # Source point (also colored)
+    addCircleMarkers(
+      data = df,
+      lng =  ~source_lon,
+      lat = ~source_lat,
+      radius = 5, color = source_color, fillColor = source_color,
+      fillOpacity = 0.6, weight = 2, opacity = 0.9,
+      group = group, label = ~search_label, popup = ~popup_html
+    )
+}
+
+# Helper: add a ambivalent layer group (line + both points)
 add_rec_layer <- function(map, df, group, preferred_color) {
   if (nrow(df) == 0) return(map)
   prefer_google <- group == "Rec: Google"
@@ -150,7 +185,7 @@ add_rec_layer <- function(map, df, group, preferred_color) {
       color = preferred_color, weight = 2, opacity = 0.5,
       group = group, popup = ~popup_html
     ) |>
-    # Preferred point (colored)
+    # Google point (colored)
     addCircleMarkers(
       data = df,
       lng = if (prefer_google) ~google_lon else ~source_lon,
@@ -203,15 +238,17 @@ m <- leaflet() |>
   add_rec_layer(rec_google_d,   "Rec: Google",   "steelblue") |>
   add_rec_layer(rec_vera_d,     "Rec: Vera",     "firebrick") |>
   add_rec_layer(rec_marshall_d, "Rec: Marshall",  "#e90") |>
+  add_ambi_layer(ambivalent_d, "unreviewed") |>
   addLayersControl(
     overlayGroups = c("Divergence lines", "Google", "Source",
-                      "Rec: Google", "Rec: Vera", "Rec: Marshall"),
+                      "Rec: Google", "Rec: Vera", "Rec: Marshall", "unreviewed"),
     options = layersControlOptions(collapsed = FALSE)
   ) |>
   # Hide recommendation layers by default
   hideGroup("Rec: Google") |>
   hideGroup("Rec: Vera") |>
   hideGroup("Rec: Marshall") |>
+  hideGroup("unreviewed") |>
   addSearchFeatures(
     targetGroups = c("Google", "Source"),
     options = searchFeaturesOptions(

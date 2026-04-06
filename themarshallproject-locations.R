@@ -156,28 +156,28 @@ hold_stub_address_patches <- function() {
     43.0, -78.2, NA_character_, as.Date(NA), as.Date(NA),
 
     # Manual address lookups for hold rooms with UNAVAILABLE addresses
-    "ETWHOLDAL", "manual", "800 Forrest Avenue, 3rd Floor",
+    "ETWHOLD", "manual", "800 Forrest Avenue, 3rd Floor",
     "Gadsden",     "35901", NA_character_,
     NA_real_, NA_real_, NA_character_, as.Date(NA), as.Date(NA),
 
-    "KNXHOLDTN", "manual", "324 Prosperity Drive",
+    "KNXHOLD", "manual", "324 Prosperity Drive",
     "Knoxville",   "37923", NA_character_,
     NA_real_, NA_real_, NA_character_, as.Date(NA), as.Date(NA),
 
-    "SGUHOLDUT", "manual", "389 N. Industrial Road, Suite 4",
+    "SGUHOLD", "manual", "389 N. Industrial Road, Suite 4",
     "St. George",  "84770", NA_character_,
     NA_real_, NA_real_, NA_character_, as.Date(NA), as.Date(NA),
 
-    "LVHOLDNV", "manual", "501 S. Las Vegas Boulevard, Suite 100",
+    "LVGHOLD", "manual", "501 S. Las Vegas Boulevard, Suite 100",
     "Las Vegas",   "89101", NA_character_,
     NA_real_, NA_real_, NA_character_, as.Date(NA), as.Date(NA),
 
     # Corrections for facilities with wrong Marshall Project addresses
-    "POMHOLDME", "manual", "40 Manson Libby Road, Suite 101",
+    "POMHOLD", "manual", "40 Manson Libby Road, Suite 101",
     "Scarborough",  "04074", NA_character_,
     NA_real_, NA_real_, NA_character_, as.Date(NA), as.Date(NA),
 
-    "AMTHOLDTX", "manual", "9100 S Georgia St",
+    "AMTHOLD", "manual", "9100 S Georgia St",
     "Amarillo",    "79118", NA_character_,
     NA_real_, NA_real_, NA_character_, as.Date(NA), as.Date(NA)
   )
@@ -198,6 +198,9 @@ hold_stub_address_patches <- function() {
 #' @param marshall_locations Cleaned Marshall Project locations tibble.
 #' @param ero_canonical ERO field offices canonical tibble (must have detloc, canonical_id).
 #' @param detloc_lookup Current DETLOC lookup (to exclude facilities already canonical).
+#' @param hold_canonical_registry Frozen registry tibble (canonical_id, canonical_name, detloc)
+#'   for hold facilities (IDs 2026+). Existing facilities are looked up by detloc and their
+#'   canonical_id preserved. New facilities are assigned IDs from max(registry) + 1.
 #' @param vera_facilities Optional cleaned Vera facilities tibble. When provided, DDP codes
 #'   classified as Hold/Staging in `type_grouped_corrected` are included alongside the
 #'   DETLOC-pattern filter. This catches short-code staging facilities (STK, AGC, etc.)
@@ -207,7 +210,8 @@ hold_stub_address_patches <- function() {
 #'   - `ero_detloc_map`: tibble mapping 22 ERO hold DETLOCs to canonical_ids 2001–2025
 #'   - `hold_summary`: named list of counts for diagnostics
 build_hold_canonical <- function(ddp_codes, marshall_locations, ero_canonical,
-                                 detloc_lookup, vera_facilities = NULL) {
+                                 detloc_lookup, hold_canonical_registry,
+                                 vera_facilities = NULL) {
   # ── Step 1: Classify hold-type DDP codes ──────────────────────────────────
   # Primary filter: DETLOC contains HOLD, STAGING, or CPC
   regex_codes <- ddp_codes |>
@@ -276,10 +280,10 @@ build_hold_canonical <- function(ddp_codes, marshall_locations, ero_canonical,
     dplyr::filter(!detention_facility_code %in% already_canonical)
 
   # ── Step 5: Apply manual address patches, then split ─────────────────────
-  # Patches override address fields for facilities with missing, UNAVAILABLE,
-
-  # or incorrect Marshall Project addresses. Applied to ALL hold facilities
-  # before the addressed/stub split so they can fix any category.
+  # Patches are applied before the split so they can correct both UNAVAILABLE
+  # addresses (promoting stubs to addressed) and wrong Marshall addresses.
+  # ID stability is guaranteed by the frozen registry in Step 6, not by the
+  # addressed/stub split, so this is safe.
   if (!"address_source" %in% names(hold_new)) {
     hold_new <- hold_new |> dplyr::mutate(address_source = NA_character_)
   }
@@ -291,39 +295,63 @@ build_hold_canonical <- function(ddp_codes, marshall_locations, ero_canonical,
     patch_cols <- c("facility_address", "facility_city", "facility_zip",
                     "facility_county", "lat", "lon", "aor",
                     "date_first_use", "date_last_use", "address_source")
-    hold_new <- hold_new |>
-      dplyr::filter(!detention_facility_code %in% patched_codes) |>
-      dplyr::bind_rows(
-        hold_new |>
-          dplyr::filter(detention_facility_code %in% patched_codes) |>
-          dplyr::select(-dplyr::any_of(patch_cols)) |>
-          dplyr::left_join(patches, by = "detention_facility_code")
-      )
-
+    hold_new <- dplyr::bind_rows(
+      hold_new |> dplyr::filter(!detention_facility_code %in% patched_codes),
+      hold_new |>
+        dplyr::filter(detention_facility_code %in% patched_codes) |>
+        dplyr::select(-dplyr::any_of(patch_cols)) |>
+        dplyr::left_join(patches, by = "detention_facility_code")
+    )
     message(glue::glue(
       "Applied {length(patched_codes)} manual address patches: ",
       "{paste(patched_codes, collapse = ', ')}"
     ))
   }
 
-  # Split: "UNAVAILABLE" is treated as missing (not a real address)
+  # "UNAVAILABLE" is treated as missing — not a real address.
   has_address <- function(addr) !is.na(addr) & addr != "UNAVAILABLE"
   hold_with_addr <- hold_new |>
     dplyr::filter(has_address(facility_address), !is.na(facility_city))
   hold_stubs <- hold_new |>
     dplyr::filter(!has_address(facility_address) | is.na(facility_city))
 
-  # ── Step 6: Assign canonical IDs ──────────────────────────────────────────
-  n_addr <- nrow(hold_with_addr)
-  n_stubs <- nrow(hold_stubs)
+  # ── Step 6: Assign canonical IDs via frozen registry ─────────────────────
+  # Existing facilities are looked up by detloc; new facilities get sequential
+  # IDs from max(registry) + 1. This keeps IDs stable across pipeline runs
+  # regardless of how the addressed/stub split changes.
+  assign_hold_ids <- function(df) {
+    df |>
+      dplyr::left_join(
+        hold_canonical_registry |>
+          dplyr::select(frozen_id = canonical_id, detloc),
+        by = c("detention_facility_code" = "detloc")
+      ) |>
+      dplyr::mutate(canonical_id = frozen_id) |>
+      dplyr::select(-frozen_id)
+  }
 
-  hold_with_addr <- hold_with_addr |>
-    dplyr::arrange(state, detention_facility_code) |>
-    dplyr::mutate(canonical_id = 2026L + dplyr::row_number() - 1L)
+  hold_with_addr <- assign_hold_ids(hold_with_addr)
+  hold_stubs     <- assign_hold_ids(hold_stubs)
 
-  hold_stubs <- hold_stubs |>
-    dplyr::arrange(state, detention_facility_code) |>
-    dplyr::mutate(canonical_id = 2026L + n_addr + dplyr::row_number() - 1L)
+  # Assign new sequential IDs to facilities not in the registry
+  next_id <- max(hold_canonical_registry$canonical_id) + 1L
+  new_addr  <- is.na(hold_with_addr$canonical_id)
+  new_stubs <- is.na(hold_stubs$canonical_id)
+  n_new <- sum(new_addr) + sum(new_stubs)
+
+  if (n_new > 0) {
+    new_ids <- seq.int(next_id, next_id + n_new - 1L)
+    hold_with_addr$canonical_id[new_addr] <-
+      new_ids[seq_len(sum(new_addr))]
+    hold_stubs$canonical_id[new_stubs] <-
+      new_ids[seq_len(sum(new_stubs)) + sum(new_addr)]
+    message(glue::glue(
+      "{n_new} new hold facilit{ifelse(n_new == 1L, 'y', 'ies')} not in registry. ",
+      "Assigned ID{ifelse(n_new == 1L, '', 's')} {next_id}",
+      "{ifelse(n_new > 1L, paste0('\u2013', next_id + n_new - 1L), '')}. ",
+      "Append to data/hold-canonical-registry.csv to freeze."
+    ))
+  }
 
   # ── Step 7: Standardize to canonical schema ───────────────────────────────
   format_canonical <- function(df, has_address = TRUE) {
@@ -387,6 +415,9 @@ build_hold_canonical <- function(ddp_codes, marshall_locations, ero_canonical,
   )
 
   # ── Summary ───────────────────────────────────────────────────────────────
+  n_addr  <- nrow(hold_with_addr)
+  n_stubs <- nrow(hold_stubs)
+
   summary <- list(
     total_hold_codes = nrow(hold_codes),
     ero_overlap = nrow(ero_detloc_map),

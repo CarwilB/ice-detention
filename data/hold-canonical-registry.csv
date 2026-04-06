@@ -1,0 +1,156 @@
+canonical_id,canonical_name,detloc
+2026,Birmingham Hold Room,BHMHOLD
+2027,Etowah ERO Hold Room,ETWHOLD
+2028,Fayetteville Hold Room,FAYHOLD
+2029,Fort Smith Holdroom,FSAHOLD
+2030,Little Rock Hold Room,LRAHOLD
+2031,Texarkana Holdroom,TXAHOLD
+2032,Az Rem Op Coord Center (Arocc),IWAHOLD
+2033,Tucson Ins Hold Room,TUCHOLD
+2034,Yuma Holdroom,YUMHOLD
+2035,Bakerfield Hold,BKLHOLD
+2036,Fresno Holdroom,FREHOLD
+2037,Imperial Sub Office Hold Room,IMPHOLD
+2038,Santa Ana Dro Holdroom,SAAHOLD
+2039,Sacramento Hold,SACHOLD
+2040,San Bernardino Hold Room,SBDHOLD
+2041,Snj Hold Room,SNJHOLD
+2042,Stockton Staging Facility,STK
+2043,Ventura Custody Case,VENHOLD
+2044,Westminster Custody,WESHOLD
+2045,Alamosa Holdroom,ALMHOLD
+2046,Craig Holdroom,CRGHOLD
+2047,Durango Holdroom,DURHOLD
+2048,Frederick Holdroom,FRDHOLD
+2049,Grand Junction Holdroom,GJCHOLD
+2050,Glenwood Springs Holdroom,GSCHOLD
+2051,Pueblo Holdroom,PUEHOLD
+2052,Hartford Office,HARHOLD
+2053,Dover Holdroom,DVDHOLD
+2054,Fort Myers ERO Holdroom,FMYHOLD
+2055,Jacksonville Sub-Office,JAXHOLD
+2056,Krome/Miami Hub,KRHUBFL
+2057,Krome Hold Room,KROHOLD
+2058,Orlando Hold Room,ORLHOLD
+2059,Stuart Hold Room,STUHOLD
+2060,Tallahassee Hold Room,TALHOLD
+2061,Tampa Hold Room,TAMHOLD
+2062,Guam ERO Hold Room,AGAHOLD
+2063,ERO Honolulu Sub-Office Hold Room,HHWHOLD
+2064,Cedar Rapids Hold Room,CRIHOLD
+2065,Des Moines Hold Room,DSMHOLD
+2066,Sioux City Hold Room,SXCHOLD
+2067,Boise Hold Room,BOIHOLD
+2068,Idaho Falls Hold Room,IFIHOLD
+2069,Twin Falls Hold Room,TFIHOLD
+2070,Broadview Service Staging,BSAHOLD
+2071,Rock Island Hold Room,RIIHOLD
+2072,Indianapolis Hold Room,INPHOLD
+2073,Wichita Holdroom,WICHOLD
+2074,Louisville Hold Room,LOUHOLD
+2075,Oakdale Holding Room,OAKHOLD
+2076,Shreveport Hold Room,VVSHOLD
+2077,"Portland, Me Holdroom",POMHOLD
+2078,Grand Rapids Holdroom,GRMHOLD
+2079,ERO Hold Room (Springfield Mo),SPGHOLD
+2080,St. Louis Holdroom,STLHOLD
+2081,Saipain Hold,SAIHOLD
+2082,Jackson Ms Hold Room,JAKHOLD
+2083,Billings Hold Room,BILHOLD
+2084,Hel District Custody,HELHOLD
+2085,Charlotte Hold Room,CLTHOLD
+2086,Hendersonville Hold Room,HENHOLD
+2087,Raleigh Hold Room,RDUHOLD
+2088,Grand Forks Hold Room,GRFHOLD
+2089,Grand Island Hold Room,GRIHOLD
+2090,North Platte Hold Room,NRPHOLD
+2091,Omaha Fo Hold,OMAHOLD
+2092,Manchester Holdroom,MANHOLD
+2093,Albuquerque Hold Room,ABQHOLD
+2094,Las Vegas Hold Room,LVGHOLD
+2095,Reno Hold Room,RENHOLD
+2096,Albany Holdroom,ALBHOLD
+2097,Buffalo Usbp Hold Room,CBPHOLD
+2098,Batavia Command Center Holdroom,CMDHOLD
+2099,Vrk Prcs,VRK
+2100,Cincinnati Holdroom,CINHOLD
+2101,Cleveland Hold Room,CLEHOLD
+2102,Columbus Holdroom,CLMHOLD
+2103,Oklahoma City Hold Room.,OKCHOLD
+2104,Eugene Holdroom,EUGHOLD
+2105,Medford Sub-Office,MEDHOLD
+2106,Portland District Office,POOHOLD
+2107,Pittsburgh Holdroom,PITHOLD
+2108,Pike County ERO Hold Room,PKEHOLD
+2109,Aguadilla SPC,AGC
+2110,San Juan Sub-Office Hold Room,SAJHOLD
+2111,San Juan Airport Hold Room,SJUHOLD
+2112,Prohold,PROHOLD
+2113,"Charleston, Sc Hold Room",CHLHOLD
+2114,"Columbia, Sc Holdroom",COAHOLD
+2115,Greer Hold Room,GRRHOLD
+2116,Rapid City Hold Room,RPCHOLD
+2117,Sioux Falls Hold Room,SFDHOLD
+2118,Chattanooga Hold Room,CNGHOLD
+2119,Knoxville Hold Room,KNXHOLD
+2120,Memphis Hold Room,MEMHOLD
+2121,Nashville Hold Room,NSVHOLD
+2122,Amarillo Hold Room,AMTHOLD
+2123,"Athens, Tx Hold Room",ATTHOLD
+2124,Austin Dro Hold Room,AUSHOLD
+2125,Big Spring Hold Room,BSCHOLD
+2126,Del Rio Dro Hold Room,DLRHOLD
+2127,Egp Cpc Holding,EPCPCTX
+2128,Lubbock Hold Room,LBKHOLD
+2129,Laredo Detention Center Hold Room,LRDHOLD
+2130,Los Fresnos Hold Room,LSFHOLD
+2131,"Midland, Tx ERO Holdroom",MLDHOLD
+2132,Pecos Hold Room,PCSHOLD
+2133,Pdn Hold Room,PDNHOLD
+2134,Prairieland Suboffice Hold Room,PRLHOLD
+2135,Rio Grande Valley Staging,RGS
+2136,San Angelo Holdroom,SAGHOLD
+2137,South Texas/Pearsall Hold Room,STDHOLD
+2138,Waco Dro Hold Room,WCTHOLD
+2139,Ogden Hold Room,OGUHOLD
+2140,Provo Hold Room,PRUHOLD
+2141,"St. George, Ut Holdroom",SGUHOLD
+2142,Harrisonburg Hold Room,HBGHOLD
+2143,Norfolk Sub-Office Hold,NORHOLD
+2144,Richmond Sub-Office Hold,RCMHOLD
+2145,Charlotte Amalie Holdroom,CHAHOLD
+2146,Saint Albans Hold Room,STAHOLD
+2147,Yakima Sub-Office,YAKHOLD
+2148,Milwaukee Holdroom,MILHOLD
+2149,Cheyenne Holdroom,CHYHOLD
+2150,Casper Holdroom,CSPHOLD
+2151,Anchorage Sub-Office Hold Room,ANCHOLD
+2152,Mobile Holdroom,MOAHOLD
+2153,Arizona State Prison - Yuma,AZSVCPC
+2154,Redding Hold Room,REDHOLD
+2155,Santa Maria Sub Office ERO,SMAHOLD
+2156,Colo Springs Den Hsi Hold,CSDHOLD
+2157,Miami Border Patrol,IBPSMIA
+2158,Bowling Green Hold Room,BLGHOLD
+2159,Salisbury Hold Room,SALHOLD
+2160,Duluth Hold Room,DULHOLD
+2161,Mount Laurel Hold Room,MLJHOLD
+2162,Las Cruces Hold Room,LASHOLD
+2163,Roswell Hold Room,RSWHOLD
+2164,Champlain Hold Room,CHMHOLD
+2165,Central Islip Hold Room,CIPHOLD
+2166,Newburgh Holding,NBGHOLD
+2167,Syracuse Hold Room,SYRHOLD
+2168,Tulsa Hold Room,TULHOLD
+2169,Williamsport Hold Room,WPOHOLD
+2170,York Hold Room,YRKHOLD
+2171,Corpus Christi Eor Hold Room,CRPHOLD
+2172,El Paso Soft Sided Facility,EPSSFTX
+2173,Mcallen Hold Room,MCAHOLD
+2174,Montgomery Hold Rm,MTGHOLD
+2175,"Lorton, Va Hold Room",LTVHOLD
+2176,Roanoke Sub-Office Hold Room,RMKHOLD
+2177,Ferndale Hold Room,FDLHOLD
+2178,Richland Hold Room,RICHOLD
+2179,Spokane Hold Room,SPOHOLD
+2180,Wenatchee Hold Room,WNTHOLD

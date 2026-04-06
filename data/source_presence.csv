@@ -581,154 +581,154 @@
 2024,"St Paul Field Office","ero",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
 2025,"Washington Field Office","ero",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
 2026,"Birmingham Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2027,"Fayetteville Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
-2028,"Fort Smith Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:marshall_project",3
-2029,"Texarkana Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2030,"Az Rem Op Coord Center (Arocc)","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2031,"Tucson Ins Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2032,"Yuma Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2033,"Bakerfield Hold","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2034,"Fresno Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2035,"Imperial Sub Office Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"divergent",2
-2036,"Santa Ana Dro Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2037,"Sacramento Hold","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
-2038,"San Bernardino Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2039,"Snj Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
-2040,"Stockton Staging Facility","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2041,"Ventura Custody Case","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
-2042,"Westminster Custody","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"auto:google_maps+marshall_project",3
-2043,"Alamosa Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2044,"Craig Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2045,"Durango Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2046,"Frederick Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2047,"Grand Junction Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2048,"Glenwood Springs Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
-2049,"Pueblo Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
-2050,"Hartford Office","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
-2051,"Dover Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2052,"Fort Myers ERO Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
-2053,"Jacksonville Sub-Office","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2054,"Krome/Miami Hub","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
-2055,"Krome Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
-2056,"Orlando Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:marshall_project",3
-2057,"Stuart Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:marshall_project",3
-2058,"Tallahassee Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2059,"Tampa Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2060,"Guam ERO Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2061,"ERO Honolulu Sub-Office Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2062,"Cedar Rapids Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2063,"Des Moines Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2064,"Sioux City Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2065,"Boise Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2066,"Idaho Falls Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2067,"Twin Falls Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
-2068,"Broadview Service Staging","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2069,"Rock Island Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2070,"Indianapolis Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2071,"Wichita Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2072,"Louisville Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2073,"Oakdale Holding Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"auto:google_maps+marshall_project",3
-2074,"Shreveport Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2075,"Portland, Me Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
-2076,"Grand Rapids Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2077,"ERO Hold Room (Springfield Mo)","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
-2078,"St. Louis Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2079,"Saipain Hold","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2080,"Jackson Ms Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2081,"Billings Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2082,"Hel District Custody","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2083,"Charlotte Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2084,"Hendersonville Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2085,"Raleigh Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2086,"Grand Forks Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2087,"Grand Island Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2088,"North Platte Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2089,"Omaha Fo Hold","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2090,"Manchester Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2091,"Albuquerque Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2092,"Las Vegas Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
-2093,"Reno Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2094,"Albany Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
-2095,"Buffalo Usbp Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"auto:google_maps+vera_institute",2
-2096,"Batavia Command Center Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"auto:google_maps+marshall_project",2
-2097,"Vrk Prcs","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2098,"Cincinnati Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
-2099,"Cleveland Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2100,"Columbus Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2101,"Oklahoma City Hold Room.","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2102,"Eugene Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2103,"Medford Sub-Office","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2104,"Portland District Office","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2105,"Pittsburgh Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2106,"Pike County ERO Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2107,"Aguadilla SPC","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2108,"San Juan Sub-Office Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2109,"San Juan Airport Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
-2110,"Prohold","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"auto:google_maps+vera_institute",2
-2111,"Charleston, Sc Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:marshall_project",3
-2112,"Columbia, Sc Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2113,"Greer Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2114,"Rapid City Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2115,"Sioux Falls Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2116,"Chattanooga Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2117,"Memphis Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2118,"Amarillo Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
-2119,"Athens, Tx Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
-2120,"Austin Dro Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2121,"Big Spring Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2122,"Del Rio Dro Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
-2123,"Egp Cpc Holding","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,"google_maps",1
-2124,"Lubbock Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2125,"Laredo Detention Center Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2126,"Los Fresnos Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2127,"Midland, Tx ERO Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2128,"Pecos Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
-2129,"Pdn Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2130,"Prairieland Suboffice Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"auto:google_maps+marshall_project",3
-2131,"Rio Grande Valley Staging","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"auto:google_maps+marshall_project",3
-2132,"San Angelo Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2133,"South Texas/Pearsall Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2134,"Waco Dro Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:marshall_project",3
-2135,"Ogden Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2136,"Provo Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2137,"Harrisonburg Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2138,"Norfolk Sub-Office Hold","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2139,"Richmond Sub-Office Hold","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2140,"Charlotte Amalie Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
-2141,"Saint Albans Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
-2142,"Yakima Sub-Office","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2143,"Milwaukee Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2144,"Cheyenne Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2145,"Casper Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
-2146,"Anchorage Sub-Office Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2147,"Etowah ERO Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"vera_institute",3
-2148,"Mobile Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2149,"Little Rock Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"vera_institute",3
-2150,"Arizona State Prison - Yuma","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2151,"Redding Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2152,"Santa Maria Sub Office ERO","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2153,"Colo Springs Den Hsi Hold","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2154,"Miami Border Patrol","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2155,"Bowling Green Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2156,"Salisbury Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2157,"Duluth Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2158,"Mount Laurel Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2159,"Las Cruces Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2160,"Roswell Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2161,"Champlain Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2162,"Central Islip Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2163,"Newburgh Holding","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2164,"Syracuse Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2165,"Tulsa Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2166,"Williamsport Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2167,"York Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2168,"Knoxville Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"vera_institute",3
-2169,"Nashville Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"vera_institute",3
-2170,"Corpus Christi Eor Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2171,"El Paso Soft Sided Facility","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2172,"Mcallen Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2173,"Montgomery Hold Rm","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2174,"St. George, Ut Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"vera_institute",3
+2027,"Etowah ERO Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
+2028,"Fayetteville Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:marshall_project",3
+2029,"Fort Smith Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2030,"Little Rock Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"vera_institute",3
+2031,"Texarkana Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2032,"Az Rem Op Coord Center (Arocc)","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2033,"Tucson Ins Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2034,"Yuma Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2035,"Bakerfield Hold","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2036,"Fresno Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2037,"Imperial Sub Office Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"preference:google_maps",2
+2038,"Santa Ana Dro Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2039,"Sacramento Hold","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2040,"San Bernardino Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2041,"Snj Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
+2042,"Stockton Staging Facility","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2043,"Ventura Custody Case","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2044,"Westminster Custody","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"auto:google_maps+marshall_project",3
+2045,"Alamosa Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2046,"Craig Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2047,"Durango Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2048,"Frederick Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2049,"Grand Junction Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2050,"Glenwood Springs Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
+2051,"Pueblo Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
+2052,"Hartford Office","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
+2053,"Dover Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2054,"Fort Myers ERO Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2055,"Jacksonville Sub-Office","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2056,"Krome/Miami Hub","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:marshall_project",3
+2057,"Krome Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:marshall_project",3
+2058,"Orlando Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2059,"Stuart Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"auto:google_maps+marshall_project",3
+2060,"Tallahassee Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2061,"Tampa Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2062,"Guam ERO Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2063,"ERO Honolulu Sub-Office Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2064,"Cedar Rapids Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2065,"Des Moines Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2066,"Sioux City Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2067,"Boise Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2068,"Idaho Falls Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2069,"Twin Falls Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
+2070,"Broadview Service Staging","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2071,"Rock Island Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2072,"Indianapolis Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2073,"Wichita Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2074,"Louisville Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2075,"Oakdale Holding Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"auto:google_maps+marshall_project",3
+2076,"Shreveport Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2077,"Portland, Me Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
+2078,"Grand Rapids Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2079,"ERO Hold Room (Springfield Mo)","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
+2080,"St. Louis Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2081,"Saipain Hold","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2082,"Jackson Ms Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2083,"Billings Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2084,"Hel District Custody","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2085,"Charlotte Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2086,"Hendersonville Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2087,"Raleigh Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2088,"Grand Forks Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2089,"Grand Island Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2090,"North Platte Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2091,"Omaha Fo Hold","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2092,"Manchester Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2093,"Albuquerque Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2094,"Las Vegas Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
+2095,"Reno Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2096,"Albany Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
+2097,"Buffalo Usbp Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"auto:google_maps+vera_institute",2
+2098,"Batavia Command Center Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"auto:google_maps+marshall_project",2
+2099,"Vrk Prcs","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2100,"Cincinnati Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2101,"Cleveland Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2102,"Columbus Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2103,"Oklahoma City Hold Room.","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2104,"Eugene Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2105,"Medford Sub-Office","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2106,"Portland District Office","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2107,"Pittsburgh Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2108,"Pike County ERO Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2109,"Aguadilla SPC","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2110,"San Juan Sub-Office Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2111,"San Juan Airport Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:marshall_project",3
+2112,"Prohold","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"auto:google_maps+vera_institute",2
+2113,"Charleston, Sc Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2114,"Columbia, Sc Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2115,"Greer Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2116,"Rapid City Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2117,"Sioux Falls Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2118,"Chattanooga Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2119,"Knoxville Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
+2120,"Memphis Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2121,"Nashville Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"vera_institute",3
+2122,"Amarillo Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
+2123,"Athens, Tx Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2124,"Austin Dro Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2125,"Big Spring Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2126,"Del Rio Dro Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2127,"Egp Cpc Holding","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,"google_maps",1
+2128,"Lubbock Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2129,"Laredo Detention Center Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2130,"Los Fresnos Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2131,"Midland, Tx ERO Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2132,"Pecos Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
+2133,"Pdn Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2134,"Prairieland Suboffice Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:marshall_project",3
+2135,"Rio Grande Valley Staging","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"auto:google_maps+marshall_project",3
+2136,"San Angelo Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2137,"South Texas/Pearsall Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2138,"Waco Dro Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2139,"Ogden Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2140,"Provo Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2141,"St. George, Ut Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
+2142,"Harrisonburg Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2143,"Norfolk Sub-Office Hold","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2144,"Richmond Sub-Office Hold","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2145,"Charlotte Amalie Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
+2146,"Saint Albans Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2147,"Yakima Sub-Office","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2148,"Milwaukee Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2149,"Cheyenne Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2150,"Casper Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
+2151,"Anchorage Sub-Office Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2152,"Mobile Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2153,"Arizona State Prison - Yuma","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2154,"Redding Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2155,"Santa Maria Sub Office ERO","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2156,"Colo Springs Den Hsi Hold","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2157,"Miami Border Patrol","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2158,"Bowling Green Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2159,"Salisbury Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2160,"Duluth Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2161,"Mount Laurel Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2162,"Las Cruces Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2163,"Roswell Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2164,"Champlain Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2165,"Central Islip Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2166,"Newburgh Holding","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2167,"Syracuse Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2168,"Tulsa Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2169,"Williamsport Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2170,"York Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2171,"Corpus Christi Eor Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2172,"El Paso Soft Sided Facility","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2173,"Mcallen Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2174,"Montgomery Hold Rm","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
 2175,"Lorton, Va Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
 2176,"Roanoke Sub-Office Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
 2177,"Ferndale Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
