@@ -540,24 +540,28 @@ build_facility_roster <- function(panel_facilities,
       dplyr::select(-detloc_fill)
   }
 
-  # Join vera_type_corrected via DETLOC where available
+  # Join Vera corrected types via DETLOC where available
 
   if (!is.null(vera_facilities)) {
     vera_types <- vera_facilities |>
       dplyr::distinct(detloc, .keep_all = TRUE) |>
-      dplyr::select(detloc, vera_type_corrected)
+      dplyr::select(detloc, type_detailed_corrected, type_grouped_corrected)
     roster <- roster |>
       dplyr::left_join(vera_types, by = "detloc")
   } else {
     roster <- roster |>
-      dplyr::mutate(vera_type_corrected = NA_character_)
+      dplyr::mutate(
+        type_detailed_corrected = NA_character_,
+        type_grouped_corrected  = NA_character_
+      )
   }
 
   # Unified facility_type_wiki using combined classification
   roster <- roster |>
     dplyr::mutate(
       facility_type_wiki = classify_facility_type_combined(
-        facility_type_detailed, vera_type_corrected, canonical_name
+        facility_type_detailed, type_grouped_corrected, canonical_name,
+        type_detailed_corrected
       )
     ) |>
     dplyr::arrange(canonical_id)

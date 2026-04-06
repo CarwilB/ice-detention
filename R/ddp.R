@@ -10,7 +10,7 @@ import_ddp_codes <- function(dp_data) {
   #   dp_data: tibble from feather file (detention_facility_code, detention_facility, state)
   # Returns:
   #   tibble with columns: detention_facility_code, detention_facility, state
-  
+
   dp_data |>
     dplyr::select(detention_facility_code, detention_facility, state) |>
     dplyr::distinct() |>
@@ -26,7 +26,7 @@ clean_ddp_facility_names <- function(df) {
   #   df: tibble with column 'detention_facility'
   # Returns:
   #   df with cleaned 'detention_facility' column
-  
+
   df |>
     dplyr::mutate(
       detention_facility = clean_facility_names(detention_facility)
@@ -41,7 +41,7 @@ build_ddp_codes <- function(dp_data) {
   #   dp_data: raw DDP daily population tibble
   # Returns:
   #   cleaned tibble of unique detention facility codes
-  
+
   import_ddp_codes(dp_data) |>
     clean_ddp_facility_names()
 }
@@ -438,7 +438,8 @@ build_ddp_facility_canonical <- function(ddp_codes, detloc_lookup_full,
     dplyr::left_join(
       vera_facilities |>
         dplyr::select(detloc, facility_name, facility_address, facility_city,
-                       facility_state, facility_zip, vera_type_corrected,
+                       facility_state, facility_zip,
+                       type_detailed_corrected, type_grouped_corrected,
                        latitude, longitude) |>
         dplyr::distinct(detloc, .keep_all = TRUE),
       by = c("detention_facility_code" = "detloc")
@@ -458,11 +459,11 @@ build_ddp_facility_canonical <- function(ddp_codes, detloc_lookup_full,
 
   # Split by type block
   medical <- unmapped |>
-    dplyr::filter(vera_type_corrected == "Medical") |>
+    dplyr::filter(type_grouped_corrected == "Medical") |>
     dplyr::arrange(facility_state, detention_facility_code)
 
   remaining <- unmapped |>
-    dplyr::filter(vera_type_corrected != "Medical") |>
+    dplyr::filter(type_grouped_corrected != "Medical") |>
     dplyr::arrange(facility_state, detention_facility_code)
 
   # Assign IDs
@@ -485,7 +486,8 @@ build_ddp_facility_canonical <- function(ddp_codes, detloc_lookup_full,
       canonical_id, canonical_name,
       detloc = detention_facility_code,
       facility_address, facility_city, facility_state, facility_zip,
-      vera_type_corrected, lat = latitude, lon = longitude, id_range
+      type_detailed_corrected, type_grouped_corrected,
+      lat = latitude, lon = longitude, id_range
     ) |>
     dplyr::arrange(canonical_id)
 
@@ -527,7 +529,8 @@ export_ddp_comparison_data <- function(ddp_raw, facilities_keyed,
   # Returns: character vector of written file paths (for format = "file").
 
   vera_type_lookup <- vera_facilities |>
-    dplyr::select(detloc, type_grouped = vera_type_corrected, type_detailed,
+    dplyr::select(detloc, type_grouped = type_grouped_corrected,
+                  type_detailed = type_detailed_corrected,
                   latitude, longitude) |>
     dplyr::distinct(detloc, .keep_all = TRUE)
 

@@ -42,10 +42,10 @@ vera_facilities    <- tar_read(vera_facilities)
 ```{r}
 #| label: prepare-comparison
 # Vera type lookup (one row per detloc).
-# Uses vera_type_corrected from the pipeline, which applies manual corrections
-# to Vera's original type_grouped (see vera_type_overrides() in vera-institute.R).
+# Uses corrected types from the pipeline (see vera_type_overrides() in vera-institute.R).
 vera_type_lookup <- vera_facilities |>
-  select(detloc, type_grouped = vera_type_corrected, type_detailed, latitude, longitude) |>
+  select(detloc, type_grouped = type_grouped_corrected,
+         type_detailed = type_detailed_corrected, latitude, longitude) |>
   distinct(detloc, .keep_all = TRUE)
 
 # ICE FY25 from pipeline

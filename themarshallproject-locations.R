@@ -190,7 +190,7 @@ hold_stub_address_patches <- function() {
 #' @param ero_canonical ERO field offices canonical tibble (must have detloc, canonical_id).
 #' @param detloc_lookup Current DETLOC lookup (to exclude facilities already canonical).
 #' @param vera_facilities Optional cleaned Vera facilities tibble. When provided, DDP codes
-#'   classified as Hold/Staging in `vera_type_corrected` are included alongside the
+#'   classified as Hold/Staging in `type_grouped_corrected` are included alongside the
 #'   DETLOC-pattern filter. This catches short-code staging facilities (STK, AGC, etc.)
 #'   that don't contain HOLD/STAGING/CPC in their DETLOC.
 #' @return A list with three elements:
@@ -207,7 +207,7 @@ build_hold_canonical <- function(ddp_codes, marshall_locations, ero_canonical,
   # Secondary filter: Vera classifies as Hold/Staging (catches short codes)
   if (!is.null(vera_facilities)) {
     vera_hold_codes <- vera_facilities |>
-      dplyr::filter(vera_type_corrected == "Hold/Staging") |>
+      dplyr::filter(type_grouped_corrected == "Hold/Staging") |>
       dplyr::pull(detloc)
     vera_extra <- ddp_codes |>
       dplyr::filter(detention_facility_code %in% vera_hold_codes,

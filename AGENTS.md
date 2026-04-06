@@ -67,7 +67,7 @@ Source: [github.com/themarshallproject/dhs_immigration_detention](https://github
 | `ero-field-offices-canonical.csv` | 25 ERO field offices with canonical IDs 2001–2025, DETLOCs, geocoding |
 | `ero-field-offices-geocoded.csv` | 25 ERO field offices with geocoded coordinates |
 | `hold-facilities-canonical.csv` | \~161 hold facilities with canonical IDs 2026–2186; \~125 with Marshall Project addresses/geocoding, \~36 DDP-only stubs. Count varies after pipeline rerun with Vera Hold/Staging expansion. |
-| `facility_roster.rds/.csv` | Full roster: one row per canonical facility (~962) with address, type, DETLOC, and `vera_type_corrected` (no geocoding; see `facilities_geocoded_all`) |
+| `facility_roster.rds/.csv` | Full roster: one row per canonical facility (~962) with address, type, DETLOC, `type_detailed_corrected`, and `type_grouped_corrected` (no geocoding; see `facilities_geocoded_all`) |
 | `source_presence.rds/.csv` | One row per canonical facility with boolean flags for each data source (ICE stats, DMCP, DDP, Marshall, Vera, geocoded) |
 | `facilities-geocoded-all.csv` | Unified geocoded coordinates from Google Maps API, Vera, and Marshall Project, with divergence flags |
 | `ddp-fy25-summary.csv` | DDP daily population summarized per facility for FY25 (853 facility codes × 15 columns) |
@@ -170,7 +170,7 @@ Targets: `vera_facilities_file` (format = "file") → `vera_facilities_raw` (`im
 | `download.R` | `download_ice_spreadsheets()` |
 | `import.R` | `header_rows()`, `clean_variable_names_from_header()`, `build_clean_names()`, `read_facilities_data()`, `import_all_years()` |
 | `clean.R` | `clean_facility_names()`, `fix_city_names()`, `clean_facilities_data()`, `clean_all_years()`, `repair_fl17_date_bleed()` |
-| `aggregate.R` | `classify_vera_category()`, `classify_facility_type()`, `classify_facility_type_combined()`, `aggregate_facilities_data()`, `aggregate_all_years()` |
+| `aggregate.R` | `classify_vera_category()`, `classify_facility_type()`, `classify_facility_type_combined()`, `.classify_detailed()`, `aggregate_facilities_data()`, `aggregate_all_years()` |
 | `crosswalk.R` | `build_facility_crosswalk()`, `attach_canonical_ids()`, `merge_keyed_lists()`, `build_facility_presence()`, `build_panel()`, `build_panel_facilities()`, `build_facility_roster()`, `save_outputs()` |
 | `integrate.R` | `build_dmcp_canonical_map()`, `attach_dmcp_canonical_ids()`, `build_annual_sums()`, `build_detloc_lookup()`, `build_detloc_lookup_full()` |
 | `ddp.R` | `build_ddp_codes()`, `build_ddp_canonical_map()`, `ddp_manual_strong_matches()`, `ddp_facility_summary()`, `build_ddp_fy_summary()`, `build_ddp_facility_canonical()`, `ddp_average_population()` (deprecated) |
@@ -207,11 +207,12 @@ All column names are snake_case derived from the 2-row Excel headers.
 
 ## Facility type classification
 
-Three type variables are used across the pipeline. See `data/facility-type-variables.md` for the full mapping table.
+Four type variables are used across the pipeline. See `data/facility-type-variables.md` for the full mapping table.
 
--   **`facility_type_detailed`**: Raw ICE facility type code from annual stats and DMCP listings (e.g., IGSA, CDF, SPC, BOP).
--   **`facility_type_wiki`**: Human-readable classification derived from `facility_type_detailed` (via `classify_facility_type()`) and from Vera types (via `.vera_type_to_wiki` in `crosswalk.R`). Used for Wikipedia and reporting.
--   **`vera_type_corrected`**: Vera Institute's 8-category vocabulary with 74 project overrides (via `vera_type_overrides()` in `vera-institute.R`). Joined to the roster via DETLOC.
+-   **`facility_type_detailed`**: Raw ICE facility type code from annual stats and DMCP listings (e.g., IGSA, CDF, SPC, BOP). For hold facilities, carries internal project codes (hold_room, staging, sub_office, etc.).
+-   **`type_detailed_corrected`**: Vera's `type_detailed` with 42 project overrides applied via `vera_type_overrides()`. Uses ICE codes (uppercase: BOP, SPC, CDF, STATE) when known, or internal project codes (lowercase: county_jail, ero_hold, sub_office) when the ICE classification is unknown. For non-overridden facilities, equals Vera's original `type_detailed`.
+-   **`type_grouped_corrected`**: Vera's `type_grouped` (8-category vocabulary) with the same 42 overrides applied. For non-overridden facilities, equals Vera's original `type_grouped`.
+-   **`facility_type_wiki`**: Human-readable classification derived by `classify_facility_type_combined()` in `R/aggregate.R` through a 4-tier priority system: (1) `facility_type_detailed`, (2) name-based overrides, (3) `type_detailed_corrected`, (4) `type_grouped_corrected`. Used for Wikipedia and reporting.
 
 ### ICE annual stats type mapping (`facility_type_detailed` → `facility_type_wiki`)
 
@@ -328,7 +329,7 @@ The `detloc` column is propagated through `facilities_keyed` → `facilities_pan
 
 ### Hold facility integration
 
-DDP data contains hold-type facility codes identified by two methods: (1) DETLOC contains HOLD, STAGING, or CPC; (2) Vera `vera_type_corrected == "Hold/Staging"`. The second method catches short-code staging facilities (STK, AGC, VRK, RGS, KRHUBFL) that don't follow the standard DETLOC naming pattern. These are cross-referenced against Marshall Project locations for addresses and geocoding.
+DDP data contains hold-type facility codes identified by two methods: (1) DETLOC contains HOLD, STAGING, or CPC; (2) Vera `type_grouped_corrected == "Hold/Staging"`. The second method catches short-code staging facilities (STK, AGC, VRK, RGS, KRHUBFL) that don't follow the standard DETLOC naming pattern. These are cross-referenced against Marshall Project locations for addresses and geocoding.
 
 Function: `build_hold_canonical()` in `themarshallproject-locations.R`. Accepts optional `vera_facilities` parameter (passed from `_targets.R`). Output saved as `data/hold-facilities-canonical.csv`.
 
@@ -342,12 +343,21 @@ Source: Table 2 of the Vera Institute "ICE Detention Trends: Technical Appendix"
 
 Maps ICE `facility_type_detailed` codes to Vera's 8-category vocabulary (Non-Dedicated, Dedicated, Federal, Hold/Staging, Family/Youth, Medical, Hotel, Other/Unknown). Implemented as `classify_vera_category()` in `R/aggregate.R`, with three project extensions for ICE codes not in Table 2: TAP-ICE → Family/Youth, FAMILY STAGING → Hotel, STATE → Dedicated. See `data/facility-type-variables.md` for the full mapping table.
 
-**`vera_type_corrected` column**: `clean_vera_facilities()` joins `vera_type_overrides()` (also in `vera-institute.R`) to produce a corrected type alongside Vera's original `type_grouped`. The overrides fix 74 facilities in two categories:
+**`type_detailed_corrected` and `type_grouped_corrected` columns**: `clean_vera_facilities()` joins `vera_type_overrides()` (also in `vera-institute.R`) to produce corrected versions of both `type_detailed` and `type_grouped`. All 42 overridden facilities had `type_detailed` of "Other" or "Unknown" and `type_grouped` of "Other/Unknown" in Vera's original data. The overrides correct both levels:
 
-1.  **58 "Other/Unknown" → correct type**: jails (30 → Non-Dedicated), state/federal prisons (11 → Federal), ICE detention facilities (6 → Dedicated), police depts/hold rooms (9 → Hold/Staging), plus 1 Medical and 1 Family/Youth.
-2.  **16 "Federal" county jails → Non-Dedicated**: facilities with USMS IGA contracts that are functionally county jails (Denver County, Salt Lake County, Ventura County, etc.).
+| Override category | `type_detailed_corrected` | `type_grouped_corrected` | Count |
+|---|---|---|---|
+| County jails | `county_jail` | Non-Dedicated | 32 |
+| ICE dedicated facilities | `SPC`, `CDF` | Dedicated | 3 |
+| State immigration facility | `STATE` | Dedicated | 1 |
+| Federal prisons | `BOP` | Federal | 2 |
+| Hold/staging | `ero_hold`, `sub_office` | Hold/Staging | 2 |
+| Medical | `Hospital` | Medical | 1 |
+| Family/youth | `Juvenile` | Family/Youth | 1 |
 
-Use `vera_type_corrected` (not `type_grouped`) in all analysis. The original `type_grouped` is preserved for reference.
+Uppercase `type_detailed_corrected` values are known ICE codes. Lowercase values are internal project codes used when the ICE classification is unknown (e.g., county jails could be IGSA or USMS IGA depending on the contract arrangement).
+
+Use `type_grouped_corrected` (not `type_grouped`) and `type_detailed_corrected` (not `type_detailed`) in all analysis. The originals are preserved for reference.
 
 ## Wikipedia article matching architecture
 

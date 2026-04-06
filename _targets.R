@@ -17,7 +17,7 @@ tar_option_set(
 tar_source()
 # Supplemental import scripts (not in R/)
 source("themarshallproject-locations.R")
-source("vera-institute.R")
+# source("vera-institute.R") # moved to R/
 
 list(
   # ── Metadata ───────────────────────────────────────────────────────────────
@@ -99,8 +99,6 @@ list(
   # IDs are looked up from id_registry; new facilities get IDs from 399+.
   tar_target(
     facility_crosswalk,
-| `ddp_comparison_report` | `tar_quarto()` | Renders `ddp-comparison.qmd` locally for review |
-| `ddp_comparison_export` | `export_ddp_comparison_data()` | Exports 11 RDS files to `data/ddp-comparison-export/` for deployment (cue = "never") |
     build_facility_crosswalk(facilities_aggregated, id_registry),
     description = "Maps every (name, city, state) variant across FY19-FY26 to canonical_id/canonical_name via exact + fuzzy address matching"
   ),
@@ -421,6 +419,16 @@ list(
   ),
   tar_target(
     ddp_raw,
+    arrow::read_feather(ddp_file)
+  ),
+  tar_target(
+    ddp_codes,
+    build_ddp_codes(ddp_raw)
+  ),
+  # ── DDP facility canonical IDs ──────────────────────────────────────────
+  # Assigns canonical IDs to 376 DDP facility codes not in detloc_lookup_full.
+  # Medical → 3001+; non-medical remainder → 1054+.
+  tar_target(
     ddp_facility_canonical,
     build_ddp_facility_canonical(ddp_codes, detloc_lookup_full, vera_facilities),
     description = "Assigns canonical IDs to unmapped DDP facilities: non-medical at 1054+, medical at 3001+"

@@ -50,47 +50,25 @@ classify_vera_category <- function(facility_type_detailed) {
   "Sunny Glen Cld Home NDR Center" = "Juvenile Detention Center"
 )
 
-# Combined classification: uses facility_type_detailed when available
-# (including ICE panel codes and hold facility internal codes), then falls
-# back to vera_type_corrected for facilities that only have Vera metadata.
-# Name-based overrides resolve ICE "Other" facilities where possible.
-# Suitable for the full roster across all ID ranges.
+# Combined classification: maps facility type codes to human-readable wiki types.
+#
+# Resolution order:
+#   1. facility_type_detailed — ICE panel codes + hold facility internal codes
+#   2. facility_name — name-based overrides for ICE "Other" facilities
+#   3. type_detailed_corrected — Vera-corrected detailed codes (same vocabulary
+#      as tier 1; catches codes like county_jail, STATE, BOP from overrides)
+#   4. type_grouped_corrected — Vera grouped category fallback
+#
+# All parameters accept vectors (for use inside dplyr::mutate). The column name
+# parameters default to the roster's standard column names.
 classify_facility_type_combined <- function(facility_type_detailed,
-                                            vera_type_corrected,
-                                            facility_name = NULL) {
-  # Primary: ICE panel codes + hold facility internal codes
-  from_type <- dplyr::case_when(
-    # ── ICE panel codes ──
-    facility_type_detailed == "IGSA"           ~ "Jail",
-    facility_type_detailed == "USMS IGA"       ~ "Jail",
-    facility_type_detailed == "DIGSA"          ~ "Dedicated Migrant Detention Center",
-    facility_type_detailed == "STATE"          ~ "State Migrant Detention Center",
-    facility_type_detailed == "BOP"            ~ "Federal Prison",
-    facility_type_detailed == "FAMILY"         ~ "Family Detention Center",
-    # FAMILY STAGING: Hotel if name is in known hotel list, else Family
-    facility_type_detailed == "FAMILY STAGING" &
-      !is.null(facility_name) &
-      facility_name %in% .family_staging_hotels          ~ "Hotel",
-    facility_type_detailed == "FAMILY STAGING"            ~ "Family Detention Center",
-    facility_type_detailed == "JUVENILE"       ~ "Juvenile Detention Center",
-    facility_type_detailed == "CDF"            ~ "Private Migrant Detention Center",
-    facility_type_detailed == "USMS CDF"       ~ "Private Migrant Detention Center",
-    facility_type_detailed == "SPC"            ~ "ICE Migrant Detention Center",
-    facility_type_detailed == "STAGING"        ~ "ICE Staging Facility",
-    facility_type_detailed == "DOD"            ~ "Military Detention Center",
-    facility_type_detailed == "TAP-ICE"        ~ "Family Detention Center",
-    # ── Hold facility internal codes ──
-    facility_type_detailed == "hold_room"      ~ "ICE Hold Room",
-    facility_type_detailed == "ero_hold"       ~ "ICE ERO Hold Room",
-    facility_type_detailed == "sub_office"     ~ "ICE ERO Sub-Office",
-    facility_type_detailed == "custody_case"   ~ "ICE Custody/Case Facility",
-    facility_type_detailed == "staging"        ~ "ICE Staging Facility",
-    facility_type_detailed == "cbp"            ~ "CBP Hold Facility",
-    facility_type_detailed == "command_center" ~ "ICE Command Center",
-    facility_type_detailed == "ero_office"     ~ "ICE ERO Field Office",
-    TRUE                                       ~ NA_character_
-  )
-  # Name-based overrides for ICE "Other" facilities
+                                            type_grouped_corrected,
+                                            facility_name = NULL,
+                                            type_detailed_corrected = NULL) {
+  # ── Tier 1: ICE panel codes + hold facility internal codes ──
+  from_type <- .classify_detailed(facility_type_detailed, facility_name)
+
+  # ── Tier 2: Name-based overrides for ICE "Other" facilities ──
   from_name <- if (!is.null(facility_name)) {
     dplyr::if_else(
       is.na(from_type) & facility_name %in% names(.other_type_overrides),
@@ -100,19 +78,72 @@ classify_facility_type_combined <- function(facility_type_detailed,
   } else {
     NA_character_
   }
-  # Fallback: Vera category → wiki type
-  from_vera <- dplyr::case_when(
-    vera_type_corrected == "Non-Dedicated" ~ "Jail",
-    vera_type_corrected == "Dedicated"     ~ "Private Migrant Detention Center",
-    vera_type_corrected == "Federal"       ~ "Federal Prison",
-    vera_type_corrected == "Family/Youth"  ~ "Family Detention Center",
-    vera_type_corrected == "Medical"       ~ "Medical Facility",
-    vera_type_corrected == "Hotel"         ~ "Hotel",
-    vera_type_corrected == "Hold/Staging"  ~ "ICE Hold Room",
-    vera_type_corrected == "Other/Unknown" ~ "Other",
-    TRUE                                   ~ NA_character_
+
+  # ── Tier 3: Vera-corrected detailed codes ──
+  # Same vocabulary as tier 1 (ICE codes + internal codes), applied to
+  # type_detailed_corrected from Vera overrides.
+  from_vera_detailed <- if (!is.null(type_detailed_corrected)) {
+    .classify_detailed(type_detailed_corrected, facility_name)
+  } else {
+    NA_character_
+  }
+
+  # ── Tier 4: Vera grouped category fallback ──
+  from_vera_grouped <- dplyr::case_when(
+    type_grouped_corrected == "Non-Dedicated" ~ "Jail",
+    type_grouped_corrected == "Dedicated"     ~ "Private Migrant Detention Center",
+    type_grouped_corrected == "Federal"       ~ "Federal Prison",
+    type_grouped_corrected == "Family/Youth"  ~ "Family Detention Center",
+    type_grouped_corrected == "Medical"       ~ "Medical Facility",
+    type_grouped_corrected == "Hotel"         ~ "Hotel",
+    type_grouped_corrected == "Hold/Staging"  ~ "ICE Hold Room",
+    type_grouped_corrected == "Other/Unknown" ~ "Other",
+    TRUE                                      ~ NA_character_
   )
-  dplyr::coalesce(from_type, from_name, from_vera, "Other")
+  dplyr::coalesce(from_type, from_name, from_vera_detailed, from_vera_grouped, "Other")
+}
+
+# Shared detailed-code → wiki-type mapping used by classify_facility_type_combined.
+# Handles both ICE panel codes (uppercase) and internal project codes (lowercase).
+.classify_detailed <- function(type_code, facility_name = NULL) {
+  dplyr::case_when(
+    # ── ICE panel codes ──
+    type_code == "IGSA"           ~ "Jail",
+    type_code == "USMS IGA"       ~ "Jail",
+    type_code == "DIGSA"          ~ "Dedicated Migrant Detention Center",
+    type_code == "STATE"          ~ "State Migrant Detention Center",
+    type_code == "BOP"            ~ "Federal Prison",
+    type_code == "FAMILY"         ~ "Family Detention Center",
+    type_code == "FAMILY STAGING" &
+      !is.null(facility_name) &
+      facility_name %in% .family_staging_hotels ~ "Hotel",
+    type_code == "FAMILY STAGING" ~ "Family Detention Center",
+    type_code == "JUVENILE"       ~ "Juvenile Detention Center",
+    type_code == "CDF"            ~ "Private Migrant Detention Center",
+    type_code == "USMS CDF"       ~ "Private Migrant Detention Center",
+    type_code == "SPC"            ~ "ICE Migrant Detention Center",
+    type_code == "STAGING"        ~ "ICE Staging Facility",
+    type_code == "DOD"            ~ "Military Detention Center",
+    type_code == "TAP-ICE"        ~ "Family Detention Center",
+    # ── Internal project codes ──
+    type_code == "county_jail"    ~ "Jail",
+    type_code == "hold_room"      ~ "ICE Hold Room",
+    type_code == "ero_hold"       ~ "ICE ERO Hold Room",
+    type_code == "sub_office"     ~ "ICE ERO Sub-Office",
+    type_code == "custody_case"   ~ "ICE Custody/Case Facility",
+    type_code == "staging"        ~ "ICE Staging Facility",
+    type_code == "cbp"            ~ "CBP Hold Facility",
+    type_code == "command_center" ~ "ICE Command Center",
+    type_code == "ero_office"     ~ "ICE ERO Field Office",
+    # ── Vera-only detailed codes ──
+    type_code == "Hospital"       ~ "Medical Facility",
+    type_code == "Juvenile"       ~ "Juvenile Detention Center",
+    type_code == "Hotel"          ~ "Hotel",
+    type_code == "Hold"           ~ "ICE Hold Room",
+    type_code == "Staging"        ~ "ICE Staging Facility",
+    type_code == "Family"         ~ "Family Detention Center",
+    TRUE                          ~ NA_character_
+  )
 }
 
 # Shared classification: maps facility_type_detailed → readable wiki type.
