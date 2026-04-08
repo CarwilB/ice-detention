@@ -528,7 +528,7 @@ list(
 
   tar_target(
     ddp_comparison_export,
-    export_ddp_comparison_data(ddp_raw, facilities_keyed,
+    export_ddp_comparison_data(ddp_raw, facilities_all_keyed,
                                detloc_lookup_full, vera_facilities),
     description = "Exports 11 RDS files to data/ddp-comparison-export/ for deploying the DDP comparison blog post",
     format = "file",
@@ -544,6 +544,10 @@ list(
     description = "Rendered facility-summary.qmd Quarto report; re-renders when upstream targets change"
   ),
 
+  # ── Geocoding divergence  report ────────────────────────────────────────
+  # Quarto report summarizing geocoding divergences between Google results
+  # and source-provided coordinates, with maps and tables. Re-renders when
+  # facilities_geocoded_all changes.
   tar_quarto(
     geocoding_divergence_report,
     "geocoding-divergence.qmd",

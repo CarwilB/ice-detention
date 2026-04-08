@@ -1,0 +1,512 @@
+filter(!str_detect(facility_name, "PD|P.D")) |>
+filter(str_detect(facility_name, "Men Colony|SCC/Jamestown|Charlotte CI|St. Pris.")) |>
+filter(!(detloc %in% vera_overrides$all)) |> pull(facility_name)
+vera_facilities |> filter(type_grouped=="Other/Unknown") |>
+filter(!str_detect(facility_name, "Jail")) |>  # negate prior rule 1
+filter(!str_detect(facility_name, "Police")) |>
+filter(!str_detect(facility_name, "CF|C.F|C.I|Corr")) |>
+filter(!str_detect(facility_name, "Prison")) |>
+filter(!str_detect(facility_name, "County")) |>
+filter(!str_detect(facility_name, "PD|P.D")) |>
+filter(str_detect(facility_name, "Men Colony|SCC/Jamestown|Charlotte CI|St. Pris.")) |>
+filter(!(detloc %in% vera_overrides$all)) |>
+mutate(override_line_2 = str_glue("   \"{detloc}\", \"state_prison\", \"Non-Dedicated\",")) |>
+pull(override_line_2)
+vera_facilities |> filter(type_grouped=="Other/Unknown") |>
+filter(!str_detect(facility_name, "Jail")) |>  # negate prior rule 1
+filter(!str_detect(facility_name, "Police")) |>
+filter(!str_detect(facility_name, "CF|C.F|C.I|Corr")) |>
+filter(!str_detect(facility_name, "Prison")) |>
+filter(!str_detect(facility_name, "County")) |>
+filter(!str_detect(facility_name, "PD|P.D")) |>
+filter(!str_detect(facility_name, "Men Colony|SCC/Jamestown|Charlotte CI|St. Pris.")) |>
+filter(!(detloc %in% vera_overrides$all))
+vera_facilities |> filter(type_grouped=="Other/Unknown") |>
+filter(!str_detect(facility_name, "Jail")) |>  # negate prior rule 1
+filter(!str_detect(facility_name, "Police")) |>
+filter(!str_detect(facility_name, "CF|C.F|C.I|Corr")) |>
+filter(!str_detect(facility_name, "Prison")) |>
+filter(!str_detect(facility_name, "County")) |>
+filter(!str_detect(facility_name, "PD|P.D")) |>
+filter(!str_detect(facility_name, "Men Colony|SCC/Jamestown|Charlotte CI|St. Pris.")) |>
+filter(!(detloc %in% vera_overrides$all))  |> pull(facility_name)
+vera_facilities |> filter(type_grouped=="Other/Unknown") |>
+filter(!str_detect(facility_name, "Jail")) |>  # negate prior rule 1
+filter(!str_detect(facility_name, "Police")) |>
+filter(!str_detect(facility_name, "CF|C.F|C.I|Corr")) |>
+filter(!str_detect(facility_name, "Prison")) |>
+filter(!str_detect(facility_name, "County")) |>
+filter(!str_detect(facility_name, "PD|P.D")) |>
+filter(!str_detect(facility_name, "Men Colony|SCC/Jamestown|Charlotte CI|St. Pris.")) |>
+filter(!(detloc %in% vera_overrides$all)) |>
+mutate(override_line = str_glue("   \"{detloc}\", \"county_jail\", \"Non-Dedicated\",")) |>
+pull(override_line)
+vera_type_overrides <- function() {
+tibble::tribble(
+~detloc,    ~type_detailed_corrected, ~type_grouped_corrected,
+# ── Other/Unknown → county_jail / Non-Dedicated ──────────────────────
+"ABIRJVA",  "county_jail", "Non-Dedicated",
+"ANDERSC",  "county_jail", "Non-Dedicated",
+"BARTOGA",  "county_jail", "Non-Dedicated",
+"BAYCOFL",  "county_jail", "Non-Dedicated",
+"BREVDFL",  "county_jail", "Non-Dedicated",
+"BROWNWI",  "county_jail", "Non-Dedicated",
+"CHFLDVA",  "county_jail", "Non-Dedicated",
+"COLUMFL",  "county_jail", "Non-Dedicated",
+# ICE annual stats: IGSA
+"EPCDFTX",  "IGSA",        "Non-Dedicated",
+"FCLT8CA",  "county_jail", "Non-Dedicated", # Facility 8, San Diego
+"FLGLRFL",  "county_jail", "Non-Dedicated",
+"FNDDUWI",  "county_jail", "Non-Dedicated",
+# ICE annual stats: USMS IGA
+"FRANKPA",  "USMS IGA",    "Federal",
+#    "GCPFCKS",  "county_jail", "Non-Dedicated", # Garden City Processing @ Finney County Jail
+"GOODCID",  "county_jail", "Non-Dedicated",
+"JACKSTN",  "county_jail", "Non-Dedicated",
+"LASALTX",  "county_jail", "Non-Dedicated",
+"MRREGVA",  "county_jail", "Non-Dedicated",
+#    "NASTRNY",  "county_jail", "Non-Dedicated", # "Nassau County [Detention Facility] ICE Trailer"
+"OSCEOFL",  "county_jail", "Non-Dedicated",
+"PIERCND",  "county_jail", "Non-Dedicated",
+"POTTRTX",  "county_jail", "Non-Dedicated",
+"PUTMAFL",  "county_jail", "Non-Dedicated",
+"SALINNE",  "county_jail", "Non-Dedicated",
+"SMNOLFL",  "county_jail", "Non-Dedicated",
+"SROSAFL",  "county_jail", "Non-Dedicated",
+"STJONFL",  "county_jail", "Non-Dedicated",
+"SUMTEFL",  "county_jail", "Non-Dedicated",
+"SUWANFL",  "county_jail", "Non-Dedicated",
+# ICE annual stats: IGSA
+"TGKJLFL",  "IGSA",        "Non-Dedicated",
+"UVALDTX",  "county_jail", "Non-Dedicated",
+"WALTNFL",  "county_jail", "Non-Dedicated",
+# The following were caught by the word 'jail' and inspected manually
+"ADAIRKY", "county_jail", "Non-Dedicated",
+"ALAMOCO", "county_jail", "Non-Dedicated",
+"ALEXAAL", "county_jail", "Non-Dedicated",
+"ANDRWTX", "county_jail", "Non-Dedicated",
+"ARTESNM", "county_jail", "Non-Dedicated",
+"ASHECNC", "county_jail", "Non-Dedicated",
+"BELMOOH", "county_jail", "Non-Dedicated",
+"CHENANY", "county_jail", "Non-Dedicated",
+"CHEROOK", "county_jail", "Non-Dedicated",
+"DAUPHPA", "county_jail", "Non-Dedicated",
+"DEKALGA", "county_jail", "Non-Dedicated",
+"ELKHAIN", "county_jail", "Non-Dedicated",
+"GRAHAAZ", "county_jail", "Non-Dedicated",
+"HAMILTX", "county_jail", "Non-Dedicated",
+"HARDEFL", "county_jail", "Non-Dedicated",
+"KANECIL", "county_jail", "Non-Dedicated",
+"LAKCOFL", "county_jail", "Non-Dedicated",
+"LAVACTX", "county_jail", "Non-Dedicated",
+"LIMCJTX", "county_jail", "Non-Dedicated",
+"MARTNTX", "county_jail", "Non-Dedicated",
+"MSKGNMI", "county_jail", "Non-Dedicated",
+"NASHUMA", "county_jail", "Non-Dedicated",
+"NRVRJVA", "county_jail", "Non-Dedicated",
+"PENDRNC", "county_jail", "Non-Dedicated",
+"SBARBCA", "county_jail", "Non-Dedicated",
+"SLOBICA", "county_jail", "Non-Dedicated",
+"ALAMOTX", "county_jail", "Non-Dedicated",
+"BRWNSTX", "county_jail", "Non-Dedicated",
+"EDNBGTX", "county_jail", "Non-Dedicated",
+"HDLGOTX", "county_jail", "Non-Dedicated",
+"HRLGNTX", "county_jail", "Non-Dedicated",
+"LAFERTX", "county_jail", "Non-Dedicated",
+"LFRESTX", "county_jail", "Non-Dedicated",
+"LPD77CA", "county_jail", "Non-Dedicated",
+"LUFKNTX", "county_jail", "Non-Dedicated",
+"MRCDSTX", "county_jail", "Non-Dedicated",
+"PLMVWTX", "county_jail", "Non-Dedicated",
+"PTISBTX", "county_jail", "Non-Dedicated",
+"SBNTOTX", "county_jail", "Non-Dedicated",
+"SJUANTX", "county_jail", "Non-Dedicated",
+"SPIPDTX", "county_jail", "Non-Dedicated",
+# The following were caught by the word 'Police' and inspected manually
+"ALAMOTX", "police_dept", "Non-Dedicated",
+"BRWNSTX", "police_dept", "Non-Dedicated",
+"EDNBGTX", "police_dept", "Non-Dedicated",
+"HDLGOTX", "police_dept", "Non-Dedicated",
+"HRLGNTX", "police_dept", "Non-Dedicated",
+"LAFERTX", "police_dept", "Non-Dedicated",
+"LFRESTX", "police_dept", "Non-Dedicated",
+"LPD77CA", "police_dept", "Non-Dedicated",
+"LUFKNTX", "police_dept", "Non-Dedicated",
+"MRCDSTX", "police_dept", "Non-Dedicated",
+"PLMVWTX", "police_dept", "Non-Dedicated",
+"PTISBTX", "police_dept", "Non-Dedicated",
+"SBNTOTX", "police_dept", "Non-Dedicated",
+"SJUANTX", "police_dept", "Non-Dedicated",
+"SPIPDTX", "police_dept", "Non-Dedicated",
+"INDMPIN", "police_dept", "Non-Dedicated",
+"PBDPDMA", "police_dept", "Non-Dedicated",
+# The following were caught by Corr or CI
+"FLBREVC", "county_jail", "Non-Dedicated",
+"HACTCND", "county_jail", "Non-Dedicated",
+"MERCEIL", "county_jail", "Non-Dedicated",
+"CACFLEO", "county_jail", "Non-Dedicated",
+"CACFDON", "state_prison", "Non-Dedicated",
+"DECCSMY", "state_prison", "Non-Dedicated",
+"FLBREVC", "state_prison", "Non-Dedicated",
+"FLCHACI", "state_prison", "Non-Dedicated",
+"FLMARIC", "state_prison", "Non-Dedicated",
+"ILPICKN", "state_prison", "Non-Dedicated",
+"INDCMIC", "state_prison", "Non-Dedicated",
+"NYLIVIC", "state_prison", "Non-Dedicated",
+"NYMARCC", "state_prison", "Non-Dedicated",
+"NYMDSTC", "state_prison", "Non-Dedicated",
+"NYMOHOC", "state_prison", "Non-Dedicated",
+"NYADIRC", "state_prison", "Non-Dedicated",
+"NYEASTC", "state_prison", "Non-Dedicated",
+"NYFISHC", "state_prison", "Non-Dedicated",
+"NYGREAC", "state_prison", "Non-Dedicated",
+"NYGROVC", "state_prison", "Non-Dedicated",
+"NYULSTC", "state_prison", "Non-Dedicated",
+# Name includes state prison
+"AZSPFLO", "state_prison", "Non-Dedicated",
+"AZSVCPC", "state_prison", "Non-Dedicated",
+"CAIRONW", "state_prison", "Non-Dedicated",
+"CASPCAL", "state_prison", "Non-Dedicated",
+# Individual state prisons
+"CACCJAM", "state_prison", "Non-Dedicated",
+"CAMENCE", "state_prison", "Non-Dedicated",
+"CAMENCW", "state_prison", "Non-Dedicated",
+"FLCHACI", "state_prison", "Non-Dedicated",
+"FLSPSTA", "state_prison", "Non-Dedicated",
+# Name includes "County"
+"BSQUETX", "county_jail", "Non-Dedicated",
+"ECLECTX", "county_jail", "Non-Dedicated",
+"GCLECOK", "county_jail", "Non-Dedicated",
+"NASTRNY", "county_jail", "Non-Dedicated",
+"SDPROCA", "county_jail", "Non-Dedicated",
+"SMRVLTX", "county_jail", "Non-Dedicated",
+# other county centers
+"ARTSINM", "county_jail", "Non-Dedicated",
+"BRANCMI", "county_jail", "Non-Dedicated",
+"CAWVALL", "county_jail", "Non-Dedicated",
+"SONMACA", "county_jail", "Non-Dedicated",
+# ── Other/Unknown → BOP / Federal (from ICE annual stats) ─────────────
+"BOPATL",   "BOP",         "Federal",       # Atlanta U.S. Pen.
+"BOPLVN",   "BOP",         "Federal",       # Leavenworth USP
+"BOPPET",   "BOP",         "Federal",
+"BOPMRG",   "BOP",         "Federal",
+# ── Other/Unknown → USMS IGA / Federal (from ICE annual stats) ──────
+"EDNDCTX",  "USMS IGA",    "Federal",       # Eden Detention Ctr
+"NLSCOLA",  "USMS IGA",    "Federal",       # Nelson Coleman Corrections Center
+"SAUKCWI",  "USMS IGA",    "Federal",       # Sauk County Sheriff
+# ── Other/Unknown → IGSA / Non-Dedicated (from ICE annual stats) ────
+"BOURBKY",  "IGSA",        "Non-Dedicated", # Bourbon Co Det Center
+"LAKCOFL",  "IGSA",        "Non-Dedicated", # Lake County Jail
+# ── Other/Unknown → Dedicated (from ICE annual stats) ───────────────
+"FLBAKCI",  "STATE",       "Dedicated",     # Baker C.I.: FL state immigration facility (ICE: STATE)
+"FLDADCI",  "STATE",       "Dedicated",     # Dade Correctional Inst (ICE: STATE)
+"BPC",      "SPC",         "Dedicated",     # Boston SPC
+"BIINCCO",  "CDF",         "Dedicated",     # BI Inc (GEO Group subsidiary)
+"CVANXCA",  "CDF",         "Dedicated",     # Central Valley Annex
+"BOPNEO", "CDF",         "Dedicated", # Northeast Ohio Correctional Center (GEO Group)
+# ── Other/Unknown → TAP-ICE / Family/Youth (from ICE annual stats) ──
+"TAKARTX",  "TAP-ICE",     "Family/Youth",  # Trusted Adult Karnes FSC
+# ── Other/Unknown → Hold/Staging ─────────────────────────────────────
+"IBPSMIA",  "ero_hold",    "Hold/Staging",  # Miami Border Patrol
+"SMAHOLD",  "sub_office",  "Hold/Staging",  # Santa Maria Sub Office ERO
+# ── Other/Unknown → Hospital / Medical ───────────────────────────────
+"UPMCAPA",  "Hospital",    "Medical",
+# ── Other/Unknown → Juvenile / Family/Youth ──────────────────────────
+"NRJDCVA",  "Juvenile",    "Family/Youth"
+)
+}
+vto <- vera_type_overrides()
+vera_overrides <- vto |>
+mutate(
+list_name = case_when(
+type_grouped_corrected == "Non-Dedicated" ~ "county_jail",
+type_grouped_corrected == "Federal"       ~ "federal_prison",
+type_grouped_corrected == "Dedicated"     ~ "dedicated",
+type_grouped_corrected == "Hold/Staging"  ~ "hold_staging",
+type_grouped_corrected == "Medical"       ~ "medical",
+type_grouped_corrected == "Family/Youth"  ~ "family",
+.default = type_grouped_corrected
+)
+) |>
+with(split(detloc, list_name))
+vera_overrides$all <- unlist(vera_overrides, use.names = FALSE)
+tar_source()
+tar_make()
+# This script refines the overrides list in vera-institute.R
+#
+# My diagnostic tools ofr this are in vera-overrides-purrr-list.R
+#
+# Current goal is to parse out the items with type_grouped of "Other/Unknown"
+#
+# We're working on a universe of 141 entries
+#
+# At the start, there are 42 already overriden
+vera_facilities |> filter(type_grouped=="Other/Unknown") |> filter((detloc %in% vera_overrides$all)) |> nrow()
+# Here's the breakdown
+vera_facilities |> filter(type_grouped=="Other/Unknown")  |> count(type_grouped_corrected)
+# How many still Other/Unknown
+vera_facilities |> filter(type_grouped_corrected=="Other/Unknown") |> nrow()
+vto |> count(type_detailed_corrected)
+vto |> count(type_group_corrected)
+vto |> count(type_grouped_corrected)
+tar_load(vera_facilities)
+# Here's the breakdown
+cat("Don't forget to tar_load(vera_facilties)")
+vera_facilities |> filter(type_grouped=="Other/Unknown")  |> count(type_grouped_corrected)
+# How many still Other/Unknown
+vera_facilities |> filter(type_grouped_corrected=="Other/Unknown") |> nrow()
+# Here's the code to generate new code (metacoding) for
+# all facilities with "Jail" in the name:
+vera_facilities |> filter(type_grouped=="Other/Unknown") |>
+filter(str_detect(facility_name, "Jail")) |>
+filter(!(detloc %in% vera_overrides$all)) |>
+mutate(override_line = str_glue("   \"{detloc}\", \"county_jail\", \"Non-Dedicated\",")) |>
+pull(override_line)
+# Police as keyword
+vera_facilities |> filter(type_grouped=="Other/Unknown") |>
+filter(!str_detect(facility_name, "Jail")) |>  # negate prior rule 1
+filter(str_detect(facility_name, "Police")) |>
+filter(!(detloc %in% vera_overrides$all)) |>
+pull(facility_name)
+tar_load_everything()
+facilty_roster
+facility_roster
+facility_roster |> count(type_grouped_corrected)
+facility_roster |> count(type_detailed_corrected)
+facility_roster |> count(type_detailed_corrected) |> print(n=30)
+tar_source()
+tar_make9
+tar_make()
+geocode_source_preference()
+tar_load_everything()
+facilities_geocoded_all
+facilities_geocoded_all
+facilities_geocoded_all |> filter(canonical_id %in% c(14, 176, 1170, 212, 136, 220))
+facilities_geocoded_all |> filter(canonical_id %in% c(14, 176, 1170, 212, 136, 220)) |> relocate(divergent)
+facilities_geocoded_all |> filter(canonical_id %in% c(14, 176, 1170, 212, 136, 220)) |> filter(divergent) |> relocate(divergent, divergence_km) |> arrange(desc(divergence_km))
+tar_source()
+tar_make()
+library(dplyr)
+# Check current state of each facility the user wants to fix
+ids <- c(2141, 1199, 2027, 2122, 2119, 39, 2077)
+facility_roster |>
+filter(canonical_id %in% ids) |>
+select(canonical_id, canonical_name, facility_address, facility_city, facility_state, facility_zip) |>
+arrange(canonical_id)
+# Check hold_canonical_data for these facilities
+hold_canonical_data$hold_canonical |>
+filter(canonical_id %in% c(2027, 2077, 2119, 2122, 2141)) |>
+select(canonical_id, canonical_name, detloc, address, city, state, zip, address_source)
+# Confirm: Marshall data has "UNAVAILABLE" as literal string, not NA
+marshall_locations |>
+filter(detention_facility_code %in% c("ETWHOLDAL", "KNXHOLDTN", "SGUHOLDUT")) |>
+select(detention_facility_code, facility_address, facility_city)
+names(marshall_locations)[1:15]
+marshall_locations |>
+filter(detloc %in% c("ETWHOLDAL", "KNXHOLDTN", "SGUHOLDUT")) |>
+select(detloc, facility_address, facility_city)
+# These are DDP codes, not Marshall codes. Check if Marshall has partial matches
+marshall_locations |>
+filter(grepl("ETW|KNX|SGU", detloc)) |>
+select(detloc, facility_address, facility_city)
+# Check why Burleigh County's address_patches() entry isn't working
+# The patch matches by facility_name = "Burleigh County"
+# but what name does the ICE data use?
+facilities_clean |>
+purrr::map(~ .x |> filter(grepl("Burleigh", facility_name, ignore.case = TRUE)) |>
+select(facility_name, facility_address, facility_city)) |>
+purrr::compact()
+# Check Rappahannock - the .ddp_facility_patches already has the address
+# but the user wants it updated to "1745 Richmond Hwy"
+ddp_facility_canonical <- targets::tar_read(ddp_facility_canonical)
+ddp_facility_canonical |>
+filter(canonical_id == 1199) |>
+select(canonical_id, canonical_name, detloc, facility_address, facility_city, facility_state, facility_zip)
+# Check Portland ME holdroom in Marshall data
+marshall_locations |>
+filter(grepl("POMHOLD|PORTLAND", detloc, ignore.case = TRUE)) |>
+select(detloc, facility_name, facility_address, facility_city, facility_state)
+# Source the modified files and verify they parse
+source("themarshallproject-locations.R")
+source("R/clean.R")
+source("R/ddp.R")
+cat("All three files sourced successfully.\n")
+# Check the patches are well-formed
+cat("\nhold_stub_address_patches():\n")
+hold_stub_address_patches() |> dplyr::select(detention_facility_code, facility_address, facility_city) |> print(n = 20)
+cat("\naddress_patches():\n")
+address_patches() |> dplyr::select(facility_name, facility_address, facility_city) |> print(n = 10)
+cat("\n.ddp_facility_patches():\n")
+.ddp_facility_patches() |> print()
+# Rebuild hold_canonical_data with the fixed code
+test_hold <- build_hold_canonical(
+ddp_codes, marshall_locations, ero_canonical, detloc_lookup, vera_facilities
+)
+# Debug: check if hold_new is empty before patches
+hold_codes <- ddp_codes |>
+filter(grepl("HOLD|STAGING|CPC", detention_facility_code))
+vera_hold_codes <- vera_facilities |>
+filter(type_grouped_corrected == "Hold/Staging") |>
+pull(detloc)
+all_hold <- bind_rows(
+hold_codes,
+ddp_codes |> filter(detention_facility_code %in% vera_hold_codes,
+!detention_facility_code %in% hold_codes$detention_facility_code)
+)
+already_canonical <- unique(c(detloc_lookup$detloc, ero_canonical$detloc))
+hold_new_count <- all_hold |> filter(!detention_facility_code %in% already_canonical) |> nrow()
+cat("Hold codes after excluding already canonical:", hold_new_count, "\n")
+cat("Total hold codes:", nrow(all_hold), "\n")
+cat("Already canonical detlocs:", length(already_canonical), "\n")
+# Test the patching logic in isolation with mock data
+mock_hold_new <- tibble::tibble(
+detention_facility_code = c("ETWHOLDAL", "POMHOLDME", "AMTHOLDTX", "OTHHOLD"),
+detention_facility = c("Etowah Hold", "Portland Hold", "Amarillo Hold", "Other Hold"),
+state = c("AL", "ME", "TX", "CA"),
+facility_address = c("UNAVAILABLE", "511 NORTHWEST BROADWAY", "8601 E. AMARILLO BLVD", NA),
+facility_city = c("GADSDEN", "PORTLAND", "AMARILLO", NA),
+facility_zip = c("35901", "04101", "79801", NA),
+facility_county = rep(NA_character_, 4),
+lat = rep(NA_real_, 4), lon = rep(NA_real_, 4),
+aor = rep(NA_character_, 4),
+date_first_use = rep(as.Date(NA), 4), date_last_use = rep(as.Date(NA), 4),
+address_source = c("marshall_project", "marshall_project", "marshall_project", NA),
+facility_type = rep("hold_room", 4),
+facility_type_wiki = rep("Hold Room", 4)
+)
+# Apply the new patching logic
+patches <- hold_stub_address_patches()
+patched_codes <- intersect(mock_hold_new$detention_facility_code,
+patches$detention_facility_code)
+cat("Patched codes:", paste(patched_codes, collapse = ", "), "\n\n")
+patch_cols <- c("facility_address", "facility_city", "facility_zip",
+"facility_county", "lat", "lon", "aor",
+"date_first_use", "date_last_use", "address_source")
+mock_patched <- mock_hold_new |>
+filter(!detention_facility_code %in% patched_codes) |>
+bind_rows(
+mock_hold_new |>
+filter(detention_facility_code %in% patched_codes) |>
+select(-any_of(patch_cols)) |>
+left_join(patches, by = "detention_facility_code")
+)
+# Now test the split
+has_address <- function(addr) !is.na(addr) & addr != "UNAVAILABLE"
+with_addr <- mock_patched |> filter(has_address(facility_address), !is.na(facility_city))
+stubs <- mock_patched |> filter(!has_address(facility_address) | is.na(facility_city))
+cat("With address:\n")
+with_addr |> select(detention_facility_code, facility_address, facility_city) |> print()
+cat("\nStubs:\n")
+stubs |> select(detention_facility_code, facility_address, facility_city) |> print()
+tar_make()
+tar_source()
+tar_make()
+ddp_codes |> filter(grepl("ETW|KNX|SGU|AMTHOLD|POMHOLD", detention_facility_code)) |>
+select(detention_facility_code, detention_facility, state)
+library(readr)
+# Build the frozen registry from pre-shift IDs
+hold_registry <- read_csv("/tmp/hold_registry_raw.csv",
+col_names = c("canonical_id", "canonical_name", "detloc"),
+col_types = "icc"
+)
+cat(nrow(hold_registry), "hold facilities\n")
+cat("ID range:", min(hold_registry$canonical_id), "–", max(hold_registry$canonical_id), "\n")
+# Confirm the key affected facilities have the right IDs
+hold_registry |> filter(canonical_id %in% c(2027, 2037, 2048, 2077, 2094, 2111, 2122) |
+detloc %in% c("ETWHOLD", "IMPHOLD", "LVHOLDNV", "LVGHOLD", "POMHOLD", "AMTHOLD", "SJUHOLD"))
+# Portland has NA detloc — check the actual pre-shift roster via git
+# Also check Glenwood Springs' pre-shift ID
+pre_shift_roster <- system("cd '/Users/bjorkjcr/Dropbox (Personal)/R/ice-detention' && git show HEAD~1:data/facility_roster.csv", intern = TRUE)
+pre_shift_df <- read_csv(I(pre_shift_roster), show_col_types = FALSE)
+pre_shift_df |>
+filter(canonical_id >= 2026 & canonical_id <= 2200) |>
+filter(grepl("Portland|Glenwood|Knoxville|St. George|Krome", canonical_name, ignore.case = TRUE)) |>
+select(canonical_id, canonical_name, detloc)
+# Get the full clean pre-shift hold registry
+hold_registry_clean <- pre_shift_df |>
+filter(canonical_id >= 2026 & canonical_id <= 2999) |>
+select(canonical_id, canonical_name, detloc) |>
+arrange(canonical_id)
+cat(nrow(hold_registry_clean), "facilities, IDs",
+min(hold_registry_clean$canonical_id), "–", max(hold_registry_clean$canonical_id), "\n")
+cat("With detloc:", sum(!is.na(hold_registry_clean$detloc)), "\n")
+cat("Without detloc:", sum(is.na(hold_registry_clean$detloc)), "\n")
+hold_registry_clean |> filter(is.na(detloc))
+write_csv(hold_registry_clean, here::here("data/hold-canonical-registry.csv"))
+cat("Written:", nrow(hold_registry_clean), "rows\n")
+readLines(here::here("data/hold-canonical-registry.csv")) |> head(6) |> cat(sep = "\n")
+# Confirm correct DDP detloc codes for all patched facilities
+ddp_codes |>
+filter(detention_facility_code %in% c("ETWHOLD","KNXHOLD","SGUHOLD","LVGHOLD","LVHOLDNV","POMHOLD","AMTHOLD",
+"ETWHOLDAL","KNXHOLDTN","SGUHOLDUT","LVHOLDNV","POMHOLDME","AMTHOLDTX")) |>
+select(detention_facility_code, detention_facility, state)
+source("themarshallproject-locations.R")
+cat("Sourced OK\n\n")
+# Check corrected patch keys
+cat("hold_stub_address_patches() keys:\n")
+hold_stub_address_patches() |> pull(detention_facility_code) |> cat(sep = ", ")
+cat("\n\nAll keys present in ddp_codes:\n")
+keys <- hold_stub_address_patches() |> pull(detention_facility_code)
+present <- keys %in% ddp_codes$detention_facility_code
+cat(paste(keys, ifelse(present, "✓", "✗"), collapse = "\n"))
+source("_targets.R", echo = FALSE)
+# Test build_hold_canonical with the registry
+hold_canonical_registry <- readr::read_csv(
+here::here("data/hold-canonical-registry.csv"), show_col_types = FALSE
+)
+test_hold2 <- build_hold_canonical(
+ddp_codes, marshall_locations, ero_canonical,
+detloc_lookup, hold_canonical_registry, vera_facilities
+)
+cat("Facilities produced:", nrow(test_hold2$hold_canonical), "\n\n")
+# Check the previously-shifted facilities have their correct IDs
+test_hold2$hold_canonical |>
+filter(detloc %in% c("ETWHOLD","KNXHOLD","SGUHOLD","LVGHOLD","POMHOLD","AMTHOLD",
+"GSCHOLD","KROHOLD","KRHUBFL","IMPHOLD")) |>
+select(canonical_id, canonical_name, detloc, address, city) |>
+arrange(canonical_id)
+source("themarshallproject-locations.R")
+test_hold2 <- build_hold_canonical(
+ddp_codes, marshall_locations, ero_canonical,
+detloc_lookup, hold_canonical_registry, vera_facilities
+)
+cat("Facilities produced:", nrow(test_hold2$hold_canonical), "\n\n")
+test_hold2$hold_canonical |>
+filter(detloc %in% c("ETWHOLD","KNXHOLD","SGUHOLD","LVGHOLD","POMHOLD","AMTHOLD",
+"GSCHOLD","KROHOLD","KRHUBFL","IMPHOLD")) |>
+select(canonical_id, canonical_name, detloc, address, city) |>
+arrange(canonical_id)
+source("R/integrate.R")
+# Build the partial detloc_lookup that excludes hold facilities
+# (matches how _targets.R calls build_hold_canonical)
+partial_lookup <- build_detloc_lookup(dmcp_canonical_map, ddp_canonical_map)
+cat("Partial lookup rows (no hold):", nrow(partial_lookup), "\n")
+test_hold2 <- build_hold_canonical(
+ddp_codes, marshall_locations, ero_canonical,
+partial_lookup, hold_canonical_registry, vera_facilities
+)
+cat("\nFacilities produced:", nrow(test_hold2$hold_canonical), "\n\n")
+test_hold2$hold_canonical |>
+filter(detloc %in% c("ETWHOLD","KNXHOLD","SGUHOLD","LVGHOLD","POMHOLD","AMTHOLD",
+"GSCHOLD","KROHOLD","KRHUBFL","IMPHOLD")) |>
+select(canonical_id, canonical_name, detloc, address, city) |>
+arrange(canonical_id)
+source("themarshallproject-locations.R")
+test_hold3 <- build_hold_canonical(
+ddp_codes, marshall_locations, ero_canonical,
+partial_lookup, hold_canonical_registry, vera_facilities
+)
+cat("Facilities produced:", nrow(test_hold3$hold_canonical), "\n\n")
+test_hold3$hold_canonical |>
+filter(detloc %in% c("ETWHOLD","KNXHOLD","SGUHOLD","LVGHOLD","POMHOLD","AMTHOLD",
+"GSCHOLD","KROHOLD","KRHUBFL","IMPHOLD")) |>
+select(canonical_id, canonical_name, detloc, address, city) |>
+arrange(canonical_id)
+tar_source()
+tar_make()
+warnings()
+usethis::use_github()
+usethis::use_github()
+tar_meta()
+tar_manifest()
+tar_make(ddp_comparison_report)

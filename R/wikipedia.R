@@ -79,7 +79,7 @@ ice_source_info <- tibble::tibble(
     ' | last = U.S. Immigration and Customs Enforcement',
     ' | title = ICE Detention Statistics FY {fiscal_year}',
     ' | date = {data_as_of}',
-    ' | url = {url}}}}}'
+    ' | url = {url} }}}}'
   )
 )
 

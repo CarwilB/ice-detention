@@ -541,9 +541,20 @@ export_ddp_comparison_data <- function(ddp_raw, facilities_keyed,
     dplyr::rename(ice_adp = sum_classification_levels)
   ice_fy25_ids <- unique(ice_fy25$canonical_id)
 
+  # ICE Annual summaries
+  ice_annual_adp_by_facility <- facilities_keyed |>
+    dplyr::bind_rows(.id = "fiscal_year") |>
+    dplyr::select(fiscal_year, canonical_id, adp) |>
+    dplyr::rename(ice_adp = adp)
+
+  ice_annual_adp_totals <- ice_annual_adp_by_facility |>
+    dplyr::group_by(fiscal_year) |>
+    dplyr::summarise(total_ice_adp = sum(ice_adp, na.rm = TRUE), .groups = "drop")
+
   # DDP FY25 summary
   ddp_fy25 <- ddp_facility_summary(ddp_raw,
                                     from = "2024-10-01", to = "2025-09-24") |>
+    dplyr::filter(peak_pop > 0) |>
     dplyr::rename(ddp_adp = mean_pop)
 
   ddp_detloc_map <- detloc_lookup_full |> dplyr::distinct(detloc, canonical_id)
@@ -574,7 +585,8 @@ export_ddp_comparison_data <- function(ddp_raw, facilities_keyed,
     dplyr::mutate(
       type_grouped = dplyr::if_else(is.na(type_grouped), "Unclassified",
                                     type_grouped),
-      adp_class = dplyr::if_else(ddp_adp >= 2, "ADP \u2265 2", "ADP < 2")
+      adp_class = dplyr::if_else(ddp_adp >= 2, "ADP \u2265 2", "ADP < 2"),
+      peak_class = dplyr::if_else(peak_pop >= 2, "Peak \u2265 2", "Peak < 2")
     )
   unmatched_codes <- unmatched$detention_facility_code
 
@@ -606,7 +618,8 @@ export_ddp_comparison_data <- function(ddp_raw, facilities_keyed,
                                      codes = unmatched_codes) |>
     dplyr::mutate(
       mean_pop = round(mean_pop, 1),
-      adp_class = dplyr::if_else(mean_pop >= 2, "ADP \u2265 2", "ADP < 2")
+      adp_class = dplyr::if_else(mean_pop >= 2, "ADP \u2265 2", "ADP < 2"),
+      peak_class = dplyr::if_else(peak_pop >= 2, "Peak \u2265 2", "Peak < 2")
     ) |>
     dplyr::left_join(vera_type_lookup,
                      by = c("detention_facility_code" = "detloc")) |>
@@ -628,6 +641,7 @@ export_ddp_comparison_data <- function(ddp_raw, facilities_keyed,
       type_grouped = dplyr::if_else(is.na(type_grouped), "Unclassified",
                                     type_grouped),
       adp_class = dplyr::if_else(mean_pop >= 2, "ADP \u2265 2", "ADP < 2"),
+      peak_class = dplyr::if_else(peak_pop >= 2, "Peak \u2265 2", "Peak < 2"),
       period = "Biden"
     )
 
@@ -640,14 +654,15 @@ export_ddp_comparison_data <- function(ddp_raw, facilities_keyed,
       type_grouped = dplyr::if_else(is.na(type_grouped), "Unclassified",
                                     type_grouped),
       adp_class = dplyr::if_else(mean_pop >= 2, "ADP \u2265 2", "ADP < 2"),
+      peak_class = dplyr::if_else(peak_pop >= 2, "Peak \u2265 2", "Peak < 2"),
       period = "Trump"
     )
 
   # Daily unreported (both comparison periods)
   biden_active <- biden_unmatched |>
-    dplyr::filter(peak_pop > 0, adp_class == "ADP \u2265 2")
+    dplyr::filter(peak_pop > 0, peak_class == "Peak \u2265 2")
   trump_active <- trump_unmatched |>
-    dplyr::filter(peak_pop > 0, adp_class == "ADP \u2265 2")
+    dplyr::filter(peak_pop > 0, peak_class == "Peak \u2265 2")
   substantive_codes <- union(biden_active$detention_facility_code,
                               trump_active$detention_facility_code)
 
@@ -686,7 +701,9 @@ export_ddp_comparison_data <- function(ddp_raw, facilities_keyed,
     peak_fy25         = peak_fy25,
     biden_unmatched   = biden_unmatched,
     trump_unmatched   = trump_unmatched,
-    daily_unreported  = daily_unreported
+    daily_unreported  = daily_unreported,
+    ice_annual_adp_by_facility = ice_annual_adp_by_facility,
+    ice_annual_adp_totals = ice_annual_adp_totals
   )
 
   paths <- vapply(names(files), function(nm) {
