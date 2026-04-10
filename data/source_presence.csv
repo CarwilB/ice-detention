@@ -407,7 +407,7 @@
 1059,"Lemon Creek, Juneau,AK","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 1060,"Matsu Pretrial, Palmer AK","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 1061,"Kodiak City Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
-1062,"Phoenix Fed.Corr.Inst.","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"divergent",2
+1062,"Phoenix Fed.Corr.Inst.","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"preference:vera_institute",2
 1063,"Tucson Fed.Corr.Inst.","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"preference:vera_institute",2
 1064,"La Palma Corr Ctr APSO","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"preference:google_maps",2
 1065,"Pima County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
@@ -519,7 +519,7 @@
 1171,"Harlingen Police Dept.","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 1172,"Kinney County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 1173,"Lasalle County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
-1174,"Maverick County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"divergent",2
+1174,"Maverick County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"preference:vera_institute",2
 1175,"Mclennan County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 1176,"Potter County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 1177,"Ursula Centralized Processing Cntr","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
@@ -584,7 +584,7 @@
 2027,"Etowah ERO Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
 2028,"Fayetteville Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:marshall_project",3
 2029,"Fort Smith Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2030,"Little Rock Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"vera_institute",3
+2030,"Little Rock Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
 2031,"Texarkana Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
 2032,"Az Rem Op Coord Center (Arocc)","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
 2033,"Tucson Ins Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
@@ -605,7 +605,7 @@
 2048,"Frederick Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
 2049,"Grand Junction Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
 2050,"Glenwood Springs Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
-2051,"Pueblo Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
+2051,"Pueblo Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
 2052,"Hartford Office","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
 2053,"Dover Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
 2054,"Fort Myers ERO Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
@@ -623,7 +623,7 @@
 2066,"Sioux City Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
 2067,"Boise Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
 2068,"Idaho Falls Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2069,"Twin Falls Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
+2069,"Twin Falls Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
 2070,"Broadview Service Staging","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
 2071,"Rock Island Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
 2072,"Indianapolis Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
@@ -633,7 +633,7 @@
 2076,"Shreveport Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
 2077,"Portland, Me Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
 2078,"Grand Rapids Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2079,"ERO Hold Room (Springfield Mo)","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
+2079,"ERO Hold Room (Springfield Mo)","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
 2080,"St. Louis Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
 2081,"Saipain Hold","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
 2082,"Jackson Ms Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
@@ -650,7 +650,7 @@
 2093,"Albuquerque Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
 2094,"Las Vegas Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
 2095,"Reno Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2096,"Albany Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
+2096,"Albany Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
 2097,"Buffalo Usbp Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"auto:google_maps+vera_institute",2
 2098,"Batavia Command Center Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"auto:google_maps+marshall_project",2
 2099,"Vrk Prcs","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
@@ -675,7 +675,7 @@
 2118,"Chattanooga Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
 2119,"Knoxville Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
 2120,"Memphis Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2121,"Nashville Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"vera_institute",3
+2121,"Nashville Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
 2122,"Amarillo Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
 2123,"Athens, Tx Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
 2124,"Austin Dro Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
@@ -686,7 +686,7 @@
 2129,"Laredo Detention Center Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
 2130,"Los Fresnos Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
 2131,"Midland, Tx ERO Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2132,"Pecos Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",3
+2132,"Pecos Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:marshall_project",3
 2133,"Pdn Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
 2134,"Prairieland Suboffice Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:marshall_project",3
 2135,"Rio Grande Valley Staging","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"auto:google_maps+marshall_project",3
@@ -705,36 +705,36 @@
 2148,"Milwaukee Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
 2149,"Cheyenne Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
 2150,"Casper Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+marshall_project",3
-2151,"Anchorage Sub-Office Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2152,"Mobile Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2151,"Anchorage Sub-Office Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2152,"Mobile Holdroom","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"preference:vera_institute",2
 2153,"Arizona State Prison - Yuma","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2154,"Redding Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2154,"Redding Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 2155,"Santa Maria Sub Office ERO","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2156,"Colo Springs Den Hsi Hold","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2156,"Colo Springs Den Hsi Hold","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 2157,"Miami Border Patrol","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2158,"Bowling Green Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2159,"Salisbury Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2160,"Duluth Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2161,"Mount Laurel Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2162,"Las Cruces Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2163,"Roswell Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2164,"Champlain Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2165,"Central Islip Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2166,"Newburgh Holding","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2167,"Syracuse Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2158,"Bowling Green Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"preference:google_maps",2
+2159,"Salisbury Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2160,"Duluth Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2161,"Mount Laurel Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2162,"Las Cruces Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"preference:google_maps",2
+2163,"Roswell Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2164,"Champlain Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2165,"Central Islip Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2166,"Newburgh Holding","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2167,"Syracuse Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"preference:google_maps",2
 2168,"Tulsa Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2169,"Williamsport Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2170,"York Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2171,"Corpus Christi Eor Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2169,"Williamsport Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2170,"York Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2171,"Corpus Christi Eor Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"preference:google_maps",2
 2172,"El Paso Soft Sided Facility","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2173,"Mcallen Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2174,"Montgomery Hold Rm","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2175,"Lorton, Va Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2176,"Roanoke Sub-Office Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2177,"Ferndale Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2178,"Richland Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2179,"Spokane Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2180,"Wenatchee Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
+2173,"Mcallen Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2174,"Montgomery Hold Rm","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"auto:google_maps+vera_institute",2
+2175,"Lorton, Va Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"preference:google_maps",2
+2176,"Roanoke Sub-Office Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2177,"Ferndale Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"preference:google_maps",2
+2178,"Richland Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2179,"Spokane Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2180,"Wenatchee Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 3001,"Bartlett Regional Hospital","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 3002,"Banner University Medical Phoenix","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 3003,"Banner Ironwood Med Ctr","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
@@ -838,7 +838,7 @@
 3101,"Hennepin County Med Ctr","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 3102,"Mayo Clinic Health Sys Albert Lea","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 3103,"M Health Fairview Southdale Hosp","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
-3104,"Mercy Hospital","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"divergent",2
+3104,"Mercy Hospital","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"preference:vera_institute",2
 3105,"Mayo Clinic Health Sys - Mankato","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 3106,"Coxhealth Medical Center South","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 3107,"Mercy Hospital South","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
@@ -913,7 +913,7 @@
 3176,"Harris County Psychiatric Center","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 3177,"Harris Health Ben Taub Hospital","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 3178,"Houston Healthcare Hosp","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
-3179,"Harlingen Medical Center","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"divergent",2
+3179,"Harlingen Medical Center","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"preference:vera_institute",2
 3180,"Hendrick Medical Center","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 3181,"John Peter Smith Hospital","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 3182,"Knox County Hospital","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2

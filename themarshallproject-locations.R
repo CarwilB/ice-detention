@@ -72,6 +72,21 @@ clean_marshall_locations <- function(df) {
       facility_zip = stringr::str_pad(
         as.character(facility_zip), width = 5, side = "left", pad = "0"
       ),
+      # Clean addresses that redundantly embed city, state, ZIP.
+      # Pattern examples:
+      #   "1833 29th Ave S, Birmingham, AL 35209" → "1833 29th Ave S"
+      #   "455 4th St SW, Rm #100\rHuron, SD 57350" → "455 4th St SW, Rm #100\rHuron"
+      # Remove from the comma+state+ZIP pattern to the end.
+      facility_address = stringr::str_trim(
+        stringr::str_remove(
+          facility_address,
+          "(?:,|\\r)\\s*[^,]*,\\s*[A-Z]{2}\\s+\\d{5}.*$"  # Matches comma/CR, optional city, state ZIP
+        )
+      ),
+      # Handle territories: "...Puerto Rico, ... 00603" → keep only street portion
+      facility_address = stringr::str_trim(
+        stringr::str_remove(facility_address, ",\\s*Puerto Rico.*$")
+      ),
       # Fix encoding, then trim whitespace
       across(where(is.character), ~ trimws(iconv(.x, to = "UTF-8", sub = "")))
     )
@@ -119,11 +134,20 @@ parse_marshall_date <- function(x) {
 #' matched to Marshall Project locations by DETLOC, but were confirmed by
 #' city/state matching against the ERO office directory or Marshall Project.
 #'
+#' When `missing_hold_addresses` is supplied, addresses from that table are
+#' appended to the hardcoded entries. The `source` column ("ice_node",
+#' "aclu", "ice_doc", "ice_node", or "media") is carried through as
+#' `address_source`. Hardcoded entries take
+#' precedence if both cover the same DETLOC.
+#'
+#' @param missing_hold_addresses Optional tibble read from
+#'   `data/missing-hold-addresses.csv`, with columns: detloc, source,
+#'   address_line1, address_line2, city, zip.
 #' @return A tibble with columns: detention_facility_code, address_source,
 #'   facility_address, facility_city, facility_zip, facility_county, lat, lon,
 #'   aor, date_first_use, date_last_use.
-hold_stub_address_patches <- function() {
-  tibble::tribble(
+hold_stub_address_patches <- function(missing_hold_addresses = NULL) {
+  hardcoded <- tibble::tribble(
     ~detention_facility_code, ~address_source, ~facility_address,
     ~facility_city, ~facility_zip, ~facility_county,
     ~lat, ~lon, ~aor, ~date_first_use, ~date_last_use,
@@ -181,6 +205,33 @@ hold_stub_address_patches <- function() {
     "Amarillo",    "79118", NA_character_,
     NA_real_, NA_real_, NA_character_, as.Date(NA), as.Date(NA)
   )
+
+  if (is.null(missing_hold_addresses)) {
+    return(hardcoded)
+  }
+
+  csv_patches <- missing_hold_addresses |>
+    dplyr::transmute(
+      detention_facility_code = detloc,
+      address_source = source,
+      facility_address = dplyr::if_else(
+        is.na(address_line2),
+        address_line1,
+        paste(address_line1, address_line2, sep = ", ")
+      ),
+      facility_city    = city,
+      facility_zip     = zip,
+      facility_county  = NA_character_,
+      lat              = NA_real_,
+      lon              = NA_real_,
+      aor              = NA_character_,
+      date_first_use   = as.Date(NA),
+      date_last_use    = as.Date(NA)
+    ) |>
+    # Hardcoded entries take precedence
+    dplyr::filter(!detention_facility_code %in% hardcoded$detention_facility_code)
+
+  dplyr::bind_rows(hardcoded, csv_patches)
 }
 
 
@@ -205,13 +256,17 @@ hold_stub_address_patches <- function() {
 #'   classified as Hold/Staging in `type_grouped_corrected` are included alongside the
 #'   DETLOC-pattern filter. This catches short-code staging facilities (STK, AGC, etc.)
 #'   that don't contain HOLD/STAGING/CPC in their DETLOC.
+#' @param missing_hold_addresses Optional tibble from `data/missing-hold-addresses.csv`.
+#'   Passed to `hold_stub_address_patches()` to supplement hardcoded entries with
+#'   addresses from other sources.
 #' @return A list with three elements:
 #'   - `hold_canonical`: tibble of new canonical hold facility records
 #'   - `ero_detloc_map`: tibble mapping 22 ERO hold DETLOCs to canonical_ids 2001–2025
 #'   - `hold_summary`: named list of counts for diagnostics
 build_hold_canonical <- function(ddp_codes, marshall_locations, ero_canonical,
                                  detloc_lookup, hold_canonical_registry,
-                                 vera_facilities = NULL) {
+                                 vera_facilities = NULL,
+                                 missing_hold_addresses = NULL) {
   # ── Step 1: Classify hold-type DDP codes ──────────────────────────────────
   # Primary filter: DETLOC contains HOLD, STAGING, or CPC
   regex_codes <- ddp_codes |>
@@ -288,7 +343,7 @@ build_hold_canonical <- function(ddp_codes, marshall_locations, ero_canonical,
     hold_new <- hold_new |> dplyr::mutate(address_source = NA_character_)
   }
 
-  patches <- hold_stub_address_patches()
+  patches <- hold_stub_address_patches(missing_hold_addresses)
   patched_codes <- intersect(hold_new$detention_facility_code,
                              patches$detention_facility_code)
   if (length(patched_codes) > 0) {

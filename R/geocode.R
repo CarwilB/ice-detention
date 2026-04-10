@@ -234,7 +234,11 @@ geocode_source_preference <- function() {
     3047, 2050, 27, 177, 64, 2013,
     318, 2145, # from hand-checked list
     # plus these newly given addresses:
-    2141, 1199, 2027, 2122, 2119, 39, 2077
+    2141, 1199, 2027, 2122, 2119, 39, 2077,
+    # after new hold addresses
+    2158, 2175, 2171, 2030, 2167, 2121,
+    2162, 2177, 2079, 2096, 2051, 2069,
+    2121
   )
   vera <- c(
     3109, 324, 3155, 328, 1165, 143,    # from hand-checked list
@@ -242,10 +246,12 @@ geocode_source_preference <- function() {
     75, 136, 1075, 1168, 1164, 153,
     197, 108, 190, 364, 191, 302,
     1164, 136, 220, 56, 3109,
-    1170, 377, 2122, 6, 1109
+    1170, 377, 2122, 6, 1109,
+    # new hold room addresses
+    2152, 3104, 1062, 1174, 3179
     )
   marshall <- c(
-    2111, 2057, 2028, 2056, 2134                   # from hand-checked list
+    2111, 2057, 2028, 2056, 2134, 2132                   # from hand-checked list
   )
   manual <- c(
     176                                 # JTF Camp Six (Wikipedia GeoHack)
