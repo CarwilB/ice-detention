@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.21">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -68,7 +68,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="missing-addresses_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="missing-addresses_files/libs/quarto-html/anchor.min.js"></script>
 <link href="missing-addresses_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="missing-addresses_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="missing-addresses_files/libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="missing-addresses_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="missing-addresses_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="missing-addresses_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -133,9 +133,6 @@ The contents have been reviewed and validated by [Your Name], [Your Role] on [Da
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'dplyr' was built under R version 4.5.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
 <pre><code>
 Attaching package: 'dplyr'</code></pre>
 </div>
@@ -149,48 +146,36 @@ Attaching package: 'dplyr'</code></pre>
 
     intersect, setdiff, setequal, union</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tidyr' was built under R version 4.5.2</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glue)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(httr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'httr' was built under R version 4.5.2</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pdftools)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'pdftools' was built under R version 4.5.2</code></pre>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glue)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(httr)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pdftools)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Using poppler version 25.09.1</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(png)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'knitr' was built under R version 4.5.2</code></pre>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(png)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>roster <span class="ot">&lt;-</span> targets<span class="sc">::</span><span class="fu">tar_read</span>(facility_roster)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>vera_facilities <span class="ot">&lt;-</span> targets<span class="sc">::</span><span class="fu">tar_read</span>(vera_facilities)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>roster <span class="ot">&lt;-</span> targets<span class="sc">::</span><span class="fu">tar_read</span>(facility_roster)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>vera_facilities <span class="ot">&lt;-</span> targets<span class="sc">::</span><span class="fu">tar_read</span>(vera_facilities)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <section id="facilities-missing-addresses" class="level2">
 <h2 class="anchored" data-anchor-id="facilities-missing-addresses">Facilities missing addresses</h2>
 <p>The facility roster should have an address and city for every facility. This document investigates the facilities that are currently missing one or both.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>no_addr <span class="ot">&lt;-</span> roster <span class="sc">|&gt;</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(facility_address) <span class="sc">|</span> facility_address <span class="sc">==</span> <span class="st">""</span> <span class="sc">|</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>         <span class="fu">is.na</span>(facility_city) <span class="sc">|</span> facility_city <span class="sc">==</span> <span class="st">""</span>) <span class="sc">|&gt;</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(canonical_id, canonical_name, facility_city, facility_state,</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>         facility_type_wiki, detloc, id_range)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>no_addr <span class="ot">&lt;-</span> roster <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(facility_address) <span class="sc">|</span> facility_address <span class="sc">==</span> <span class="st">""</span> <span class="sc">|</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>         <span class="fu">is.na</span>(facility_city) <span class="sc">|</span> facility_city <span class="sc">==</span> <span class="st">""</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(canonical_id, canonical_name, facility_city, facility_state,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>         facility_type_wiki, detloc, id_range)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>There are 41 facilities in the roster with no <code>facility_address</code> or <code>facility_city</code>.</p>
+<p>There are 37 facilities in the roster with no <code>facility_address</code> or <code>facility_city</code>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>no_addr <span class="sc">|&gt;</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(canonical_id, canonical_name, facility_state, facility_type_wiki, id_range) <span class="sc">|&gt;</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"ID"</span>, <span class="st">"Name"</span>, <span class="st">"State"</span>, <span class="st">"Type"</span>, <span class="st">"ID range"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>no_addr <span class="sc">|&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(canonical_id, canonical_name, facility_state, facility_type_wiki, id_range) <span class="sc">|&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"ID"</span>, <span class="st">"Name"</span>, <span class="st">"State"</span>, <span class="st">"Type"</span>, <span class="st">"ID range"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div id="tbl-missing" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-missing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -217,11 +202,25 @@ Table&nbsp;1
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">1203</td>
+<td style="text-align: right;">1209</td>
 <td style="text-align: left;">CBP Movement Coordination Area</td>
 <td style="text-align: left;">NA</td>
 <td style="text-align: left;">Federal Prison</td>
 <td style="text-align: left;">ddp_other</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">Little Rock Hold Room</td>
+<td style="text-align: left;">AR</td>
+<td style="text-align: left;">ICE Hold Room</td>
+<td style="text-align: left;">hold</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2121</td>
+<td style="text-align: left;">Nashville Hold Room</td>
+<td style="text-align: left;">TN</td>
+<td style="text-align: left;">ICE Hold Room</td>
+<td style="text-align: left;">hold</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">2151</td>
@@ -246,230 +245,188 @@ Table&nbsp;1
 </tr>
 <tr class="odd">
 <td style="text-align: right;">2154</td>
-<td style="text-align: left;">Los Angeles Police Pd 77th Div.</td>
+<td style="text-align: left;">Redding Hold Room</td>
 <td style="text-align: left;">CA</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">2155</td>
-<td style="text-align: left;">Redding Hold Room</td>
-<td style="text-align: left;">CA</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2156</td>
 <td style="text-align: left;">Santa Maria Sub Office ERO</td>
 <td style="text-align: left;">CA</td>
 <td style="text-align: left;">ICE ERO Sub-Office</td>
 <td style="text-align: left;">hold</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">2157</td>
+<tr class="odd">
+<td style="text-align: right;">2156</td>
 <td style="text-align: left;">Colo Springs Den Hsi Hold</td>
 <td style="text-align: left;">CO</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">2158</td>
+<tr class="even">
+<td style="text-align: right;">2157</td>
 <td style="text-align: left;">Miami Border Patrol</td>
 <td style="text-align: left;">FL</td>
 <td style="text-align: left;">CBP Hold Facility</td>
 <td style="text-align: left;">hold</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">2159</td>
+<tr class="odd">
+<td style="text-align: right;">2158</td>
 <td style="text-align: left;">Bowling Green Hold Room</td>
 <td style="text-align: left;">KY</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">2160</td>
-<td style="text-align: left;">Peabody Pd</td>
-<td style="text-align: left;">MA</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
 <tr class="even">
-<td style="text-align: right;">2161</td>
+<td style="text-align: right;">2159</td>
 <td style="text-align: left;">Salisbury Hold Room</td>
 <td style="text-align: left;">MD</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2162</td>
+<td style="text-align: right;">2160</td>
 <td style="text-align: left;">Duluth Hold Room</td>
 <td style="text-align: left;">MN</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2163</td>
+<td style="text-align: right;">2161</td>
 <td style="text-align: left;">Mount Laurel Hold Room</td>
 <td style="text-align: left;">NJ</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2164</td>
+<td style="text-align: right;">2162</td>
 <td style="text-align: left;">Las Cruces Hold Room</td>
 <td style="text-align: left;">NM</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2165</td>
+<td style="text-align: right;">2163</td>
 <td style="text-align: left;">Roswell Hold Room</td>
 <td style="text-align: left;">NM</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2166</td>
-<td style="text-align: left;">Courthouse Usm Cntl Islip</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2167</td>
+<td style="text-align: right;">2164</td>
 <td style="text-align: left;">Champlain Hold Room</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">2168</td>
+<tr class="even">
+<td style="text-align: right;">2165</td>
 <td style="text-align: left;">Central Islip Hold Room</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">2169</td>
-<td style="text-align: left;">Jfk International Ap - T7</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
 <tr class="odd">
-<td style="text-align: right;">2170</td>
+<td style="text-align: right;">2166</td>
 <td style="text-align: left;">Newburgh Holding</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2171</td>
+<td style="text-align: right;">2167</td>
 <td style="text-align: left;">Syracuse Hold Room</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2172</td>
+<td style="text-align: right;">2168</td>
 <td style="text-align: left;">Tulsa Hold Room</td>
 <td style="text-align: left;">OK</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2173</td>
+<td style="text-align: right;">2169</td>
 <td style="text-align: left;">Williamsport Hold Room</td>
 <td style="text-align: left;">PA</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2174</td>
+<td style="text-align: right;">2170</td>
 <td style="text-align: left;">York Hold Room</td>
 <td style="text-align: left;">PA</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2175</td>
-<td style="text-align: left;">Alamo Police Department.</td>
-<td style="text-align: left;">TX</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2176</td>
+<td style="text-align: right;">2171</td>
 <td style="text-align: left;">Corpus Christi Eor Hold Room</td>
 <td style="text-align: left;">TX</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">2177</td>
-<td style="text-align: left;">Edinburg Police Department.</td>
-<td style="text-align: left;">TX</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
 <tr class="odd">
-<td style="text-align: right;">2178</td>
-<td style="text-align: left;">Harlingen Police Department.</td>
+<td style="text-align: right;">2172</td>
+<td style="text-align: left;">El Paso Soft Sided Facility</td>
 <td style="text-align: left;">TX</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2179</td>
+<td style="text-align: right;">2173</td>
 <td style="text-align: left;">Mcallen Hold Room</td>
 <td style="text-align: left;">TX</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2180</td>
+<td style="text-align: right;">2174</td>
 <td style="text-align: left;">Montgomery Hold Rm</td>
 <td style="text-align: left;">TX</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2181</td>
+<td style="text-align: right;">2175</td>
 <td style="text-align: left;">Lorton, Va Hold Room</td>
 <td style="text-align: left;">VA</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2182</td>
+<td style="text-align: right;">2176</td>
 <td style="text-align: left;">Roanoke Sub-Office Hold Room</td>
 <td style="text-align: left;">VA</td>
 <td style="text-align: left;">ICE ERO Sub-Office</td>
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2183</td>
+<td style="text-align: right;">2177</td>
 <td style="text-align: left;">Ferndale Hold Room</td>
 <td style="text-align: left;">WA</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2184</td>
+<td style="text-align: right;">2178</td>
 <td style="text-align: left;">Richland Hold Room</td>
 <td style="text-align: left;">WA</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2185</td>
+<td style="text-align: right;">2179</td>
 <td style="text-align: left;">Spokane Hold Room</td>
 <td style="text-align: left;">WA</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2186</td>
+<td style="text-align: right;">2180</td>
 <td style="text-align: left;">Wenatchee Hold Room</td>
 <td style="text-align: left;">WA</td>
 <td style="text-align: left;">ICE Hold Room</td>
@@ -516,25 +473,25 @@ Table&nbsp;1
 <h2 class="anchored" data-anchor-id="vera-institute-coverage">Vera Institute coverage</h2>
 <p>The Vera Institute facility database contains 1,464 facility codes with addresses and geocoded coordinates. We can join by DETLOC to check whether Vera has address data for these missing facilities.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>vera_check <span class="ot">&lt;-</span> vera_facilities <span class="sc">|&gt;</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(detloc <span class="sc">%in%</span> no_addr<span class="sc">$</span>detloc) <span class="sc">|&gt;</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(detloc, <span class="at">vera_name =</span> facility_name,</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">vera_address =</span> facility_address, <span class="at">vera_city =</span> facility_city,</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">vera_state =</span> facility_state, <span class="at">vera_zip =</span> facility_zip)</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>no_addr_vera <span class="ot">&lt;-</span> no_addr <span class="sc">|&gt;</span></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(vera_check, <span class="at">by =</span> <span class="st">"detloc"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>vera_check <span class="ot">&lt;-</span> vera_facilities <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(detloc <span class="sc">%in%</span> no_addr<span class="sc">$</span>detloc) <span class="sc">|&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(detloc, <span class="at">vera_name =</span> facility_name,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">vera_address =</span> facility_address, <span class="at">vera_city =</span> facility_city,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">vera_state =</span> facility_state, <span class="at">vera_zip =</span> facility_zip)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>no_addr_vera <span class="ot">&lt;-</span> no_addr <span class="sc">|&gt;</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(vera_check, <span class="at">by =</span> <span class="st">"detloc"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>vera_summary <span class="ot">&lt;-</span> no_addr_vera <span class="sc">|&gt;</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">total =</span> <span class="fu">n</span>(),</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">vera_has_address =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(vera_address)),</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">vera_has_city =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(vera_city)),</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">vera_has_neither =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(vera_address) <span class="sc">&amp;</span> <span class="fu">is.na</span>(vera_city))</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>vera_summary <span class="sc">|&gt;</span> <span class="fu">kable</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>vera_summary <span class="ot">&lt;-</span> no_addr_vera <span class="sc">|&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">total =</span> <span class="fu">n</span>(),</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">vera_has_address =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(vera_address)),</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">vera_has_city =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(vera_city)),</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">vera_has_neither =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(vera_address) <span class="sc">&amp;</span> <span class="fu">is.na</span>(vera_city))</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>vera_summary <span class="sc">|&gt;</span> <span class="fu">kable</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <thead>
@@ -547,26 +504,26 @@ Table&nbsp;1
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">41</td>
-<td style="text-align: right;">26</td>
-<td style="text-align: right;">36</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">32</td>
 <td style="text-align: right;">5</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<p>Vera has street addresses for 26 of the 41 facilities and city names for 36. Only 5 have no address information in Vera at all.</p>
+<p>Vera has street addresses for 22 of the 37 facilities and city names for 32. Only 5 have no address information in Vera at all.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>no_addr_vera <span class="sc">|&gt;</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    canonical_id,</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    canonical_name,</span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">state =</span> facility_state,</span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">vera_address =</span> <span class="fu">replace_na</span>(vera_address, <span class="st">"—"</span>),</span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">vera_city =</span> <span class="fu">replace_na</span>(vera_city, <span class="st">"—"</span>)</span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"ID"</span>, <span class="st">"Name"</span>, <span class="st">"State"</span>, <span class="st">"Vera address"</span>, <span class="st">"Vera city"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>no_addr_vera <span class="sc">|&gt;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    canonical_id,</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    canonical_name,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">state =</span> facility_state,</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">vera_address =</span> <span class="fu">replace_na</span>(vera_address, <span class="st">"—"</span>),</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">vera_city =</span> <span class="fu">replace_na</span>(vera_city, <span class="st">"—"</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"ID"</span>, <span class="st">"Name"</span>, <span class="st">"State"</span>, <span class="st">"Vera address"</span>, <span class="st">"Vera city"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div id="tbl-vera-detail" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-vera-detail-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -593,11 +550,25 @@ Table&nbsp;2
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">1203</td>
+<td style="text-align: right;">1209</td>
 <td style="text-align: left;">CBP Movement Coordination Area</td>
 <td style="text-align: left;">NA</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">—</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">Little Rock Hold Room</td>
+<td style="text-align: left;">AR</td>
+<td style="text-align: left;">2900 S Woodrow St</td>
+<td style="text-align: left;">Little Rock</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2121</td>
+<td style="text-align: left;">Nashville Hold Room</td>
+<td style="text-align: left;">TN</td>
+<td style="text-align: left;">200 James Robertson Pkwy</td>
+<td style="text-align: left;">Nashville</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">2151</td>
@@ -622,230 +593,188 @@ Table&nbsp;2
 </tr>
 <tr class="odd">
 <td style="text-align: right;">2154</td>
-<td style="text-align: left;">Los Angeles Police Pd 77th Div.</td>
-<td style="text-align: left;">CA</td>
-<td style="text-align: left;">7600 S Broadway</td>
-<td style="text-align: left;">Los Angeles</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2155</td>
 <td style="text-align: left;">Redding Hold Room</td>
 <td style="text-align: left;">CA</td>
 <td style="text-align: left;">443 Redcliff Dr</td>
 <td style="text-align: left;">Redding</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">2156</td>
+<tr class="even">
+<td style="text-align: right;">2155</td>
 <td style="text-align: left;">Santa Maria Sub Office ERO</td>
 <td style="text-align: left;">CA</td>
 <td style="text-align: left;">740 West Century Street, Suite A</td>
 <td style="text-align: left;">Santa Maria</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">2157</td>
+<tr class="odd">
+<td style="text-align: right;">2156</td>
 <td style="text-align: left;">Colo Springs Den Hsi Hold</td>
 <td style="text-align: left;">CO</td>
 <td style="text-align: left;">415 E Pikes Peak Ave</td>
 <td style="text-align: left;">Colorado Springs</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">2158</td>
+<tr class="even">
+<td style="text-align: right;">2157</td>
 <td style="text-align: left;">Miami Border Patrol</td>
 <td style="text-align: left;">FL</td>
 <td style="text-align: left;">51 SW 1st Ave</td>
 <td style="text-align: left;">Miami</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">2159</td>
+<tr class="odd">
+<td style="text-align: right;">2158</td>
 <td style="text-align: left;">Bowling Green Hold Room</td>
 <td style="text-align: left;">KY</td>
 <td style="text-align: left;">11093 S W Lewis Memorial Dr</td>
 <td style="text-align: left;">Bowling Green</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">2160</td>
-<td style="text-align: left;">Peabody Pd</td>
-<td style="text-align: left;">MA</td>
-<td style="text-align: left;">6 Allens Ln</td>
-<td style="text-align: left;">Peabody</td>
-</tr>
 <tr class="even">
-<td style="text-align: right;">2161</td>
+<td style="text-align: right;">2159</td>
 <td style="text-align: left;">Salisbury Hold Room</td>
 <td style="text-align: left;">MD</td>
 <td style="text-align: left;">119 W Naylor Mill Road</td>
 <td style="text-align: left;">Salisbury</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2162</td>
+<td style="text-align: right;">2160</td>
 <td style="text-align: left;">Duluth Hold Room</td>
 <td style="text-align: left;">MN</td>
 <td style="text-align: left;">4431 Endeavor Drive</td>
 <td style="text-align: left;">Duluth</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2163</td>
+<td style="text-align: right;">2161</td>
 <td style="text-align: left;">Mount Laurel Hold Room</td>
 <td style="text-align: left;">NJ</td>
 <td style="text-align: left;">532 Fellowship Road</td>
 <td style="text-align: left;">Mount Laurel</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2164</td>
+<td style="text-align: right;">2162</td>
 <td style="text-align: left;">Las Cruces Hold Room</td>
 <td style="text-align: left;">NM</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">Las Cruces</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2165</td>
+<td style="text-align: right;">2163</td>
 <td style="text-align: left;">Roswell Hold Room</td>
 <td style="text-align: left;">NM</td>
 <td style="text-align: left;">500 N. Richardson Ave</td>
 <td style="text-align: left;">Roswell</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2166</td>
-<td style="text-align: left;">Courthouse Usm Cntl Islip</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: left;">100 Federal Plaza</td>
-<td style="text-align: left;">Central Islip</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2167</td>
+<td style="text-align: right;">2164</td>
 <td style="text-align: left;">Champlain Hold Room</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">237 West Service Road</td>
 <td style="text-align: left;">Champlain</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">2168</td>
+<tr class="even">
+<td style="text-align: right;">2165</td>
 <td style="text-align: left;">Central Islip Hold Room</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">100 Federal Plaza</td>
 <td style="text-align: left;">Central Islip</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">2169</td>
-<td style="text-align: left;">Jfk International Ap - T7</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: left;">Terminal 7</td>
-<td style="text-align: left;">Jamaica</td>
-</tr>
 <tr class="odd">
-<td style="text-align: right;">2170</td>
+<td style="text-align: right;">2166</td>
 <td style="text-align: left;">Newburgh Holding</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">Newburgh</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2171</td>
+<td style="text-align: right;">2167</td>
 <td style="text-align: left;">Syracuse Hold Room</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">152 Air Cargo Road Suite 201</td>
 <td style="text-align: left;">N Syracuse</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2172</td>
+<td style="text-align: right;">2168</td>
 <td style="text-align: left;">Tulsa Hold Room</td>
 <td style="text-align: left;">OK</td>
 <td style="text-align: left;">1603 S 101st East Ave</td>
 <td style="text-align: left;">Tulsa</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2173</td>
+<td style="text-align: right;">2169</td>
 <td style="text-align: left;">Williamsport Hold Room</td>
 <td style="text-align: left;">PA</td>
 <td style="text-align: left;">2851 S Reach Road</td>
 <td style="text-align: left;">Williamsport</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2174</td>
+<td style="text-align: right;">2170</td>
 <td style="text-align: left;">York Hold Room</td>
 <td style="text-align: left;">PA</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">York</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2175</td>
-<td style="text-align: left;">Alamo Police Department.</td>
-<td style="text-align: left;">TX</td>
-<td style="text-align: left;">840 W Austin St</td>
-<td style="text-align: left;">Alamo</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2176</td>
+<td style="text-align: right;">2171</td>
 <td style="text-align: left;">Corpus Christi Eor Hold Room</td>
 <td style="text-align: left;">TX</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">Corpus Christi</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">2177</td>
-<td style="text-align: left;">Edinburg Police Department.</td>
-<td style="text-align: left;">TX</td>
-<td style="text-align: left;">1702 S. Closner Blvd.</td>
-<td style="text-align: left;">Edinburg</td>
-</tr>
 <tr class="odd">
-<td style="text-align: right;">2178</td>
-<td style="text-align: left;">Harlingen Police Department.</td>
+<td style="text-align: right;">2172</td>
+<td style="text-align: left;">El Paso Soft Sided Facility</td>
 <td style="text-align: left;">TX</td>
-<td style="text-align: left;">1018 Fair Park</td>
-<td style="text-align: left;">Harlingen</td>
+<td style="text-align: left;">12501 Gateway Blvd S</td>
+<td style="text-align: left;">El Paso</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2179</td>
+<td style="text-align: right;">2173</td>
 <td style="text-align: left;">Mcallen Hold Room</td>
 <td style="text-align: left;">TX</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">Edinburg</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2180</td>
+<td style="text-align: right;">2174</td>
 <td style="text-align: left;">Montgomery Hold Rm</td>
 <td style="text-align: left;">TX</td>
 <td style="text-align: left;">807 Hilbig Rd</td>
 <td style="text-align: left;">Conroe</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2181</td>
+<td style="text-align: right;">2175</td>
 <td style="text-align: left;">Lorton, Va Hold Room</td>
 <td style="text-align: left;">VA</td>
 <td style="text-align: left;">2675 Prosperity Avenue</td>
 <td style="text-align: left;">Fairfax</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2182</td>
+<td style="text-align: right;">2176</td>
 <td style="text-align: left;">Roanoke Sub-Office Hold Room</td>
 <td style="text-align: left;">VA</td>
 <td style="text-align: left;">103 West Main St</td>
 <td style="text-align: left;">Salem</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2183</td>
+<td style="text-align: right;">2177</td>
 <td style="text-align: left;">Ferndale Hold Room</td>
 <td style="text-align: left;">WA</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">Ferndale</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2184</td>
+<td style="text-align: right;">2178</td>
 <td style="text-align: left;">Richland Hold Room</td>
 <td style="text-align: left;">WA</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">Richland</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2185</td>
+<td style="text-align: right;">2179</td>
 <td style="text-align: left;">Spokane Hold Room</td>
 <td style="text-align: left;">WA</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">Spokane</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2186</td>
+<td style="text-align: right;">2180</td>
 <td style="text-align: left;">Wenatchee Hold Room</td>
 <td style="text-align: left;">WA</td>
 <td style="text-align: left;">—</td>
@@ -891,25 +820,25 @@ Table&nbsp;2
 <h2 class="anchored" data-anchor-id="ero-field-offices-pdf">ERO field offices PDF</h2>
 <p>ICE publishes a map of ERO field offices and sub-field offices. The PDF is image-based (no extractable text), but we can render it and visually compare the cities shown on the map against our missing-address list.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>pdf_path <span class="ot">&lt;-</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"ice"</span>, <span class="st">"eroFieldOffices.pdf"</span>)</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(pdf_path)) {</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  resp <span class="ot">&lt;-</span> <span class="fu">GET</span>(</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://www.ice.gov/doclib/about/offices/ero/pdf/eroFieldOffices.pdf"</span>,</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_headers</span>(<span class="st">`</span><span class="at">User-Agent</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"</span>)</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">writeBin</span>(<span class="fu">content</span>(resp, <span class="st">"raw"</span>), pdf_path)</span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>pdf_path <span class="ot">&lt;-</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"ice"</span>, <span class="st">"eroFieldOffices.pdf"</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(pdf_path)) {</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  resp <span class="ot">&lt;-</span> <span class="fu">GET</span>(</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://www.ice.gov/doclib/about/offices/ero/pdf/eroFieldOffices.pdf"</span>,</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_headers</span>(<span class="st">`</span><span class="at">User-Agent</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"</span>)</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">writeBin</span>(<span class="fu">content</span>(resp, <span class="st">"raw"</span>), pdf_path)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>png_path <span class="ot">&lt;-</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"ice"</span>, <span class="st">"eroFieldOffices-page1.png"</span>)</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(png_path)) {</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  img <span class="ot">&lt;-</span> <span class="fu">pdf_render_page</span>(pdf_path, <span class="at">page =</span> <span class="dv">1</span>, <span class="at">dpi =</span> <span class="dv">150</span>)</span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">writePNG</span>(img, png_path)</span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(png_path)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>png_path <span class="ot">&lt;-</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"ice"</span>, <span class="st">"eroFieldOffices-page1.png"</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(png_path)) {</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  img <span class="ot">&lt;-</span> <span class="fu">pdf_render_page</span>(pdf_path, <span class="at">page =</span> <span class="dv">1</span>, <span class="at">dpi =</span> <span class="dv">150</span>)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">writePNG</span>(img, png_path)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(png_path)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div id="fig-ero-map" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -927,79 +856,79 @@ Figure&nbsp;1: FY 2023 ERO Field Offices (last updated 02/09/2024). Stars are th
 <h3 class="anchored" data-anchor-id="comparison-against-missing-address-facilities">Comparison against missing-address facilities</h3>
 <p>The map shows 25 AOR field offices (stars) and 181 sub-field offices/other ERO presence locations (dots). I extracted city names from the map by visual inspection and compared them against the Vera-sourced city for each missing-address facility.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cities visible on the ERO Field Offices PDF map, extracted by visual</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co"># inspection of the rendered image</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>ero_pdf_cities <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># AOR field offices (stars)</span></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Seattle"</span>, <span class="st">"San Francisco"</span>, <span class="st">"Los Angeles"</span>, <span class="st">"San Diego"</span>, <span class="st">"Phoenix"</span>,</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Salt Lake City"</span>, <span class="st">"Denver"</span>, <span class="st">"El Paso"</span>, <span class="st">"Dallas"</span>, <span class="st">"San Antonio"</span>,</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Harlingen"</span>, <span class="st">"Houston"</span>, <span class="st">"New Orleans"</span>, <span class="st">"Chicago"</span>, <span class="st">"St. Paul"</span>,</span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Detroit"</span>, <span class="st">"Buffalo"</span>, <span class="st">"Boston"</span>, <span class="st">"New York City"</span>, <span class="st">"Newark"</span>,</span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Philadelphia"</span>, <span class="st">"Baltimore"</span>, <span class="st">"Washington"</span>, <span class="st">"Atlanta"</span>, <span class="st">"Miramar"</span>,</span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Sub-field offices / other ERO presence (dots)</span></span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Anchorage"</span>, <span class="st">"Ferndale"</span>, <span class="st">"Wenatchee"</span>, <span class="st">"Spokane"</span>, <span class="st">"Richland"</span>,</span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Tacoma"</span>, <span class="st">"Yakima"</span>, <span class="st">"Portland"</span>, <span class="st">"Eugene"</span>, <span class="st">"Medford"</span>,</span>
-<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Sacramento"</span>, <span class="st">"San Jose"</span>, <span class="st">"Stockton"</span>, <span class="st">"Fresno"</span>, <span class="st">"Bakersfield"</span>,</span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Santa Maria"</span>, <span class="st">"Camarillo"</span>, <span class="st">"San Bernardino"</span>, <span class="st">"Santa Ana"</span>,</span>
-<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Otay Mesa"</span>, <span class="st">"El Centro"</span>, <span class="st">"Calexico"</span>, <span class="st">"Reno"</span>, <span class="st">"Las Vegas"</span>,</span>
-<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>  <span class="st">"St. George"</span>, <span class="st">"Boise"</span>, <span class="st">"Twin Falls"</span>, <span class="st">"Idaho Falls"</span>, <span class="st">"Helena"</span>,</span>
-<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Billings"</span>, <span class="st">"Ogden"</span>, <span class="st">"Orem"</span>, <span class="st">"Yuma"</span>, <span class="st">"Tucson"</span>,</span>
-<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Casper"</span>, <span class="st">"Cheyenne"</span>, <span class="st">"Craig"</span>, <span class="st">"Grand Junction"</span>, <span class="st">"Glenwood Springs"</span>,</span>
-<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Frederick"</span>, <span class="st">"Aurora"</span>, <span class="st">"Florence"</span>, <span class="st">"Durango"</span>, <span class="st">"Alamosa"</span>,</span>
-<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Colorado Springs"</span>, <span class="st">"Albuquerque"</span>, <span class="st">"Roswell"</span>, <span class="st">"Las Cruces"</span>, <span class="st">"Chaparral"</span>,</span>
-<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Pecos"</span>, <span class="st">"Midland"</span>, <span class="st">"Big Spring"</span>, <span class="st">"Lubbock"</span>, <span class="st">"Amarillo"</span>,</span>
-<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Waco"</span>, <span class="st">"Austin"</span>, <span class="st">"Del Rio"</span>, <span class="st">"Laredo"</span>, <span class="st">"Corpus Christi"</span>,</span>
-<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Edinburg"</span>, <span class="st">"Los Fresnos"</span>, <span class="st">"San Angelo"</span>, <span class="st">"Alvarado"</span>, <span class="st">"Athens"</span>,</span>
-<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Texarkana"</span>, <span class="st">"Oklahoma City"</span>, <span class="st">"Tulsa"</span>, <span class="st">"Wichita"</span>, <span class="st">"Garden City"</span>,</span>
-<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Kansas City"</span>, <span class="st">"Stratford"</span>, <span class="st">"St. Louis"</span>, <span class="st">"Rock Island"</span>, <span class="st">"Broadview"</span>,</span>
-<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Madison"</span>, <span class="st">"Milwaukee"</span>, <span class="st">"Cedar Rapids"</span>, <span class="st">"Sioux City"</span>, <span class="st">"Des Moines"</span>,</span>
-<span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Omaha"</span>, <span class="st">"North Platte"</span>, <span class="st">"Grand Island"</span>, <span class="st">"Sioux Falls"</span>, <span class="st">"Rapid City"</span>,</span>
-<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Grand Forks"</span>, <span class="st">"Fort Wayne"</span>, <span class="st">"Indianapolis"</span>, <span class="st">"Columbus"</span>, <span class="st">"Cleveland"</span>,</span>
-<span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Cincinnati"</span>, <span class="st">"Louisville"</span>, <span class="st">"Bowling Green"</span>, <span class="st">"Fort Smith"</span>,</span>
-<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Fayetteville"</span>, <span class="st">"Little Rock"</span>, <span class="st">"Jonesboro"</span>, <span class="st">"Bossier City"</span>,</span>
-<span id="cb23-31"><a href="#cb23-31" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Winnfield"</span>, <span class="st">"Alexandria"</span>, <span class="st">"Oakdale"</span>, <span class="st">"Lafayette"</span>, <span class="st">"Baton Rouge"</span>,</span>
-<span id="cb23-32"><a href="#cb23-32" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Jena"</span>, <span class="st">"Pearl"</span>, <span class="st">"Gulfport"</span>, <span class="st">"Memphis"</span>, <span class="st">"Nashville"</span>, <span class="st">"Knoxville"</span>,</span>
-<span id="cb23-33"><a href="#cb23-33" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Chattanooga"</span>, <span class="st">"Gadsden"</span>, <span class="st">"Birmingham"</span>, <span class="st">"Montgomery"</span>, <span class="st">"Mobile"</span>,</span>
-<span id="cb23-34"><a href="#cb23-34" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Huntsville"</span>, <span class="st">"Conroe"</span>, <span class="st">"Houston"</span>,</span>
-<span id="cb23-35"><a href="#cb23-35" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Tallahassee"</span>, <span class="st">"Panama City"</span>, <span class="st">"Jacksonville"</span>, <span class="st">"Orlando"</span>, <span class="st">"Tampa"</span>,</span>
-<span id="cb23-36"><a href="#cb23-36" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Stuart"</span>, <span class="st">"Ft. Myers"</span>, <span class="st">"Pompano Beach"</span>, <span class="st">"Miami"</span>,</span>
-<span id="cb23-37"><a href="#cb23-37" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Greensboro"</span>, <span class="st">"Raleigh"</span>, <span class="st">"Charlotte"</span>, <span class="st">"Wilmington"</span>, <span class="st">"Columbia"</span>,</span>
-<span id="cb23-38"><a href="#cb23-38" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Charleston"</span>, <span class="st">"Savannah"</span>, <span class="st">"Lumpkin"</span>, <span class="st">"Folkston"</span>,</span>
-<span id="cb23-39"><a href="#cb23-39" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Hendersonville"</span>, <span class="st">"Greer"</span>, <span class="st">"Dalton"</span>,</span>
-<span id="cb23-40"><a href="#cb23-40" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Harrisonburg"</span>, <span class="st">"Roanoke"</span>, <span class="st">"Richmond"</span>, <span class="st">"Norfolk"</span>, <span class="st">"Bowling Green"</span>,</span>
-<span id="cb23-41"><a href="#cb23-41" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Salisbury"</span>, <span class="st">"Dover"</span>, <span class="st">"Mt. Laurel"</span>,</span>
-<span id="cb23-42"><a href="#cb23-42" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Pike"</span>, <span class="st">"Williamsport"</span>, <span class="st">"Moshannon"</span>, <span class="st">"Pittsburgh"</span>, <span class="st">"York"</span>,</span>
-<span id="cb23-43"><a href="#cb23-43" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Champlain"</span>, <span class="st">"Syracuse"</span>, <span class="st">"Batavia"</span>, <span class="st">"Albany"</span>, <span class="st">"Newburgh"</span>,</span>
-<span id="cb23-44"><a href="#cb23-44" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Central Islip"</span>, <span class="st">"Scarborough"</span>, <span class="st">"St. Albans"</span>, <span class="st">"Manchester"</span>,</span>
-<span id="cb23-45"><a href="#cb23-45" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Hartford"</span>, <span class="st">"Warwick"</span>, <span class="st">"Sault Saint Marie"</span>,</span>
-<span id="cb23-46"><a href="#cb23-46" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Honolulu"</span>, <span class="st">"Saipan"</span>, <span class="st">"Guam"</span>, <span class="st">"Tamuning"</span>,</span>
-<span id="cb23-47"><a href="#cb23-47" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Aguadilla"</span>, <span class="st">"Guaynabo"</span>, <span class="st">"St. Thomas"</span></span>
-<span id="cb23-48"><a href="#cb23-48" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cities visible on the ERO Field Offices PDF map, extracted by visual</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># inspection of the rendered image</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>ero_pdf_cities <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># AOR field offices (stars)</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Seattle"</span>, <span class="st">"San Francisco"</span>, <span class="st">"Los Angeles"</span>, <span class="st">"San Diego"</span>, <span class="st">"Phoenix"</span>,</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Salt Lake City"</span>, <span class="st">"Denver"</span>, <span class="st">"El Paso"</span>, <span class="st">"Dallas"</span>, <span class="st">"San Antonio"</span>,</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Harlingen"</span>, <span class="st">"Houston"</span>, <span class="st">"New Orleans"</span>, <span class="st">"Chicago"</span>, <span class="st">"St. Paul"</span>,</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Detroit"</span>, <span class="st">"Buffalo"</span>, <span class="st">"Boston"</span>, <span class="st">"New York City"</span>, <span class="st">"Newark"</span>,</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Philadelphia"</span>, <span class="st">"Baltimore"</span>, <span class="st">"Washington"</span>, <span class="st">"Atlanta"</span>, <span class="st">"Miramar"</span>,</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Sub-field offices / other ERO presence (dots)</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Anchorage"</span>, <span class="st">"Ferndale"</span>, <span class="st">"Wenatchee"</span>, <span class="st">"Spokane"</span>, <span class="st">"Richland"</span>,</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Tacoma"</span>, <span class="st">"Yakima"</span>, <span class="st">"Portland"</span>, <span class="st">"Eugene"</span>, <span class="st">"Medford"</span>,</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Sacramento"</span>, <span class="st">"San Jose"</span>, <span class="st">"Stockton"</span>, <span class="st">"Fresno"</span>, <span class="st">"Bakersfield"</span>,</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Santa Maria"</span>, <span class="st">"Camarillo"</span>, <span class="st">"San Bernardino"</span>, <span class="st">"Santa Ana"</span>,</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Otay Mesa"</span>, <span class="st">"El Centro"</span>, <span class="st">"Calexico"</span>, <span class="st">"Reno"</span>, <span class="st">"Las Vegas"</span>,</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>  <span class="st">"St. George"</span>, <span class="st">"Boise"</span>, <span class="st">"Twin Falls"</span>, <span class="st">"Idaho Falls"</span>, <span class="st">"Helena"</span>,</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Billings"</span>, <span class="st">"Ogden"</span>, <span class="st">"Orem"</span>, <span class="st">"Yuma"</span>, <span class="st">"Tucson"</span>,</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Casper"</span>, <span class="st">"Cheyenne"</span>, <span class="st">"Craig"</span>, <span class="st">"Grand Junction"</span>, <span class="st">"Glenwood Springs"</span>,</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Frederick"</span>, <span class="st">"Aurora"</span>, <span class="st">"Florence"</span>, <span class="st">"Durango"</span>, <span class="st">"Alamosa"</span>,</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Colorado Springs"</span>, <span class="st">"Albuquerque"</span>, <span class="st">"Roswell"</span>, <span class="st">"Las Cruces"</span>, <span class="st">"Chaparral"</span>,</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Pecos"</span>, <span class="st">"Midland"</span>, <span class="st">"Big Spring"</span>, <span class="st">"Lubbock"</span>, <span class="st">"Amarillo"</span>,</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Waco"</span>, <span class="st">"Austin"</span>, <span class="st">"Del Rio"</span>, <span class="st">"Laredo"</span>, <span class="st">"Corpus Christi"</span>,</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Edinburg"</span>, <span class="st">"Los Fresnos"</span>, <span class="st">"San Angelo"</span>, <span class="st">"Alvarado"</span>, <span class="st">"Athens"</span>,</span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Texarkana"</span>, <span class="st">"Oklahoma City"</span>, <span class="st">"Tulsa"</span>, <span class="st">"Wichita"</span>, <span class="st">"Garden City"</span>,</span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Kansas City"</span>, <span class="st">"Stratford"</span>, <span class="st">"St. Louis"</span>, <span class="st">"Rock Island"</span>, <span class="st">"Broadview"</span>,</span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Madison"</span>, <span class="st">"Milwaukee"</span>, <span class="st">"Cedar Rapids"</span>, <span class="st">"Sioux City"</span>, <span class="st">"Des Moines"</span>,</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Omaha"</span>, <span class="st">"North Platte"</span>, <span class="st">"Grand Island"</span>, <span class="st">"Sioux Falls"</span>, <span class="st">"Rapid City"</span>,</span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Grand Forks"</span>, <span class="st">"Fort Wayne"</span>, <span class="st">"Indianapolis"</span>, <span class="st">"Columbus"</span>, <span class="st">"Cleveland"</span>,</span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Cincinnati"</span>, <span class="st">"Louisville"</span>, <span class="st">"Bowling Green"</span>, <span class="st">"Fort Smith"</span>,</span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Fayetteville"</span>, <span class="st">"Little Rock"</span>, <span class="st">"Jonesboro"</span>, <span class="st">"Bossier City"</span>,</span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Winnfield"</span>, <span class="st">"Alexandria"</span>, <span class="st">"Oakdale"</span>, <span class="st">"Lafayette"</span>, <span class="st">"Baton Rouge"</span>,</span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Jena"</span>, <span class="st">"Pearl"</span>, <span class="st">"Gulfport"</span>, <span class="st">"Memphis"</span>, <span class="st">"Nashville"</span>, <span class="st">"Knoxville"</span>,</span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Chattanooga"</span>, <span class="st">"Gadsden"</span>, <span class="st">"Birmingham"</span>, <span class="st">"Montgomery"</span>, <span class="st">"Mobile"</span>,</span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Huntsville"</span>, <span class="st">"Conroe"</span>, <span class="st">"Houston"</span>,</span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Tallahassee"</span>, <span class="st">"Panama City"</span>, <span class="st">"Jacksonville"</span>, <span class="st">"Orlando"</span>, <span class="st">"Tampa"</span>,</span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Stuart"</span>, <span class="st">"Ft. Myers"</span>, <span class="st">"Pompano Beach"</span>, <span class="st">"Miami"</span>,</span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Greensboro"</span>, <span class="st">"Raleigh"</span>, <span class="st">"Charlotte"</span>, <span class="st">"Wilmington"</span>, <span class="st">"Columbia"</span>,</span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Charleston"</span>, <span class="st">"Savannah"</span>, <span class="st">"Lumpkin"</span>, <span class="st">"Folkston"</span>,</span>
+<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Hendersonville"</span>, <span class="st">"Greer"</span>, <span class="st">"Dalton"</span>,</span>
+<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Harrisonburg"</span>, <span class="st">"Roanoke"</span>, <span class="st">"Richmond"</span>, <span class="st">"Norfolk"</span>, <span class="st">"Bowling Green"</span>,</span>
+<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Salisbury"</span>, <span class="st">"Dover"</span>, <span class="st">"Mt. Laurel"</span>,</span>
+<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Pike"</span>, <span class="st">"Williamsport"</span>, <span class="st">"Moshannon"</span>, <span class="st">"Pittsburgh"</span>, <span class="st">"York"</span>,</span>
+<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Champlain"</span>, <span class="st">"Syracuse"</span>, <span class="st">"Batavia"</span>, <span class="st">"Albany"</span>, <span class="st">"Newburgh"</span>,</span>
+<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Central Islip"</span>, <span class="st">"Scarborough"</span>, <span class="st">"St. Albans"</span>, <span class="st">"Manchester"</span>,</span>
+<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Hartford"</span>, <span class="st">"Warwick"</span>, <span class="st">"Sault Saint Marie"</span>,</span>
+<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Honolulu"</span>, <span class="st">"Saipan"</span>, <span class="st">"Guam"</span>, <span class="st">"Tamuning"</span>,</span>
+<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Aguadilla"</span>, <span class="st">"Guaynabo"</span>, <span class="st">"St. Thomas"</span></span>
+<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>ero_cities_lower <span class="ot">&lt;-</span> <span class="fu">tolower</span>(ero_pdf_cities)</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>no_addr_compare <span class="ot">&lt;-</span> no_addr_vera <span class="sc">|&gt;</span></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">best_city =</span> <span class="fu">coalesce</span>(vera_city, facility_city),</span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">on_ero_map =</span> <span class="fu">tolower</span>(best_city) <span class="sc">%in%</span> ero_cities_lower <span class="sc">|</span></span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>      (best_city <span class="sc">==</span> <span class="st">"Mount Laurel"</span> <span class="sc">&amp;</span> <span class="st">"mt. laurel"</span> <span class="sc">%in%</span> ero_cities_lower) <span class="sc">|</span></span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>      (best_city <span class="sc">==</span> <span class="st">"N Syracuse"</span> <span class="sc">&amp;</span> <span class="st">"syracuse"</span> <span class="sc">%in%</span> ero_cities_lower)</span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>no_addr_compare <span class="sc">|&gt;</span></span>
-<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
-<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>    canonical_name,</span>
-<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">best_city =</span> <span class="fu">replace_na</span>(best_city, <span class="st">"—"</span>),</span>
-<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">state =</span> facility_state,</span>
-<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">on_ero_map =</span> <span class="fu">case_when</span>(</span>
-<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">is.na</span>(on_ero_map) <span class="sc">~</span> <span class="st">"—"</span>,</span>
-<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>      on_ero_map <span class="sc">~</span> <span class="st">"Yes"</span>,</span>
-<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"No"</span></span>
-<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">vera_address =</span> <span class="fu">replace_na</span>(vera_address, <span class="st">"—"</span>)</span>
-<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Facility"</span>, <span class="st">"City"</span>, <span class="st">"State"</span>, <span class="st">"On ERO map?"</span>, <span class="st">"Vera address"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>ero_cities_lower <span class="ot">&lt;-</span> <span class="fu">tolower</span>(ero_pdf_cities)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>no_addr_compare <span class="ot">&lt;-</span> no_addr_vera <span class="sc">|&gt;</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">best_city =</span> <span class="fu">coalesce</span>(vera_city, facility_city),</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">on_ero_map =</span> <span class="fu">tolower</span>(best_city) <span class="sc">%in%</span> ero_cities_lower <span class="sc">|</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>      (best_city <span class="sc">==</span> <span class="st">"Mount Laurel"</span> <span class="sc">&amp;</span> <span class="st">"mt. laurel"</span> <span class="sc">%in%</span> ero_cities_lower) <span class="sc">|</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>      (best_city <span class="sc">==</span> <span class="st">"N Syracuse"</span> <span class="sc">&amp;</span> <span class="st">"syracuse"</span> <span class="sc">%in%</span> ero_cities_lower)</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>no_addr_compare <span class="sc">|&gt;</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>    canonical_name,</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">best_city =</span> <span class="fu">replace_na</span>(best_city, <span class="st">"—"</span>),</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">state =</span> facility_state,</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">on_ero_map =</span> <span class="fu">case_when</span>(</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">is.na</span>(on_ero_map) <span class="sc">~</span> <span class="st">"—"</span>,</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>      on_ero_map <span class="sc">~</span> <span class="st">"Yes"</span>,</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"No"</span></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">vera_address =</span> <span class="fu">replace_na</span>(vera_address, <span class="st">"—"</span>)</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Facility"</span>, <span class="st">"City"</span>, <span class="st">"State"</span>, <span class="st">"On ERO map?"</span>, <span class="st">"Vera address"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div id="tbl-ero-comparison" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-ero-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1033,6 +962,20 @@ Table&nbsp;3
 <td style="text-align: left;">—</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">Little Rock Hold Room</td>
+<td style="text-align: left;">Little Rock</td>
+<td style="text-align: left;">AR</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">2900 S Woodrow St</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Nashville Hold Room</td>
+<td style="text-align: left;">Nashville</td>
+<td style="text-align: left;">TN</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">200 James Robertson Pkwy</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">Anchorage Sub-Office Hold Room</td>
 <td style="text-align: left;">Anchorage</td>
 <td style="text-align: left;">AK</td>
@@ -1054,53 +997,39 @@ Table&nbsp;3
 <td style="text-align: left;">2500 E Van Buren St</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Los Angeles Police Pd 77th Div.</td>
-<td style="text-align: left;">Los Angeles</td>
-<td style="text-align: left;">CA</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">7600 S Broadway</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">Redding Hold Room</td>
 <td style="text-align: left;">Redding</td>
 <td style="text-align: left;">CA</td>
 <td style="text-align: left;">No</td>
 <td style="text-align: left;">443 Redcliff Dr</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Santa Maria Sub Office ERO</td>
 <td style="text-align: left;">Santa Maria</td>
 <td style="text-align: left;">CA</td>
 <td style="text-align: left;">Yes</td>
 <td style="text-align: left;">740 West Century Street, Suite A</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Colo Springs Den Hsi Hold</td>
 <td style="text-align: left;">Colorado Springs</td>
 <td style="text-align: left;">CO</td>
 <td style="text-align: left;">Yes</td>
 <td style="text-align: left;">415 E Pikes Peak Ave</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Miami Border Patrol</td>
 <td style="text-align: left;">Miami</td>
 <td style="text-align: left;">FL</td>
 <td style="text-align: left;">Yes</td>
 <td style="text-align: left;">51 SW 1st Ave</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Bowling Green Hold Room</td>
 <td style="text-align: left;">Bowling Green</td>
 <td style="text-align: left;">KY</td>
 <td style="text-align: left;">Yes</td>
 <td style="text-align: left;">11093 S W Lewis Memorial Dr</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Peabody Pd</td>
-<td style="text-align: left;">Peabody</td>
-<td style="text-align: left;">MA</td>
-<td style="text-align: left;">No</td>
-<td style="text-align: left;">6 Allens Ln</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Salisbury Hold Room</td>
@@ -1138,32 +1067,18 @@ Table&nbsp;3
 <td style="text-align: left;">500 N. Richardson Ave</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Courthouse Usm Cntl Islip</td>
-<td style="text-align: left;">Central Islip</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">100 Federal Plaza</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">Champlain Hold Room</td>
 <td style="text-align: left;">Champlain</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">Yes</td>
 <td style="text-align: left;">237 West Service Road</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Central Islip Hold Room</td>
 <td style="text-align: left;">Central Islip</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">Yes</td>
 <td style="text-align: left;">100 Federal Plaza</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Jfk International Ap - T7</td>
-<td style="text-align: left;">Jamaica</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: left;">No</td>
-<td style="text-align: left;">Terminal 7</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Newburgh Holding</td>
@@ -1201,32 +1116,18 @@ Table&nbsp;3
 <td style="text-align: left;">—</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Alamo Police Department.</td>
-<td style="text-align: left;">Alamo</td>
-<td style="text-align: left;">TX</td>
-<td style="text-align: left;">No</td>
-<td style="text-align: left;">840 W Austin St</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">Corpus Christi Eor Hold Room</td>
 <td style="text-align: left;">Corpus Christi</td>
 <td style="text-align: left;">TX</td>
 <td style="text-align: left;">Yes</td>
 <td style="text-align: left;">—</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Edinburg Police Department.</td>
-<td style="text-align: left;">Edinburg</td>
-<td style="text-align: left;">TX</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">1702 S. Closner Blvd.</td>
-</tr>
 <tr class="odd">
-<td style="text-align: left;">Harlingen Police Department.</td>
-<td style="text-align: left;">Harlingen</td>
+<td style="text-align: left;">El Paso Soft Sided Facility</td>
+<td style="text-align: left;">El Paso</td>
 <td style="text-align: left;">TX</td>
 <td style="text-align: left;">Yes</td>
-<td style="text-align: left;">1018 Fair Park</td>
+<td style="text-align: left;">12501 Gateway Blvd S</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Mcallen Hold Room</td>
@@ -1319,20 +1220,20 @@ Table&nbsp;3
 </figure>
 </div>
 </div>
-<p>29 of the 41 facilities have a city that appears on the ERO map. The map confirms city-level locations but does not provide street addresses beyond what Vera already has.</p>
+<p>28 of the 37 facilities have a city that appears on the ERO map. The map confirms city-level locations but does not provide street addresses beyond what Vera already has.</p>
 </section>
 <section id="facilities-not-on-the-ero-map" class="level3">
 <h3 class="anchored" data-anchor-id="facilities-not-on-the-ero-map">Facilities not on the ERO map</h3>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>no_addr_compare <span class="sc">|&gt;</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>on_ero_map <span class="sc">|</span> <span class="fu">is.na</span>(on_ero_map)) <span class="sc">|&gt;</span></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    canonical_name,</span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">best_city =</span> <span class="fu">replace_na</span>(best_city, <span class="st">"—"</span>),</span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">state =</span> facility_state,</span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">vera_address =</span> <span class="fu">replace_na</span>(vera_address, <span class="st">"—"</span>)</span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Facility"</span>, <span class="st">"City"</span>, <span class="st">"State"</span>, <span class="st">"Vera address"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>no_addr_compare <span class="sc">|&gt;</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>on_ero_map <span class="sc">|</span> <span class="fu">is.na</span>(on_ero_map)) <span class="sc">|&gt;</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    canonical_name,</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">best_city =</span> <span class="fu">replace_na</span>(best_city, <span class="st">"—"</span>),</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">state =</span> facility_state,</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">vera_address =</span> <span class="fu">replace_na</span>(vera_address, <span class="st">"—"</span>)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Facility"</span>, <span class="st">"City"</span>, <span class="st">"State"</span>, <span class="st">"Vera address"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div id="tbl-not-on-map" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-not-on-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1369,60 +1270,42 @@ Table&nbsp;4
 <td style="text-align: left;">443 Redcliff Dr</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Peabody Pd</td>
-<td style="text-align: left;">Peabody</td>
-<td style="text-align: left;">MA</td>
-<td style="text-align: left;">6 Allens Ln</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">Duluth Hold Room</td>
 <td style="text-align: left;">Duluth</td>
 <td style="text-align: left;">MN</td>
 <td style="text-align: left;">4431 Endeavor Drive</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Jfk International Ap - T7</td>
-<td style="text-align: left;">Jamaica</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: left;">Terminal 7</td>
-</tr>
 <tr class="even">
-<td style="text-align: left;">Alamo Police Department.</td>
-<td style="text-align: left;">Alamo</td>
-<td style="text-align: left;">TX</td>
-<td style="text-align: left;">840 W Austin St</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">Lorton, Va Hold Room</td>
 <td style="text-align: left;">Fairfax</td>
 <td style="text-align: left;">VA</td>
 <td style="text-align: left;">2675 Prosperity Avenue</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Roanoke Sub-Office Hold Room</td>
 <td style="text-align: left;">Salem</td>
 <td style="text-align: left;">VA</td>
 <td style="text-align: left;">103 West Main St</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">New York Presbyterian Hospital</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">—</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Sunrise Hospital</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">—</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Spring Valley Hospital</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">—</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Pam Health Specialty Hospital 1</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">TX</td>
@@ -1450,11 +1333,11 @@ Table&nbsp;4
 <tbody>
 <tr class="odd">
 <td>Total facilities missing addresses</td>
-<td>41</td>
+<td>37</td>
 </tr>
 <tr class="even">
 <td>Vera has street address</td>
-<td>26</td>
+<td>22</td>
 </tr>
 <tr class="odd">
 <td>Vera has city only (no street)</td>
@@ -1466,7 +1349,7 @@ Table&nbsp;4
 </tr>
 <tr class="odd">
 <td>City appears on ERO map</td>
-<td>29</td>
+<td>28</td>
 </tr>
 </tbody>
 </table>
@@ -1539,14 +1422,13 @@ Table&nbsp;4
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

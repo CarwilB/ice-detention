@@ -476,6 +476,17 @@ list(
     description = "25 ERO field offices with canonical IDs (2001-2025), DETLOCs, and addresses"
   ),
   tar_target(
+    missing_hold_addresses_file,
+    here::here("data/missing-hold-addresses.csv"),
+    description = "Tracks data/missing-hold-addresses.csv for changes",
+    format = "file"
+  ),
+  tar_target(
+    missing_hold_addresses,
+    readr::read_csv(missing_hold_addresses_file, show_col_types = FALSE),
+    description = "Unified missing hold facility addresses from ICE node pages and Gemini (27 facilities)"
+  ),
+  tar_target(
     hold_canonical_registry_file,
     here::here("data/hold-canonical-registry.csv"),
     description = "Tracks data/hold-canonical-registry.csv for changes (frozen hold facility IDs)",
@@ -491,7 +502,8 @@ list(
     build_hold_canonical(ddp_codes, marshall_locations, ero_canonical,
                          build_detloc_lookup(dmcp_canonical_map, ddp_canonical_map),
                          hold_canonical_registry,
-                         vera_facilities = vera_facilities),
+                         vera_facilities = vera_facilities,
+                         missing_hold_addresses = missing_hold_addresses),
     description = "Hold facility integration: hold_canonical (148+ facilities, IDs 2026+), ero_hold_map (23 ERO DETLOC mappings), and summary stats"
   ),
 
