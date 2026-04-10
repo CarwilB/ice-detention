@@ -165,6 +165,13 @@ list(
     description = "Unified geocoded table with Google + source coords, divergence flags, and address quality"
   ),
 
+  # Extract addresses and geocoding for DDP comparison export
+  tar_target(
+    facilities_geocoding_lookup,
+    build_facilities_geocoding_lookup(facilities_geocoded_all),
+    description = "Facility addresses and geocoding lookup for DDP comparison export"
+  ),
+
   # Archive Google geocoding results as CSV (parallels Vera facilities.csv)
   tar_target(
     google_geocoded_file,
@@ -541,7 +548,8 @@ list(
   tar_target(
     ddp_comparison_export,
     export_ddp_comparison_data(ddp_raw, facilities_all_keyed,
-                               detloc_lookup_full, vera_facilities),
+                               detloc_lookup_full, vera_facilities,
+                               facilities_geocoding_lookup),
     description = "Exports 11 RDS files to data/ddp-comparison-export/ for deploying the DDP comparison blog post",
     format = "file",
     cue = tar_cue("never")

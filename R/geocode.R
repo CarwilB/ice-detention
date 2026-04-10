@@ -452,3 +452,17 @@ build_geocoded_all <- function(facility_roster,
 }
 
 
+# ── Facilities geocoding lookup for DDP comparison export ──────────────────────
+# Builds a detloc-keyed lookup table with facility addresses and coordinates
+# for use in export_ddp_comparison_data(). Selects address and coordinate columns
+# from facilities_geocoded_all and renames coordinates to match the vera_type_lookup
+# schema (lat, lon → latitude, longitude).
+
+build_facilities_geocoding_lookup <- function(facilities_geocoded_all) {
+  facilities_geocoded_all |>
+    dplyr::select(canonical_id, canonical_name,
+                  facility_address, facility_city, facility_state, facility_zip,
+                  lat, lon) |>
+    dplyr::rename(latitude = lat, longitude = lon)
+}
+

@@ -522,7 +522,8 @@ build_ddp_facility_canonical <- function(ddp_codes, detloc_lookup_full,
 # ── Export pre-computed data for DDP comparison blog post ───────────────────
 
 export_ddp_comparison_data <- function(ddp_raw, facilities_keyed,
-                                       detloc_lookup_full, vera_facilities) {
+                                       detloc_lookup_full, vera_facilities,
+                                       facilities_geocoding_lookup) {
   # Pre-computes and exports 11 RDS files to data/ddp-comparison-export/ for
 
   # the DDP vs ICE FY25 comparison post on the quarto website.
@@ -533,6 +534,22 @@ export_ddp_comparison_data <- function(ddp_raw, facilities_keyed,
                   type_detailed = type_detailed_corrected,
                   latitude, longitude) |>
     dplyr::distinct(detloc, .keep_all = TRUE)
+
+  # ── NEW: detloc-keyed geocoding lookup ─────────────────────────────────────
+  # Join facilities_geocoding_lookup to vera_type_lookup via detloc_lookup_full,
+  # which maps detloc → canonical_id. This replaces vera_type_lookup's coords
+  # with the better-sourced facilities_geocoded_all coordinates.
+  detloc_to_canonical <- detloc_lookup_full |>
+    dplyr::distinct(detloc, canonical_id)
+
+  geocoding_by_detloc <- detloc_to_canonical |>
+    dplyr::left_join(facilities_geocoding_lookup, by = "canonical_id") |>
+    dplyr::select(detloc, facility_address, facility_city,
+                  facility_state, facility_zip, latitude, longitude)
+
+  vera_type_lookup <- vera_type_lookup |>
+    dplyr::select(detloc, type_grouped, type_detailed) |>    # drop old coords
+    dplyr::left_join(geocoding_by_detloc, by = "detloc")     # add new coords + address
 
   # ICE FY25
   ice_fy25 <- facilities_keyed[["FY25"]] |>
