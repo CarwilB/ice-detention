@@ -63,8 +63,7 @@
 76,"Cimmarron Correctional Facility","panel",TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"preference:google_maps",3
 77,"Clark County Jail (Indiana)","panel",TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",3
 79,"Clay County Justice Center","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
-80,"Clinton County Correctional Facility","panel",TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,"google_maps",3
-81,"Clinton County Correctional Facility","panel",TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",4
+80,"Clinton County Correctional Facility","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"auto:google_maps+vera_institute",6
 82,"Clinton County Jail","panel",TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",4
 83,"Clinton County Jail","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
 84,"Coastal Bend Detention Facility","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:vera_institute",6
@@ -237,8 +236,7 @@
 271,"Nye County Detention Center (Nevada)","panel",TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",4
 272,"Ogle County Jail","panel",TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,"google_maps+vera_institute",3
 273,"Okmulgee County Jail","panel",TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",4
-274,"Oldham County Detention Center","panel",TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",4
-275,"Oldham County Jail","panel",TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,"google_maps",2
+274,"Oldham County Detention Center","panel",TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",5
 278,"Orange County Jail (Florida)","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
 279,"Orange County Jail (New York)","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
 281,"Otay Mesa Detention Center","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
@@ -527,7 +525,6 @@
 1179,"Webb County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 1180,"Wilson County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 1181,"Zavala County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
-1182,"Salt Lake County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"divergent",2
 1183,"Summit County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 1184,"B.R.R.J. Abingdon","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 1185,"Petersburg Fed.Corr.Inst.","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
@@ -573,7 +570,7 @@
 2016,"Newark Field Office","ero",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",3
 2017,"Philadelphia Field Office","ero",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"auto:google_maps+vera_institute",3
 2018,"Phoenix Field Office","ero",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",3
-2019,"Salt Lake City Field Office","ero",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,"auto:google_maps+vera_institute",0
+2019,"Salt Lake City Field Office","ero",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"auto:google_maps+vera_institute",3
 2020,"San Antonio Field Office","ero",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
 2021,"San Diego Field Office","ero",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,"google_maps",0
 2022,"San Francisco Field Office","ero",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",3

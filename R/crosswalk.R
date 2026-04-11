@@ -38,7 +38,12 @@ force_merge_pairs <- function() {
   tibble::tribble(
     ~name_a,                                ~name_b,
     # Same building in Lovejoy GA; renamed between FY23 and FY24
-    "Robert A. Deyton Detention Center",    "Robert A. Deyton Detention Facility"
+    "Robert A. Deyton Detention Center",    "Robert A. Deyton Detention Facility",
+    # Three duplicate facility consolidations (April 2026)
+    # Oldham County, KY — La Grange (274) and La Grange (275) are same building
+    "Oldham County Detention Center",       "Oldham County Jail",
+    # Salt Lake County, UT — 326 (SLCHOLD) and 1182 (SLSLCUT) are same building
+    "Salt Lake County Metro Jail",          "Salt Lake County Jail"
   )
 }
 
@@ -160,6 +165,26 @@ build_facility_crosswalk <- function(facilities_data_list, id_registry) {
 
   for (i in seq_len(nrow(fmp))) {
     uf_union(uf, fmp$id_a[i], fmp$id_b[i])
+  }
+
+  # Manual consolidations (April 2026): union all variants of these (name, state) pairs
+  consolidate_pairs <- list(
+    list(name = "Clinton County Correctional Facility", state = "PA"),
+    list(name = "Oldham County Detention Center", state = "KY"),
+    list(name = "Oldham County Jail", state = "KY"),
+    list(name = "Salt Lake County Metro Jail", state = "UT"),
+    list(name = "Salt Lake County Jail", state = "UT")
+  )
+
+  for (pair in consolidate_pairs) {
+    variants <- facility_key_exact |>
+      dplyr::filter(facility_name == pair$name, facility_state == pair$state)
+    if (nrow(variants) > 1) {
+      root_id <- variants$facility_id[1]
+      for (j in 2:nrow(variants)) {
+        uf_union(uf, root_id, variants$facility_id[j])
+      }
+    }
   }
 
   canonical_map <- tibble::tibble(facility_id = facility_key_exact$facility_id) |>

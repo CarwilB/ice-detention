@@ -549,6 +549,7 @@ list(
     ddp_comparison_export,
     export_ddp_comparison_data(ddp_raw, facilities_all_keyed,
                                detloc_lookup_full, vera_facilities,
+                               facility_roster,
                                facilities_geocoding_lookup),
     description = "Exports 11 RDS files to data/ddp-comparison-export/ for deploying the DDP comparison blog post",
     format = "file",

@@ -63,8 +63,7 @@ canonical_id,canonical_name,canonical_city,canonical_state
 76,Cimmarron Correctional Facility,Cushing,OK
 77,Clark County Jail (Indiana),Jeffersonville,IN
 79,Clay County Justice Center,Brazil,IN
-80,Clinton County Correctional Facility,Lock Haven,PA
-81,Clinton County Correctional Facility,McElhattan,PA
+80,Clinton County Correctional Facility,McElhattan,PA
 82,Clinton County Jail,Frankfort,IN
 83,Clinton County Jail,Plattsburgh,NY
 84,Coastal Bend Detention Facility,Robstown,TX
@@ -238,7 +237,6 @@ canonical_id,canonical_name,canonical_city,canonical_state
 272,Ogle County Jail,Oregon,IL
 273,Okmulgee County Jail,Okmulgee,OK
 274,Oldham County Detention Center,La Grange,KY
-275,Oldham County Jail,La Grange,KY
 278,Orange County Jail (Florida),Orlando,FL
 279,Orange County Jail (New York),Goshen,NY
 281,Otay Mesa Detention Center,San Diego,CA

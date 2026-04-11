@@ -73,6 +73,7 @@ ddp_manual_strong_matches <- function() {
     # solely to 101 (3130 Oakland St). 102 retains no DETLOC — it was a separate
     # building that shared the same ICE facility code while active.
     129L, "BOPATL",  "ATLANTA U.S. PEN.",                    NA,   "sole",
+    326L, "SLSLCUT", "Salt Lake County Jail",                 NA,   "sole",
     327L, "SNDHOLD", "SND DISTRICT STAGING",                 NA,   "sole",
     136L, "FLDSSFS", "FLORIDA SOFT-SIDED FACILITY-SOUTH",    NA,   "sole",
     221L, "LICEPLA", "LOUISIANA ICE PROCESSING CENTER",      NA,   "sole",
@@ -271,7 +272,7 @@ build_ddp_canonical_map <- function(id_registry, dmcp_canonical_map,
     dplyr::mutate(match_type = "partial_keyword")
 
   # ── Combine ──────────────────────────────────────────────────────────────
-  ddp_map <- dplyr::bind_rows(exact_all, county_all, keyword_all) |>
+    ddp_map <- dplyr::bind_rows(exact_all, county_all, keyword_all) |>
     dplyr::select(canonical_id, detloc, ddp_name, match_type, ddp_role)
 
   n_fac <- dplyr::n_distinct(ddp_map$canonical_id)
@@ -468,7 +469,8 @@ build_ddp_facility_canonical <- function(ddp_codes, detloc_lookup_full,
 
   # Assign IDs
   if (nrow(remaining) > 0) {
-    remaining$canonical_id <- seq(1054L, length.out = nrow(remaining))
+    ids <- setdiff(seq(1054L, 1054L + nrow(remaining)), 1182L)
+    remaining$canonical_id <- ids[seq_len(nrow(remaining))]
   }
   if (nrow(medical) > 0) {
     medical$canonical_id <- seq(3001L, length.out = nrow(medical))
@@ -523,33 +525,34 @@ build_ddp_facility_canonical <- function(ddp_codes, detloc_lookup_full,
 
 export_ddp_comparison_data <- function(ddp_raw, facilities_keyed,
                                        detloc_lookup_full, vera_facilities,
+                                       facility_roster,
                                        facilities_geocoding_lookup) {
-  # Pre-computes and exports 11 RDS files to data/ddp-comparison-export/ for
 
+  # Pre-computes and exports RDS files to data/ddp-comparison-export/ for
   # the DDP vs ICE FY25 comparison post on the quarto website.
   # Returns: character vector of written file paths (for format = "file").
 
-  vera_type_lookup <- vera_facilities |>
-    dplyr::select(detloc, type_grouped = type_grouped_corrected,
-                  type_detailed = type_detailed_corrected,
-                  latitude, longitude) |>
-    dplyr::distinct(detloc, .keep_all = TRUE)
-
-  # ── NEW: detloc-keyed geocoding lookup ─────────────────────────────────────
-  # Join facilities_geocoding_lookup to vera_type_lookup via detloc_lookup_full,
-  # which maps detloc → canonical_id. This replaces vera_type_lookup's coords
-  # with the better-sourced facilities_geocoded_all coordinates.
+  # ── detloc-keyed type + geocoding lookup ───────────────────────────────────
+  # Types from facility_roster (most authoritative: ICE panel codes → Vera
+  # corrected → classify_facility_type_combined). Coordinates and addresses
+  # from facilities_geocoding_lookup (facilities_geocoded_all).
   detloc_to_canonical <- detloc_lookup_full |>
     dplyr::distinct(detloc, canonical_id)
 
-  geocoding_by_detloc <- detloc_to_canonical |>
-    dplyr::left_join(facilities_geocoding_lookup, by = "canonical_id") |>
-    dplyr::select(detloc, facility_address, facility_city,
-                  facility_state, facility_zip, latitude, longitude)
+  detloc_type_lookup <- detloc_to_canonical |>
+    dplyr::left_join(
+      facility_roster |>
+        dplyr::select(canonical_id,
+                      type_grouped  = type_grouped_corrected,
+                      type_detailed = type_detailed_corrected),
+      by = "canonical_id"
+    ) |>
+    dplyr::left_join(
+      facilities_geocoding_lookup,
+      by = "canonical_id"
+    )
 
-  vera_type_lookup <- vera_type_lookup |>
-    dplyr::select(detloc, type_grouped, type_detailed) |>    # drop old coords
-    dplyr::left_join(geocoding_by_detloc, by = "detloc")     # add new coords + address
+
 
   # ICE FY25
   ice_fy25 <- facilities_keyed[["FY25"]] |>
@@ -596,7 +599,7 @@ export_ddp_comparison_data <- function(ddp_raw, facilities_keyed,
   # Unmatched facilities
   unmatched <- ddp_fy25_keyed |>
     dplyr::filter(!in_ice_fy25) |>
-    dplyr::left_join(vera_type_lookup |> dplyr::select(detloc, type_grouped,
+    dplyr::left_join(detloc_type_lookup |> dplyr::select(detloc, type_grouped,
                                                         type_detailed),
                      by = c("detention_facility_code" = "detloc")) |>
     dplyr::mutate(
@@ -621,7 +624,7 @@ export_ddp_comparison_data <- function(ddp_raw, facilities_keyed,
     dplyr::filter(detention_facility_code %in% unmatched_codes,
                   date >= as.Date("2024-10-01"),
                   date <= as.Date("2025-09-24")) |>
-    dplyr::left_join(vera_type_lookup |> dplyr::select(detloc, type_grouped),
+    dplyr::left_join(detloc_type_lookup |> dplyr::select(detloc, type_grouped),
                      by = c("detention_facility_code" = "detloc")) |>
     dplyr::mutate(
       type_grouped = dplyr::if_else(is.na(type_grouped), "Unclassified",
@@ -629,7 +632,7 @@ export_ddp_comparison_data <- function(ddp_raw, facilities_keyed,
       month = as.Date(format(date, "%Y-%m-01"))
     )
 
-  # Peak FY25 with Vera coords
+  # Peak FY25 with geocoded coords
   peak_fy25 <- ddp_facility_summary(ddp_raw,
                                      from = "2024-10-01", to = "2025-09-24",
                                      codes = unmatched_codes) |>
@@ -638,7 +641,7 @@ export_ddp_comparison_data <- function(ddp_raw, facilities_keyed,
       adp_class = dplyr::if_else(mean_pop >= 2, "ADP \u2265 2", "ADP < 2"),
       peak_class = dplyr::if_else(peak_pop >= 2, "Peak \u2265 2", "Peak < 2")
     ) |>
-    dplyr::left_join(vera_type_lookup,
+    dplyr::left_join(detloc_type_lookup,
                      by = c("detention_facility_code" = "detloc")) |>
     dplyr::mutate(type_grouped = dplyr::if_else(is.na(type_grouped),
                                                  "Unclassified", type_grouped))
@@ -652,7 +655,7 @@ export_ddp_comparison_data <- function(ddp_raw, facilities_keyed,
   biden_unmatched <- ddp_facility_summary(ddp_raw,
                                            from = biden_from, to = biden_to,
                                            codes = unmatched_codes) |>
-    dplyr::left_join(vera_type_lookup |> dplyr::select(detloc, type_grouped),
+    dplyr::left_join(detloc_type_lookup |> dplyr::select(detloc, type_grouped),
                      by = c("detention_facility_code" = "detloc")) |>
     dplyr::mutate(
       type_grouped = dplyr::if_else(is.na(type_grouped), "Unclassified",
@@ -665,7 +668,7 @@ export_ddp_comparison_data <- function(ddp_raw, facilities_keyed,
   trump_unmatched <- ddp_facility_summary(ddp_raw,
                                            from = trump_from, to = trump_to,
                                            codes = unmatched_codes) |>
-    dplyr::left_join(vera_type_lookup |> dplyr::select(detloc, type_grouped),
+    dplyr::left_join(detloc_type_lookup |> dplyr::select(detloc, type_grouped),
                      by = c("detention_facility_code" = "detloc")) |>
     dplyr::mutate(
       type_grouped = dplyr::if_else(is.na(type_grouped), "Unclassified",
@@ -689,7 +692,7 @@ export_ddp_comparison_data <- function(ddp_raw, facilities_keyed,
       (date >= biden_from & date <= biden_to) |
         (date >= trump_from & date <= trump_to)
     ) |>
-    dplyr::left_join(vera_type_lookup |> dplyr::select(detloc, type_grouped),
+    dplyr::left_join(detloc_type_lookup |> dplyr::select(detloc, type_grouped),
                      by = c("detention_facility_code" = "detloc")) |>
     dplyr::mutate(
       type_grouped = dplyr::if_else(is.na(type_grouped), "Unclassified",

@@ -63,8 +63,7 @@ canonical_id,address_string,google_lat,google_lon
 76,"3700 S. Kings Hwy, Cushing, OK, 74023, USA",35.94228590000001,-96.7847659
 77,"501 East Court Ave., Jeffersonville, IN, 47130, USA",38.277738,-85.73775429999999
 79,"611 East Jackson Street, Brazil, IN, 47834, USA",39.5237009,-87.1190405
-80,"419 Shoemaker Road, Lock Haven, PA, 17745, USA",41.1547743,-77.3377862
-81,"58 Pine Mountain Rd., McElhattan, PA, 17748, USA",41.1508791,-77.3499399
+80,"58 Pine Mountain Rd., McElhattan, PA, 17748, USA",41.1508791,-77.3499399
 82,"301 E Walnut Street, Frankfort, IN, 46041, USA",40.2792086,-86.50877799999999
 83,"25 Mccarthy Drive, Plattsburgh, NY, 12901, USA",44.72054319999999,-73.4670063
 84,"4909 Fm 2826, Robstown, TX, 78380, USA",27.7903032,-97.6688843
@@ -238,7 +237,6 @@ canonical_id,address_string,google_lat,google_lon
 272,"103 Jefferson Street, Oregon, IL, 61061, USA",42.0130434,-89.3297367
 273,"314 W. 7th Street, Okmulgee, OK, 74447, USA",35.6221933,-95.9745498
 274,"3405 W Hwy 146, La Grange, KY, 40031, USA",38.38929359999999,-85.4237673
-275,"100 W Main Street, La Grange, KY, 40031, USA",38.4080063,-85.37977599999999
 278,"3855 South John Young Parkway, Orlando, FL, 32839, USA",28.5038535,-81.4163786
 279,"110 Wells Farm Road, Goshen, NY, 10924, USA",41.4047777,-74.3601231
 281,"7488 Calzada De La Fuente, San Diego, CA, 92154, USA",32.5750242,-116.9147637
@@ -527,7 +525,6 @@ canonical_id,address_string,google_lat,google_lon
 1179,"9998 South Highway 83, Laredo, TX, 78046, USA",27.3698802,-99.4902562
 1180,"800 10th St Unit 4, Floresville, TX, 78114, USA",29.1481388,-98.1576773
 1181,"200 E Uvalde Street #5, Crystal City, TX, 78839, USA",28.6794662,-99.8269368
-1182,"3415 South 900 West, Salt Lake City, UT, 84119, USA",40.6970507,-111.9157703
 1183,"6300 North Silver Creek Drive, Park City, UT, 84098, USA",40.7225688,-111.4815177
 1184,"510 Ninth Street, Lynchburg, VA, 24504, USA",37.4127044,-79.14515209999999
 1185,"1060 River Rd, Hopewell, VA, 23860, USA",37.2982604,-77.33969909999999

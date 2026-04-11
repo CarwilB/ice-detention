@@ -20,7 +20,7 @@ library(stringr)
 #' @return The local file path (invisibly).
 download_marshall_locations <- function(
     dest_path = here::here("data", "themarshallproject_locations.csv")) {
-  if (!file.exists(dest_path)) {
+   if (!file.exists(dest_path)) {
     url <- paste0(
       "https://raw.githubusercontent.com/themarshallproject/",
       "dhs_immigration_detention/master/locations.csv"
