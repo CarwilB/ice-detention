@@ -34,7 +34,9 @@ dmcp_manual_matches <- function() {
     "PINEPLA", 292L, "address identical — Pine Prairie Correctional Center → Pine Prairie ICE Processing Center",
     "TRICOIL", 304L, "address identical — Tri-County Detention Center → Pulaski County Jail",
     "STCDFTX", 343L, "address identical — South Texas Detention Complex → South Texas ICE Processing Center",
-    "CCADCAZ",  61L, "same complex — CCA Central Arizona Detention Center → Central Arizona Florence Correctional Complex"
+    # "CCADCAZ" removed: CCA Central Arizona (1155 N Pinal Pkwy) and Central Arizona
+    # Florence Correctional Complex (1100 Bowling Rd) are distinct facilities at
+    # different addresses. CCADCAZ will be assigned a new canonical ID from 1001+.
   )
 }
 

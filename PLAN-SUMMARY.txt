@@ -1,0 +1,105 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║   DDP Parquet Integration & Extended Comparison Analysis — Updated Plan   ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+DELIVERABLES (Revised Order & Scope)
+──────────────────────────────────────
+
+1. ddp-parquet-summary.qmd
+   ✓ Overview, date range, facility coverage
+   ✓ Integration summary from ddp-integration-summary.md
+   ✓ Population statistics by FY (with first/last nonzero dates)
+   ✓ Facility type classification & color scheme
+   ✓ Address/location data integration notes
+
+2. ddp-comparison-fy26.qmd [PHASE 3 — Do First]
+   □ Oct 1, 2025 – Mar 10, 2026 (partial year)
+   □ Aggregate comparison (ICE FY26 stats vs. DDP daily avg)
+   □ Facility-level matching via canonical IDs
+   □ DDP-only (unreported) facilities analysis
+   □ Address, city, state in all tables
+   □ facility_type_wiki classification with color palette
+   □ Sparkline charts for daily population trends in popups
+   □ Single administration (no presidential splits)
+
+3. ddp-comparison-fy24.qmd [PHASE 4 — Do Second]
+   □ Oct 1, 2023 – Sep 30, 2024 (full year)
+   □ Same structure as FY2026 comparison
+   □ Address, city, state in all tables
+   □ facility_type_wiki + color scheme
+   □ Sparkline visualizations in facility popups
+   □ Single administration (simplified, no splits)
+
+TECHNICAL FEATURES (Both Comparison Reports)
+──────────────────────────────────────────────
+
+Color Palette (from posts/ice-detention-map):
+  • Jail / Jail-Prison                        #377eb8 (Steel Blue)
+  • Private Migrant Detention Center          #e41a1c (Red)
+  • Dedicated Migrant Detention Center        #4daf4a (Green)
+  • ICE Migrant Detention Center              #984ea3 (Purple)
+  • ICE Short-Term Migrant Detention Center   #ff7f00 (Orange)
+  • Family Detention Center                   #a65628 (Brown)
+  • Juvenile Detention Center                 #543005 (Dark Brown)
+  • Federal Prison                            #f781bf (Pink)
+  • State Migrant Detention Center            #e6ab02 (Gold)
+  • Military Detention Center                 #66c2a5 (Teal)
+  • Other                                     #1b9e77 (Green-Teal)
+
+Facility Data:
+  • Address, city, state in all facility tables
+  • facility_type_wiki classification
+  • facility_geocoded_all for coordinates
+  • facility_roster for canonical ID links
+
+Sparkline Visualizations:
+  • SVG-based tiny line charts (250–300 px wide)
+  • Daily population trend for fiscal year (or Oct 2025 – Mar 2026)
+  • Embedded in facility popup HTML via htmltools::HTML()
+  • Pre-computed and cached in RDS files
+
+WORKFLOW CHANGES
+─────────────────
+
+Phase order reversed:
+  ✓ Phase 1: Data Preparation (unchanged)
+  ✓ Phase 2: Summarize Parquet (done: ddp-parquet-summary.qmd)
+  → Phase 3: FY2026 Comparison (NEW ORDER — do before FY2024)
+  → Phase 4: FY2024 Comparison (NEW ORDER)
+  ✓ Phase 5: Archive & Deploy (optional)
+
+FY2026 FIRST because:
+  • Newer data, more relevant for current detention policy
+  • Testing ground for sparkline implementation
+  • Partial-year complexity (Oct 2025 – Mar 2026)
+  • Then apply lessons to full-year FY2024
+
+NOTABLE CHANGES
+────────────────
+
+✗ Removed: Presidential quarter comparison (both FY26 and FY24 had single admin)
+✓ Added: First/last nonzero dates in population summary table
+✓ Added: facility_type_wiki classification system
+✓ Added: Unified color palette from ice-detention-map
+✓ Added: Address/city/state in all facility tables
+✓ Added: Sparkline charts in facility popups
+✓ Enhanced: Popup HTML structure with SVG visualizations
+
+DATASETS NEEDED
+─────────────────
+
+From ice-detention pipeline:
+  • facilities_panel — FY10–FY26 panel data with ADP
+  • facility_roster — ~962 canonical facilities with addresses
+  • facilities_geocoded_all — geocoded coordinates
+  • detloc_lookup_full — DETLOC to canonical_id mapping
+  • canonical facilities with facility_type_wiki
+
+From ddp parquet:
+  • Daily population Oct 2022 – Mar 2026
+  • 707 facility codes with population counts
+
+Pre-computed for deployment:
+  • RDS files: ice_fy26, ddp_fy26_keyed, unmatched, daily_totals, etc.
+  • RDS files: ice_fy24, ddp_fy24_keyed, unmatched, daily_totals, etc.
+

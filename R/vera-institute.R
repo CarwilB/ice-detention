@@ -313,6 +313,10 @@ vera_detloc_matches <- function() {
     89L,  "COWJVWA", "zip_city",
     111L, "DORCHMD", "zip_city",
     308L, "RENSSNY", "zip_city",
-    396L, "YANCOSD", "zip_city"
+    396L, "YANCOSD", "zip_city",
+    # DDP-only matches (no DMCP entry; confirmed from DDP detention_facility_code)
+    146L, "FULCJIN", "ddp_name",
+    229L, "NEMCCOI", "ddp_name",
+    401L, "DILLSAF", "ddp_name"
   )
 }

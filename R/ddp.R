@@ -48,48 +48,84 @@ build_ddp_codes <- function(dp_data) {
 
 # ── Manual strong DDP matches ────────────────────────────────────────────────
 # Verified by visual inspection of facility names, codes, and locations.
-# ddp_role: "sole" = 1:1; "primary"/"component" = one canonical facility
-# maps to multiple DDP DETLOCs (sum components for facility-level totals).
+# ── Component unit matches ───────────────────────────────────────────────────
+# DDP detlocs that represent sub-units of a canonical facility rather than
+# independent facilities (e.g. a gender-specific wing, an annex on the same
+# campus). Each component detloc is attributed to the parent canonical_id so
+# its population is counted alongside the main facility.
+# Add new entries here when a DDP code is clearly a sub-unit, not a new site.
+
+ddp_component_matches <- function() {
+  tibble::tribble(
+    ~canonical_id, ~detloc, ~ddp_name,
+    # Guantánamo Bay: East component stays under JTF Camp Six (176).
+    # Main A (GTMODCU) is now canonical 404 with its own sole entry.
+    176L, "GTMOBCU", "MIGRANT OPS CENTER EAST"
+  )
+}
+
+# ── Manual strong matches ────────────────────────────────────────────────────
+# Canonical facilities where the fuzzy OSA matcher fails or is unreliable
+# (score < 0.85, ambiguous, or excluded via ddp_exclude_fuzzy). Each entry is
+# a confirmed 1:1 "sole" match. Component units belong in ddp_component_matches().
 
 ddp_manual_strong_matches <- function() {
   tibble::tribble(
-    ~canonical_id, ~detloc, ~ddp_name, ~similarity, ~ddp_role,
-    233L, "BOPMIM",  "MIAMI FED.DET.CENTER",               0.97, "sole",
-    103L, "GUDOCHG", "GUADELOUPE DON'T CHANGE",             NA,   "sole",
-    77L,  "CLARKIN", "CLARK COUNTY JAIL",                    1.0,  "sole",
-    324L, "MPSIPAN", "SAIPAN DEPT CORRECTIONS",              NA,   "sole",
-    3L,   "ADAMSMS", "ADAMS COUNTY CORRECTIONAL CENTER",     0.95, "sole",
-    5L,   "ALAMCNC", "ALAMANCE CO. DET. FACILITY",           1.0,  "sole",
-    39L,  "BURLEND", "BURLEIGH CO. JAIL",                    NA,   "sole",
-    23L,  "BOPBER",  "FCI BERLIN",                           0.85, "sole",
-    68L,  "CHAVENM", "CHAVEZ DET CRT",                       1.0,  "sole",
-    88L,  "OHNORWE", "NORTHWEST REGIONAL CORRECTIONS",       NA,   "sole",
-    25L,  "BLBNATX", "BLUEBONNET DET FCLTY",                 1.0,  "sole",
-    44L,  "CACHEUT", "CACHE CO. JAIL",                       1.0,  "sole",
-    97L,  "DAVISUT", "DAVIS COUNTY JAIL",                    NA,   "sole",
-    318L, "RADDFGA", "ROBERT A DEYTON DETENTION FAC",        NA,   "sole",
-    48L,  "CACTYCA", "CAL CITY ICE PROCESSING CENTER",       0.62, "sole",
+    ~canonical_id, ~detloc, ~ddp_name, ~similarity,
+    233L, "BOPMIM",  "MIAMI FED.DET.CENTER",               0.97,
+    103L, "GUDOCHG", "GUADELOUPE DON'T CHANGE",             NA,
+    77L,  "CLARKIN", "CLARK COUNTY JAIL",                    1.0,
+    324L, "MPSIPAN", "SAIPAN DEPT CORRECTIONS",              NA,
+    3L,   "ADAMSMS", "ADAMS COUNTY CORRECTIONAL CENTER",     0.95,
+    5L,   "ALAMCNC", "ALAMANCE CO. DET. FACILITY",           1.0,
+    39L,  "BURLEND", "BURLEIGH CO. JAIL",                    NA,
+    23L,  "BOPBER",  "FCI BERLIN",                           0.85,
+    68L,  "CHAVENM", "CHAVEZ DET CRT",                       1.0,
+    88L,  "OHNORWE", "NORTHWEST REGIONAL CORRECTIONS",       NA,
+    25L,  "BLBNATX", "BLUEBONNET DET FCLTY",                 1.0,
+    44L,  "CACHEUT", "CACHE CO. JAIL",                       1.0,
+    97L,  "DAVISUT", "DAVIS COUNTY JAIL",                    NA,
+    318L, "RADDFGA", "ROBERT A DEYTON DETENTION FAC",        NA,
+    48L,  "CACTYCA", "CAL CITY ICE PROCESSING CENTER",       0.62,
     # 102 (Denver CDF II, 11901 E 30th Ave) closed after FY21; DENICDF now refers
     # solely to 101 (3130 Oakland St). 102 retains no DETLOC — it was a separate
     # building that shared the same ICE facility code while active.
-    129L, "BOPATL",  "ATLANTA U.S. PEN.",                    NA,   "sole",
-    326L, "SLSLCUT", "Salt Lake County Jail",                 NA,   "sole",
-    327L, "SNDHOLD", "SND DISTRICT STAGING",                 NA,   "sole",
-    136L, "FLDSSFS", "FLORIDA SOFT-SIDED FACILITY-SOUTH",    NA,   "sole",
-    221L, "LICEPLA", "LOUISIANA ICE PROCESSING CENTER",      NA,   "sole",
-    366L, "STFRCTX", "SOUTH TEXAS FAM RESIDENTIAL CENTER",   NA,   "sole",
-    71L,  "VTCHTDN", "CHITTENDEN REG. C.",                   0.92, "sole",
-    # Adelanto: main facility ADLNTCA is matched via DMCP; annex has a separate DDP code
-    105L, "CADESVI", "DESERT VIEW ANNEX",                     NA,   "component",
+    129L, "BOPATL",  "ATLANTA U.S. PEN.",                    NA,
+    326L, "SLSLCUT", "Salt Lake County Jail",                 NA,
+    327L, "SNDHOLD", "SND DISTRICT STAGING",                 NA,
+    136L, "FLDSSFS", "FLORIDA SOFT-SIDED FACILITY-SOUTH",    NA,
+    221L, "LICEPLA", "LOUISIANA ICE PROCESSING CENTER",      NA,
+    366L, "STFRCTX", "SOUTH TEXAS FAM RESIDENTIAL CENTER",   NA,
+    71L,  "VTCHTDN", "CHITTENDEN REG. C.",                   0.92,
+    # Adelanto: main facility ADLNTCA is matched via DMCP; annex has its own canonical
+    400L, "CADESVI", "DESERT VIEW ANNEX",                    NA,
     # Karnes County family facility at FM 1144: KCCDCTX is the older "Civil Detention"
     # code for canonical 190 (Residential Center). The active code is KRNRCTX → 191.
-    190L, "KCCDCTX", "KARNES COUNTY CIVIL DET. FACILITY",     NA,   "sole",
-    # Guantánamo Bay: one canonical facility (JTF Camp Six) → three DETLOCs
-    176L, "GTMOACU", "WINDWARD HOLDING FACILITY",            NA,   "primary",
-    176L, "GTMOBCU", "MIGRANT OPS CENTER EAST",              NA,   "component",
-    176L, "GTMODCU", "MIGRANT OPS CENTER MAIN AV622",        NA,   "component",
+    190L, "KCCDCTX", "KARNES COUNTY CIVIL DET. FACILITY",    NA,
+    # Guantánamo Bay: primary DDP code; component codes are in ddp_component_matches()
+    176L, "GTMOACU", "WINDWARD HOLDING FACILITY",            NA,
     # Joe Corley: DMCP uses MONTGTX (Montgomery County, TX); DDP uses JCRLYTX
-    182L, "JCRLYTX", "JOE CORLEY PROCESSING CTR",            NA,   "sole"
+    182L, "JCRLYTX", "JOE CORLEY PROCESSING CTR",            NA,
+    # Vera name "Baker C. I." doesn't fuzzy-match "Baker Correctional Institution"
+     14L, "FLBAKCI", "BAKER C. I.",                          NA,
+    # WV regional jails: DDP codes discovered Oct 2025–Feb 2026; fuzzy matching
+    # fails due to partial name overlap across multiple WV jail names
+    258L, "WVNCENT", "NORTH CENTRAL REGIONAL JAIL",          NA,
+    344L, "WVSOUTH", "SOUTHERN REGIONAL JAIL",               NA,
+    345L, "WVSWEST", "SOUTHWESTERN REGIONAL JAIL",           NA,
+    386L, "WVWESTR", "WESTERN REGIONAL JAIL",                NA,
+    # Daviess County Detention Center (KY)
+    231L, "DVCSDKY", "DAVIESS COUNTY DETENTION CENTER",      NA,
+    # Diamondback Correctional Facility (OK): fuzzy match fails (score < 0.85)
+    106L, "OKDBACK", "DIAMONDBACK CORR FACILITY",             NA,
+    # Lewisburg US Penitentiary (PA): new in Feb 12 FY26 ICE spreadsheet
+    403L, "BOPLEW",  "LEWISBURG U.S. PEN.",                  NA,
+    # Dilley Processing Single Adult Female (TX): reported separately in Feb 12
+    # ICE spreadsheet; was previously treated as a component of 366.
+    401L, "DILLSAF", "DILLEY PROCESSING SINGLE FEMALE",      NA,
+    # Migrant Ops Center Main A (FPO FL): new Guantánamo facility in Feb 12;
+    # GTMODCU is its primary DDP code; GTMOBCU (East) stays as component of 176.
+    404L, "GTMODCU", "MIGRANT OPS CENTER MAIN AV622",        NA
     # NOTE: EPSSFTX ("El Paso Soft Sided Facility") was previously mapped here
     # to canonical 108 (Camp East Montana). Removed: these are distinct facilities.
     # EPSSFTX is a tent camp at 12501 Gateway Blvd S; canonical 108 is the
@@ -180,9 +216,14 @@ build_ddp_canonical_map <- function(id_registry, dmcp_canonical_map,
     }
   }
 
+  components <- ddp_component_matches() |>
+    dplyr::mutate(similarity = NA_real_, ddp_role = "component", match_type = "exact")
+
   exact_all <- dplyr::bind_rows(
     dplyr::bind_rows(fuzzy_matches),
-    manual |> dplyr::select(canonical_id, detloc, ddp_name, similarity, ddp_role)
+    manual |> dplyr::mutate(ddp_role = "sole") |>
+      dplyr::select(canonical_id, detloc, ddp_name, similarity, ddp_role),
+    components |> dplyr::select(canonical_id, detloc, ddp_name, similarity, ddp_role)
   ) |>
     dplyr::mutate(match_type = "exact")
 
@@ -272,7 +313,8 @@ build_ddp_canonical_map <- function(id_registry, dmcp_canonical_map,
     dplyr::mutate(match_type = "partial_keyword")
 
   # ── Combine ──────────────────────────────────────────────────────────────
-    ddp_map <- dplyr::bind_rows(exact_all, county_all, keyword_all) |>
+  ddp_map <- dplyr::bind_rows(exact_all, county_all, keyword_all) |>
+    dplyr::mutate(ddp_role = dplyr::coalesce(ddp_role, "sole")) |>
     dplyr::select(canonical_id, detloc, ddp_name, match_type, ddp_role)
 
   n_fac <- dplyr::n_distinct(ddp_map$canonical_id)
@@ -295,14 +337,14 @@ ddp_facility_summary <- function(ddp_raw,
                                  population_col = "n_detained") {
   # Summarise DDP daily population data to one row per facility.
   # Args:
-  #   ddp_raw: full DDP daily population tibble
+  #   ddp_raw: full DDP daily population tibble (feather or parquet; state
+  #            column is optional — present in the feather, absent in parquet)
   #   from, to: optional date bounds (Date or coercible string)
   #   codes: optional character vector of detention_facility_code values to include
   #   population_col: column to summarise (default "n_detained")
   # Returns:
-  #   tibble with one row per facility: code, name, state, date range,
-
-  #   n_days, mean_pop, peak_pop, peak_date
+  #   tibble with one row per facility: code, name, (state if present),
+  #   date range, n_days, mean_pop, peak_pop, peak_date
 
   df <- ddp_raw
 
@@ -314,23 +356,29 @@ ddp_facility_summary <- function(ddp_raw,
 
   if (nrow(df) == 0) {
     cli::cli_warn("No rows remain after filtering.")
-    return(tibble::tibble(
+    empty <- tibble::tibble(
       detention_facility_code = character(),
-      detention_facility = character(),
-      state = character(),
-      n_days = integer(),
-      mean_pop = double(),
-      peak_pop = double(),
+      detention_facility      = character(),
+      n_days    = integer(),
+      mean_pop  = double(),
+      peak_pop  = double(),
       peak_date = as.Date(character()),
       date_from = as.Date(character()),
-      date_to = as.Date(character())
-    ))
+      date_to   = as.Date(character())
+    )
+    if ("state" %in% names(ddp_raw)) {
+      empty <- tibble::add_column(empty, state = character(), .after = "detention_facility")
+    }
+    return(empty)
   }
 
-  pop_sym <- rlang::sym(population_col)
+  pop_sym    <- rlang::sym(population_col)
+  has_state  <- "state" %in% names(df)
+  group_vars <- c("detention_facility_code", "detention_facility")
+  if (has_state) group_vars <- c(group_vars, "state")
 
   df |>
-    dplyr::group_by(detention_facility_code, detention_facility, state) |>
+    dplyr::group_by(dplyr::across(dplyr::all_of(group_vars))) |>
     dplyr::summarise(
       n_days    = dplyr::n(),
       mean_pop  = mean(!!pop_sym, na.rm = TRUE),
@@ -469,7 +517,8 @@ build_ddp_facility_canonical <- function(ddp_codes, detloc_lookup_full,
 
   # Assign IDs
   if (nrow(remaining) > 0) {
-    ids <- setdiff(seq(1054L, 1054L + nrow(remaining)), 1182L)
+    ids <- setdiff(seq(1054L, 1054L + nrow(remaining)), c(1182L))
+                                               # preserve previously assigned IDs
     remaining$canonical_id <- ids[seq_len(nrow(remaining))]
   }
   if (nrow(medical) > 0) {
@@ -736,6 +785,342 @@ export_ddp_comparison_data <- function(ddp_raw, facilities_keyed,
     "v" = "Exported {length(paths)} RDS files to {export_dir}",
     "i" = "Run copy-data.sh in the quarto website post directory to deploy."
   ))
+
+  paths
+}
+
+# ── SVG sparkline for daily detention population ─────────────────────────────
+# Generates a tiny SVG line chart showing daily population for one facility
+# over a contiguous date window. Designed for embedding in Leaflet popups.
+#
+# Returns an empty string for facilities with all-zero population.
+
+make_daily_sparkline <- function(dates, values,
+                                 width = 300, height = 75,
+                                 pad_l = 4, pad_r = 6, pad_t = 6, pad_b = 16) {
+  values[is.na(values)] <- 0L
+  if (max(values) == 0L) return("")
+
+  n       <- length(dates)
+  max_val <- max(values)
+
+  plot_w <- width  - pad_l - pad_r
+  plot_h <- height - pad_t - pad_b
+
+  # x positions spread evenly across plot width
+  xs <- pad_l + (seq_len(n) - 1) / (n - 1) * plot_w
+  # y positions: 0 at bottom, max at top
+  ys <- pad_t + (1 - values / max_val) * plot_h
+
+  points_str <- paste(sprintf("%.1f,%.1f", xs, ys), collapse = " ")
+
+  # Month-boundary tick marks and labels
+  months       <- format(dates, "%Y-%m")
+  month_change <- which(!duplicated(months))
+  tick_marks   <- vapply(month_change, function(i) {
+    x <- xs[i]
+    sprintf('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="#bbb" stroke-width="1"/>',
+            x, height - pad_b, x, height - pad_b + 3)
+  }, character(1))
+  month_labels <- vapply(month_change, function(i) {
+    x <- xs[i]
+    lbl <- format(dates[i], "%b")
+    sprintf('<text x="%.1f" y="%d" font-size="8" font-family="sans-serif" fill="#666" text-anchor="middle">%s</text>',
+            x, height - 2, lbl)
+  }, character(1))
+
+  # Peak annotation (value at top-right of chart)
+  peak_label <- sprintf(
+    '<text x="%d" y="%d" font-size="8" font-family="sans-serif" fill="#555" text-anchor="end">peak %s</text>',
+    width - 1, pad_t - 1, format(max_val, big.mark = ",")
+  )
+
+  sprintf(
+    '<svg width="%d" height="%d" xmlns="http://www.w3.org/2000/svg">%s%s%s<polyline points="%s" fill="none" stroke="#4682B4" stroke-width="1.2"/></svg>',
+    width, height,
+    peak_label,
+    paste(tick_marks, collapse = ""),
+    paste(month_labels, collapse = ""),
+    points_str
+  )
+}
+
+# ── Import, clean, and key the Feb 12 2026 ICE spreadsheet ──────────────────
+# Uses the same import/clean/aggregate/attach pipeline as the main FY19–FY26
+# targets, but kept separate so it doesn't disturb the frozen FY26 panel entry.
+# Three facilities whose canonical IDs are known but not in the crosswalk are
+# patched in by name after the join.
+
+build_fy26b <- function(data_file_info, clean_names_list,
+                        facility_crosswalk, detloc_lookup) {
+  LETTERS_PLUS <- c(LETTERS, paste0("A", LETTERS), paste0("B", LETTERS))
+
+  fy26b_info <- tibble::tibble(
+    year_name         = "FY26b",
+    year              = 2026L,
+    url               = NA_character_,
+    local_file        = here::here("data/ice/FY26_detentionStats_02122026.xlsx"),
+    sheet_name        = "Facilities FY26",
+    first_header_row  = 9L,
+    second_header_row = 10L,
+    first_data_row    = 11L,
+    right_column      = "AA",
+    right_column_num  = which(LETTERS_PLUS == "AA")
+  )
+
+  # Structure is identical to the existing FY26 file — reuse its column names.
+  col_names <- list(FY26b = clean_names_list[["FY26"]])
+
+  raw    <- read_facilities_data(fy26b_info, col_names)
+  clean  <- clean_all_years(list(FY26b = raw))
+  agg    <- aggregate_all_years(clean)
+  keyed  <- attach_canonical_ids(agg, facility_crosswalk, detloc_lookup)
+  result <- keyed[["FY26b"]]
+
+  # Patches for facilities whose canonical IDs are known but whose names differ
+  # slightly from the FY19–FY26 crosswalk variants (new entries in this release).
+  # fill_only: only applied when canonical_id is NA (crosswalk missed them).
+  fill_only_patches <- tibble::tribble(
+    ~facility_name,                      ~patch_id,
+    "Sarasota County Jail",              1107L,
+    "Scott County Detention. Facility",  1118L,
+    "Tom Green County Jail",             1022L,
+    "Mccook Detention Center",           229L,
+    "Fulton County Jail Indiana",        146L
+  )
+  for (i in seq_len(nrow(fill_only_patches))) {
+    idx <- which(tolower(result$facility_name) == tolower(fill_only_patches$facility_name[i]))
+    if (length(idx) == 1L && is.na(result$canonical_id[idx])) {
+      result$canonical_id[idx] <- fill_only_patches$patch_id[i]
+    }
+  }
+
+  # force_patches: override even when the crosswalk assigned a wrong ID
+  # (e.g. a new facility fuzzy-matched to an existing one with a similar name).
+  force_patches <- tibble::tribble(
+    ~facility_name,                          ~patch_id,
+    "Dilley Processing Single Adult Female", 401L
+  )
+  for (i in seq_len(nrow(force_patches))) {
+    idx <- which(tolower(result$facility_name) == tolower(force_patches$facility_name[i]))
+    if (length(idx) == 1L) {
+      result$canonical_id[idx] <- force_patches$patch_id[i]
+    }
+  }
+
+  n_unmatched <- sum(is.na(result$canonical_id))
+  cli::cli_inform("FY26b: {nrow(result)} facilities, {n_unmatched} unmatched after patches.")
+
+  result
+}
+
+# ── FY26 DDP comparison: component pipeline functions ────────────────────────
+# These produce the main targets for the FY26 DDP vs. ICE comparison.
+# All use facility_roster as the canonical detloc → canonical_id lookup,
+# which is more complete than detloc_lookup_full alone.
+# Comparison period: Oct 1 2025 – Feb 5 2026 (ICE data-source cutoff).
+
+build_ddp_fy26_keyed <- function(ddp_new, fy26b, detloc_lookup, detloc_lookup_full) {
+  fy_start     <- "2025-10-01"
+  fy_end       <- "2026-02-05"
+  ice_fy26_ids <- unique(stats::na.omit(fy26b$canonical_id))
+
+  # Use detloc_lookup_full so component codes (e.g. GTMOBCU) also resolve to a
+  # canonical_id; sole/primary entries still take precedence after distinct().
+  detloc_to_canonical <- detloc_lookup_full |>
+    dplyr::distinct(detloc, canonical_id)
+
+  ddp_facility_summary(ddp_new, from = fy_start, to = fy_end) |>
+    dplyr::filter(peak_pop > 0) |>
+    dplyr::rename(ddp_adp = mean_pop) |>
+    dplyr::left_join(
+      detloc_to_canonical,
+      by = c("detention_facility_code" = "detloc")
+    ) |>
+    dplyr::mutate(in_ice_fy26 = !is.na(canonical_id) &
+                    canonical_id %in% ice_fy26_ids)
+}
+
+build_daily_totals_fy26 <- function(ddp_new) {
+  ddp_new |>
+    dplyr::filter(date >= as.Date("2025-01-01"), # back to January 2025 for context
+                  date <= as.Date( "2026-03-10")) |>  # Just for the graph,
+                                # go all the way to the end of the dataset
+                                # comparative analysis only goes to
+                                # "2026-02-05"
+    dplyr::group_by(date) |>
+    dplyr::summarise(total_pop = sum(n_detained, na.rm = TRUE), .groups = "drop")
+}
+
+build_unmatched_fy26 <- function(ddp_fy26_keyed, facility_roster) {
+  roster_by_detloc <- facility_roster |>
+    dplyr::filter(!is.na(detloc)) |>
+    dplyr::select(detloc, facility_type_wiki,
+                  type_grouped  = type_grouped_corrected,
+                  type_detailed = type_detailed_corrected,
+                  facility_address, facility_city, facility_state)
+
+  ddp_fy26_keyed |>
+    dplyr::filter(!in_ice_fy26) |>
+    dplyr::left_join(roster_by_detloc,
+                     by = c("detention_facility_code" = "detloc")) |>
+    dplyr::mutate(
+      type_grouped = dplyr::if_else(is.na(type_grouped), "Unclassified", type_grouped),
+      adp_class    = dplyr::if_else(ddp_adp >= 2, "ADP \u2265 2", "ADP < 2"),
+      peak_class   = dplyr::if_else(peak_pop >= 2, "Peak \u2265 2", "Peak < 2")
+    )
+}
+
+build_peak_fy26 <- function(ddp_new, unmatched_fy26, facility_roster,
+                            facilities_geocoding_lookup) {
+  fy_start        <- "2025-10-01"
+  fy_end          <- "2026-02-05"
+  unmatched_codes <- unmatched_fy26$detention_facility_code
+
+  roster_by_detloc <- facility_roster |>
+    dplyr::filter(!is.na(detloc)) |>
+    dplyr::select(detloc, canonical_id, facility_type_wiki,
+                  type_grouped  = type_grouped_corrected,
+                  type_detailed = type_detailed_corrected,
+                  facility_address, facility_city, facility_state)
+
+  # Geocoding lookup: select only geocoding columns + zip (not address/city/state)
+  geo_cols <- facilities_geocoding_lookup |>
+    dplyr::select(canonical_id, facility_zip, latitude, longitude,
+                  geo_city = facility_city, geo_state = facility_state)
+
+  # Check for city/state divergence between roster and geocoding sources
+  geo_addr_check <- facilities_geocoding_lookup |>
+    dplyr::select(canonical_id, geo_city = facility_city, geo_state = facility_state)
+
+  roster_addr_check <- roster_by_detloc |>
+    dplyr::select(canonical_id, roster_city = facility_city, roster_state = facility_state) |>
+    dplyr::distinct()
+
+  divergence <- roster_addr_check |>
+    dplyr::inner_join(geo_addr_check, by = "canonical_id") |>
+    dplyr::filter(roster_city != geo_city | roster_state != geo_state)
+
+  if (nrow(divergence) > 0) {
+    cli::cli_warn(c(
+      "!" = "{nrow(divergence)} canonical_id(s) have city/state divergence between facility_roster and facilities_geocoding_lookup:",
+      paste0("  ", paste0(divergence$canonical_id, collapse = ", "))
+    ))
+  }
+
+  ddp_facility_summary(ddp_new, from = fy_start, to = fy_end,
+                       codes = unmatched_codes) |>
+    dplyr::mutate(
+      mean_pop   = round(mean_pop, 1),
+      adp_class  = dplyr::if_else(mean_pop >= 2, "ADP \u2265 2", "ADP < 2"),
+      peak_class = dplyr::if_else(peak_pop >= 2, "Peak \u2265 2", "Peak < 2")
+    ) |>
+    dplyr::left_join(roster_by_detloc,
+                     by = c("detention_facility_code" = "detloc")) |>
+    dplyr::left_join(
+      geo_cols |> dplyr::select(canonical_id, facility_zip, latitude, longitude),
+      by = "canonical_id"
+    ) |>
+    dplyr::mutate(type_grouped = dplyr::if_else(is.na(type_grouped),
+                                                 "Unclassified", type_grouped))
+}
+
+# Adds pre-computed SVG sparklines (daily population time series) to peak_fy26
+# for use in Leaflet map popups. Kept separate from build_peak_fy26() so the
+# sparkline computation only runs at export time, not on every pipeline rebuild.
+build_peak_fy26_w_sparklines <- function(ddp_new, peak_fy26) {
+  fy_start        <- "2025-06-01" # Experiment: Just for the sparkline,
+                                  # start with the uptick
+  fy_end          <- "2026-03-10" # Just for the sparklines, go all the way to
+                                  # the end of the dataset
+  unmatched_codes <- peak_fy26$detention_facility_code
+
+  sparklines <- ddp_new |>
+    dplyr::filter(detention_facility_code %in% unmatched_codes,
+                  date >= as.Date(fy_start),
+                  date <= as.Date(fy_end)) |>
+    dplyr::arrange(detention_facility_code, date) |>
+    dplyr::group_by(detention_facility_code) |>
+    dplyr::summarise(
+      sparkline_svg = make_daily_sparkline(date, n_detained),
+      .groups = "drop"
+    )
+
+  peak_fy26 |>
+    dplyr::left_join(sparklines, by = "detention_facility_code")
+}
+
+# ── Export pre-computed data for DDP vs ICE FY26 comparison report ───────────
+# Receives the four main pipeline targets (ddp_fy26_keyed, daily_totals_fy26,
+# unmatched_fy26, peak_fy26) as arguments; adds sparklines, computes
+# daily/monthly unmatched series, and writes 8 RDS files for deployment.
+
+export_ddp_fy26_comparison_data <- function(ddp_new, fy26b,
+                                            ddp_fy26_keyed, daily_totals_fy26,
+                                            unmatched_fy26, peak_fy26) {
+  fy_start <- "2025-10-01"
+  fy_end   <- "2026-02-05"
+
+  # ── ICE FY26 ───────────────────────────────────────────────────────────────
+  ice_fy26 <- fy26b |>
+    dplyr::select(canonical_id, canonical_name, detloc, facility_name,
+                  facility_city, facility_state, sum_classification_levels) |>
+    dplyr::rename(ice_adp = sum_classification_levels)
+
+  # ── DDP FY26 summary (all facilities) ─────────────────────────────────────
+  ddp_fy26 <- ddp_fy26_keyed |>
+    dplyr::select(-canonical_id, -in_ice_fy26)
+
+  # ── Unmatched facility codes ───────────────────────────────────────────────
+  unmatched_codes <- unmatched_fy26$detention_facility_code
+
+  # ── Daily unmatched ────────────────────────────────────────────────────────
+  daily_unmatched_fy26 <- ddp_new |>
+    dplyr::filter(detention_facility_code %in% unmatched_codes,
+                  date >= as.Date(fy_start),
+                  date <= as.Date(fy_end)) |>
+    dplyr::group_by(date) |>
+    dplyr::summarise(total_pop = sum(n_detained, na.rm = TRUE), .groups = "drop")
+
+  # ── Monthly unmatched ─────────────────────────────────────────────────────
+  monthly_unmatched_fy26 <- ddp_new |>
+    dplyr::filter(detention_facility_code %in% unmatched_codes,
+                  date >= as.Date(fy_start),
+                  date <= as.Date(fy_end)) |>
+    dplyr::left_join(
+      unmatched_fy26 |> dplyr::select(detention_facility_code, type_grouped),
+      by = "detention_facility_code"
+    ) |>
+    dplyr::mutate(
+      type_grouped = dplyr::if_else(is.na(type_grouped), "Unclassified", type_grouped),
+      month        = as.Date(format(date, "%Y-%m-01"))
+    )
+
+  # ── Peak summary with sparklines ───────────────────────────────────────────
+  peak_fy26_w_sparklines <- build_peak_fy26_w_sparklines(ddp_new, peak_fy26)
+
+  # ── Export ────────────────────────────────────────────────────────────────
+  export_dir <- here::here("data", "ddp-comparison-export-fy26")
+  dir.create(export_dir, showWarnings = FALSE)
+
+  files <- list(
+    ice_fy26               = ice_fy26,
+    ddp_fy26               = ddp_fy26,
+    ddp_fy26_keyed         = ddp_fy26_keyed,
+    daily_totals_fy26      = daily_totals_fy26,
+    unmatched_fy26         = unmatched_fy26,
+    daily_unmatched_fy26   = daily_unmatched_fy26,
+    monthly_unmatched_fy26 = monthly_unmatched_fy26,
+    peak_fy26_w_sparklines = peak_fy26_w_sparklines
+  )
+
+  paths <- vapply(names(files), function(nm) {
+    path <- file.path(export_dir, paste0(nm, ".rds"))
+    saveRDS(files[[nm]], path)
+    path
+  }, character(1), USE.NAMES = FALSE)
+
+  cli::cli_inform(c("v" = "Exported {length(paths)} RDS files to {export_dir}"))
 
   paths
 }

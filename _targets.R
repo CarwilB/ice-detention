@@ -552,8 +552,63 @@ list(
                                facility_roster,
                                facilities_geocoding_lookup),
     description = "Exports 11 RDS files to data/ddp-comparison-export/ for deploying the DDP comparison blog post",
-    format = "file",
-    cue = tar_cue("never")
+    format = "file"
+  ),
+
+  # ── FY26 comparison data (parquet DDP vs Feb 2026 ICE release) ────────────
+  # Uses the Feb 12 2026 ICE spreadsheet (data through 2026-02-05) and the
+  # new parquet-format DDP file. Kept entirely separate from the main FY19–FY26
+  # panel pipeline. Export target is cue = "never"; run explicitly when ready.
+
+  tar_target(
+    ddp_parquet_file,
+    here::here("data/ddp/facilities-daily-population-latest.parquet"),
+    description = "Tracks the DDP parquet file (Oct 2022 – Mar 2026) for changes",
+    format = "file"
+  ),
+  tar_target(
+    ddp_new,
+    arrow::read_parquet(ddp_parquet_file),
+    description = "Raw DDP daily population data from parquet (Oct 2022 – Mar 2026, 707 facilities)"
+  ),
+
+  tar_target(
+    fy26b,
+    build_fy26b(data_file_info, clean_names_list, facility_crosswalk, detloc_lookup),
+    description = "Feb 12 2026 ICE spreadsheet: 220 facilities cleaned, aggregated, and keyed; 3 known IDs patched; 4 genuinely new"
+  ),
+
+  tar_target(
+    ddp_fy26_keyed,
+    build_ddp_fy26_keyed(ddp_new, fy26b, detloc_lookup, detloc_lookup_full),
+    description = "DDP FY26 facility summary (Oct 2025 – Feb 5 2026) keyed via detloc_lookup; in_ice_fy26 flag marks matches to ICE FY26 spreadsheet"
+  ),
+
+  tar_target(
+    daily_totals_fy26,
+    build_daily_totals_fy26(ddp_new),
+    description = "DDP total detained population per day for FY26 comparison period (Oct 2025 – Feb 5 2026)"
+  ),
+
+  tar_target(
+    unmatched_fy26,
+    build_unmatched_fy26(ddp_fy26_keyed, facility_roster),
+    description = "DDP FY26 facilities not in ICE FY26 annual statistics, with type and address from facility_roster"
+  ),
+
+  tar_target(
+    peak_fy26,
+    build_peak_fy26(ddp_new, unmatched_fy26, facility_roster, facilities_geocoding_lookup),
+    description = "Peak population summary for FY26 unmatched facilities with geocoding; sparklines added separately at export time"
+  ),
+
+  tar_target(
+    ddp_fy26_comparison_export,
+    export_ddp_fy26_comparison_data(
+      ddp_new, fy26b, ddp_fy26_keyed, daily_totals_fy26, unmatched_fy26, peak_fy26
+    ),
+    description = "Exports 8 RDS files to data/ddp-comparison-export-fy26/ for FY26 comparison report (Oct 2025 – Feb 5 2026)",
+    format = "file"
   ),
 
   # ── Facility summary report ────────────────────────────────────────────────

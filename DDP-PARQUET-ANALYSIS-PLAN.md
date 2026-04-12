@@ -9,10 +9,16 @@
 
 1. **Summarize the new parquet dataset** in a Quarto document that combines:
    - All information from `ddp-integration-summary.md`
-   - Population-level statistics (daily, monthly, fiscal year aggregations)
-   - Basic coverage metrics for FY2023–FY2026
+   - Population-level statistics with first/last nonzero dates
+   - Facility type classification and color scheme
+   - Address/location data integration notes
 
-2. **Create extended comparison reports** for FY2024 and FY2026 (parallel to existing FY2025 report)
+2. **Create extended comparison reports** for FY2026 (partial year) and FY2024 (full year):
+   - Both reports use simplified structure (no presidential quarter splits)
+   - Include address, city, state in all facility tables
+   - Assign `facility_type_wiki` with unified color palette
+   - Build sparkline visualizations for facility popups showing daily population trends
+   - Generate pre-computed RDS files for deployment
 
 ---
 
@@ -121,18 +127,85 @@ Each report will follow the same analytical structure:
 #### **Part C: DDP-Only (Unreported) Facilities**
 
 - Facilities appearing in DDP but not in ICE annual stats
-- Count by facility type (hold, medical, federal, jails, etc.)
-- Total unreported population
-- Geographic distribution
+- Count by facility type (hold, medical, federal, jails, etc.) with `facility_type_wiki` classification
+- Total unreported population by type
+- Geographic distribution (address, city, state included)
 - Monthly trend for unreported population
 - Table: top 20 unreported facilities by peak population
+- Facility type color scheme from `posts/ice-detention-map`:
+  - Jail / Jail-Prison: #377eb8 (blue)
+  - Private Migrant Detention Center: #e41a1c (red)
+  - Dedicated Migrant Detention Center: #4daf4a (green)
+  - ICE Migrant Detention Center: #984ea3 (purple)
+  - ICE Short-Term Migrant Detention Center: #ff7f00 (orange)
+  - Family Detention Center: #a65628 (brown)
+  - Juvenile Detention Center: #543005 (dark brown)
+  - Federal Prison: #f781bf (pink)
+  - State Migrant Detention Center: #e6ab02 (gold)
+  - Military Detention Center: #66c2a5 (teal)
+  - Other: #1b9e77 (green-teal)
 
-#### **Part D: Data Quality & Caveats**
+#### **Part D: Interactive Visualizations & Sparklines**
+
+- Facility popups include:
+  - Name, address, city, state
+  - Facility type with assigned color from palette
+  - Peak daily population and date
+  - Sparkline visualization showing daily population trend over fiscal year
+  - Status (open/closed for FY2026 and FY2024 analyses)
+- Facility type distribution charts (pie/bar) colored per scheme
+- Geographic maps where appropriate
+
+#### **Part E: Data Quality & Caveats**
 
 - DETLOC coverage and matching confidence
 - Known gaps (e.g., CY 2018 data unavailable for ICE annual stats)
 - Facilities with significant discrepancies
 - Notes on facility consolidation and closure
+- FY2026 and FY2024 limitations (single administration; FY2026 partial year)
+
+---
+
+## Sparkline & Popup Design
+
+For both FY2024 and FY2026 comparison reports, facility-level tables will include interactive popups with:
+
+### SVG Sparkline Visualization
+
+Tiny line chart embedded in popup showing daily population trend for the fiscal year:
+- X-axis: Month of fiscal year (Oct – Sep, or Oct – Mar for FY2026 partial)
+- Y-axis: Daily population count (scaled to facility max)
+- Single continuous line connecting daily observations
+- Simple axis labels, minimal styling
+- Width: ~250–300 px, height: ~80–100 px
+
+### Popup HTML Structure
+
+```html
+<facility_name>
+<address, city, state>
+Type: <facility_type_wiki> [colored dot]
+
+Status: <Open/Closed>
+First seen: <date> | Last seen: <date>
+
+Peak Daily Population: <n> on <date>
+
+<SVG sparkline chart>
+```
+
+### Pre-computed Sparkline Data
+
+For each facility-fiscal year pair:
+- Daily population values (interpolated if missing)
+- Min/max/mean for axis scaling
+- SVG markup generated and cached (avoid rendering in Quarto)
+
+Implementation approach:
+1. Compute daily summary by facility and fiscal year from parquet
+2. Generate SVG sparkline HTML for each facility
+3. Store sparkline HTML as column in pre-computed RDS tables
+4. Embed in Quarto table via `htmltools::HTML()`
 
 ---
 
@@ -154,22 +227,30 @@ Each report will follow the same analytical structure:
 - [ ] Add facility coverage tables and geographic analysis
 - [ ] Render and review locally
 
-### Phase 3: Create FY2024 Comparison Report
-
-- [ ] Create `ddp-comparison-fy24.qmd` in report directory
-- [ ] Adapt structure from FY2025 report
-- [ ] Subset data to Oct 1, 2023 – Sep 30, 2024
-- [ ] Compute all aggregate and facility-level comparisons
-- [ ] Render and review
-- [ ] Export pre-computed RDS files for possible deployment
-
-### Phase 4: Create FY2026 Comparison Report
+### Phase 3: Create FY2026 Comparison Report
 
 - [ ] Create `ddp-comparison-fy26.qmd` in report directory
 - [ ] Subset data to Oct 1, 2025 – Mar 10, 2026 (partial year)
-- [ ] Same analytical structure as FY2024 and FY2025
+- [ ] Same analytical structure as FY2025 (no presidential quarter splits; single administration)
 - [ ] Add note about partial year data
+- [ ] Include address, city, state in all facility tables
+- [ ] Assign `facility_type_wiki` using unified type classifications
+- [ ] Use color scheme from `posts/ice-detention-map/facilities-map-post.R`
+- [ ] Build sparkline visualizations for facility popups (daily population trends)
 - [ ] Render and review
+- [ ] Export pre-computed RDS files for possible deployment
+
+### Phase 4: Create FY2024 Comparison Report
+
+- [ ] Create `ddp-comparison-fy24.qmd` in report directory
+- [ ] Adapt structure from FY2025 report (simplified; no presidential splits)
+- [ ] Subset data to Oct 1, 2023 – Sep 30, 2024
+- [ ] Compute all aggregate and facility-level comparisons
+- [ ] Include address, city, state in all facility tables
+- [ ] Assign `facility_type_wiki` and apply type color scheme
+- [ ] Build sparkline visualizations for facility popups
+- [ ] Render and review
+- [ ] Export pre-computed RDS files for possible deployment
 
 ### Phase 5: Archive & Deploy (optional)
 
@@ -199,11 +280,11 @@ If parquet becomes the primary source:
 
 | Deliverable | File | Type | Status |
 |-------------|------|------|--------|
-| DDP Parquet Summary | `ddp-parquet-summary.qmd` | Quarto report | Not started |
-| FY2024 Comparison | `ddp-comparison-fy24.qmd` | Quarto report | Not started |
+| DDP Parquet Summary | `ddp-parquet-summary.qmd` | Quarto report | In progress |
 | FY2026 Comparison | `ddp-comparison-fy26.qmd` | Quarto report | Not started |
-| Pre-computed RDS files | `data/ddp-comparison-export-fy24/` | RDS + CSVs | Pending |
+| FY2024 Comparison | `ddp-comparison-fy24.qmd` | Quarto report | Not started |
 | Pre-computed RDS files | `data/ddp-comparison-export-fy26/` | RDS + CSVs | Pending |
+| Pre-computed RDS files | `data/ddp-comparison-export-fy24/` | RDS + CSVs | Pending |
 
 ---
 

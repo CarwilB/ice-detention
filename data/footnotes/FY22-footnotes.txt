@@ -1,5 +1,5 @@
 Non-facility rows extracted from FY22 spreadsheet
-Extracted: 2026-04-11 16:12:04
+Extracted: 2026-04-12 00:16:38
 
 <empty row>
 [1] (BCORCPA) BERKS COUNTY RESIDENTIAL CENTER houses single adults and no longer house family units as of 11/27/21.

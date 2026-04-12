@@ -9,7 +9,7 @@
 10,"Allen Parish Public Safety Complex","APPSCLA","7340 Highway 26 West","Oberlin","LA","70655","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
 11,"Anchorage Correctional Complex","ANCHOAK","1400 E. 4th Ave","Anchorage","AK","99501","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 12,"Anne Arundel County Ordnance Road Correctional Center","AAORDMD","600 E. Ordnance Road","Glen Burnie","MD","21060","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
-14,"Baker Correctional Institution","FLDADCI","20706 Us 90 W","Sanderson","FL","32087","STATE","State Migrant Detention Center","panel","STATE","Dedicated"
+14,"Baker Correctional Institution","FLBAKCI","20706 Us 90 W","Sanderson","FL","32087","STATE","State Migrant Detention Center","panel","STATE","Dedicated"
 16,"Baker County Sheriff's Office","BAKERFL","1 Sheriff Office Drive","Macclenny","FL","32063","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
 17,"Baldwin County Correctional Center","BALDWAL","200 Hand Ave.","Bay Minette","AL","36507","USMS IGA","Jail/Prison","panel","IGSA","Non-Dedicated"
 18,"Beaver County Jail","BEAVRPA","6000 Woodlawn Boulevard","Aliquippa","PA","15001","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
@@ -48,12 +48,12 @@
 58,"Catahoula Correctional Center","CATAHLA","499 Old Columbia Road","Harrisonburg","LA","71430","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
 59,"CBP Chula Vista BPS",NA,"311 Athey Ave","San Diego","CA","92154","Other","CBP Hold Facility","panel",NA,NA
 60,"CBP San Ysidro POE",NA,"720 E San Ysidro Blvd","San Ysidro","CA","92173","Other","CBP Hold Facility","panel",NA,NA
-61,"Central Arizona Florence Correctional Complex","CCADCAZ","1100 Bowling Road","Florence","AZ","85232","USMS CDF","Private Migrant Detention Center","panel","USMS IGA","Federal"
+61,"Central Arizona Florence Correctional Complex","CCAFLAZ","1100 Bowling Road","Florence","AZ","85232","USMS CDF","Private Migrant Detention Center","panel","USMS IGA","Federal"
 63,"Central Texas Detention Facility","WACLATX","218 S. Laredo St","San Antonio","TX","78207","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 64,"Charleston County Detention Center","CHARLSC","3841 Leeds Avenue","North Charleston","SC","29405","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 66,"Chase County Jail","CHASEKS","301 South Walnut Street","Cottonwood Falls","KS","66845","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
 67,"Chautauqua County Jail","CHACONY","15 E. Chautauqua Street","Mayville","NY","14757","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
-68,"Chavez Detention Center","CHAVENM","3701 S. Atkinson","Roswell","NM","88201","USMS IGA","Jail/Prison","panel","IGSA","Non-Dedicated"
+68,"Chavez Detention Center","CHAVENM","3701 S. Atkinson","Roswell","NM","88201","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
 70,"Chippewa County SSM","CHIPPMI","325 Court Street","Sault Ste. Marie","MI","49783","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
 71,"Chittenden Regional Correctional Facility","VTCHTDN","7 Farrell Street","South Burlington","VT","05403","USMS IGA","Jail/Prison","panel","IGSA","Non-Dedicated"
 72,"Christian County Jail","CHRISKY","410 West 7th Street,","Hopkinsville","KY","42240","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
@@ -73,11 +73,10 @@
 88,"Correctional. Center of Northwest Ohio","OHNORWE","3151 County Road 2425","Stryker","OH","43557","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 89,"Cowlitz County Juvenile","COWJVWA","1725 1st Ave.","Longview","WA","98632","JUVENILE","Juvenile Detention Center","panel","Juvenile","Family/Youth"
 90,"Crow Wing County Jail","CROWGMN","313 Laurel St","Brainerd","MN","56401","USMS IGA","Jail/Prison","panel","IGSA","Non-Dedicated"
-91,"Cumberland County Jail","CUMBEME","50 County Way","Portland","ME","04102","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
+91,"Cumberland County Jail","CUMBEME","50 County Way","Portland","ME","4102","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 92,"Dakota County Jail","DAKOTNE","1601 Broadway","Dakota City","NE","68731","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 93,"Dallas County Jail - Lew Sterrett Justice Center","DALCOTX","111 West Commerce Street","Dallas","TX","75202","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 94,"Davidson County Sheriff","DAVIDTN","448 2nd Avenue North","Nashville","TN","37210","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
-95,"Daviess County Detention",NA,"94 Grapevine Rd","Martinsburg","WV","25401","IGSA","Jail/Prison","panel",NA,NA
 96,"Daviess County Detention","DVCSDKY","3337 Highway 144","Owensboro","KY","42303","USMS IGA","Jail/Prison","panel",NA,"Non-Dedicated"
 97,"Davis County","DAVISUT","800 West State Street","Farmington","UT","84025","IGSA","Jail/Prison","panel",NA,"Non-Dedicated"
 98,"Dekalb County Detention Center","DEKALAL","2801 Jordan Road","Fort Payne","AL","35968","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
@@ -86,7 +85,7 @@
 102,"Denver Contract Detention Facility (Cdf) Ii",NA,"11901 E. 30th Ave","Aurora","CO","80010","CDF","Private Migrant Detention Center","panel",NA,NA
 103,"Department of Corrections Hagatna","GUDOCHG","203 Aspinal Ave. Po Box 3236","Hagatna","GU","96910","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 105,"Adelanto ICE Processing Center","ADLNTCA","10250 Rancho Road","Adelanto","CA","92301","CDF","Private Migrant Detention Center","panel","CDF","Dedicated"
-106,"Diamondback Correctional Facility",NA,"Route 2, Box 336","Watonga","OK","73772","DIGSA","Dedicated Migrant Detention Center","panel",NA,NA
+106,"Diamondback Correctional Facility","OKDBACK","Route 2, Box 336","Watonga","OK","73772","DIGSA","Dedicated Migrant Detention Center","panel",NA,NA
 108,"Camp East Montana","EROFCB","6920 Digital Rd","El Paso","TX","79936","CDF","Private Migrant Detention Center","panel","CDF","Dedicated"
 109,"Dodge County Jail","DODGEWI","215 West Central Street","Juneau","WI","53039","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 110,"Dona Ana County Detention Center","DONAANM","1850 Copper Loop","Las Cruces","NM","88004","USMS IGA","Jail/Prison","panel","IGSA","Non-Dedicated"
@@ -104,13 +103,12 @@
 122,"Elmore County Jail","ELMORID","2255 E. 8th North","Mountain Home","ID","83647","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 123,"Eloy Detention Center","EAZ","1705 East Hanna Rd.","Eloy","AZ","85131","DIGSA","Dedicated Migrant Detention Center","panel","DIGSA","Dedicated"
 124,"Erie County Jail","ERICOPA","Department Of Corrections 1618 Ash Street","Erie","PA","16503","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
-125,"Delaney Hall Detention Facility","ESSEXNJ","451 Doremus Avenue","Newark","NJ","07105","CDF","Private Migrant Detention Center","panel","IGSA","Non-Dedicated"
+125,"Delaney Hall Detention Facility","DHDFNJ","451 Doremus Avenue","Newark","NJ","07105","CDF","Private Migrant Detention Center","panel","IGSA","Non-Dedicated"
 127,"Etowah County Jail","ETOWAAL","827 Forrest Avenue","Gadsden","AL","35901","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 128,"Euless City Jail","EULESTX","1102 W. Euless Blvd.","Euless","TX","76040","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
 129,"FCI Atlanta","BOPATL","601 Mcdonough Boulevard, SE","Atlanta","GA","30315","BOP","Federal Prison","panel","BOP","Federal"
 130,"FDC Philadelphia","BOPPHL","700 Arch St.","Philadelphia","PA","19106","BOP","Federal Prison","panel","BOP","Federal"
 132,"Fayette County Detention Center","FAYETKY","600 Old Frankford Cr","Lexington","KY","40510","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
-133,"Finney County Jail","FINNEKS","304 N. 9th Street","Garden City","KS","67846","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
 134,"Florence Service Processing Center","FLO","3250 North Pinal Parkway","Florence","AZ","85132","SPC","ICE Migrant Detention Center","panel","SPC","Dedicated"
 135,"Florence Staging Facility","FSF","3250 North Pinal Parkway","Florence","AZ","85232","STAGING","ICE Staging Facility","panel","Staging","Hold/Staging"
 136,"Florida Soft-Sided Facility","FLDSSFS","54575 Tamiami Trl E","Ochopee","FL","34141","STATE","State Migrant Detention Center","panel",NA,"Dedicated"
@@ -119,10 +117,9 @@
 139,"Folkston ICE Processing Center","FIPCDGA","3262 Highway 252","Folkston","GA","31537","DIGSA","Dedicated Migrant Detention Center","panel","DIGSA","Dedicated"
 141,"Forsyth County Jail","FORSYNC","201 North Church Street","Winston-Salem","NC","27101","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 142,"Franklin County House of Correction","GREENMA","160 Elm Street","Greenfield","MA","1301","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
-143,"Franklin County Jail","FRANKPA","625 Franklin Farm Ln","Chambersburg","PA","17201","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 144,"Frederick County Detention Center","FREDEMD","7300 Marcie's Choice Lane","Frederick","MD","21704","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
 145,"Freeborn County Adult Detention Center","FREEBMN","411 South Broadway Avenue","Albert Lea","MN","56007","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
-146,"Fulton County Jail Indiana",NA,"2006 Sweetgum Rd","Rochester","IN","46975","USMS IGA","Jail/Prison","panel",NA,NA
+146,"Fulton County Jail Indiana","FULCJIN","2006 Sweetgum Rd","Rochester","IN","46975","USMS IGA","Jail/Prison","panel",NA,NA
 147,"Garvin County Detention Center","GARVIOK","201 West Grant Avenue","Pauls Valley","OK","73075","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
 148,"Gaston County Jail","GASTNNC","425 North Marietta Street","Gastonia","NC","28052","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
 149,"Geauga County Jail","GEAUGOH","12450 Merritt Dr","Chardon","OH","44024","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
@@ -157,7 +154,6 @@
 183,"Johnson County Corrections Center","JOHNSTX","1800 Ridgemar Drive","Cleburne","TX","76031","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
 184,"Kandiyohi County Jail","KANDIMN","2201 23rd St NE","Willmar","MN","56201","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
 185,"Kankakee County Jail (Jerome Combs Detention Center)","KANKEIL","3050 Justice Way","Kankakee","IL","60901","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
-186,"Kansas City Holdroom","KANHOLD","9747 NW Conant Avenue","Kansas City","MO","64153","CDF","Private Migrant Detention Center","panel","Hold","Hold/Staging"
 188,"Karnes County Correctional Center","KARNETX","810 Commerce Street","Karnes City","TX","78118","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 190,"Karnes County Residential Center","KCCDCTX","409 Fm 1144","Karnes City","TX","78118","FAMILY","Family Detention Center","panel","Family","Family/Youth"
 191,"Karnes County Immigration Processing Center","KRNRCTX","409 Fm 1144","Karnes City","TX","78118","DIGSA","Dedicated Migrant Detention Center","panel","Family","Family/Youth"
@@ -197,7 +193,7 @@
 226,"Marion County Jail","MARIOIN","695 Justice Way","Indianapolis","IN","46203","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 227,"Marshall County Jail","MARSHIA","2369 Jessup Avenue","Marshalltown","IA","50158","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 228,"Martin County Jail","MARTIFL","800 Southeast Monterey Road","Stuart","FL","34994","USMS IGA","Jail/Prison","panel","IGSA","Non-Dedicated"
-229,"Mccook Detention Center",NA,"2309 N Highway 83","McCook","NE","69001","DIGSA","Dedicated Migrant Detention Center","panel",NA,NA
+229,"Mccook Detention Center","NEMCCOI","2309 N Highway 83","McCook","NE","69001","DIGSA","Dedicated Migrant Detention Center","panel",NA,NA
 230,"Mchenry County Correctional Facility","MCHENIL","2200 North Seminary Avenue","Woodstock","IL","60098","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 231,"Mesa Verde ICE Processing Center","CACFMES","425 Golden State Ave","Bakersfield","CA","93301","CDF","Private Migrant Detention Center","panel","CDF","Dedicated"
 232,"Miami Correctional Center","INMIAMI","3038 West 850 South P.o. Box 900","Bunker Hill","IN","46914","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
@@ -225,7 +221,7 @@
 255,"New Hanover County Jail","NWHNVNC","3950 Juvenile Rd","Castle Hayne","NC","28429","USMS IGA","Jail/Prison","panel","IGSA","Non-Dedicated"
 256,"Niagara County Jail","NIAGANY","5526 Niagara Street Extention","Lockport","NY","14094","USMS IGA","Jail/Prison","panel","IGSA","Non-Dedicated"
 257,"Nobles County Jail","NOBLEMN","1530 Airport Road","Worthington","MN","56187","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
-258,"North Central Regional Jail",NA,"#1 Lois Lane","Greenwood","WV","26415","IGSA","Jail/Prison","panel",NA,NA
+258,"North Central Regional Jail","WVNCENT","#1 Lois Lane","Greenwood","WV","26415","IGSA","Jail/Prison","panel",NA,NA
 260,"North Lake Correctional Facility","NRLKCMI","1805 W 32nd St","Baldwin","MI","49304","CDF","Private Migrant Detention Center","panel","CDF","Dedicated"
 262,"Northeast Ohio Correctional Center","CCANOOH","2240 Hubbard Road","Youngstown","OH","44505","USMS IGA","Jail/Prison","panel","CDF","Dedicated"
 263,"Northern Oregon Correctional Facility","NORCOOR","211 Webber Road","The Dalles","OR","97058","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
@@ -262,11 +258,11 @@
 306,"Randall County Jail","RNDLLTX","9100 South Georgia Street","Amarillo","TX","79118","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 307,"Red Roof Inn","RRFINWA","16838 International Blvd","Seatac","WA","98188","Other","Hotel","panel","Hotel","Hotel"
 308,"Rensselaer County Correctional Facility","RENSSNY","4000 Main Street","Troy","NY","12180","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
-310,"Richwood Correctional Center","RWCCMLA","180 Pine Bayou Circle","Monroe","LA","71202","IGSA","Jail/Prison","panel","DIGSA","Dedicated"
+310,"Richwood Correctional Center","RWCCMLA","180 Pine Bayou Circle","Monroe","LA","71202","DIGSA","Dedicated Migrant Detention Center","panel","DIGSA","Dedicated"
 311,"Rio Grande County Jail","RIOGRCO","640 Cherry Street","Del Norte","CO","81132","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
 312,"Rio Grande Detention Center","RGRNDTX","1001 San Rio Boulevard","Laredo","TX","78046","USMS CDF","Private Migrant Detention Center","panel","USMS CDF","Federal"
 313,"Port Isabel Detention Center","PIC","27991 Buena Vista Boulevard","Los Fresnos","TX","78566","SPC","ICE Migrant Detention Center","panel","SPC","Dedicated"
-314,"River Correctional Center","RVRCCLA","26362 Highway 15","Ferriday","LA","71334","IGSA","Jail/Prison","panel","DIGSA","Dedicated"
+314,"River Correctional Center","RVRCCLA","26362 Highway 15","Ferriday","LA","71334","DIGSA","Dedicated Migrant Detention Center","panel","DIGSA","Dedicated"
 315,"Riverside County Sheriff","RIVERCA","4095 Lemon Street","Riverside","CA","92225","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
 316,"Riverside Regional Jail","RSREGVA","1000 River Road","Hopewell","VA","23860","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 317,"Roanoke City Jail","RONKEVA","340 Campbell Avenue Southwest","Roanoke","VA","24016","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
@@ -289,10 +285,9 @@
 336,"Sioux County Jail","SIOUXIA","4363 Ironwood Avenue","Orange City","IA","51041","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 337,"South Central Regional Jail","WVSCENT","1001 Center Way","Charleston","WV","25309","IGSA","Jail/Prison","panel","USMS IGA","Federal"
 339,"South Louisiana ICE Processing Center","BASILLA","3843 Stagg Avenue","Basile","LA","70515","DIGSA","Dedicated Migrant Detention Center","panel","DIGSA","Dedicated"
-341,"South Texas Family Residential Center",NA,"300 El Rancho Way","Dilley","TX","78017","FAMILY","Family Detention Center","panel",NA,NA
+341,"South Texas Family Residential Center","STFRCTX","300 El Rancho Way","Dilley","TX","78017","FAMILY","Family Detention Center","panel","Family","Family/Youth"
 343,"South Texas ICE Processing Center","STCDFTX","566 Veterans Drive","Pearsall","TX","78061","CDF","Private Migrant Detention Center","panel","CDF","Dedicated"
-344,"Southern Regional",NA,"1200 Airport Rd","Beaver","WV","25813","IGSA","Jail/Prison","panel",NA,NA
-345,"Southwestern Regional Jail",NA,"13 Gaston Caperton Dr.","Holden","WV","25625","IGSA","Jail/Prison","panel",NA,NA
+345,"Southwestern Regional Jail","WVSWEST","13 Gaston Caperton Dr.","Holden","WV","25625","IGSA","Jail/Prison","panel",NA,NA
 346,"St. Clair County Jail","STCLAMI","1170 Michigan Road","Port Huron","MI","48060","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
 347,"Ste. Genevieve County Sheriff/Jail","STGENMO","5 Basler Dr.","Ste. Genevieve","MO","63670","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 348,"Stewart Detention Center","STWRTGA","146 Cca Road","Lumpkin","GA","31815","DIGSA","Dedicated Migrant Detention Center","panel","DIGSA","Dedicated"
@@ -331,7 +326,7 @@
 383,"Webb County Detention Center (CCA)","WEBDCTX","9998 South Highway 83","Laredo","TX","78041","DIGSA","Dedicated Migrant Detention Center","panel","DIGSA","Dedicated"
 384,"Weber County Jail","WEBERUT","721 West 12th Street","Ogden","UT","84404","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 385,"West Texas Detention Facility","WTXDFTX","401 S. Vaquero Ave.","Sierra Blanca","TX","79851","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
-386,"Western Regional Jail And Correctional Facility",NA,"1 O’hanlon Pl","Barboursville","WV","25504","IGSA","Jail/Prison","panel",NA,NA
+386,"Western Regional Jail And Correctional Facility","WVWESTR","1 O’hanlon Pl","Barboursville","WV","25504","IGSA","Jail/Prison","panel",NA,NA
 387,"Western Tennessee Detention Facility","TNWESDF","6299 Finde Naifeh Drive","Mason","TN","38049","DIGSA","Dedicated Migrant Detention Center","panel","USMS CDF / USMS IGA","Federal"
 388,"Western Virginia Regional Jail","WVIRGVA","5885 W River Rd","Salem","VA","24153","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 389,"Whitfield County Jail","WHITFGA","805 Professional Blvd","Dalton","GA","30720","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
@@ -344,6 +339,11 @@
 396,"Yankton County Jail","YANCOSD","410 Walnut Street","Yankton","SD","57078","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
 397,"York County Prison","YORCOPA","3400 Concord Road","York","PA","17402","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
 398,"Yuba County Jail","YUBAJCA","215 5th Street","Marysville","CA","95901","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
+399,"Essex County Correctional Facility","ESSEXNJ","354 Doremus Avenue","Newark","NJ","7105","IGSA","Jail/Prison",NA,"IGSA","Non-Dedicated"
+400,"Desert View Annex","CADESVI","10450 Rancho Road","Adelanto","CA","92301","CDF","Private Migrant Detention Center",NA,"CDF","Dedicated"
+402,"Lafayette Parish Correctional Center",NA,"916 Lafayette Street","Lafayette","LA","70501","IGSA","Jail/Prison",NA,NA,NA
+403,"Lewisburg US Penitentiary","BOPLEW","P.o. Box 1000","Lewisburg","PA","17837","BOP","Federal Prison",NA,NA,NA
+404,"Migrant Ops Center Main A","GTMODCU","Avenue C Psc 1005 Box 55","Fpo","FL","34009","MOC","Federal Prison",NA,"MOC","Federal"
 1001,"Atlanta City Detention Center","ATLANGA","254 Peachtree Street Southwest","Atlanta","GA","30303","USMS IGA","Jail/Prison","dmcp_only","USMS IGA","Federal"
 1002,"Folkston ICE Processing Center (D. Ray James)","JAMESGA","3423 Highway 252 East","Folkston","GA","31537","DIGSA","Dedicated Migrant Detention Center","dmcp_only","DIGSA","Dedicated"
 1003,"Contra Costa County Jail West","CONWECA","5555 Giant Highway","Richmond","CA","94806","USMS IGA","Jail/Prison","dmcp_only","USMS IGA","Federal"
@@ -438,8 +438,8 @@
 1092,"Charlotte County Jail","CHRLTFL","26601 Airport Rd","Punta Gorda","FL","33982",NA,"Jail/Prison","ddp_other","IGSA","Non-Dedicated"
 1093,"Citrus County Jail","CITRUFL","2604 W. Woodland Ridge Dr.","Lecanto","FL","34461",NA,"Jail/Prison","ddp_other","IGSA","Non-Dedicated"
 1094,"Columbia County Jail","COLUMFL","389 NW Quinten St","Lake City","FL","32055",NA,"Jail/Prison","ddp_other","county_jail","Non-Dedicated"
-1095,"Baker C. I.","FLBAKCI","20706 U.S. Highway 90 West","Sanderson","FL","32087",NA,"State Migrant Detention Center","ddp_other","STATE","Dedicated"
-1096,"Charlotte CI, Punta Gorda","FLCHACI","33123 Oil Well Road","Punta Gorda","FL","33955",NA,"State Prison","ddp_other","state_prison","Non-Dedicated"
+1095,"Charlotte CI, Punta Gorda","FLCHACI","33123 Oil Well Road","Punta Gorda","FL","33955",NA,"State Prison","ddp_other","state_prison","Non-Dedicated"
+1096,"Dade Correctional Inst","FLDADCI","19000 S.W. 377th Street","Florida City","FL","33034",NA,"State Migrant Detention Center","ddp_other","STATE","Dedicated"
 1097,"Flagler County Jail","FLGLRFL","1001 Justice Lane","Bunnell","FL","32110",NA,"Jail/Prison","ddp_other","county_jail","Non-Dedicated"
 1098,"Hendry County Jail","HENDRFL","101 South Bridge Street","Labelle","FL","33935",NA,"Jail/Prison","ddp_other","IGSA","Non-Dedicated"
 1099,"Manatee County Detention-Annex","MANATFL","11490 Harlee Rd.","Palmetto","FL","34221",NA,"Jail/Prison","ddp_other","IGSA","Non-Dedicated"
@@ -552,6 +552,9 @@
 1207,"Potomac Highlands Regional Jail","WVPTMAC","355 Dolan Drive","Augusta","WV","26704",NA,"Jail/Prison","ddp_other",NA,"Non-Dedicated"
 1208,"Campbell County Jail","CAMCOWY","600 W Boxelder Road","Gillette","WY","82718",NA,"Jail/Prison","ddp_other","IGSA","Non-Dedicated"
 1209,"CBP Movement Coordination Area","UCBPMCA",NA,NA,NA,NA,NA,"Federal Prison","ddp_other","CBP","Federal"
+1210,"CCA Central Arizona Detention Center","CCADCAZ","1155 North Pinal Parkway","Florence","AZ","85132","USMS IGA","Jail/Prison","ddp_other","USMS IGA","Federal"
+1211,"Sarasota County Jail","SARASFL","2020 Main St","Sarasota","FL","34237","IGSA","Jail/Prison","ddp_other","IGSA","Non-Dedicated"
+1212,"Scott County Detention. Facility",NA,"416 W 4th St","Davenport","IA","52801","USMS IGA","Jail/Prison","ddp_other",NA,NA
 2001,"Atlanta Field Office","ATLHOLD","180 Ted Turner Dr. SW, Suite 522","Atlanta","GA","30303","ero_office","ICE ERO Field Office","ero","Hold","Hold/Staging"
 2002,"Baltimore Field Office","BALHOLD","31 Hopkins Plaza, 6th Floor","Baltimore","MD","21201","ero_office","ICE ERO Field Office","ero","Hold","Hold/Staging"
 2003,"Boston Field Office","BOSHOLD","1000 District Avenue","Burlington","MA","01803","ero_office","ICE ERO Field Office","ero","Hold","Hold/Staging"

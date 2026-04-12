@@ -24,7 +24,14 @@ do_not_merge_pairs <- function() {
     "Main - Folkston IPC (D Ray James)",  "Annex - Folkston IPC",
     "Main - Folkston IPC (D Ray James)",  "Folkston Annex IPC",
     "Joe Corley Processing Center",       "Montgomery ICE Processing Center",
-    "Joe Corley ICE Processing Center",   "Montgomery ICE Processing Center"
+    "Joe Corley ICE Processing Center",   "Montgomery ICE Processing Center",
+    # Two distinct facilities on the same street (Doremus Ave, Newark NJ 07105):
+    # 354 Doremus Ave (Essex County) vs. 451 Doremus Ave (Delaney Hall)
+    "Essex County Correctional Facility", "Delaney Hall Detention Facility",
+    # Desert View Annex is a separately-reported ICE unit on the Adelanto campus;
+    # same address causes spurious merge with the main facility
+    "Desert View",                         "Adelanto ICE Processing Center",
+    "Desert View Annex",                   "Adelanto ICE Processing Center"
   )
 }
 
@@ -294,7 +301,7 @@ build_facility_crosswalk <- function(facilities_data_list, id_registry) {
   # Warn if any panel facilities received IDs outside the frozen <400 block.
   # This usually means the registry name doesn't match the cleaned name
   # (e.g. abbreviation expansion in clean_facility_names()).
-  max_panel_id <- max(id_registry$canonical_id[id_registry$canonical_id < 399])
+  max_panel_id <- max(id_registry$canonical_id[id_registry$canonical_id < 401])
   leaked <- facility_crosswalk |>
     dplyr::filter(canonical_id > max_panel_id) |>
     dplyr::distinct(canonical_id, canonical_name, canonical_city, canonical_state)
@@ -563,6 +570,56 @@ build_facility_roster <- function(panel_facilities,
       dplyr::left_join(dl_map, by = "canonical_id") |>
       dplyr::mutate(detloc = dplyr::coalesce(detloc, detloc_fill)) |>
       dplyr::select(-detloc_fill)
+  }
+
+  # Patch missing DETLOCs from vera_facilities for facilities known to vera but not in detloc_lookup
+  missing_detloc_still <- is.na(roster$detloc)
+  if (any(missing_detloc_still) && !is.null(vera_facilities)) {
+    vera_detloc_map <- vera_facilities |>
+      dplyr::filter(!is.na(detloc)) |>
+      dplyr::distinct(facility_name, .keep_all = TRUE) |>
+      dplyr::select(facility_name, detloc_vera = detloc)
+    roster <- roster |>
+      dplyr::left_join(vera_detloc_map, by = c("canonical_name" = "facility_name")) |>
+      dplyr::mutate(detloc = dplyr::coalesce(detloc, detloc_vera)) |>
+      dplyr::select(-detloc_vera)
+  }
+
+  # ── DETLOC fills: assign detlocs to facilities currently missing one ─────────
+  # Only applied when detloc is currently NA. Sources: DDP Oct 2025–Feb 2026,
+  # DDP FY25 summary, and other confirmed matches.
+  detloc_fills <- tibble::tribble(
+    ~canonical_id, ~detloc,
+    # FY26b facilities matched to DDP detlocs (Oct 2025–Feb 2026 discovery)
+    106L, "OKDBACK",       # Diamondback Correctional Facility (OK)
+    146L, "FULCJIN",       # Fulton County Jail Indiana
+    229L, "NEMCCOI",       # Mccook Detention Center (NE)
+    231L, "DVCSDKY",       # Daviess County Detention Center (KY)
+    # WV regional jails from fy26b (DDP-discovered Oct 2025–Feb 2026)
+    258L, "WVNCENT",       # North Central Regional Jail (WV)
+    344L, "WVSOUTH",       # Southern Regional Jail (WV)
+    345L, "WVSWEST",       # Southwestern Regional Jail (WV)
+    386L, "WVWESTR",       # Western Regional Jail (WV)
+    # South Texas Family Residential Center, Dilley (TX)
+    341L, "STFRCTX"
+  )
+
+  for (i in seq_len(nrow(detloc_fills))) {
+    idx <- which(roster$canonical_id == detloc_fills$canonical_id[i] &
+                   is.na(roster$detloc))
+    if (length(idx) > 0) roster$detloc[idx] <- detloc_fills$detloc[i]
+  }
+
+  # ── DETLOC corrections: overwrite misassigned detlocs ─────────────────────
+  # Applied unconditionally — overwrites any existing (wrong) value.
+  detloc_corrections <- tibble::tribble(
+    ~canonical_id, ~detloc,
+     14L, "FLBAKCI"        # Baker Correctional Institution (FL); was FLDADCI
+  )
+
+  for (i in seq_len(nrow(detloc_corrections))) {
+    idx <- which(roster$canonical_id == detloc_corrections$canonical_id[i])
+    if (length(idx) > 0) roster$detloc[idx] <- detloc_corrections$detloc[i]
   }
 
   # Join Vera corrected types via DETLOC where available

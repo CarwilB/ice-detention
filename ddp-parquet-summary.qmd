@@ -9,245 +9,162 @@ execute:
 
 ## Overview
 
-This document summarizes the Deportation Data Project (DDP) daily detention population dataset in parquet format (`data/ddp/facilities-daily-population-latest.parquet`). The parquet file provides an extended and unified view of detention facility population counts across the United States from October 2022 through March 2026.
+This document summarizes the Deportation Data Project (DDP) daily detention population dataset in parquet format (`data/ddp/facilities-daily-population-latest.parquet`). The parquet file is the current data source for FY26 and FY24 comparison analyses against ICE's published annual detention statistics.
 
-The data extends the original feather-format file with more recent observations and is being integrated into the ice-detention pipeline for comparative analysis against ICE's published annual detention statistics.
+The dataset spans October 2022 through March 2026. The first and last dates on which any facility recorded nonzero detention are **2022-10-01** and **2026-03-10**.
 
 ### Dataset Basics
 
 | Metric | Value |
 |--------|-------|
 | **Format** | Apache Parquet |
-| **Date range** | 2022-10-01 to 2026-03-10 |
-| **Duration** | 1,256 days (~3.4 years) |
+| **Date range** | 2022-10-01 – 2026-03-10 |
 | **Total observations** | 888,699 facility-day records |
 | **Unique facility codes** | 707 |
-| **Variables** | 9 (facility code, date, population counts, demographics, facility name) |
-| **Missing values** | None detected |
+| **Variables** | 9 |
+| **Missing values** | None |
 
-### Comparison with Feather Format
+### Variables
 
-The earlier feather-format file (`detention-facility-daily-population_filtered_20260312_031218.feather`) contained the same data from September 2023 through October 2025 with 853 facility codes. The parquet file extends the coverage both backward (to October 2022) and forward (to March 2026) and represents a cleaned and consolidated version with 707 unique facility codes—a difference that reflects consolidation of duplicate or variant facility codes.
+| Column | Type | Description |
+|--------|------|-------------|
+| `detention_facility_code` | character | ICE DETLOC code |
+| `date` | date | Observation date |
+| `n_detained` | integer | Total detained population |
+| `n_detained_at_midnight` | integer | Population at midnight |
+| `n_detained_male` | integer | Male detainees |
+| `n_detained_female` | integer | Female detainees |
+| `n_detained_convicted_criminal` | integer | Detainees with criminal convictions |
+| `n_detained_possibly_under_18` | integer | Detainees possibly under 18 |
+| `detention_facility` | character | Facility name |
 
----
-
-## Data Integration Summary
-
-### Pipeline Functions and Targets
-
-The DDP data is integrated into the ice-detention `targets`-based pipeline through three dedicated R functions in `R/ddp.R`:
-
-- **`build_ddp_codes(dp_data)`** — Extracts unique facility codes from raw DDP data and applies project-standard facility name cleaning
-- **`import_ddp_codes(dp_data)`** — Imports and extracts raw facility codes
-- **`clean_ddp_facility_names(df)`** — Applies standardized name transformations (e.g., "Ctr" → "Center", "ICE" → "ICE")
-
-Pipeline targets (`_targets.R`):
-
-```r
-tar_target(ddp_file, ..., format = "file", cue = "never")
-  # Tracks the parquet file; re-renders reports when file changes
-
-tar_target(ddp_raw, arrow::read_parquet(ddp_file))
-  # Raw import; 888,699 rows
-
-tar_target(ddp_codes, build_ddp_codes(ddp_raw))
-  # 707 distinct facility codes with cleaned names
-```
-
-### Facility Code Matching & Canonical IDs
-
-DDP facility codes are matched to canonical facility IDs through two mechanisms:
-
-#### **1. Direct Matching (DMCP & DETLOC)**
-
-The `build_ddp_canonical_map()` function matches DDP facility codes to canonical facilities using three tiers of similarity:
-
-| Match Type | Count | Confidence |
-|------------|-------|------------|
-| Exact (OSA ≥ 0.85) | 114 | High |
-| County keyword | 19 | Medium |
-| Other keyword | 6 | Medium |
-| Unmatched | 39 | Low |
-
-Of 178 canonical FY19–FY26 facilities **not** present in DMCP data, 139 (78%) are found in DDP data.
-
-#### **2. Unified DETLOC Lookup**
-
-All DDP facility codes are included in `detloc_lookup_full`, which preserves all DETLOC variants across sources. Some facilities have multiple codes (e.g., Central Arizona Florence Correctional Complex: `CCADCAZ` from DMCP, `CCAFLAZ` from DDP). The unified lookup ensures all codes contribute to the correct canonical facility.
-
-### Canonical ID Space Coverage
-
-| ID Range | Facilities | Source | Notes |
-|----------|-----------|--------|-------|
-| 1–398 | ~347 (frozen) | FY19–FY26 annual stats | Canonical list for reported facilities |
-| 1001–1053 | 53 | DMCP 2015/2017 | Facilities not in FY19–FY26 panel |
-| 1054–1203 | 150 | DDP non-hold/non-medical | Jails, federal, dedicated, family |
-| 2001–2025 | 25 | ERO field offices | Informal holding locations |
-| 2026–2186 | 161 | Hold facilities | Marshall Project + DDP stubs |
-| 3001–3226 | 226 | Medical facilities | Hospitals, clinics, medical transport |
+Unlike the earlier feather-format file, the parquet file does not include a `state` column. State is derived downstream via joins with `facility_roster` or `vera_facilities`.
 
 ---
 
-## Population Data by Fiscal Year
+## Population by Fiscal Year
 
 ```{r}
 #| label: fy-summary
 library(dplyr)
 
-# Recompute FY summary from the parquet data for display
-ddp_fy_summary <- tribble(
-  ~fiscal_year, ~min_daily, ~max_daily, ~mean_daily, ~median_daily, ~total_person_days,
-  "FY2023", 0L, 1776L, 41.1, 0L, 10611760L,
-  "FY2024", 0L, 2203L, 54.6, 0L, 14141343L,
-  "FY2025", 0L, 2940L, 70.7, 0L, 18254136L,
-  "FY2026 (partial)", 0L, 4130L, 98.2, 0L, 11175237L
+ddp_fy_summary <- tibble::tribble(
+  ~`Fiscal Year`, ~`Days`,  ~`Mean Daily`, ~`Max Daily`, ~`Total Person-Days`,
+  "FY2023",          365L,        41.1,       1776L,         10611760L,
+  "FY2024",          366L,        54.6,       2203L,         14141343L,
+  "FY2025",          365L,        70.7,       2940L,         18254136L,
+  "FY2026 (partial)", 162L,       98.2,       4130L,         11175237L
 )
 
-knitr::kable(ddp_fy_summary, 
-             caption = "DDP population statistics by fiscal year",
-             format = "html",
-             col.names = c("Fiscal Year", "Min Daily", "Max Daily", 
-                          "Mean Daily", "Median Daily", "Total Person-Days"))
+knitr::kable(ddp_fy_summary, format.args = list(big.mark = ","))
 ```
 
-### Key Observations
-
-- **Rapid growth**: Mean daily population grew from 41 (FY2023) to 99 (FY2026 partial), a 140% increase.
-- **Median = 0**: Many facility codes have very low activity (holding rooms, staging areas, occasional use). The median reflects this; the mean is driven by a smaller set of high-capacity facilities.
-- **FY2025 peak**: Maximum daily population reached 2,940 in FY2025.
-- **FY2026 acceleration**: In the partial FY2026 data (Oct 2025 – Mar 2026), the maximum daily count reached 4,130, exceeding FY2025 by 40%.
+Mean daily population is the aggregate across all facility codes. The median facility-day observation is zero, reflecting the large number of hold rooms, staging areas, and low-utilization codes in the data. FY2026 covers October 1, 2025 through March 10, 2026 only.
 
 ---
 
-## Facility Coverage & Types
+## Facility Code Coverage by Type
 
-### Facility Code Distribution
+Type assignments use the project's unified type lookup: `detloc_lookup_full` joined to `facility_roster` (most authoritative), supplemented by Vera Institute `type_grouped_corrected` and `ddp_facility_canonical` for codes not in the main lookup.
 
-The 707 unique DDP facility codes distribute across the following categories based on facility type and source:
+```{r}
+#| label: type-table
+tibble::tribble(
+  ~`Type`,           ~`Feather (853)`, ~`Parquet (707)`, ~`Both (620)`, ~`Feather-only (233)`, ~`Parquet-only (87)`,
+  "Non-Dedicated",        209L,              242L,            206L,             3L,                  36L,
+  "Hold/Staging",         181L,              187L,            181L,             0L,                   6L,
+  "Federal",              171L,              183L,            170L,             1L,                  13L,
+  "Dedicated",             51L,               54L,             51L,             0L,                   3L,
+  "Family/Youth",           7L,                8L,              7L,             0L,                   1L,
+  "Other/Unknown",          5L,                3L,              3L,             2L,                   0L,
+  "Medical",              228L,                1L,              1L,           227L,                   0L,
+  "Unclassified",           1L,               29L,              1L,             0L,                  28L
+) |>
+  knitr::kable()
+```
 
-| Category | Count | Notes |
-|----------|-------|-------|
-| Non-Dedicated Jails | ~180 | County jails, municipal facilities |
-| Federal Facilities | ~28 | Federal Bureau of Prisons |
-| Dedicated ICE Centers | ~12 | ICE-owned or managed centers |
-| Hold/Staging | ~80 | ERO hold rooms, short-term facilities |
-| Medical | ~226 | Hospitals, clinics, transport |
-| Family/Youth | ~3 | Family residential, juvenile facilities |
-| Other/Unknown | ~178 | ERO offices, stubs, experimental codes |
-
-**Note:** Counts are approximate and based on facility type classification from Vera Institute and project overrides. Some facilities may not neatly fit categories.
-
-### Geographic Distribution
-
-The 707 facility codes are distributed across all 50 states plus Washington DC and US territories. Top states by facility count:
-
-| State | Count | Notes |
-|-------|-------|-------|
-| Texas | ~85 | Largest detention infrastructure |
-| California | ~65 | High-volume border and interior facilities |
-| Arizona | ~40 | Border state processing |
-| Georgia | ~35 | Regional detention hub |
-| New York | ~30 | Facility-dense Northeast corridor |
+The feather-only codes are almost entirely medical facilities (227 of 233). The parquet-only codes are predominantly non-dedicated jails (36), federal facilities (13), and hold/staging codes (6); 28 remain unclassified, meaning they have no match in any of the project's type reference files.
 
 ---
 
-## Data Structure & Variables
+## Feather vs. Parquet Comparison
 
-### Column Definitions
+The feather file covers September 1, 2023 – October 15, 2025. The parquet file covers October 1, 2022 – March 10, 2026. Their overlap period is **September 1, 2023 – October 15, 2025** (776 days).
 
-| Column | Type | Description |
-|--------|------|-------------|
-| `detention_facility_code` | Character | ICE DETLOC code (e.g., "ABIRJVA") |
-| `date` | Date | Observation date (YYYY-MM-DD) |
-| `n_detained` | Integer | Total detained population on date |
-| `n_detained_at_midnight` | Integer | Detained population at midnight |
-| `n_detained_male` | Integer | Male detainees |
-| `n_detained_female` | Integer | Female detainees |
-| `n_detained_convicted_criminal` | Integer | Detainees with criminal convictions |
-| `n_detained_possibly_under_18` | Integer | Detainees possibly under 18 years old |
-| `detention_facility` | Character | Facility name (cleaned) |
+### Aggregate daily population
 
-### Data Quality Notes
+Over the overlap period, the parquet total is on average **209 detainees per day lower** than the feather total (feather mean: 44,607; parquet mean: 44,398). No two days are exactly equal. The largest single-day absolute difference is 1,773. The difference is consistent with the feather-only codes contributing approximately 60 ADP during this period — almost all from medical facilities. The parquet-only codes contributed approximately 1 ADP in total over the same period.
 
-- **Zero-day records**: Many facility codes (especially hold rooms) have long periods with zero detainees. These are preserved in the data; median population reflects this reality.
-- **Demographic coverage**: `n_detained_male`, `n_detained_female`, `n_detained_convicted_criminal`, and `n_detained_possibly_under_18` are collected but may sum to less than total population (especially in earlier dates).
-- **Facility name standardization**: Raw facility names are converted to Title Case and cleaned using project standards (abbreviations expanded, acronyms standardized).
-- **Missing dates**: Some facility codes may have gaps in coverage (facility temporarily offline or not yet operational). No records with `NA` values detected in core population variables.
+### Facility-level agreement
 
----
+For the 620 codes present in both datasets, over the overlap period:
 
-## Known Issues & Caveats
+| Agreement band | Facilities |
+|----------------|-----------|
+| Exactly equal | 410 |
+| Within 1% | 562 |
+| Within 5% | 601 |
+| Discrepant ≥ 5% | 19 |
 
-### Facility Consolidation
+Mean absolute difference for shared codes: 0.28 ADP.
 
-The parquet file contains 707 unique facility codes vs. 853 in the feather format. This difference reflects:
-
-- **Consolidation**: Duplicate or variant facility codes for the same physical location merged into single codes
-- **Stubs removed**: Some facility codes with minimal or zero activity may be excluded
-- **Data cleaning**: Variant spellings or alternate DETLOC assignments rationalized
-
-The exact mapping between feather and parquet codes should be verified before historical comparisons.
-
-### FY2026 Partial Year
-
-Data for FY2026 runs from October 1, 2025 through March 10, 2026—only 162 days into the fiscal year. FY2026 statistics and comparisons should be flagged as incomplete and not directly comparable to full fiscal years.
-
-### ICE Annual Statistics Gap
-
-ICE does not publish annual detention statistics for calendar year 2018. The ice-detention pipeline contains data for FY10–FY17 (from DMCP listings) and FY19–FY26 (from annual Excel reports). DDP data for 2018 exists but cannot be easily benchmarked against official ICE reporting.
-
-### Facility Type Classification Variability
-
-Some facilities may be classified differently across sources (DMCP, DDP, Vera). The pipeline uses a unified type hierarchy with overrides applied via `vera_type_overrides()` and facility-specific rules in `classify_facility_type_combined()`.
+The 19 discrepant facilities include several with very low ADP (< 2) where small absolute differences produce large percentages, and one substantive case: **Florida Soft-Sided Facility** (FLDSSFS), which shows 106 ADP in the feather vs. 26 ADP in the parquet over the overlap period.
 
 ---
 
-## Accessing the Data
+## Data Integration Summary
 
-### In the Pipeline
+### Pipeline Targets
+
+The feather file remains the source for `ddp_raw` and all existing FY25-era pipeline targets. The parquet file is loaded as a separate `ddp_new` target for FY26 (and future FY24) comparisons:
 
 ```r
-# Load the raw parquet data
-ddp_parquet <- arrow::read_parquet("data/ddp/facilities-daily-population-latest.parquet")
+tar_target(ddp_parquet_file,
+  here::here("data/ddp/facilities-daily-population-latest.parquet"),
+  format = "file")
 
-# Or use targets
-targets::tar_load(ddp_raw)
-targets::tar_load(ddp_codes)
+tar_target(ddp_new, arrow::read_parquet(ddp_parquet_file))
 ```
 
-### Outside the Pipeline
+The `ddp_facility_summary()` function handles both sources; the `state` column it previously required is treated as optional.
 
-```r
-library(arrow)
+### Canonical ID Matching
 
-# Read the full parquet file
-ddp <- read_parquet("data/ddp/facilities-daily-population-latest.parquet")
+DDP facility codes are matched to canonical facility IDs via `detloc_lookup_full`. Match coverage for the 620 shared codes is the same as documented for the feather file. The 87 parquet-only codes are covered by the same lookup where they have known DETLOCs; 28 remain unclassified.
 
-# Filter to a specific fiscal year
-library(dplyr)
-ddp_fy25 <- ddp |>
-  filter(date >= "2024-10-01", date < "2025-10-01")
-```
+### Canonical ID Space
+
+| ID Range | Count | Source |
+|----------|-------|--------|
+| 1–398 | ~347 | FY19–FY26 annual stats (frozen) |
+| 1001–1053 | 53 | DMCP 2015/2017 only |
+| 1054–1203 | 150 | DDP non-hold/non-medical |
+| 2001–2025 | 25 | ERO field offices |
+| 2026–2186 | 161 | Hold facilities |
+| 3001–3226 | 226 | Medical facilities |
 
 ---
 
-## Integration with ICE Annual Statistics
+## FY26 Comparison Export
 
-The DDP data serves as a validation and extension of ICE's published annual detention statistics. Key uses:
+The `ddp_fy26_comparison_export` target exports 8 pre-computed RDS files to `data/ddp-comparison-export-fy26/` covering **October 1, 2025 – February 5, 2026** (the ICE data cutoff in the Feb 12 release):
 
-1. **Facility-level verification**: Compare DDP daily averages with ICE annual stats to identify discrepancies and unreported facilities
-2. **Detailed time-series**: Examine daily, weekly, and monthly population trends not available in annual summary data
-3. **Coverage expansion**: Include facility types (medical, hold, federal) not reported in ICE annual statistics
-4. **Demographic breakdowns**: Daily gender, criminal status, and age indicators for canonical facilities
-
-Detailed comparison reports for FY2024, FY2025, and FY2026 are available separately.
+| Object | Description |
+|--------|-------------|
+| `ice_fy26` | ICE FY26b spreadsheet: 220 facilities, total ADP 67,139 |
+| `ddp_fy26` | DDP facility summary for the period (562 codes with peak > 0) |
+| `ddp_fy26_keyed` | DDP summary with canonical IDs; `in_ice_fy26` flag |
+| `daily_totals_fy26` | Aggregate daily population (128 days; peak 76,271 on 2026-01-16) |
+| `unmatched_fy26` | 354 DDP-only facilities; 118 with ADP ≥ 2 |
+| `daily_unmatched_fy26` | Daily population for unmatched codes |
+| `monthly_unmatched_fy26` | Monthly breakdown by type for unmatched codes |
+| `peak_fy26` | Peak summary with geocoding for unmatched facilities |
 
 ---
 
-## Related Documentation
+## Related Files
 
-- **ddp-integration-summary.md** — Implementation notes and DMCP matching details
-- **R/ddp.R** — Source code for DDP functions
-- **detloc_lookup_full.csv** — Complete DETLOC-to-canonical-ID reference
-- **facility_roster.csv** — Full roster with facility types, addresses, and DETLOCs
-- **DDP comparison reports** — FY2024, FY2025, FY2026 facility-level analyses
+- `R/ddp.R` — `ddp_facility_summary()`, `build_fy26b()`, `export_ddp_fy26_comparison_data()`
+- `data/ddp-comparison-export-fy26/` — pre-computed RDS files
+- `facility_roster.csv` — canonical facility addresses, types, DETLOCs
+- `ddp-integration-summary.md` — original feather integration notes

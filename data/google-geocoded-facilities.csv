@@ -73,11 +73,10 @@ canonical_id,address_string,google_lat,google_lon
 88,"3151 County Road 2425, Stryker, OH, 43557, USA",41.4586244,-84.35675069999999
 89,"1725 1st Ave., Longview, WA, 98632, USA",46.1405685,-122.9197446
 90,"313 Laurel St, Brainerd, MN, 56401, USA",46.3567043,-94.2053148
-91,"50 County Way, Portland, ME, 04102, USA",43.6513147,-70.28180789999999
+91,"50 County Way, Portland, ME, 4102, USA",43.6513147,-70.28180789999999
 92,"1601 Broadway, Dakota City, NE, 68731, USA",42.4160837,-96.4198175
 93,"111 West Commerce Street, Dallas, TX, 75202, USA",32.7780872,-96.8160791
 94,"448 2nd Avenue North, Nashville, TN, 37210, USA",36.1683772,-86.7793245
-95,"94 Grapevine Rd, Martinsburg, WV, 25401, USA",39.4359416,-77.95636999999999
 96,"3337 Highway 144, Owensboro, KY, 42303, USA",37.7871208,-87.0702975
 97,"800 West State Street, Farmington, UT, 84025, USA",40.9801077,-111.9045938
 98,"2801 Jordan Road, Fort Payne, AL, 35968, USA",34.4181788,-85.7729963
@@ -110,7 +109,6 @@ canonical_id,address_string,google_lat,google_lon
 129,"601 Mcdonough Boulevard, SE, Atlanta, GA, 30315, USA",33.7123589,-84.3685888
 130,"700 Arch St., Philadelphia, PA, 19106, USA",39.9526835,-75.1521168
 132,"600 Old Frankford Cr, Lexington, KY, 40510, USA",38.0654485,-84.5456706
-133,"304 N. 9th Street, Garden City, KS, 67846, USA",37.9676572,-100.8759294
 134,"3250 North Pinal Parkway, Florence, AZ, 85132, USA",33.0639575,-111.3794442
 135,"3250 North Pinal Parkway, Florence, AZ, 85232, USA",33.0639575,-111.3794442
 136,"54575 Tamiami Trl E, Ochopee, FL, 34141, USA",25.9015333,-81.3047701
@@ -119,7 +117,6 @@ canonical_id,address_string,google_lat,google_lon
 139,"3262 Highway 252, Folkston, GA, 31537, USA",30.8740285,-81.97946449999999
 141,"201 North Church Street, Winston-Salem, NC, 27101, USA",36.096971,-80.2422699
 142,"160 Elm Street, Greenfield, MA, 1301, USA",42.596401,-72.6125319
-143,"625 Franklin Farm Ln, Chambersburg, PA, 17201, USA",39.9349618,-77.62632529999999
 144,"7300 Marcie's Choice Lane, Frederick, MD, 21704, USA",39.3658822,-77.41307570000001
 145,"411 South Broadway Avenue, Albert Lea, MN, 56007, USA",43.6459816,-93.3681003
 146,"2006 Sweetgum Rd, Rochester, IN, 46975, USA",41.052251,-86.2317408
@@ -157,7 +154,6 @@ canonical_id,address_string,google_lat,google_lon
 183,"1800 Ridgemar Drive, Cleburne, TX, 76031, USA",32.3742348,-97.3884638
 184,"2201 23rd St NE, Willmar, MN, 56201, USA",45.1457492,-95.0139765
 185,"3050 Justice Way, Kankakee, IL, 60901, USA",41.0756796,-87.8581207
-186,"9747 NW Conant Avenue, Kansas City, MO, 64153, USA",39.2686641,-94.6755746
 188,"810 Commerce Street, Karnes City, TX, 78118, USA",28.8837901,-97.9119663
 190,"409 Fm 1144, Karnes City, TX, 78118, USA",28.8849772,-97.9008355
 191,"409 Fm 1144, Karnes City, TX, 78118, USA",28.8849772,-97.9008355
@@ -291,7 +287,6 @@ canonical_id,address_string,google_lat,google_lon
 339,"3843 Stagg Avenue, Basile, LA, 70515, USA",30.4870681,-92.581813
 341,"300 El Rancho Way, Dilley, TX, 78017, USA",28.6578745,-99.2003862
 343,"566 Veterans Drive, Pearsall, TX, 78061, USA",28.8973835,-99.1187908
-344,"1200 Airport Rd, Beaver, WV, 25813, USA",37.7708901,-81.1162375
 345,"13 Gaston Caperton Dr., Holden, WV, 25625, USA",37.7987366,-82.0950124
 346,"1170 Michigan Road, Port Huron, MI, 48060, USA",42.94231130000001,-82.47947909999999
 347,"5 Basler Dr., Ste. Genevieve, MO, 63670, USA",37.9653281,-90.0557269
@@ -344,6 +339,11 @@ canonical_id,address_string,google_lat,google_lon
 396,"410 Walnut Street, Yankton, SD, 57078, USA",42.8717874,-97.393024
 397,"3400 Concord Road, York, PA, 17402, USA",39.9865257,-76.6609023
 398,"215 5th Street, Marysville, CA, 95901, USA",39.1412869,-121.5866877
+399,"354 Doremus Avenue, Newark, NJ, 7105, USA",40.7209523,-74.12711809999999
+400,"10450 Rancho Road, Adelanto, CA, 92301, USA",34.5588215,-117.4372847
+402,"916, Lafayette, LA, 70501, USA",30.2476472,-91.99794109999999
+403,"P.o. Box 1000, Lewisburg, PA, 17837, USA",40.9645293,-76.8844101
+404,"Avenue C Psc 1005 Box 55, Fpo, FL, 34009, USA",26.747884,-80.9089789
 1001,"254 Peachtree Street Southwest, Atlanta, GA, 30303, USA",33.7475641,-84.3955253
 1002,"3423 Highway 252 East, Folkston, GA, 31537, USA",30.8749079,-81.9806924
 1003,"5555 Giant Highway, Richmond, CA, 94806, USA",37.9950562,-122.3539701
@@ -438,8 +438,8 @@ canonical_id,address_string,google_lat,google_lon
 1092,"26601 Airport Rd, Punta Gorda, FL, 33982, USA",26.9147413,-82.0069675
 1093,"2604 W. Woodland Ridge Dr., Lecanto, FL, 34461, USA",28.8449599,-82.4771851
 1094,"389 NW Quinten St, Lake City, FL, 32055, USA",30.2206278,-82.6435752
-1095,"20706 U.S. Highway 90 West, Sanderson, FL, 32087, USA",30.214814,-82.372328
-1096,"33123 Oil Well Road, Punta Gorda, FL, 33955, USA",26.8043803,-81.9034968
+1095,"33123 Oil Well Road, Punta Gorda, FL, 33955, USA",26.8043803,-81.9034968
+1096,"19000 S.W. 377th Street, Florida City, FL, 33034, USA",25.41532,-80.497996
 1097,"1001 Justice Lane, Bunnell, FL, 32110, USA",29.452478,-81.2560651
 1098,"101 South Bridge Street, Labelle, FL, 33935, USA",26.7604172,-81.43660779999999
 1099,"11490 Harlee Rd., Palmetto, FL, 34221, USA",27.6366807,-82.53996289999999
@@ -551,6 +551,9 @@ canonical_id,address_string,google_lat,google_lon
 1206,"446 Greenbag Road, Morgantown, WV, 26501, USA",39.6043797,-79.9500454
 1207,"355 Dolan Drive, Augusta, WV, 26704, USA",39.3024474,-78.6470052
 1208,"600 W Boxelder Road, Gillette, WY, 82718, USA",44.2774703,-105.5124533
+1210,"1155 North Pinal Parkway, Florence, AZ, 85132, USA",33.0435332,-111.3774191
+1211,"2020 Main St, Sarasota, FL, 34237, USA",27.3362409,-82.52978929999999
+1212,"416 W 4th St, Davenport, IA, 52801, USA",41.52422130000001,-90.5792465
 2001,"180 Ted Turner Dr. SW, Suite 522, Atlanta, GA, 30303, USA",33.749609,-84.3973461
 2002,"31 Hopkins Plaza, 6th Floor, Baltimore, MD, 21201, USA",39.2879833,-76.616563
 2003,"1000 District Avenue, Burlington, MA, 01803, USA",42.4825992,-71.20881349999999

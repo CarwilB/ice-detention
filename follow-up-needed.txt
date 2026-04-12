@@ -1,0 +1,8 @@
+2: Panel facilities mapped outside the frozen <400 ID block!
+  These facilities failed to match the registry (likely a name mismatch):
+  ID 402: Lafayette Parish Correctional Center (Lafayette, LA)
+ID 403: Lewisburg US Penitentiary (Lewisburg, PA)
+ID 404: Migrant Ops Center Main A (Fpo, FL)
+ID 1211: Sarasota County Jail (Sarasota, FL)
+ID 1212: Scott County Detention. Facility (Davenport, IA)
+ID 1022: Tom Green County Jail (San Angelo, TX)

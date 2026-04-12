@@ -344,6 +344,12 @@ canonical_id,canonical_name,canonical_city,canonical_state
 396,Yankton County Jail,Yankton,SD
 397,York County Prison,York,PA
 398,Yuba County Jail,Marysville,CA
+399,Essex County Correctional Facility,Newark,NJ
+400,Desert View Annex,Adelanto,CA
+401,Dilley Processing Single Adult Female,Dilley,TX
+402,Lafayette Parish Correctional Center,Lafayette,LA
+403,Lewisburg US Penitentiary,Lewisburg,PA
+404,Migrant Ops Center Main A,Fpo,FL
 1001,Atlanta City Detention Center,Atlanta,GA
 1002,Folkston ICE Processing Center (D. Ray James),Folkston,GA
 1003,Contra Costa County Jail West,Richmond,CA
@@ -397,3 +403,4 @@ canonical_id,canonical_name,canonical_city,canonical_state
 1051,Santa Ana City Jail,Santa Ana,CA
 1052,Tensas Parish Detention Center,Waterproof,LA
 1053,Utah County Jail,Spanish Fork,UT
+1210,CCA Central Arizona Detention Center,Florence,AZ

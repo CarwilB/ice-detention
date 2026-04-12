@@ -9,7 +9,7 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 10,Allen Parish Public Safety Complex,7340 Highway 26 West,Oberlin,LA,70655,30.624485,-92.783878,preference:google_maps,30.624485,-92.783878,30.620368,-92.756652,vera_institute,2.6451169569934083,full,TRUE
 11,Anchorage Correctional Complex,1400 E. 4th Ave,Anchorage,AK,99501,61.2185041,-149.8573539,google_maps+vera_institute,61.2185041,-149.8573539,61.21838,-149.857649,vera_institute,0.020976733627585422,full,FALSE
 12,Anne Arundel County Ordnance Road Correctional Center,600 E. Ordnance Road,Glen Burnie,MD,21060,39.19977069999999,-76.5940407,google_maps+vera_institute,39.19977069999999,-76.5940407,39.199695,-76.59393,vera_institute,0.012721907073168968,full,FALSE
-14,Baker Correctional Institution,20706 Us 90 W,Sanderson,FL,32087,30.214814,-82.372328,preference:google_maps,30.214814,-82.372328,25.417168,-80.502088,vera_institute,564.259011397186,full,TRUE
+14,Baker Correctional Institution,20706 Us 90 W,Sanderson,FL,32087,30.214814,-82.372328,preference:google_maps,30.214814,-82.372328,30.214808,-82.372325,vera_institute,7.267821124128885e-4,full,FALSE
 16,Baker County Sheriff's Office,1 Sheriff Office Drive,Macclenny,FL,32063,30.29596799999999,-82.1217298,google_maps+vera_institute,30.29596799999999,-82.1217298,30.29596,-82.12172,vera_institute,0.0012948318187851816,full,FALSE
 17,Baldwin County Correctional Center,200 Hand Ave.,Bay Minette,AL,36507,30.8852959,-87.774794,google_maps+vera_institute,30.8852959,-87.774794,30.88454,-87.774769,vera_institute,0.08408609517593539,full,FALSE
 18,Beaver County Jail,6000 Woodlawn Boulevard,Aliquippa,PA,15001,40.6457985,-80.24205549999999,preference:google_maps,40.6457985,-80.24205549999999,40.629013,-80.239052,vera_institute,1.8835900009660886,full,TRUE
@@ -48,7 +48,7 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 58,Catahoula Correctional Center,499 Old Columbia Road,Harrisonburg,LA,71430,31.7755649,-91.8368181,preference:google_maps,31.7755649,-91.8368181,31.860451,-91.962215,vera_institute,15.148330539683705,full,TRUE
 59,CBP Chula Vista BPS,311 Athey Ave,San Diego,CA,92154,32.5650942,-117.0524063,google_maps,32.5650942,-117.0524063,NA,NA,NA,NA,full,FALSE
 60,CBP San Ysidro POE,720 E San Ysidro Blvd,San Ysidro,CA,92173,32.5436666,-117.0297398,google_maps,32.5436666,-117.0297398,NA,NA,NA,NA,full,FALSE
-61,Central Arizona Florence Correctional Complex,1100 Bowling Road,Florence,AZ,85232,33.0433427,-111.3720644,preference:google_maps,33.0433427,-111.3720644,33.064366,-111.378808,vera_institute,2.4206973449544975,full,TRUE
+61,Central Arizona Florence Correctional Complex,1100 Bowling Road,Florence,AZ,85232,33.0433427,-111.3720644,preference:google_maps,33.0433427,-111.3720644,33.043834,-111.371793,vera_institute,0.06020290462152899,full,FALSE
 63,Central Texas Detention Facility,218 S. Laredo St,San Antonio,TX,78207,29.4234143,-98.4970774,google_maps+vera_institute,29.4234143,-98.4970774,29.423532,-98.496982,vera_institute,0.016020562495089354,full,FALSE
 64,Charleston County Detention Center,3841 Leeds Avenue,North Charleston,SC,29405,32.8460024,-80.01401620000001,preference:google_maps,32.8460024,-80.01401620000001,32.858631,-80.008795,vera_institute,1.4865232571932059,full,TRUE
 66,Chase County Jail,301 South Walnut Street,Cottonwood Falls,KS,66845,38.3678608,-96.5386769,google_maps+vera_institute,38.3678608,-96.5386769,38.375417,-96.538985,vera_institute,0.8406403020878218,full,FALSE
@@ -73,11 +73,10 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 88,Correctional. Center of Northwest Ohio,3151 County Road 2425,Stryker,OH,43557,41.4586244,-84.35675069999999,google_maps+vera_institute,41.4586244,-84.35675069999999,41.458755,-84.357211,vera_institute,0.04101519726275672,full,FALSE
 89,Cowlitz County Juvenile,1725 1st Ave.,Longview,WA,98632,46.1405685,-122.9197446,google_maps+vera_institute,46.1405685,-122.9197446,46.141403,-122.917798,vera_institute,0.17636149786616,full,FALSE
 90,Crow Wing County Jail,313 Laurel St,Brainerd,MN,56401,46.3567043,-94.2053148,google_maps+vera_institute,46.3567043,-94.2053148,46.355872,-94.205913,vera_institute,0.10330824471943974,full,FALSE
-91,Cumberland County Jail,50 County Way,Portland,ME,04102,43.6513147,-70.28180789999999,google_maps+vera_institute,43.6513147,-70.28180789999999,43.650862,-70.28162,vera_institute,0.0525590324630234,full,FALSE
+91,Cumberland County Jail,50 County Way,Portland,ME,4102,43.6513147,-70.28180789999999,google_maps+vera_institute,43.6513147,-70.28180789999999,43.650862,-70.28162,vera_institute,0.0525590324630234,full,FALSE
 92,Dakota County Jail,1601 Broadway,Dakota City,NE,68731,42.4160837,-96.4198175,google_maps+vera_institute,42.4160837,-96.4198175,42.41501,-96.418874,vera_institute,0.14231332394688748,full,FALSE
 93,Dallas County Jail - Lew Sterrett Justice Center,111 West Commerce Street,Dallas,TX,75202,32.7780872,-96.8160791,google_maps+vera_institute,32.7780872,-96.8160791,32.776299,-96.815601,vera_institute,0.20380078181471023,full,FALSE
 94,Davidson County Sheriff,448 2nd Avenue North,Nashville,TN,37210,36.1683772,-86.7793245,auto:google_maps+vera_institute,36.1683772,-86.7793245,36.186232,-86.785022,vera_institute,2.050166035238862,full,TRUE
-95,Daviess County Detention,94 Grapevine Rd,Martinsburg,WV,25401,39.4359416,-77.95636999999999,google_maps,39.4359416,-77.95636999999999,NA,NA,NA,NA,full,FALSE
 96,Daviess County Detention,3337 Highway 144,Owensboro,KY,42303,37.7871208,-87.0702975,google_maps+vera_institute,37.7871208,-87.0702975,37.787934,-87.070426,vera_institute,0.09112606132299907,full,FALSE
 97,Davis County,800 West State Street,Farmington,UT,84025,40.9801077,-111.9045938,google_maps+vera_institute,40.9801077,-111.9045938,40.980658,-111.904465,vera_institute,0.06213845072850586,full,FALSE
 98,Dekalb County Detention Center,2801 Jordan Road,Fort Payne,AL,35968,34.4181788,-85.7729963,auto:google_maps+vera_institute,34.4181788,-85.7729963,34.428756,-85.760138,vera_institute,1.6656120766038922,full,TRUE
@@ -104,13 +103,12 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 122,Elmore County Jail,2255 E. 8th North,Mountain Home,ID,83647,43.1368404,-115.6731309,google_maps+vera_institute,43.1368404,-115.6731309,43.137034,-115.672984,vera_institute,0.024607004041405076,full,FALSE
 123,Eloy Detention Center,1705 East Hanna Rd.,Eloy,AZ,85131,32.8176183,-111.5200907,google_maps+vera_institute,32.8176183,-111.5200907,32.817677,-111.51927,vera_institute,0.07697017809242591,full,FALSE
 124,Erie County Jail,Department Of Corrections 1618 Ash Street,Erie,PA,16503,42.123951,-80.06694809999999,google_maps+vera_institute,42.123951,-80.06694809999999,42.124775,-80.065897,vera_institute,0.1261333940617868,full,FALSE
-125,Delaney Hall Detention Facility,451 Doremus Avenue,Newark,NJ,07105,40.7181313,-74.12849729999999,preference:google_maps,40.7181313,-74.12849729999999,40.730608,-74.135742,vera_institute,1.5157342570380197,full,TRUE
+125,Delaney Hall Detention Facility,451 Doremus Avenue,Newark,NJ,07105,40.7181313,-74.12849729999999,preference:google_maps,40.7181313,-74.12849729999999,40.717437,-74.127789,vera_institute,0.09758918504413477,full,FALSE
 127,Etowah County Jail,827 Forrest Avenue,Gadsden,AL,35901,34.0165766,-86.0123672,google_maps+vera_institute,34.0165766,-86.0123672,34.015737,-86.011933,vera_institute,0.10157496208389359,full,FALSE
 128,Euless City Jail,1102 W. Euless Blvd.,Euless,TX,76040,32.8290476,-97.1022044,google_maps+vera_institute,32.8290476,-97.1022044,32.831663,-97.094468,vera_institute,0.7791576545991222,full,FALSE
 129,FCI Atlanta,"601 Mcdonough Boulevard, SE",Atlanta,GA,30315,33.7123589,-84.3685888,google_maps+vera_institute,33.7123589,-84.3685888,33.712316,-84.368033,vera_institute,0.05163000264151497,full,FALSE
 130,FDC Philadelphia,700 Arch St.,Philadelphia,PA,19106,39.9526835,-75.1521168,google_maps+vera_institute,39.9526835,-75.1521168,39.952909,-75.151925,vera_institute,0.02993348659415992,full,FALSE
 132,Fayette County Detention Center,600 Old Frankford Cr,Lexington,KY,40510,38.0654485,-84.5456706,google_maps+vera_institute,38.0654485,-84.5456706,38.066097,-84.544851,vera_institute,0.10172547416991849,full,FALSE
-133,Finney County Jail,304 N. 9th Street,Garden City,KS,67846,37.9676572,-100.8759294,google_maps+vera_institute,37.9676572,-100.8759294,37.967657,-100.875929,vera_institute,4.152224258748964e-5,full,FALSE
 134,Florence Service Processing Center,3250 North Pinal Parkway,Florence,AZ,85132,33.0639575,-111.3794442,google_maps+vera_institute,33.0639575,-111.3794442,33.06496,-111.378505,vera_institute,0.14172612620237937,full,FALSE
 135,Florence Staging Facility,3250 North Pinal Parkway,Florence,AZ,85232,33.0639575,-111.3794442,google_maps+vera_institute,33.0639575,-111.3794442,33.06496,-111.378505,vera_institute,0.14172612620237937,full,FALSE
 136,Florida Soft-Sided Facility,54575 Tamiami Trl E,Ochopee,FL,34141,25.86434,-80.897956,preference:vera_institute,25.9015333,-81.3047701,25.86434,-80.897956,vera_institute,40.907553093813256,full,TRUE
@@ -119,7 +117,6 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 139,Folkston ICE Processing Center,3262 Highway 252,Folkston,GA,31537,30.8740285,-81.97946449999999,google_maps+vera_institute,30.8740285,-81.97946449999999,30.874581,-81.979593,vera_institute,0.06264729842980905,full,FALSE
 141,Forsyth County Jail,201 North Church Street,Winston-Salem,NC,27101,36.096971,-80.2422699,google_maps+vera_institute,36.096971,-80.2422699,36.09651,-80.242718,vera_institute,0.06518142961764577,full,FALSE
 142,Franklin County House of Correction,160 Elm Street,Greenfield,MA,1301,42.596401,-72.6125319,google_maps+vera_institute,42.596401,-72.6125319,42.596402,-72.61246,vera_institute,0.005886424007787963,full,FALSE
-143,Franklin County Jail,625 Franklin Farm Ln,Chambersburg,PA,17201,40.001549,-77.64441,preference:vera_institute,39.9349618,-77.62632529999999,40.001549,-77.64441,vera_institute,7.562855827904908,full,TRUE
 144,Frederick County Detention Center,7300 Marcie's Choice Lane,Frederick,MD,21704,39.3658822,-77.41307570000001,google_maps+vera_institute,39.3658822,-77.41307570000001,39.36508,-77.41508,vera_institute,0.194023162702623,full,FALSE
 145,Freeborn County Adult Detention Center,411 South Broadway Avenue,Albert Lea,MN,56007,43.6459816,-93.3681003,preference:google_maps,43.6459816,-93.3681003,43.646255,-93.367781,vera_institute,0.03980281606005651,full,FALSE
 146,Fulton County Jail Indiana,2006 Sweetgum Rd,Rochester,IN,46975,41.052251,-86.2317408,google_maps,41.052251,-86.2317408,NA,NA,NA,NA,full,FALSE
@@ -157,7 +154,6 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 183,Johnson County Corrections Center,1800 Ridgemar Drive,Cleburne,TX,76031,32.3742348,-97.3884638,google_maps+vera_institute,32.3742348,-97.3884638,32.374902,-97.388465,vera_institute,0.07418934064770381,full,FALSE
 184,Kandiyohi County Jail,2201 23rd St NE,Willmar,MN,56201,45.1457492,-95.0139765,google_maps+vera_institute,45.1457492,-95.0139765,45.146011,-95.013688,vera_institute,0.03686970406064644,full,FALSE
 185,Kankakee County Jail (Jerome Combs Detention Center),3050 Justice Way,Kankakee,IL,60901,41.0756796,-87.8581207,google_maps+vera_institute,41.0756796,-87.8581207,41.075738,-87.859227,vera_institute,0.09296092611419421,full,FALSE
-186,Kansas City Holdroom,9747 NW Conant Avenue,Kansas City,MO,64153,39.2686641,-94.6755746,google_maps+vera_institute,39.2686641,-94.6755746,39.268843,-94.675548,vera_institute,0.020024133370813296,full,FALSE
 188,Karnes County Correctional Center,810 Commerce Street,Karnes City,TX,78118,28.8837901,-97.9119663,google_maps+vera_institute,28.8837901,-97.9119663,28.883485,-97.911848,vera_institute,0.03582748312618776,full,FALSE
 190,Karnes County Residential Center,409 Fm 1144,Karnes City,TX,78118,28.884651,-97.915298,preference:vera_institute,28.8849772,-97.9008355,28.884651,-97.915298,vera_institute,1.4085571158394101,full,TRUE
 191,Karnes County Immigration Processing Center,409 Fm 1144,Karnes City,TX,78118,28.884651,-97.915298,preference:vera_institute,28.8849772,-97.9008355,28.884651,-97.915298,vera_institute,1.4085571158394101,full,TRUE
@@ -289,9 +285,8 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 336,Sioux County Jail,4363 Ironwood Avenue,Orange City,IA,51041,43.0185162,-96.0766585,google_maps+vera_institute,43.0185162,-96.0766585,43.019269,-96.076873,vera_institute,0.08550467529615244,full,FALSE
 337,South Central Regional Jail,1001 Center Way,Charleston,WV,25309,38.3110351,-81.7099734,google_maps+vera_institute,38.3110351,-81.7099734,38.312102,-81.710402,vera_institute,0.12438803042845334,full,FALSE
 339,South Louisiana ICE Processing Center,3843 Stagg Avenue,Basile,LA,70515,30.4870681,-92.581813,google_maps+vera_institute,30.4870681,-92.581813,30.486577,-92.583366,vera_institute,0.15851432129475612,full,FALSE
-341,South Texas Family Residential Center,300 El Rancho Way,Dilley,TX,78017,28.6578745,-99.2003862,google_maps,28.6578745,-99.2003862,NA,NA,NA,NA,full,FALSE
+341,South Texas Family Residential Center,300 El Rancho Way,Dilley,TX,78017,28.6578745,-99.2003862,google_maps+vera_institute,28.6578745,-99.2003862,28.658051,-99.200575,vera_institute,0.02691729304492394,full,FALSE
 343,South Texas ICE Processing Center,566 Veterans Drive,Pearsall,TX,78061,28.8973835,-99.1187908,google_maps+vera_institute,28.8973835,-99.1187908,28.894651,-99.121943,vera_institute,0.4318423533638834,full,FALSE
-344,Southern Regional,1200 Airport Rd,Beaver,WV,25813,37.7708901,-81.1162375,google_maps,37.7708901,-81.1162375,NA,NA,NA,NA,full,FALSE
 345,Southwestern Regional Jail,13 Gaston Caperton Dr.,Holden,WV,25625,37.7987366,-82.0950124,google_maps,37.7987366,-82.0950124,NA,NA,NA,NA,full,FALSE
 346,St. Clair County Jail,1170 Michigan Road,Port Huron,MI,48060,42.94231130000001,-82.47947909999999,google_maps+vera_institute,42.94231130000001,-82.47947909999999,42.94196,-82.481242,vera_institute,0.1487207032136109,full,FALSE
 347,Ste. Genevieve County Sheriff/Jail,5 Basler Dr.,Ste. Genevieve,MO,63670,37.9653281,-90.0557269,google_maps+vera_institute,37.9653281,-90.0557269,37.965948,-90.055775,vera_institute,0.06905858632207279,full,FALSE
@@ -344,6 +339,11 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 396,Yankton County Jail,410 Walnut Street,Yankton,SD,57078,42.8717874,-97.393024,google_maps+vera_institute,42.8717874,-97.393024,42.87126,-97.39367,vera_institute,0.0788071118353843,full,FALSE
 397,York County Prison,3400 Concord Road,York,PA,17402,39.9865257,-76.6609023,google_maps+vera_institute,39.9865257,-76.6609023,39.987597,-76.663603,vera_institute,0.25909782248625474,full,FALSE
 398,Yuba County Jail,215 5th Street,Marysville,CA,95901,39.1412869,-121.5866877,google_maps+vera_institute,39.1412869,-121.5866877,39.140598,-121.586895,vera_institute,0.07866078168250737,full,FALSE
+399,Essex County Correctional Facility,354 Doremus Avenue,Newark,NJ,7105,40.7209523,-74.12711809999999,auto:google_maps+vera_institute,40.7209523,-74.12711809999999,40.730608,-74.135742,vera_institute,1.2964864658717021,full,TRUE
+400,Desert View Annex,10450 Rancho Road,Adelanto,CA,92301,34.5588215,-117.4372847,google_maps+vera_institute,34.5588215,-117.4372847,34.558822,-117.437285,vera_institute,6.201450429076567e-5,full,FALSE
+402,Lafayette Parish Correctional Center,916 Lafayette Street,Lafayette,LA,70501,30.2476472,-91.99794109999999,google_maps,30.2476472,-91.99794109999999,NA,NA,NA,NA,full,FALSE
+403,Lewisburg US Penitentiary,P.o. Box 1000,Lewisburg,PA,17837,40.9645293,-76.8844101,google_maps,40.9645293,-76.8844101,NA,NA,NA,NA,po_box,FALSE
+404,Migrant Ops Center Main A,Avenue C Psc 1005 Box 55,Fpo,FL,34009,NA,NA,divergent,26.747884,-80.9089789,21.521757,-77.781167,vera_institute,662.059038492668,full,TRUE
 1001,Atlanta City Detention Center,254 Peachtree Street Southwest,Atlanta,GA,30303,33.7475641,-84.3955253,google_maps+vera_institute,33.7475641,-84.3955253,33.747313,-84.395391,vera_institute,0.030557638991732167,full,FALSE
 1002,Folkston ICE Processing Center (D. Ray James),3423 Highway 252 East,Folkston,GA,31537,30.8749079,-81.9806924,google_maps+vera_institute,30.8749079,-81.9806924,30.872094,-81.98247,vera_institute,0.35592537721482725,full,FALSE
 1003,Contra Costa County Jail West,5555 Giant Highway,Richmond,CA,94806,37.9950562,-122.3539701,google_maps+vera_institute,37.9950562,-122.3539701,37.994269,-122.352143,vera_institute,0.18247273923896254,full,FALSE
@@ -438,8 +438,8 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 1092,Charlotte County Jail,26601 Airport Rd,Punta Gorda,FL,33982,NA,NA,divergent,26.9147413,-82.0069675,26.917117,-82.043435,vera_institute,3.625366809783533,full,TRUE
 1093,Citrus County Jail,2604 W. Woodland Ridge Dr.,Lecanto,FL,34461,28.8449599,-82.4771851,google_maps+vera_institute,28.8449599,-82.4771851,28.846057,-82.477527,vera_institute,0.12645536064916535,full,FALSE
 1094,Columbia County Jail,389 NW Quinten St,Lake City,FL,32055,30.2206278,-82.6435752,google_maps+vera_institute,30.2206278,-82.6435752,30.220628,-82.643575,vera_institute,2.9391306444596126e-5,full,FALSE
-1095,Baker C. I.,20706 U.S. Highway 90 West,Sanderson,FL,32087,30.214814,-82.372328,google_maps+vera_institute,30.214814,-82.372328,30.214808,-82.372325,vera_institute,7.267821124128885e-4,full,FALSE
-1096,"Charlotte CI, Punta Gorda",33123 Oil Well Road,Punta Gorda,FL,33955,26.8043803,-81.9034968,google_maps+vera_institute,26.8043803,-81.9034968,26.805735,-81.903725,vera_institute,0.15232882025857866,full,FALSE
+1095,"Charlotte CI, Punta Gorda",33123 Oil Well Road,Punta Gorda,FL,33955,26.8043803,-81.9034968,google_maps+vera_institute,26.8043803,-81.9034968,26.805735,-81.903725,vera_institute,0.15232882025857866,full,FALSE
+1096,Dade Correctional Inst,19000 S.W. 377th Street,Florida City,FL,33034,25.41532,-80.497996,google_maps+vera_institute,25.41532,-80.497996,25.417168,-80.502088,vera_institute,0.45948069047403184,full,FALSE
 1097,Flagler County Jail,1001 Justice Lane,Bunnell,FL,32110,29.452478,-81.2560651,google_maps+vera_institute,29.452478,-81.2560651,29.452338,-81.256133,vera_institute,0.01689861252608673,full,FALSE
 1098,Hendry County Jail,101 South Bridge Street,Labelle,FL,33935,26.7604172,-81.43660779999999,google_maps+vera_institute,26.7604172,-81.43660779999999,26.760472,-81.436646,vera_institute,0.007177407055544172,full,FALSE
 1099,Manatee County Detention-Annex,11490 Harlee Rd.,Palmetto,FL,34221,27.6366807,-82.53996289999999,google_maps+vera_institute,27.6366807,-82.53996289999999,27.637592,-82.539955,vera_institute,0.10133492488012454,full,FALSE
@@ -552,6 +552,9 @@ canonical_id,canonical_name,facility_address,facility_city,facility_state,facili
 1207,Potomac Highlands Regional Jail,355 Dolan Drive,Augusta,WV,26704,39.3024474,-78.6470052,google_maps+vera_institute,39.3024474,-78.6470052,39.30279,-78.647008,vera_institute,0.03809614368363633,full,FALSE
 1208,Campbell County Jail,600 W Boxelder Road,Gillette,WY,82718,44.2774703,-105.5124533,google_maps+vera_institute,44.2774703,-105.5124533,44.277316,-105.509858,vera_institute,0.20732826496466022,full,FALSE
 1209,CBP Movement Coordination Area,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no_address,FALSE
+1210,CCA Central Arizona Detention Center,1155 North Pinal Parkway,Florence,AZ,85132,33.0435332,-111.3774191,auto:google_maps+vera_institute,33.0435332,-111.3774191,33.064366,-111.378808,vera_institute,2.3201154484454483,full,TRUE
+1211,Sarasota County Jail,2020 Main St,Sarasota,FL,34237,27.3362409,-82.52978929999999,google_maps+vera_institute,27.3362409,-82.52978929999999,27.336241,-82.529789,vera_institute,3.165077743902161e-5,full,FALSE
+1212,Scott County Detention. Facility,416 W 4th St,Davenport,IA,52801,41.52422130000001,-90.5792465,google_maps,41.52422130000001,-90.5792465,NA,NA,NA,NA,full,FALSE
 2001,Atlanta Field Office,"180 Ted Turner Dr. SW, Suite 522",Atlanta,GA,30303,33.749609,-84.3973461,google_maps+vera_institute,33.749609,-84.3973461,33.753164,-84.393159,vera_institute,0.5532783137592231,full,FALSE
 2002,Baltimore Field Office,"31 Hopkins Plaza, 6th Floor",Baltimore,MD,21201,39.2879833,-76.616563,preference:google_maps,39.2879833,-76.616563,39.255423,-76.680689,vera_institute,6.6014893965523145,full,TRUE
 2003,Boston Field Office,1000 District Avenue,Burlington,MA,01803,42.4825992,-71.20881349999999,google_maps+vera_institute,42.4825992,-71.20881349999999,42.482884,-71.208937,vera_institute,0.033248287562935665,full,FALSE
