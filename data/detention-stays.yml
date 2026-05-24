@@ -1,0 +1,132 @@
+---
+# Provenance metadata for DDP Detention Stays dataset (latest release)
+
+source:
+  title: "Deportation Data Project — ICE Detention Stays (Latest Release)"
+  publisher: "Deportation Data Project"
+  principal_investigators:
+    - "Graeme Blair, University of California–Los Angeles"
+    - "David Hausman, University of California–Berkeley School of Law"
+    - "Phil Neff, University of Washington Center for Human Rights"
+  url: "https://deportationdata.org/data/processed/ice.html"
+  file_url: "https://github.com/deportationdata/ice/raw/refs/heads/main/data/detention-stays-latest.parquet"
+  codebook_url: "https://deportationdata.org/docs/ice/codebook.html"
+  foia_request: "2026-ICLI-00005"
+  notes: >
+    A stay-level summary of the ICE detention stints data (see detention-stints.yml
+    for the row-per-stint version). DDP constructs this dataset by grouping stints
+    into stays (a single continuous period of ICE detention, possibly spanning
+    multiple facilities via transfer) and then reducing each stay to one row. It
+    retains details from the first, last, and longest stints, and adds
+    detention_facility_codes_all — a semicolon-separated, ordered string of every
+    DETLOC code visited during the stay. This is the primary dataset for tracing
+    transfer itineraries.
+  citation: >
+    Blair, Graeme, David Hausman, and Phil Neff. 2025. "Immigration and Customs
+    Enforcement Individual-Level Data: An Introduction."
+    https://deportationdata.org/docs/ice/ice-data-preprint.pdf
+  license: "CC-0 (no rights reserved)"
+
+data:
+  filename: "data/ddp/detention-stays-latest.parquet"
+  format: "Parquet"
+  rows: 1087417
+  columns: 70
+  unit_of_observation: >
+    One row per detention stay. A stay is a single continuous period of ICE
+    detention for one person, which may span multiple facilities via transfer.
+    Persons with multiple separate stays (released and re-detained) appear
+    once per stay; n_stays records how many total stays that person has.
+  temporal_coverage:
+    stay_book_in_min: "2004-12-05"
+    stay_book_in_max: "2026-03-11"
+    stay_book_out_min: "2022-10-01"
+    stay_book_out_max: "2026-03-11"
+    note: >
+      stay_book_out is available from 2022-10-01; stays that began before
+      that date are retained only if they were still open or released on/after
+      that cutoff.
+  distinct_persons: 1014866
+  stays_with_multiple_stints: 684787
+  distinct_facility_codes: 706
+
+  key_columns:
+    stay_ID: "Unique identifier for this detention stay."
+    unique_identifier: >
+      Anonymized person ID (corresponding to A-number). Links all stays for
+      the same individual; also links to the stints dataset.
+    n_stints: >
+      Number of facility stints comprising this stay. 1 = single facility,
+      2+ = at least one transfer.
+    n_stays: >
+      Total number of separate detention stays on record for this person
+      (across all data). Most persons have 1; some have 2–8.
+    detention_facility_codes_all: >
+      Semicolon-separated, ordered string of every DETLOC facility code
+      visited during the stay, from first to last. This is the key column
+      for itinerary analysis. Example: "SPMHOLD; KANDIMN; PINEPLA; JENATLA".
+      Multiple visits to the same facility within one stay produce duplicate
+      entries.
+    stay_book_in_date_time: "Start of this detention stay (POSIXct)."
+    stay_book_out_date_time: "End of this stay; NA if still detained (POSIXct; ~103k NAs)."
+    stay_book_out_date: "Date portion of stay_book_out_date_time."
+    stay_release_reason: >
+      Reason the stay ended: most common values are Removed, Order of
+      recognizance, Bonded Out - IJ, Paroled, Order of supervision.
+      ~103k NAs (stays still open or unresolved).
+
+  first_last_longest:
+    note: >
+      DDP preserves details for three stints within each stay: the first
+      (book-in at the start of the stay), the last (book-out from the stay),
+      and the longest (the facility where the most time was spent). If a
+      stay has only one stint, all three are identical.
+    columns:
+      - detention_facility_{first/last/longest}: "Facility name"
+      - detention_facility_code_{first/last/longest}: "DETLOC code"
+      - book_in_date_time_{first/last/longest}: "Stint start (POSIXct)"
+      - book_out_date_time_{first/last/longest}: "Stint end (POSIXct)"
+      - city_{first/last/longest}: "Facility city (many NAs)"
+      - state_{first/last/longest}: "Facility state"
+      - county_{first/last/longest}: "Facility county (many NAs)"
+
+  demographic_and_legal_columns:
+    note: >
+      All person-level fields (demographics, legal status, criminal history,
+      bond, removal) are identical to those in the stints dataset. Values
+      are taken from the last stint in the stay (per DDP processing), except
+      for bond amounts where the lowest initial bond set amount is retained.
+      See detention-stints.yml for full column descriptions and NA rates.
+
+  processing_notes:
+    - >
+      Stays are constructed from stints by grouping on a stay ID. DDP first
+      drops duplicate stints (same facility + book-in datetime), then retains
+      only the last stint's demographic/legal fields. First and longest stint
+      details are joined back separately.
+    - >
+      detention_facility_codes_all is the only column preserving the full
+      transfer chain. It is ordered chronologically and uses semicolons as
+      delimiters with a single space after each semicolon ("; ").
+    - >
+      Persons with multiple stays appear multiple times (once per stay).
+      Use unique_identifier to identify repeat detainees. n_stays > 1 means
+      the person was released and re-detained at least once.
+    - >
+      This dataset covers 706 distinct DETLOC codes (same as detention-stints),
+      compared to 853 in the older feather-format daily population file.
+
+import:
+  source_url: "https://github.com/deportationdata/ice/raw/refs/heads/main/data/detention-stays-latest.parquet"
+  local_path: "data/ddp/detention-stays-latest.parquet"
+  imported_with: "arrow::read_parquet()"
+  pipeline_target: "not yet wired as a pipeline target"
+  date_downloaded: "2026-05-24"
+  related_file: "data/ddp/detention-stints-latest.parquet"
+  note: >
+    The companion stints file (detention-stints-latest.parquet) contains one
+    row per facility stint and supports more granular itinerary analysis (e.g.
+    time at each facility, exact transfer sequences). The stays file is better
+    for person-level analyses (release outcomes, demographics, total stay
+    length) and for quickly finding stays that include a given facility via
+    detention_facility_codes_all.

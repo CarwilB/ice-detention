@@ -1,0 +1,184 @@
+---
+# Provenance metadata for DDP Detention Stints dataset (latest release)
+
+source:
+  title: "Deportation Data Project — ICE Detention Stints (Latest Release)"
+  publisher: "Deportation Data Project"
+  principal_investigators:
+    - "Graeme Blair, University of California–Los Angeles"
+    - "David Hausman, University of California–Berkeley School of Law"
+    - "Phil Neff, University of Washington Center for Human Rights"
+  url: "https://deportationdata.org/data/processed/ice.html"
+  file_url: "https://github.com/deportationdata/ice/raw/refs/heads/main/data/detention-stints-latest.parquet"
+  codebook_url: "https://deportationdata.org/docs/ice/codebook.html"
+  foia_request: "2026-ICLI-00005"
+  notes: >
+    Individual-level ICE detention records obtained via FOIA and processed by
+    the Deportation Data Project. The source data is provided by ICE as an
+    XLSX file with one row per detention stint — one continuous period at
+    one facility within a larger detention stay. Individuals transferred between
+    facilities have one row per facility. DDP posts a minimally-processed version
+    with a duplicate flag added and blank/redacted columns dropped. A separate
+    stay-level dataset (one row per detention stay) is also available from DDP
+    but is not used in this project.
+  citation: >
+    Blair, Graeme, David Hausman, and Phil Neff. 2025. "Immigration and Customs
+    Enforcement Individual-Level Data: An Introduction."
+    https://deportationdata.org/docs/ice/ice-data-preprint.pdf
+  license: "CC-0 (no rights reserved)"
+
+data:
+  filename: "data/ddp/detention-stints-latest.parquet"
+  format: "Parquet"
+  rows: 2617844
+  columns: 61
+  unit_of_observation: >
+    One row per detention stint — a single continuous period at one detention
+    facility. Persons transferred between facilities during a single stay
+    generate one row per facility. Most persons have one stint per stay, but
+    some have several.
+  temporal_coverage:
+    book_in_date_time_min: "2004-12-05"
+    book_in_date_time_max: "2026-03-11"
+    book_out_date_time_min: "2022-10-01"
+    book_out_date_time_max: "2026-03-11"
+    note: >
+      book_in_date_time goes back to 2004, reflecting long-running stints that
+      were still active when the dataset was last refreshed. book_out_date_time
+      starts at 2022-10-01, meaning the dataset is effectively filtered to stints
+      that ended (or were still open) on or after October 1, 2022.
+  source_files:
+    - file: "2026-ICLI-00005_Detentions_FY23_20260311_Redacted.xlsx"
+      sheet: "FY2023"
+      rows: 501188
+    - file: "2026-ICLI-00005_Detentions_FY24_20260311_Redacted.xlsx"
+      sheet: "FY2024"
+      rows: 572085
+    - file: "2026-ICLI-00005_Detentions_FY25_20260311_Redacted.xlsx"
+      sheet: "FY2025"
+      rows: 890984
+    - file: "2026-ICLI-00005_Detentions_FY26_20260311_Redacted.xlsx"
+      sheet: "FY2026"
+      rows: 628146
+    - file: "2026-ICLI-00005_Detentions_PriorFY23_20260311_Redacted.xlsx"
+      sheet: "Prior FY2023"
+      rows: 25441
+  distinct_detention_facility_codes: 707
+  distinct_detention_facility_names: 727
+  distinct_book_in_aor: 25
+  likely_duplicates: 11671
+
+  key_identifiers:
+    unique_identifier: >
+      Anonymized person ID corresponding to an individual's A-number (alien
+      registration number). Allows linking stints for the same person within
+      and across stays. 7,341 rows are missing this field.
+    stay_ID: >
+      Identifier for a single continuous detention stay. Multiple stints
+      within the same stay share the same stay_ID. 7,341 rows are missing.
+    stint_ID: >
+      Identifier for this specific stint at one facility within a stay.
+      7,341 rows are missing.
+
+  column_groups:
+    stay_dates:
+      - stay_book_in_date_time: "Start of the person's overall detention stay (POSIXct)"
+      - stay_book_out_date_time: "End of the overall stay; NA if still detained (POSIXct; 177,257 NAs)"
+      - stay_book_out_date: "Date portion of stay_book_out_date_time (Date)"
+      - stay_release_reason: "Reason the overall stay ended (e.g. Removed, Bonded Out); 240,280 NAs"
+    stint_dates:
+      - book_in_date_time: "Start of this stint at this facility (POSIXct)"
+      - book_out_date_time: "End of this stint; NA if still detained (POSIXct; 61,888 NAs)"
+      - detention_release_reason: "Reason this stint ended (most common: Transferred, Removed; 102,790 NAs)"
+    facility:
+      - detention_facility: "Facility name as provided by ICE (727 distinct values)"
+      - detention_facility_code: "ICE DETLOC code (707 distinct values); equivalent to detloc in this project's other datasets"
+      - book_in_site: "ERO sub-office or site where book-in was processed (225 distinct values)"
+      - book_in_aor: "ICE Area of Responsibility (25 distinct ERO field offices)"
+      - city: "Facility city (396,853 NAs)"
+      - state: "Facility state (3,741 NAs)"
+      - county: "Facility county (397,773 NAs)"
+    demographics:
+      - gender: "Male / Female / Unknown"
+      - birth_year: "Year of birth (integer; 1 NA)"
+      - race: "ICE race classification (41,366 NAs)"
+      - ethnicity: "Hispanic Origin / Not of Hispanic Origin (1,293,868 NAs)"
+      - religion: "ICE religion classification (2,553,174 NAs — mostly blank)"
+      - marital_status: "Marital status at book-in (11,575 NAs)"
+      - birth_country: "Country of birth"
+      - citizenship_country: "Country of citizenship (9 NAs)"
+    immigration:
+      - entry_status: "Immigration status at entry (218,891 NAs)"
+      - entry_date: "Date of entry to the US (1,039,813 NAs)"
+      - book_in_criminality: "ICE criminality classification at book-in"
+      - detainee_classification: "Security classification: Low / Medium Low / Medium High / High"
+      - case_threat_level: "ICE threat level 1 / 2 / 3 / NA (coded 'NA' as string for non-criminal; 14,557 true NAs)"
+      - case_status: "Case status (14,639 NAs)"
+      - case_category: "Case category (508,362 NAs)"
+      - final_order_yes_no: "Whether a final order of removal is in effect (14,557 NAs)"
+      - final_order_date: "Date of final order (916,230 NAs)"
+      - final_charge: "Final immigration charge (757,831 NAs)"
+      - case_ina_236c_yes_no: "Whether INA 236(c) mandatory detention applies"
+      - offense_ina_236c_yes_no: "Whether the offense triggers INA 236(c)"
+    criminal_history:
+      - msc_charge: "Most serious criminal charge (1,777,542 NAs — most detainees have no criminal charge)"
+      - most_serious_conviction_code: "Code for most serious conviction (1,777,542 NAs)"
+      - msc_charge_date: "Date of most serious charge (1,797,191 NAs)"
+      - msc_conviction_date: "Date of most serious conviction (1,777,619 NAs)"
+      - msc_sentence_days / months / years: "Sentence length for most serious conviction"
+      - msc_criminal_charge_status: "Status of most serious charge (1,777,542 NAs)"
+      - msc_criminal_charge_status_code: "Code for charge status"
+      - msc_crime_class: "Crime classification (1,801,760 NAs)"
+      - felon: "Whether classified as a felon (1,308,469 NAs)"
+      - known_terrorist_yes_no: "ICE terrorist designation flag"
+      - suspected_gang_yes_no: "ICE gang affiliation flag"
+    removal:
+      - departed_date: "Date of departure/removal (756,437 NAs)"
+      - departure_country: "Country departed to (757,000 NAs)"
+      - final_program: "Final program (e.g. IDENT/IAFIS, Secure Communities; 82,863 NAs)"
+    bond:
+      - initial_bond_set_amount: "Initial bond amount set by ICE (2,417,290 NAs — most have no bond)"
+      - initial_bond_set_date: "Date initial bond was set (2,596,622 NAs)"
+      - bond_posted_date: "Date bond was posted (2,427,582 NAs)"
+      - bond_posted_amount: "Amount of bond posted (2,427,580 NAs)"
+    provenance:
+      - file_original: "Source XLSX filename from the FOIA response"
+      - sheet_original: "Sheet name within the source XLSX"
+      - row_original: "Row number within the source sheet"
+      - likely_duplicate: "TRUE for 11,671 stints that are likely duplicates of another row"
+
+  notes:
+    - >
+      Stint vs. stay: A stay is a single period of ICE detention; a stint is one
+      continuous segment at one facility within a stay. Transfers generate new
+      stints. To analyze detention at the person-stay level, group by stay_ID.
+      For facility-level analysis, each row represents one stay at that facility.
+    - >
+      detention_facility_code is the DETLOC code used throughout this project's
+      other datasets (detloc_lookup, facility_roster, etc.), enabling joins to
+      canonical facility IDs.
+    - >
+      case_threat_level uses the string "NA" (not a true missing value) for
+      detainees with no ICE threat level. True NA values (14,557 rows) reflect
+      missing data. Use caution when filtering: is.na() will not catch "NA" strings.
+    - >
+      book_in_date_time extends back to 2004 because a handful of stints begun
+      before 2022 appear to still be open (no book_out_date_time). This is
+      likely a data artifact or unresolved record for very long-term detainees.
+    - >
+      city, county, and book_in_site have many NAs (~397k). These fields come
+      from the source ICE data and are not consistently populated. Facility
+      location should be joined from the facility roster via detention_facility_code.
+
+import:
+  source_url: "https://github.com/deportationdata/ice/raw/refs/heads/main/data/detention-stints-latest.parquet"
+  local_path: "data/ddp/detention-stints-latest.parquet"
+  imported_with: "arrow::read_parquet()"
+  pipeline_target: "not yet wired as a pipeline target"
+  date_downloaded: "2026-05-24"
+  note: >
+    The "latest" in the filename reflects DDP's versioning — DDP overwrites
+    this file with each new data release. The current version covers data
+    through March 11, 2026 (FOIA request 2026-ICLI-00005, released March 2026).
+    When a new release is available, re-download and verify the date range and
+    column set before running dependent analyses.

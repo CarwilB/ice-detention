@@ -1,0 +1,121 @@
+---
+# Provenance metadata for DDP ICE Arrests dataset (latest release)
+
+source:
+  title: "Deportation Data Project — ICE Arrests (Latest Release)"
+  publisher: "Deportation Data Project"
+  principal_investigators:
+    - "Graeme Blair, University of California–Los Angeles"
+    - "David Hausman, University of California–Berkeley School of Law"
+    - "Phil Neff, University of Washington Center for Human Rights"
+  url: "https://deportationdata.org/data/processed/ice.html"
+  file_url: "https://github.com/deportationdata/ice/raw/refs/heads/main/data/arrests-latest.parquet"
+  codebook_url: "https://deportationdata.org/docs/ice/codebook.html"
+  foia_request: "2026-ICLI-00005"
+  notes: >
+    Individual-level ICE arrest records obtained via FOIA and processed by the
+    Deportation Data Project. Each row represents one arrest (apprehension)
+    action. A person may appear more than once if arrested multiple times.
+    DDP adds a duplicate_likely flag and drops blank/redacted columns.
+    This dataset can be linked to the detention stays and stints datasets
+    via unique_identifier.
+  citation: >
+    Blair, Graeme, David Hausman, and Phil Neff. 2025. "Immigration and Customs
+    Enforcement Individual-Level Data: An Introduction."
+    https://deportationdata.org/docs/ice/ice-data-preprint.pdf
+  license: "CC-0 (no rights reserved)"
+
+data:
+  filename: "data/ddp/arrests-latest.parquet"
+  format: "Parquet"
+  rows: 713464
+  columns: 28
+  unit_of_observation: >
+    One row per arrest (apprehension) event. A person arrested more than once
+    appears multiple times. Link to stays/stints via unique_identifier.
+  temporal_coverage:
+    apprehension_date_min: "2022-10-01"
+    apprehension_date_max: "2026-03-11"
+  distinct_persons: 651237
+  duplicate_likely_flagged: 14343
+
+  key_identifiers:
+    unique_identifier: >
+      Anonymized person ID corresponding to an individual's A-number.
+      Links to the stays and stints datasets. 14,343 NAs (same rows
+      where duplicate_likely is also NA).
+    duplicate_likely: >
+      TRUE for arrests flagged as likely duplicates — same person within
+      24 hours of another arrest record. 14,343 NAs alongside
+      unique_identifier NAs.
+
+  geography:
+    apprehension_state: >
+      U.S. state where arrest occurred, as a full uppercase name
+      (e.g. "MINNESOTA", "TEXAS"). 107,376 NAs.
+    apprehension_aor: >
+      ICE Area of Responsibility (ERO field office jurisdiction).
+      7,383 NAs.
+    apprehension_site_landmark: >
+      Named location or landmark of the arrest (courthouse, address, etc.).
+      15,257 NAs.
+    toa_current_duty_site: >
+      ICE officer's current duty station; provides an alternative
+      geographic indicator when apprehension_state is missing.
+
+  arrest_fields:
+    apprehension_date: "Date of arrest (Date; no NAs)."
+    apprehension_date_time: "Datetime of arrest (POSIXct; no NAs)."
+    apprehension_type: >
+      Targeted (planned operation against specific individual) or
+      Collateral (incidental arrest during another operation).
+      467,445 NAs — missing for most of the pre-FY25 data.
+    apprehension_method: "Method of arrest (e.g. Criminal arrest, Administrative)."
+    apprehension_criminality: >
+      ICE criminality classification at time of arrest:
+      1 Convicted Criminal / 2 Pending Criminal Charges /
+      3 Other Immigration Violator.
+    arresting_agency: "Agency that made the arrest (e.g. ICE, CBP)."
+    operation: "Named ICE enforcement operation, if applicable. 535,105 NAs."
+
+  case_and_legal_fields:
+    case_status: "Case status at time of record extraction."
+    case_category: "ICE case category. 39,922 NAs."
+    case_criminality: "Criminality classification at case level. 18,760 NAs."
+    case_threat_level: >
+      ICE threat level 1/2/3 or the string "NA" (non-criminal).
+      18,760 true NAs. Same string-vs-NA caveat as the stints dataset.
+    final_order_yes_no: "Whether a final order of removal is in effect."
+    final_order_date: "Date of final order. 324,692 NAs."
+
+  demographic_fields:
+    gender: "Male / Female."
+    birth_year: "Year of birth (integer). 2 NAs."
+    citizenship_country: "Country of citizenship as recorded by ICE."
+
+  removal_fields:
+    departed_date: "Date of departure/removal. 273,664 NAs."
+    departure_country: "Country removed to. 273,836 NAs."
+    final_program: "Final program classification."
+
+  provenance_fields:
+    file_original: "Source XLSX filename from the FOIA response."
+    sheet_original: "Sheet name within the source XLSX."
+    row_original: "Row number within the source sheet."
+
+  crosswalk_to_stays:
+    note: >
+      99.6% of post-inauguration Minnesota arrests (unique_identifier
+      values) match a row in the detention stays dataset. The arrests
+      dataset covers 651,237 distinct persons vs. 1,014,866 in stays,
+      reflecting that some persons are detained without a preceding
+      arrest record in this FOIA production (e.g. transfers from other
+      agencies, or arrests in a different FOIA file).
+    join_key: unique_identifier
+
+import:
+  source_url: "https://github.com/deportationdata/ice/raw/refs/heads/main/data/arrests-latest.parquet"
+  local_path: "data/ddp/arrests-latest.parquet"
+  imported_with: "arrow::read_parquet()"
+  pipeline_target: "not yet wired as a pipeline target"
+  date_downloaded: "2026-05-24"
