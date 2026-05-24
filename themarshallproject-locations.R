@@ -203,7 +203,11 @@ hold_stub_address_patches <- function(missing_hold_addresses = NULL) {
 
     "AMTHOLD", "manual", "9100 S Georgia St",
     "Amarillo",    "79118", NA_character_,
-    NA_real_, NA_real_, NA_character_, as.Date(NA), as.Date(NA)
+    NA_real_, NA_real_, NA_character_, as.Date(NA), as.Date(NA),
+
+    "ALBHOLD", "manual", " 11 Old Stonebreak Road",
+    "Malta",      "12020", "Saratoga",
+    NA_real_, NA_real_, NA_character_, as.Date("2022-11-15"),  as.Date(NA)
   )
 
   if (is.null(missing_hold_addresses)) {

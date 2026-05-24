@@ -1,0 +1,216 @@
+---
+title: "ICE Website Nodes"
+author: "Carwil Bjork-James"
+format: 
+  html:
+    code-fold: true
+    df-print: kable
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+#| label: load-packages
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(ggplot2)
+library(scales)
+library(knitr)
+library(sf)
+library(leaflet)
+library(leafpop)
+library(targets)
+
+tar_source()  # load all R/ functions, including dmcp_manual_matches()
+tar_load(c(ice_office_nodes, ice_office_nodes_es,
+           facility_roster, vera_facilities, ero_canonical))
+```
+
+You can add options to executable code like this
+
+```{r}
+cat("ice_nodes:", nrow(ice_office_nodes), "offices\n")
+cat("ice_nodes:", nrow(ice_office_nodes_es), "offices from Spanish-language website\n" )
+cat("facility_roster:", nrow(facility_roster), "facilities\n")
+cat("vera_facilities:", nrow(vera_facilities), "facilities\n")
+```
+
+```{r}
+
+# Better approach: cross-reference by (city + state), then check address similarity
+# This avoids false positives from suite-number differences
+
+# Build a lookup: city+state → roster facilities
+roster_by_loc <- facility_roster |>
+  mutate(
+    city_upper  = str_to_upper(str_trim(facility_city)),
+    state_upper = str_to_upper(str_trim(facility_state))
+  )
+```
+
+Most Spanish ICE nodes have the same addresses as English ICE nodes. There are `r ice_office_nodes_es |> filter((zip %in% ice_office_nodes$zip)) |>   filter(!(address_line1 %in% ice_office_nodes$address_line1)) |> nrow()` such cases.
+
+Visually, we compare those ICE nodes with the same ZIP code and different address text nd see they are the same offices.
+
+However, there are `r ice_office_nodes_es |> filter(!(zip %in% ice_office_nodes$zip)) |> filter(!(address_line1 %in% ice_office_nodes$address_line1))` cases with novel ZIP codes. We add these to our English list to run the analysis.
+
+```{r ice-language-combination}
+# Most addresses are the same
+ice_office_nodes_es |> filter((zip %in% ice_office_nodes$zip)) |>
+  filter(!(address_line1 %in% ice_office_nodes$address_line1)) |> nrow()
+
+# Spanish and English ICE nodes with shared ZIP
+ice_office_nodes_es |> 
+  filter((zip %in% ice_office_nodes$zip)) |> 
+  filter(!(address_line1 %in% ice_office_nodes$address_line1))
+ice_office_nodes |> 
+  filter((zip %in% ice_office_nodes_es$zip)) |> 
+  filter(!(address_line1 %in% ice_office_nodes_es$address_line1))
+
+# Spanish ICE nodes with novel ZIP codes and addresses
+ice_office_nodes_es_novel <- ice_office_nodes_es |> 
+  filter(!(zip %in% ice_office_nodes$zip)) |> 
+  filter(!(address_line1 %in% ice_office_nodes$address_line1))
+
+ice_office_nodes_es_novel 
+
+ice_nodes <- bind_rows(ice_office_nodes, ice_office_nodes_es_novel)
+
+```
+
+```{r}
+# For each ice node, check if any roster facility shares city+state
+ice_with_roster <- ice_nodes |>
+  mutate(
+    city_upper  = str_to_upper(str_trim(city)),
+    state_upper = str_to_upper(str_trim(state))
+  ) |>
+  left_join(
+    roster_by_loc |> 
+      select(canonical_id, canonical_name, facility_address, facility_city,
+             facility_state, detloc, facility_type_wiki, city_upper, state_upper),
+    by = c("city_upper", "state_upper"),
+    relationship = "many-to-many"
+  )
+
+# Now filter to cases where the street address actually matches
+# (first word of street number and name)
+matched <- ice_with_roster |>
+  filter(!is.na(canonical_id)) |>
+  mutate(
+    node_street   = str_to_upper(str_trim(address_line1)),
+    roster_street = str_to_upper(str_trim(facility_address)),
+    # Check if the node street appears in the roster street or vice versa
+    street_match = str_detect(roster_street, fixed(node_street, ignore_case = TRUE)) |
+                   str_detect(node_street, fixed(roster_street, ignore_case = TRUE))
+  ) |>
+  filter(street_match)
+
+not_matched <- ice_nodes |>
+  dplyr::mutate(
+    city_upper  = stringr::str_to_upper(stringr::str_trim(city)),
+    state_upper = stringr::str_to_upper(stringr::str_trim(state)),
+    node_street = stringr::str_to_upper(stringr::str_trim(address_line1))
+    ) |>
+  dplyr::filter(!node_id %in% matched$node_id)
+
+cat("City+state+street matches:", nrow(matched), "\n\n")
+matched |>
+  select(page_title, field_office_name, address_line1, city, state,
+         canonical_id, canonical_name, facility_type_wiki, detloc) 
+```
+
+```{r vera-matches}
+
+# Cross-reference all 110 ice nodes against vera_facilities by state + street
+vera_by_state <- vera_facilities |>
+  dplyr::mutate(
+    vera_street  = stringr::str_to_upper(stringr::str_extract(facility_address, "^[^,]+") |> stringr::str_trim()),
+    state_upper  = stringr::str_to_upper(stringr::str_trim(facility_state))
+  )
+
+ice_nodes_vera <- ice_nodes |>
+  dplyr::mutate(
+    state_upper = stringr::str_to_upper(stringr::str_trim(state))
+  ) |>
+  dplyr::left_join(
+    vera_by_state |>
+      dplyr::select(detloc, facility_name, facility_address, facility_city, facility_state,
+                    type_grouped_corrected, vera_street, state_upper),
+    by = "state_upper",
+    relationship = "many-to-many"
+  ) |>
+  dplyr::filter(!is.na(detloc)) |>
+  dplyr::mutate(
+    node_street  = stringr::str_to_upper(stringr::str_trim(address_line1)),
+    street_match = stringr::str_detect(vera_street, stringr::fixed(node_street, ignore_case = TRUE)) |
+                   stringr::str_detect(node_street, stringr::fixed(vera_street, ignore_case = TRUE))
+  ) |>
+  dplyr::filter(street_match)
+
+cat("ICE nodes matched to Vera:", nrow(ice_nodes_vera), "\n")
+
+# Full Vera match table
+ice_nodes_vera |>
+  dplyr::select(page_title, field_office_name, address_line1, city, state,
+                detloc, facility_name, type_grouped_corrected)
+
+# Summary: which of the 65 "unmatched to roster" are in Vera?
+unmatched_in_vera <- not_matched |>
+  dplyr::filter(node_id %in% ice_nodes_vera$node_id)
+cat("\nOf the 65 unmatched to roster,", nrow(unmatched_in_vera), "are in Vera\n")
+
+# True unknowns: not in roster, not in vera
+true_unknowns <- not_matched |>
+  dplyr::filter(!node_id %in% ice_nodes_vera$node_id)
+cat("True unknowns (not in roster or Vera):", nrow(true_unknowns), "\n")
+
+unmatched_vs_ero <- not_matched |> 
+  dplyr::left_join(ero_canonical |> 
+     dplyr::mutate(
+         city_upper  = stringr::str_to_upper(stringr::str_trim(city)),
+         state_upper = stringr::str_to_upper(stringr::str_trim(state)),
+         ero_street  = stringr::str_to_upper(stringr::str_trim(address))
+         ) |>
+  dplyr::select(canonical_id, canonical_name, address, 
+                city, state, detloc, city_upper, state_upper, ero_street),
+                by = c("city_upper", "state_upper"),
+                relationship = "many-to-many",
+                suffix = c("_node", "_ero")
+  ) |>
+  dplyr::filter(!is.na(canonical_id)) |>
+  dplyr::mutate(
+    street_match = stringr::str_detect(ero_street,stringr::fixed(node_street, ignore_case = TRUE)) |
+      stringr::str_detect(node_street, stringr::fixed(ero_street, ignore_case = TRUE))
+    ) |>
+  dplyr::filter(street_match)
+```
+
+```{r match-summary}
+
+# Final summary table
+cat("=== ICE Office Node Coverage Summary ===\n\n")
+cat("Total ICE office nodes (node range 62000-62300):", nrow(ice_nodes), "\n\n")
+
+cat("IN facility_roster (by city+state+street):", nrow(matched), "\n")
+cat("  Of these, in Vera:", sum(matched$node_id %in% ice_nodes_vera$node_id), "\n")
+cat("  Of these, NOT in Vera:", sum(!matched$node_id %in% ice_nodes_vera$node_id), "\n\n")
+
+cat("NOT in facility_roster:", nrow(not_matched), "\n")
+cat("  In Vera (potential new roster entries):", nrow(unmatched_in_vera), "\n")
+# cat("    Of these, matched to ERO canonical:", nrow(unmatched_vs_ero2), "\n")
+cat("  Not in Vera or roster (truly new):", nrow(true_unknowns), "\n\n")
+
+cat("True unknowns - not in roster or Vera:\n")
+true_unknowns |>
+  dplyr::select(page_title, field_office_name, address_line1, city, state) |>
+  arrange(state, city)
+```
