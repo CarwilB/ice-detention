@@ -77,12 +77,13 @@
 92,"Dakota County Jail","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
 93,"Dallas County Jail - Lew Sterrett Justice Center","panel",TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",4
 94,"Davidson County Sheriff","panel",TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,"auto:google_maps+vera_institute",5
+95,"Daviess County Detention","panel",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,"google_maps",1
 96,"Daviess County Detention","panel",TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",3
 97,"Davis County","panel",TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",4
 98,"Dekalb County Detention Center","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"auto:google_maps+vera_institute",6
 100,"Delaware County Jail (George W. Hill)","panel",TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,"google_maps+vera_institute",5
 101,"Denver Contract Detention Facility","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",6
-102,"Denver Contract Detention Facility (Cdf) Ii","panel",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,"google_maps",1
+102,"Denver Contract Detention Facility (CDF) II","panel",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,"google_maps",1
 103,"Department of Corrections Hagatna","panel",TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",4
 105,"Adelanto ICE Processing Center","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
 106,"Diamondback Correctional Facility","panel",TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,"google_maps",2
@@ -109,6 +110,7 @@
 129,"FCI Atlanta","panel",TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",3
 130,"FDC Philadelphia","panel",TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",3
 132,"Fayette County Detention Center","panel",TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",5
+133,"Finney County Jail","panel",TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",4
 134,"Florence Service Processing Center","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
 135,"Florence Staging Facility","panel",TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",4
 136,"Florida Soft-Sided Facility","panel",TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"preference:vera_institute",3
@@ -117,6 +119,7 @@
 139,"Folkston ICE Processing Center","panel",TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",3
 141,"Forsyth County Jail","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
 142,"Franklin County House of Correction","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
+143,"Franklin County Jail","panel",TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"preference:vera_institute",3
 144,"Frederick County Detention Center","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
 145,"Freeborn County Adult Detention Center","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",6
 146,"Fulton County Jail Indiana","panel",TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,"google_maps",1
@@ -154,6 +157,7 @@
 183,"Johnson County Corrections Center","panel",TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,"google_maps+vera_institute",5
 184,"Kandiyohi County Jail","panel",TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",4
 185,"Kankakee County Jail (Jerome Combs Detention Center)","panel",TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,"google_maps+vera_institute",4
+186,"Kansas City Holdroom","panel",TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",4
 188,"Karnes County Correctional Center","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
 190,"Karnes County Residential Center","panel",TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:vera_institute",4
 191,"Karnes County Immigration Processing Center","panel",TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:vera_institute",4
@@ -193,8 +197,8 @@
 226,"Marion County Jail","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"divergent",6
 227,"Marshall County Jail","panel",TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,"google_maps+vera_institute",5
 228,"Martin County Jail","panel",TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",4
-229,"Mccook Detention Center","panel",TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,"google_maps",1
-230,"Mchenry County Correctional Facility","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
+229,"McCook Detention Center","panel",TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,"google_maps",1
+230,"McHenry County Correctional Facility","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
 231,"Mesa Verde ICE Processing Center","panel",TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,"preference:google_maps",4
 232,"Miami Correctional Center","panel",TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",3
 233,"Miami Federal Detention","panel",TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",4
@@ -287,6 +291,7 @@
 339,"South Louisiana ICE Processing Center","panel",TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",5
 341,"South Texas Family Residential Center","panel",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,"google_maps+vera_institute",1
 343,"South Texas ICE Processing Center","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
+344,"Southern Regional","panel",TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,"google_maps",2
 345,"Southwestern Regional Jail","panel",TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,"google_maps",2
 346,"St. Clair County Jail","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
 347,"Ste. Genevieve County Sheriff/Jail","panel",TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",3
@@ -301,7 +306,6 @@
 357,"Northwest ICE Processing Center","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
 358,"Tallahatchie County Correctional Facility","panel",TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"preference:google_maps",3
 359,"Teller County Jail","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
-360,"Texas Health Huguley Hospital","panel",TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",3
 361,"Theo Lacy Facility","panel",TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,"google_maps+vera_institute",5
 362,"Tooele County Jail","panel",TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",5
 363,"Tornillo-Guadalupe POE","panel",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,"google_maps",1
@@ -339,11 +343,8 @@
 396,"Yankton County Jail","panel",TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,"google_maps+vera_institute",3
 397,"York County Prison","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
 398,"Yuba County Jail","panel",TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,"google_maps+vera_institute",5
-399,"Essex County Correctional Facility",NA,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"auto:google_maps+vera_institute",6
-400,"Desert View Annex",NA,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",3
-402,"Lafayette Parish Correctional Center",NA,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,"google_maps",1
-403,"Lewisburg US Penitentiary",NA,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,"google_maps",3
-404,"Migrant Ops Center Main A",NA,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"divergent",3
+399,"Essex County Correctional Facility","panel",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"auto:google_maps+vera_institute",6
+400,"Desert View Annex","panel",TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",3
 1001,"Atlanta City Detention Center","dmcp_only",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
 1002,"Folkston ICE Processing Center (D. Ray James)","dmcp_only",TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,"google_maps+vera_institute",4
 1003,"Contra Costa County Jail West","dmcp_only",TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,"google_maps+vera_institute",5
@@ -365,7 +366,7 @@
 1019,"Orange County Intake Release Facility","dmcp_only",TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,"google_maps+vera_institute",5
 1020,"Kent County Jail","dmcp_only",TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,"google_maps+vera_institute",5
 1021,"Glendale Police Department","dmcp_only",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
-1022,"Tom Green County Jail","dmcp_only",TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",5
+1022,"Tom Green County Jail","dmcp_only",FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",4
 1023,"Yavapai County Detention Center","dmcp_only",TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,"google_maps+vera_institute",5
 1024,"Dale G. Haile Detention Center","dmcp_only",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",6
 1025,"Sangamon County Jail","dmcp_only",TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,"google_maps+vera_institute",5
@@ -552,9 +553,60 @@
 1207,"Potomac Highlands Regional Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 1208,"Campbell County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 1209,"CBP Movement Coordination Area","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,NA,2
-1210,"CCA Central Arizona Detention Center","ddp_other",TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,"auto:google_maps+vera_institute",5
-1211,"Sarasota County Jail","ddp_other",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,"google_maps+vera_institute",1
-1212,"Scott County Detention. Facility","ddp_other",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,"google_maps",1
+1210,"CCA Central Arizona Detention Center","ddp_other",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"auto:google_maps+vera_institute",6
+1211,"Tex Health Huguley Hospital","ddp_other",TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps",3
+1212,"Imperial County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1213,"Miami FCI (Former MCC)","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"divergent",2
+1214,"Hardee County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1215,"Hernando County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1216,"Dekalb County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1217,"Department Of Corrections","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"auto:google_maps+vera_institute",2
+1218,"Indianapolis Metropolitan PD","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1219,"Lexinton Fed.Med Center","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1220,"Mccreary USP","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1221,"Pollock USP","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1222,"Oakdale Fed. Det. Center","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"auto:google_maps+vera_institute",2
+1223,"Essex Co. Jail, Middleton","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1224,"Carroll County Detention Center","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1225,"Cass County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1226,"Artesia Family Residential Center","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1227,"Artesia City Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1228,"Hidalgo County Detention Center","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1229,"Madison County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1230,"Livingston Correctional","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1231,"Midstate Correctional","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1232,"Belmont County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1233,"Grady County Law Enforcement Ctr","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1234,"Sheridan Fed.Corr.Inst.","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1235,"Allenwood (Med) FCI","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1236,"Westmoreland County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1237,"Dalby Correctional Institute","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1238,"Brownsville Police Dept.","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1239,"Crystal City Corr. Center","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1240,"Culberson County Sheriff's","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1241,"Ector County L.E.C.","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1242,"Freestone County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1243,"Hamilton County Jail (TX)","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1244,"Limestone County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1245,"Mercedes Police Dept.","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1246,"Somervell County Sheriff's Dept.","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1247,"St T Criminal Just Complx","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+1248,"Anvil Mountain Cc, Nome,","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps",2
+1249,"Alleghany County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps",2
+1250,"Amherst County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps",2
+1251,"Blount County Juvenile Detention Cntr","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps",2
+1252,"La Tuna FCI","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps",2
+1253,"Bryan County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps",2
+1254,"Chatham County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps",2
+1255,"Drt Cpc Holding","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,NA,2
+1256,"Franklin County Detention Center","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps",2
+1257,"Kaufman County Detention Center","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps",2
+1258,"Lafayette Parish So Jail Annex","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps",2
+1259,"Liberty County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps",2
+1260,"Leon County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps",2
+1261,"B.r.r.j. Lynchburg","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps",2
+1262,"Natrona County. Juv. Detention. Center","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps",2
+1263,"Onslow County Jail","ddp_other",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps",2
 2001,"Atlanta Field Office","ero",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",3
 2002,"Baltimore Field Office","ero",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"preference:google_maps",3
 2003,"Boston Field Office","ero",FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,"google_maps+vera_institute",3
@@ -727,7 +779,7 @@
 2170,"York Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 2171,"Corpus Christi Eor Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"preference:google_maps",2
 2172,"El Paso Soft Sided Facility","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"vera_institute",2
-2173,"Mcallen Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2173,"McAllen Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 2174,"Montgomery Hold Rm","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"auto:google_maps+vera_institute",2
 2175,"Lorton, Va Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"preference:google_maps",2
 2176,"Roanoke Sub-Office Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
@@ -735,6 +787,15 @@
 2178,"Richland Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 2179,"Spokane Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 2180,"Wenatchee Hold Room","hold",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2181,"Montgomery Hold Room","hold",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2182,"Berks Hold Room","hold",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2183,"Eden Det Ctr Hold Room","hold",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2184,"El Paso SPC Juvenile","hold",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2185,"George Bush Intercontinental","hold",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2186,"Bellingham BPS ERO Holdroom","hold",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
+2187,"CBP O'hare Airport Trm 5 B.c. Ext","hold",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps",2
+2188,"ERO Charleston Wv Hold Room","hold",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps",2
+2189,"Savannah Hold Room","hold",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps",2
 3001,"Bartlett Regional Hospital","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 3002,"Banner University Medical Phoenix","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
 3003,"Banner Ironwood Med Ctr","medical",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,"google_maps+vera_institute",2
