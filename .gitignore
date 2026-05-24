@@ -25,5 +25,8 @@ Thumbs.db
 # data/*.xls
 .positai
 
+# Large datasets
+data/ddp/*.parquet
+
 /.quarto/
 **/*.quarto_ipynb
