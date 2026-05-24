@@ -8,6 +8,12 @@ clean_facility_names <- function(x) {
   # Typos and truncations
   x <- stringr::str_replace_all(x, "Facili\\b", "Facility")
   x <- stringr::str_replace_all(x, "Processsing", "Processing")
+  x <- stringr::str_replace_all(x, "Hosp\\b", "Hospital")
+
+  # Fix "Mc" casing (e.g., Mcdowell -> McDowell, Mcclain -> McClain)
+  x <- stringr::str_replace_all(x, "\\bMc[a-z]", \(m) {
+    stringr::str_c("Mc", stringr::str_to_upper(stringr::str_sub(m, 3, 3)))
+  })
 
   # Abbreviation expansions
   expansions <- c(
@@ -27,10 +33,12 @@ clean_facility_names <- function(x) {
   acronyms <- c(
     "\\bOf\\b" = "of",
     "\\bUs\\b" = "US",
+    "\\bIi\\b" = "II",
     "\\bIce\\b" = "ICE",
     "\\bEro\\b" = "ERO",
     "\\bMdc\\b" = "MDC",
     "\\bCbp\\b" = "CBP",
+    "\\bCdf\\b" = "CDF",
     "\\bBps\\b" = "BPS",
     "\\bCca\\b" = "CCA",
     "\\bFci\\b" = "FCI",
@@ -81,7 +89,8 @@ clean_facility_names <- function(x) {
     "ERO El Paso Camp East Montana" = "Camp East Montana",
     "Port Isabel SPC" = "Port Isabel Detention Center",
     "Bluebonnet Detention Facility" = "Bluebonnet Detention Center",
-    "Berlin Federal. Correctional. Institution." = "Berlin Federal Correctional Institution"
+    "Berlin Federal. Correctional. Institution." = "Berlin Federal Correctional Institution",
+    "Sunny Glen Cld Home Ndr Center" = "Sunny Glen Children's Home NDR Center"
   )
   x <- stringr::str_replace_all(x, names_map)
 
@@ -114,6 +123,15 @@ clean_addresses <- function(x) {
   x <- stringr::str_replace_all(x, "\\bNw\\b", "NW")
   x <- stringr::str_replace_all(x, "\\bSe\\b", "SE")
   x <- stringr::str_replace_all(x, "\\bSw\\b", "SW")
+  x <- stringr::str_replace_all(x, "\\bSr\\b", "SR")
+  x <- stringr::str_replace_all(x, "\\bUs\\b", "US")
+  x <- stringr::str_replace_all(x, "\\bMlk\\b", "MLK")
+  x <- stringr::str_replace_all(x, "\\bCca\\b", "CCA")
+  x <- stringr::str_replace_all(x, "\\bIns\\b", "INS")
+  x <- stringr::str_replace_all(x, "\\bFm\\b", "FM")
+  x <- stringr::str_replace_all(x, "\\bP\\.o\\.", "P.O.")
+  x <- stringr::str_replace_all(x, "\\bIh-\\b", "IH-")
+  x <- stringr::str_replace_all(x, "\\bUs-\\b,", "US-")
   x
 }
 
@@ -163,7 +181,11 @@ clean_facilities_data <- function(facilities_data) {
         .cols = facility_average_length_of_stay_alos:adp_mandatory,
         .fns = ~ round(as.numeric(.), 1)
       ),
-      inspections_guaranteed_minimum = as.integer(inspections_guaranteed_minimum),
+      inspections_guaranteed_minimum = as.integer(if_else(
+        as.character(inspections_guaranteed_minimum) == "N/A",
+        NA_character_,
+        as.character(inspections_guaranteed_minimum)
+      )),
       inspections_last_inspection_type = dplyr::case_when(
         inspections_last_inspection_type %in% c("PRE-OCCUPANCY", "Pre-Occupancy") ~ "PREOCC",
         TRUE ~ inspections_last_inspection_type

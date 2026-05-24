@@ -46,9 +46,55 @@ classify_vera_category <- function(facility_type_detailed) {
 .other_type_overrides <- c(
   "CBP Chula Vista BPS"            = "CBP Hold Facility",
   "CBP San Ysidro POE"             = "CBP Hold Facility",
-  "Tornillo-Guadalupe POE"         = "ICE Short-Term Migrant Detention Center",
+  "Tornillo-Guadalupe POE"         = "CBP Hold Facility",
   "Sunny Glen Cld Home NDR Center" = "Juvenile Detention Center"
 )
+
+# Canonical-ID-based type overrides for facilities whose type cannot be
+# inferred from facility_type_detailed, Vera codes, or facility name alone.
+# Applied as a final pass in build_facility_roster() after
+# classify_facility_type_combined(). Covers DDP-sourced facilities (IDs
+# 1054–1209) and hold-range outliers (2187–2189) that fall through to "Other".
+canonical_type_overrides <- function() {
+  tibble::tribble(
+    ~canonical_id, ~facility_type_wiki,
+    # ICE panel facilities classified "Other" by ICE code; corrected by name
+      59L, "CBP Hold Facility",
+      60L, "CBP Hold Facility",
+     325L, "Jail/Prison",
+     363L, "CBP Hold Facility",
+    # State prisons (Alaska state correctional facilities)
+    1056L, "State Prison",
+    1248L, "State Prison",
+    # County / regional jails
+    1122L, "Jail/Prison",
+    1249L, "Jail/Prison",
+    1250L, "Jail/Prison",
+    1253L, "Jail/Prison",
+    1254L, "Jail/Prison",
+    1256L, "Jail/Prison",
+    1257L, "Jail/Prison",
+    1258L, "Jail/Prison",
+    1259L, "Jail/Prison",
+    1260L, "Jail/Prison",
+    1261L, "Jail/Prison",
+    1263L, "Jail/Prison",
+    # Juvenile detention
+    1251L, "Juvenile Detention Center",
+    1262L, "Juvenile Detention Center",
+    # Federal prison
+    1252L, "Federal Prison",
+    # ICE hold rooms
+    1148L, "ICE Hold Room",
+    1255L, "ICE Hold Room",
+    2188L, "ICE Hold Room",
+    2189L, "ICE Hold Room",
+    # Medical
+    1211L, "Medical Facility",
+    # CBP hold
+    2187L, "CBP Hold Facility"
+  )
+}
 
 # Combined classification: maps facility type codes to human-readable wiki types.
 #

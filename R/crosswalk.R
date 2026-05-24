@@ -31,7 +31,10 @@ do_not_merge_pairs <- function() {
     # Desert View Annex is a separately-reported ICE unit on the Adelanto campus;
     # same address causes spurious merge with the main facility
     "Desert View",                         "Adelanto ICE Processing Center",
-    "Desert View Annex",                   "Adelanto ICE Processing Center"
+    "Desert View Annex",                   "Adelanto ICE Processing Center",
+    # Dilley TX: single-adult-female program (DIGSA, FY26+) is a distinct
+    # facility from the family/immigration processing center at the same address
+    "Dilley Immigration Processing Center", "Dilley Processing Single Adult Female"
   )
 }
 
@@ -301,13 +304,13 @@ build_facility_crosswalk <- function(facilities_data_list, id_registry) {
   # Warn if any panel facilities received IDs outside the frozen <400 block.
   # This usually means the registry name doesn't match the cleaned name
   # (e.g. abbreviation expansion in clean_facility_names()).
-  max_panel_id <- max(id_registry$canonical_id[id_registry$canonical_id < 401])
+  max_panel_id <- max(id_registry$canonical_id[id_registry$canonical_id < 410])
   leaked <- facility_crosswalk |>
     dplyr::filter(canonical_id > max_panel_id) |>
     dplyr::distinct(canonical_id, canonical_name, canonical_city, canonical_state)
   if (nrow(leaked) > 0) {
     warning(
-      "Panel facilities mapped outside the frozen <400 ID block!\n",
+      "Panel facilities mapped outside the frozen <410 ID block!\n",
       "These facilities failed to match the registry (likely a name mismatch):\n",
       paste0("  ID ", leaked$canonical_id, ": ", leaked$canonical_name,
              " (", leaked$canonical_city, ", ", leaked$canonical_state, ")",
@@ -485,7 +488,7 @@ build_panel_facilities <- function(facilities_panel) {
 
 .id_range_label <- function(id) {
   dplyr::case_when(
-    id <= 398               ~ "panel",
+    id <= 1000              ~ "panel",     # 1–404 active (frozen in registry) + 405–1000 reserved
     id >= 1001 & id <= 1053 ~ "dmcp_only",
     id >= 1054 & id <= 2000 ~ "ddp_other",
     id >= 2001 & id <= 2025 ~ "ero",
@@ -544,8 +547,10 @@ build_facility_roster <- function(panel_facilities,
   hold <- hold_canonical_data$hold_canonical |>
     dplyr::transmute(
       canonical_id, canonical_name, detloc,
-      facility_address = address, facility_city = city,
-      facility_state = state, facility_zip = zip,
+      facility_address = clean_addresses(address),
+      facility_city = stringr::str_to_title(city),
+      facility_state = state,
+      facility_zip = zip,
       # Preserve the internal type code (hold_room, staging, etc.)
       facility_type_detailed = facility_type,
       facility_type_wiki
@@ -645,6 +650,13 @@ build_facility_roster <- function(panel_facilities,
         facility_type_detailed, type_grouped_corrected, canonical_name,
         type_detailed_corrected
       )
+    ) |>
+    # Canonical-ID-based overrides for facilities whose type cannot be
+    # determined from codes or names alone (DDP-range jails, hold rooms, etc.)
+    dplyr::rows_update(
+      canonical_type_overrides(),
+      by = "canonical_id",
+      unmatched = "ignore"
     ) |>
     dplyr::arrange(canonical_id)
 

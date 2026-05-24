@@ -75,7 +75,7 @@ list(
   ),
 
   # ── Canonical ID registry ─────────────────────────────────────────────────
-  # Frozen mapping of canonical IDs 1–398 (FY19–FY26 facilities).
+  # Frozen mapping of canonical IDs 1–404 (FY19–FY26 facilities; 405–1000 reserved for future annual stats).
   # Tracking the file means the crosswalk reruns automatically if the registry
   # is updated (e.g. new IDs appended after a FY27 import).
   tar_target(
@@ -91,7 +91,7 @@ list(
                                             canonical_name  = readr::col_character(),
                                             canonical_city  = readr::col_character(),
                                             canonical_state = readr::col_character())),
-    description = "Frozen registry of canonical IDs 1-398 (FY19-FY26 facilities); append-only, new annual stats extend from 399"
+    description = "Frozen registry of canonical IDs 1-404 (FY19-FY26 facilities); append-only, new annual stats extend from 405"
   ),
 
   # ── Facility crosswalk ─────────────────────────────────────────────────────
@@ -142,7 +142,7 @@ list(
   tar_target(
     panel_facilities,
     build_panel_facilities(facilities_panel),
-    description = "One row per panel facility (IDs 1-398) with most recent address, city, state, ZIP, and DETLOC; input for geocoding and wiki matching"
+    description = "One row per panel facility (IDs 1-1000) with most recent address, city, state, ZIP, and DETLOC; input for geocoding and wiki matching"
   ),
 
   # ── Geocode facilities ─────────────────────────────────────────────────────
@@ -432,13 +432,106 @@ list(
     ddp_codes,
     build_ddp_codes(ddp_raw)
   ),
+  # Codes that appear in ddp_new (parquet, Oct 2022–Mar 2026) but not in
+  # ddp_raw (feather, Sep 2023–Oct 2025). These were absent when the original
+  # ddp_facility_canonical was built and need a separate ID-assignment pass.
+  tar_target(
+    ddp_codes_new,
+    build_ddp_codes_new(ddp_new, ddp_raw),
+    description = "DDP facility codes present in ddp_new (parquet) but not in ddp_raw (feather); input for extending ddp_facility_canonical"
+  ),
   # ── DDP facility canonical IDs ──────────────────────────────────────────
-  # Assigns canonical IDs to 376 DDP facility codes not in detloc_lookup_full.
-  # Medical → 3001+; non-medical remainder → 1054+.
+  # Pass 1 (ddp_codes / ddp_raw): stable IDs 1054–1209 ddp_other, 3001–3226 medical.
+  # Pass 2 (ddp_codes_new): hold/CBP → 2181+; other jails → 1210+; medical → 3227+.
   tar_target(
     ddp_facility_canonical,
-    build_ddp_facility_canonical(ddp_codes, detloc_lookup_full, vera_facilities),
-    description = "Assigns canonical IDs to unmapped DDP facilities: non-medical at 1054+, medical at 3001+"
+    build_ddp_facility_canonical(ddp_codes, detloc_lookup_full, vera_facilities,
+                                  ddp_codes_new),
+    description = "Canonical IDs for all unmapped DDP facilities: ddp_raw-derived (1054+, 3001+) plus ddp_new-only codes (hold/CBP 2181+, jails 1210+, medical 3227+)"
+  ),
+  # ── Complete DETLOC lookup (all 962 canonical IDs) ───────────────────────
+  # Extends detloc_lookup_full with ddp_facility_canonical (IDs 1054–1209 and
+  # 3001–3226). Built after both to avoid the circular dependency where
+  # ddp_facility_canonical itself depends on detloc_lookup_full.
+  # Use this (not detloc_lookup_full) for any join that must cover all
+  # canonical ID ranges, including DDP-only and medical facilities.
+  tar_target(
+    detloc_lookup_complete,
+    build_detloc_lookup_complete(detloc_lookup_full, ddp_facility_canonical),
+    description = "Full DETLOC lookup covering all 962 canonical IDs; adds ddp_facility_canonical (1054–1209, 3001–3226) to detloc_lookup_full"
+  ),
+
+  # ── DDP annual panel (FY23–FY26) ────────────────────────────────────────
+  # Long-format panel: one row per (facility code × fiscal year) for all
+  # fiscal years covered by ddp_new (Oct 2022–Mar 2026). Joins canonical IDs
+  # via detloc_lookup_complete and facility metadata via facility_roster.
+  # Rows with canonical_id = NA are retained for review.
+  # Uses ddp_new (parquet) rather than ddp_raw (feather) for wider FY coverage.
+  tar_target(
+    ddp_annual_panel,
+    build_ddp_annual_panel(ddp_new, detloc_lookup_complete, facility_roster),
+    description = "DDP ADP panel: one row per (facility code x fiscal year) for FY23-FY26; canonical_id NA rows retained for review"
+  ),
+
+  # ── Expanded map panel ──────────────────────────────────────────────────
+  # Merges facilities_panel (ICE annual stats, FY10–FY26) with ddp_annual_panel
+  # (DDP, FY23–FY26). One row per (canonical_id × fiscal_year). Five-level
+  # data_source flag: ice_only / ddp_only / ice_ddp_agree /
+  # ice_ddp_diverge_high / ice_ddp_diverge_low. ICE is authoritative where
+  # both exist. DDP-specific columns (peak, sex, n_days) are NA for ice_only
+  # rows; ICE-specific columns (inspections, threat levels) are NA for ddp_only.
+  tar_target(
+    expanded_map_panel,
+    build_expanded_map_panel(facilities_panel, ddp_annual_panel, threshold = 0.25),
+    description = "Combined ICE + DDP panel: one row per (canonical_id x fiscal_year), data_source flag, ice_adp vs ddp_adp comparison"
+  ),
+
+  # ── Expanded map presence matrix ────────────────────────────────────────
+  # Wide-format presence matrix for all canonical facilities in the expanded
+  # panel. Inherits ICE trajectory labels for panel IDs (≤ 1000); non-panel
+  # facilities get trajectory = "ddp_only".
+  tar_target(
+    expanded_map_presence,
+    build_expanded_map_presence(expanded_map_panel, facility_presence),
+    description = "Presence matrix for all expanded-panel facilities; trajectory inherited from facility_presence for panel IDs, 'ddp_only' for DDP-only ranges"
+  ),
+
+  # ── Expanded map geocoded facilities ─────────────────────────────────────
+  # One row per canonical facility in the expanded panel with lat/lon from
+  # facilities_geocoded_all. Facilities missing coordinates are retained with
+  # lat/lon = NA. Metadata (name, city, type) from most recent ICE-preferred row.
+  tar_target(
+    expanded_map_geocoded,
+    build_expanded_map_geocoded(expanded_map_panel, facilities_geocoded_all),
+    description = "One row per canonical facility in expanded panel; lat/lon from facilities_geocoded_all, NA for ungeocoded facilities"
+  ),
+
+  # ── Expanded map export ───────────────────────────────────────────────────
+  # cue = "never": run tar_make(expanded_map_export) explicitly to deploy.
+  # Writes expanded_panel.rds, expanded_presence.rds, expanded_geocoded.rds
+  # to data/expanded-map-export/; then run copy-data.sh in the post directory.
+  tar_target(
+    expanded_map_export,
+    export_expanded_map_data(expanded_map_panel, expanded_map_presence,
+                              expanded_map_geocoded),
+    format = "file",
+    cue   = tar_cue(mode = "never"),
+    description = "Exports expanded_panel.rds, expanded_presence.rds, expanded_geocoded.rds to data/expanded-map-export/ for deployment"
+  ),
+
+  # ── Facility directory export ─────────────────────────────────────────────
+  # cue = "never": run tar_make(facility_directory_export) explicitly to deploy.
+  # Writes facility_tbl.rds to data/facility-directory-export/;
+  # then run copy-data.sh in posts/facility-directory/.
+  tar_target(
+    facility_directory_export,
+    export_facility_directory_data(
+      expanded_map_geocoded, expanded_map_presence, expanded_map_panel,
+      ddp_raw, detloc_lookup_complete, ddp_new
+    ),
+    format = "file",
+    cue    = tar_cue(mode = "never"),
+    description = "Exports facility_tbl.rds to data/facility-directory-export/ for the facility directory post"
   ),
 
   # ── DDP FY25 facility summary ────────────────────────────────────────────
@@ -459,6 +552,36 @@ list(
     },
     description = "Exports ddp_fy25_summary to data/ddp-fy25-summary.csv",
     format = "file"
+  ),
+
+  # ── ICE office node scan ────────────────────────────────────────────────────
+  # Parses ice.gov/node/* pages for field_office entity bundles, yielding one
+  # row per sub-office location (110 offices across 25 ERO field offices in
+  # node range 62000-62300). HTML pages are cached to data/dhs-websites/ice-nodes/.
+  # Re-run via tar_invalidate(ice_office_nodes) to fetch any new node range.
+  tar_target(
+    ice_office_nodes,
+    scan_ice_field_office_nodes(
+      node_range       = 62000:62300,
+      html_cache_dir   = here::here("data/dhs-websites/ice-nodes"),
+      index_cache_path = here::here("data/dhs-websites/ice-node-index.rds"),
+      delay            = 0.5
+    ),
+    description = "110 ICE sub-office locations parsed from cached ice.gov/node/* pages (field_office entity bundles, node range 62000-62300)",
+    cue = tar_cue(mode = "never")
+  ),
+
+  tar_target(
+    ice_office_nodes_es,
+    scan_ice_field_office_nodes(
+      node_range       = 62000:62300,
+      html_cache_dir   = here::here("data/dhs-websites/ice-nodes-es/"),
+      index_cache_path = here::here("data/dhs-websites/ice-node-es-index.rds"),
+      url_dir_prefix      = "https://ice.gov/es/node/",
+      delay            = 0.5
+    ),
+    description = "110 ICE sub-office locations parsed from cached ice.gov/node/* pages (field_office entity bundles, node range 62000-62300)",
+    cue = tar_cue(mode = "never")
   ),
 
   # ── Hold facility canonical integration ────────────────────────────────────
@@ -609,6 +732,41 @@ list(
     ),
     description = "Exports 8 RDS files to data/ddp-comparison-export-fy26/ for FY26 comparison report (Oct 2025 – Feb 5 2026)",
     format = "file"
+  ),
+
+  # ── Detention stints data (DDP individual-level) ───────────────────────────
+  # Individual-level FOIA data: one row per detention stint (one continuous
+  # period at one facility within a stay). Source: DDP FOIA 2026-ICLI-00005.
+  # Re-download via tar_invalidate(stints_file) when a new release is available.
+  tar_target(
+    stints_file,
+    here::here("data/ddp/detention-stints-latest.parquet"),
+    description = "Tracks the DDP detention stints parquet file for changes",
+    format = "file"
+  ),
+  tar_target(
+    stints_raw,
+    arrow::read_parquet(stints_file),
+    description = "Raw DDP detention stints (2.6M rows x 61 cols; FY23-FY26, one row per facility stint)"
+  ),
+
+  # ── Facility profiles (before/after Trump inauguration) ─────────────────────
+  # Pre-computes all summary tables for the facility-profiles.qmd report.
+  # Covers five facility groups split at 2025-01-20 (inauguration day).
+  tar_target(
+    facility_profiles_data,
+    build_facility_profiles_data(
+      stints          = stints_raw,
+      ddp_pop         = ddp_new,
+      facilities_panel = facilities_panel,
+      detloc_lookup   = detloc_lookup_complete
+    ),
+    description = "Before/after 2025-01-20 facility profiles for IWAHOLD, SPMHOLD, PINEPLA, DILLEY, NWDC"
+  ),
+  tar_quarto(
+    facility_profiles_report,
+    "facility-profiles.qmd",
+    description = "Rendered facility-profiles.qmd: before/after inauguration profiles for five facility groups"
   ),
 
   # ── Facility summary report ────────────────────────────────────────────────

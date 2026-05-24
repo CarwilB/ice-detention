@@ -380,6 +380,26 @@ build_detloc_lookup <- function(dmcp_canonical_map, ddp_canonical_map,
   result
 }
 
+build_detloc_lookup_complete <- function(detloc_lookup_full, ddp_facility_canonical) {
+  # Extends detloc_lookup_full with DDP-assigned canonical IDs (1054–1209
+  # ddp_other and 3001–3226 medical) from ddp_facility_canonical.
+  #
+  # These ranges cannot be included in detloc_lookup_full directly because
+  # ddp_facility_canonical depends on detloc_lookup_full to discover unmapped
+  # codes (circular dependency). This function runs after both are built.
+  #
+  # Use detloc_lookup_complete (not detloc_lookup_full) wherever a join needs
+  # to cover all 962 canonical facilities, including DDP-only ranges.
+
+  new_rows <- ddp_facility_canonical |>
+    dplyr::select(canonical_id, detloc) |>
+    dplyr::mutate(detloc_source = "ddp_canonical", ddp_role = NA_character_)
+
+  dplyr::bind_rows(detloc_lookup_full, new_rows) |>
+    dplyr::distinct() |>
+    dplyr::arrange(canonical_id, detloc_source, detloc)
+}
+
 build_detloc_lookup_full <- function(dmcp_canonical_map, ddp_canonical_map,
                                      hold_canonical_data = NULL,
                                      vera_facilities = NULL) {

@@ -46,6 +46,24 @@ build_ddp_codes <- function(dp_data) {
     clean_ddp_facility_names()
 }
 
+build_ddp_codes_new <- function(ddp_new, ddp_raw) {
+  # Extracts facility codes that appear in ddp_new (parquet) but not in ddp_raw
+  # (feather). These codes were absent when ddp_facility_canonical was originally
+  # built and need a separate ID-assignment pass.
+  #
+  # ddp_new lacks a 'state' column; state is filled with NA since the parquet
+  # source doesn't carry it. Vera metadata will supply state during canonical
+  # assignment.
+
+  raw_codes <- unique(ddp_raw$detention_facility_code)
+
+  ddp_new |>
+    dplyr::filter(!detention_facility_code %in% raw_codes) |>
+    dplyr::distinct(detention_facility_code, detention_facility) |>
+    dplyr::mutate(state = NA_character_) |>
+    clean_ddp_facility_names()
+}
+
 # ── Manual strong DDP matches ────────────────────────────────────────────────
 # Verified by visual inspection of facility names, codes, and locations.
 # ── Component unit matches ───────────────────────────────────────────────────
@@ -435,11 +453,17 @@ ddp_average_population <- function(dp, code,
 
 build_ddp_fy_summary <- function(ddp_raw, fy_start, fy_end) {
   # Args:
-  #   ddp_raw: full DDP daily population tibble
-
+  #   ddp_raw: full DDP daily population tibble (feather or parquet source).
+  #            A 'state' column is optional; if absent it is filled with NA.
   #   fy_start, fy_end: date bounds (inclusive), e.g. "2024-10-01", "2025-09-30"
   # Returns:
   #   tibble with 15 columns, one row per facility code
+
+  # Parquet source (ddp_new) lacks a state column; add it so downstream code
+  # that expects it doesn't break.
+  if (!"state" %in% names(ddp_raw)) {
+    ddp_raw <- dplyr::mutate(ddp_raw, state = NA_character_)
+  }
 
   df <- ddp_raw |>
     dplyr::filter(date >= as.Date(fy_start), date <= as.Date(fy_end))
@@ -479,34 +503,42 @@ build_ddp_fy_summary <- function(ddp_raw, fy_start, fy_end) {
 #   4001+  Hotels (reserved, currently empty)
 
 build_ddp_facility_canonical <- function(ddp_codes, detloc_lookup_full,
-                                         vera_facilities) {
-  mapped_detlocs <- unique(detloc_lookup_full$detloc)
+                                         vera_facilities,
+                                         ddp_codes_new = NULL) {
+  # Args:
+  #   ddp_codes:        codes from ddp_raw (feather); existing IDs are stable.
+  #   detloc_lookup_full: existing DETLOC → canonical_id mapping.
+  #   vera_facilities:  Vera metadata for name/address/type lookup.
+  #   ddp_codes_new:    optional codes from ddp_new only (parquet-only codes).
+  #                     Processed separately to preserve existing ID stability.
+  #                     Hold/CBP → 2181+; medical → 3227+; other jails → 1210+.
 
-  unmapped <- ddp_codes |>
-    dplyr::filter(!detention_facility_code %in% mapped_detlocs) |>
-    dplyr::left_join(
-      vera_facilities |>
-        dplyr::select(detloc, facility_name, facility_address, facility_city,
-                       facility_state, facility_zip,
-                       type_detailed_corrected, type_grouped_corrected,
-                       latitude, longitude) |>
-        dplyr::distinct(detloc, .keep_all = TRUE),
-      by = c("detention_facility_code" = "detloc")
-    )
+  vera_meta <- vera_facilities |>
+    dplyr::select(detloc, facility_name, facility_address, facility_city,
+                   facility_state, facility_zip,
+                   type_detailed_corrected, type_grouped_corrected,
+                   latitude, longitude) |>
+    dplyr::distinct(detloc, .keep_all = TRUE)
+
+  .process_unmapped <- function(codes, mapped_detlocs) {
+    codes |>
+      dplyr::filter(!detention_facility_code %in% mapped_detlocs) |>
+      dplyr::left_join(vera_meta, by = c("detention_facility_code" = "detloc")) |>
+      dplyr::mutate(
+        canonical_name = dplyr::coalesce(facility_name, detention_facility),
+        facility_state = dplyr::coalesce(facility_state, state)
+      )
+  }
+
+  # ── Pass 1: ddp_raw-derived codes (stable IDs 1054–1209, 3001–3226) ─────────
+  mapped_detlocs <- unique(detloc_lookup_full$detloc)
+  unmapped <- .process_unmapped(ddp_codes, mapped_detlocs)
 
   if (nrow(unmapped) == 0) {
-    cli::cli_warn("No unmapped DDP facility codes found.")
+    cli::cli_warn("No unmapped DDP facility codes found in ddp_codes.")
     return(tibble::tibble())
   }
 
-  # Use Vera name/address when available, fall back to DDP name
-  unmapped <- unmapped |>
-    dplyr::mutate(
-      canonical_name = dplyr::coalesce(facility_name, detention_facility),
-      facility_state = dplyr::coalesce(facility_state, state)
-    )
-
-  # Split by type block
   medical <- unmapped |>
     dplyr::filter(type_grouped_corrected == "Medical") |>
     dplyr::arrange(facility_state, detention_facility_code)
@@ -515,10 +547,8 @@ build_ddp_facility_canonical <- function(ddp_codes, detloc_lookup_full,
     dplyr::filter(type_grouped_corrected != "Medical") |>
     dplyr::arrange(facility_state, detention_facility_code)
 
-  # Assign IDs
   if (nrow(remaining) > 0) {
     ids <- setdiff(seq(1054L, 1054L + nrow(remaining)), c(1182L))
-                                               # preserve previously assigned IDs
     remaining$canonical_id <- ids[seq_len(nrow(remaining))]
   }
   if (nrow(medical) > 0) {
@@ -542,16 +572,90 @@ build_ddp_facility_canonical <- function(ddp_codes, detloc_lookup_full,
     ) |>
     dplyr::arrange(canonical_id)
 
-  # Apply name/address patches for DDP facilities
+  # ── Pass 2: ddp_new-only codes (new IDs appended after existing ranges) ──────
+  if (!is.null(ddp_codes_new) && nrow(ddp_codes_new) > 0) {
+    all_assigned <- c(mapped_detlocs, result$detloc)
+    new_unmapped <- .process_unmapped(ddp_codes_new, all_assigned)
+
+    if (nrow(new_unmapped) > 0) {
+      # Classify into three type blocks using dplyr::filter() so that NA in
+      # type_grouped_corrected (facilities absent from Vera) is treated as FALSE
+      # rather than propagating as NA through base-R logical indexing.
+      #   hold/CBP  → 2181+ (extending the hold range 2026–2180)
+      #   medical   → 3227+ (extending medical range 3001–3226)
+      #   other     → 1210+ (extending ddp_other range 1054–1209)
+      new_hold_cbp <- new_unmapped |>
+        dplyr::filter(
+          dplyr::coalesce(type_grouped_corrected == "Hold/Staging", FALSE) |
+          stringr::str_detect(detention_facility_code, "HOLD$") |
+          stringr::str_detect(canonical_name,
+                              stringr::regex("HOLD ?ROOM|HOLD ?RM", ignore_case = TRUE)) |
+          stringr::str_starts(detention_facility_code, "CBP")
+        ) |>
+        dplyr::arrange(facility_state, detention_facility_code) |>
+        dplyr::mutate(canonical_id = seq(2181L, length.out = dplyr::n()),
+                      id_range = "hold")
+
+      new_medical <- new_unmapped |>
+        dplyr::filter(
+          dplyr::coalesce(type_grouped_corrected == "Medical", FALSE),
+          !detention_facility_code %in% new_hold_cbp$detention_facility_code
+        ) |>
+        dplyr::arrange(facility_state, detention_facility_code) |>
+        dplyr::mutate(canonical_id = seq(3227L, length.out = dplyr::n()),
+                      id_range = "medical")
+
+      classified <- c(new_hold_cbp$detention_facility_code,
+                      new_medical$detention_facility_code)
+      max_ddp_other <- max(result$canonical_id[result$id_range == "ddp_other"],
+                           na.rm = TRUE)
+      new_other <- new_unmapped |>
+        dplyr::filter(!detention_facility_code %in% classified) |>
+        dplyr::arrange(facility_state, detention_facility_code) |>
+        dplyr::mutate(canonical_id = seq(max_ddp_other + 1L, length.out = dplyr::n()),
+                      id_range = "ddp_other")
+
+      new_rows <- dplyr::bind_rows(new_hold_cbp, new_medical, new_other) |>
+        dplyr::select(
+          canonical_id, canonical_name,
+          detloc = detention_facility_code,
+          facility_address, facility_city, facility_state, facility_zip,
+          type_detailed_corrected, type_grouped_corrected,
+          lat = latitude, lon = longitude, id_range
+        )
+
+      cli::cli_inform(c(
+        "DDP new-parquet codes: {nrow(new_rows)} additional facilities",
+        "*" = "{sum(new_rows$id_range == 'ddp_other')} ddp_other (IDs {min(new_rows$canonical_id[new_rows$id_range == 'ddp_other'])}\u2013{max(new_rows$canonical_id[new_rows$id_range == 'ddp_other'])})",
+        "*" = "{sum(new_rows$id_range == 'hold')} hold/CBP (IDs {min(new_rows$canonical_id[new_rows$id_range == 'hold'])}\u2013{max(new_rows$canonical_id[new_rows$id_range == 'hold'])})",
+        "*" = if (sum(new_rows$id_range == 'medical') > 0)
+                "{sum(new_rows$id_range == 'medical')} medical (IDs {min(new_rows$canonical_id[new_rows$id_range == 'medical'])}\u2013{max(new_rows$canonical_id[new_rows$id_range == 'medical'])})"
+              else "0 medical"
+      ))
+
+      result <- dplyr::bind_rows(result, new_rows) |>
+        dplyr::arrange(canonical_id)
+    }
+  }
+
+  # Apply name/address patches
   patches <- .ddp_facility_patches()
   if (nrow(patches) > 0) {
     result <- result |>
       dplyr::rows_update(patches, by = "detloc", unmatched = "ignore")
   }
 
+  # Apply state-only patches (separate pass to avoid overwriting address fields)
+  state_patches <- .ddp_state_patches()
+  if (nrow(state_patches) > 0) {
+    result <- result |>
+      dplyr::rows_update(state_patches, by = "detloc", unmatched = "ignore")
+  }
+
   cli::cli_inform(c(
-    "DDP facility canonical: {nrow(result)} new facilities",
-    "*" = "{sum(result$id_range == 'ddp_other')} non-medical (IDs 1054\u2013{max(result$canonical_id[result$id_range == 'ddp_other'])})",
+    "DDP facility canonical total: {nrow(result)} facilities",
+    "*" = "{sum(result$id_range == 'ddp_other')} ddp_other (IDs 1054\u2013{max(result$canonical_id[result$id_range == 'ddp_other'])})",
+    "*" = "{sum(result$id_range == 'hold')} hold/CBP (IDs 2181\u2013{max(result$canonical_id[result$id_range == 'hold'], na.rm = TRUE)})",
     "*" = "{sum(result$id_range == 'medical')} medical (IDs 3001\u2013{max(result$canonical_id[result$id_range == 'medical'])})"
   ))
 
@@ -565,8 +669,43 @@ build_ddp_facility_canonical <- function(ddp_codes, detloc_lookup_full,
 
 .ddp_facility_patches <- function() {
   dplyr::tribble(
-    ~detloc,    ~canonical_name,                ~facility_address,  ~facility_zip,
-    "RAPPSVA",  "Rappahannock Regional Jail",   "1745 Richmond Hwy", "22554"
+    ~detloc,    ~canonical_name,                                ~facility_address,                    ~facility_city,    ~facility_state, ~facility_zip,
+    "RAPPSVA",  "Rappahannock Regional Jail",                   "1745 Richmond Hwy",                  "Stafford",        "VA",            "22554",
+
+    # Group 2 ddp_other facilities — Marshall Project addresses
+    "BLOJVTN",  "Blount County Juvenile Detention Cntr",        "329 Court St",                       "Maryville",       "TN",            "37804",
+    "BRYANGA",  "Bryan County Jail",                            "95 Public Safety Way",               "Pembroke",        "GA",            "31321",
+    "CHTHMGA",  "Chatham County Jail",                          "1050 Carl Griffen Drive",            "Savannah",        "GA",            "31405",
+    "FRANKNC",  "Franklin County Detention Center",             "285 T Kemp Rd",                      "Louisburg",       "NC",            "27549",
+    "LAFAYLA",  "Lafayette Parish So Jail Annex",               "916 Lafayette Street",               "Lafayette",       "LA",            "70502",
+    "NATJVWY",  "Natrona County. Juv. Detention. Center",       "1100 Bruce Lane",                    "Casper",          "WY",            "82601",
+
+    # Group 2 ddp_other facilities — manual address lookups
+    "ALLEGVA",  "Alleghany County Jail",                        "266 W Main St",                      "Covington",       "VA",            "24426",
+    "AMHERVA",  "Amherst County Jail",                          "219 S Riverview Rd",                 "Madison Heights", "VA",            "24572",
+    "KFMANTX",  "Kaufman County Detention Center",              "1902 E Hwy 175",                     "Kaufman",         "TX",            "75142",
+    "LBRTYFL",  "Liberty County Jail",                          "12499 NW Pogo St",                   "Bristol",         "FL",            "32321",
+    "LEONCFL",  "Leon County Jail",                             "535 Appleyard Dr",                   "Tallahassee",     "FL",            "32304",
+    "LYNRJVA",  "B.r.r.j. Lynchburg",                          "510 Ninth St",                       "Lynchburg",       "VA",            "24504",
+    "ONSLONC",  "Onslow County Jail",                           "702 Mill Ave",                       "Jacksonville",    "NC",            "28540",
+
+    # Additional ddp_other facilities
+    "AKANVIL",  "Anvil Mountain Cc, Nome,",                     "1810 Center Creek Rd",               "Nome",            "AK",            "99762",
+    "BOPLAT",   "La Tuna FCI",                                  "8500 Doniphan Rd",                   "Anthony",         "TX",            "79821",
+
+    # Hold facilities from ddp_codes_new (IDs 2181+) — NOT in build_hold_canonical()
+    "CBPORIL",  "CBP O'hare Airport Trm 5 B.c. Ext",           "10000 W. Bessie Coleman Drive, Terminal 5", "Chicago",  "IL",            "60666",
+    "CHSHOLD",  "ERO Charleston Wv Hold Room",                  "36 Jacobson Drive",                  "Poca",            "WV",            "25159",
+    "SAVHOLD",  "Savannah Hold Room",                           "49 Park of Commerce Blvd",           "Savannah",        "GA",            "31405"
+  )
+}
+
+.ddp_state_patches <- function() {
+  # State-only patches: applied separately so they don't overwrite address fields.
+  dplyr::tribble(
+    ~detloc,    ~facility_state,
+    "UCBPMCA",  "CA",   # CBP Movement Coordination Area (1209)
+    "DRCPCTX",  "TX"    # Drt Cpc Holding (1255)
   )
 }
 
@@ -1123,4 +1262,120 @@ export_ddp_fy26_comparison_data <- function(ddp_new, fy26b,
   cli::cli_inform(c("v" = "Exported {length(paths)} RDS files to {export_dir}"))
 
   paths
+}
+
+# ── DDP annual panel (all fiscal years) ──────────────────────────────────────
+# Builds a long-format panel of DDP facility-level ADP summaries, one row per
+# (facility code × fiscal year), across all fiscal years covered by the data.
+# Joins canonical IDs via detloc_lookup_complete and facility metadata via
+# facility_roster.
+#
+# This is the DDP-side counterpart to facilities_panel (ICE annual stats).
+# ICE-specific fields (inspection data, classification/threat levels) are absent
+# and left for the merge step in build_expanded_map_panel().
+#
+# Facilities with no canonical ID match are retained with canonical_id = NA
+# so they can be reviewed and assigned IDs separately.
+
+.ddp_fy_windows <- function(data_start, data_end) {
+  # Compute fiscal year windows (Oct 1 – Sep 30) for all years touched by
+  # data_start..data_end.  A fiscal year is labeled by its ending calendar
+  # year: FY24 = Oct 2023 – Sep 2024.
+  fy_of <- function(d) {
+    yr <- as.integer(format(d, "%Y"))
+    mo <- as.integer(format(d, "%m"))
+    if (mo >= 10L) yr + 1L else yr
+  }
+  start_fy <- fy_of(data_start)
+  end_fy   <- fy_of(data_end)
+
+  windows <- lapply(seq(start_fy, end_fy), function(fy) {
+    c(sprintf("%d-10-01", fy - 1L), sprintf("%d-09-30", fy))
+  })
+  names(windows) <- sprintf("FY%02d", seq(start_fy, end_fy) %% 100L)
+  windows
+}
+
+build_ddp_annual_panel <- function(ddp_data, detloc_lookup_complete,
+                                    facility_roster, fy_windows = NULL) {
+  # Args:
+  #   ddp_data:               DDP daily population tibble (feather or parquet).
+  #                           Parquet source (ddp_new) lacks 'state'; handled
+  #                           inside build_ddp_fy_summary().
+  #   detloc_lookup_complete: full DETLOC → canonical_id lookup (all 962 IDs).
+  #   facility_roster:        one row per canonical facility with address/type.
+  #   fy_windows:             named list of c(fy_start, fy_end) character pairs.
+  #                           Defaults to all FYs covered by ddp_data.
+  # Returns:
+  #   Long-format tibble: one row per (detention_facility_code × fiscal_year).
+  #   canonical_id is NA for facilities not yet in detloc_lookup_complete.
+  #   partial_year = TRUE when data ends before Sep 30.
+
+  data_start <- min(ddp_data$date)
+  data_end   <- max(ddp_data$date)
+
+  if (is.null(fy_windows)) {
+    fy_windows <- .ddp_fy_windows(data_start, data_end)
+  }
+
+  # 1:1 detloc → canonical_id join key; when a detloc appears under multiple
+  # canonical IDs, keep the row with the lowest canonical_id (highest priority).
+  detloc_key <- detloc_lookup_complete |>
+    dplyr::arrange(canonical_id) |>
+    dplyr::distinct(detloc, .keep_all = TRUE) |>
+    dplyr::select(detloc, canonical_id)
+
+  # Roster metadata for joining after canonical_id is assigned
+  roster_meta <- facility_roster |>
+    dplyr::filter(!is.na(canonical_id)) |>
+    dplyr::select(canonical_id, canonical_name,
+                  facility_address, facility_city, facility_state, facility_zip,
+                  facility_type_detailed, facility_type_wiki) |>
+    dplyr::distinct(canonical_id, .keep_all = TRUE)
+
+  purrr::imap(fy_windows, function(window, fy_label) {
+    fy_start <- as.Date(window[[1]])
+    fy_end   <- as.Date(window[[2]])
+
+    # Skip years with no data overlap
+    if (fy_start > data_end || fy_end < data_start) return(NULL)
+
+    # Clip to actual data coverage; flag if year is incomplete
+    actual_end  <- min(fy_end, data_end)
+    partial     <- actual_end < fy_end
+
+    summary <- build_ddp_fy_summary(ddp_data,
+                                     as.character(fy_start),
+                                     as.character(actual_end))
+
+    summary |>
+      dplyr::mutate(
+        fiscal_year  = fy_label,
+        partial_year = partial,
+        data_source  = "ddp"
+      ) |>
+      # Attach canonical_id
+      dplyr::left_join(detloc_key,
+                       by = c("detention_facility_code" = "detloc")) |>
+      # Attach facility metadata (name, address, type)
+      dplyr::left_join(roster_meta, by = "canonical_id") |>
+      dplyr::rename(
+        detloc       = detention_facility_code,
+        adp          = adp_total,
+        adp_crim     = adp_convicted_criminal,
+        adp_non_crim = adp_non_criminal
+      ) |>
+      dplyr::relocate(
+        fiscal_year, canonical_id, canonical_name,
+        detention_facility, detloc,
+        facility_city, facility_state, facility_address, facility_zip,
+        facility_type_detailed, facility_type_wiki,
+        adp, adp_male, adp_female, adp_crim, adp_non_crim,
+        share_non_crim, share_female,
+        peak_population, peak_date, n_days,
+        partial_year, data_source
+      )
+  }) |>
+    purrr::compact() |>
+    dplyr::bind_rows()
 }
