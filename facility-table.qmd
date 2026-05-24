@@ -1,0 +1,37 @@
+---
+title: "ICE Detention Facility Directory"
+format:
+  html:
+    page-layout: full
+    toc: false
+    self-contained: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+library(targets)
+source("R/facility-table.R")
+```
+
+```{r build-data}
+#| cache: true
+facility_tbl <- build_facility_table_data(
+  expanded_map_geocoded  = tar_read(expanded_map_geocoded),
+  expanded_map_presence  = tar_read(expanded_map_presence),
+  expanded_map_panel     = tar_read(expanded_map_panel),
+  ddp_raw                = tar_read(ddp_raw),
+  detloc_lookup_complete = tar_read(detloc_lookup_complete),
+  ddp_sparkline_src      = tar_read(ddp_new)
+)
+```
+
+```{r table}
+make_facility_table(
+  facility_tbl,
+  columns = c("facility", "type", "status", "adp", "ddp_peak",
+              "detloc", "adp_bars", "ddp_sparkline")
+)
+```

@@ -1,0 +1,651 @@
+---
+title: "ICE Detention Facility Profiles: Before and After January 20, 2025"
+subtitle: "DDP individual-level detention stints data (FOIA 2026-ICLI-00005)"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-float: true
+    code-fold: true
+    self-contained: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+library(targets)
+library(dplyr)
+library(tidyr)
+library(knitr)
+
+pd <- tar_read(facility_profiles_data)
+
+# Cutoff display string
+cutoff_str <- format(pd$cutoff, "%B %e, %Y")
+
+# Friendly column-value labels used in multiple tables
+criminality_order <- c(
+  "1 Convicted Criminal",
+  "2 Pending Criminal Charges",
+  "3 Other Immigration Violator"
+)
+classification_order <- c("Low", "Medium / Low", "Medium / High", "High")
+```
+
+This report profiles five ICE detention facility groups, comparing detainee characteristics
+**before** and **after** the Trump administration's inauguration on **`r cutoff_str`**.
+Each profile is derived from individual-level detention stints data released by ICE via FOIA
+and processed by the [Deportation Data Project](https://deportationdata.org).
+
+A **stint** is one continuous period at one facility. People transferred between facilities
+have a separate row for each location. Statistics here describe people *booked in* to
+each facility before or after the cutoff date.
+
+> **Note on period lengths:** The "Before" period covers October 2022 through January 19,
+> 2025 (~2.3 years). The "After" period covers January 20, 2025 through March 11, 2026
+> (~14 months). Raw stint counts therefore cannot be directly compared between periods;
+> use the "Stints / year" and "Persons / year" figures in the Population tab for
+> cross-period comparison. Percentage breakdowns within each period are directly comparable.
+
+```{r facility-list}
+pd$groups |>
+  kable(
+    col.names = c("Group key", "Full name / location", "DETLOC code(s)"),
+    caption   = "Facility groups covered in this report"
+  )
+```
+
+---
+
+```{r helpers}
+# Pivot one categorical summary (e.g. criminality) wide for a single facility
+pivot_wide <- function(df, group_key, value_col = "value",
+                       n_col = "n", pct_col = "pct",
+                       levels = NULL) {
+  df <- df |> filter(facility_group == group_key)
+  if (!is.null(levels)) df <- df |> filter(.data[[value_col]] %in% levels)
+
+  df |>
+    select(period, value = all_of(value_col),
+           n = all_of(n_col), pct = all_of(pct_col)) |>
+    mutate(cell = paste0(n, " (", pct, "%)")) |>
+    select(value, period, cell) |>
+    pivot_wider(names_from = period, values_from = cell, values_fill = "—") |>
+    rename(Category = value)
+}
+
+# Overview row for one facility, formatted for kable
+fmt_overview <- function(g) {
+  pd$overview |>
+    filter(facility_group == g) |>
+    transmute(
+      Period          = as.character(period),
+      Stints          = n_stints,
+      `Median days`   = median_days,
+      `Mean days`     = mean_days,
+      `90th pct days` = p90_days,
+      `% male`        = pct_male,
+      `Median age`    = median_age,
+      `% criminal+`   = pct_criminal,
+      `% final order` = pct_final_order,
+      `% removed`     = pct_removed,
+      `% transferred` = pct_transferred
+    )
+}
+
+# Nationality table for one facility: top 12, before | after, sorted by combined total
+fmt_nationalities <- function(g) {
+  grp <- pd$nationalities |> filter(facility_group == g)
+
+  totals <- grp |>
+    group_by(value) |>
+    summarise(total = sum(n), .groups = "drop") |>
+    arrange(desc(total))
+
+  wide <- grp |>
+    mutate(cell = paste0(n, " (", pct, "%)")) |>
+    select(Nationality = value, period, cell) |>
+    pivot_wider(names_from = period, values_from = cell, values_fill = "—")
+
+  totals |>
+    select(Nationality = value, total) |>
+    left_join(wide, by = "Nationality") |>
+    select(-total)
+}
+
+# Population / ADP table for one facility
+fmt_population <- function(g) {
+  pd$adp_and_totals |>
+    filter(facility_group == g) |>
+    transmute(
+      Period              = as.character(period),
+      `Period days`       = format(period_days, big.mark = ","),
+      `ADP (stints)`      = adp_stints,
+      `Stints booked in`  = format(n_stints,         big.mark = ","),
+      `Unique persons`    = format(n_unique_persons,  big.mark = ","),
+      `Stints / year`     = format(stints_per_year,   big.mark = ","),
+      `Persons / year`    = format(persons_per_year,  big.mark = ",")
+    )
+}
+
+# Render the DDP sparkline SVG (stored as character in pd$viz)
+render_sparkline <- function(g) {
+  svg <- pd$viz[[g]]$sparkline_svg
+  if (is.null(svg) || nchar(svg) == 0) {
+    cat("*No DDP daily population data for this facility.*\n")
+  } else {
+    cat(svg, "\n")
+  }
+}
+
+# Render the ICE annual ADP bar chart SVG
+render_adp_bars <- function(g) {
+  svg <- pd$viz[[g]]$adp_bars_svg
+  if (is.null(svg) || nchar(svg) == 0) {
+    cat("*No ICE annual ADP data for this facility.*\n")
+  } else {
+    cat(svg, "\n")
+  }
+}
+```
+
+---
+
+## IWAHOLD — AZ Removal Ops Coordination Center (AROCC)
+
+*Phoenix AOR · Short-term staging and removal coordination facility*
+
+::: {.panel-tabset}
+
+### Population
+
+```{r iwahold-pop}
+fmt_population("IWAHOLD") |>
+  kable(caption = "IWAHOLD: ADP and throughput before/after inauguration")
+```
+
+**ADP note:** "ADP (stints)" is computed from person-days (every overlapping stint clipped to the period window). "Stints booked in" and "Unique persons" count only arrivals during the period. "Per year" figures annualize by period length for cross-period comparison.
+
+**ICE annual ADP (FY10–FY26):**
+
+```{r iwahold-bars, results="asis"}
+render_adp_bars("IWAHOLD")
+```
+
+**DDP daily population (Oct 2022 – Mar 2026):**
+
+```{r iwahold-sparkline, results="asis"}
+render_sparkline("IWAHOLD")
+```
+
+### Overview
+
+```{r iwahold-overview}
+fmt_overview("IWAHOLD") |>
+  kable(caption = "IWAHOLD: summary statistics before/after inauguration")
+```
+
+### Nationalities
+
+```{r iwahold-nat}
+fmt_nationalities("IWAHOLD") |>
+  kable(caption = "IWAHOLD: top nationalities (n, % of period stints)")
+```
+
+### Criminality
+
+```{r iwahold-crim}
+pivot_wide(pd$criminality, "IWAHOLD", levels = criminality_order) |>
+  kable(caption = "IWAHOLD: book-in criminality classification")
+```
+
+### Security classification
+
+```{r iwahold-class}
+pivot_wide(pd$classification, "IWAHOLD", levels = classification_order) |>
+  kable(caption = "IWAHOLD: detainee security classification")
+```
+
+### Threat level
+
+```{r iwahold-threat}
+pivot_wide(pd$threat_level, "IWAHOLD") |>
+  kable(caption = "IWAHOLD: ICE case threat level")
+```
+
+### Release reason
+
+```{r iwahold-release}
+pivot_wide(pd$release_reason, "IWAHOLD") |>
+  kable(caption = "IWAHOLD: stint release reason")
+```
+
+### Final order & mandatory detention
+
+```{r iwahold-legal}
+bind_rows(
+  pivot_wide(pd$final_order, "IWAHOLD") |> mutate(Field = "Final order"),
+  pivot_wide(pd$ina_236c,    "IWAHOLD") |> mutate(Field = "INA 236(c) mandatory")
+) |>
+  select(Field, Category, everything()) |>
+  kable(caption = "IWAHOLD: final order status and mandatory detention")
+```
+
+### Age bands
+
+```{r iwahold-age}
+pivot_wide(pd$age_bands, "IWAHOLD", value_col = "age_band") |>
+  kable(caption = "IWAHOLD: age distribution at book-in")
+```
+
+### Entry status
+
+```{r iwahold-entry}
+pivot_wide(pd$entry_status, "IWAHOLD") |>
+  kable(caption = "IWAHOLD: immigration entry status")
+```
+
+:::
+
+---
+
+## SPMHOLD — Bishop Henry Whipple Federal Building (St. Paul)
+
+*St. Paul AOR · Short-term ERO hold room; reflects Twin Cities arrest population*
+
+::: {.panel-tabset}
+
+### Population
+
+```{r spmhold-pop}
+fmt_population("SPMHOLD") |>
+  kable(caption = "SPMHOLD: ADP and throughput before/after inauguration")
+```
+
+**ICE annual ADP (FY10–FY26):**
+
+```{r spmhold-bars, results="asis"}
+render_adp_bars("SPMHOLD")
+```
+
+**DDP daily population (Oct 2022 – Mar 2026):**
+
+```{r spmhold-sparkline, results="asis"}
+render_sparkline("SPMHOLD")
+```
+
+### Overview
+
+```{r spmhold-overview}
+fmt_overview("SPMHOLD") |>
+  kable(caption = "SPMHOLD: summary statistics before/after inauguration")
+```
+
+### Nationalities
+
+```{r spmhold-nat}
+fmt_nationalities("SPMHOLD") |>
+  kable(caption = "SPMHOLD: top nationalities (n, % of period stints)")
+```
+
+### Criminality
+
+```{r spmhold-crim}
+pivot_wide(pd$criminality, "SPMHOLD", levels = criminality_order) |>
+  kable(caption = "SPMHOLD: book-in criminality classification")
+```
+
+### Security classification
+
+```{r spmhold-class}
+pivot_wide(pd$classification, "SPMHOLD", levels = classification_order) |>
+  kable(caption = "SPMHOLD: detainee security classification")
+```
+
+### Threat level
+
+```{r spmhold-threat}
+pivot_wide(pd$threat_level, "SPMHOLD") |>
+  kable(caption = "SPMHOLD: ICE case threat level")
+```
+
+### Release reason
+
+```{r spmhold-release}
+pivot_wide(pd$release_reason, "SPMHOLD") |>
+  kable(caption = "SPMHOLD: stint release reason")
+```
+
+### Final order & mandatory detention
+
+```{r spmhold-legal}
+bind_rows(
+  pivot_wide(pd$final_order, "SPMHOLD") |> mutate(Field = "Final order"),
+  pivot_wide(pd$ina_236c,    "SPMHOLD") |> mutate(Field = "INA 236(c) mandatory")
+) |>
+  select(Field, Category, everything()) |>
+  kable(caption = "SPMHOLD: final order status and mandatory detention")
+```
+
+### Age bands
+
+```{r spmhold-age}
+pivot_wide(pd$age_bands, "SPMHOLD", value_col = "age_band") |>
+  kable(caption = "SPMHOLD: age distribution at book-in")
+```
+
+### Entry status
+
+```{r spmhold-entry}
+pivot_wide(pd$entry_status, "SPMHOLD") |>
+  kable(caption = "SPMHOLD: immigration entry status")
+```
+
+:::
+
+---
+
+## PINEPLA — Pine Prairie ICE Processing Center
+
+*New Orleans AOR · Dedicated long-term processing and removal center*
+
+::: {.panel-tabset}
+
+### Population
+
+```{r pinepla-pop}
+fmt_population("PINEPLA") |>
+  kable(caption = "PINEPLA: ADP and throughput before/after inauguration")
+```
+
+**ICE annual ADP (FY10–FY26):**
+
+```{r pinepla-bars, results="asis"}
+render_adp_bars("PINEPLA")
+```
+
+**DDP daily population (Oct 2022 – Mar 2026):**
+
+```{r pinepla-sparkline, results="asis"}
+render_sparkline("PINEPLA")
+```
+
+### Overview
+
+```{r pinepla-overview}
+fmt_overview("PINEPLA") |>
+  kable(caption = "PINEPLA: summary statistics before/after inauguration")
+```
+
+### Nationalities
+
+```{r pinepla-nat}
+fmt_nationalities("PINEPLA") |>
+  kable(caption = "PINEPLA: top nationalities (n, % of period stints)")
+```
+
+### Criminality
+
+```{r pinepla-crim}
+pivot_wide(pd$criminality, "PINEPLA", levels = criminality_order) |>
+  kable(caption = "PINEPLA: book-in criminality classification")
+```
+
+### Security classification
+
+```{r pinepla-class}
+pivot_wide(pd$classification, "PINEPLA", levels = classification_order) |>
+  kable(caption = "PINEPLA: detainee security classification")
+```
+
+### Threat level
+
+```{r pinepla-threat}
+pivot_wide(pd$threat_level, "PINEPLA") |>
+  kable(caption = "PINEPLA: ICE case threat level")
+```
+
+### Release reason
+
+```{r pinepla-release}
+pivot_wide(pd$release_reason, "PINEPLA") |>
+  kable(caption = "PINEPLA: stint release reason")
+```
+
+### Final order & mandatory detention
+
+```{r pinepla-legal}
+bind_rows(
+  pivot_wide(pd$final_order, "PINEPLA") |> mutate(Field = "Final order"),
+  pivot_wide(pd$ina_236c,    "PINEPLA") |> mutate(Field = "INA 236(c) mandatory")
+) |>
+  select(Field, Category, everything()) |>
+  kable(caption = "PINEPLA: final order status and mandatory detention")
+```
+
+### Age bands
+
+```{r pinepla-age}
+pivot_wide(pd$age_bands, "PINEPLA", value_col = "age_band") |>
+  kable(caption = "PINEPLA: age distribution at book-in")
+```
+
+### Entry status
+
+```{r pinepla-entry}
+pivot_wide(pd$entry_status, "PINEPLA") |>
+  kable(caption = "PINEPLA: immigration entry status")
+```
+
+:::
+
+---
+
+## DILLEY — South Texas Family Residential Center (STFRCTX + DILLSAF)
+
+*San Antonio AOR · Family detention center; combined main unit and single-female wing*
+
+::: {.panel-tabset}
+
+### Population
+
+```{r dilley-pop}
+fmt_population("DILLEY") |>
+  kable(caption = "DILLEY: ADP and throughput before/after inauguration")
+```
+
+**ICE annual ADP (FY10–FY26):**
+
+```{r dilley-bars, results="asis"}
+render_adp_bars("DILLEY")
+```
+
+**DDP daily population (Oct 2022 – Mar 2026):**
+
+```{r dilley-sparkline, results="asis"}
+render_sparkline("DILLEY")
+```
+
+### Overview
+
+```{r dilley-overview}
+fmt_overview("DILLEY") |>
+  kable(caption = "DILLEY: summary statistics before/after inauguration")
+```
+
+### Nationalities
+
+```{r dilley-nat}
+fmt_nationalities("DILLEY") |>
+  kable(caption = "DILLEY: top nationalities (n, % of period stints)")
+```
+
+### Criminality
+
+```{r dilley-crim}
+pivot_wide(pd$criminality, "DILLEY", levels = criminality_order) |>
+  kable(caption = "DILLEY: book-in criminality classification")
+```
+
+### Security classification
+
+```{r dilley-class}
+pivot_wide(pd$classification, "DILLEY", levels = classification_order) |>
+  kable(caption = "DILLEY: detainee security classification")
+```
+
+### Threat level
+
+```{r dilley-threat}
+pivot_wide(pd$threat_level, "DILLEY") |>
+  kable(caption = "DILLEY: ICE case threat level")
+```
+
+### Release reason
+
+```{r dilley-release}
+pivot_wide(pd$release_reason, "DILLEY") |>
+  kable(caption = "DILLEY: stint release reason")
+```
+
+### Final order & mandatory detention
+
+```{r dilley-legal}
+bind_rows(
+  pivot_wide(pd$final_order, "DILLEY") |> mutate(Field = "Final order"),
+  pivot_wide(pd$ina_236c,    "DILLEY") |> mutate(Field = "INA 236(c) mandatory")
+) |>
+  select(Field, Category, everything()) |>
+  kable(caption = "DILLEY: final order status and mandatory detention")
+```
+
+### Age bands
+
+```{r dilley-age}
+pivot_wide(pd$age_bands, "DILLEY", value_col = "age_band") |>
+  kable(caption = "DILLEY: age distribution at book-in")
+```
+
+### Entry status
+
+```{r dilley-entry}
+pivot_wide(pd$entry_status, "DILLEY") |>
+  kable(caption = "DILLEY: immigration entry status")
+```
+
+:::
+
+---
+
+## NWDC — Northwest ICE Processing Center (Tacoma)
+
+*Seattle AOR · Large dedicated processing center serving the Pacific Northwest*
+
+::: {.panel-tabset}
+
+### Population
+
+```{r nwdc-pop}
+fmt_population("NWDC") |>
+  kable(caption = "NWDC: ADP and throughput before/after inauguration")
+```
+
+**ICE annual ADP (FY10–FY26):**
+
+```{r nwdc-bars, results="asis"}
+render_adp_bars("NWDC")
+```
+
+**DDP daily population (Oct 2022 – Mar 2026):**
+
+```{r nwdc-sparkline, results="asis"}
+render_sparkline("NWDC")
+```
+
+### Overview
+
+```{r nwdc-overview}
+fmt_overview("NWDC") |>
+  kable(caption = "NWDC: summary statistics before/after inauguration")
+```
+
+### Nationalities
+
+```{r nwdc-nat}
+fmt_nationalities("NWDC") |>
+  kable(caption = "NWDC: top nationalities (n, % of period stints)")
+```
+
+### Criminality
+
+```{r nwdc-crim}
+pivot_wide(pd$criminality, "NWDC", levels = criminality_order) |>
+  kable(caption = "NWDC: book-in criminality classification")
+```
+
+### Security classification
+
+```{r nwdc-class}
+pivot_wide(pd$classification, "NWDC", levels = classification_order) |>
+  kable(caption = "NWDC: detainee security classification")
+```
+
+### Threat level
+
+```{r nwdc-threat}
+pivot_wide(pd$threat_level, "NWDC") |>
+  kable(caption = "NWDC: ICE case threat level")
+```
+
+### Release reason
+
+```{r nwdc-release}
+pivot_wide(pd$release_reason, "NWDC") |>
+  kable(caption = "NWDC: stint release reason")
+```
+
+### Final order & mandatory detention
+
+```{r nwdc-legal}
+bind_rows(
+  pivot_wide(pd$final_order, "NWDC") |> mutate(Field = "Final order"),
+  pivot_wide(pd$ina_236c,    "NWDC") |> mutate(Field = "INA 236(c) mandatory")
+) |>
+  select(Field, Category, everything()) |>
+  kable(caption = "NWDC: final order status and mandatory detention")
+```
+
+### Age bands
+
+```{r nwdc-age}
+pivot_wide(pd$age_bands, "NWDC", value_col = "age_band") |>
+  kable(caption = "NWDC: age distribution at book-in")
+```
+
+### Entry status
+
+```{r nwdc-entry}
+pivot_wide(pd$entry_status, "NWDC") |>
+  kable(caption = "NWDC: immigration entry status")
+```
+
+:::
+
+---
+
+## Data notes
+
+- Source: [Deportation Data Project](https://deportationdata.org/data/processed/ice.html),
+  FOIA release 2026-ICLI-00005 (data through March 11, 2026).
+- **Before** = stints with `book_in_date_time` before January 20, 2025 (Oct 2022–Jan 19, 2025).
+  **After** = stints booked in on or after January 20, 2025 (through March 11, 2026).
+- Rows flagged as `likely_duplicate` (≈0.4% of all stints) are excluded.
+- `case_threat_level` of "NA" in the source data means no ICE threat level assigned
+  (typically non-criminal immigration violations), not a missing value.
+- Nationality counts reflect `citizenship_country` as recorded by ICE. Top 12 per
+  facility are shown (ranked by combined total across both periods).
+- DILLEY combines DETLOC codes STFRCTX (South Texas Family Residential Center) and
+  DILLSAF (Dilley Processing Single Female), both located in Dilley, TX.
