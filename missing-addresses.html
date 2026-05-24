@@ -171,7 +171,7 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(canonical_id, canonical_name, facility_city, facility_state,</span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>         facility_type_wiki, detloc, id_range)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>There are 37 facilities in the roster with no <code>facility_address</code> or <code>facility_city</code>.</p>
+<p>There are 10 facilities in the roster with no <code>facility_address</code> or <code>facility_city</code>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>no_addr <span class="sc">|&gt;</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(canonical_id, canonical_name, facility_state, facility_type_wiki, id_range) <span class="sc">|&gt;</span></span>
@@ -209,34 +209,6 @@ Table&nbsp;1
 <td style="text-align: left;">ddp_other</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2030</td>
-<td style="text-align: left;">Little Rock Hold Room</td>
-<td style="text-align: left;">AR</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2121</td>
-<td style="text-align: left;">Nashville Hold Room</td>
-<td style="text-align: left;">TN</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2151</td>
-<td style="text-align: left;">Anchorage Sub-Office Hold Room</td>
-<td style="text-align: left;">AK</td>
-<td style="text-align: left;">ICE ERO Sub-Office</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2152</td>
-<td style="text-align: left;">Mobile Holdroom</td>
-<td style="text-align: left;">AL</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="even">
 <td style="text-align: right;">2153</td>
 <td style="text-align: left;">Arizona State Prison - Yuma</td>
 <td style="text-align: left;">AZ</td>
@@ -244,24 +216,10 @@ Table&nbsp;1
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2154</td>
-<td style="text-align: left;">Redding Hold Room</td>
-<td style="text-align: left;">CA</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="even">
 <td style="text-align: right;">2155</td>
 <td style="text-align: left;">Santa Maria Sub Office ERO</td>
 <td style="text-align: left;">CA</td>
 <td style="text-align: left;">ICE ERO Sub-Office</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2156</td>
-<td style="text-align: left;">Colo Springs Den Hsi Hold</td>
-<td style="text-align: left;">CO</td>
-<td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="even">
@@ -272,76 +230,6 @@ Table&nbsp;1
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2158</td>
-<td style="text-align: left;">Bowling Green Hold Room</td>
-<td style="text-align: left;">KY</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2159</td>
-<td style="text-align: left;">Salisbury Hold Room</td>
-<td style="text-align: left;">MD</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2160</td>
-<td style="text-align: left;">Duluth Hold Room</td>
-<td style="text-align: left;">MN</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2161</td>
-<td style="text-align: left;">Mount Laurel Hold Room</td>
-<td style="text-align: left;">NJ</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2162</td>
-<td style="text-align: left;">Las Cruces Hold Room</td>
-<td style="text-align: left;">NM</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2163</td>
-<td style="text-align: left;">Roswell Hold Room</td>
-<td style="text-align: left;">NM</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2164</td>
-<td style="text-align: left;">Champlain Hold Room</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2165</td>
-<td style="text-align: left;">Central Islip Hold Room</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2166</td>
-<td style="text-align: left;">Newburgh Holding</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2167</td>
-<td style="text-align: left;">Syracuse Hold Room</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="odd">
 <td style="text-align: right;">2168</td>
 <td style="text-align: left;">Tulsa Hold Room</td>
 <td style="text-align: left;">OK</td>
@@ -349,111 +237,34 @@ Table&nbsp;1
 <td style="text-align: left;">hold</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2169</td>
-<td style="text-align: left;">Williamsport Hold Room</td>
-<td style="text-align: left;">PA</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2170</td>
-<td style="text-align: left;">York Hold Room</td>
-<td style="text-align: left;">PA</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2171</td>
-<td style="text-align: left;">Corpus Christi Eor Hold Room</td>
-<td style="text-align: left;">TX</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="odd">
 <td style="text-align: right;">2172</td>
 <td style="text-align: left;">El Paso Soft Sided Facility</td>
 <td style="text-align: left;">TX</td>
 <td style="text-align: left;">ICE Hold Room</td>
 <td style="text-align: left;">hold</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">2173</td>
-<td style="text-align: left;">Mcallen Hold Room</td>
-<td style="text-align: left;">TX</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
 <tr class="odd">
-<td style="text-align: right;">2174</td>
-<td style="text-align: left;">Montgomery Hold Rm</td>
-<td style="text-align: left;">TX</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2175</td>
-<td style="text-align: left;">Lorton, Va Hold Room</td>
-<td style="text-align: left;">VA</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2176</td>
-<td style="text-align: left;">Roanoke Sub-Office Hold Room</td>
-<td style="text-align: left;">VA</td>
-<td style="text-align: left;">ICE ERO Sub-Office</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2177</td>
-<td style="text-align: left;">Ferndale Hold Room</td>
-<td style="text-align: left;">WA</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2178</td>
-<td style="text-align: left;">Richland Hold Room</td>
-<td style="text-align: left;">WA</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2179</td>
-<td style="text-align: left;">Spokane Hold Room</td>
-<td style="text-align: left;">WA</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2180</td>
-<td style="text-align: left;">Wenatchee Hold Room</td>
-<td style="text-align: left;">WA</td>
-<td style="text-align: left;">ICE Hold Room</td>
-<td style="text-align: left;">hold</td>
-</tr>
-<tr class="even">
 <td style="text-align: right;">3133</td>
 <td style="text-align: left;">New York Presbyterian Hospital</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">Medical Facility</td>
 <td style="text-align: left;">medical</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: right;">3135</td>
 <td style="text-align: left;">Sunrise Hospital</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">Medical Facility</td>
 <td style="text-align: left;">medical</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: right;">3136</td>
 <td style="text-align: left;">Spring Valley Hospital</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">Medical Facility</td>
 <td style="text-align: left;">medical</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: right;">3197</td>
 <td style="text-align: left;">Pam Health Specialty Hospital 1</td>
 <td style="text-align: left;">TX</td>
@@ -504,16 +315,16 @@ Table&nbsp;1
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">37</td>
-<td style="text-align: right;">22</td>
-<td style="text-align: right;">32</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
 <td style="text-align: right;">5</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<p>Vera has street addresses for 22 of the 37 facilities and city names for 32. Only 5 have no address information in Vera at all.</p>
+<p>Vera has street addresses for 5 of the 10 facilities and city names for 5. Only 5 have no address information in Vera at all.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>no_addr_vera <span class="sc">|&gt;</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
@@ -534,10 +345,10 @@ Table&nbsp;2
 <table class="do-not-create-environment caption-top table table-sm table-striped small">
 <colgroup>
 <col style="width: 5%">
-<col style="width: 34%">
+<col style="width: 36%">
 <col style="width: 6%">
-<col style="width: 35%">
-<col style="width: 18%">
+<col style="width: 37%">
+<col style="width: 13%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -557,34 +368,6 @@ Table&nbsp;2
 <td style="text-align: left;">—</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2030</td>
-<td style="text-align: left;">Little Rock Hold Room</td>
-<td style="text-align: left;">AR</td>
-<td style="text-align: left;">2900 S Woodrow St</td>
-<td style="text-align: left;">Little Rock</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2121</td>
-<td style="text-align: left;">Nashville Hold Room</td>
-<td style="text-align: left;">TN</td>
-<td style="text-align: left;">200 James Robertson Pkwy</td>
-<td style="text-align: left;">Nashville</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2151</td>
-<td style="text-align: left;">Anchorage Sub-Office Hold Room</td>
-<td style="text-align: left;">AK</td>
-<td style="text-align: left;">—</td>
-<td style="text-align: left;">Anchorage</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2152</td>
-<td style="text-align: left;">Mobile Holdroom</td>
-<td style="text-align: left;">AL</td>
-<td style="text-align: left;">150 N Royal Street Suite 3004</td>
-<td style="text-align: left;">Mobile</td>
-</tr>
-<tr class="even">
 <td style="text-align: right;">2153</td>
 <td style="text-align: left;">Arizona State Prison - Yuma</td>
 <td style="text-align: left;">AZ</td>
@@ -592,25 +375,11 @@ Table&nbsp;2
 <td style="text-align: left;">Phoenix</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2154</td>
-<td style="text-align: left;">Redding Hold Room</td>
-<td style="text-align: left;">CA</td>
-<td style="text-align: left;">443 Redcliff Dr</td>
-<td style="text-align: left;">Redding</td>
-</tr>
-<tr class="even">
 <td style="text-align: right;">2155</td>
 <td style="text-align: left;">Santa Maria Sub Office ERO</td>
 <td style="text-align: left;">CA</td>
 <td style="text-align: left;">740 West Century Street, Suite A</td>
 <td style="text-align: left;">Santa Maria</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2156</td>
-<td style="text-align: left;">Colo Springs Den Hsi Hold</td>
-<td style="text-align: left;">CO</td>
-<td style="text-align: left;">415 E Pikes Peak Ave</td>
-<td style="text-align: left;">Colorado Springs</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">2157</td>
@@ -620,76 +389,6 @@ Table&nbsp;2
 <td style="text-align: left;">Miami</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2158</td>
-<td style="text-align: left;">Bowling Green Hold Room</td>
-<td style="text-align: left;">KY</td>
-<td style="text-align: left;">11093 S W Lewis Memorial Dr</td>
-<td style="text-align: left;">Bowling Green</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2159</td>
-<td style="text-align: left;">Salisbury Hold Room</td>
-<td style="text-align: left;">MD</td>
-<td style="text-align: left;">119 W Naylor Mill Road</td>
-<td style="text-align: left;">Salisbury</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2160</td>
-<td style="text-align: left;">Duluth Hold Room</td>
-<td style="text-align: left;">MN</td>
-<td style="text-align: left;">4431 Endeavor Drive</td>
-<td style="text-align: left;">Duluth</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2161</td>
-<td style="text-align: left;">Mount Laurel Hold Room</td>
-<td style="text-align: left;">NJ</td>
-<td style="text-align: left;">532 Fellowship Road</td>
-<td style="text-align: left;">Mount Laurel</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2162</td>
-<td style="text-align: left;">Las Cruces Hold Room</td>
-<td style="text-align: left;">NM</td>
-<td style="text-align: left;">—</td>
-<td style="text-align: left;">Las Cruces</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2163</td>
-<td style="text-align: left;">Roswell Hold Room</td>
-<td style="text-align: left;">NM</td>
-<td style="text-align: left;">500 N. Richardson Ave</td>
-<td style="text-align: left;">Roswell</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2164</td>
-<td style="text-align: left;">Champlain Hold Room</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: left;">237 West Service Road</td>
-<td style="text-align: left;">Champlain</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2165</td>
-<td style="text-align: left;">Central Islip Hold Room</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: left;">100 Federal Plaza</td>
-<td style="text-align: left;">Central Islip</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2166</td>
-<td style="text-align: left;">Newburgh Holding</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: left;">—</td>
-<td style="text-align: left;">Newburgh</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2167</td>
-<td style="text-align: left;">Syracuse Hold Room</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: left;">152 Air Cargo Road Suite 201</td>
-<td style="text-align: left;">N Syracuse</td>
-</tr>
-<tr class="odd">
 <td style="text-align: right;">2168</td>
 <td style="text-align: left;">Tulsa Hold Room</td>
 <td style="text-align: left;">OK</td>
@@ -697,111 +396,34 @@ Table&nbsp;2
 <td style="text-align: left;">Tulsa</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2169</td>
-<td style="text-align: left;">Williamsport Hold Room</td>
-<td style="text-align: left;">PA</td>
-<td style="text-align: left;">2851 S Reach Road</td>
-<td style="text-align: left;">Williamsport</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2170</td>
-<td style="text-align: left;">York Hold Room</td>
-<td style="text-align: left;">PA</td>
-<td style="text-align: left;">—</td>
-<td style="text-align: left;">York</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2171</td>
-<td style="text-align: left;">Corpus Christi Eor Hold Room</td>
-<td style="text-align: left;">TX</td>
-<td style="text-align: left;">—</td>
-<td style="text-align: left;">Corpus Christi</td>
-</tr>
-<tr class="odd">
 <td style="text-align: right;">2172</td>
 <td style="text-align: left;">El Paso Soft Sided Facility</td>
 <td style="text-align: left;">TX</td>
 <td style="text-align: left;">12501 Gateway Blvd S</td>
 <td style="text-align: left;">El Paso</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">2173</td>
-<td style="text-align: left;">Mcallen Hold Room</td>
-<td style="text-align: left;">TX</td>
-<td style="text-align: left;">—</td>
-<td style="text-align: left;">Edinburg</td>
-</tr>
 <tr class="odd">
-<td style="text-align: right;">2174</td>
-<td style="text-align: left;">Montgomery Hold Rm</td>
-<td style="text-align: left;">TX</td>
-<td style="text-align: left;">807 Hilbig Rd</td>
-<td style="text-align: left;">Conroe</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2175</td>
-<td style="text-align: left;">Lorton, Va Hold Room</td>
-<td style="text-align: left;">VA</td>
-<td style="text-align: left;">2675 Prosperity Avenue</td>
-<td style="text-align: left;">Fairfax</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2176</td>
-<td style="text-align: left;">Roanoke Sub-Office Hold Room</td>
-<td style="text-align: left;">VA</td>
-<td style="text-align: left;">103 West Main St</td>
-<td style="text-align: left;">Salem</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2177</td>
-<td style="text-align: left;">Ferndale Hold Room</td>
-<td style="text-align: left;">WA</td>
-<td style="text-align: left;">—</td>
-<td style="text-align: left;">Ferndale</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2178</td>
-<td style="text-align: left;">Richland Hold Room</td>
-<td style="text-align: left;">WA</td>
-<td style="text-align: left;">—</td>
-<td style="text-align: left;">Richland</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2179</td>
-<td style="text-align: left;">Spokane Hold Room</td>
-<td style="text-align: left;">WA</td>
-<td style="text-align: left;">—</td>
-<td style="text-align: left;">Spokane</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2180</td>
-<td style="text-align: left;">Wenatchee Hold Room</td>
-<td style="text-align: left;">WA</td>
-<td style="text-align: left;">—</td>
-<td style="text-align: left;">Yakima</td>
-</tr>
-<tr class="even">
 <td style="text-align: right;">3133</td>
 <td style="text-align: left;">New York Presbyterian Hospital</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">—</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: right;">3135</td>
 <td style="text-align: left;">Sunrise Hospital</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">—</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: right;">3136</td>
 <td style="text-align: left;">Spring Valley Hospital</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">—</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: right;">3197</td>
 <td style="text-align: left;">Pam Health Specialty Hospital 1</td>
 <td style="text-align: left;">TX</td>
@@ -938,11 +560,11 @@ Table&nbsp;3
 <div class="cell-output-display">
 <table class="do-not-create-environment caption-top table table-sm table-striped small">
 <colgroup>
-<col style="width: 32%">
-<col style="width: 17%">
+<col style="width: 33%">
+<col style="width: 12%">
 <col style="width: 6%">
 <col style="width: 12%">
-<col style="width: 33%">
+<col style="width: 34%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -962,34 +584,6 @@ Table&nbsp;3
 <td style="text-align: left;">—</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Little Rock Hold Room</td>
-<td style="text-align: left;">Little Rock</td>
-<td style="text-align: left;">AR</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">2900 S Woodrow St</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Nashville Hold Room</td>
-<td style="text-align: left;">Nashville</td>
-<td style="text-align: left;">TN</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">200 James Robertson Pkwy</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Anchorage Sub-Office Hold Room</td>
-<td style="text-align: left;">Anchorage</td>
-<td style="text-align: left;">AK</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">—</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Mobile Holdroom</td>
-<td style="text-align: left;">Mobile</td>
-<td style="text-align: left;">AL</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">150 N Royal Street Suite 3004</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">Arizona State Prison - Yuma</td>
 <td style="text-align: left;">Phoenix</td>
 <td style="text-align: left;">AZ</td>
@@ -997,25 +591,11 @@ Table&nbsp;3
 <td style="text-align: left;">2500 E Van Buren St</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Redding Hold Room</td>
-<td style="text-align: left;">Redding</td>
-<td style="text-align: left;">CA</td>
-<td style="text-align: left;">No</td>
-<td style="text-align: left;">443 Redcliff Dr</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">Santa Maria Sub Office ERO</td>
 <td style="text-align: left;">Santa Maria</td>
 <td style="text-align: left;">CA</td>
 <td style="text-align: left;">Yes</td>
 <td style="text-align: left;">740 West Century Street, Suite A</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Colo Springs Den Hsi Hold</td>
-<td style="text-align: left;">Colorado Springs</td>
-<td style="text-align: left;">CO</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">415 E Pikes Peak Ave</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Miami Border Patrol</td>
@@ -1025,76 +605,6 @@ Table&nbsp;3
 <td style="text-align: left;">51 SW 1st Ave</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Bowling Green Hold Room</td>
-<td style="text-align: left;">Bowling Green</td>
-<td style="text-align: left;">KY</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">11093 S W Lewis Memorial Dr</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Salisbury Hold Room</td>
-<td style="text-align: left;">Salisbury</td>
-<td style="text-align: left;">MD</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">119 W Naylor Mill Road</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Duluth Hold Room</td>
-<td style="text-align: left;">Duluth</td>
-<td style="text-align: left;">MN</td>
-<td style="text-align: left;">No</td>
-<td style="text-align: left;">4431 Endeavor Drive</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Mount Laurel Hold Room</td>
-<td style="text-align: left;">Mount Laurel</td>
-<td style="text-align: left;">NJ</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">532 Fellowship Road</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Las Cruces Hold Room</td>
-<td style="text-align: left;">Las Cruces</td>
-<td style="text-align: left;">NM</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">—</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Roswell Hold Room</td>
-<td style="text-align: left;">Roswell</td>
-<td style="text-align: left;">NM</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">500 N. Richardson Ave</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Champlain Hold Room</td>
-<td style="text-align: left;">Champlain</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">237 West Service Road</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Central Islip Hold Room</td>
-<td style="text-align: left;">Central Islip</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">100 Federal Plaza</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Newburgh Holding</td>
-<td style="text-align: left;">Newburgh</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">—</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Syracuse Hold Room</td>
-<td style="text-align: left;">N Syracuse</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">152 Air Cargo Road Suite 201</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">Tulsa Hold Room</td>
 <td style="text-align: left;">Tulsa</td>
 <td style="text-align: left;">OK</td>
@@ -1102,111 +612,34 @@ Table&nbsp;3
 <td style="text-align: left;">1603 S 101st East Ave</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Williamsport Hold Room</td>
-<td style="text-align: left;">Williamsport</td>
-<td style="text-align: left;">PA</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">2851 S Reach Road</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">York Hold Room</td>
-<td style="text-align: left;">York</td>
-<td style="text-align: left;">PA</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">—</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Corpus Christi Eor Hold Room</td>
-<td style="text-align: left;">Corpus Christi</td>
-<td style="text-align: left;">TX</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">—</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">El Paso Soft Sided Facility</td>
 <td style="text-align: left;">El Paso</td>
 <td style="text-align: left;">TX</td>
 <td style="text-align: left;">Yes</td>
 <td style="text-align: left;">12501 Gateway Blvd S</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Mcallen Hold Room</td>
-<td style="text-align: left;">Edinburg</td>
-<td style="text-align: left;">TX</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">—</td>
-</tr>
 <tr class="odd">
-<td style="text-align: left;">Montgomery Hold Rm</td>
-<td style="text-align: left;">Conroe</td>
-<td style="text-align: left;">TX</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">807 Hilbig Rd</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Lorton, Va Hold Room</td>
-<td style="text-align: left;">Fairfax</td>
-<td style="text-align: left;">VA</td>
-<td style="text-align: left;">No</td>
-<td style="text-align: left;">2675 Prosperity Avenue</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Roanoke Sub-Office Hold Room</td>
-<td style="text-align: left;">Salem</td>
-<td style="text-align: left;">VA</td>
-<td style="text-align: left;">No</td>
-<td style="text-align: left;">103 West Main St</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Ferndale Hold Room</td>
-<td style="text-align: left;">Ferndale</td>
-<td style="text-align: left;">WA</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">—</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Richland Hold Room</td>
-<td style="text-align: left;">Richland</td>
-<td style="text-align: left;">WA</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">—</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Spokane Hold Room</td>
-<td style="text-align: left;">Spokane</td>
-<td style="text-align: left;">WA</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">—</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Wenatchee Hold Room</td>
-<td style="text-align: left;">Yakima</td>
-<td style="text-align: left;">WA</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">—</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">New York Presbyterian Hospital</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">—</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Sunrise Hospital</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">—</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Spring Valley Hospital</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">NY</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">—</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Pam Health Specialty Hospital 1</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">TX</td>
@@ -1220,7 +653,7 @@ Table&nbsp;3
 </figure>
 </div>
 </div>
-<p>28 of the 37 facilities have a city that appears on the ERO map. The map confirms city-level locations but does not provide street addresses beyond what Vera already has.</p>
+<p>5 of the 10 facilities have a city that appears on the ERO map. The map confirms city-level locations but does not provide street addresses beyond what Vera already has.</p>
 </section>
 <section id="facilities-not-on-the-ero-map" class="level3">
 <h3 class="anchored" data-anchor-id="facilities-not-on-the-ero-map">Facilities not on the ERO map</h3>
@@ -1242,12 +675,6 @@ Table&nbsp;4
 <div aria-describedby="tbl-not-on-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
 <table class="do-not-create-environment caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 46%">
-<col style="width: 11%">
-<col style="width: 8%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Facility</th>
@@ -1262,30 +689,6 @@ Table&nbsp;4
 <td style="text-align: left;">—</td>
 <td style="text-align: left;">NA</td>
 <td style="text-align: left;">—</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Redding Hold Room</td>
-<td style="text-align: left;">Redding</td>
-<td style="text-align: left;">CA</td>
-<td style="text-align: left;">443 Redcliff Dr</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Duluth Hold Room</td>
-<td style="text-align: left;">Duluth</td>
-<td style="text-align: left;">MN</td>
-<td style="text-align: left;">4431 Endeavor Drive</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Lorton, Va Hold Room</td>
-<td style="text-align: left;">Fairfax</td>
-<td style="text-align: left;">VA</td>
-<td style="text-align: left;">2675 Prosperity Avenue</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Roanoke Sub-Office Hold Room</td>
-<td style="text-align: left;">Salem</td>
-<td style="text-align: left;">VA</td>
-<td style="text-align: left;">103 West Main St</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">New York Presbyterian Hospital</td>
@@ -1333,15 +736,15 @@ Table&nbsp;4
 <tbody>
 <tr class="odd">
 <td>Total facilities missing addresses</td>
-<td>37</td>
+<td>10</td>
 </tr>
 <tr class="even">
 <td>Vera has street address</td>
-<td>22</td>
+<td>5</td>
 </tr>
 <tr class="odd">
 <td>Vera has city only (no street)</td>
-<td>10</td>
+<td>0</td>
 </tr>
 <tr class="even">
 <td>No address in any source</td>
@@ -1349,7 +752,7 @@ Table&nbsp;4
 </tr>
 <tr class="odd">
 <td>City appears on ERO map</td>
-<td>28</td>
+<td>5</td>
 </tr>
 </tbody>
 </table>
