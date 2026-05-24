@@ -734,6 +734,52 @@ list(
     format = "file"
   ),
 
+  # ── DDP stays dataset (one row per detention stay, incl. full facility chain) ─
+  tar_target(
+    stays_file,
+    here::here("data/ddp/detention-stays-latest.parquet"),
+    format = "file",
+    description = "Tracks the DDP detention stays parquet file for changes"
+  ),
+  tar_target(
+    stays_raw,
+    arrow::read_parquet(stays_file),
+    description = "Raw DDP detention stays (1.09M rows x 70 cols; one row per stay with detention_facility_codes_all chain)"
+  ),
+
+  # ── DDP arrests dataset ────────────────────────────────────────────────────
+  tar_target(
+    arrests_file,
+    here::here("data/ddp/arrests-latest.parquet"),
+    format = "file",
+    description = "Tracks the DDP arrests parquet file for changes"
+  ),
+  tar_target(
+    arrests_raw,
+    arrow::read_parquet(arrests_file),
+    description = "Raw DDP arrests (713k rows x 28 cols; one row per arrest event with apprehension_state, date, unique_identifier)"
+  ),
+
+  # ── Minnesota post-inauguration arrest analysis ────────────────────────────
+  tar_target(
+    mn_arrests_data,
+    build_mn_arrests_data(
+      arrests      = arrests_raw,
+      stays        = stays_raw,
+      detloc_lookup = detloc_lookup_complete,
+      geo_all      = readr::read_csv(
+        here::here("data/facilities-geocoded-all.csv"),
+        show_col_types = FALSE
+      )
+    ),
+    description = "Pre-computed tables for mn-arrests.qmd: MN post-2025-01-20 arrest itineraries, county choropleth, Sankey, minors"
+  ),
+  tar_quarto(
+    mn_arrests_report,
+    "mn-arrests.qmd",
+    description = "Rendered mn-arrests.qmd: MN arrest choropleth, facility maps, flow diagram, minors section"
+  ),
+
   # ── Detention stints data (DDP individual-level) ───────────────────────────
   # Individual-level FOIA data: one row per detention stint (one continuous
   # period at one facility within a stay). Source: DDP FOIA 2026-ICLI-00005.

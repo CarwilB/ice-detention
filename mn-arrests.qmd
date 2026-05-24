@@ -1,0 +1,444 @@
+---
+title: "ICE Arrests in Minnesota After January 20, 2025"
+subtitle: "Detention itineraries, transfer patterns, and removal outcomes"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-float: true
+    self-contained: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+library(targets)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(ggplot2)
+library(ggalluvial)
+library(leaflet)
+library(htmltools)
+library(maps)
+library(sf)
+library(knitr)
+
+d <- tar_read(mn_arrests_data)
+cutoff_str <- format(d$cutoff, "%B %e, %Y")
+```
+
+This report traces ICE arrests made in Minnesota on or after **`r cutoff_str`** through the
+full detention and removal pipeline, using individual-level data released by the
+[Deportation Data Project](https://deportationdata.org) via FOIA.
+
+**`r format(d$n_arrests, big.mark=",")`** arrests of
+**`r format(d$n_persons, big.mark=",")`** distinct individuals, linked to
+**`r format(d$n_stays, big.mark=",")`** detention stays.
+
+---
+
+## Overview
+
+```{r overview-table}
+tibble::tibble(
+  Metric  = c("Total arrests", "Distinct persons",
+               "Detention stays (post-inauguration)",
+               "Matched to stays dataset", "Removal rate"),
+  Value   = c(
+    format(d$n_arrests, big.mark=","),
+    format(d$n_persons, big.mark=","),
+    format(d$n_stays,   big.mark=","),
+    "99.6%",
+    paste0(round(sum(d$outcomes$n[d$outcomes$stay_release_reason == "Removed"],
+                     na.rm=TRUE) / d$n_stays * 100, 1), "%")
+  )
+) |> kable()
+```
+
+### Monthly arrest volume
+
+```{r monthly-chart, fig.width=9, fig.height=3.5}
+d$monthly_vol |>
+  mutate(
+    date    = as.Date(paste0(month, "-01")),
+    post_op = date >= as.Date("2025-12-01")
+  ) |>
+  ggplot(aes(x = date, y = n, fill = post_op)) +
+  geom_col(width = 25) +
+  geom_vline(xintercept = as.Date("2025-01-20"), linetype = "dashed",
+             color = "firebrick", linewidth = 0.7) +
+  annotate("text", x = as.Date("2025-01-20"), y = Inf,
+           label = "Inauguration", hjust = -0.1, vjust = 1.5,
+           size = 3, color = "firebrick") +
+  scale_fill_manual(values = c("FALSE" = "#888", "TRUE" = "#c0392b"),
+                    guide = "none") +
+  scale_x_date(date_labels = "%b %Y", date_breaks = "2 months") +
+  scale_y_continuous(labels = scales::comma) +
+  labs(x = NULL, y = "Arrests", title = "Monthly ICE arrests in Minnesota") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 30, hjust = 1))
+```
+
+### Who was arrested
+
+::: {.columns}
+
+::: {.column width="48%"}
+**Top nationalities**
+
+```{r nat-table}
+d$nationalities |>
+  head(15) |>
+  rename(Country = citizenship_country, N = n, `%` = pct) |>
+  kable()
+```
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+**Arrest type and criminality**
+
+```{r type-table}
+d$arrest_type |>
+  rename(`Arrest type` = apprehension_type, N = n, `%` = pct) |>
+  kable()
+```
+
+```{r crim-table}
+d$criminality |>
+  rename(Criminality = apprehension_criminality, N = n, `%` = pct) |>
+  kable()
+```
+:::
+
+:::
+
+---
+
+## Arrest Locations in Minnesota
+
+The choropleth below maps arrests to Minnesota counties using the
+`apprehension_site_landmark` field. The dominant category is "SPM General Area,
+Non-Specific" (Ramsey County / St. Paul), which accounts for the majority of arrests.
+County jails, federal facilities, and specific police departments allow more precise
+placement for the remainder.
+
+```{r county-choropleth}
+# Build MN county sf from maps package
+mn_sf <- sf::st_as_sf(
+  maps::map("county", "minnesota", fill = TRUE, plot = FALSE)
+) |>
+  mutate(county = str_to_title(str_remove(ID, "minnesota,")))
+
+# Join with arrest counts
+county_sf <- mn_sf |>
+  left_join(d$county_counts, by = "county") |>
+  replace_na(list(n = 0)) |>
+  mutate(label = paste0("<b>", county, " County</b><br>Arrests: ", n))
+
+bins <- c(0, 1, 10, 50, 100, 500, 5000)
+pal  <- colorBin("YlOrRd", county_sf$n, bins = bins, na.color = "#ddd")
+
+leaflet(county_sf, options = leafletOptions(minZoom = 6)) |>
+  addProviderTiles(providers$CartoDB.Positron) |>
+  addPolygons(
+    fillColor  = ~pal(n),
+    fillOpacity = 0.75,
+    color       = "#666",
+    weight      = 0.6,
+    popup       = ~label,
+    label       = ~paste0(county, ": ", n)
+  ) |>
+  addLegend(
+    pal      = pal,
+    values   = ~n,
+    title    = "Arrests",
+    position = "bottomright"
+  ) |>
+  setView(lng = -94.5, lat = 46.5, zoom = 6)
+```
+
+> **Note:** `r sum(d$county_counts$n)` of `r d$n_arrests` arrests
+> (`r round(sum(d$county_counts$n)/d$n_arrests*100,0)`%) are mapped to a county.
+> The remainder have non-specific or out-of-state landmark records and are excluded.
+> Ramsey County (St. Paul) includes the bulk of arrests recorded as "SPM General Area."
+
+---
+
+## Detention Facility Maps
+
+The map below shows where people were first detained (blue) and where their stay
+ended (orange). Circle area is proportional to the log of the number of detainees.
+Most people enter at SPMHOLD (Bishop Henry Whipple Federal Building, St. Paul) and
+end their stay at facilities across several states, with ERO El Paso Camp East Montana
+and the Alexandria Staging Facility as the most common final stops.
+
+```{r facility-map}
+# Radius: log10 scale, minimum 4px
+rad <- function(n) pmax(4, log10(n + 1) * 12)
+
+first_popup <- function(df) {
+  paste0("<b>", df$canonical_name, "</b><br>",
+         df$facility_city, ", ", df$facility_state, "<br>",
+         "DETLOC: ", df$code, "<br>",
+         "First facility for <b>", format(df$n, big.mark=","),
+         "</b> MN arrestees")
+}
+
+last_popup <- function(df) {
+  paste0("<b>", df$canonical_name, "</b><br>",
+         df$facility_city, ", ", df$facility_state, "<br>",
+         "DETLOC: ", df$code, "<br>",
+         "Final facility for <b>", format(df$n, big.mark=","),
+         "</b> MN arrestees")
+}
+
+leaflet() |>
+  addProviderTiles(providers$CartoDB.Positron) |>
+  addCircleMarkers(
+    data        = d$first_fac,
+    lng         = ~lon, lat = ~lat,
+    radius      = ~rad(n),
+    color       = "#1a6bb5",
+    fillColor   = "#4a90d9",
+    fillOpacity = 0.7,
+    weight      = 1.2,
+    popup       = ~first_popup(d$first_fac),
+    group       = "First detention facility"
+  ) |>
+  addCircleMarkers(
+    data        = d$last_fac,
+    lng         = ~lon, lat = ~lat,
+    radius      = ~rad(n),
+    color       = "#a03000",
+    fillColor   = "#d94a1a",
+    fillOpacity = 0.7,
+    weight      = 1.2,
+    popup       = ~last_popup(d$last_fac),
+    group       = "Last detention facility"
+  ) |>
+  addLayersControl(
+    overlayGroups = c("First detention facility", "Last detention facility"),
+    options       = layersControlOptions(collapsed = FALSE)
+  ) |>
+  setView(lng = -96, lat = 38, zoom = 4)
+```
+
+**First detention facility (top 8):**
+
+```{r first-fac-table}
+d$first_fac |>
+  select(code, canonical_name, facility_city, facility_state, n) |>
+  mutate(pct = round(n / d$n_stays * 100, 1)) |>
+  head(8) |>
+  rename(DETLOC = code, Facility = canonical_name,
+         City = facility_city, State = facility_state,
+         N = n, `%` = pct) |>
+  kable()
+```
+
+**Last detention facility (top 10):**
+
+```{r last-fac-table}
+d$last_fac |>
+  select(code, canonical_name, facility_city, facility_state, n) |>
+  mutate(pct = round(n / d$n_stays * 100, 1)) |>
+  head(10) |>
+  rename(DETLOC = code, Facility = canonical_name,
+         City = facility_city, State = facility_state,
+         N = n, `%` = pct) |>
+  kable()
+```
+
+---
+
+## Removal Pipeline Flow
+
+The diagram below traces the complete path from arrest to outcome:
+**Minnesota arrest → first detention facility → last detention facility → outcome.**
+Each band represents a group of people following the same route; band width is
+proportional to the number of people on that path. The top facilities at each stage
+are named individually; all others are grouped as "Other."
+
+```{r sankey, fig.width=9, fig.height=9}
+# Factor ordering for clean layout
+first_lvls <- c(
+  "SPMHOLD\n(Bishop Whipple)", "Sherburne\nCounty Jail",
+  "Freeborn\nCounty Jail",     "Kandiyohi\nCounty Jail",
+  "Douglas Co. WI",            "ERO El Paso\nCamp Montana", "Other"
+)
+last_lvls <- c(
+  "ERO El Paso\nCamp Montana", "SPMHOLD\n(final stop)",
+  "Alexandria\nStaging Fac.",  "Port Isabel\nSPC",
+  "Pine Prairie\nProc. Ctr",   "Sherburne\nCounty Jail",
+  "Adams County\nCorr. Ctr",   "Karnes County\nProc. Ctr", "Other"
+)
+outcome_lvls <- c("Removed", "Released", "Pending / Unknown")
+
+san <- d$sankey_data |>
+  mutate(
+    first_label   = factor(first_label,   levels = rev(first_lvls)),
+    last_label    = factor(last_label,    levels = rev(last_lvls)),
+    outcome_label = factor(outcome_label, levels = rev(outcome_lvls))
+  )
+
+ggplot(san,
+       aes(y = n,
+           axis1 = stage1,
+           axis2 = first_label,
+           axis3 = last_label,
+           axis4 = outcome_label)) +
+  geom_alluvium(aes(fill = outcome_label), alpha = 0.65, width = 1/6) +
+  geom_stratum(fill = "grey92", color = "grey60", width = 1/6) +
+  geom_text(
+    stat = "stratum",
+    aes(label = after_stat(stratum)),
+    size = 2.9, lineheight = 0.9
+  ) +
+  scale_x_discrete(
+    limits = c("Arrest", "First facility", "Last facility", "Outcome"),
+    expand = c(0.08, 0.08)
+  ) +
+  scale_fill_manual(
+    values = c(
+      "Removed"          = "#c0392b",
+      "Released"         = "#2980b9",
+      "Pending / Unknown" = "#95a5a6"
+    )
+  ) +
+  scale_y_continuous(labels = scales::comma) +
+  labs(
+    y    = "Number of stays",
+    fill = "Outcome",
+    title = "Minnesota arrest → detention → outcome pipeline"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position  = "bottom",
+    panel.grid.major = element_blank(),
+    axis.text.y      = element_text(size = 9)
+  )
+```
+
+**Final outcomes:**
+
+```{r outcomes-table}
+d$outcomes |>
+  rename(`Release reason` = stay_release_reason, N = n, `%` = pct) |>
+  kable()
+```
+
+**All facilities appearing in itineraries (top 15):**
+
+```{r all-facs-table}
+d$all_facs |>
+  head(15) |>
+  rename(DETLOC = codes, `N appearances` = n, `% of stays` = pct_of_stays) |>
+  kable()
+```
+
+---
+
+## Minor Detainees (Under 18)
+
+This section identifies individuals who were under 18 years old at the time of
+arrest, based on `birth_year` and `apprehension_date`. Age is approximate
+(year-of-arrest minus birth-year; does not account for whether the birthday
+had passed).
+
+```{r minors-check}
+m <- d$minors
+```
+
+**`r m$n_arrests` arrests** involved persons under 18, representing
+**`r m$n_persons` distinct individuals** linked to **`r m$n_stays` detention stays.**
+
+```{r minors-overview}
+tibble::tibble(
+  Metric = c("Arrests of minors", "Distinct minors", "Detention stays"),
+  Value  = c(format(m$n_arrests, big.mark=","),
+             format(m$n_persons, big.mark=","),
+             format(m$n_stays,   big.mark=","))
+) |> kable()
+```
+
+### Age at arrest
+
+```{r minors-age}
+m$age_dist |>
+  rename(`Age at arrest` = age_at_arrest, N = n) |>
+  kable()
+```
+
+### Nationality
+
+```{r minors-nat}
+m$nationalities |>
+  rename(Country = citizenship_country, N = n, `%` = pct) |>
+  kable()
+```
+
+### Arrest type and criminality
+
+```{r minors-type}
+m$arrest_type |>
+  rename(`Arrest type` = apprehension_type, N = n, `%` = pct) |>
+  kable()
+```
+
+```{r minors-crim}
+m$criminality |>
+  rename(Criminality = apprehension_criminality, N = n, `%` = pct) |>
+  kable()
+```
+
+### First detention facility
+
+```{r minors-first}
+m$first_fac |>
+  rename(DETLOC = code, Facility = facility, N = n, `%` = pct) |>
+  kable()
+```
+
+### Last detention facility
+
+```{r minors-last}
+m$last_fac |>
+  rename(DETLOC = code, Facility = facility, N = n, `%` = pct) |>
+  kable()
+```
+
+### Outcomes
+
+```{r minors-outcomes}
+m$outcomes |>
+  rename(`Release reason` = stay_release_reason, N = n, `%` = pct) |>
+  kable()
+```
+
+---
+
+## Data notes
+
+- **Source:** [Deportation Data Project](https://deportationdata.org), FOIA release
+  2026-ICLI-00005, data through March 11, 2026. Arrests dataset: 713,464 rows.
+  Stays dataset: 1,087,417 rows.
+- Arrests filtered to `apprehension_state == "MINNESOTA"` and
+  `apprehension_date >= 2025-01-20`. Rows with `duplicate_likely == TRUE` excluded.
+- Stays linked to arrests via `unique_identifier`; only stays beginning on or after
+  2025-01-20 are included (prior stays for the same person are excluded).
+- County choropleth uses `apprehension_site_landmark`; approximately
+  `r round((1 - sum(d$county_counts$n)/d$n_arrests)*100)`% of arrests have
+  non-specific or missing landmarks and are not mapped.
+- Minor age is estimated as year(`apprehension_date`) − `birth_year` and may be
+  off by up to one year for individuals whose birthday falls later in the calendar year.
+- `stay_release_reason` is NA for stays that were still open as of the data extract
+  date (March 2026); these are categorized as "Pending / Unknown."
+- EROFCB ("ERO El Paso Camp East Montana") is a militarized detention camp operated
+  by the El Paso ERO field office but located in Montana.
