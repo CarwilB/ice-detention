@@ -1,7 +1,22 @@
 Facility Name,Location,Management
 Camp East Montana,"El Paso, TX",Acquisition Logistics LLC
 Golden State Annex,"McFarland, CA",GEO Group
-Imperial Regional Detention Facility,"Calexico, CA",Management & Training Corp (MTC)
+Imperial Regional Detention Facility,"Calexico, CA",Management & Training Corporation (MTC)
+Bluebonnet Detention Center,"Anson, TX",Management & Training Corporation (MTC)
+El Valle Detention Facility, "Raymondville, TX",Management & Training Corporation (MTC)
+IAH Secure Adult Detention Facility (Polk),"Livingston, TX",Management & Training Corporation (MTC)
+Otero County Processing Center,"Chaparral, NM",Management & Training Corporation (MTC)
+Jackson Parish Correctional Center,"Jonesboro, LA",LaSalle Corrections
+San Luis Regional Detention Center,"San Luis, AZ",LaSalle Corrections
+Irwin County Detention Center,"Ocilla, GA",LaSalle Corrections
+Catahoula Correctional Center,"Harrisonburg, LA",LaSalle Corrections
+Richwood Correctional Center,"Monroe, LA",LaSalle Corrections
+River Correctional Center,"Ferriday, LA",LaSalle Corrections
+Winn Correctional Center,"Winnfield, LA",LaSalle Corrections
+Prairieland Detention Center,"Alvarado, TX",LaSalle Corrections
+Rolling Plains Detention Center,"Haskell, TX",LaSalle Corrections
+West Texas Detention Facility,"Sierra Blanca, TX",LaSalle Corrections
+Willacy County Regional Detention Center,"Raymondville, TX",LaSalle Corrections
 Bent County Correctional Facility,"Las Animas, CO",CoreCivic
 Boston Avenue,"San Diego, CA",CoreCivic
 California City Immigration Processing Center,"California City, CA",CoreCivic
@@ -79,6 +94,9 @@ Eagle Pass Detention Facility,"Eagle Pass, TX",GEO Group
 El Centro Detention Facility,"El Centro, CA",GEO Group
 Flightline Correctional Facility,"Big Spring, TX",GEO Group
 Florence West Correctional and Rehabilitation Facility,"Florence, AZ",GEO Group
+Folkston Annex IPC,"Folkston, GA",GEO Group
+Folkston ICE Processing Center,"Folkston, GA",GEO Group
+Folkston Main IPC,"Folkston, GA",GEO Group
 Heritage Trail Correctional Facility,"Plainfield, IN",GEO Group
 Karnes County Immigration Processing Center,"Karnes City, TX",GEO Group
 Lea County Correctional Facility,"Hobbs, NM",GEO Group

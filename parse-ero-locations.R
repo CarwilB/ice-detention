@@ -154,7 +154,7 @@ parse_address_components(ero_holdroom_addresses_ext_2) -> ero_holdroom_ext_2
 #
 # recovered
 
-Full scan — adjust range as needed
+# Full scan — adjust range as needed
 ero_holdroom_addresses_scan <- fetch_ice_node_addresses(
   df         = bind_rows(ero_numbered, ero_named),
   node_range = 62000:62300,
