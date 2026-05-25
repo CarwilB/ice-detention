@@ -1,0 +1,489 @@
+---
+title: "ICE Arrests Nationwide: Geographic Distribution"
+subtitle: "Post-inauguration arrests from the DDP FOIA dataset"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    toc-float: true
+    self-contained: true
+params:
+  cutoff: "2025-01-20"
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+library(targets)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(ggplot2)
+library(leaflet)
+library(sf)
+library(maps)
+library(knitr)
+
+cutoff     <- as.Date(params$cutoff)
+cutoff_str <- format(cutoff, "%B %e, %Y")
+data_end   <- as.Date("2026-03-31")   # last full month of DDP data; 2026-09 is a data error
+
+arrests_raw <- tar_read(arrests_raw)
+stays_raw   <- tar_read(stays_raw)
+source(here::here("R/state-arrests.R"))        # provides STATE_ABBREVS
+source(here::here("R/state-arrests-export.R")) # provides build_state_outcomes()
+
+# Full deduplicated dataset — used for the time-series trend chart
+arr_all <- arrests_raw |>
+  filter(duplicate_likely == FALSE | is.na(duplicate_likely))
+
+# Post-cutoff only — used for maps, tables, and counts
+arr <- arr_all |>
+  filter(apprehension_date >= cutoff)
+
+n_total      <- nrow(arr)
+n_with_state <- sum(!is.na(arr$apprehension_state))
+```
+
+Maps and tables below cover arrests on or after **`r cutoff_str`**.
+**`r format(n_total, big.mark=",")`** arrests ·
+**`r round(n_with_state/n_total*100,1)`%** have a state recorded.
+The monthly trend chart shows the full dataset for context.
+
+---
+
+## State Bubble Map
+
+Circle **area** is proportional to the number of arrests.
+Circle **color** shows arrests per 1,000 estimated undocumented immigrants
+(Pew 2023 estimates), a rough intensity measure independent of state size.
+Popups include Census 2025 total population and per-capita rates.
+
+```{r state-counts}
+state_counts <- arr |>
+  filter(!is.na(apprehension_state)) |>
+  mutate(state_lower = str_to_lower(apprehension_state)) |>
+  count(state_lower, sort = TRUE)
+
+# Census 2025 population estimates (column 8 = July 1 2025)
+census_pops <- readxl::read_xlsx(
+  "data/census/NST-EST2025-POP.xlsx", col_names = FALSE
+) |>
+  select(geo_area = 1, pop_2025 = 8) |>
+  filter(!is.na(geo_area), str_starts(geo_area, "\\.")) |>
+  mutate(
+    state_lower = str_to_lower(str_remove(geo_area, "^\\.")),
+    pop_2025    = as.numeric(pop_2025)
+  ) |>
+  select(state_lower, pop_2025)
+
+# Pew 2023 undocumented immigrant estimates
+pew_undoc <- readxl::read_xlsx(
+  "data/pew/RE_2025.08.21_Unauthorized-immigrants_detailed-tables_characteristics-for-states.xlsx",
+  sheet = "Population Characteristics", col_names = FALSE, skip = 4
+) |>
+  select(state_name = 2, undoc_pop = 3, undoc_pct_pop = 4) |>
+  filter(!is.na(state_name), state_name != "U.S., total",
+         !str_starts(state_name, "Note")) |>
+  mutate(
+    state_lower   = str_to_lower(state_name),
+    undoc_pop     = as.numeric(undoc_pop),
+    undoc_pct_pop = as.numeric(undoc_pct_pop)
+  ) |>
+  select(state_lower, undoc_pop, undoc_pct_pop)
+
+# Join arrests + Census + Pew
+state_data <- state_counts |>
+  rename(n_arrests = n) |>
+  left_join(census_pops, by = "state_lower") |>
+  left_join(pew_undoc,   by = "state_lower") |>
+  mutate(
+    state_title          = str_to_title(state_lower),
+    arrests_per_1k_undoc = if_else(
+      !is.na(undoc_pop) & undoc_pop > 0,
+      round(n_arrests / undoc_pop * 1000, 2), NA_real_
+    ),
+    arrests_per_100k_pop = if_else(
+      !is.na(pop_2025) & pop_2025 > 0,
+      round(n_arrests / pop_2025 * 1e5, 1), NA_real_
+    )
+  )
+```
+
+```{r state-map}
+us_states_sf <- sf::st_as_sf(
+  maps::map("state", fill = TRUE, plot = FALSE)
+) |>
+  rename(state_lower = ID)
+
+# State centroids — disable s2 to tolerate minor self-intersections from maps pkg
+sf::sf_use_s2(FALSE)
+cent_sf    <- sf::st_centroid(us_states_sf)
+cent_coords <- sf::st_coordinates(cent_sf)
+centroids  <- cent_sf |>
+  sf::st_drop_geometry() |>
+  mutate(lon = cent_coords[, 1], lat = cent_coords[, 2])
+sf::sf_use_s2(TRUE)
+
+bubble_data <- centroids |>
+  left_join(state_data, by = "state_lower") |>
+  filter(!is.na(n_arrests), n_arrests > 0)
+
+# Color: arrests per 1k undoc
+pal_bubble <- colorNumeric(
+  palette  = c("#fff5f0", "#fc8d59", "#a50f15"),
+  domain   = bubble_data$arrests_per_1k_undoc,
+  na.color = "#bbbbbb"
+)
+
+# Radius: log10-scaled, in pixels
+rad_state <- function(n) pmax(5, sqrt(n + 1) / 5)
+
+# Rich popups
+bubble_data <- bubble_data |>
+  mutate(
+    state_abbr = unname(STATE_ABBREVS[str_to_upper(state_lower)]),
+    popup = paste0(
+      "<b style='font-size:1.1em'>", state_title, "</b>",
+      if_else(!is.na(state_abbr),
+        paste0(" <a href='arrests-by-state/", state_abbr, ".html'",
+               " style='font-size:0.85em'>details →</a>"), ""),
+      "<hr style='margin:3px 0'>",
+      "Post-inauguration arrests: <b>", format(n_arrests, big.mark = ","), "</b><br>",
+      if_else(!is.na(arrests_per_1k_undoc),
+        paste0("Arrests / 1,000 undocumented: <b>",
+               arrests_per_1k_undoc, "</b><br>"), ""),
+      if_else(!is.na(undoc_pop),
+        paste0("Est. undocumented pop. (Pew 2023): ",
+               format(undoc_pop, big.mark = ","),
+               " (", round(undoc_pct_pop * 100, 1), "% of state)<br>"), ""),
+      if_else(!is.na(pop_2025),
+        paste0("State population (Census 2025): ",
+               format(round(pop_2025), big.mark = ","), "<br>"), ""),
+      if_else(!is.na(arrests_per_100k_pop),
+        paste0("Arrests / 100k total population: ", arrests_per_100k_pop), "")
+    )
+  )
+
+leaflet(bubble_data) |>
+  addProviderTiles(providers$CartoDB.Positron) |>
+  addCircleMarkers(
+    lng         = ~lon, lat = ~lat,
+    radius      = ~rad_state(n_arrests),
+    fillColor   = ~pal_bubble(arrests_per_1k_undoc),
+    fillOpacity = 0.75,
+    color       = "#444",
+    weight      = 0.7,
+    popup       = ~popup,
+    label       = ~paste0(state_title, ": ",
+                           format(n_arrests, big.mark = ","), " arrests; ",
+                           arrests_per_1k_undoc, "/1k undoc.")
+  ) |>
+  addLegend(
+    pal      = pal_bubble,
+    values   = ~arrests_per_1k_undoc,
+    title    = "Arrests per<br>1,000 undoc.",
+    position = "bottomright",
+    labFormat = labelFormat(suffix = "")
+  ) |>
+  setView(lng = -96, lat = 38, zoom = 4)
+```
+
+**Top 20 states by arrests:**
+```{r state-table}
+state_data |>
+  select(state_title, n_arrests, arrests_per_1k_undoc, undoc_pop, pop_2025) |>
+  head(20) |>
+  mutate(
+    pct_of_arrests = round(n_arrests / sum(state_data$n_arrests) * 100, 1),
+    undoc_pop      = format(undoc_pop, big.mark = ",", scientific = FALSE),
+    pop_2025       = format(round(pop_2025), big.mark = ",", scientific = FALSE)
+  ) |>
+  rename(
+    State                   = state_title,
+    Arrests                 = n_arrests,
+    `% of arrests`          = pct_of_arrests,
+    `Arrests/1k undoc.`     = arrests_per_1k_undoc,
+    `Undoc. pop. (Pew 2023)` = undoc_pop,
+    `Population (2025)`      = pop_2025
+  ) |>
+  kable()
+```
+
+---
+
+## County-Level Choropleth
+
+County names are extracted from `apprehension_site_landmark` using a
+"[NAME] COUNTY" pattern.
+
+```{r county-counts}
+county_counts <- arr |>
+  filter(!is.na(apprehension_site_landmark),
+         !is.na(apprehension_state)) |>
+  mutate(
+    state_lower = str_to_lower(apprehension_state),
+    county_raw  = str_remove(
+      str_extract(str_to_upper(apprehension_site_landmark),
+                  "^([A-Z .'-]+) COUNTY"),
+      " COUNTY$"
+    ),
+    county_lower = str_to_lower(county_raw),
+    map_id = paste0(state_lower, ",", county_lower)
+  ) |>
+  filter(!is.na(county_lower)) |>
+  count(map_id, sort = TRUE)
+
+county_pct <- round(sum(county_counts$n) / n_total * 100, 1)
+```
+
+> **Coverage:** `r county_pct`% of post-`r cutoff_str` arrests mapped to a county.
+
+```{r county-map}
+us_counties_sf <- sf::st_as_sf(
+  maps::map("county", fill = TRUE, plot = FALSE)
+) |>
+  rename(map_id = ID)
+
+county_sf <- us_counties_sf |>
+  left_join(county_counts, by = "map_id") |>
+  replace_na(list(n = 0)) |>
+  mutate(
+    county_title = str_to_title(str_extract(map_id, "(?<=,).*")),
+    state_title  = str_to_title(str_extract(map_id, "^[^,]+")),
+    # NA for 0-1 arrests → rendered transparent
+    n_map = if_else(n <= 1, NA_real_, as.double(n)),
+    label = paste0("<b>", county_title, " County, ", state_title,
+                   "</b><br>Arrests: ", format(n, big.mark=","))
+  )
+
+bins_c <- c(1, 5, 20, 100, 500, max(county_sf$n, na.rm = TRUE) + 1)
+pal_c  <- colorBin("YlOrRd", county_sf$n_map, bins = bins_c, na.color = "transparent")
+
+leaflet(county_sf) |>
+  addProviderTiles(providers$CartoDB.Positron) |>
+  addPolygons(
+    fillColor   = ~pal_c(n_map), fillOpacity = 0.7,
+    color = "#ccc", weight = 0.15,
+    popup = ~label,
+    label = ~if_else(n > 0, paste0(county_title, ", ", state_title, ": ", n), NA_character_)
+  ) |>
+  addLegend(pal = pal_c, values = ~n_map, title = "Arrests",
+            position = "bottomright") |>
+  setView(lng = -96, lat = 38, zoom = 4)
+```
+
+> **Note:** Counties with zero arrests shown in light grey may have arrests recorded
+> under non-specific landmarks. Alaska and Hawaii are excluded from the `maps` package
+> continental US boundary data.
+
+**Top 30 counties by arrests:**
+```{r county-table}
+county_counts |>
+  mutate(
+    county_title = str_to_title(str_extract(map_id, "(?<=,).*")),
+    state_title  = str_to_title(str_extract(map_id, "^[^,]+")),
+    pct = round(n / sum(n) * 100, 1)
+  ) |>
+  select(county_title, state_title, n, pct) |>
+  head(30) |>
+  rename(County = county_title, State = state_title, N = n, `%` = pct) |>
+  kable()
+```
+
+---
+
+## Monthly Trends by Top State
+
+```{r monthly-trends, fig.width=11, fig.height=6}
+# Use full dataset (capped at data_end) for trend context
+# Top states ranked by post-cutoff arrest volume
+top_states <- state_counts |> head(8) |> pull(state_lower)
+
+trend_base <- arr_all |>
+  filter(!is.na(apprehension_state), apprehension_date <= data_end) |>
+  mutate(
+    state_lower = str_to_lower(apprehension_state),
+    month       = as.Date(paste0(format(apprehension_date, "%Y-%m"), "-01"))
+  )
+
+trend_base |>
+  mutate(state_grp = if_else(state_lower %in% top_states,
+                              str_to_title(state_lower), "Other")) |>
+  count(state_grp, month) |>
+  filter(state_grp != "Other") |>
+  ggplot(aes(x = month, y = n, color = state_grp)) +
+  geom_line(linewidth = 0.9) +
+  geom_vline(xintercept = cutoff, linetype = "dashed",
+             color = "firebrick", linewidth = 0.6) +
+  annotate("text", x = cutoff, y = Inf,
+           label = "Inauguration", hjust = -0.1, vjust = 1.5,
+           size = 3, color = "firebrick") +
+  scale_x_date(date_labels = "%b %Y", date_breaks = "3 months",
+               limits = c(min(trend_base$month), data_end)) +
+  scale_y_continuous(labels = scales::comma) +
+  scale_color_brewer(palette = "Set2") +
+  labs(x = NULL, y = "Arrests", color = "State",
+       title = "Monthly ICE arrests by state — top 8 by post-inauguration volume") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 30, hjust = 1),
+        legend.position = "right")
+```
+
+## Arrest Rate Change by State
+
+For each state, compute arrests **per day** in the before and after periods, then
+take the ratio. Values above 1 mean more arrests per day after inauguration;
+values below 1 mean fewer. Only states with at least 30 arrests in the before
+period are included.
+
+```{r ratio-calc}
+before_days <- as.numeric(cutoff        - as.Date("2022-10-01"))
+after_days  <- as.numeric(data_end + 1  - cutoff)
+
+state_ratio <- arr_all |>
+  filter(!is.na(apprehension_state), apprehension_date <= data_end) |>
+  mutate(
+    state_lower = str_to_lower(apprehension_state),
+    period      = if_else(apprehension_date < cutoff, "before", "after")
+  ) |>
+  count(state_lower, period) |>
+  tidyr::pivot_wider(names_from = period, values_from = n, values_fill = 0L) |>
+  mutate(
+    rate_before    = before / before_days,
+    rate_after     = after  / after_days,
+    ratio          = if_else(rate_before > 0, round(rate_after / rate_before, 2), NA_real_),
+    state_title    = str_to_title(state_lower)
+  ) |>
+  filter(!is.na(ratio), before >= 30) |>
+  arrange(desc(ratio))
+```
+
+```{r state-outcomes}
+# Removal outcomes per state (single-pass over stays)
+state_outcomes_tbl <- build_state_outcomes(arr, stays_raw, cutoff)
+```
+
+**All states and DC — arrest rate change and removal outcomes:**
+```{r ratio-reactable}
+library(reactable)
+
+# Join ratio + outcomes + Census/Pew + abbrev for links
+reactable_data <- state_ratio |>
+  filter(before >= 5) |>
+  left_join(state_data |> select(state_lower, n_arrests, arrests_per_1k_undoc,
+                                   undoc_pop, pop_2025),
+            by = "state_lower") |>
+  left_join(state_outcomes_tbl, by = "state_lower") |>
+  mutate(
+    state_title = str_to_title(state_lower),
+    state_abbr  = unname(STATE_ABBREVS[str_to_upper(state_lower)]),
+    rate_before = round(rate_before, 2),
+    rate_after  = round(rate_after,  2)
+  ) |>
+  filter(!is.na(state_abbr)) |>
+  arrange(desc(ratio))
+
+reactable(
+  reactable_data,
+  defaultPageSize = 15,
+  searchable      = TRUE,
+  striped         = TRUE,
+  highlight       = TRUE,
+  columns = list(
+    state_lower      = colDef(show = FALSE),
+    state_abbr       = colDef(show = FALSE),
+    before           = colDef(show = FALSE),
+    after            = colDef(show = FALSE),
+    pop_2025         = colDef(show = FALSE),
+    n_stays_outcomes = colDef(show = FALSE),
+    removed          = colDef(show = FALSE),
+    released         = colDef(show = FALSE),
+    pending          = colDef(show = FALSE),
+    state_title = colDef(
+      name = "State", minWidth = 130,
+      cell = function(value, index) {
+        abbr <- reactable_data$state_abbr[index]
+        if (!is.na(abbr)) {
+          htmltools::tags$a(
+            href = paste0("arrests-by-state/", abbr, ".html"),
+            value
+          )
+        } else value
+      }
+    ),
+    n_arrests           = colDef(name = "Arrests (after)", format = colFormat(separators = TRUE)),
+    rate_before         = colDef(name = "Per day (before)", format = colFormat(digits = 2)),
+    rate_after          = colDef(name = "Per day (after)",  format = colFormat(digits = 2)),
+    ratio               = colDef(
+      name = "Ratio", format = colFormat(digits = 2),
+      style = function(value) {
+        if (is.na(value)) return(list())
+        bg <- if (value >= 5) "#a50f15" else if (value >= 2) "#fc8d59" else if (value >= 1) "#fee08b" else "#d9f0a3"
+        list(background = bg, fontWeight = "bold")
+      }
+    ),
+    pct_removed  = colDef(name = "% Removed",  format = colFormat(suffix = "%", digits = 1)),
+    pct_released = colDef(name = "% Released", format = colFormat(suffix = "%", digits = 1)),
+    pct_pending  = colDef(name = "% Pending",  format = colFormat(suffix = "%", digits = 1)),
+    arrests_per_1k_undoc = colDef(
+      name = "Arrests/1k undoc.", format = colFormat(digits = 2)
+    ),
+    undoc_pop = colDef(
+      name = "Undoc. pop. (Pew)", format = colFormat(separators = TRUE)
+    )
+  )
+)
+```
+
+```{r ratio-trend, fig.width=11, fig.height=6}
+top_ratio_states <- state_ratio |> head(10) |> pull(state_lower)
+
+trend_base |>
+  filter(state_lower %in% top_ratio_states) |>
+  count(state_grp = str_to_title(state_lower), month) |>
+  ggplot(aes(x = month, y = n, color = state_grp)) +
+  geom_line(linewidth = 0.9) +
+  geom_vline(xintercept = cutoff, linetype = "dashed",
+             color = "firebrick", linewidth = 0.6) +
+  annotate("text", x = cutoff, y = Inf,
+           label = "Inauguration", hjust = -0.1, vjust = 1.5,
+           size = 3, color = "firebrick") +
+  scale_x_date(date_labels = "%b %Y", date_breaks = "3 months",
+               limits = c(min(trend_base$month), data_end)) +
+  scale_y_continuous(labels = scales::comma) +
+  scale_color_brewer(palette = "Paired") +
+  labs(x = NULL, y = "Arrests", color = "State",
+       title = "Monthly ICE arrests — top 10 states by post/pre arrest rate ratio") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 30, hjust = 1),
+        legend.position = "right")
+```
+
+---
+
+## Data notes
+
+- Source: [Deportation Data Project](https://deportationdata.org), FOIA 2026-ICLI-00005.
+- Maps and tables filtered to arrests on or after **`r cutoff_str`**
+  (`r format(n_total, big.mark=",")` arrests). Trend chart shows the full dataset
+  from `r format(min(arr_all$apprehension_date), "%B %Y")` –
+  `r format(max(arr_all$apprehension_date), "%B %Y")`.
+- `apprehension_state` is missing for `r format(sum(is.na(arr$apprehension_state)), big.mark=",")`
+  post-cutoff rows (`r round(mean(is.na(arr$apprehension_state))*100,1)`%); excluded
+  from state and county counts.
+- County extraction uses the regex `^([A-Z .'-]+) COUNTY` on the
+  `apprehension_site_landmark` field. Multi-word county names (e.g., "Crow Wing")
+  are captured; names embedded mid-string are not.
+- Alaska and Hawaii are not shown in the continental US maps.
+- **Census population** from U.S. Census Bureau, "Annual Estimates of the Resident
+  Population for the United States, Regions, States, District of Columbia and Puerto Rico"
+  (NST-EST2025-POP.xlsx), July 1 2025 estimates.
+- **Undocumented population** from Pew Research Center, "Unauthorized immigrants: 
+  Characteristics for states" (2023 estimates, released 2025). Estimates are rounded
+  to the nearest 5,000–50,000 depending on state size.
+- Arrest intensity (arrests per 1,000 undocumented) uses Pew 2023 undocumented
+  population as denominator; this is the most recent state-level estimate available.

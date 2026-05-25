@@ -75,7 +75,8 @@
                       facility_city, facility_state, lat, lon),
       by = "canonical_id"
     ) |>
-    dplyr::filter(!is.na(lat), !is.na(lon))
+    dplyr::filter(!is.na(lat), !is.na(lon)) |>
+    dplyr::distinct(detloc, .keep_all = TRUE)  # one row per DETLOC
 }
 
 # ── Facility summary with geocoding ──────────────────────────────────────────

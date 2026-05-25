@@ -308,7 +308,7 @@
 359,"Teller County Jail","TELLECO","288 Weaverville Road","Divide","CO","80814","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
 361,"Theo Lacy Facility","TLACYCA","501 The City Drive South","Orange","CA","92868","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
 362,"Tooele County Jail","TOOELUT","47 South Main Street","Tooele","UT","84074","USMS IGA","Jail/Prison","panel","USMS IGA","Federal"
-363,"Tornillo-Guadalupe POE",NA,"1400 Lower Island Rd","Tornillo","TX","79853","Other","ICE Short-Term Migrant Detention Center","panel",NA,NA
+363,"Tornillo-Guadalupe POE",NA,"1400 Lower Island Rd","Tornillo","TX","79853","Other","CBP Hold Facility","panel",NA,NA
 364,"Torrance County Detention Facility","TOORANM","209 County Road 49","Estancia","NM","87016","IGSA","Jail/Prison","panel","IGSA","Non-Dedicated"
 365,"Trusted Adult Karnes FSC","TAKARTX","810 Commerce St","San Antonio","TX","78118","TAP-ICE","Family Detention Center","panel","TAP-ICE","Family/Youth"
 366,"Dilley Immigration Processing Center","STFRCTX","300 El Rancho Way","Dilley","TX","78017","FAMILY","Family Detention Center","panel","Family","Family/Youth"
@@ -400,7 +400,7 @@
 1053,"Utah County Jail","UTAHCUT","3075 North Main Street","Spanish Fork","UT","84660","IGSA","Jail/Prison","dmcp_only","IGSA","Non-Dedicated"
 1054,"Cook Inlet Pretrial, Anch","AKCOOKI","1300 E 4th Avenue","Anchorage","AK","99501",NA,"Jail/Prison","ddp_other","IGSA","Non-Dedicated"
 1055,"Fairbanks Corr Ctr","AKFAIRB","1931 Eagan Street","Fairbanks","AK","99701",NA,"Jail/Prison","ddp_other","IGSA","Non-Dedicated"
-1056,"Goose Creek Correctional Center","AKGSCCC","22301 Alsop Rd","Wasilla","AK","99654",NA,"Other","ddp_other","Unknown","Other/Unknown"
+1056,"Goose Creek Correctional Center","AKGSCCC","22301 Alsop Rd","Wasilla","AK","99654",NA,"State Prison","ddp_other","Unknown","Other/Unknown"
 1057,"Highland Mtn Cor Ctr","AKHIGHL","9101 Hesterberg Road","Eagle River","AK","99577",NA,"Jail/Prison","ddp_other","USMS IGA","Federal"
 1058,"Ketchikan Regional CC","AKKETCH","1201 Schoenbar Road","Ketchikan","AK","99901",NA,"Jail/Prison","ddp_other","IGSA","Non-Dedicated"
 1059,"Lemon Creek, Juneau,AK","AKLEMON","2000 Lemon Creek Road","Juneau","AK","99801",NA,"Jail/Prison","ddp_other","USMS IGA","Federal"
@@ -466,7 +466,7 @@
 1119,"Gooding County Jail","GOODCID","624 Main St.","Gooding","ID","83330",NA,"Jail/Prison","ddp_other","county_jail","Non-Dedicated"
 1120,"Twin Falls County Jail","TFALLID","425 Shoshone Street North","Twin Falls","ID","83301",NA,"Jail/Prison","ddp_other","IGSA","Non-Dedicated"
 1121,"Jefferson County Jail","JEFFEIL","911 Casey Avenue","Mount Vernon","IL","62864",NA,"Jail/Prison","ddp_other","IGSA","Non-Dedicated"
-1122,"Garden City Processing @ Finney Co","GCPFCKS","304 N. 9th Street","Garden City","KS","67846",NA,"Other","ddp_other","Unknown","Other/Unknown"
+1122,"Garden City Processing @ Finney Co","GCPFCKS","304 N. 9th Street","Garden City","KS","67846",NA,"Jail/Prison","ddp_other","Unknown","Other/Unknown"
 1123,"Lexington Processing @ Fayette Co","LEXFCKY","600 Old Frankford Cr","Lexington","KY","40510",NA,"Jail/Prison","ddp_other","USMS IGA","Federal"
 1124,"Woodford County Sheriff/Jail","WOODFKY","204 Beasley Drive","Versailles","KY","40383",NA,"Jail/Prison","ddp_other",NA,"Non-Dedicated"
 1125,"Oakdale Fed.Det.Center","BOPOAD","2105 E. Whatley Rd.","Oakdale","LA","71463",NA,"Federal Prison","ddp_other","BOP","Federal"
@@ -492,7 +492,7 @@
 1145,"Monmouth County Jail","MONMONJ","1 Waterworks Road","Freehold","NJ","07728",NA,"Jail/Prison","ddp_other","IGSA","Non-Dedicated"
 1146,"Bernalillo County Det Ctr","BERNANM","415 Roma N.W.","Albuquerque","NM","87102",NA,"Dedicated Migrant Detention Center","ddp_other","DIGSA","Dedicated"
 1147,"Curry County Det Fac","CURRYNM","801 Mitchell Street","Clovis","NM","88101",NA,"Jail/Prison","ddp_other","IGSA","Non-Dedicated"
-1148,"Courthouse USM Cntl Islip","CHMCINY","100 Federal Plaza","Central Islip","NY","11722",NA,"Other","ddp_other","Other","Other/Unknown"
+1148,"Courthouse USM Cntl Islip","CHMCINY","100 Federal Plaza","Central Islip","NY","11722",NA,"ICE Hold Room","ddp_other","Other","Other/Unknown"
 1149,"JFK International Ap - T7","JFKTSNY","Terminal 7","Jamaica","NY","11430",NA,"Other","ddp_other","Other","Other/Unknown"
 1150,"Nassau County ICE Trailer","NASTRNY","100 Carman Avenue","East Meadow","NY","11554",NA,"Jail/Prison","ddp_other","county_jail","Non-Dedicated"
 1151,"Fishkill C.F. Beacon Ny","NYFISHC","18 Strack Dr","Beacon","NY","12508",NA,"State Prison","ddp_other","state_prison","Non-Dedicated"
@@ -554,7 +554,7 @@
 1208,"Campbell County Jail","CAMCOWY","600 W Boxelder Road","Gillette","WY","82718",NA,"Jail/Prison","ddp_other","IGSA","Non-Dedicated"
 1209,"CBP Movement Coordination Area","UCBPMCA",NA,NA,"CA",NA,NA,"Federal Prison","ddp_other","CBP","Federal"
 1210,"CCA Central Arizona Detention Center","CCADCAZ","1155 North Pinal Parkway","Florence","AZ","85132","USMS IGA","Jail/Prison","ddp_other","USMS IGA","Federal"
-1211,"Tex Health Huguley Hospital",NA,"11801 South Fwy I-35w","Burleson","TX","76028","Other","Other","ddp_other",NA,NA
+1211,"Tex Health Huguley Hospital",NA,"11801 South Fwy I-35w","Burleson","TX","76028","Other","Medical Facility","ddp_other",NA,NA
 1212,"Imperial County Jail","IMPCOCA","328 Applestill Road","El Centro","CA","92243",NA,"Jail/Prison","ddp_other","IGSA","Non-Dedicated"
 1213,"Miami FCI (Former MCC)","BOPMIA","1350 NW 41 Street","Miami","FL","33178",NA,"Federal Prison","ddp_other","BOP","Federal"
 1214,"Hardee County Jail","HARDEFL","900 East Summit Street","Wauchula","FL","33873",NA,"Jail/Prison","ddp_other","county_jail","Non-Dedicated"
@@ -591,22 +591,22 @@
 1245,"Mercedes Police Dept.","MRCDSTX","316 S Ohio Ave","Mercedes","TX","78570",NA,"Jail/Prison","ddp_other","county_jail","Non-Dedicated"
 1246,"Somervell County Sheriff's Dept.","SMRVLTX","750 Bo Gibbs Blvd","Glen Rose","TX","76043",NA,"Jail/Prison","ddp_other","county_jail","Non-Dedicated"
 1247,"St T Criminal Just Complx","STTCJVI","Hospital Gade And Veterans Drive","Charlotte Amalie","VI","00802",NA,"Jail/Prison","ddp_other","IGSA","Non-Dedicated"
-1248,"Anvil Mountain Cc, Nome,","AKANVIL","1810 Center Creek Rd","Nome","AK","99762",NA,"Other","ddp_other",NA,NA
-1249,"Alleghany County Jail","ALLEGVA","266 W Main St","Covington","VA","24426",NA,"Other","ddp_other",NA,NA
-1250,"Amherst County Jail","AMHERVA","219 S Riverview Rd","Madison Heights","VA","24572",NA,"Other","ddp_other",NA,NA
-1251,"Blount County Juvenile Detention Cntr","BLOJVTN","329 Court St","Maryville","TN","37804",NA,"Other","ddp_other",NA,NA
-1252,"La Tuna FCI","BOPLAT","8500 Doniphan Rd","Anthony","TX","79821",NA,"Other","ddp_other",NA,NA
-1253,"Bryan County Jail","BRYANGA","95 Public Safety Way","Pembroke","GA","31321",NA,"Other","ddp_other",NA,NA
-1254,"Chatham County Jail","CHTHMGA","1050 Carl Griffen Drive","Savannah","GA","31405",NA,"Other","ddp_other",NA,NA
-1255,"Drt Cpc Holding","DRCPCTX",NA,NA,"TX",NA,NA,"Other","ddp_other",NA,NA
-1256,"Franklin County Detention Center","FRANKNC","285 T Kemp Rd","Louisburg","NC","27549",NA,"Other","ddp_other",NA,NA
-1257,"Kaufman County Detention Center","KFMANTX","1902 E Hwy 175","Kaufman","TX","75142",NA,"Other","ddp_other",NA,NA
-1258,"Lafayette Parish So Jail Annex","LAFAYLA","916 Lafayette Street","Lafayette","LA","70502",NA,"Other","ddp_other",NA,NA
-1259,"Liberty County Jail","LBRTYFL","12499 NW Pogo St","Bristol","FL","32321",NA,"Other","ddp_other",NA,NA
-1260,"Leon County Jail","LEONCFL","535 Appleyard Dr","Tallahassee","FL","32304",NA,"Other","ddp_other",NA,NA
-1261,"B.r.r.j. Lynchburg","LYNRJVA","510 Ninth St","Lynchburg","VA","24504",NA,"Other","ddp_other",NA,NA
-1262,"Natrona County. Juv. Detention. Center","NATJVWY","1100 Bruce Lane","Casper","WY","82601",NA,"Other","ddp_other",NA,NA
-1263,"Onslow County Jail","ONSLONC","702 Mill Ave","Jacksonville","NC","28540",NA,"Other","ddp_other",NA,NA
+1248,"Anvil Mountain Cc, Nome,","AKANVIL","1810 Center Creek Rd","Nome","AK","99762",NA,"State Prison","ddp_other",NA,NA
+1249,"Alleghany County Jail","ALLEGVA","266 W Main St","Covington","VA","24426",NA,"Jail/Prison","ddp_other",NA,NA
+1250,"Amherst County Jail","AMHERVA","219 S Riverview Rd","Madison Heights","VA","24572",NA,"Jail/Prison","ddp_other",NA,NA
+1251,"Blount County Juvenile Detention Cntr","BLOJVTN","329 Court St","Maryville","TN","37804",NA,"Juvenile Detention Center","ddp_other",NA,NA
+1252,"La Tuna FCI","BOPLAT","8500 Doniphan Rd","Anthony","TX","79821",NA,"Federal Prison","ddp_other",NA,NA
+1253,"Bryan County Jail","BRYANGA","95 Public Safety Way","Pembroke","GA","31321",NA,"Jail/Prison","ddp_other",NA,NA
+1254,"Chatham County Jail","CHTHMGA","1050 Carl Griffen Drive","Savannah","GA","31405",NA,"Jail/Prison","ddp_other",NA,NA
+1255,"Drt Cpc Holding","DRCPCTX",NA,NA,"TX",NA,NA,"ICE Hold Room","ddp_other",NA,NA
+1256,"Franklin County Detention Center","FRANKNC","285 T Kemp Rd","Louisburg","NC","27549",NA,"Jail/Prison","ddp_other",NA,NA
+1257,"Kaufman County Detention Center","KFMANTX","1902 E Hwy 175","Kaufman","TX","75142",NA,"Jail/Prison","ddp_other",NA,NA
+1258,"Lafayette Parish So Jail Annex","LAFAYLA","916 Lafayette Street","Lafayette","LA","70502",NA,"Jail/Prison","ddp_other",NA,NA
+1259,"Liberty County Jail","LBRTYFL","12499 NW Pogo St","Bristol","FL","32321",NA,"Jail/Prison","ddp_other",NA,NA
+1260,"Leon County Jail","LEONCFL","535 Appleyard Dr","Tallahassee","FL","32304",NA,"Jail/Prison","ddp_other",NA,NA
+1261,"B.r.r.j. Lynchburg","LYNRJVA","510 Ninth St","Lynchburg","VA","24504",NA,"Jail/Prison","ddp_other",NA,NA
+1262,"Natrona County. Juv. Detention. Center","NATJVWY","1100 Bruce Lane","Casper","WY","82601",NA,"Juvenile Detention Center","ddp_other",NA,NA
+1263,"Onslow County Jail","ONSLONC","702 Mill Ave","Jacksonville","NC","28540",NA,"Jail/Prison","ddp_other",NA,NA
 2001,"Atlanta Field Office","ATLHOLD","180 Ted Turner Dr. SW, Suite 522","Atlanta","GA","30303","ero_office","ICE ERO Field Office","ero","Hold","Hold/Staging"
 2002,"Baltimore Field Office","BALHOLD","31 Hopkins Plaza, 6th Floor","Baltimore","MD","21201","ero_office","ICE ERO Field Office","ero","Hold","Hold/Staging"
 2003,"Boston Field Office","BOSHOLD","1000 District Avenue","Burlington","MA","01803","ero_office","ICE ERO Field Office","ero","Hold","Hold/Staging"
@@ -793,9 +793,9 @@
 2184,"El Paso SPC Juvenile","EPCJUVI","8915 Montana St.","El Paso","TX","79925",NA,"ICE Hold Room","hold","Hold","Hold/Staging"
 2185,"George Bush Intercontinental","IAHSFTX","2800 N. Terminal Road","Houston","TX","77032",NA,"ICE Staging Facility","hold","Staging","Hold/Staging"
 2186,"Bellingham BPS ERO Holdroom","BLHHOLD","1431 Sunset Ave","Ferndale","WA","98248",NA,"ICE Hold Room","hold","Hold","Hold/Staging"
-2187,"CBP O'hare Airport Trm 5 B.c. Ext","CBPORIL","10000 W. Bessie Coleman Drive, Terminal 5","Chicago","IL","60666",NA,"Other","hold",NA,NA
-2188,"ERO Charleston Wv Hold Room","CHSHOLD","36 Jacobson Drive","Poca","WV","25159",NA,"Other","hold",NA,NA
-2189,"Savannah Hold Room","SAVHOLD","49 Park of Commerce Blvd","Savannah","GA","31405",NA,"Other","hold",NA,NA
+2187,"CBP O'hare Airport Trm 5 B.c. Ext","CBPORIL","10000 W. Bessie Coleman Drive, Terminal 5","Chicago","IL","60666",NA,"CBP Hold Facility","hold",NA,NA
+2188,"ERO Charleston Wv Hold Room","CHSHOLD","36 Jacobson Drive","Poca","WV","25159",NA,"ICE Hold Room","hold",NA,NA
+2189,"Savannah Hold Room","SAVHOLD","49 Park of Commerce Blvd","Savannah","GA","31405",NA,"ICE Hold Room","hold",NA,NA
 3001,"Bartlett Regional Hospital","BRLHOAK","3260 Hospital Dr","Juneau","AK","99801",NA,"Medical Facility","medical","Medical","Medical"
 3002,"Banner University Medical Phoenix","BANHOAZ","1111 E McDowell Rd","Phoenix","AZ","85006",NA,"Medical Facility","medical","Hospital","Medical"
 3003,"Banner Ironwood Med Ctr","BIMDCAZ","37000 N Gantzel Rd","Queen Creek","AZ","85140",NA,"Medical Facility","medical","Hospital","Medical"

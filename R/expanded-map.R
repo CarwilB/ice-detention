@@ -85,12 +85,14 @@ build_expanded_map_presence <- function(expanded_map_panel, facility_presence) {
 expanded_map_display_name_overrides <- function() {
   tibble::tribble(
     ~canonical_id, ~canonical_name,
+     136L, "Florida Soft-Sided Facility (Alligator Alcatraz)",
      176L, "JTF Camp Six (Windward Holding Facility)",
      401L, "Dilley Processing Single Adult Female",
      403L, "Lewisburg US Penitentiary",
      404L, "Migrant Ops Center Main (Guantanamo)",
     1184L, "Southwest Virginia Regional Jail Authority Abingdon Facility",
-    2024L, "St Paul Field Office (Whipple Federal Building)"
+    2024L, "St Paul Field Office (Whipple Federal Building)",
+    2032L, "Arizona Removal Operations Coordination Center (AROCC)"
   )
 }
 

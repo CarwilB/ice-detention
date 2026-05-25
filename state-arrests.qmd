@@ -1,0 +1,515 @@
+---
+title: "ICE Arrests: `r stringr::str_to_title(stringr::str_to_lower(params$state))` After January 20, 2025"
+subtitle: "Detention itineraries, transfer flows, and removal outcomes"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-float: true
+    self-contained: true
+params:
+  state: "ILLINOIS"
+  cutoff: "2025-01-20"
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+library(targets)
+library(dplyr)
+library(tidyr)
+library(purrr)
+library(stringr)
+library(ggplot2)
+library(ggalluvial)
+library(leaflet)
+library(sf)
+library(maps)
+library(knitr)
+
+source(here::here("R/state-arrests.R"))
+
+# Read raw pipeline targets — works for any state without rebuilding pipeline
+arrests_raw   <- tar_read(arrests_raw)
+stays_raw     <- tar_read(stays_raw)
+detloc_lkp    <- tar_read(detloc_lookup_complete)
+geo_all       <- readr::read_csv(here::here("data/facilities-geocoded-all.csv"),
+                                  show_col_types = FALSE)
+
+d <- build_state_arrests_data(
+  arrests      = arrests_raw,
+  stays        = stays_raw,
+  detloc_lookup = detloc_lkp,
+  geo_all      = geo_all,
+  state        = params$state,
+  cutoff       = as.Date(params$cutoff)
+)
+
+state_full  <- str_to_title(str_to_lower(d$state))
+state_lower <- str_to_lower(d$state)
+cutoff_str  <- format(d$cutoff, "%B %e, %Y")
+
+removal_n   <- sum(d$outcomes$n[d$outcomes$stay_release_reason == "Removed"],
+                   na.rm = TRUE)
+removal_pct <- round(removal_n / d$n_stays * 100, 1)
+```
+
+This report traces ICE arrests made in **`r state_full`** on or after **`r cutoff_str`**
+through the full detention and removal pipeline, using individual-level FOIA data
+from the [Deportation Data Project](https://deportationdata.org).
+
+**`r format(d$n_arrests, big.mark=",")`** arrests ·
+**`r format(d$n_persons, big.mark=",")`** distinct individuals ·
+**`r format(d$n_stays, big.mark=",")`** detention stays ·
+**`r removal_pct`%** ultimately removed
+
+---
+
+## Overview
+
+### Monthly arrest volume
+
+```{r monthly-chart, fig.width=9, fig.height=3.5}
+d$monthly_vol |>
+  mutate(
+    date     = as.Date(paste0(month, "-01")),
+    elevated = {
+      q75 <- quantile(d$monthly_vol$n, 0.75)
+      iqr <- IQR(d$monthly_vol$n)
+      n > q75 + 1.5 * iqr
+    }
+  ) |>
+  ggplot(aes(x = date, y = n, fill = elevated)) +
+  geom_col(width = 25) +
+  geom_vline(xintercept = as.Date(params$cutoff),
+             linetype = "dashed", color = "firebrick", linewidth = 0.7) +
+  annotate("text", x = as.Date(params$cutoff), y = Inf,
+           label = "Inauguration", hjust = -0.1, vjust = 1.5,
+           size = 3, color = "firebrick") +
+  scale_fill_manual(values = c("FALSE" = "#888", "TRUE" = "#c0392b"),
+                    guide = "none") +
+  scale_x_date(date_labels = "%b %Y", date_breaks = "2 months") +
+  scale_y_continuous(labels = scales::comma) +
+  labs(x = NULL, y = "Arrests",
+       title = paste("Monthly ICE arrests in", state_full)) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 30, hjust = 1))
+```
+
+### Who was arrested
+
+:::{.grid}
+:::{.g-col-6}
+**Top nationalities**
+```{r nat-table}
+d$nationalities |> head(15) |>
+  rename(Country = citizenship_country, N = n, `%` = pct) |> kable()
+```
+:::
+:::{.g-col-6}
+**Arrest type**
+```{r type-table}
+d$arrest_type |>
+  rename(`Arrest type` = apprehension_type, N = n, `%` = pct) |> kable()
+```
+**Criminality at arrest**
+```{r crim-table}
+d$criminality |>
+  rename(Criminality = apprehension_criminality, N = n, `%` = pct) |> kable()
+```
+:::
+:::
+
+---
+
+## Arrest Locations in `r state_full`
+
+County-level map based on `apprehension_site_landmark`. Records with non-specific
+landmarks (e.g. "SPM General Area") are mapped using state-specific rules where
+possible; others are excluded.
+
+```{r county-choropleth}
+county_coverage <- sum(d$county_counts$n) / d$n_arrests
+
+state_map_sf <- tryCatch({
+  sf::st_as_sf(
+    maps::map("county", state_lower, fill = TRUE, plot = FALSE)
+  ) |>
+    mutate(county = str_to_title(str_remove(ID, paste0(state_lower, ","))))
+}, error = function(e) NULL)
+
+if (!is.null(state_map_sf) && nrow(d$county_counts) > 0 && county_coverage >= 0.20) {
+  county_sf <- state_map_sf |>
+    left_join(d$county_counts, by = "county") |>
+    replace_na(list(n = 0)) |>
+    mutate(
+      n_map = if_else(n <= 1, NA_real_, as.double(n)),
+      label = paste0("<b>", county, " County</b><br>Arrests: ", n)
+    )
+
+  max_n <- max(county_sf$n, na.rm = TRUE)
+  bins  <- unique(c(1, 5, 20, 100, 500, max_n + 1)[c(1, 5, 20, 100, 500, max_n + 1) <= max_n + 1])
+  pal   <- colorBin("YlOrRd", county_sf$n_map, bins = bins, na.color = "transparent")
+
+  leaflet(county_sf) |>
+    addProviderTiles(providers$CartoDB.Positron) |>
+    addPolygons(
+      fillColor   = ~pal(n_map), fillOpacity = 0.75,
+      color = "#999", weight = 0.4,
+      popup = ~label, label = ~paste0(county, ": ", n)
+    ) |>
+    addLegend(pal = pal, values = ~n_map, title = "Arrests",
+              position = "bottomright")
+} else {
+  # Low county coverage — show top apprehension landmarks instead
+  knitr::kable(
+    d$landmark_counts |>
+      head(30) |>
+      rename(`Arrest location` = apprehension_site_landmark, N = n, `%` = pct),
+    caption = paste0(
+      "Top arrest locations (county data available for only ",
+      round(county_coverage * 100, 0), "% of arrests)"
+    )
+  )
+}
+```
+
+> **Coverage:** `r round(county_coverage * 100, 0)`% of arrests mapped to a county.
+> `r if (county_coverage < 0.20) "Landmark table shown in place of choropleth."`
+
+---
+
+## Detention Facility Maps and Transfer Flows
+
+**Blue dots** = first detention facility. **Orange dots** = last detention facility.
+**Grey lines** = transfer flows between facilities; line width is proportional to
+the log of the number of transfers on that route. Only flows with ≥
+`r max(5L, as.integer(d$n_stays * 0.001))` transfers are shown.
+
+```{r flow-map}
+# Build sf linestrings from flow arrows tibble
+flows <- d$flow_arrows
+
+rad <- function(n) pmax(3, log10(n + 1) * 8.4)   # ~70% of prior scale
+
+base_map <- leaflet() |>
+  addProviderTiles(providers$CartoDB.Positron)
+
+# Geodetic bearing in degrees (0 = North, clockwise)
+.bearing <- function(lon1, lat1, lon2, lat2) {
+  dlon  <- (lon2 - lon1) * pi / 180
+  lat1r <- lat1 * pi / 180;  lat2r <- lat2 * pi / 180
+  y <- sin(dlon) * cos(lat2r)
+  x <- cos(lat1r) * sin(lat2r) - sin(lat1r) * cos(lat2r) * cos(dlon)
+  (atan2(y, x) * 180 / pi + 360) %% 360
+}
+
+# SVG arrowhead icon, pointing in bearing direction
+.arrow_icon <- function(bearing_deg, size = 10) {
+  svg <- paste0(
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"',
+    ' width="', size, '" height="', size, '">',
+    '<polygon points="6,0 11,11 6,8 1,11"',
+    ' fill="#333" opacity="0.75"',
+    ' transform="rotate(', round(bearing_deg, 1), ',6,6)"/></svg>'
+  )
+  makeIcon(
+    iconUrl     = paste0("data:image/svg+xml;charset=utf-8,",
+                          URLencode(svg, reserved = FALSE)),
+    iconWidth   = size, iconHeight = size,
+    iconAnchorX = size / 2, iconAnchorY = size / 2
+  )
+}
+
+# Add flow lines and arrowheads if we have any
+if (nrow(flows) > 0) {
+  lines_geom <- lapply(seq_len(nrow(flows)), function(i) {
+    st_linestring(matrix(
+      c(flows$from_lon[i], flows$from_lat[i],
+        flows$to_lon[i],   flows$to_lat[i]),
+      ncol = 2, byrow = TRUE
+    ))
+  })
+  flows_sf <- st_sf(flows, geometry = st_sfc(lines_geom, crs = 4326))
+
+  base_map <- base_map |>
+    addPolylines(
+      data    = flows_sf,
+      weight  = ~weight,
+      color   = "#555",
+      opacity = 0.5,
+      popup   = ~label,
+      group   = "Transfer flows"
+    )
+
+}
+
+first_popup <- paste0(
+  "<b>", d$first_fac$canonical_name, "</b><br>",
+  d$first_fac$facility_city, ", ", d$first_fac$facility_state, "<br>",
+  "DETLOC: ", d$first_fac$code, "<br>",
+  "First facility for <b>", format(d$first_fac$n, big.mark = ","),
+  "</b> arrests"
+)
+last_popup <- paste0(
+  "<b>", d$last_fac$canonical_name, "</b><br>",
+  d$last_fac$facility_city, ", ", d$last_fac$facility_state, "<br>",
+  "DETLOC: ", d$last_fac$code, "<br>",
+  "Final facility for <b>", format(d$last_fac$n, big.mark = ","),
+  "</b> arrests"
+)
+
+base_map |>
+  addCircleMarkers(
+    data = d$first_fac, lng = ~lon, lat = ~lat,
+    radius = ~rad(n), color = "#1a6bb5", fillColor = "#4a90d9",
+    fillOpacity = 0.75, weight = 1.2,
+    popup = first_popup, group = "First detention facility"
+  ) |>
+  addCircleMarkers(
+    data = d$last_fac, lng = ~lon, lat = ~lat,
+    radius = ~rad(n), color = "#a03000", fillColor = "#d94a1a",
+    fillOpacity = 0.75, weight = 1.2,
+    popup = last_popup, group = "Last detention facility"
+  ) |>
+  addLayersControl(
+    overlayGroups = c("Transfer flows",
+                      "First detention facility",
+                      "Last detention facility"),
+    options = layersControlOptions(collapsed = FALSE)
+  ) |>
+  setView(lng = -96, lat = 38, zoom = 4) |>
+  hideGroup("Transfer flows")
+```
+
+**First detention facility (top 8):**
+```{r first-fac-table}
+d$first_fac |>
+  mutate(pct = round(n / d$n_stays * 100, 1)) |>
+  select(code, canonical_name, facility_city, facility_state, n, pct) |>
+  head(8) |>
+  rename(DETLOC = code, Facility = canonical_name,
+         City = facility_city, State = facility_state, N = n, `%` = pct) |>
+  kable()
+```
+
+**Last detention facility (top 10):**
+```{r last-fac-table}
+d$last_fac |>
+  mutate(pct = round(n / d$n_stays * 100, 1)) |>
+  select(code, canonical_name, facility_city, facility_state, n, pct) |>
+  head(10) |>
+  rename(DETLOC = code, Facility = canonical_name,
+         City = facility_city, State = facility_state, N = n, `%` = pct) |>
+  kable()
+```
+
+---
+
+## Removal Pipeline Flow
+
+Each band traces one group through the pipeline:
+**`r state_full` arrest → first facility → last facility → outcome.**
+Band width is proportional to number of stays.
+
+```{r sankey, fig.width=14, fig.height=9}
+# Build label lookup for display names
+geo_lookup_names <- bind_rows(
+  d$first_fac |> select(code, name = canonical_name),
+  d$last_fac  |> select(code, name = canonical_name)
+) |> distinct(code, .keep_all = TRUE)
+
+short_name <- function(code) {
+  nm <- geo_lookup_names$name[match(code, geo_lookup_names$code)]
+  ifelse(is.na(nm), code,
+         paste0(code, "\n(", str_trunc(nm, 22, ellipsis = "…"), ")"))
+}
+
+san <- d$sankey_data |>
+  mutate(
+    first_disp   = if_else(first_label == "Other", "Other",
+                           short_name(first_label)),
+    last_disp    = if_else(last_label  == "Other", "Other",
+                           short_name(last_label)),
+    outcome_fct  = factor(outcome_label,
+                          levels = c("Removed", "Released", "Pending / Unknown"))
+  )
+
+ggplot(san,
+       aes(y = n,
+           axis1 = stage1, axis2 = first_disp,
+           axis3 = last_disp, axis4 = outcome_fct)) +
+  geom_alluvium(aes(fill = outcome_fct), alpha = 0.65, width = 1/6) +
+  geom_stratum(fill = "grey92", color = "grey60", width = 1/6) +
+  geom_text(stat = "stratum",
+            aes(label = after_stat(stratum)),
+            size = 2.8, lineheight = 0.9) +
+  scale_x_discrete(
+    limits = c("Arrest", "First facility", "Last facility", "Outcome"),
+    expand = c(0.08, 0.08)
+  ) +
+  scale_fill_manual(values = c(
+    "Removed"           = "#c0392b",
+    "Released"          = "#2980b9",
+    "Pending / Unknown" = "#95a5a6"
+  )) +
+  scale_y_continuous(labels = scales::comma) +
+  labs(y = "Number of stays", fill = "Outcome",
+       title = paste(state_full, "arrest → detention → outcome pipeline")) +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "bottom", panel.grid.major = element_blank(),
+        axis.text.y = element_text(size = 9))
+```
+
+**Final outcomes:**
+```{r outcomes-table}
+d$outcomes |>
+  rename(`Release reason` = stay_release_reason, N = n, `%` = pct) |> kable()
+```
+
+**All facilities in itineraries (top 15):**
+```{r all-facs-table}
+d$all_facs |> head(15) |>
+  rename(DETLOC = codes, `Appearances` = n, `% of stays` = pct_of_stays) |> kable()
+```
+
+---
+
+## Removal Destinations
+
+The heatmap below crosses **citizenship country** (columns) against **country deported to**
+(rows). Cell numbers are absolute counts; cell color shows what share of that row's
+removals came from each citizenship group. Top 15 destinations × top 12 citizenships shown.
+
+```{r removal-heatmap, fig.width=12, fig.height=7}
+top_dest <- d$removal_heatmap |>
+  group_by(departure_country) |>
+  summarise(total = sum(n), .groups = "drop") |>
+  slice_max(total, n = 15) |>
+  arrange(desc(total)) |>
+  pull(departure_country)
+
+top_cit <- d$removal_heatmap |>
+  group_by(citizenship_country) |>
+  summarise(total = sum(n), .groups = "drop") |>
+  slice_max(total, n = 12) |>
+  arrange(desc(total)) |>
+  pull(citizenship_country)
+
+hm <- d$removal_heatmap |>
+  filter(departure_country %in% top_dest, citizenship_country %in% top_cit) |>
+  tidyr::complete(
+    departure_country  = top_dest,
+    citizenship_country = top_cit,
+    fill = list(n = 0L, row_pct = 0)
+  ) |>
+  mutate(
+    departure_country   = factor(departure_country,  levels = rev(top_dest)),
+    citizenship_country = factor(citizenship_country, levels = top_cit)
+  )
+
+ggplot(hm, aes(x = citizenship_country, y = departure_country, fill = row_pct)) +
+  geom_tile(color = "white", linewidth = 0.5) +
+  geom_text(
+    aes(label = if_else(n > 0L, format(n, big.mark = ","), "")),
+    size = 3, color = "black"
+  ) +
+  scale_fill_gradient(
+    low = "#fff5f0", high = "#a50f15",
+    name = "% of row", limits = c(0, 100), na.value = "grey95"
+  ) +
+  scale_x_discrete(position = "top") +
+  labs(
+    x = "Citizenship country",
+    y = "Deported to",
+    title = paste("Citizenship vs. removal destination —", state_full)
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    axis.text.x    = element_text(angle = 40, hjust = 0, size = 9),
+    axis.text.y    = element_text(size = 9),
+    panel.grid     = element_blank(),
+    legend.position = "right"
+  )
+```
+
+**Summary table:**
+```{r removal-countries}
+d$removal_countries |>
+  head(20) |>
+  rename(Country = departure_country, N = n, `%` = pct) |>
+  kable(caption = paste("Removal destinations for", state_full, "arrests"))
+```
+
+---
+
+## Minor Detainees (Under 18)
+
+```{r minors-setup}
+m <- d$minors
+```
+
+**`r m$n_arrests` arrests** · **`r m$n_persons` distinct individuals** ·
+**`r m$n_stays` detention stays.**
+Age is estimated as year(arrest) − birth year and may be off by up to one year.
+
+```{r minors-overview}
+tibble(Metric = c("Arrests of minors", "Distinct minors", "Detention stays"),
+       Value  = c(format(m$n_arrests, big.mark=","),
+                  format(m$n_persons, big.mark=","),
+                  format(m$n_stays,   big.mark=","))) |> kable()
+```
+
+:::{.grid}
+:::{.g-col-6}
+**Age at arrest**
+```{r minors-age}
+m$age_dist |> rename(`Age` = age, N = n) |> kable()
+```
+
+**Nationality**
+```{r minors-nat}
+m$nationalities |>
+  rename(Country = citizenship_country, N = n, `%` = pct) |> kable()
+```
+:::
+:::{.g-col-6}
+**First detention facility**
+```{r minors-first}
+m$first_fac |>
+  rename(DETLOC = code, Facility = facility, N = n, `%` = pct) |> kable()
+```
+
+**Last detention facility**
+```{r minors-last}
+m$last_fac |>
+  rename(DETLOC = code, Facility = facility, N = n, `%` = pct) |> kable()
+```
+
+**Outcomes**
+```{r minors-outcomes}
+m$outcomes |>
+  rename(`Release reason` = stay_release_reason, N = n, `%` = pct) |> kable()
+```
+:::
+:::
+
+---
+
+## Data notes
+
+- Source: [Deportation Data Project](https://deportationdata.org), FOIA 2026-ICLI-00005.
+- Filtered to `apprehension_state == "`r params$state`"` and
+  `apprehension_date >= `r params$cutoff``. Duplicate-flagged rows excluded.
+- Stays linked via `unique_identifier`; only stays beginning on or after
+  `r params$cutoff` are included.
+- Transfer flows show consecutive facility pairs from `detention_facility_codes_all`;
+  min threshold = `r max(5L, as.integer(d$n_stays * 0.001))` transfers.
+- County choropleth coverage: `r round(sum(d$county_counts$n)/d$n_arrests*100,0)`%
+  of arrests mapped to a county.
+- `stay_release_reason` is NA for stays open as of March 2026 (shown as "Pending / Unknown").
+- EROFCB = ERO El Paso Camp East Montana (militarized facility in Montana operated
+  by El Paso ERO).

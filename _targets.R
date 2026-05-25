@@ -775,9 +775,40 @@ list(
     description = "Pre-computed tables for mn-arrests.qmd: MN post-2025-01-20 arrest itineraries, county choropleth, Sankey, minors"
   ),
   tar_quarto(
-    mn_arrests_report,
-    "mn-arrests.qmd",
-    description = "Rendered mn-arrests.qmd: MN arrest choropleth, facility maps, flow diagram, minors section"
+    state_arrests_report,
+    "state-arrests.qmd",
+    execute_params = list(state = "MINNESOTA", cutoff = "2025-01-20"),
+    description = "Rendered state-arrests.qmd for Minnesota post-2025-01-20 (parameterized; render for other states with quarto render state-arrests.qmd -P state:TEXAS)"
+  ),
+  tar_quarto(
+    nationwide_arrests_report,
+    "nationwide-arrests.qmd",
+    execute_params = list(cutoff = "2025-01-20"),
+    description = "Rendered nationwide-arrests.qmd: state + county choropleths of post-2025-01-20 ICE arrests"
+  ),
+
+  # ── State arrests web export (cue = "never") ───────────────────────────────
+  # Pre-computes nationwide.rds + one {abbr}.rds per state for the
+  # ice-arrests-by-state Quarto website. Run tar_make(state_arrests_export)
+  # explicitly, then run copy-data.sh in the website directory.
+  tar_target(
+    state_arrests_export,
+    export_state_arrests(
+      arrests      = arrests_raw,
+      stays        = stays_raw,
+      detloc_lookup = detloc_lookup_complete,
+      geo_all      = readr::read_csv(
+        here::here("data/facilities-geocoded-all.csv"), show_col_types = FALSE
+      ),
+      census_file  = here::here("data/census/NST-EST2025-POP.xlsx"),
+      pew_file     = here::here("data/pew/RE_2025.08.21_Unauthorized-immigrants_detailed-tables_characteristics-for-states.xlsx"),
+      cutoff       = as.Date("2025-01-20"),
+      data_end     = as.Date("2026-03-31"),
+      export_dir   = here::here("data/state-arrests-export")
+    ),
+    cue    = tar_cue("never"),
+    format = "file",
+    description = "Exports nationwide.rds + 51 per-state RDS files for ice-arrests-by-state website (cue=never)"
   ),
 
   # ── Detention stints data (DDP individual-level) ───────────────────────────
