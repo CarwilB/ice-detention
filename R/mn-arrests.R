@@ -235,6 +235,7 @@ build_mn_arrests_data <- function(arrests, stays, detloc_lookup, geo_all,
     outcomes      = mn_stays |>
       dplyr::count(stay_release_reason, sort = TRUE) |>
       dplyr::mutate(pct = round(n / sum(n) * 100, 1)),
+    removal_grid  = build_removal_grid(mn_stays, "Minnesota"),
     minors        = .build_minors(mn_arr, stays, cutoff)
   )
 }

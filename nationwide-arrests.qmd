@@ -44,6 +44,7 @@ arrests_raw <- tar_read(arrests_raw)
 stays_raw   <- tar_read(stays_raw)
 source(here::here("R/state-arrests.R"))        # provides STATE_ABBREVS
 source(here::here("R/state-arrests-export.R")) # provides build_state_outcomes()
+source(here::here("R/removal-grid.R"))         # provides build_removal_grid(), plot_removal_grid()
 
 # Full deduplicated dataset — used for the time-series trend chart
 arr_all <- arrests_raw |>
@@ -470,6 +471,28 @@ trend_base |>
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 30, hjust = 1),
         legend.position = "right")
+```
+
+---
+
+## Removal Destinations
+
+```{r nationwide-removal-grid-data}
+stays_post <- stays_raw |>
+  dplyr::filter(as.Date(stay_book_in_date_time) >= cutoff)
+
+nationwide_rg <- build_removal_grid(stays_post, "Nationwide", min_n = 500)
+```
+
+`departure_country` records where each person was actually sent.
+Of **`r format(nationwide_rg$n_total, big.mark=",")`** removals with a recorded
+destination, **`r format(nationwide_rg$n_third_country, big.mark=",")`**
+(`r round(nationwide_rg$n_third_country / nationwide_rg$n_total * 100, 1)`%) involved
+removal to a country other than the person's citizenship country.
+The grid below shows nationalities and destinations with at least 500 removals.
+
+```{r nationwide-removal-grid, fig.width=10, fig.height=7}
+plot_removal_grid(nationwide_rg)
 ```
 
 ---

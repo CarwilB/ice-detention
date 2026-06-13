@@ -345,6 +345,24 @@ d$all_facs |>
 
 ---
 
+## Removal Destinations
+
+`departure_country` records where each person was actually removed to. Of
+**`r format(d$removal_grid$n_total, big.mark=",")`** removals with a recorded
+destination, **`r d$removal_grid$n_third_country`** involved removal to a country
+other than the person's citizenship country — primarily Venezuelans and Cubans sent
+to Mexico or Honduras under third-country arrangements.
+
+The grid below shows nationality (rows) versus removal destination (columns) for
+all nationality/destination combinations with five or more removals.
+Cells are log-scaled; the actual count appears where non-zero.
+
+```{r removal-grid, fig.width=9, fig.height=6}
+plot_removal_grid(d$removal_grid)
+```
+
+---
+
 ## Minor Detainees (Under 18)
 
 This section identifies individuals who were under 18 years old at the time of
