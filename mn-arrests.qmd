@@ -27,6 +27,8 @@ library(maps)
 library(sf)
 library(knitr)
 
+source(here::here("add-carto-tiles.R"))
+
 d <- tar_read(mn_arrests_data)
 cutoff_str <- format(d$cutoff, "%B %e, %Y")
 ```
@@ -146,7 +148,7 @@ bins <- c(0, 1, 10, 50, 100, 500, 5000)
 pal  <- colorBin("YlOrRd", county_sf$n, bins = bins, na.color = "#ddd")
 
 leaflet(county_sf, options = leafletOptions(minZoom = 6)) |>
-  addProviderTiles(providers$CartoDB.Positron) |>
+  addCartoTiles("CartoDB.Positron") |> # custom function to send API key
   addPolygons(
     fillColor  = ~pal(n),
     fillOpacity = 0.75,

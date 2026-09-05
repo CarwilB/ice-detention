@@ -155,7 +155,7 @@ if (!is.null(state_map_sf) && nrow(d$county_counts) > 0 && county_coverage >= 0.
   pal   <- colorBin("YlOrRd", county_sf$n_map, bins = bins, na.color = "transparent")
 
   leaflet(county_sf) |>
-    addProviderTiles(providers$CartoDB.Positron) |>
+    addCartoTiles("CartoDB.Positron") |> # custom function to send API key
     addPolygons(
       fillColor   = ~pal(n_map), fillOpacity = 0.75,
       color = "#999", weight = 0.4,

@@ -27,6 +27,8 @@ library(knitr)
 library(sf)
 library(leaflet)
 library(leafpop)
+
+source(here::here("add-carto-tiles.R"))
 ```
 
 ```{r}
@@ -442,7 +444,7 @@ pal <- colorFactor(palette = type_colors[present_levels], domain = present_level
 radii <- scales::rescale(sqrt(map_sf$peak_pop), to = c(3, 20))
 
 leaflet(map_sf) |>
-  addProviderTiles("CartoDB.Positron",  options = providerTileOptions(key = Sys.getenv("cartodb_api_key"))) |>
+  addCartoTiles("CartoDB.Positron") |> # custom function to send API key
   addCircleMarkers(
     radius      = radii,
     color       = "black",

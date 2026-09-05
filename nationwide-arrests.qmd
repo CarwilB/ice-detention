@@ -274,7 +274,7 @@ bins_c <- c(1, 5, 20, 100, 500, max(county_sf$n, na.rm = TRUE) + 1)
 pal_c  <- colorBin("YlOrRd", county_sf$n_map, bins = bins_c, na.color = "transparent")
 
 leaflet(county_sf) |>
-  addProviderTiles(providers$CartoDB.Positron) |>
+  addCartoTiles("CartoDB.Positron") |> # custom function to send API key
   addPolygons(
     fillColor   = ~pal_c(n_map), fillOpacity = 0.7,
     color = "#ccc", weight = 0.15,
