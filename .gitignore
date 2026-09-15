@@ -23,7 +23,7 @@ Thumbs.db
 # Data files (large; track selectively if desired)
 # data/*.xlsx
 # data/*.xls
-.positai
+.posit/assistant
 
 # Large datasets
 data/ddp/*.parquet
