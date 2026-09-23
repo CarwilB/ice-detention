@@ -45,6 +45,7 @@ stays_raw   <- tar_read(stays_raw)
 source(here::here("R/state-arrests.R"))        # provides STATE_ABBREVS
 source(here::here("R/state-arrests-export.R")) # provides build_state_outcomes()
 source(here::here("R/removal-grid.R"))         # provides build_removal_grid(), plot_removal_grid()
+source(here::here("R/add-carto-tiles.R"))      # provides addCartoTiles()
 
 # Full deduplicated dataset — used for the time-series trend chart
 arr_all <- arrests_raw |>

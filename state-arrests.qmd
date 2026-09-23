@@ -31,6 +31,8 @@ library(maps)
 library(knitr)
 
 source(here::here("R/state-arrests.R"))
+source(here::here("R/add-carto-tiles.R"))
+
 
 # Read raw pipeline targets — works for any state without rebuilding pipeline
 arrests_raw   <- tar_read(arrests_raw)
@@ -196,7 +198,7 @@ flows <- d$flow_arrows
 rad <- function(n) pmax(3, log10(n + 1) * 8.4)   # ~70% of prior scale
 
 base_map <- leaflet() |>
-  addProviderTiles(providers$CartoDB.Positron)
+  addCartoTiles("CartoDB.Positron")
 
 # Geodetic bearing in degrees (0 = North, clockwise)
 .bearing <- function(lon1, lat1, lon2, lat2) {
