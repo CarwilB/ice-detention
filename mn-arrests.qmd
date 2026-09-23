@@ -28,6 +28,7 @@ library(sf)
 library(knitr)
 
 source(here::here("add-carto-tiles.R"))
+source(here::here("R", "removal-grid.R"))
 
 d <- tar_read(mn_arrests_data)
 cutoff_str <- format(d$cutoff, "%B %e, %Y")
