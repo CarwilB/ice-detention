@@ -119,6 +119,58 @@ target_descriptions <- function() {
     "ddp_canonical_map", "DDP daily population data",
     "Maps DDP DETLOCs to canonical facilities not already in DMCP data. Three-tier matching: fuzzy OSA, county name, confirmed keyword.",
 
+    "ddp_parquet_file", "DDP daily population data",
+    "Tracks the DDP 20260330 daily-population parquet (Oct 2022--Mar 2026, DDP's last published release, renamed with version suffix) for changes.",
+
+    "ddp_new", "DDP daily population data",
+    "DDP daily population from parquet, frozen 20260330 release (Oct 2022--Mar 2026, 707 facilities). Feeds `ddp_codes_new`, `ddp_annual_panel`, facility profiles/directory, and the archived through-March FY26 comparison.",
+
+    "facilities_daily_population_file", "DDP daily population data",
+    "Recreated DDP daily-population parquet (Oct 2022--Aug 5 2026, 740 facilities) written to `data/ddp/` from the 20260806 stints via `build_ddp_daily_population()`. DDP no longer publishes this file.",
+
+    "facilities_daily_population", "DDP daily population data",
+    "Current DDP daily population (Oct 2022--Aug 5 2026, 740 facility codes), recreated from the 20260806 stints; source for the current FY26 comparison chain. Validated: the same method reproduces the published 20260330 file exactly.",
+
+    # FY26 comparison pipeline (DDP daily population vs Feb 2026 ICE release)
+    "fy26b", "FY26 comparison pipeline",
+    "Feb 12 2026 ICE spreadsheet: 220 facilities cleaned, aggregated, and keyed; 3 known IDs patched; 4 genuinely new.",
+
+    "ddp_fy26_keyed", "FY26 comparison pipeline",
+    "DDP FY26 facility summary (Oct 2025--Feb 5 2026) keyed via detloc_lookup; `in_ice_fy26` flag marks matches to the ICE FY26 spreadsheet. Uses current (20260806) DDP data.",
+
+    "daily_totals_fy26", "FY26 comparison pipeline",
+    "DDP total detained population per day, Jan 2025--Aug 5 2026 (current 20260806 data).",
+
+    "unmatched_fy26", "FY26 comparison pipeline",
+    "DDP FY26 facilities not in ICE FY26 annual statistics, with type and address from `facility_roster`.",
+
+    "peak_fy26", "FY26 comparison pipeline",
+    "Peak population summary for FY26 unmatched facilities with geocoding; sparklines added separately at export time.",
+
+    "ddp_fy26_comparison_export", "FY26 comparison pipeline",
+    "Exports 8 RDS files + `_provenance.json` to `data/ddp-comparison-export-fy26/` for the FY26 comparison report (Oct 2025--Feb 5 2026; current 20260806 DDP data). Each RDS carries a `provenance` attribute.",
+
+    "ddp_fy26_comparison_report", "FY26 comparison pipeline",
+    "Rendered DDP vs ICE FY26 comparison report (current 20260806 DDP data); review locally before deploying to quarto website.",
+
+    "ddp_fy26_keyed_20260330", "FY26 comparison pipeline",
+    "Archived through-March DDP FY26 keyed summary (Oct 2025--Feb 5 2026) from the frozen 20260330 parquet.",
+
+    "daily_totals_fy26_20260330", "FY26 comparison pipeline",
+    "Archived through-March daily totals (Jan 2025--Mar 10 2026) from the frozen 20260330 parquet.",
+
+    "unmatched_fy26_20260330", "FY26 comparison pipeline",
+    "Archived through-March unmatched DDP FY26 facilities (frozen 20260330 data).",
+
+    "peak_fy26_20260330", "FY26 comparison pipeline",
+    "Archived through-March peak population summary for unmatched facilities (frozen 20260330 data).",
+
+    "ddp_fy26_comparison_export_20260330", "FY26 comparison pipeline",
+    "Archived through-March FY26 comparison export (8 RDS files to `data/ddp-comparison-export-fy26-20260330/`); frozen reference.",
+
+    "ddp_fy26_comparison_20260330_report", "FY26 comparison pipeline",
+    "Archived through-March FY26 comparison report (`ddp-comparison-26-20260330.qmd`, frozen DDP 20260330 data); preserved snapshot of the pre-20260806 analysis.",
+
     # Unified DETLOC lookup
     "detloc_lookup", "Unified DETLOC lookup",
     "Deduplicated 1:1 mapping of DETLOC to `canonical_id`. Each DETLOC and each canonical_id appears at most once. Source priority: DDP > DMCP > hold/ERO > Vera.",

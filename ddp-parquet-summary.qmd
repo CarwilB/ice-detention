@@ -9,9 +9,12 @@ execute:
 
 ## Overview
 
-This document summarizes the Deportation Data Project (DDP) daily detention population dataset in parquet format (`data/ddp/facilities-daily-population-latest.parquet`). The parquet file is the current data source for FY26 and FY24 comparison analyses against ICE's published annual detention statistics.
+This document summarizes the Deportation Data Project (DDP) daily detention population dataset in parquet format. Two versions are documented:
 
-The dataset spans October 2022 through March 2026. The first and last dates on which any facility recorded nonzero detention are **2022-10-01** and **2026-03-10**.
+- The archived **20260330 release** (`data/ddp/facilities-daily-population-latest_20260330.parquet`), DDP's last published version, spanning October 2022 through March 2026. The first and last dates on which any facility recorded nonzero detention are **2022-10-01** and **2026-03-10**. It remains the pipeline's frozen `ddp_new` input and feeds the archived through-March FY26 comparison.
+- The current **20260806 version** (`data/ddp/facilities-daily-population-latest_20260806.parquet`), recreated from the 20260806 detention stints because DDP no longer publishes the file — see [The 20260806 release](#sec-20260806).
+
+Sections below describe the 20260330 release unless noted.
 
 ### Dataset Basics
 
@@ -112,21 +115,123 @@ The 19 discrepant facilities include several with very low ADP (< 2) where small
 
 ---
 
+## The 20260806 release {#sec-20260806}
+
+DDP's 20260806 update no longer ships a facilities-daily-population file, and the generating script (`code/facilities-daily-population-latest.R`) was removed from DDP's repository in July 2026 (commit `bfc8b3fa76`). This project recreates the file from the 20260806 detention stints with `build_ddp_daily_population()` in [R/ddp-daily-population.R](R/ddp-daily-population.R), following DDP's published methodology; the last version of DDP's original script is preserved for provenance at [data/ddp/facilities-daily-population-latest.R](data/ddp/facilities-daily-population-latest.R).
+
+**Validation:** rebuilding the 20260330 published file from the 20260515 stints reproduced all 888,699 rows, all six count columns, and all facility names exactly — cell for cell. Differences between the versions below therefore reflect DDP's retroactive data revisions, not method differences.
+
+### Dataset basics (20260806)
+
+```{r}
+#| label: fdp-20260806-basics
+library(arrow)
+library(here)
+library(dplyr)
+
+fdp_20260330 <- read_parquet(here("data/ddp/facilities-daily-population-latest_20260330.parquet"))
+fdp_20260806 <- read_parquet(here("data/ddp/facilities-daily-population-latest_20260806.parquet"))
+
+tibble::tibble(
+  Metric = c("Date range", "Total observations", "Unique facility codes", "Variables"),
+  Value = c(
+    paste(format(min(fdp_20260806$date)), "-", format(max(fdp_20260806$date))),
+    format(nrow(fdp_20260806), big.mark = ","),
+    format(dplyr::n_distinct(fdp_20260806$detention_facility_code), big.mark = ","),
+    ncol(fdp_20260806)
+  )
+) |> knitr::kable()
+```
+
+### Population by fiscal year (20260806)
+
+```{r}
+#| label: fy-summary-20260806
+fdp_20260806 |>
+  dplyr::mutate(fy = as.integer(format(date, "%Y")) + (as.integer(format(date, "%m")) >= 10)) |>
+  dplyr::group_by(fy) |>
+  dplyr::summarise(
+    Days = dplyr::n_distinct(date),
+    `Mean Daily` = round(mean(n_detained), 1),
+    `Max Daily` = max(n_detained),
+    `Total Person-Days` = sum(n_detained),
+    .groups = "drop"
+  ) |>
+  dplyr::rename(`Fiscal Year` = fy) |>
+  knitr::kable(format.args = list(big.mark = ","))
+```
+
+As before, "Mean Daily" is the mean across facility-days, and the median facility-day is zero.
+
+### Overlap revisions vs the 20260330 release
+
+In the shared window (2022-10-01 – 2026-03-10, 707 shared facility codes), the two versions differ because DDP retroactively revised stints records between releases:
+
+```{r}
+#| label: overlap-revisions
+metrics <- c("n_detained", "n_detained_at_midnight", "n_detained_male",
+             "n_detained_female", "n_detained_convicted_criminal",
+             "n_detained_possibly_under_18")
+
+overlap_cmp <- fdp_20260806 |>
+  dplyr::filter(date <= max(fdp_20260330$date)) |>
+  dplyr::inner_join(fdp_20260330,
+                    by = c("detention_facility_code", "date"),
+                    suffix = c("_new", "_old"))
+
+purrr::map_dfr(metrics, function(m) {
+  d <- overlap_cmp[[paste0(m, "_new")]] - overlap_cmp[[paste0(m, "_old")]]
+  tibble::tibble(
+    metric = m,
+    cells = length(d),
+    exact = mean(d == 0),
+    mean_abs_diff = mean(abs(d)),
+    max_abs_diff = max(abs(d)),
+    total_new = sum(overlap_cmp[[paste0(m, "_new")]]),
+    total_old = sum(overlap_cmp[[paste0(m, "_old")]])
+  )
+}) |> knitr::kable(digits = 4, format.args = list(big.mark = ","))
+```
+
+About 90–91% of facility-day cells are exactly equal; 20260806 totals are roughly 0.2% *lower* than the 20260330 totals over the same window, and individual facility-days can differ substantially where records were revised. These are DDP-side revisions — the same recreation method applied to the 20260515 stints reproduces the published 20260330 file exactly.
+
+```{r}
+#| label: code-changes
+added_codes <- setdiff(unique(fdp_20260806$detention_facility_code),
+                       unique(fdp_20260330$detention_facility_code))
+dropped_codes <- setdiff(unique(fdp_20260330$detention_facility_code),
+                         unique(fdp_20260806$detention_facility_code))
+```
+
+`r length(added_codes)` facility codes appear only in the 20260806 version (`r paste(added_codes, collapse = ", ")`), and `r length(dropped_codes)` codes from the 20260330 version are absent (`r paste(dropped_codes, collapse = ", ")`).
+
+---
+
 ## Data Integration Summary
 
 ### Pipeline Targets
 
-The feather file remains the source for `ddp_raw` and all existing FY25-era pipeline targets. The parquet file is loaded as a separate `ddp_new` target for FY26 (and future FY24) comparisons:
+The feather file remains the source for `ddp_raw` and all existing FY25-era pipeline targets. The 20260330 parquet is loaded as a frozen `ddp_new` target (it feeds `ddp_codes_new`, `ddp_annual_panel` and the expanded map, facility profiles/directory, and the archived through-March FY26 comparison). The current 20260806 version is rebuilt from the stints and feeds the current FY26 comparison chain:
 
 ```r
+# Frozen 20260330 release (DDP-published, renamed)
 tar_target(ddp_parquet_file,
-  here::here("data/ddp/facilities-daily-population-latest.parquet"),
+  here::here("data/ddp/facilities-daily-population-latest_20260330.parquet"),
   format = "file")
-
 tar_target(ddp_new, arrow::read_parquet(ddp_parquet_file))
+
+# Current: recreated from the 20260806 stints (DDP no longer publishes the file)
+tar_target(facilities_daily_population_file, {
+  fdp <- build_ddp_daily_population(stints_raw, end_date = as.Date("2026-08-05"))
+  out <- here::here("data/ddp/facilities-daily-population-latest_20260806.parquet")
+  arrow::write_parquet(fdp, out, compression = "zstd")
+  out
+}, format = "file")
+tar_target(facilities_daily_population,
+  arrow::read_parquet(facilities_daily_population_file))
 ```
 
-The `ddp_facility_summary()` function handles both sources; the `state` column it previously required is treated as optional.
+The `ddp_facility_summary()` function handles both versions; the `state` column it previously required is treated as optional.
 
 ### Canonical ID Matching
 
@@ -147,7 +252,7 @@ DDP facility codes are matched to canonical facility IDs via `detloc_lookup_full
 
 ## FY26 Comparison Export
 
-The `ddp_fy26_comparison_export` target exports 8 pre-computed RDS files to `data/ddp-comparison-export-fy26/` covering **October 1, 2025 – February 5, 2026** (the ICE data cutoff in the Feb 12 release):
+The `ddp_fy26_comparison_export` target exports 8 pre-computed RDS files to `data/ddp-comparison-export-fy26/` covering **October 1, 2025 – February 5, 2026** (the ICE data cutoff in the Feb 12 release). The export now uses the current 20260806 daily-population data; the table below reflects the archived through-March (20260330) data state. Every exported RDS carries a `provenance` attribute (source file, dates covered, DDP source URLs, computation timestamp), mirrored in a `_provenance.json` companion file in each export directory. The archived through-March analysis is preserved separately as `ddp-comparison-26-20260330.qmd`, whose export target (`ddp_fy26_comparison_export_20260330`) writes to `data/ddp-comparison-export-fy26-20260330/`:
 
 | Object | Description |
 |--------|-------------|
@@ -165,6 +270,10 @@ The `ddp_fy26_comparison_export` target exports 8 pre-computed RDS files to `dat
 ## Related Files
 
 - `R/ddp.R` — `ddp_facility_summary()`, `build_fy26b()`, `export_ddp_fy26_comparison_data()`
-- `data/ddp-comparison-export-fy26/` — pre-computed RDS files
+- `R/ddp-daily-population.R` — `build_ddp_daily_population()`, the validated recreation of the daily-population file from stints
+- `data/ddp-daily-population.yml` — provenance and versioning for both daily-population parquet files
+- `data/ddp-comparison-export-fy26/` — pre-computed RDS files (current, 20260806 data)
+- `data/ddp-comparison-export-fy26-20260330/` — archived through-March export (frozen 20260330 data)
+- `ddp-comparison-26-20260330.qmd` — archived through-March FY26 comparison report
 - `facility_roster.csv` — canonical facility addresses, types, DETLOCs
 - `ddp-integration-summary.md` — original feather integration notes

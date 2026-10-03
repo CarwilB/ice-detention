@@ -1080,11 +1080,13 @@ build_ddp_fy26_keyed <- function(ddp_new, fy26b, detloc_lookup, detloc_lookup_fu
                     canonical_id %in% ice_fy26_ids)
 }
 
-build_daily_totals_fy26 <- function(ddp_new) {
+build_daily_totals_fy26 <- function(ddp_new, to = "2026-03-10") {
   ddp_new |>
     dplyr::filter(date >= as.Date("2025-01-01"), # back to January 2025 for context
-                  date <= as.Date( "2026-03-10")) |>  # Just for the graph,
+                  date <= as.Date(to)) |> # Just for the graph,
                                 # go all the way to the end of the dataset
+                                # (or the frozen 2026-03-10 end for the
+                                # archived through-March analysis);
                                 # comparative analysis only goes to
                                 # "2026-02-05"
     dplyr::group_by(date) |>
@@ -1167,11 +1169,13 @@ build_peak_fy26 <- function(ddp_new, unmatched_fy26, facility_roster,
 # Adds pre-computed SVG sparklines (daily population time series) to peak_fy26
 # for use in Leaflet map popups. Kept separate from build_peak_fy26() so the
 # sparkline computation only runs at export time, not on every pipeline rebuild.
-build_peak_fy26_w_sparklines <- function(ddp_new, peak_fy26) {
+build_peak_fy26_w_sparklines <- function(ddp_new, peak_fy26, fy_end = "2026-03-10") {
   fy_start        <- "2025-06-01" # Experiment: Just for the sparkline,
                                   # start with the uptick
-  fy_end          <- "2026-03-10" # Just for the sparklines, go all the way to
-                                  # the end of the dataset
+                                  # Just for the sparklines, go all the way to
+                                  # the end of the dataset (or the frozen
+                                  # 2026-03-10 end for the archived
+                                  # through-March analysis)
   unmatched_codes <- peak_fy26$detention_facility_code
 
   sparklines <- ddp_new |>
@@ -1189,6 +1193,119 @@ build_peak_fy26_w_sparklines <- function(ddp_new, peak_fy26) {
     dplyr::left_join(sparklines, by = "detention_facility_code")
 }
 
+# ── Provenance metadata for FY26 comparison exports ──────────────────────────
+# Builds the provenance block attached to every exported RDS object (as a
+# `provenance` attribute; inspect with attributes(obj)$provenance) and
+# mirrored in _provenance.json in the export directory. Each file's record
+# gives the source file, dates covered, DDP source URLs, the DDP release,
+# the pipeline target, and the computation timestamp.
+#
+# Used in two ways:
+# - By export_ddp_fy26_comparison_data() at export time (current chain).
+# - Retroactively, to annotate an existing export directory (e.g. the frozen
+#   through-March 20260330 export) by re-saving each RDS with the attribute.
+
+build_fy26_export_provenance <- function(ddp_source_file,
+                                         ddp_release,
+                                         ddp_data_coverage,
+                                         pipeline_target,
+                                         sparkline_end,
+                                         comparison_window = "2025-10-01 to 2026-02-05",
+                                         daily_totals_start = "2025-01-01",
+                                         ice_source_file = "data/ice/FY26_detentionStats02022026.xlsx",
+                                         ice_source_url = "https://www.ice.gov/detain/detention-management",
+                                         ddp_source_note = "Daily-population file recreated from DDP detention stints (DDP discontinued this file with its 20260806 release)",
+                                         ddp_file_url = NULL,
+                                         computed = format(Sys.time(), "%Y-%m-%dT%H:%M:%SZ",
+                                                           tz = "UTC")) {
+  ddp_urls <- list(
+    ddp_data_page      = "https://deportationdata.org/data/processed/ice.html",
+    ddp_processing_doc = "https://deportationdata.org/docs/ice/processing.html#detention-facility-populations",
+    ddp_github_repo    = "https://github.com/deportationdata/ice"
+  )
+  if (!is.null(ddp_file_url)) ddp_urls$ddp_file <- ddp_file_url
+
+  # Per-file specifications: which dates each table covers
+  spec <- list(
+    list(nm = "ice_fy26",
+         desc = "ICE FY26 annual detention statistics (220 facilities), Feb 12 2026 release",
+         dates = comparison_window),
+    list(nm = "ddp_fy26",
+         desc = "DDP daily-population facility summary over the FY26 comparison window",
+         dates = comparison_window),
+    list(nm = "ddp_fy26_keyed",
+         desc = "DDP facility summary keyed to canonical IDs with in_ice_fy26 flag",
+         dates = comparison_window),
+    list(nm = "daily_totals_fy26",
+         desc = "National daily detained population (all DDP facility codes)",
+         dates = paste(daily_totals_start, "to", sparkline_end)),
+    list(nm = "unmatched_fy26",
+         desc = "DDP facilities absent from ICE FY26 annual statistics, with types and addresses",
+         dates = comparison_window),
+    list(nm = "daily_unmatched_fy26",
+         desc = "Daily population in unmatched facilities",
+         dates = comparison_window),
+    list(nm = "monthly_unmatched_fy26",
+         desc = "Monthly population in unmatched facilities by facility type",
+         dates = comparison_window),
+    list(nm = "peak_fy26_w_sparklines",
+         desc = "Peak/mean population for unmatched facilities with geocoding and SVG sparklines",
+         dates = paste("2025-06-01 to", sparkline_end))
+  )
+
+  files <- lapply(spec, function(s) {
+    base <- if (identical(s$nm, "ice_fy26")) {
+      list(
+        source_file     = ice_source_file,
+        source_publisher = "U.S. Immigration and Customs Enforcement",
+        source_urls     = list(ice_detention_management = ice_source_url)
+      )
+    } else {
+      c(
+        list(
+          source_file      = ddp_source_file,
+          source_publisher = paste0("Deportation Data Project (ICE data obtained via FOIA; ",
+                                   ddp_source_note, ")"),
+          ddp_release      = ddp_release
+        ),
+        list(source_urls = ddp_urls)
+      )
+    }
+    c(base, list(
+      file                    = paste0(s$nm, ".rds"),
+      dataset                 = s$nm,
+      description             = s$desc,
+      dates_covered           = s$dates,
+      underlying_data_coverage = ddp_data_coverage,
+      comparison_window       = comparison_window,
+      computed                = computed,
+      pipeline_target         = pipeline_target
+    ))
+  })
+  names(files) <- vapply(spec, function(s) s$nm, character(1))
+
+  list(
+    export = list(
+      title              = "DDP vs ICE FY26 comparison export",
+      pipeline_target    = pipeline_target,
+      comparison_window  = comparison_window,
+      ddp_source_file    = ddp_source_file,
+      ddp_release        = ddp_release,
+      ddp_data_coverage  = ddp_data_coverage,
+      source_urls        = list(
+        ice_detention_management = ice_source_url,
+        ddp_data_page            = ddp_urls$ddp_data_page,
+        ddp_processing_doc       = ddp_urls$ddp_processing_doc,
+        ddp_github_repo          = ddp_urls$ddp_github_repo
+      ),
+      computed           = computed,
+      note               = paste("Each RDS object also carries this metadata as a",
+                                 "`provenance` attribute; inspect with attributes(obj)$provenance.")
+    ),
+    files = files
+  )
+}
+
 # ── Export pre-computed data for DDP vs ICE FY26 comparison report ───────────
 # Receives the four main pipeline targets (ddp_fy26_keyed, daily_totals_fy26,
 # unmatched_fy26, peak_fy26) as arguments; adds sparklines, computes
@@ -1196,7 +1313,14 @@ build_peak_fy26_w_sparklines <- function(ddp_new, peak_fy26) {
 
 export_ddp_fy26_comparison_data <- function(ddp_new, fy26b,
                                             ddp_fy26_keyed, daily_totals_fy26,
-                                            unmatched_fy26, peak_fy26) {
+                                            unmatched_fy26, peak_fy26,
+                                            export_dir = here::here(
+                                              "data", "ddp-comparison-export-fy26"
+                                            ),
+                                            sparkline_end = "2026-03-10",
+                                            ddp_source_file = NULL,
+                                            ddp_release = NULL,
+                                            pipeline_target = "ddp_fy26_comparison_export") {
   fy_start <- "2025-10-01"
   fy_end   <- "2026-02-05"
 
@@ -1236,11 +1360,25 @@ export_ddp_fy26_comparison_data <- function(ddp_new, fy26b,
     )
 
   # ── Peak summary with sparklines ───────────────────────────────────────────
-  peak_fy26_w_sparklines <- build_peak_fy26_w_sparklines(ddp_new, peak_fy26)
+  peak_fy26_w_sparklines <- build_peak_fy26_w_sparklines(ddp_new, peak_fy26,
+                                                         fy_end = sparkline_end)
 
   # ── Export ────────────────────────────────────────────────────────────────
-  export_dir <- here::here("data", "ddp-comparison-export-fy26")
   dir.create(export_dir, showWarnings = FALSE)
+
+  if (is.null(ddp_source_file) || is.null(ddp_release)) {
+    stop("export_ddp_fy26_comparison_data() requires ddp_source_file and ddp_release ",
+         "for provenance metadata (e.g. 'data/ddp/facilities-daily-population-latest_20260806.parquet', ",
+         "'20260806')")
+  }
+
+  provenance <- build_fy26_export_provenance(
+    ddp_source_file  = ddp_source_file,
+    ddp_release      = ddp_release,
+    ddp_data_coverage = paste(format(min(ddp_new$date)), "to", format(max(ddp_new$date))),
+    pipeline_target  = pipeline_target,
+    sparkline_end    = sparkline_end
+  )
 
   files <- list(
     ice_fy26               = ice_fy26,
@@ -1255,11 +1393,18 @@ export_ddp_fy26_comparison_data <- function(ddp_new, fy26b,
 
   paths <- vapply(names(files), function(nm) {
     path <- file.path(export_dir, paste0(nm, ".rds"))
-    saveRDS(files[[nm]], path)
+    obj <- files[[nm]]
+    attr(obj, "provenance") <- provenance$files[[nm]]
+    saveRDS(obj, path)
     path
   }, character(1), USE.NAMES = FALSE)
 
-  cli::cli_inform(c("v" = "Exported {length(paths)} RDS files to {export_dir}"))
+  # Companion machine-readable provenance file describing every export
+  json_path <- file.path(export_dir, "_provenance.json")
+  jsonlite::write_json(provenance, json_path, auto_unbox = TRUE, pretty = TRUE)
+  paths <- c(paths, json_path)
+
+  cli::cli_inform(c("v" = "Exported {length(paths) - 1} RDS files + _provenance.json to {export_dir}"))
 
   paths
 }

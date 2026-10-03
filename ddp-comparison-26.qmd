@@ -27,11 +27,15 @@ This page analyzes ICE detention during the first months of fiscal year 2026, co
 
 1.  **ICE FY 2026 annual detention statistics**, released February 12, 2026, with data through February 5, 2026. Published at the [ICE Detention Management Division](https://www.ice.gov/detain/detention-management), the spreadsheet covers 220 facilities.
 
-2.  **Deportation Data Project daily population data**, government data obtained by FOIA and [archived](https://deportationdata.org/data/processed/ice.html) by the [Deportation Data Project](https://deportationdata.org/). The dataset covers every ICE detention facility with reported daily counts from October 2022 through March 10, 2026.
+2.  **Deportation Data Project daily population data**, government data obtained by FOIA and [archived](https://deportationdata.org/data/processed/ice.html) by the [Deportation Data Project](https://deportationdata.org/). The dataset covers every ICE detention facility with reported daily counts from October 2022 through August 5, 2026. DDP's 20260806 release no longer publishes the daily-population file, so it is recreated here from DDP's detention-stints records following DDP's published methodology (validated to reproduce DDP's earlier published file exactly; see `R/ddp-daily-population.R`).
 
 Significantly, both of these are government-generated datasets, provided more and less willingly (respectively) by Immigration and Customs Enforcement. Where doing comparisons below, we focus on the October 1, 2025 – February 12, 2026 period covered by the ICE FY 2026 spreadsheet. Where summarizing detention as a whole, and in drawing the sparkline graphs for each facility on the map, we go as far as the DDP allows.
 
 As with [FY 2025](../ddp-comparison/index.qmd), the DDP data reveals a substantial unreported detention population — facilities where ICE holds people that do not appear in the published annual statistics. Over this period, the unreported population reached a peak of over 2,500 individuals on a single day. Medical facilities, which accounted for about 68 detainees per day in FY 2025, have been excluded from this dataset.
+
+::: {.callout-note}
+This analysis previously used DDP's 20260330 daily-population release (data through March 10, 2026). DDP retroactively revised some records in the 20260806 release, so the two data states differ slightly within the comparison window. The original through-March analysis is archived as `ddp-comparison-26-20260330.qmd`, with its data exports in `data/ddp-comparison-export-fy26-20260330/`.
+:::
 
 In FY 2026, it is Hold Rooms and other Staging facilities that account for the vast majority of the unreported population. For comparison, hold facilties in FY 2025 had an average daily population of about 1,163 detainees, with an average of 1,986 in the final 60 days.
 
@@ -58,7 +62,7 @@ source(here::here("add-carto-tiles.R"))
 ```{r}
 #| label: load-data
 # Pipeline targets (mirrors export_ddp_fy26_comparison_data() in R/ddp.R)
-ddp_new           <- tar_read(ddp_new)
+ddp_pop           <- tar_read(facilities_daily_population) # current 20260806 data
 fy26b             <- tar_read(fy26b)
 ddp_fy26_keyed    <- tar_read(ddp_fy26_keyed)
 daily_totals_fy26 <- tar_read(daily_totals_fy26)
@@ -78,14 +82,14 @@ ddp_fy26 <- ddp_fy26_keyed |>
 
 unmatched_codes <- unmatched_fy26$detention_facility_code
 
-daily_unmatched <- ddp_new |>
+daily_unmatched <- ddp_pop |>
   filter(detention_facility_code %in% unmatched_codes,
          date >= as.Date(fy_start),
          date <= as.Date(fy_end)) |>
   group_by(date) |>
   summarise(total_pop = sum(n_detained, na.rm = TRUE), .groups = "drop")
 
-monthly_unmatched <- ddp_new |>
+monthly_unmatched <- ddp_pop |>
   filter(detention_facility_code %in% unmatched_codes,
          date >= as.Date(fy_start),
          date <= as.Date(fy_end)) |>
@@ -99,7 +103,7 @@ monthly_unmatched <- ddp_new |>
   )
 
 source(here::here("R/ddp.R")) # for build_peak_fy26_w_sparklines()
-peak_fy26 <- build_peak_fy26_w_sparklines(ddp_new, peak_fy26_raw)
+peak_fy26 <- build_peak_fy26_w_sparklines(ddp_pop, peak_fy26_raw, fy_end = "2026-08-05")
 ```
 
 ```{r}
@@ -155,7 +159,7 @@ The DDP covers `r nrow(ddp_fy26)` facility codes with at least one detainee duri
 
 ```{r}
 #| label: fig-daily-total
-#| fig-cap: "Total ICE detained population per day (DDP data, Jan 2025 – Mar 2026)"
+#| fig-cap: "Total ICE detained population per day (DDP data, Jan 2025 – Aug 2026)"
 #| fig-height: 4
 fy_breaks <- as.Date(c("2025-01-20", "2025-10-01", "2026-01-01"))
 fy_labels <- data.frame(

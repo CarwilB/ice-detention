@@ -680,19 +680,47 @@ list(
 
   # ── FY26 comparison data (parquet DDP vs Feb 2026 ICE release) ────────────
   # Uses the Feb 12 2026 ICE spreadsheet (data through 2026-02-05) and the
-  # new parquet-format DDP file. Kept entirely separate from the main FY19–FY26
-  # panel pipeline. Export target is cue = "never"; run explicitly when ready.
+  # parquet-format DDP daily population data. Kept entirely separate from the
+  # main FY19–FY26 panel pipeline. ddp_new is frozen at DDP's 20260330 release
+  # (data through 2026-03-10); the current FY26 comparison chain uses
+  # facilities_daily_population, recreated from the 20260806 stints (below).
+  # The through-March comparison built from ddp_new is preserved as the
+  # archived *_20260330 targets + ddp-comparison-26-20260330.qmd.
 
   tar_target(
     ddp_parquet_file,
-    here::here("data/ddp/facilities-daily-population-latest.parquet"),
-    description = "Tracks the DDP parquet file (Oct 2022 – Mar 2026) for changes",
+    here::here("data/ddp/facilities-daily-population-latest_20260330.parquet"),
+    description = "Tracks the DDP 20260330 daily-population parquet (Oct 2022 – Mar 2026) for changes",
     format = "file"
   ),
   tar_target(
     ddp_new,
     arrow::read_parquet(ddp_parquet_file),
-    description = "Raw DDP daily population data from parquet (Oct 2022 – Mar 2026, 707 facilities)"
+    description = "DDP daily population from parquet, frozen 20260330 release (Oct 2022 – Mar 2026, 707 facilities). Feeds ddp_codes_new, ddp_annual_panel, facility profiles/directory, and the archived through-March FY26 comparison"
+  ),
+
+  # ── DDP daily population 20260806 (recreated from stints) ──────────────────
+  # DDP's 20260806 release no longer ships facilities-daily-population-latest;
+  # this recreates it from detention-stints-latest_20260806.parquet following
+  # DDP's published methodology (R/ddp-daily-population.R; DDP's original
+  # script is preserved at data/ddp/facilities-daily-population-latest.R).
+  # Validated: recreating the 20260330 published file from the 20260515 stints
+  # reproduced all 888,699 rows x 6 count columns exactly.
+  tar_target(
+    facilities_daily_population_file,
+    {
+      fdp <- build_ddp_daily_population(stints_raw, end_date = as.Date("2026-08-05"))
+      out <- here::here("data/ddp/facilities-daily-population-latest_20260806.parquet")
+      arrow::write_parquet(fdp, out, compression = "zstd")
+      out
+    },
+    description = "Recreated DDP daily-population parquet (Oct 2022 – Aug 5 2026, 740 facilities) written to data/ddp/ from the 20260806 stints; DDP no longer publishes this file",
+    format = "file"
+  ),
+  tar_target(
+    facilities_daily_population,
+    arrow::read_parquet(facilities_daily_population_file),
+    description = "Current DDP daily population (Oct 2022 – Aug 5 2026, 740 facility codes), recreated from the 20260806 stints; source for the current FY26 comparison chain"
   ),
 
   tar_target(
@@ -703,14 +731,14 @@ list(
 
   tar_target(
     ddp_fy26_keyed,
-    build_ddp_fy26_keyed(ddp_new, fy26b, detloc_lookup, detloc_lookup_full),
-    description = "DDP FY26 facility summary (Oct 2025 – Feb 5 2026) keyed via detloc_lookup; in_ice_fy26 flag marks matches to ICE FY26 spreadsheet"
+    build_ddp_fy26_keyed(facilities_daily_population, fy26b, detloc_lookup, detloc_lookup_full),
+    description = "DDP FY26 facility summary (Oct 2025 – Feb 5 2026) keyed via detloc_lookup; in_ice_fy26 flag marks matches to ICE FY26 spreadsheet; uses current (20260806) DDP data"
   ),
 
   tar_target(
     daily_totals_fy26,
-    build_daily_totals_fy26(ddp_new),
-    description = "DDP total detained population per day for FY26 comparison period (Oct 2025 – Feb 5 2026)"
+    build_daily_totals_fy26(facilities_daily_population, to = "2026-08-05"),
+    description = "DDP total detained population per day, Jan 2025 – Aug 5 2026 (current 20260806 data)"
   ),
 
   tar_target(
@@ -721,16 +749,20 @@ list(
 
   tar_target(
     peak_fy26,
-    build_peak_fy26(ddp_new, unmatched_fy26, facility_roster, facilities_geocoding_lookup),
+    build_peak_fy26(facilities_daily_population, unmatched_fy26, facility_roster, facilities_geocoding_lookup),
     description = "Peak population summary for FY26 unmatched facilities with geocoding; sparklines added separately at export time"
   ),
 
   tar_target(
     ddp_fy26_comparison_export,
     export_ddp_fy26_comparison_data(
-      ddp_new, fy26b, ddp_fy26_keyed, daily_totals_fy26, unmatched_fy26, peak_fy26
+      facilities_daily_population, fy26b, ddp_fy26_keyed, daily_totals_fy26,
+      unmatched_fy26, peak_fy26, sparkline_end = "2026-08-05",
+      ddp_source_file = "data/ddp/facilities-daily-population-latest_20260806.parquet",
+      ddp_release = "20260806",
+      pipeline_target = "ddp_fy26_comparison_export"
     ),
-    description = "Exports 8 RDS files to data/ddp-comparison-export-fy26/ for FY26 comparison report (Oct 2025 – Feb 5 2026)",
+    description = "Exports 8 RDS files + _provenance.json to data/ddp-comparison-export-fy26/ for FY26 comparison report (Oct 2025 – Feb 5 2026; current 20260806 DDP data)",
     format = "file"
   ),
 
@@ -742,15 +774,65 @@ list(
   tar_quarto(
     ddp_fy26_comparison_report,
     "ddp-comparison-26.qmd",
-    description = "Rendered DDP vs ICE FY26 comparison report; review locally before deploying to quarto website"
+    description = "Rendered DDP vs ICE FY26 comparison report (current 20260806 DDP data); review locally before deploying to quarto website"
+  ),
+
+  # ── Archived FY26 comparison (DDP 20260330 data, through March 2026) ──────
+  # Frozen snapshot of the original through-March FY26 comparison, built from
+  # the 20260330 daily-population release (data through 2026-03-10). DDP
+  # retroactively revised some records in the 20260806 release (see
+  # ddp-parquet-summary.qmd), so the archived and current chains differ
+  # slightly in the Oct 2025 – Feb 5 2026 comparison window. The archived
+  # export writes to data/ddp-comparison-export-fy26-20260330/.
+  tar_target(
+    ddp_fy26_keyed_20260330,
+    build_ddp_fy26_keyed(ddp_new, fy26b, detloc_lookup, detloc_lookup_full),
+    description = "Archived through-March DDP FY26 keyed summary (Oct 2025 – Feb 5 2026) from the frozen 20260330 parquet"
+  ),
+  tar_target(
+    daily_totals_fy26_20260330,
+    build_daily_totals_fy26(ddp_new),
+    description = "Archived through-March daily totals (Jan 2025 – Mar 10 2026) from the frozen 20260330 parquet"
+  ),
+  tar_target(
+    unmatched_fy26_20260330,
+    build_unmatched_fy26(ddp_fy26_keyed_20260330, facility_roster),
+    description = "Archived through-March unmatched DDP FY26 facilities (frozen 20260330 data)"
+  ),
+  tar_target(
+    peak_fy26_20260330,
+    build_peak_fy26(ddp_new, unmatched_fy26_20260330, facility_roster, facilities_geocoding_lookup),
+    description = "Archived through-March peak population summary for unmatched facilities (frozen 20260330 data)"
+  ),
+  tar_target(
+    ddp_fy26_comparison_export_20260330,
+    export_ddp_fy26_comparison_data(
+      ddp_new, fy26b, ddp_fy26_keyed_20260330, daily_totals_fy26_20260330,
+      unmatched_fy26_20260330, peak_fy26_20260330,
+      export_dir = here::here("data", "ddp-comparison-export-fy26-20260330"),
+      sparkline_end = "2026-03-10",
+      ddp_source_file = "data/ddp/facilities-daily-population-latest_20260330.parquet",
+      ddp_release = "20260330",
+      pipeline_target = "ddp_fy26_comparison_export_20260330",
+      ddp_source_note = "DDP-published daily-population file (20260330 release, data through 2026-03-10)",
+      ddp_file_url = "https://github.com/deportationdata/ice/blob/a63d3d9428/data/facilities-daily-population-latest.parquet"
+    ),
+    description = "Archived through-March FY26 comparison export (8 RDS files + _provenance.json to data/ddp-comparison-export-fy26-20260330/); frozen reference, restored from the deployed post mirror. cue = \"never\": the dir holds the original deployed data state; regenerating would drift as project-side lookups evolve",
+    format = "file",
+    cue = tar_cue("never")
+  ),
+  tar_quarto(
+    ddp_fy26_comparison_20260330_report,
+    "ddp-comparison-26-20260330.qmd",
+    description = "Archived through-March FY26 comparison report (frozen DDP 20260330 data); preserved snapshot of the pre-20260806 analysis"
   ),
 
   # ── DDP stays dataset (one row per detention stay, incl. full facility chain) ─
   tar_target(
     stays_file,
-    here::here("data/ddp/detention-stays-latest.parquet"),
+    here::here("data/ddp/detention-stays-latest_20260514.parquet"),
     format = "file",
-    description = "Tracks the DDP detention stays parquet file for changes"
+    description = "Tracks the DDP detention stays parquet file (20260514 release, data through Mar 2026) for changes"
   ),
   tar_target(
     stays_raw,
@@ -761,9 +843,9 @@ list(
   # ── DDP arrests dataset ────────────────────────────────────────────────────
   tar_target(
     arrests_file,
-    here::here("data/ddp/arrests-latest.parquet"),
+    here::here("data/ddp/arrests-latest_20260330.parquet"),
     format = "file",
-    description = "Tracks the DDP arrests parquet file for changes"
+    description = "Tracks the DDP arrests parquet file (20260330 release, data through Mar 2026) for changes"
   ),
   tar_target(
     arrests_raw,
@@ -785,12 +867,12 @@ list(
     ),
     description = "Pre-computed tables for mn-arrests.qmd: MN post-2025-01-20 arrest itineraries, county choropleth, Sankey, minors"
   ),
-  tar_quarto(
-    state_arrests_report,
-    "state-arrests.qmd",
-    execute_params = list(state = "MINNESOTA", cutoff = "2025-01-20"),
-    description = "Rendered state-arrests.qmd for Minnesota post-2025-01-20 (parameterized; render for other states with quarto render state-arrests.qmd -P state:TEXAS)"
-  ),
+  # tar_quarto(
+  #   state_arrests_report,
+  #   "state-arrests.qmd",
+  #   execute_params = list(state = "MINNESOTA", cutoff = "2025-01-20"),
+  #   description = "Rendered state-arrests.qmd for Minnesota post-2025-01-20 (parameterized; render for other states with quarto render state-arrests.qmd -P state:TEXAS)"
+  # ),
   tar_quarto(
     nationwide_arrests_report,
     "nationwide-arrests.qmd",
@@ -824,18 +906,22 @@ list(
 
   # ── Detention stints data (DDP individual-level) ───────────────────────────
   # Individual-level FOIA data: one row per detention stint (one continuous
-  # period at one facility within a stay). Source: DDP FOIA 2026-ICLI-00005.
+  # period at one facility within a stay). Source: DDP FOIA 2026-ICLI-00005,
+  # 20260806 release (data through Aug 6 2026). DDP also updates the GitHub
+  # repo's detention-stints-latest.parquet independently; the _20260806 suffix
+  # pins the version used here. The 20260515 predecessor is retained as
+  # detention-stints-latest_20260515.parquet.
   # Re-download via tar_invalidate(stints_file) when a new release is available.
   tar_target(
     stints_file,
-    here::here("data/ddp/detention-stints-latest.parquet"),
-    description = "Tracks the DDP detention stints parquet file for changes",
+    here::here("data/ddp/detention-stints-latest_20260806.parquet"),
+    description = "Tracks the DDP detention stints parquet file (20260806 release) for changes",
     format = "file"
   ),
   tar_target(
     stints_raw,
     arrow::read_parquet(stints_file),
-    description = "Raw DDP detention stints (2.6M rows x 61 cols; FY23-FY26, one row per facility stint)"
+    description = "Raw DDP detention stints, 20260806 release (3.2M rows x 59 cols; book-ins Oct 2021 – Aug 2026, one row per facility stint; source for the recreated daily-population file)"
   ),
 
   # ── Facility profiles (before/after Trump inauguration) ─────────────────────

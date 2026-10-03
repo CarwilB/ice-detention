@@ -53,6 +53,10 @@ Source: [github.com/themarshallproject/dhs_immigration_detention](https://github
 
 1,479 facilities with DETLOCs, addresses, AOR assignments, first/last use dates, and geocoded lat/lon. Covers CY 1978–Nov 2017. Raw data in `data/marshall/themarshallproject_locations.csv`. Import script: `themarshallproject-locations.R`; targets: `marshall_locations_file` → `marshall_locations_raw` → `marshall_locations`. Key uses: (1) DETLOC lookup for facilities not in DMCP or DDP sources (e.g., IEPHOLD for El Paso ERO Field Office); (2) addresses and geocoding for hold facilities via `build_hold_canonical()`.
 
+## Project skills
+
+- [.posit/assistant/skills/updating-ddp-data/SKILL.md](.posit/assistant/skills/updating-ddp-data/SKILL.md) — Workflow for updating DDP (Deportation Data Project) data: release detection via the deportationdata/ice repo, versioned file pinning (`{dataset}-latest_{YYYYMMDD}.parquet`, suffix = DDP release date), recreating the discontinued facilities-daily-population parquet from stints with exact-match validation, repointing `_targets.R` targets, archiving frozen analyses, and provenance metadata. Use whenever refreshing or adding DDP data.
+
 ## Derived data outputs (in `data/`)
 
 | File | Description |
@@ -236,6 +240,8 @@ Remaining truncation: `cy16_rating` has 9 values reading `"Special Review - Pre-
 ## DDP daily population data integration
 
 **Data source:** Deportation Data Project daily detainee counts (Sep 2023–Oct 2025), 853 distinct facility codes, imported as a feather file.
+
+**Updates:** For downloading new DDP releases, versioned file naming, recreating the discontinued facilities-daily-population parquet, wiring releases into the pipeline, and provenance metadata, follow the `updating-ddp-data` project skill (`.posit/assistant/skills/updating-ddp-data/SKILL.md`). Full log of the 20260806 update: `agent/conversation-ddp-update-20261003.md`.
 
 **Pipeline targets:** See the DDP and DETLOC sections of the pipeline targets table above. Core functions are in `R/ddp.R`; manual strong matches are in `ddp_manual_strong_matches()`.
 
