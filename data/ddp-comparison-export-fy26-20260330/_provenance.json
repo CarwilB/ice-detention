@@ -1,0 +1,187 @@
+{
+  "export": {
+    "title": "DDP vs ICE FY26 comparison export",
+    "pipeline_target": "ddp_fy26_comparison_export_20260330",
+    "comparison_window": "2025-10-01 to 2026-02-05",
+    "ddp_source_file": "data/ddp/facilities-daily-population-latest_20260330.parquet",
+    "ddp_release": "20260330",
+    "ddp_data_coverage": "2022-10-01 to 2026-03-10",
+    "source_urls": {
+      "ice_detention_management": "https://www.ice.gov/detain/detention-management",
+      "ddp_data_page": "https://deportationdata.org/data/processed/ice.html",
+      "ddp_processing_doc": "https://deportationdata.org/docs/ice/processing.html#detention-facility-populations",
+      "ddp_github_repo": "https://github.com/deportationdata/ice"
+    },
+    "computed": "2026-04-13 (original export for the published post; approximate - data files finalized 2026-04-13)",
+    "note": "Each RDS object also carries this metadata as a `provenance` attribute; inspect with attributes(obj)$provenance."
+  },
+  "files": {
+    "ice_fy26": {
+      "source_file": "data/ice/FY26_detentionStats02022026.xlsx",
+      "source_publisher": "U.S. Immigration and Customs Enforcement",
+      "source_urls": {
+        "ice_detention_management": "https://www.ice.gov/detain/detention-management"
+      },
+      "file": "ice_fy26.rds",
+      "dataset": "ice_fy26",
+      "description": "ICE FY26 annual detention statistics (220 facilities), Feb 12 2026 release",
+      "dates_covered": "2025-10-01 to 2026-02-05",
+      "underlying_data_coverage": "2022-10-01 to 2026-03-10",
+      "comparison_window": "2025-10-01 to 2026-02-05",
+      "computed": "2026-04-13 (original export for the published post; approximate - data files finalized 2026-04-13)",
+      "pipeline_target": "ddp_fy26_comparison_export_20260330"
+    },
+    "ddp_fy26": {
+      "source_file": "data/ddp/facilities-daily-population-latest_20260330.parquet",
+      "source_publisher": "Deportation Data Project (ICE data obtained via FOIA; DDP-published daily-population file (20260330 release, data through 2026-03-10))",
+      "ddp_release": "20260330",
+      "source_urls": {
+        "ddp_data_page": "https://deportationdata.org/data/processed/ice.html",
+        "ddp_processing_doc": "https://deportationdata.org/docs/ice/processing.html#detention-facility-populations",
+        "ddp_github_repo": "https://github.com/deportationdata/ice",
+        "ddp_file": "https://github.com/deportationdata/ice/blob/a63d3d9428/data/facilities-daily-population-latest.parquet"
+      },
+      "file": "ddp_fy26.rds",
+      "dataset": "ddp_fy26",
+      "description": "DDP daily-population facility summary over the FY26 comparison window",
+      "dates_covered": "2025-10-01 to 2026-02-05",
+      "underlying_data_coverage": "2022-10-01 to 2026-03-10",
+      "comparison_window": "2025-10-01 to 2026-02-05",
+      "computed": "2026-04-13 (original export for the published post; approximate - data files finalized 2026-04-13)",
+      "pipeline_target": "ddp_fy26_comparison_export_20260330"
+    },
+    "ddp_fy26_keyed": {
+      "source_file": "data/ddp/facilities-daily-population-latest_20260330.parquet",
+      "source_publisher": "Deportation Data Project (ICE data obtained via FOIA; DDP-published daily-population file (20260330 release, data through 2026-03-10))",
+      "ddp_release": "20260330",
+      "source_urls": {
+        "ddp_data_page": "https://deportationdata.org/data/processed/ice.html",
+        "ddp_processing_doc": "https://deportationdata.org/docs/ice/processing.html#detention-facility-populations",
+        "ddp_github_repo": "https://github.com/deportationdata/ice",
+        "ddp_file": "https://github.com/deportationdata/ice/blob/a63d3d9428/data/facilities-daily-population-latest.parquet"
+      },
+      "file": "ddp_fy26_keyed.rds",
+      "dataset": "ddp_fy26_keyed",
+      "description": "DDP facility summary keyed to canonical IDs with in_ice_fy26 flag",
+      "dates_covered": "2025-10-01 to 2026-02-05",
+      "underlying_data_coverage": "2022-10-01 to 2026-03-10",
+      "comparison_window": "2025-10-01 to 2026-02-05",
+      "computed": "2026-04-13 (original export for the published post; approximate - data files finalized 2026-04-13)",
+      "pipeline_target": "ddp_fy26_comparison_export_20260330"
+    },
+    "daily_totals_fy26": {
+      "source_file": "data/ddp/facilities-daily-population-latest_20260330.parquet",
+      "source_publisher": "Deportation Data Project (ICE data obtained via FOIA; DDP-published daily-population file (20260330 release, data through 2026-03-10))",
+      "ddp_release": "20260330",
+      "source_urls": {
+        "ddp_data_page": "https://deportationdata.org/data/processed/ice.html",
+        "ddp_processing_doc": "https://deportationdata.org/docs/ice/processing.html#detention-facility-populations",
+        "ddp_github_repo": "https://github.com/deportationdata/ice",
+        "ddp_file": "https://github.com/deportationdata/ice/blob/a63d3d9428/data/facilities-daily-population-latest.parquet"
+      },
+      "file": "daily_totals_fy26.rds",
+      "dataset": "daily_totals_fy26",
+      "description": "National daily detained population (all DDP facility codes)",
+      "dates_covered": "2025-01-01 to 2026-03-10",
+      "underlying_data_coverage": "2022-10-01 to 2026-03-10",
+      "comparison_window": "2025-10-01 to 2026-02-05",
+      "computed": "2026-04-13 (original export for the published post; approximate - data files finalized 2026-04-13)",
+      "pipeline_target": "ddp_fy26_comparison_export_20260330"
+    },
+    "unmatched_fy26": {
+      "source_file": "data/ddp/facilities-daily-population-latest_20260330.parquet",
+      "source_publisher": "Deportation Data Project (ICE data obtained via FOIA; DDP-published daily-population file (20260330 release, data through 2026-03-10))",
+      "ddp_release": "20260330",
+      "source_urls": {
+        "ddp_data_page": "https://deportationdata.org/data/processed/ice.html",
+        "ddp_processing_doc": "https://deportationdata.org/docs/ice/processing.html#detention-facility-populations",
+        "ddp_github_repo": "https://github.com/deportationdata/ice",
+        "ddp_file": "https://github.com/deportationdata/ice/blob/a63d3d9428/data/facilities-daily-population-latest.parquet"
+      },
+      "file": "unmatched_fy26.rds",
+      "dataset": "unmatched_fy26",
+      "description": "DDP facilities absent from ICE FY26 annual statistics, with types and addresses",
+      "dates_covered": "2025-10-01 to 2026-02-05",
+      "underlying_data_coverage": "2022-10-01 to 2026-03-10",
+      "comparison_window": "2025-10-01 to 2026-02-05",
+      "computed": "2026-04-13 (original export for the published post; approximate - data files finalized 2026-04-13)",
+      "pipeline_target": "ddp_fy26_comparison_export_20260330"
+    },
+    "daily_unmatched_fy26": {
+      "source_file": "data/ddp/facilities-daily-population-latest_20260330.parquet",
+      "source_publisher": "Deportation Data Project (ICE data obtained via FOIA; DDP-published daily-population file (20260330 release, data through 2026-03-10))",
+      "ddp_release": "20260330",
+      "source_urls": {
+        "ddp_data_page": "https://deportationdata.org/data/processed/ice.html",
+        "ddp_processing_doc": "https://deportationdata.org/docs/ice/processing.html#detention-facility-populations",
+        "ddp_github_repo": "https://github.com/deportationdata/ice",
+        "ddp_file": "https://github.com/deportationdata/ice/blob/a63d3d9428/data/facilities-daily-population-latest.parquet"
+      },
+      "file": "daily_unmatched_fy26.rds",
+      "dataset": "daily_unmatched_fy26",
+      "description": "Daily population in unmatched facilities",
+      "dates_covered": "2025-10-01 to 2026-02-05",
+      "underlying_data_coverage": "2022-10-01 to 2026-03-10",
+      "comparison_window": "2025-10-01 to 2026-02-05",
+      "computed": "2026-04-13 (original export for the published post; approximate - data files finalized 2026-04-13)",
+      "pipeline_target": "ddp_fy26_comparison_export_20260330"
+    },
+    "monthly_unmatched_fy26": {
+      "source_file": "data/ddp/facilities-daily-population-latest_20260330.parquet",
+      "source_publisher": "Deportation Data Project (ICE data obtained via FOIA; DDP-published daily-population file (20260330 release, data through 2026-03-10))",
+      "ddp_release": "20260330",
+      "source_urls": {
+        "ddp_data_page": "https://deportationdata.org/data/processed/ice.html",
+        "ddp_processing_doc": "https://deportationdata.org/docs/ice/processing.html#detention-facility-populations",
+        "ddp_github_repo": "https://github.com/deportationdata/ice",
+        "ddp_file": "https://github.com/deportationdata/ice/blob/a63d3d9428/data/facilities-daily-population-latest.parquet"
+      },
+      "file": "monthly_unmatched_fy26.rds",
+      "dataset": "monthly_unmatched_fy26",
+      "description": "Monthly population in unmatched facilities by facility type",
+      "dates_covered": "2025-10-01 to 2026-02-05",
+      "underlying_data_coverage": "2022-10-01 to 2026-03-10",
+      "comparison_window": "2025-10-01 to 2026-02-05",
+      "computed": "2026-04-13 (original export for the published post; approximate - data files finalized 2026-04-13)",
+      "pipeline_target": "ddp_fy26_comparison_export_20260330"
+    },
+    "peak_fy26_w_sparklines": {
+      "source_file": "data/ddp/facilities-daily-population-latest_20260330.parquet",
+      "source_publisher": "Deportation Data Project (ICE data obtained via FOIA; DDP-published daily-population file (20260330 release, data through 2026-03-10))",
+      "ddp_release": "20260330",
+      "source_urls": {
+        "ddp_data_page": "https://deportationdata.org/data/processed/ice.html",
+        "ddp_processing_doc": "https://deportationdata.org/docs/ice/processing.html#detention-facility-populations",
+        "ddp_github_repo": "https://github.com/deportationdata/ice",
+        "ddp_file": "https://github.com/deportationdata/ice/blob/a63d3d9428/data/facilities-daily-population-latest.parquet"
+      },
+      "file": "peak_fy26_w_sparklines.rds",
+      "dataset": "peak_fy26_w_sparklines",
+      "description": "Peak/mean population for unmatched facilities with geocoding and SVG sparklines",
+      "dates_covered": "2025-06-01 to 2026-03-10",
+      "underlying_data_coverage": "2022-10-01 to 2026-03-10",
+      "comparison_window": "2025-10-01 to 2026-02-05",
+      "computed": "2026-04-13 (original export for the published post; approximate - data files finalized 2026-04-13)",
+      "pipeline_target": "ddp_fy26_comparison_export_20260330"
+    },
+    "peak_fy26": {
+      "source_file": "data/ddp/facilities-daily-population-latest_20260330.parquet",
+      "source_publisher": "Deportation Data Project (ICE data obtained via FOIA; DDP-published daily-population file (20260330 release, data through 2026-03-10))",
+      "ddp_release": "20260330",
+      "source_urls": {
+        "ddp_data_page": "https://deportationdata.org/data/processed/ice.html",
+        "ddp_processing_doc": "https://deportationdata.org/docs/ice/processing.html#detention-facility-populations",
+        "ddp_github_repo": "https://github.com/deportationdata/ice",
+        "ddp_file": "https://github.com/deportationdata/ice/blob/a63d3d9428/data/facilities-daily-population-latest.parquet"
+      },
+      "file": "peak_fy26.rds",
+      "dataset": "peak_fy26",
+      "description": "Peak/mean population for unmatched facilities with geocoding and SVG sparklines (pre-sparkline version; superseded by peak_fy26_w_sparklines in current exports)",
+      "dates_covered": "2025-06-01 to 2026-03-10",
+      "underlying_data_coverage": "2022-10-01 to 2026-03-10",
+      "comparison_window": "2025-10-01 to 2026-02-05",
+      "computed": "2026-04-13 (original export for the published post; approximate - data files finalized 2026-04-13)",
+      "pipeline_target": "ddp_fy26_comparison_export_20260330"
+    }
+  }
+}

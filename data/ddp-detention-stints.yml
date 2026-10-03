@@ -1,0 +1,226 @@
+---
+# Provenance metadata for DDP Detention Stints dataset (20260806 release)
+
+source:
+  title: "Deportation Data Project — ICE Detention Stints"
+  publisher: "Deportation Data Project"
+  principal_investigators:
+    - "Graeme Blair, University of California–Los Angeles"
+    - "David Hausman, University of California–Berkeley School of Law"
+    - "Phil Neff, University of Washington Center for Human Rights"
+  url: "https://deportationdata.org/data/processed/ice.html"
+  file_url: "https://github.com/deportationdata/ice/raw/refs/heads/main/data/detention-stints-latest.parquet"
+  codebook_url: "https://deportationdata.org/docs/ice/codebook.html"
+  foia_request: "2026-ICLI-00005"
+  notes: >
+    Individual-level ICE detention records obtained via FOIA and processed by
+    the Deportation Data Project. The source data is provided by ICE as an
+    XLSX file with one row per detention stint — one continuous period at
+    one facility within a larger detention stay. Individuals transferred between
+    facilities have one row per facility. DDP posts a minimally-processed
+    version with duplicate flags added and blank/redacted columns dropped. A
+    stay-level dataset (one row per detention stay) is also used in this
+    project for transfer-itinerary and arrest analyses (see
+    ddp-detention-stays.yml).
+  citation: >
+    Blair, Graeme, David Hausman, and Phil Neff. 2025. "Immigration and Customs
+    Enforcement Individual-Level Data: An Introduction."
+    https://deportationdata.org/docs/ice/ice-data-preprint.pdf
+  license: "CC-0 (no rights reserved)"
+
+data:
+  filename: "data/ddp/detention-stints-latest_20260806.parquet"
+  format: "Parquet"
+  rows: 3202317
+  columns: 59
+  unit_of_observation: >
+    One row per detention stint — a single continuous period at one detention
+    facility. Persons transferred between facilities during a single stay
+    generate one row per facility. Most persons have one stint per stay, but
+    some have several.
+  temporal_coverage:
+    book_in_date_time_min: "2021-10-01"
+    book_in_date_time_max: "2026-08-06"
+    book_out_date_time_min: "2022-10-01"
+    book_out_date_time_max: "2026-08-06"
+    note: >
+      book_out_date_time starts at 2022-10-01, meaning the dataset is
+      effectively filtered to stints that ended (or were still open) on or
+      after October 1, 2022. Earlier releases reached back to 2004 via
+      long-running open stints; those pre-2021 book-in artifacts appear
+      resolved in this release (earliest book-in is now October 2021).
+  distinct_detention_facility_codes: 740
+  open_stints_no_book_out: 65894
+  stints_missing_unique_identifier: 10918
+
+  key_identifiers:
+    unique_identifier: >
+      Anonymized person ID corresponding to an individual's A-number (alien
+      registration number). Allows linking stints for the same person within
+      and across stays. 10,918 rows are missing this field.
+    stay_ID: >
+      Identifier for a single continuous detention stay. Multiple stints
+      within the same stay share this stay_ID.
+    stint_ID: "Identifier for this specific stint at one facility within a stay."
+
+  column_groups:
+    stay_dates:
+      - stay_book_in_date_time: "Start of the person's overall detention stay (POSIXct)"
+      - stay_book_out_date_time: "End of the overall stay; NA if still detained (POSIXct)"
+      - stay_release_reason: "Reason the overall stay ended (e.g. Removed, Bonded Out)"
+      - stay_release_reason_simple: "Simplified release reason (new in 20260806)"
+      - stay_length_days: "Length of the overall stay in days (new in 20260806)"
+      - release_within_60_days: "Whether released within 60 days (new in 20260806)"
+      - release_within_90_days: "Whether released within 90 days (new in 20260806)"
+    stint_dates:
+      - book_in_date_time: "Start of this stint at this facility (POSIXct)"
+      - book_out_date_time: "End of this stint; NA if still detained (POSIXct; 65,894 NAs)"
+      - detention_release_reason: "Reason this stint ended (most common: Transferred, Removed)"
+      - stint_length_days: "Length of this stint in days (new in 20260806)"
+    facility:
+      - detention_facility: "Facility name as provided by ICE"
+      - detention_facility_code: "ICE DETLOC code (740 distinct values); equivalent to detloc in this project's other datasets"
+      - city: "Facility city (sparse)"
+      - state: "Facility state"
+      - county: "Facility county (sparse)"
+      - core_based_statistical_area: "CBSA name (new in 20260806)"
+      - core_based_statistical_area_code: "CBSA code (new in 20260806)"
+      - core_based_statistical_area_type: "CBSA type (new in 20260806)"
+      - federal_court_district_of_confinement: "Federal court district (new in 20260806)"
+      - federal_court_circuit_of_confinement: "Federal court circuit (new in 20260806)"
+    demographics:
+      - gender: "Male / Female / Unknown"
+      - birth_year: "Year of birth (integer)"
+      - age_at_stint_book_in_approximate: "Approximate age at stint book-in (new in 20260806)"
+      - age_at_stay_book_in_approximate: "Approximate age at stay book-in (new in 20260806)"
+      - ethnicity: "Hispanic Origin / Not of Hispanic Origin"
+      - marital_status: "Marital status at book-in"
+      - citizenship_country: "Country of citizenship"
+      - religion: "ICE religion classification (mostly blank)"
+    immigration:
+      - entry_status: "Immigration status at entry"
+      - entry_date: "Date of entry to the US (Date)"
+      - book_in_criminality: "ICE criminality classification at book-in"
+      - case_status: "Case status"
+      - case_category: "Case category"
+      - case_threat_level: "ICE threat level 1 / 2 / 3 / NA (coded 'NA' as string for non-criminal in earlier releases; filter with care)"
+      - final_order_yes_no: "Whether a final order of removal is in effect"
+      - final_order_date: "Date of final order (Date)"
+      - final_order_before_book_in: "Whether a final order was in effect before book-in (new in 20260806)"
+      - final_charge: "Final immigration charge"
+      - final_program: "Final program (e.g. IDENT/IAFIS, Secure Communities)"
+      - apprehension_final_program_group: "Grouped apprehension program (new in 20260806)"
+    criminal_history:
+      - msc_charge: "Most serious criminal charge (most detainees have no criminal charge)"
+      - most_serious_conviction_code: "Code for most serious conviction"
+      - conviction: "Whether convicted (new in 20260806)"
+      - felon: "Whether classified as a felon"
+    removal:
+      - departed_date: "Date of departure/removal (Date)"
+      - departure_country: "Country departed to"
+    bond:
+      - initial_bond_set_amount: "Initial bond amount set by ICE (string in this release; was double in earlier releases — most have no bond)"
+      - bond_posted_date: "Date bond was posted (Date)"
+      - bond_posted_amount: "Amount of bond posted"
+    duplicate_flags:
+      note: >
+        New in 20260806; replaces the single likely_duplicate column of earlier
+        releases. Flagged rows are retained in the data — none are removed,
+        matching DDP's own processing.
+      - duplicate_likely: "TRUE for 46,428 stints that are likely duplicates of another row"
+      - duplicate_likely_sameday: "TRUE for 46,428 stints likely duplicated on the same day"
+      - duplicate_drop_row: "TRUE for 46,430 rows DDP identifies as duplicates to drop"
+    provenance:
+      - file_original: "Source XLSX filename from the FOIA response"
+      - sheet_original: "Sheet name within the source XLSX"
+      - row_original: "Row number within the source sheet"
+
+  notes:
+    - >
+      Stint vs. stay: A stay is a single period of ICE detention; a stint is one
+      continuous segment at one facility within a stay. Transfers generate new
+      stints. To analyze detention at the person-stay level, group by stay_ID.
+      For facility-level analysis, each row represents one stay at that facility.
+    - >
+      detention_facility_code is the DETLOC code used throughout this project's
+      other datasets (detloc_lookup, facility_roster, etc.), enabling joins to
+      canonical facility IDs.
+    - >
+      The duplicate_likely family flags suspect rows but does not remove them;
+      for person-level counts, deduplicate on (unique_identifier,
+      detention_facility_code, date) or filter duplicate_drop_row == FALSE
+      depending on the analysis.
+    - >
+      city, county (and previously book_in_site) are sparsely populated.
+      Facility location should be joined from the facility roster via
+      detention_facility_code.
+
+versions:
+  note: >
+    DDP overwrites "-latest" files with each release; this project pins local
+    copies with the DDP release date as a suffix. Version dates follow DDP's
+    GitHub commit history (repo deportationdata/ice), not local download dates.
+  releases:
+    - version: "20260330"
+      label: "March 2026 release (data through 2026-03-11)"
+      rows: 2617844
+      columns: 61
+      facility_codes: 707
+      local_file: "(not retained locally)"
+      notes: >
+        First parquet release ('release' commit, 2026-03-30). Documented in
+        the original version of this sidecar; superseded locally by the
+        20260515 file, which has identical rows and adds city/state/county.
+    - version: "20260515"
+      label: "May 15 2026 update — added city/state/county (data still through 2026-03-11)"
+      rows: 2617844
+      columns: 61
+      facility_codes: 707
+      local_file: "data/ddp/detention-stints-latest_20260515.parquet"
+      notes: >
+        Renamed from detention-stints-latest.parquet (downloaded 2026-05-24).
+        Reproduces DDP's 20260330 daily-population parquet exactly when
+        expanded with DDP's methodology (validated cell-by-cell; see
+        ddp-daily-population.yml). Retained as the frozen input for that
+        validation.
+    - version: "20260806"
+      label: "August 6 2026 release (current)"
+      rows: 3202317
+      columns: 59
+      facility_codes: 740
+      local_file: "data/ddp/detention-stints-latest_20260806.parquet"
+      date_downloaded: "2026-10-02"
+      changes_from_20260515: >
+        +584,473 rows; data extended through 2026-08-06; 33 additional
+        facility codes (740 vs 707); open stints 65,894. Schema overhaul:
+        added age-at-book-in approximations, stint_length_days /
+        stay_length_days, simplified stay release reason plus 60/90-day
+        release flags, conviction flag, final_order_before_book_in,
+        apprehension_final_program_group, CBSA and federal court
+        district/circuit columns, and the three-column duplicate flag
+        family (46,428–46,430 flagged rows; none removed). Dropped 20
+        columns from the 61-column schema, including race, birth_country,
+        book_in_site, book_in_aor, known_terrorist_yes_no,
+        suspected_gang_yes_no, detainee_classification, msc_charge_date,
+        msc_conviction_date, msc_criminal_charge_status(+_code),
+        msc_crime_class, msc_sentence_days/months/years,
+        offense_ina_236c_yes_no, case_ina_236c_yes_no,
+        initial_bond_set_date, and the old likely_duplicate flag.
+        initial_bond_set_amount changed type from double to string.
+      warning: >
+        DDP also commits newer stints data to the GitHub repo main branch
+        independently of the website releases (e.g. a 'New variables sep2026'
+        update on 2026-09-22). The GitHub raw file_url above may therefore
+        not match the _20260806 file documented here; the pinned local file
+        is authoritative for this project.
+
+import:
+  source_url: "https://github.com/deportationdata/ice/raw/refs/heads/main/data/detention-stints-latest.parquet"
+  local_path: "data/ddp/detention-stints-latest_20260806.parquet"
+  imported_with: "arrow::read_parquet()"
+  pipeline_target: "stints_file -> stints_raw; also the source for facilities_daily_population (the recreated daily-population file, see R/ddp-daily-population.R)"
+  date_downloaded: "2026-10-02"
+  note: >
+    When a new release is available, download it with the release-date suffix,
+    update stints_file in _targets.R, and verify the date range, column set,
+    and duplicate-flag semantics before running dependent analyses.

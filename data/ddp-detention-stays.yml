@@ -13,7 +13,7 @@ source:
   codebook_url: "https://deportationdata.org/docs/ice/codebook.html"
   foia_request: "2026-ICLI-00005"
   notes: >
-    A stay-level summary of the ICE detention stints data (see detention-stints.yml
+    A stay-level summary of the ICE detention stints data (see ddp-detention-stints.yml
     for the row-per-stint version). DDP constructs this dataset by grouping stints
     into stays (a single continuous period of ICE detention, possibly spanning
     multiple facilities via transfer) and then reducing each stay to one row. It
@@ -28,7 +28,7 @@ source:
   license: "CC-0 (no rights reserved)"
 
 data:
-  filename: "data/ddp/detention-stays-latest.parquet"
+  filename: "data/ddp/detention-stays-latest_20260514.parquet"
   format: "Parquet"
   rows: 1087417
   columns: 70
@@ -116,17 +116,63 @@ data:
       This dataset covers 706 distinct DETLOC codes (same as detention-stints),
       compared to 853 in the older feather-format daily population file.
 
+versions:
+  note: >
+    DDP overwrites "-latest" files with each release; this project pins local
+    copies with the DDP release date as a suffix. Version dates follow DDP's
+    GitHub commit history (repo deportationdata/ice), not local download dates.
+  releases:
+    - version: "20260330"
+      label: "March 2026 release (data through 2026-03-11)"
+      rows: 1087417
+      local_file: "(superseded; not retained separately)"
+      notes: "Original 'release' commit version, documented in the first edition of this sidecar."
+    - version: "20260514"
+      label: "May 14 2026 update — added facility info, removed extraneous columns (current pipeline input)"
+      rows: 1087417
+      columns: 70
+      local_file: "data/ddp/detention-stays-latest_20260514.parquet"
+      date_downloaded: "2026-05-24"
+      notes: >
+        Renamed from detention-stays-latest.parquet. Still the file read by
+        the stays_file -> stays_raw pipeline targets (MN and nationwide
+        arrest analyses). Data covers Oct 2022 – Mar 2026.
+    - version: "20260806"
+      label: "August 6 2026 release (on disk; NOT yet wired into the pipeline)"
+      rows: 1264756
+      columns: 77
+      local_file: "data/ddp/detention-stays-latest_20260806.parquet"
+      date_downloaded: "2026-10-02"
+      changes_from_20260514: >
+        +177,339 rows; data extended through August 2026. Schema changes
+        parallel the stints 20260806 release: adds 9 derived columns
+        (apprehension_final_program_group, age_at_stint/stay_book_in_approximate,
+        stay_length_days, final_order_before_book_in,
+        stay_release_reason_simple, release_within_60_days,
+        release_within_90_days, conviction) and 15 location columns (CBSA
+        and federal court district/circuit for each of the first/longest/last
+        stint triplets); drops 17 columns (stay_book_out_date, birth_country,
+        race, known_terrorist_yes_no, suspected_gang_yes_no, msc_sentence_*,
+        msc_charge_date, msc_conviction_date, msc_criminal_charge_status(+_code),
+        msc_crime_class, detainee_classification, initial_bond_set_date,
+        offense_ina_236c_yes_no, case_ina_236c_yes_no).
+      wiring_note: >
+        To adopt this release, repoint stays_file in _targets.R to the
+        _20260806 file and re-verify the arrest analyses (mn-arrests.qmd,
+        nationwide-arrests.qmd, state_arrests_export), which currently
+        expect the 20260514 schema and data through March 2026.
+
 import:
   source_url: "https://github.com/deportationdata/ice/raw/refs/heads/main/data/detention-stays-latest.parquet"
-  local_path: "data/ddp/detention-stays-latest.parquet"
+  local_path: "data/ddp/detention-stays-latest_20260514.parquet"
   imported_with: "arrow::read_parquet()"
-  pipeline_target: "not yet wired as a pipeline target"
+  pipeline_target: "stays_file -> stays_raw (arrest analyses: mn_arrests_data, nationwide_arrests_report, state_arrests_export)"
   date_downloaded: "2026-05-24"
-  related_file: "data/ddp/detention-stints-latest.parquet"
+  related_file: "data/ddp/detention-stints-latest_20260515.parquet"
   note: >
-    The companion stints file (detention-stints-latest.parquet) contains one
-    row per facility stint and supports more granular itinerary analysis (e.g.
-    time at each facility, exact transfer sequences). The stays file is better
-    for person-level analyses (release outcomes, demographics, total stay
-    length) and for quickly finding stays that include a given facility via
+    The companion stints files contain one row per facility stint and support
+    more granular itinerary analysis (e.g. time at each facility, exact
+    transfer sequences). The stays file is better for person-level analyses
+    (release outcomes, demographics, total stay length) and for quickly
+    finding stays that include a given facility via
     detention_facility_codes_all.
