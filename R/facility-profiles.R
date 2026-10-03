@@ -51,26 +51,29 @@ prepare_stints <- function(stints, groups,
     )
   )
 
-  stints |>
-    dplyr::filter(
-      detention_facility_code %in% code_to_group$detention_facility_code,
-      likely_duplicate == FALSE | is.na(likely_duplicate)
-    ) |>
-    dplyr::left_join(code_to_group, by = "detention_facility_code") |>
-    dplyr::mutate(
-      book_in_date   = as.Date(book_in_date_time),
-      period         = dplyr::if_else(book_in_date < cutoff, "Before", "After"),
-      period         = factor(period, levels = c("Before", "After")),
-      stint_days     = as.numeric(difftime(book_out_date_time,
-                                           book_in_date_time, units = "days")),
-      age_at_bookin  = as.integer(format(book_in_date_time, "%Y")) - birth_year,
-      # Clean up the "NA" string in case_threat_level
-      threat_level_clean = dplyr::case_when(
-        is.na(case_threat_level)     ~ NA_character_,
-        case_threat_level == "NA"    ~ "None (non-criminal)",
-        TRUE                          ~ paste0("Level ", case_threat_level)
-      )
+dup_flags <- intersect(c("likely_duplicate", "duplicate_likely", "duplicate_drop_row"),
+                      names(stints))
+stints |>
+  dplyr::mutate(likely_duplicate = dplyr::coalesce(!!!rlang::syms(dup_flags), FALSE)) |>
+  dplyr::filter(
+    detention_facility_code %in% code_to_group$detention_facility_code,
+    likely_duplicate == FALSE | is.na(likely_duplicate)
+  ) |>
+  dplyr::left_join(code_to_group, by = "detention_facility_code") |>
+  dplyr::mutate(
+    book_in_date   = as.Date(book_in_date_time),
+    period         = dplyr::if_else(book_in_date < cutoff, "Before", "After"),
+    period         = factor(period, levels = c("Before", "After")),
+    stint_days     = as.numeric(difftime(book_out_date_time,
+                                         book_in_date_time, units = "days")),
+    age_at_bookin  = as.integer(format(book_in_date_time, "%Y")) - birth_year,
+    # Clean up the "NA" string in case_threat_level
+    threat_level_clean = dplyr::case_when(
+      is.na(case_threat_level)     ~ NA_character_,
+      case_threat_level == "NA"    ~ "None (non-criminal)",
+      TRUE                          ~ paste0("Level ", case_threat_level)
     )
+  )
 }
 
 # ── Summary helpers ───────────────────────────────────────────────────────────
