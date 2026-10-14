@@ -1,5 +1,5 @@
 ---
-title: "ICE Arrests: `r stringr::str_to_title(stringr::str_to_lower(params$state))` After January 20, 2025"
+title: "ICE Arrests: `r stringr::str_to_title(stringr::str_to_lower(params$state))` Since `r gsub('  ', ' ', format(as.Date(params$cutoff), '%B %e, %Y'))`"
 subtitle: "Detention itineraries, transfer flows, and removal outcomes"
 date: today
 format:
@@ -10,7 +10,7 @@ format:
     self-contained: true
 params:
   state: "ILLINOIS"
-  cutoff: "2025-01-20"
+  cutoff: "2026-01-01"
 execute:
   echo: false
   warning: false
@@ -87,7 +87,8 @@ d$monthly_vol |>
   geom_vline(xintercept = as.Date(params$cutoff),
              linetype = "dashed", color = "firebrick", linewidth = 0.7) +
   annotate("text", x = as.Date(params$cutoff), y = Inf,
-           label = "Inauguration", hjust = -0.1, vjust = 1.5,
+           label = if (as.Date(params$cutoff) == as.Date("2025-01-20")) "Inauguration" else "Cutoff",
+           hjust = -0.1, vjust = 1.5,
            size = 3, color = "firebrick") +
   scale_fill_manual(values = c("FALSE" = "#888", "TRUE" = "#c0392b"),
                     guide = "none") +
