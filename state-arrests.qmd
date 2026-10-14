@@ -127,11 +127,12 @@ d$criminality |>
 
 ## Arrest Locations in `r state_full`
 
-County-level map based on `apprehension_site_landmark`. Records with non-specific
-landmarks (e.g. "SPM General Area") are mapped using state-specific rules where
-possible; others are excluded.
+County-level map based on `apprehension_site_landmark`. Landmarks naming a county
+in the state, or a place with a known county (prisons, field offices, airports), are
+mapped. Field-office-wide landmarks (e.g. "CHI GENERAL AREA, NON-SPECIFIC") cover
+several states and can't be placed in a county; they are summarized alongside the map.
 
-```{r county-choropleth}
+```{r county-setup}
 county_coverage <- sum(d$county_counts$n) / d$n_arrests
 
 state_map_sf <- tryCatch({
@@ -141,7 +142,15 @@ state_map_sf <- tryCatch({
     mutate(county = str_to_title(str_remove(ID, paste0(state_lower, ","))))
 }, error = function(e) NULL)
 
-if (!is.null(state_map_sf) && nrow(d$county_counts) > 0 && county_coverage >= 0.20) {
+show_map <- !is.null(state_map_sf) && nrow(d$county_counts) > 0
+```
+
+:::: {.columns}
+
+::: {.column width="64%"}
+
+```{r county-choropleth}
+if (show_map) {
   county_sf <- state_map_sf |>
     left_join(d$county_counts, by = "county") |>
     replace_na(list(n = 0)) |>
@@ -164,21 +173,47 @@ if (!is.null(state_map_sf) && nrow(d$county_counts) > 0 && county_coverage >= 0.
     addLegend(pal = pal, values = ~n_map, title = "Arrests",
               position = "bottomright")
 } else {
-  # Low county coverage — show top apprehension landmarks instead
+  # No county could be parsed — show top apprehension landmarks instead
   knitr::kable(
     d$landmark_counts |>
       head(30) |>
       rename(`Arrest location` = apprehension_site_landmark, N = n, `%` = pct),
-    caption = paste0(
-      "Top arrest locations (county data available for only ",
-      round(county_coverage * 100, 0), "% of arrests)"
-    )
+    caption = "Top arrest locations (no landmarks could be mapped to a county)"
   )
 }
 ```
 
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="32%"}
+
+```{r county-unassigned}
+bind_rows(
+  tibble(reason = "Mapped to a county",
+         n = sum(d$county_counts$n),
+         pct = round(county_coverage * 100, 1)),
+  d$unassigned_reasons
+) |>
+  knitr::kable(col.names = c("Arrest location", "N", "% of arrests"),
+               caption = "Share of arrests shown on the map")
+
+d$unassigned_landmarks |>
+  head(8) |>
+  mutate(apprehension_site_landmark = str_to_title(apprehension_site_landmark)) |>
+  select(apprehension_site_landmark, n, pct) |>
+  knitr::kable(col.names = c("Unmapped landmark", "N", "%"),
+               caption = "Largest unmapped landmarks")
+```
+
+:::
+
+::::
+
 > **Coverage:** `r round(county_coverage * 100, 0)`% of arrests mapped to a county.
-> `r if (county_coverage < 0.20) "Landmark table shown in place of choropleth."`
+> The map shows only these arrests; the tables at right show what is left out.
 
 ---
 
