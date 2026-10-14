@@ -1,0 +1,469 @@
+---
+title: "Unreported Detention: ICE Facilities in FY 2026"
+subtitle: "An analysis of ICE detention statistics not included in the February 2026 annual detention report"
+description: "Comparing the Deportation Data Project's daily detention counts with ICE's published FY 2026 annual statistics to identify unreported facilities and track population changes"
+author: "Carwil Bjork-James"
+date: last-modified
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-fold: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+<!-- Pipeline-side FY26 comparison report. Reads pipeline targets directly via
+     tar_read() so changes can be reviewed locally before deploying to the
+     quarto website (posts/ddp-comparison-26/). After review, run
+     tar_make(ddp_fy26_comparison_export), then copy-data.sh in the post
+     directory to deploy. -->
+
+## Overview
+
+This page analyzes ICE detention during the first months of fiscal year 2026, comparing two data sources:
+
+1.  **ICE FY 2026 annual detention statistics**, released February 12, 2026, with data through February 5, 2026. Published at the [ICE Detention Management Division](https://www.ice.gov/detain/detention-management), the spreadsheet covers 220 facilities.
+
+2.  **Deportation Data Project daily population data**, government data obtained by FOIA and [archived](https://deportationdata.org/data/processed/ice.html) by the [Deportation Data Project](https://deportationdata.org/). The dataset covers every ICE detention facility with reported daily counts from October 2022 through March 10, 2026.
+
+Significantly, both of these are government-generated datasets, provided more and less willingly (respectively) by Immigration and Customs Enforcement. Where doing comparisons below, we focus on the October 1, 2025 – February 12, 2026 period covered by the ICE FY 2026 spreadsheet. Where summarizing detention as a whole, and in drawing the sparkline graphs for each facility on the map, we go as far as the DDP allows.
+
+As with [FY 2025](../ddp-comparison/index.qmd), the DDP data reveals a substantial unreported detention population — facilities where ICE holds people that do not appear in the published annual statistics. Over this period, the unreported population reached a peak of over 2,500 individuals on a single day. Medical facilities, which accounted for about 68 detainees per day in FY 2025, have been excluded from this dataset.
+
+In FY 2026, it is Hold Rooms and other Staging facilities that account for the vast majority of the unreported population. For comparison, hold facilties in FY 2025 had an average daily population of about 1,163 detainees, with an average of 1,986 in the final 60 days.
+
+This analysis is partial in that a small handful of "Unclassified" facilities may have ICE matches which are still being added manually, but you can see if Figure 4 that this is a negligible part of the total.
+
+```{r}
+#| label: load-packages
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(scales)
+library(knitr)
+library(kableExtra)
+library(sf)
+library(leaflet)
+library(leaflet.extras)
+library(htmltools)
+
+library(targets)
+
+source(here::here("add-carto-tiles.R"))
+```
+
+```{r}
+#| label: load-data
+# Pipeline targets (mirrors export_ddp_fy26_comparison_data() in R/ddp.R)
+ddp_new           <- tar_read(ddp_new)
+fy26b             <- tar_read(fy26b)
+ddp_fy26_keyed    <- tar_read(ddp_fy26_keyed)
+daily_totals_fy26 <- tar_read(daily_totals_fy26)
+unmatched_fy26    <- tar_read(unmatched_fy26)
+peak_fy26_raw     <- tar_read(peak_fy26)
+
+fy_start <- "2025-10-01"
+fy_end   <- "2026-02-05"
+
+ice_fy26 <- fy26b |>
+  select(canonical_id, canonical_name, detloc, facility_name,
+         facility_city, facility_state, sum_classification_levels) |>
+  rename(ice_adp = sum_classification_levels)
+
+ddp_fy26 <- ddp_fy26_keyed |>
+  select(-canonical_id, -in_ice_fy26)
+
+unmatched_codes <- unmatched_fy26$detention_facility_code
+
+daily_unmatched <- ddp_new |>
+  filter(detention_facility_code %in% unmatched_codes,
+         date >= as.Date(fy_start),
+         date <= as.Date(fy_end)) |>
+  group_by(date) |>
+  summarise(total_pop = sum(n_detained, na.rm = TRUE), .groups = "drop")
+
+monthly_unmatched <- ddp_new |>
+  filter(detention_facility_code %in% unmatched_codes,
+         date >= as.Date(fy_start),
+         date <= as.Date(fy_end)) |>
+  left_join(
+    unmatched_fy26 |> select(detention_facility_code, type_grouped),
+    by = "detention_facility_code"
+  ) |>
+  mutate(
+    type_grouped = if_else(is.na(type_grouped), "Unclassified", type_grouped),
+    month        = as.Date(format(date, "%Y-%m-01"))
+  )
+
+source(here::here("R/ddp.R")) # for build_peak_fy26_w_sparklines()
+peak_fy26 <- build_peak_fy26_w_sparklines(ddp_new, peak_fy26_raw)
+```
+
+```{r}
+#| label: type-colors
+type_colors <- c(
+  "Jail"                                    = "#377eb8",
+  "Jail/Prison"                             = "#377eb8",
+  "Private Migrant Detention Center"        = "#e41a1c",
+  "Dedicated Migrant Detention Center"      = "#4daf4a",
+  "ICE Migrant Detention Center"            = "#984ea3",
+  "ICE Short-Term Migrant Detention Center" = "#ff7f00",
+  "Family Detention Center"                 = "#a65628",
+  "Juvenile Detention Center"               = "#543005",
+  "Federal Prison"                          = "#f781bf",
+  "State Migrant Detention Center"          = "#e6ab02",
+  "Military Detention Center"               = "#66c2a5",
+  "Other"                                   = "#1b9e77"
+)
+
+# Vera-vocabulary type colors (for unmatched table/map)
+type_colors_vera <- c(
+  "Dedicated"     = "#e41a1c",
+  "Non-Dedicated" = "#377eb8",
+  "Federal"       = "#f781bf",
+  "Hold/Staging"  = "#ff7f00",
+  "Family/Youth"  = "#a65628",
+  "Medical"       = "#66c2a5",
+  "Other/Unknown" = "#999999",
+  "Unclassified"  = "#444444"
+)
+```
+
+## Aggregate comparison
+
+The ICE FY 2026 spreadsheet covers **October 1, 2025 through February 5, 2026** — 128 days. To compare with the DDP data we compute average daily population (ADP) over that same window.
+
+```{r}
+#| label: tbl-aggregate
+#| tbl-cap: "Aggregate comparison: ICE FY26 annual stats vs. DDP daily average (Oct 1 2025 – Feb 5 2026)"
+tibble(
+  Source     = c("ICE FY26 annual stats", "DDP daily average"),
+  Facilities = c(nrow(ice_fy26), nrow(ddp_fy26)),
+  `Total ADP` = c(
+    round(sum(ice_fy26$ice_adp, na.rm = TRUE)),
+    round(sum(ddp_fy26$ddp_adp))
+  )
+) |> kable()
+```
+
+The DDP covers `r nrow(ddp_fy26)` facility codes with at least one detainee during this period, compared to `r nrow(ice_fy26)` in the ICE spreadsheet. On average, `r format(round(sum(ddp_fy26$ddp_adp) - sum(ice_fy26$ice_adp, na.rm = TRUE)), big.mark = ",")` more detainees per day appear in the DDP data than in ICE's published figures.
+
+### Daily population over time
+
+```{r}
+#| label: fig-daily-total
+#| fig-cap: "Total ICE detained population per day (DDP data, Jan 2025 – Mar 2026)"
+#| fig-height: 4
+fy_breaks <- as.Date(c("2025-01-20", "2025-10-01", "2026-01-01"))
+fy_labels <- data.frame(
+  x     = as.Date(c("2025-01-28", "2025-10-15", "2026-01-15")),
+  label = c("Trump inaugurated", "FY26 start", "2026")
+)
+
+ggplot(daily_totals_fy26, aes(x = date, y = total_pop)) +
+  geom_line(linewidth = 0.4) +
+  geom_vline(xintercept = fy_breaks, linetype = "dashed", alpha = 0.4) +
+  geom_text(data = fy_labels,
+            aes(x = x, y = max(daily_totals_fy26$total_pop) * 1.03, label = label),
+            inherit.aes = FALSE, size = 2.8, lineheight = 0.9) +
+scale_y_continuous(
+  labels = comma, 
+  limits = c(0, NA), # Force start at 0, allow NA to automatically set the max
+  expand = expansion(mult = c(0, 0.05)) # Removes the bottom gap, keeps 5% padding at top
+) + 
+  scale_x_date(date_labels = "%b %Y", date_breaks = "3 month") +
+  labs(x = NULL, y = "Total detained population")
+```
+
+## Facility-level matching
+
+```{r}
+#| label: match-summary
+ddp_by_canonical <- ddp_fy26_keyed |>
+  filter(in_ice_fy26) |>
+  group_by(canonical_id) |>
+  summarise(ddp_adp = sum(ddp_adp), .groups = "drop")
+
+comparison <- ice_fy26 |>
+  group_by(canonical_id) |>
+  summarise(
+    canonical_name = first(canonical_name),
+    ice_adp        = sum(ice_adp, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  full_join(ddp_by_canonical, by = "canonical_id") |>
+  mutate(
+    in_ice = !is.na(ice_adp),
+    in_ddp = !is.na(ddp_adp),
+    diff     = ddp_adp - ice_adp,
+    pct_diff = diff / ice_adp * 100
+  )
+
+matched <- comparison |> filter(in_ice & in_ddp)
+
+tibble(
+  Category = c(
+    "In both sources",
+    "ICE only (no DDP match)",
+    "Matched: ICE total ADP",
+    "Matched: DDP total ADP",
+    "Matched: aggregate difference"
+  ),
+  Value = c(
+    sum(comparison$in_ice & comparison$in_ddp),
+    sum(comparison$in_ice & !comparison$in_ddp),
+    round(sum(matched$ice_adp, na.rm = TRUE)),
+    round(sum(matched$ddp_adp, na.rm = TRUE)),
+    paste0(
+      round(sum(matched$ddp_adp, na.rm = TRUE) - sum(matched$ice_adp, na.rm = TRUE)),
+      " (",
+      round((sum(matched$ddp_adp, na.rm = TRUE) / sum(matched$ice_adp, na.rm = TRUE) - 1) * 100, 2),
+      "%)"
+    )
+  )
+) |> kable()
+```
+
+### Facility-level agreement
+
+```{r}
+#| label: fig-scatter
+#| fig-cap: "FY26 ADP comparison by facility (log scale). Dashed line = perfect agreement."
+#| fig-height: 5
+both_nonzero <- matched |> filter(ice_adp > 0, ddp_adp > 0)
+
+ggplot(both_nonzero, aes(x = ice_adp, y = ddp_adp)) +
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", alpha = 0.5) +
+  geom_point(alpha = 0.6) +
+  scale_x_log10(labels = comma) +
+  scale_y_log10(labels = comma) +
+  labs(x = "ICE FY26 ADP (annual stats)", y = "DDP mean daily population (same period)")
+```
+
+```{r}
+#| label: tbl-agreement-bands
+tibble(
+  `Agreement band`    = c("Within 10%", "Within 25%", "Within 50%", ">50% difference",
+                           "Public-facing report shows greater value"),
+  Facilities = c(
+    sum(abs(both_nonzero$pct_diff) <= 10),
+    sum(abs(both_nonzero$pct_diff) > 10 & abs(both_nonzero$pct_diff) <= 25),
+    sum(abs(both_nonzero$pct_diff) > 25 & abs(both_nonzero$pct_diff) <= 50),
+    sum(abs(both_nonzero$pct_diff) > 50),
+    sum(both_nonzero$pct_diff < 0)
+  )
+) |> kable()
+```
+
+Among the `r nrow(both_nonzero)` matched facilities with nonzero ADP in both sources, `r sum(abs(both_nonzero$pct_diff) <= 10)` agree within 10%. There are `r matched |> filter(ddp_adp < ice_adp) |> nrow()` facilities with a lower count in DDP than in the ICE spreadsheet.
+
+```{r}
+#| label: tbl-ice-only
+ice_only <- comparison |> filter(in_ice & !in_ddp)
+if (nrow(ice_only) > 0) {
+  ice_only |>
+    select(canonical_id, canonical_name, ice_adp) |>
+    mutate(ice_adp = round(ice_adp)) |>
+    arrange(desc(ice_adp)) |>
+    kable(col.names = c("ID", "Facility", "ICE ADP"),
+          caption = "ICE FY26 facilities with no DDP match")
+}
+```
+
+`r if (nrow(ice_only) > 0) paste0(nrow(ice_only), " ICE FY26 facilities have no matching DDP facility code.") else "All ICE FY26 facilities have a matching DDP facility code."`
+
+## Unmatched facilities {#sec-unmatched}
+
+**`r sum(!ddp_fy26_keyed$in_ice_fy26)`** of `r nrow(ddp_fy26)` DDP facility codes do not appear in the ICE FY 2026 annual statistics. These are facilities where ICE holds detainees but which are excluded from the published spreadsheet.
+
+### By facility type
+
+Facility types are drawn from the Vera Institute's classification system. "Dedicated" facilities are purpose-built or contractually dedicated to ICE detention. "Non-Dedicated" are county jails and other facilities that also hold ICE detainees. "Hold/Staging" are short-term ERO processing rooms. "Federal" includes BOP prisons and USMS facilities.
+
+```{r}
+#| label: tbl-unmatched-types
+#| tbl-cap: "DDP facilities not in ICE FY26, by facility type and ADP class"
+unmatched_fy26 |>
+  group_by(type_grouped, peak_class) |>
+  summarise(
+    Facilities = n(),
+    `Period ADP` = round(sum(ddp_adp)),
+    .groups = "drop"
+  ) |>
+  arrange(desc(`Period ADP`)) |>
+  kable(col.names = c("Facility type", "Peak class", "Facilities", "Period ADP"))
+```
+
+The `r nrow(unmatched_fy26)` unmatched facilities account for an average daily population of **`r format(round(sum(unmatched_fy26$ddp_adp)), big.mark = ",")`** over the October 2025 – February 5, 2026 period. `r sum(unmatched_fy26$peak_class == "Peak < 2")` facilities never had more than one detainee at a time, collectively contributing `r round(sum(unmatched_fy26$ddp_adp[unmatched_fy26$peak_class == "Peak < 2"]), 1)` ADP.
+
+### Daily population in unmatched facilities
+
+```{r}
+#| label: fig-daily-unmatched
+#| fig-cap: "Daily detained population in facilities not in ICE FY26 annual statistics"
+#| fig-height: 4
+ggplot(daily_unmatched, aes(x = date, y = total_pop)) +
+  geom_line(linewidth = 0.4) +
+  geom_vline(xintercept = as.Date("2026-01-20"), linetype = "dashed", alpha = 0.4) +
+  annotate("text", x = as.Date("2026-01-22"),
+           y = max(daily_unmatched$total_pop) * 0.95,
+           label = "Inauguration", hjust = 0, size = 2.8) +
+  scale_y_continuous(labels = comma) +
+  scale_x_date(date_labels = "%b %Y", date_breaks = "1 month") +
+  labs(x = NULL, y = "Detained population (unmatched facilities)")
+```
+
+```{r}
+#| label: fig-monthly-by-type
+#| fig-cap: "Average daily population in unmatched facilities, by month and type"
+#| fig-height: 5
+monthly_by_type <- monthly_unmatched |>
+  group_by(month, type_grouped) |>
+  summarise(daily_avg = sum(n_detained) / n_distinct(date), .groups = "drop")
+
+ggplot(monthly_by_type, aes(x = month, y = daily_avg, fill = type_grouped)) +
+  geom_col() +
+  scale_y_continuous(labels = comma) +
+  scale_x_date(date_labels = "%b %Y", date_breaks = "1 month") +
+  scale_fill_manual(values = type_colors_vera, na.value = "#999999") +
+  labs(x = NULL, y = "Average daily population", fill = "Facility type")
+```
+
+### Peak population by facility
+
+```{r}
+#| label: tbl-peak-top20
+#| tbl-cap: "Top 20 unmatched facilities by peak detained population (Oct 2025 – Feb 5 2026)"
+peak_fy26 |>
+  arrange(desc(peak_pop)) |>
+  head(20) |>
+  select(detention_facility, facility_city, facility_state,
+         type_grouped, peak_pop, peak_date, mean_pop) |>
+  mutate(mean_pop = round(mean_pop)) |>
+  kable(col.names = c("Facility", "City", "State", "Type",
+                      "Peak pop.", "Peak date", "Mean ADP"))
+```
+
+```{r}
+#| label: fig-peak-dist
+#| fig-cap: "Distribution of peak population among unmatched facilities (log scale, peak > 0)"
+#| fig-height: 4
+peak_fy26 |>
+  filter(peak_pop > 0) |>
+  ggplot(aes(x = peak_pop)) +
+  geom_histogram(bins = 40) +
+  scale_x_log10(labels = comma) +
+  labs(x = "Peak detained population", y = "Facilities")
+```
+
+## Map of unmatched facilities
+
+::: column-screen-inset-right
+```{r}
+#| label: fig-map
+#| fig-cap: "DDP facilities not in ICE FY26 annual statistics, sized by peak population (Oct 2025 – Feb 5 2026)"
+#| fig-height: 7
+map_data <- peak_fy26 |>
+  filter(peak_pop > 0, !is.na(latitude), !is.na(longitude))
+
+map_sf <- st_as_sf(map_data, coords = c("longitude", "latitude"), crs = 4326)
+map_sf$type_grouped <- factor(map_sf$type_grouped, levels = names(type_colors_vera))
+present_levels <- levels(droplevels(map_sf$type_grouped))
+pal <- colorFactor(palette = type_colors_vera[present_levels], domain = present_levels)
+
+radii <- scales::rescale(sqrt(map_sf$peak_pop), to = c(3, 22))
+
+# Build popup HTML (with sparkline)
+build_popup <- function(row) {
+  addr <- if (!is.na(row$facility_address) && nchar(row$facility_address) > 0)
+    paste0(row$facility_address, "<br>") else ""
+  city_state <- paste0(
+    if (!is.na(row$facility_city)) row$facility_city else "",
+    if (!is.na(row$facility_state)) paste0(", ", row$facility_state) else ""
+  )
+  spark <- if (!is.na(row$sparkline_svg) && nchar(row$sparkline_svg) > 0)
+    paste0("<br>", row$sparkline_svg) else ""
+
+  paste0(
+    '<div style="min-width:240px; font-family:sans-serif; font-size:14px;">',
+    '<b style="font-size:16px;">', htmlEscape(row$detention_facility), '</b><br>',
+    addr,
+    city_state, '<br>',
+    '<span style="color:#666;">Type: ', htmlEscape(row$type_grouped %||% "Unknown"), '</span><br>',
+    '<b>Peak during FY26: ', format(row$peak_pop, big.mark = ","), '</b> (', row$peak_date, ')',
+    '&nbsp;&nbsp;<br><b>Mean:</b> ', round(row$mean_pop), '/day',
+    spark,
+    '</div>'
+  )
+}
+
+`%||%` <- function(x, y) if (is.null(x) || (length(x) == 1 && is.na(x))) y else x
+
+popups <- vapply(seq_len(nrow(map_sf)), function(i) {
+  build_popup(as.list(map_sf[i, ]))
+}, character(1))
+
+map_sf$peak_class <- factor(map_sf$peak_class, levels = c("Peak < 2", "Peak \u2265 2"))
+
+leaflet(map_sf) |>
+  fitBounds(lng1 = -125, lat1 = 17.5, lng2 = -65, lat2 = 49.5) |>
+  addCartoTiles("CartoDB.Positron") |>
+
+  addCircleMarkers(
+    data        = subset(map_sf, peak_class == "Peak < 2"),
+    radius      = 3,
+    stroke      = FALSE,
+    fillColor   = ~pal(type_grouped),
+    fillOpacity = 1,
+    label       = ~paste0(detention_facility, " (", facility_state, ": peak ", peak_pop, ")"),
+    popup       = popups[map_sf$peak_class == "Peak < 2"],
+    group       = "Peak < 2"
+  ) |>
+
+  addCircleMarkers(
+    data        = subset(map_sf, peak_class == "Peak \u2265 2"),
+    radius      = radii[map_sf$peak_class == "Peak \u2265 2"],
+    color       = "black",
+    weight      = 1,
+    fillColor   = ~pal(type_grouped),
+    fillOpacity = 0.7,
+    label       = ~paste0(detention_facility, " (", facility_state, ": peak ", peak_pop, ")"),
+    popup       = popups[map_sf$peak_class == "Peak \u2265 2"],
+    group       = "Peak \u2265 2"
+  ) |>
+
+  addLegend(
+    pal = pal, values = ~type_grouped,
+    title = "Facility type", position = "bottomright"
+  ) |>
+
+  addLayersControl(
+    overlayGroups = c("Peak < 2", "Peak \u2265 2"),
+    options = layersControlOptions(collapsed = FALSE)
+  ) |>
+
+  addSearchFeatures(
+    targetGroups = c("Peak < 2", "Peak \u2265 2"),
+    options = searchFeaturesOptions(
+      zoom = 9, openPopup = TRUE,
+      position = "topleft", hideMarkerOnCollapse = TRUE
+    )
+  ) |>
+  addControl(
+    position = "bottomright",
+    html = tags$style(HTML("
+      .leaflet-container .leaflet-control { text-align: left !important; }
+      .leaflet-container .leaflet-control .legend { text-align: left !important; }
+      .leaflet-container .leaflet-control .legend i {
+        display: inline-block !important; width: 14px !important;
+        height: 14px !important; margin: 0 8px 0 0 !important;
+        vertical-align: middle !important; }
+      .leaflet-container .leaflet-control .legend span {
+        display: inline !important; vertical-align: middle !important; }
+    "))
+  )
+```
+:::

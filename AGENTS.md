@@ -369,6 +369,7 @@ The pipeline renders analytical reports as HTML documents. Some are wired as `ta
 | `facility-summary.qmd` | Yes (`facility_summary_report`) | Facility counts by ID range, source coverage, trajectory statistics |
 | `geocoding-divergence.qmd` | Yes (`geocoding_divergence_report`) | Maps and tables comparing geocoded coordinates across sources |
 | `ddp-comparison.qmd` | Yes (`ddp_comparison_report`) | DDP daily population vs. ICE FY25 annual statistics; unreported facility analysis |
+| `ddp-comparison-26.qmd` | Yes (`ddp_fy26_comparison_report`) | DDP (parquet) vs. ICE FY26 annual statistics (Oct 2025–Feb 5 2026); pipeline-side version of the ddp-comparison-26 post |
 | `missing-addresses.qmd` | No | Identifies roster facilities missing address information |
 | `dmcp-listings.qmd` | No | Documentation of the 2015/2017 DMCP facility authorization data |
 | `ero-field-offices.qmd` | No | ERO field offices as informal detention sites |
@@ -395,6 +396,10 @@ All export targets are `cue = "never"` — run `tar_make(<export_target>)` expli
 4. Render and publish via the quarto-website project.
 
 The website versions of each post read pre-computed RDS files (not pipeline targets directly) so they can be rendered independently of the ice-detention pipeline.
+
+**Mirrored copies (2026-09-22):** The finalized website versions of both DDP comparison posts are mirrored back into this repo at `ddp-comparison/` and `ddp-comparison-26/` (each containing the published `index.qmd`, `data/` RDS files, and supporting scripts). These are snapshots for reference — the website versions remain authoritative. The superseded local drafts (`ddp-comparison-old.qmd`, `ddp-comparison-index.qmd`, `ddp-comparison-index-modified.qmd`) were deleted at the same time.
+
+**Pipeline-side FY26 report:** `ddp-comparison-26.qmd` (project root) is the pipeline-side counterpart of the FY26 post, mirroring the FY25 setup: it `tar_read()`s `ddp_new`, `fy26b`, `ddp_fy26_keyed`, `daily_totals_fy26`, `unmatched_fy26`, `peak_fy26` and derives the export tables inline (matching `export_ddp_fy26_comparison_data()`). Rendered via the `tar_quarto(ddp_fy26_comparison_report, "ddp-comparison-26.qmd")` target.
 
 ### Development workflow
 

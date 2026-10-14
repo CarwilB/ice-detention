@@ -17,21 +17,21 @@ We will work from the data spreadsheets provided online at ICE's [Detention Mana
 
 As of February 4, 2026, we can find:
 
--   [Detention FY 2026 YTD, Alternatives to Detention FY 2026 YTD and Facilities FY 2026 YTD, Footnotes (221 KB)](https://www.ice.gov/doclib/detention/FY26_detentionStats02022026.xlsx) `FY26_detentionStats02022026.xlsx`
+- [Detention FY 2026 YTD, Alternatives to Detention FY 2026 YTD and Facilities FY 2026 YTD, Footnotes (221 KB)](https://www.ice.gov/doclib/detention/FY26_detentionStats02022026.xlsx) `FY26_detentionStats02022026.xlsx`
 
--   [Detention FY 2025 YTD, Alternatives to Detention FY 2025 YTD and Facilities FY 2025 YTD, Footnotes (1.5 MB)](https://www.ice.gov/doclib/detention/FY25_detentionStats09242025.xlsx) `FY25_detentionStats09242025.xlsx`
+- [Detention FY 2025 YTD, Alternatives to Detention FY 2025 YTD and Facilities FY 2025 YTD, Footnotes (1.5 MB)](https://www.ice.gov/doclib/detention/FY25_detentionStats09242025.xlsx) `FY25_detentionStats09242025.xlsx`
 
--   [FY 2024 Detention Statistics](https://www.ice.gov/doclib/detention/FY24_detentionStats.xlsx) `FY24-detentionstats.xlsx`
+- [FY 2024 Detention Statistics](https://www.ice.gov/doclib/detention/FY24_detentionStats.xlsx) `FY24-detentionstats.xlsx`
 
--   [FY 2023 Detention Statistics](https://www.ice.gov/doclib/detention/FY23_detentionStats.xlsx) `FY23-detentionstats.xlsx`
+- [FY 2023 Detention Statistics](https://www.ice.gov/doclib/detention/FY23_detentionStats.xlsx) `FY23-detentionstats.xlsx`
 
--   [FY 2022 Detention Statistics](https://www.ice.gov/doclib/detention/FY22-detentionStats.xlsx) `FY22-detentionStats.xlsx`
+- [FY 2022 Detention Statistics](https://www.ice.gov/doclib/detention/FY22-detentionStats.xlsx) `FY22-detentionStats.xlsx`
 
--   [FY 2021 Detention Statistics](https://www.ice.gov/doclib/detention/FY21-detentionstats.xlsx) `FY21-detentionStats.xlsx`
+- [FY 2021 Detention Statistics](https://www.ice.gov/doclib/detention/FY21-detentionstats.xlsx) `FY21-detentionStats.xlsx`
 
--   [FY 2020 Detention Statistics](https://www.ice.gov/doclib/detention/FY20-detentionstats.xlsx) `FY20-detentionstats.xlsx`
+- [FY 2020 Detention Statistics](https://www.ice.gov/doclib/detention/FY20-detentionstats.xlsx) `FY20-detentionstats.xlsx`
 
--   [FY 2019 Detention Statistics](https://www.ice.gov/doclib/detention/FY19-detentionstats.xlsx) `FY19-detentionstats.xlsx`
+- [FY 2019 Detention Statistics](https://www.ice.gov/doclib/detention/FY19-detentionstats.xlsx) `FY19-detentionstats.xlsx`
 
 There are subtle changes between the Facilities page on each of these, which will have to take into account as we import them. The import code I created for the first time was built around the FY2026 spreadsheet.
 
@@ -252,9 +252,9 @@ not_in_fy23 <- presence_matrix %>%
   pull(variable)
 ```
 
--   **`r length(vars_in_all)` variables in all sheets:** `r vars_in_all`
--   **Variables not in all sheets:** `r setdiff(unlist(clean_names_list), vars_in_all)`
--   **`r length(fy23_only)` variables only in FY23:** `r fy23_only`
+- **`r length(vars_in_all)` variables in all sheets:** `r vars_in_all`
+- **Variables not in all sheets:** `r setdiff(unlist(clean_names_list), vars_in_all)`
+- **`r length(fy23_only)` variables only in FY23:** `r fy23_only`
 
 Fortunately, nearly all variables are in all years. And the differences in the variables seem to all consist in how inspections are reparted. We may want to think through how to re-create `inspections_last_inspection_date` based on the other data, but I'll ignore that problem for now.
 

@@ -1,0 +1,24 @@
+/* Sidebar background: horizontal strip image behind the navigation,
+   below the logo. Tiled vertically so it fills the full sidebar height. */
+#quarto-sidebar {
+  background-image: url("images/horiz-strip.jpg");
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+}
+
+#quarto-sidebar .sidebar-header {
+  padding: 0;
+}
+
+#quarto-sidebar .sidebar-logo {
+  max-width: 100% !important;
+  width: 100%;
+  display: block;
+}
+
+/* Keep sidebar text readable over the image */
+#quarto-sidebar .sidebar-menu-container,
+#quarto-sidebar .sidebar-title,
+#quarto-sidebar .sidebar-subtitle {
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
+}

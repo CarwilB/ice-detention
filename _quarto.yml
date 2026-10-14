@@ -1,0 +1,82 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - images/*
+  render:
+    - index.qmd
+    - ddp-comparison.qmd
+    - ddp-comparison-26.qmd
+    - facility-table.qmd
+    - facility-profiles.qmd
+    - ice-detention-map/index.qmd
+    - ero-field-offices.qmd
+    - nationwide-arrests.qmd
+    - state-arrests.qmd
+    - mn-arrests.qmd
+    - infobox-generator.qmd
+    - detention-list-wikitables.qmd
+
+pagetitle: "{{< meta title >}} | ICE Dashboard"
+
+execute:
+  freeze: auto
+
+website:
+  page-navigation: true
+  title: "ICE Dashboard"
+  description: "Data and analysis on U.S. ICE detention facilities and arrests"
+
+  page-footer:
+    left: "ICE Dashboard: public data on immigration detention"
+
+  sidebar:
+    logo: "images/ice-dashboard-logo-crop.jpg"
+    logo-alt: "ICE Dashboard logo"
+    title: "ICE Dashboard"
+    subtitle: "Public data on ICE detention and arrests"
+    pinned: true
+    align: center
+    style: "docked"
+    search: true
+    collapse-level: 1
+    contents:
+      - href: index.qmd
+        text: Welcome
+      - text: "---"
+      - section: "National detention mapping"
+        contents:
+          - href: ddp-comparison.qmd
+            text: "DDP vs ICE FY25 annual statistics"
+          - href: ddp-comparison-26.qmd
+            text: "DDP vs ICE FY26 annual statistics"
+          - href: facility-table.qmd
+            text: "Facility table"
+          - href: facility-profiles.qmd
+            text: "Facility profiles"
+          - href: ice-detention-map/index.qmd
+            text: "Detention facility map"
+          - href: ero-field-offices.qmd
+            text: "ERO field offices"
+      - text: "---"
+      - section: "Arrest tracking"
+        contents:
+          - href: nationwide-arrests.qmd
+            text: "Nationwide arrests"
+          - href: state-arrests.qmd
+            text: "State arrests"
+          - href: mn-arrests.qmd
+            text: "Minnesota arrests"
+      - text: "---"
+      - section: "Output to Wikipedia"
+        contents:
+          - href: infobox-generator.qmd
+            text: "Infobox generator"
+          - href: detention-list-wikitables.qmd
+            text: "Detention list wikitables"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true

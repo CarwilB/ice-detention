@@ -734,6 +734,17 @@ list(
     format = "file"
   ),
 
+  # Renders ddp-comparison-26.qmd locally so changes can be reviewed before
+  # deploying to the quarto website (posts/ddp-comparison-26/). The qmd reads
+  # pipeline targets directly via tar_read(). After review, run the
+  # ddp_fy26_comparison_export target to produce the pre-computed RDS files,
+  # then copy-data.sh in the post directory to deploy.
+  tar_quarto(
+    ddp_fy26_comparison_report,
+    "ddp-comparison-26.qmd",
+    description = "Rendered DDP vs ICE FY26 comparison report; review locally before deploying to quarto website"
+  ),
+
   # ── DDP stays dataset (one row per detention stay, incl. full facility chain) ─
   tar_target(
     stays_file,
