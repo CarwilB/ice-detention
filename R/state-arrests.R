@@ -27,24 +27,94 @@ STATE_ABBREVS <- c(
 
 # ── County name parsing ───────────────────────────────────────────────────────
 
-#' Extract county name from apprehension_site_landmark.
-#' Uses a regex for the general "XXXXX COUNTY" pattern, plus state-specific
-#' augmentations for states with large non-specific landmark categories.
-.parse_county_landmark <- function(landmark, state_upper = NULL) {
-  general <- stringr::str_to_title(
-    stringr::str_remove(
-      stringr::str_extract(stringr::str_to_upper(landmark),
-                           "^([A-Z .'-]+) COUNTY"),
-      " COUNTY$"
-    )
-  )
+#' Letters-only uppercase key for matching county names ("St. Clair" == "ST CLAIR").
+.county_key <- function(x) {
+  x <- stringr::str_to_upper(x)
+  x <- stringr::str_replace_all(x, "\\bSAINT\\b", "ST")
+  stringr::str_remove_all(x, "[^A-Z]")
+}
 
-  if (!is.null(state_upper) && state_upper == "MINNESOTA") {
+#' Known misspellings in apprehension_site_landmark, keyed by .county_key().
+.county_typos <- c(DEWIITT = "DEWITT")
+
+#' Counties of a state as named by maps::map("county"), title-cased to match
+#' the choropleth join in state-arrests.qmd (e.g. "St Clair", "Du Page").
+.state_county_names <- function(state_upper) {
+  poly <- maps::county.fips$polyname
+  poly <- poly[startsWith(poly, paste0(stringr::str_to_lower(state_upper), ","))]
+  nm <- unique(stringr::str_remove(stringr::str_remove(poly, "^[^,]+,"), ":.*$"))
+  stats::setNames(stringr::str_to_title(nm), .county_key(nm))
+}
+
+#' State named in a trailing ", XX" / ", STATE NAME" suffix, or NA if none.
+.landmark_suffix_state <- function(landmark) {
+  suffix <- stringr::str_to_upper(stringr::str_match(landmark, ",\\s*([^,]+)$")[, 2])
+  suffix <- stringr::str_trim(stringr::str_remove(suffix, "\\s+STATE( DOC)?$"))
+  full <- stringr::str_to_upper(c(datasets::state.name, "District of Columbia"))
+  abb  <- c(datasets::state.abb, "DC")
+  dplyr::case_when(
+    suffix %in% full ~ suffix,
+    suffix %in% abb  ~ full[match(suffix, abb)],
+    TRUE             ~ NA_character_
+  )
+}
+
+#' Generic "<NAME> COUNTY" parse, validated against the state's county list.
+#' Tries the longest run of up to 4 words before "COUNTY" first, so prefixes
+#' like "FUGITIVE OPERATIONS ON STREET" are dropped and "LAKE OF THE WOODS"
+#' survives. Landmarks whose suffix names a different state return NA.
+.parse_county_generic <- function(landmark, state_upper) {
+  valid <- .state_county_names(state_upper)
+  suffix_state <- .landmark_suffix_state(landmark)
+
+  parse_one <- function(lm, sfx) {
+    if (is.na(lm) || (!is.na(sfx) && sfx != state_upper)) return(NA_character_)
+    before <- stringr::str_match(stringr::str_to_upper(lm), "^(.*?)\\s+COUNTY\\b")[, 2]
+    if (is.na(before)) return(NA_character_)
+    words <- stringr::str_split(stringr::str_trim(
+      stringr::str_replace_all(before, "[^A-Z' .]", " ")), "\\s+")[[1]]
+    for (k in rev(seq_len(min(4L, length(words))))) {
+      key <- .county_key(paste(utils::tail(words, k), collapse = " "))
+      key <- dplyr::coalesce(unname(.county_typos[key]), key)
+      if (key %in% names(valid)) return(unname(valid[key]))
+    }
+    NA_character_
+  }
+
+  u <- unique(data.frame(landmark, suffix_state))
+  u$county <- mapply(parse_one, u$landmark, u$suffix_state, USE.NAMES = FALSE)
+  u$county[match(paste(landmark, suffix_state), paste(u$landmark, u$suffix_state))]
+}
+
+#' Extract county name from apprehension_site_landmark.
+#' Uses a validated generic "XXXXX COUNTY" parse, plus state-specific rules for
+#' named places (field offices, prisons, airports) that imply a county.
+#' Field-office-wide landmarks (e.g. "CHI GENERAL AREA, NON-SPECIFIC") cover
+#' several states and are deliberately left NA.
+.parse_county_landmark <- function(landmark, state_upper = NULL) {
+  if (is.null(state_upper)) {
+    return(stringr::str_to_title(stringr::str_remove(
+      stringr::str_extract(stringr::str_to_upper(landmark), "^([A-Z .'-]+) COUNTY"),
+      " COUNTY$")))
+  }
+  general <- .parse_county_generic(landmark, state_upper)
+  lm <- stringr::str_to_upper(landmark)
+
+  if (state_upper == "MINNESOTA") {
     dplyr::case_when(
-      stringr::str_detect(landmark, "SPM GENERAL|ST\\.? PAUL|US MARSHALS, MN|WHIPPLE") ~ "Ramsey",
-      stringr::str_detect(landmark, "BLOOMINGTON|MINNEAPOLIS|HENNEPIN")                ~ "Hennepin",
-      !is.na(general)                                                                  ~ general,
-      TRUE                                                                             ~ NA_character_
+      stringr::str_detect(lm, "SPM GENERAL|ST\\.? PAUL|US MARSHALS, MN|WHIPPLE") ~ "Ramsey",
+      stringr::str_detect(lm, "BLOOMINGTON|MINNEAPOLIS|HENNEPIN")                ~ "Hennepin",
+      TRUE                                                                       ~ general
+    )
+  } else if (state_upper == "ILLINOIS") {
+    dplyr::case_when(
+      # USP Thomson (federal) and Thomson Correctional Center (IL DOC)
+      stringr::str_detect(lm, "THOMSON")                                         ~ "Carroll",
+      # Canton, IL
+      stringr::str_detect(lm, "ILLINOIS RIVER CORRECTIONAL")                     ~ "Fulton",
+      # Chicago field office (101 W Congress Pkwy), MCC Chicago, O'Hare
+      stringr::str_detect(lm, "CHICAGO (FIELD OFFICE|MCC|O'HARE)")               ~ "Cook",
+      TRUE                                                                       ~ general
     )
   } else {
     general
@@ -234,11 +304,34 @@ build_state_arrests_data <- function(arrests, stays, detloc_lookup, geo_all,
   geo_lkp <- .build_geo_lookup_sa(detloc_lookup, geo_all)
 
   # County counts for choropleth
-  county_counts <- state_arr |>
-    dplyr::mutate(county = .parse_county_landmark(apprehension_site_landmark, state)) |>
+  arr_county <- state_arr |>
+    dplyr::mutate(county = .parse_county_landmark(apprehension_site_landmark, state))
+  county_counts <- arr_county |>
     dplyr::count(county) |>
     dplyr::filter(!is.na(county)) |>
     dplyr::arrange(dplyr::desc(n))
+
+  # Arrests the choropleth can't place, by reason; pct is of all state arrests
+  unassigned <- arr_county |>
+    dplyr::filter(is.na(county)) |>
+    dplyr::mutate(
+      lm = stringr::str_to_upper(apprehension_site_landmark),
+      suffix_state = .landmark_suffix_state(apprehension_site_landmark),
+      reason = dplyr::case_when(
+        is.na(lm)                                       ~ "Missing landmark",
+        stringr::str_detect(lm, "GENERAL (AREA|NON-SPECIFIC)") ~ "Field office area, non-specific",
+        stringr::str_detect(lm, "FUGITIVE OP")          ~ "Fugitive operations, no county",
+        !is.na(suffix_state) & suffix_state != state    ~ "Located in another state",
+        TRUE                                            ~ "Other / unresolved"
+      )
+    )
+  n_all <- nrow(state_arr)
+  unassigned_reasons <- unassigned |>
+    dplyr::count(reason, sort = TRUE) |>
+    dplyr::mutate(pct = round(n / n_all * 100, 1))
+  unassigned_landmarks <- unassigned |>
+    dplyr::count(apprehension_site_landmark, reason, sort = TRUE) |>
+    dplyr::mutate(pct = round(n / n_all * 100, 1))
 
   # Facility transfer flow arrows
   flow_arrows <- build_flow_arrows(state_stays, geo_lkp,
@@ -314,6 +407,8 @@ build_state_arrests_data <- function(arrests, stays, detloc_lookup, geo_all,
       dplyr::count(apprehension_criminality, sort = TRUE) |>
       dplyr::mutate(pct = round(n / sum(n) * 100, 1)),
     county_counts      = county_counts,
+    unassigned_reasons   = unassigned_reasons,
+    unassigned_landmarks = unassigned_landmarks,
     first_fac          = .fac_with_geo_sa(state_stays, "detention_facility_code_first",
                                            "detention_facility_first", geo_lkp),
     last_fac           = .fac_with_geo_sa(state_stays, "detention_facility_code_last",

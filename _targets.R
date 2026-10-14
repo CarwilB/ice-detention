@@ -748,6 +748,9 @@ list(
   # ── DDP stays dataset (one row per detention stay, incl. full facility chain) ─
   tar_target(
     stays_file,
+    # Must come from the same DDP release as arrests_file: unique_identifier is
+    # hashed per release, so stays from another release (e.g. the 2026-08-06
+    # file) share zero IDs with these arrests.
     here::here("data/ddp/detention-stays-latest.parquet"),
     format = "file",
     description = "Tracks the DDP detention stays parquet file for changes"
@@ -788,8 +791,8 @@ list(
   tar_quarto(
     state_arrests_report,
     "state-arrests.qmd",
-    execute_params = list(state = "MINNESOTA", cutoff = "2025-01-20"),
-    description = "Rendered state-arrests.qmd for Minnesota post-2025-01-20 (parameterized; render for other states with quarto render state-arrests.qmd -P state:TEXAS)"
+    execute_params = list(state = "ILLINOIS", cutoff = "2025-01-20"),
+    description = "Rendered state-arrests.qmd for Illinois post-2025-01-20 (parameterized; render for other states with quarto render state-arrests.qmd -P state:TEXAS)"
   ),
   tar_quarto(
     nationwide_arrests_report,
