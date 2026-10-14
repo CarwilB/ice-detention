@@ -791,8 +791,8 @@ list(
   tar_quarto(
     state_arrests_report,
     "state-arrests.qmd",
-    execute_params = list(state = "ILLINOIS", cutoff = "2026-01-01"),
-    description = "Rendered state-arrests.qmd for Illinois arrests from 2026-01-01 (parameterized; render for other states with quarto render state-arrests.qmd -P state:TEXAS)"
+    execute_params = list(state = "ILLINOIS", cutoff = "2025-01-20"),
+    description = "Rendered state-arrests.qmd for Illinois post-2025-01-20 (parameterized; render for other states with quarto render state-arrests.qmd -P state:TEXAS)"
   ),
   tar_quarto(
     nationwide_arrests_report,
