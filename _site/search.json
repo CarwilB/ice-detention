@@ -134,7 +134,7 @@
     "href": "nationwide-arrests.html",
     "title": "ICE Arrests Nationwide: Geographic Distribution",
     "section": "",
-    "text": "Notes for next improvements: 1. Include Alaska and Hawaii on the national maps. 2. The county-level data excludes a lot of towns, Louisiana’s parishes, and many metropolitan areas that don’t follow the “NAME COUNTY” pattern. (We should examine the share of arrests in each state that make each of the patterns.) 3. We could create an interactive line graph with all of the state arrest rates.\nMaps and tables below cover arrests on or after January 20, 2025. 384,475 arrests · 95.2% have a state recorded. The monthly trend chart shows the full dataset for context.",
+    "text": "Notes for next improvements: 1. Include Alaska and Hawaii on the national maps. 2. The county-level data excludes a lot of towns, Louisiana’s parishes, and many metropolitan areas that don’t follow the “NAME COUNTY” pattern. (We should examine the share of arrests in each state that make each of the patterns.) 3. We could create an interactive line graph with all of the state arrest rates.\nMaps and tables below cover arrests on or after January 20, 2025. 564,379 arrests · 98.5% have a state recorded. The monthly trend chart shows the full dataset for context.",
     "crumbs": [
       "Arrest tracking",
       "Nationwide arrests"
@@ -145,7 +145,7 @@
     "href": "nationwide-arrests.html#state-bubble-map",
     "title": "ICE Arrests Nationwide: Geographic Distribution",
     "section": "State Bubble Map",
-    "text": "State Bubble Map\nCircle area is proportional to the number of arrests. Circle color shows arrests per 1,000 estimated undocumented immigrants (Pew 2023 estimates), a rough intensity measure independent of state size. Popups include Census 2025 total population and per-capita rates.\n\n\n\n\n\n\nTop 20 states by arrests:\n\n\n\n\n\n\n\n\n\n\n\n\n\nState\nArrests\nArrests/1k undoc.\nUndoc. pop. (Pew 2023)\nPopulation (2025)\n% of arrests\n\n\n\n\nTexas\n93279\n45.50\n2,050,000\n31,709,821\n25.5\n\n\nFlorida\n36182\n22.61\n1,600,000\n23,462,518\n9.9\n\n\nCalifornia\n32218\n14.32\n2,250,000\n39,355,309\n8.8\n\n\nNew York\n13682\n16.58\n825,000\n20,002,427\n3.7\n\n\nGeorgia\n13306\n29.57\n450,000\n11,302,748\n3.6\n\n\nArizona\n11177\n37.26\n300,000\n7,623,818\n3.1\n\n\nVirginia\n10761\n33.11\n325,000\n8,880,107\n2.9\n\n\nNew Jersey\n10621\n17.70\n600,000\n9,548,215\n2.9\n\n\nTennessee\n10280\n54.11\n190,000\n7,315,076\n2.8\n\n\nPennsylvania\n8378\n27.93\n300,000\n13,059,432\n2.3\n\n\nMassachusetts\n6847\n17.12\n400,000\n7,154,084\n1.9\n\n\nAlabama\n6718\n79.04\n85,000\n5,193,088\n1.8\n\n\nMaryland\n6367\n18.19\n350,000\n6,265,347\n1.7\n\n\nOklahoma\n6292\n62.92\n100,000\n4,123,288\n1.7\n\n\nIllinois\n6279\n11.42\n550,000\n12,719,141\n1.7\n\n\nNorth Carolina\n6265\n14.74\n425,000\n11,197,968\n1.7\n\n\nLouisiana\n6121\n55.65\n110,000\n4,618,189\n1.7\n\n\nMinnesota\n5768\n44.37\n130,000\n5,830,405\n1.6\n\n\nSouth Carolina\n5063\n36.16\n140,000\n5,570,274\n1.4\n\n\nUtah\n4898\n34.99\n140,000\n3,538,904\n1.3",
+    "text": "State Bubble Map\nCircle area is proportional to the number of arrests. Circle color shows arrests per 1,000 estimated undocumented immigrants (Pew 2023 estimates), a rough intensity measure independent of state size. Popups include Census 2025 total population and per-capita rates.\n\n\n\n\n\n\nTop 20 states by arrests:\n\n\n\n\n\n\n\n\n\n\n\n\n\nState\nArrests\nArrests/1k undoc.\nUndoc. pop. (Pew 2023)\nPopulation (2025)\n% of arrests\n\n\n\n\nTexas\n141444\n69.00\n2,050,000\n31,709,821\n25.4\n\n\nFlorida\n59333\n37.08\n1,600,000\n23,462,518\n10.7\n\n\nCalifornia\n49118\n21.83\n2,250,000\n39,355,309\n8.8\n\n\nGeorgia\n21348\n47.44\n450,000\n11,302,748\n3.8\n\n\nArizona\n19815\n66.05\n300,000\n7,623,818\n3.6\n\n\nNew York\n19233\n23.31\n825,000\n20,002,427\n3.5\n\n\nNew Jersey\n17438\n29.06\n600,000\n9,548,215\n3.1\n\n\nVirginia\n15365\n47.28\n325,000\n8,880,107\n2.8\n\n\nTennessee\n14637\n77.04\n190,000\n7,315,076\n2.6\n\n\nPennsylvania\n12551\n41.84\n300,000\n13,059,432\n2.3\n\n\nAlabama\n10695\n125.82\n85,000\n5,193,088\n1.9\n\n\nNorth Carolina\n9808\n23.08\n425,000\n11,197,968\n1.8\n\n\nOklahoma\n9559\n95.59\n100,000\n4,123,288\n1.7\n\n\nMassachusetts\n9460\n23.65\n400,000\n7,154,084\n1.7\n\n\nLouisiana\n9169\n83.35\n110,000\n4,618,189\n1.6\n\n\nMaryland\n8892\n25.41\n350,000\n6,265,347\n1.6\n\n\nIndiana\n8286\n51.79\n160,000\n6,973,333\n1.5\n\n\nSouth Carolina\n7848\n56.06\n140,000\n5,570,274\n1.4\n\n\nIllinois\n7745\n14.08\n550,000\n12,719,141\n1.4\n\n\nUtah\n7531\n53.79\n140,000\n3,538,904\n1.4",
     "crumbs": [
       "Arrest tracking",
       "Nationwide arrests"
@@ -156,7 +156,7 @@
     "href": "nationwide-arrests.html#county-level-choropleth",
     "title": "ICE Arrests Nationwide: Geographic Distribution",
     "section": "County-Level Choropleth",
-    "text": "County-Level Choropleth\nCounty names are extracted from apprehension_site_landmark using a “[NAME] COUNTY” pattern.\n\nCoverage: 26.4% of post-January 20, 2025 arrests mapped to a county.\n\n\n\n\n\n\n\n\nNote: Counties with zero arrests shown in light grey may have arrests recorded under non-specific landmarks. Alaska and Hawaii are excluded from the maps package continental US boundary data.\n\nTop 30 counties by arrests:\n\n\n\n\n\nCounty\nState\nN\n%\n\n\n\n\nDallas\nTexas\n13454\n13.3\n\n\nLos Angeles\nCalifornia\n5933\n5.8\n\n\nMiami Dade\nFlorida\n2700\n2.7\n\n\nHarris\nTexas\n2456\n2.4\n\n\nDenver\nColorado\n2310\n2.3\n\n\nCap - Maricopa\nArizona\n1943\n1.9\n\n\nCharleston\nSouth Carolina\n1589\n1.6\n\n\nMecklenburg\nNorth Carolina\n1353\n1.3\n\n\nTam-Hillsborough\nFlorida\n1101\n1.1\n\n\nBroward\nFlorida\n1062\n1.0\n\n\nClark\nNevada\n972\n1.0\n\n\nErie\nNew York\n970\n1.0\n\n\nCollier\nFlorida\n878\n0.9\n\n\nTam-Polk\nFlorida\n782\n0.8\n\n\nFtm-Lee\nFlorida\n748\n0.7\n\n\nMarion\nIndiana\n746\n0.7\n\n\nPrince George’s\nMaryland\n735\n0.7\n\n\nTravis\nTexas\n666\n0.7\n\n\nJac - St John\nFlorida\n634\n0.6\n\n\nDavidson\nTennessee\n629\n0.6\n\n\nUtah\nUtah\n601\n0.6\n\n\nMontgomery\nMaryland\n586\n0.6\n\n\nBexar\nTexas\n579\n0.6\n\n\nTam-Pinellas\nFlorida\n573\n0.6\n\n\nStuart-Martin\nFlorida\n567\n0.6\n\n\nOrl - Orange\nFlorida\n485\n0.5\n\n\nHidalgo\nTexas\n469\n0.5\n\n\nRutherford\nTennessee\n447\n0.4\n\n\nEl Paso\nColorado\n443\n0.4\n\n\nVal Verde\nTexas\n440\n0.4",
+    "text": "County-Level Choropleth\nCounty names are extracted from apprehension_site_landmark using a “[NAME] COUNTY” pattern.\n\nCoverage: 22.1% of post-January 20, 2025 arrests mapped to a county.\n\n\n\n\n\n\n\n\nNote: Counties with zero arrests shown in light grey may have arrests recorded under non-specific landmarks. Alaska and Hawaii are excluded from the maps package continental US boundary data.\n\nTop 30 counties by arrests:\n\n\n\n\n\nCounty\nState\nN\n%\n\n\n\n\nDallas\nTexas\n13387\n10.8\n\n\nLos Angeles\nCalifornia\n4854\n3.9\n\n\nHarris\nTexas\n4323\n3.5\n\n\nMiami Dade\nFlorida\n2922\n2.3\n\n\nCap - Maricopa\nArizona\n2165\n1.7\n\n\nDenver\nColorado\n1576\n1.3\n\n\nMecklenburg\nNorth Carolina\n1513\n1.2\n\n\nTam-Hillsborough\nFlorida\n1482\n1.2\n\n\nClark\nNevada\n1397\n1.1\n\n\nCharleston\nSouth Carolina\n1325\n1.1\n\n\nTam-Polk\nFlorida\n1257\n1.0\n\n\nFtm-Lee\nFlorida\n1162\n0.9\n\n\nMarion\nIndiana\n1108\n0.9\n\n\nErie\nNew York\n932\n0.7\n\n\nBexar\nTexas\n907\n0.7\n\n\nBroward\nFlorida\n898\n0.7\n\n\nOrl - Orange\nFlorida\n871\n0.7\n\n\nDavidson\nTennessee\n835\n0.7\n\n\nUtah\nUtah\n789\n0.6\n\n\nPrince George’s\nMaryland\n780\n0.6\n\n\nTravis\nTexas\n675\n0.5\n\n\nTam-Pinellas\nFlorida\n672\n0.5\n\n\nGwinnett\nGeorgia\n666\n0.5\n\n\nMontgomery\nMaryland\n641\n0.5\n\n\nStuart-Palm Beach\nFlorida\n629\n0.5\n\n\nOklahoma\nOklahoma\n618\n0.5\n\n\nRutherford\nTennessee\n617\n0.5\n\n\nJac - St John\nFlorida\n608\n0.5\n\n\nPolk\nIowa\n580\n0.5\n\n\nStuart-Martin\nFlorida\n563\n0.5",
     "crumbs": [
       "Arrest tracking",
       "Nationwide arrests"
@@ -189,7 +189,7 @@
     "href": "nationwide-arrests.html#removal-destinations",
     "title": "ICE Arrests Nationwide: Geographic Distribution",
     "section": "Removal Destinations",
-    "text": "Removal Destinations\ndeparture_country records where each person was actually sent. Of 308,163 removals with a recorded destination, 12,553 (4.1%) involved removal to a country other than the person’s citizenship country. The grid below shows nationalities and destinations with at least 500 removals.",
+    "text": "Removal Destinations\ndeparture_country records where each person was actually sent. Of 443,629 removals with a recorded destination, 16,161 (3.6%) involved removal to a country other than the person’s citizenship country. The grid below shows nationalities and destinations with at least 500 removals.",
     "crumbs": [
       "Arrest tracking",
       "Nationwide arrests"
@@ -200,7 +200,7 @@
     "href": "nationwide-arrests.html#data-notes",
     "title": "ICE Arrests Nationwide: Geographic Distribution",
     "section": "Data notes",
-    "text": "Data notes\n\nSource: Deportation Data Project, FOIA 2026-ICLI-00005.\nMaps and tables filtered to arrests on or after January 20, 2025 (384,475 arrests). Trend chart shows the full dataset from October 2022 – September 2026.\napprehension_state is missing for 18,354 post-cutoff rows (4.8%); excluded from state and county counts.\nCounty extraction uses the regex ^([A-Z .'-]+) COUNTY on the apprehension_site_landmark field. Multi-word county names (e.g., “Crow Wing”) are captured; names embedded mid-string are not.\nAlaska and Hawaii are not shown in the continental US maps.\nCensus population from U.S. Census Bureau, “Annual Estimates of the Resident Population for the United States, Regions, States, District of Columbia and Puerto Rico” (NST-EST2025-POP.xlsx), July 1 2025 estimates.\nUndocumented population from Pew Research Center, “Unauthorized immigrants: Characteristics for states” (2023 estimates, released 2025). Estimates are rounded to the nearest 5,000–50,000 depending on state size.\nArrest intensity (arrests per 1,000 undocumented) uses Pew 2023 undocumented population as denominator; this is the most recent state-level estimate available.",
+    "text": "Data notes\n\nSource: Deportation Data Project, FOIA 2026-ICLI-00005.\nMaps and tables filtered to arrests on or after January 20, 2025 (564,379 arrests). Trend chart shows the full dataset from October 2022 – August 2026.\napprehension_state is missing for 8,433 post-cutoff rows (1.5%); excluded from state and county counts.\nCounty extraction uses the regex ^([A-Z .'-]+) COUNTY on the apprehension_site_landmark field. Multi-word county names (e.g., “Crow Wing”) are captured; names embedded mid-string are not.\nAlaska and Hawaii are not shown in the continental US maps.\nCensus population from U.S. Census Bureau, “Annual Estimates of the Resident Population for the United States, Regions, States, District of Columbia and Puerto Rico” (NST-EST2025-POP.xlsx), July 1 2025 estimates.\nUndocumented population from Pew Research Center, “Unauthorized immigrants: Characteristics for states” (2023 estimates, released 2025). Estimates are rounded to the nearest 5,000–50,000 depending on state size.\nArrest intensity (arrests per 1,000 undocumented) uses Pew 2023 undocumented population as denominator; this is the most recent state-level estimate available.",
     "crumbs": [
       "Arrest tracking",
       "Nationwide arrests"
@@ -277,7 +277,7 @@
     "href": "state-arrests.html",
     "title": "ICE Arrests: Minnesota After January 20, 2025",
     "section": "",
-    "text": "This report traces ICE arrests made in Minnesota on or after January 20, 2025 through the full detention and removal pipeline, using individual-level FOIA data from the Deportation Data Project.\n5,768 arrests · 5,545 distinct individuals · 5,655 detention stays · 61.5% ultimately removed",
+    "text": "This report traces ICE arrests made in Minnesota on or after January 20, 2025 through the full detention and removal pipeline, using individual-level FOIA data from the Deportation Data Project.\n6,645 arrests · 6,345 distinct individuals · 6,544 detention stays · 69.9% ultimately removed",
     "crumbs": [
       "Arrest tracking",
       "State arrests"
@@ -288,7 +288,7 @@
     "href": "state-arrests.html#overview",
     "title": "ICE Arrests: Minnesota After January 20, 2025",
     "section": "Overview",
-    "text": "Overview\n\nMonthly arrest volume\n\n\n\n\n\n\n\n\n\n\n\nWho was arrested\n\n\nTop nationalities\n\n\n\n\n\nCountry\nN\n%\n\n\n\n\nMEXICO\n1523\n26.4\n\n\nECUADOR\n1457\n25.3\n\n\nGUATEMALA\n440\n7.6\n\n\nHONDURAS\n388\n6.7\n\n\nVENEZUELA\n336\n5.8\n\n\nNICARAGUA\n315\n5.5\n\n\nEL SALVADOR\n267\n4.6\n\n\nSOMALIA\n139\n2.4\n\n\nCOLOMBIA\n131\n2.3\n\n\nLAOS\n128\n2.2\n\n\nCUBA\n42\n0.7\n\n\nETHIOPIA\n37\n0.6\n\n\nVIETNAM\n32\n0.6\n\n\nLIBERIA\n30\n0.5\n\n\nCHINA, PEOPLES REPUBLIC OF\n28\n0.5\n\n\n\n\n\n\n\nArrest type\n\n\n\n\n\nArrest type\nN\n%\n\n\n\n\nTargeted\n3165\n54.9\n\n\nCollateral\n1463\n25.4\n\n\nNA\n1140\n19.8\n\n\n\n\n\nCriminality at arrest\n\n\n\n\n\nCriminality\nN\n%\n\n\n\n\n3 Other Immigration Violator\n3268\n56.7\n\n\n1 Convicted Criminal\n1625\n28.2\n\n\n2 Pending Criminal Charges\n875\n15.2",
+    "text": "Overview\n\nMonthly arrest volume\n\n\n\n\n\n\n\n\n\n\n\nWho was arrested\n\n\nTop nationalities\n\n\n\n\n\nCountry\nN\n%\n\n\n\n\nMEXICO\n1886\n28.4\n\n\nECUADOR\n1559\n23.5\n\n\nGUATEMALA\n506\n7.6\n\n\nHONDURAS\n445\n6.7\n\n\nNICARAGUA\n367\n5.5\n\n\nVENEZUELA\n365\n5.5\n\n\nEL SALVADOR\n300\n4.5\n\n\nLAOS\n172\n2.6\n\n\nSOMALIA\n153\n2.3\n\n\nCOLOMBIA\n146\n2.2\n\n\nCUBA\n48\n0.7\n\n\nLIBERIA\n40\n0.6\n\n\nETHIOPIA\n39\n0.6\n\n\nVIETNAM\n36\n0.5\n\n\nCHINA, PEOPLES REPUBLIC OF\n31\n0.5\n\n\n\n\n\n\n\nArrest type\n\n\n\n\n\nArrest type\nN\n%\n\n\n\n\nNA\n6645\n100\n\n\n\n\n\nCriminality at arrest\n\n\n\n\n\nCriminality\nN\n%\n\n\n\n\n3 Other Immigration Violator\n3359\n50.5\n\n\n1 Convicted Criminal\n2037\n30.7\n\n\n2 Pending Criminal Charges\n1249\n18.8",
     "crumbs": [
       "Arrest tracking",
       "State arrests"
@@ -299,7 +299,7 @@
     "href": "state-arrests.html#arrest-locations-in-minnesota",
     "title": "ICE Arrests: Minnesota After January 20, 2025",
     "section": "Arrest Locations in Minnesota",
-    "text": "Arrest Locations in Minnesota\nCounty-level map based on apprehension_site_landmark. Records with non-specific landmarks (e.g. “SPM General Area”) are mapped using state-specific rules where possible; others are excluded.\n\n\n\n\n\n\n\nCoverage: 90% of arrests mapped to a county.",
+    "text": "Arrest Locations in Minnesota\nCounty-level map based on apprehension_site_landmark. Records with non-specific landmarks (e.g. “SPM General Area”) are mapped using state-specific rules where possible; others are excluded.\n\n\n\n\n\n\n\nCoverage: 68% of arrests mapped to a county.",
     "crumbs": [
       "Arrest tracking",
       "State arrests"
@@ -310,7 +310,7 @@
     "href": "state-arrests.html#detention-facility-maps-and-transfer-flows",
     "title": "ICE Arrests: Minnesota After January 20, 2025",
     "section": "Detention Facility Maps and Transfer Flows",
-    "text": "Detention Facility Maps and Transfer Flows\nBlue dots = first detention facility. Orange dots = last detention facility. Grey lines = transfer flows between facilities; line width is proportional to the log of the number of transfers on that route. Only flows with ≥ 5 transfers are shown.\n\n\n\n\n\n\nFirst detention facility (top 8):\n\n\n\n\n\n\n\n\n\n\n\n\n\nDETLOC\nFacility\nCity\nState\nN\n%\n\n\n\n\nSPMHOLD\nSt Paul Field Office\nFort Snelling\nMN\n5125\n90.6\n\n\nSHERBMN\nSherburne County Jail\nElk River\nMN\n182\n3.2\n\n\nFREEBMN\nFreeborn County Adult Detention Center\nAlbert Lea\nMN\n61\n1.1\n\n\nKANDIMN\nKandiyohi County Jail\nWillmar\nMN\n53\n0.9\n\n\nDOUGLWI\nDouglas County\nSuperior\nWI\n37\n0.7\n\n\nEROFCB\nCamp East Montana\nEl Paso\nTX\n35\n0.6\n\n\nGFCORND\nGrand Forks County Correctional Facility\nGrand Forks\nND\n24\n0.4\n\n\nGRFHOLD\nGrand Forks Hold Room\nGrand Forks\nND\n17\n0.3\n\n\n\n\n\nLast detention facility (top 10):\n\n\n\n\n\n\n\n\n\n\n\n\n\nDETLOC\nFacility\nCity\nState\nN\n%\n\n\n\n\nEROFCB\nCamp East Montana\nEl Paso\nTX\n1186\n21.0\n\n\nSPMHOLD\nSt Paul Field Office\nFort Snelling\nMN\n895\n15.8\n\n\nJENATLA\nAlexandria Staging Facility\nAlexandria\nLA\n618\n10.9\n\n\nPIC\nPort Isabel Detention Center\nLos Fresnos\nTX\n571\n10.1\n\n\nPINEPLA\nPine Prairie ICE Processing Center\nPine Prairie\nLA\n329\n5.8\n\n\nSHERBMN\nSherburne County Jail\nElk River\nMN\n245\n4.3\n\n\nADAMSMS\nAdams County Detention Center (Mississippi)\nNatchez\nMS\n136\n2.4\n\n\nKANDIMN\nKandiyohi County Jail\nWillmar\nMN\n119\n2.1\n\n\nEPC\nEl Paso Service Processing Center\nEl Paso\nTX\n107\n1.9\n\n\nFREEBMN\nFreeborn County Adult Detention Center\nAlbert Lea\nMN\n107\n1.9",
+    "text": "Detention Facility Maps and Transfer Flows\nBlue dots = first detention facility. Orange dots = last detention facility. Grey lines = transfer flows between facilities; line width is proportional to the log of the number of transfers on that route. Only flows with ≥ 6 transfers are shown.\n\n\n\n\n\n\nFirst detention facility (top 8):\n\n\n\n\n\n\n\n\n\n\n\n\n\nDETLOC\nFacility\nCity\nState\nN\n%\n\n\n\n\nSPMHOLD\nSt Paul Field Office\nFort Snelling\nMN\n5547\n84.8\n\n\nSHERBMN\nSherburne County Jail\nElk River\nMN\n332\n5.1\n\n\nFREEBMN\nFreeborn County Adult Detention Center\nAlbert Lea\nMN\n137\n2.1\n\n\nKANDIMN\nKandiyohi County Jail\nWillmar\nMN\n120\n1.8\n\n\nDOUGLWI\nDouglas County\nSuperior\nWI\n53\n0.8\n\n\nEROFCB\nCamp East Montana\nEl Paso\nTX\n45\n0.7\n\n\nCROWGMN\nCrow Wing County Jail\nBrainerd\nMN\n37\n0.6\n\n\nGRFHOLD\nGrand Forks Hold Room\nGrand Forks\nND\n36\n0.6\n\n\n\n\n\nLast detention facility (top 10):\n\n\n\n\n\n\n\n\n\n\n\n\n\nDETLOC\nFacility\nCity\nState\nN\n%\n\n\n\n\nEROFCB\nCamp East Montana\nEl Paso\nTX\n1270\n19.4\n\n\nSPMHOLD\nSt Paul Field Office\nFort Snelling\nMN\n988\n15.1\n\n\nJENATLA\nAlexandria Staging Facility\nAlexandria\nLA\n957\n14.6\n\n\nPIC\nPort Isabel Detention Center\nLos Fresnos\nTX\n611\n9.3\n\n\nPINEPLA\nPine Prairie ICE Processing Center\nPine Prairie\nLA\n332\n5.1\n\n\nSHERBMN\nSherburne County Jail\nElk River\nMN\n317\n4.8\n\n\nFREEBMN\nFreeborn County Adult Detention Center\nAlbert Lea\nMN\n151\n2.3\n\n\nADAMSMS\nAdams County Detention Center (Mississippi)\nNatchez\nMS\n140\n2.1\n\n\nKANDIMN\nKandiyohi County Jail\nWillmar\nMN\n125\n1.9\n\n\nJENADLA\nCentral Louisiana ICE Processing Center (CLIPC)\nJena\nLA\n124\n1.9",
     "crumbs": [
       "Arrest tracking",
       "State arrests"
@@ -321,7 +321,7 @@
     "href": "state-arrests.html#removal-pipeline-flow",
     "title": "ICE Arrests: Minnesota After January 20, 2025",
     "section": "Removal Pipeline Flow",
-    "text": "Removal Pipeline Flow\nEach band traces one group through the pipeline: Minnesota arrest → first facility → last facility → outcome. Band width is proportional to number of stays.\n\n\n\n\n\n\n\n\n\nFinal outcomes:\n\n\n\n\n\n\n\n\n\n\nRelease reason\nN\n%\n\n\n\n\nRemoved\n3478\n61.5\n\n\nNA\n967\n17.1\n\n\nOrder of recognizance\n495\n8.8\n\n\nBonded Out - IJ\n292\n5.2\n\n\nU.S. Marshals or other agency (explain in Detention Comments)\n85\n1.5\n\n\nProceedings Terminated\n68\n1.2\n\n\nOrder of supervision\n53\n0.9\n\n\nRelief Granted by IJ\n43\n0.8\n\n\nTransferred\n39\n0.7\n\n\nWithdrawal\n32\n0.6\n\n\nBonded Out - Field Office\n24\n0.4\n\n\nOrder of Recognizance - Humanitarian\n22\n0.4\n\n\nVoluntary departure\n19\n0.3\n\n\nOrder of Supervision - Re-Release\n14\n0.2\n\n\nParoled\n10\n0.2\n\n\nCourt Ordered\n4\n0.1\n\n\nOrder of Supervision - No SLRRFF\n3\n0.1\n\n\nParoled - Humanitarian\n3\n0.1\n\n\nORR - Office of Refugee Resettlement\n2\n0.0\n\n\nDied\n1\n0.0\n\n\nVoluntary Return\n1\n0.0\n\n\n\n\n\nAll facilities in itineraries (top 15):\n\n\n\n\n\nDETLOC\nAppearances\n% of stays\n\n\n\n\nSPMHOLD\n8134\n143.8\n\n\nEROFCB\n3077\n54.4\n\n\nSHERBMN\n1351\n23.9\n\n\nFREEBMN\n958\n16.9\n\n\nJENATLA\n836\n14.8\n\n\nPIC\n815\n14.4\n\n\nKANDIMN\n749\n13.2\n\n\nPINEPLA\n448\n7.9\n\n\nSNAHOLD\n242\n4.3\n\n\nOMAHOLD\n219\n3.9\n\n\nCROWGMN\n195\n3.4\n\n\nDOUGLWI\n194\n3.4\n\n\nADAMSMS\n165\n2.9\n\n\nEPC\n142\n2.5\n\n\nSTCDFTX\n138\n2.4",
+    "text": "Removal Pipeline Flow\nEach band traces one group through the pipeline: Minnesota arrest → first facility → last facility → outcome. Band width is proportional to number of stays.\n\n\n\n\n\n\n\n\n\nFinal outcomes:\n\n\n\n\n\n\n\n\n\n\nRelease reason\nN\n%\n\n\n\n\nRemoved\n4575\n69.9\n\n\nCourt Ordered\n626\n9.6\n\n\nNA\n451\n6.9\n\n\nBonded Out - IJ\n364\n5.6\n\n\nOrder of recognizance\n126\n1.9\n\n\nU.S. Marshals or other agency (explain in Detention Comments)\n103\n1.6\n\n\nProceedings Terminated\n76\n1.2\n\n\nRelief Granted by IJ\n49\n0.7\n\n\nTransferred\n39\n0.6\n\n\nVoluntary departure\n36\n0.6\n\n\nOrder of supervision\n29\n0.4\n\n\nBonded Out - Field Office\n28\n0.4\n\n\nOrder of Recognizance - Humanitarian\n13\n0.2\n\n\nParoled\n8\n0.1\n\n\nOrder of Supervision - Re-Release\n6\n0.1\n\n\nWithdrawal\n4\n0.1\n\n\nORR - Office of Refugee Resettlement\n3\n0.0\n\n\nOrder of Supervision - No SLRRFF\n3\n0.0\n\n\nParoled - Humanitarian\n2\n0.0\n\n\nDied\n1\n0.0\n\n\nOrder of Supervision - Humanitarian\n1\n0.0\n\n\nVoluntary Return\n1\n0.0\n\n\n\n\n\nAll facilities in itineraries (top 15):\n\n\n\n\n\nDETLOC\nAppearances\n% of stays\n\n\n\n\nSPMHOLD\n9320\n142.4\n\n\nEROFCB\n3498\n53.5\n\n\nSHERBMN\n1807\n27.6\n\n\nJENATLA\n1269\n19.4\n\n\nFREEBMN\n1201\n18.4\n\n\nKANDIMN\n897\n13.7\n\n\nPIC\n884\n13.5\n\n\nPINEPLA\n467\n7.1\n\n\nCROWGMN\n258\n3.9\n\n\nOMAHOLD\n254\n3.9\n\n\nSNAHOLD\n233\n3.6\n\n\nEPC\n226\n3.5\n\n\nDOUGLWI\n224\n3.4\n\n\nJENADLA\n211\n3.2\n\n\nADAMSMS\n197\n3.0",
     "crumbs": [
       "Arrest tracking",
       "State arrests"
@@ -332,7 +332,7 @@
     "href": "state-arrests.html#removal-destinations",
     "title": "ICE Arrests: Minnesota After January 20, 2025",
     "section": "Removal Destinations",
-    "text": "Removal Destinations\nThe heatmap below crosses citizenship country (columns) against country deported to (rows). Cell numbers are absolute counts; cell color shows what share of that row’s removals came from each citizenship group. Top 15 destinations × top 12 citizenships shown.\n\n\n\n\n\n\n\n\n\nSummary table:\n\n\n\nRemoval destinations for Minnesota arrests\n\n\nCountry\nN\n%\n\n\n\n\nMEXICO\n1143\n34.3\n\n\nECUADOR\n893\n26.8\n\n\nGUATEMALA\n286\n8.6\n\n\nHONDURAS\n262\n7.9\n\n\nNICARAGUA\n213\n6.4\n\n\nVENEZUELA\n161\n4.8\n\n\nEL SALVADOR\n141\n4.2\n\n\nCOLOMBIA\n71\n2.1\n\n\nSOMALIA\n22\n0.7\n\n\nLAOS\n15\n0.5\n\n\nDOMINICAN REPUBLIC\n13\n0.4\n\n\nLIBERIA\n11\n0.3\n\n\nCHINA, PEOPLES REPUBLIC OF\n9\n0.3\n\n\nBRAZIL\n8\n0.2\n\n\nPERU\n8\n0.2\n\n\nBURMA\n6\n0.2\n\n\nSPAIN\n6\n0.2\n\n\nUNITED KINGDOM\n6\n0.2\n\n\nMICRONESIA, FEDERATED STATES OF\n5\n0.2\n\n\nCOSTA RICA\n4\n0.1",
+    "text": "Removal Destinations\nThe heatmap below crosses citizenship country (columns) against country deported to (rows). Cell numbers are absolute counts; cell color shows what share of that row’s removals came from each citizenship group. Top 15 destinations × top 12 citizenships shown.\n\n\n\n\n\n\n\n\n\nSummary table:\n\n\n\nRemoval destinations for Minnesota arrests\n\n\nCountry\nN\n%\n\n\n\n\nMEXICO\n1459\n32.4\n\n\nECUADOR\n1133\n25.2\n\n\nGUATEMALA\n384\n8.5\n\n\nHONDURAS\n354\n7.9\n\n\nNICARAGUA\n284\n6.3\n\n\nVENEZUELA\n219\n4.9\n\n\nEL SALVADOR\n184\n4.1\n\n\nLAOS\n120\n2.7\n\n\nCOLOMBIA\n109\n2.4\n\n\nSOMALIA\n38\n0.8\n\n\nDOMINICAN REPUBLIC\n21\n0.5\n\n\nLIBERIA\n20\n0.4\n\n\nCHINA, PEOPLES REPUBLIC OF\n16\n0.4\n\n\nPERU\n11\n0.2\n\n\nBURMA\n9\n0.2\n\n\nBRAZIL\n8\n0.2\n\n\nNIGERIA\n8\n0.2\n\n\nVIETNAM\n8\n0.2\n\n\nSPAIN\n7\n0.2\n\n\nKENYA\n6\n0.1",
     "crumbs": [
       "Arrest tracking",
       "State arrests"
@@ -343,7 +343,7 @@
     "href": "state-arrests.html#minor-detainees-under-18",
     "title": "ICE Arrests: Minnesota After January 20, 2025",
     "section": "Minor Detainees (Under 18)",
-    "text": "Minor Detainees (Under 18)\n40 arrests · 40 distinct individuals · 40 detention stays. Age is estimated as year(arrest) − birth year and may be off by up to one year.\n\n\n\n\n\nMetric\nValue\n\n\n\n\nArrests of minors\n40\n\n\nDistinct minors\n40\n\n\nDetention stays\n40\n\n\n\n\n\n\n\nAge at arrest\n\n\n\n\n\nAge\nN\n\n\n\n\n3\n1\n\n\n5\n1\n\n\n6\n2\n\n\n7\n4\n\n\n8\n1\n\n\n9\n2\n\n\n10\n2\n\n\n11\n1\n\n\n13\n3\n\n\n14\n3\n\n\n15\n3\n\n\n16\n5\n\n\n17\n12\n\n\n\n\n\nNationality\n\n\n\n\n\nCountry\nN\n%\n\n\n\n\nECUADOR\n17\n42.5\n\n\nMEXICO\n7\n17.5\n\n\nEL SALVADOR\n6\n15.0\n\n\nGUATEMALA\n4\n10.0\n\n\nVENEZUELA\n2\n5.0\n\n\nHONDURAS\n1\n2.5\n\n\nNICARAGUA\n1\n2.5\n\n\nPAKISTAN\n1\n2.5\n\n\nSOMALIA\n1\n2.5\n\n\n\n\n\n\n\nFirst detention facility\n\n\n\n\n\nDETLOC\nFacility\nN\n%\n\n\n\n\nSPMHOLD\nBISHOP HENRY WHIPPLE FED BLDG\n40\n100\n\n\n\n\n\nLast detention facility\n\n\n\n\n\nDETLOC\nFacility\nN\n%\n\n\n\n\nSPMHOLD\nBISHOP HENRY WHIPPLE FED BLDG\n27\n67.5\n\n\nSTFRCTX\nSOUTH TEXAS FAM RESIDENTIAL CENTER\n9\n22.5\n\n\nSNAHOLD\nSAN ANTONIO DRO HOLD ROOM\n4\n10.0\n\n\n\n\n\nOutcomes\n\n\n\n\n\nRelease reason\nN\n%\n\n\n\n\nRemoved\n18\n45.0\n\n\nOrder of recognizance\n8\n20.0\n\n\nNA\n5\n12.5\n\n\nProceedings Terminated\n3\n7.5\n\n\nParoled\n2\n5.0\n\n\nVoluntary departure\n2\n5.0\n\n\nORR - Office of Refugee Resettlement\n1\n2.5\n\n\nOrder of Supervision - Re-Release\n1\n2.5",
+    "text": "Minor Detainees (Under 18)\n37 arrests · 37 distinct individuals · 35 detention stays. Age is estimated as year(arrest) − birth year and may be off by up to one year.\n\n\n\n\n\nMetric\nValue\n\n\n\n\nArrests of minors\n37\n\n\nDistinct minors\n37\n\n\nDetention stays\n35\n\n\n\n\n\n\n\nAge at arrest\n\n\n\n\n\nAge\nN\n\n\n\n\n3\n1\n\n\n5\n2\n\n\n6\n2\n\n\n7\n3\n\n\n9\n1\n\n\n10\n2\n\n\n11\n1\n\n\n13\n2\n\n\n14\n3\n\n\n15\n4\n\n\n16\n4\n\n\n17\n12\n\n\n\n\n\nNationality\n\n\n\n\n\nCountry\nN\n%\n\n\n\n\nECUADOR\n14\n37.8\n\n\nMEXICO\n9\n24.3\n\n\nGUATEMALA\n4\n10.8\n\n\nEL SALVADOR\n3\n8.1\n\n\nHONDURAS\n2\n5.4\n\n\nVENEZUELA\n2\n5.4\n\n\nNICARAGUA\n1\n2.7\n\n\nPAKISTAN\n1\n2.7\n\n\nSOMALIA\n1\n2.7\n\n\n\n\n\n\n\nFirst detention facility\n\n\n\n\n\nDETLOC\nFacility\nN\n%\n\n\n\n\nSPMHOLD\nBISHOP HENRY WHIPPLE FED BLDG\n35\n100\n\n\n\n\n\nLast detention facility\n\n\n\n\n\nDETLOC\nFacility\nN\n%\n\n\n\n\nSPMHOLD\nBISHOP HENRY WHIPPLE FED BLDG\n25\n71.4\n\n\nSTFRCTX\nSOUTH TEXAS FAM RESIDENTIAL CENTER\n6\n17.1\n\n\nSNAHOLD\nSAN ANTONIO DRO HOLD ROOM\n4\n11.4\n\n\n\n\n\nOutcomes\n\n\n\n\n\nRelease reason\nN\n%\n\n\n\n\nRemoved\n14\n40.0\n\n\nVoluntary departure\n5\n14.3\n\n\nCourt Ordered\n4\n11.4\n\n\nProceedings Terminated\n4\n11.4\n\n\nORR - Office of Refugee Resettlement\n2\n5.7\n\n\nOrder of recognizance\n2\n5.7\n\n\nParoled\n2\n5.7\n\n\nOrder of Supervision - Re-Release\n1\n2.9\n\n\nNA\n1\n2.9",
     "crumbs": [
       "Arrest tracking",
       "State arrests"
@@ -354,7 +354,7 @@
     "href": "state-arrests.html#data-notes",
     "title": "ICE Arrests: Minnesota After January 20, 2025",
     "section": "Data notes",
-    "text": "Data notes\n\nSource: Deportation Data Project, FOIA 2026-ICLI-00005.\nFiltered to apprehension_state == \"MINNESOTA\" and apprehension_date &gt;= 2025-01-20. Duplicate-flagged rows excluded.\nStays linked via unique_identifier; only stays beginning on or after 2025-01-20 are included.\nTransfer flows show consecutive facility pairs from detention_facility_codes_all; min threshold = 5 transfers.\nCounty choropleth coverage: 90% of arrests mapped to a county.\nstay_release_reason is NA for stays open as of March 2026 (shown as “Pending / Unknown”).\nEROFCB = ERO El Paso Camp East Montana (militarized facility in Montana operated by El Paso ERO).",
+    "text": "Data notes\n\nSource: Deportation Data Project, FOIA 2026-ICLI-00005.\nFiltered to apprehension_state == \"MINNESOTA\" and apprehension_date &gt;= 2025-01-20. Duplicate-flagged rows excluded.\nStays linked via unique_identifier; only stays beginning on or after 2025-01-20 are included.\nTransfer flows show consecutive facility pairs from detention_facility_codes_all; min threshold = 6 transfers.\nCounty choropleth coverage: 68% of arrests mapped to a county.\nstay_release_reason is NA for stays open as of March 2026 (shown as “Pending / Unknown”).\nEROFCB = ERO El Paso Camp East Montana (militarized facility in Montana operated by El Paso ERO).",
     "crumbs": [
       "Arrest tracking",
       "State arrests"
@@ -512,6 +512,94 @@
     "crumbs": [
       "National detention mapping",
       "Facility table"
+    ]
+  },
+  {
+    "objectID": "mn-arrests.html",
+    "href": "mn-arrests.html",
+    "title": "ICE Arrests in Minnesota After January 20, 2025",
+    "section": "",
+    "text": "This report traces ICE arrests made in Minnesota on or after January 20, 2025 through the full detention and removal pipeline, using individual-level data released by the Deportation Data Project via FOIA.\n6,645 arrests of 6,345 distinct individuals, linked to 0 detention stays.",
+    "crumbs": [
+      "Arrest tracking",
+      "Minnesota arrests"
+    ]
+  },
+  {
+    "objectID": "mn-arrests.html#overview",
+    "href": "mn-arrests.html#overview",
+    "title": "ICE Arrests in Minnesota After January 20, 2025",
+    "section": "Overview",
+    "text": "Overview\n\n\n\n\n\nMetric\nValue\n\n\n\n\nTotal arrests\n6,645\n\n\nDistinct persons\n6,345\n\n\nDetention stays (post-inauguration)\n0\n\n\nMatched to stays dataset\n99.6%\n\n\nRemoval rate\nNaN%\n\n\n\n\n\n\nMonthly arrest volume\n\n\n\n\n\n\n\n\n\n\n\nWho was arrested\n\n\nTop nationalities\n\n\n\n\n\nCountry\nN\n%\n\n\n\n\nMEXICO\n1886\n28.4\n\n\nECUADOR\n1559\n23.5\n\n\nGUATEMALA\n506\n7.6\n\n\nHONDURAS\n445\n6.7\n\n\nNICARAGUA\n367\n5.5\n\n\nVENEZUELA\n365\n5.5\n\n\nEL SALVADOR\n300\n4.5\n\n\nLAOS\n172\n2.6\n\n\nSOMALIA\n153\n2.3\n\n\nCOLOMBIA\n146\n2.2\n\n\nCUBA\n48\n0.7\n\n\nLIBERIA\n40\n0.6\n\n\nETHIOPIA\n39\n0.6\n\n\nVIETNAM\n36\n0.5\n\n\nCHINA, PEOPLES REPUBLIC OF\n31\n0.5\n\n\n\n\n\n\n\n\nArrest type and criminality\n\n\n\n\n\nArrest type\nN\n%\n\n\n\n\nNA\n6645\n100\n\n\n\n\n\n\n\n\n\n\nCriminality\nN\n%\n\n\n\n\n3 Other Immigration Violator\n3359\n50.5\n\n\n1 Convicted Criminal\n2037\n30.7\n\n\n2 Pending Criminal Charges\n1249\n18.8",
+    "crumbs": [
+      "Arrest tracking",
+      "Minnesota arrests"
+    ]
+  },
+  {
+    "objectID": "mn-arrests.html#arrest-locations-in-minnesota",
+    "href": "mn-arrests.html#arrest-locations-in-minnesota",
+    "title": "ICE Arrests in Minnesota After January 20, 2025",
+    "section": "Arrest Locations in Minnesota",
+    "text": "Arrest Locations in Minnesota\nThe choropleth below maps arrests to Minnesota counties using the apprehension_site_landmark field. The dominant category is “SPM General Area, Non-Specific” (Ramsey County / St. Paul), which accounts for the majority of arrests. County jails, federal facilities, and specific police departments allow more precise placement for the remainder.\n\n\n\n\n\n\n\nNote: 4817 of 6645 arrests (72%) are mapped to a county. The remainder have non-specific or out-of-state landmark records and are excluded. Ramsey County (St. Paul) includes the bulk of arrests recorded as “SPM General Area.”",
+    "crumbs": [
+      "Arrest tracking",
+      "Minnesota arrests"
+    ]
+  },
+  {
+    "objectID": "mn-arrests.html#detention-facility-maps",
+    "href": "mn-arrests.html#detention-facility-maps",
+    "title": "ICE Arrests in Minnesota After January 20, 2025",
+    "section": "Detention Facility Maps",
+    "text": "Detention Facility Maps\nThe map below shows where people were first detained (blue) and where their stay ended (orange). Circle area is proportional to the log of the number of detainees. Most people enter at SPMHOLD (Bishop Henry Whipple Federal Building, St. Paul) and end their stay at facilities across several states, with ERO El Paso Camp East Montana and the Alexandria Staging Facility as the most common final stops.\n\n\n\n\n\n\nFirst detention facility (top 8):\n\n\n\n\n\nDETLOC\nFacility\nCity\nState\nN\n%\n\n\n\n\n\n\n\nLast detention facility (top 10):\n\n\n\n\n\nDETLOC\nFacility\nCity\nState\nN\n%",
+    "crumbs": [
+      "Arrest tracking",
+      "Minnesota arrests"
+    ]
+  },
+  {
+    "objectID": "mn-arrests.html#removal-pipeline-flow",
+    "href": "mn-arrests.html#removal-pipeline-flow",
+    "title": "ICE Arrests in Minnesota After January 20, 2025",
+    "section": "Removal Pipeline Flow",
+    "text": "Removal Pipeline Flow\nThe diagram below traces the complete path from arrest to outcome: Minnesota arrest → first detention facility → last detention facility → outcome. Each band represents a group of people following the same route; band width is proportional to the number of people on that path. The top facilities at each stage are named individually; all others are grouped as “Other.”\n\n\n\n\n\n\n\n\n\nFinal outcomes:\n\n\n\n\n\nRelease reason\nN\n%\n\n\n\n\n\n\n\nAll facilities appearing in itineraries (top 15):\n\n\n\n\n\nDETLOC\nN appearances\n% of stays",
+    "crumbs": [
+      "Arrest tracking",
+      "Minnesota arrests"
+    ]
+  },
+  {
+    "objectID": "mn-arrests.html#removal-destinations",
+    "href": "mn-arrests.html#removal-destinations",
+    "title": "ICE Arrests in Minnesota After January 20, 2025",
+    "section": "Removal Destinations",
+    "text": "Removal Destinations\ndeparture_country records where each person was actually removed to. Of 0 removals with a recorded destination, 0 involved removal to a country other than the person’s citizenship country — primarily Venezuelans and Cubans sent to Mexico or Honduras under third-country arrangements.\nThe grid below shows nationality (rows) versus removal destination (columns) for all nationality/destination combinations with five or more removals. Cells are log-scaled; the actual count appears where non-zero.",
+    "crumbs": [
+      "Arrest tracking",
+      "Minnesota arrests"
+    ]
+  },
+  {
+    "objectID": "mn-arrests.html#minor-detainees-under-18",
+    "href": "mn-arrests.html#minor-detainees-under-18",
+    "title": "ICE Arrests in Minnesota After January 20, 2025",
+    "section": "Minor Detainees (Under 18)",
+    "text": "Minor Detainees (Under 18)\nThis section identifies individuals who were under 18 years old at the time of arrest, based on birth_year and apprehension_date. Age is approximate (year-of-arrest minus birth-year; does not account for whether the birthday had passed).\n37 arrests involved persons under 18, representing 37 distinct individuals linked to 0 detention stays.\n\n\n\n\n\nMetric\nValue\n\n\n\n\nArrests of minors\n37\n\n\nDistinct minors\n37\n\n\nDetention stays\n0\n\n\n\n\n\n\nAge at arrest\n\n\n\n\n\nAge at arrest\nN\n\n\n\n\n3\n1\n\n\n5\n2\n\n\n6\n2\n\n\n7\n3\n\n\n9\n1\n\n\n10\n2\n\n\n11\n1\n\n\n13\n2\n\n\n14\n3\n\n\n15\n4\n\n\n16\n4\n\n\n17\n12\n\n\n\n\n\n\n\nNationality\n\n\n\n\n\nCountry\nN\n%\n\n\n\n\nECUADOR\n14\n37.8\n\n\nMEXICO\n9\n24.3\n\n\nGUATEMALA\n4\n10.8\n\n\nEL SALVADOR\n3\n8.1\n\n\nHONDURAS\n2\n5.4\n\n\nVENEZUELA\n2\n5.4\n\n\nNICARAGUA\n1\n2.7\n\n\nPAKISTAN\n1\n2.7\n\n\nSOMALIA\n1\n2.7\n\n\n\n\n\n\n\nArrest type and criminality\n\n\n\n\n\nArrest type\nN\n%\n\n\n\n\nNA\n37\n100\n\n\n\n\n\n\n\n\n\n\nCriminality\nN\n%\n\n\n\n\n3 Other Immigration Violator\n37\n100\n\n\n\n\n\n\n\nFirst detention facility\n\n\n\n\n\nDETLOC\nFacility\nN\n%\n\n\n\n\n\n\n\n\n\nLast detention facility\n\n\n\n\n\nDETLOC\nFacility\nN\n%\n\n\n\n\n\n\n\n\n\nOutcomes\n\n\n\n\n\nRelease reason\nN\n%",
+    "crumbs": [
+      "Arrest tracking",
+      "Minnesota arrests"
+    ]
+  },
+  {
+    "objectID": "mn-arrests.html#data-notes",
+    "href": "mn-arrests.html#data-notes",
+    "title": "ICE Arrests in Minnesota After January 20, 2025",
+    "section": "Data notes",
+    "text": "Data notes\n\nSource: Deportation Data Project, FOIA release 2026-ICLI-00005, data through March 11, 2026. Arrests dataset: 713,464 rows. Stays dataset: 1,087,417 rows.\nArrests filtered to apprehension_state == \"MINNESOTA\" and apprehension_date &gt;= 2025-01-20. Rows with duplicate_likely == TRUE excluded.\nStays linked to arrests via unique_identifier; only stays beginning on or after 2025-01-20 are included (prior stays for the same person are excluded).\nCounty choropleth uses apprehension_site_landmark; approximately 28% of arrests have non-specific or missing landmarks and are not mapped.\nMinor age is estimated as year(apprehension_date) − birth_year and may be off by up to one year for individuals whose birthday falls later in the calendar year.\nstay_release_reason is NA for stays that were still open as of the data extract date (March 2026); these are categorized as “Pending / Unknown.”\nEROFCB (“ERO El Paso Camp East Montana”) is a militarized detention camp operated by the El Paso ERO field office but located in Montana.",
+    "crumbs": [
+      "Arrest tracking",
+      "Minnesota arrests"
     ]
   }
 ]

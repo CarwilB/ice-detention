@@ -70,7 +70,7 @@ unmatched_fy26    <- tar_read(unmatched_fy26)
 peak_fy26_raw     <- tar_read(peak_fy26)
 
 fy_start <- "2025-10-01"
-fy_end   <- "2026-02-05"
+fy_end   <- "2026-08-06"
 
 ice_fy26 <- fy26b |>
   select(canonical_id, canonical_name, detloc, facility_name,

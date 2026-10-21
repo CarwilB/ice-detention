@@ -376,6 +376,7 @@ The pipeline renders analytical reports as HTML documents. Some are wired as `ta
 | `geocoding-divergence.qmd` | Yes (`geocoding_divergence_report`) | Maps and tables comparing geocoded coordinates across sources |
 | `ddp-comparison.qmd` | Yes (`ddp_comparison_report`) | DDP daily population vs. ICE FY25 annual statistics; unreported facility analysis |
 | `ddp-comparison-26.qmd` | Yes (`ddp_fy26_comparison_report`) | DDP (parquet) vs. ICE FY26 annual statistics (Oct 2025–Feb 5 2026); pipeline-side version of the ddp-comparison-26 post |
+| `ddp-throughput.qmd` | Yes (`ddp_throughput_report`) | Person-level detention throughput from DDP stints: daily population/removals/book-ins, cumulative distinct individuals, re-detention, double removals; equal-length Biden/Trump presidential comparison windows |
 | `missing-addresses.qmd` | No | Identifies roster facilities missing address information |
 | `dmcp-listings.qmd` | No | Documentation of the 2015/2017 DMCP facility authorization data |
 | `ero-field-offices.qmd` | No | ERO field offices as informal detention sites |

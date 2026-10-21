@@ -313,8 +313,14 @@ generate_targets_catalog <- function(path = here::here("data/targets-catalog.md"
   # Enforce section ordering
   descs$section <- factor(descs$section, levels = sections)
 
-  lines <- character()
+  # YAML front matter gives the file a title so that rendering it inside the
+  # quarto website project resolves the `{{< meta title >}}` in the project's
+  # `pagetitle` setting instead of emitting "Unknown meta key title" warnings.
   lines <- c(lines,
+    "---",
+    'title: "Pipeline Targets Catalog"',
+    "---",
+    "",
     "# Pipeline Targets Catalog",
     "",
     paste0("*Auto-generated on ", Sys.Date(),

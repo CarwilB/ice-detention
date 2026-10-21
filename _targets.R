@@ -777,6 +777,17 @@ list(
     description = "Rendered DDP vs ICE FY26 comparison report (current 20260806 DDP data); review locally before deploying to quarto website"
   ),
 
+  # Renders ddp-throughput.qmd: person-level detention throughput from the DDP
+  # stints — daily population vs removals, cumulative distinct individuals,
+  # book-ins (new detention starts), re-detention, and double removals, with
+  # equal-length presidential comparison windows. The qmd reads stints_file
+  # and facilities_daily_population_file via tar_read().
+  tar_quarto(
+    ddp_throughput_report,
+    "ddp-throughput.qmd",
+    description = "Rendered DDP detention throughput report (population/removals/book-ins, cumulative individuals, re-detention, presidential comparison windows)"
+  ),
+
   # ── Archived FY26 comparison (DDP 20260330 data, through March 2026) ──────
   # Frozen snapshot of the original through-March FY26 comparison, built from
   # the 20260330 daily-population release (data through 2026-03-10). DDP
@@ -830,27 +841,27 @@ list(
   # ── DDP stays dataset (one row per detention stay, incl. full facility chain) ─
   tar_target(
     stays_file,
-    here::here("data/ddp/detention-stays-latest_20260514.parquet"),
+    here::here("data/ddp/detention-stays-latest_20260806.parquet"),
     format = "file",
-    description = "Tracks the DDP detention stays parquet file (20260514 release, data through Mar 2026) for changes"
+    description = "Tracks the DDP detention stays parquet file (20260806 release, data through Aug 2026) for changes"
   ),
   tar_target(
     stays_raw,
     arrow::read_parquet(stays_file),
-    description = "Raw DDP detention stays (1.09M rows x 70 cols; one row per stay with detention_facility_codes_all chain)"
+    description = "Raw DDP detention stays (1.26M rows x 77 cols; one row per stay with detention_facility_codes_all chain)"
   ),
 
   # ── DDP arrests dataset ────────────────────────────────────────────────────
   tar_target(
     arrests_file,
-    here::here("data/ddp/arrests-latest_20260330.parquet"),
+    here::here("data/ddp/arrests-latest_20260806.parquet"),
     format = "file",
-    description = "Tracks the DDP arrests parquet file (20260330 release, data through Mar 2026) for changes"
+    description = "Tracks the DDP arrests parquet file (20260806 release, data through Aug 2026) for changes"
   ),
   tar_target(
     arrests_raw,
-    arrow::read_parquet(arrests_file),
-    description = "Raw DDP arrests (713k rows x 28 cols; one row per arrest event with apprehension_state, date, unique_identifier)"
+    .normalize_arrests_schema(arrow::read_parquet(arrests_file)),
+    description = "Raw DDP arrests (20260806 release: 896k rows x 34 cols, Oct 2022 - Aug 2026; one row per arrest event), schema-normalized to the 20260330 column names (apprehension_state <- apprehension_state_filled_in, apprehension_site_landmark <- event_landmark; apprehension_type restored as NA)"
   ),
 
   # ── Minnesota post-inauguration arrest analysis ────────────────────────────

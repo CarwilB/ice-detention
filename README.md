@@ -73,6 +73,7 @@ The pipeline renders analytical reports as HTML documents:
 | `facility-summary.qmd` | Facility counts by ID range, source coverage, and trajectory statistics |
 | `geocoding-divergence.qmd` | Maps and tables comparing geocoded coordinates across sources |
 | `ddp-comparison.qmd` | DDP daily population vs. ICE FY25 annual statistics; unreported facility analysis |
+| `ddp-throughput.qmd` | Person-level detention throughput from DDP stints: daily population/removals/book-ins, cumulative individuals, re-detention, double removals, presidential comparison windows |
 | `missing-addresses.qmd` | Identifies roster facilities missing address information |
 | `dmcp-listings.qmd` | Documentation of the 2015/2017 DMCP facility authorization data |
 | `ero-field-offices.qmd` | ERO field offices as informal detention sites |

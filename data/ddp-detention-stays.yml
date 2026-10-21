@@ -134,11 +134,11 @@ versions:
       local_file: "data/ddp/detention-stays-latest_20260514.parquet"
       date_downloaded: "2026-05-24"
       notes: >
-        Renamed from detention-stays-latest.parquet. Still the file read by
-        the stays_file -> stays_raw pipeline targets (MN and nationwide
-        arrest analyses). Data covers Oct 2022 – Mar 2026.
+        Renamed from detention-stays-latest.parquet. Former pipeline input
+        for the stays_file -> stays_raw targets (superseded by the 20260806
+        release, wired 2026-10-21). Data covers Oct 2022 – Mar 2026.
     - version: "20260806"
-      label: "August 6 2026 release (on disk; NOT yet wired into the pipeline)"
+      label: "August 6 2026 release (current pipeline input)"
       rows: 1264756
       columns: 77
       local_file: "data/ddp/detention-stays-latest_20260806.parquet"
@@ -157,10 +157,16 @@ versions:
         msc_crime_class, detainee_classification, initial_bond_set_date,
         offense_ina_236c_yes_no, case_ina_236c_yes_no).
       wiring_note: >
-        To adopt this release, repoint stays_file in _targets.R to the
-        _20260806 file and re-verify the arrest analyses (mn-arrests.qmd,
-        nationwide-arrests.qmd, state_arrests_export), which currently
-        expect the 20260514 schema and data through March 2026.
+        Wired 2026-10-21: stays_file in _targets.R repointed to the _20260806
+        file. All columns used by the arrest analyses (unique_identifier,
+        stay_book_in_date_time, detention_facility_code_first/_last,
+        detention_facility_codes_all, detention_facility_first/_last,
+        stay_release_reason, departure_country, citizenship_country) are
+        present; duplicate_likely no longer exists in the stays schema but
+        was only ever filtered on arrests. The 20260514 release remains on
+        disk as a frozen archive; arrest analyses should be re-verified
+        (mn-arrests.qmd, nationwide-arrests.qmd, state-arrests.qmd,
+        state_arrests_export).
 
 import:
   source_url: "https://github.com/deportationdata/ice/raw/refs/heads/main/data/detention-stays-latest.parquet"

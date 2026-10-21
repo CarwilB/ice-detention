@@ -16,9 +16,9 @@ source:
     Individual-level ICE arrest records obtained via FOIA and processed by the
     Deportation Data Project. Each row represents one arrest (apprehension)
     action. A person may appear more than once if arrested multiple times.
-    DDP adds a duplicate_likely flag and drops blank/redacted columns.
-    This dataset can be linked to the detention stays and stints datasets
-    via unique_identifier.
+    DDP adds duplicate_likely and a duplicate-episode family of flags, and
+    drops blank/redacted columns. This dataset can be linked to the detention
+    stays and stints datasets via unique_identifier.
   citation: >
     Blair, Graeme, David Hausman, and Phil Neff. 2025. "Immigration and Customs
     Enforcement Individual-Level Data: An Introduction."
@@ -26,77 +26,106 @@ source:
   license: "CC-0 (no rights reserved)"
 
 data:
-  filename: "data/ddp/arrests-latest.parquet"
+  filename: "data/ddp/arrests-latest_20260806.parquet"
+  ddp_release: "20260806"
   format: "Parquet"
-  rows: 713464
-  columns: 28
+  rows: 896393
+  columns: 34
   unit_of_observation: >
     One row per arrest (apprehension) event. A person arrested more than once
     appears multiple times. Link to stays/stints via unique_identifier.
   temporal_coverage:
     apprehension_date_min: "2022-10-01"
-    apprehension_date_max: "2026-03-11"
-  distinct_persons: 651237
-  duplicate_likely_flagged: 14343
+    apprehension_date_max: "2026-08-06"
+  distinct_persons: 812824
+
+  schema_changes_from_20260330: >
+    DDP reworked the schema in the 20260806 release. Dropped (7):
+    apprehension_type, apprehension_state, arresting_agency,
+    apprehension_site_landmark, operation, toa_current_duty_site,
+    case_criminality. Added (13): event_landmark,
+    apprehension_state_filled_in, apprehension_state_fill_source,
+    apprehension_state_original, apprehension_city_original,
+    apprehension_city_common_case, final_program_group,
+    age_at_apprehension_approximate, apprehension_method_simple,
+    final_order_before_apprehension, duplicate_episode_identifier,
+    duplicate_episode_first, duplicate_drop_row. apprehension_criminality,
+    case_status, case_category, case_threat_level, and final_order_yes_no
+    gained far fewer NAs than before (case_* fields now have a single
+    25,133-row NA block).
 
   key_identifiers:
     unique_identifier: >
       Anonymized person ID corresponding to an individual's A-number.
-      Links to the stays and stints datasets. 14,343 NAs (same rows
-      where duplicate_likely is also NA).
+      Links to the stays and stints datasets. 19,719 NAs (same rows where
+      duplicate_likely is also NA).
     duplicate_likely: >
       TRUE for arrests flagged as likely duplicates — same person within
-      24 hours of another arrest record. 14,343 NAs alongside
-      unique_identifier NAs.
+      24 hours of another arrest record. 19,735 TRUE, 19,719 NAs.
+    duplicate_episode_identifier / duplicate_episode_first / duplicate_drop_row: >
+      New duplicate-episode family in 20260806. duplicate_episode_identifier
+      groups same-person arrest episodes; duplicate_episode_first marks the
+      first row of each episode; duplicate_drop_row marks rows DDP
+      recommends dropping (10,024 TRUE). DDP retains flagged rows — the
+      project's processing must not filter them (matches DDP's own scripts).
 
   geography:
-    apprehension_state: >
-      U.S. state where arrest occurred, as a full uppercase name
-      (e.g. "MINNESOTA", "TEXAS"). 107,376 NAs.
-    apprehension_aor: >
-      ICE Area of Responsibility (ERO field office jurisdiction).
-      7,383 NAs.
-    apprehension_site_landmark: >
-      Named location or landmark of the arrest (courthouse, address, etc.).
-      15,257 NAs.
-    toa_current_duty_site: >
-      ICE officer's current duty station; provides an alternative
-      geographic indicator when apprehension_state is missing.
+    apprehension_state_filled_in: >
+      U.S. state where arrest occurred, as a full uppercase name. DDP now
+      imputes missing states from four sources (see fill_source). 43,431
+      remain NA. Replaces apprehension_state (dropped 20260806).
+    apprehension_state_original: >
+      The raw apprehension_state before DDP's imputation. 108,903 NAs
+      (vs. 107,376 NAs in the 20260330 release).
+    apprehension_state_fill_source: >
+      How the filled-in state was derived: original (787,490), AOR appears
+      in one state 99% (13,310), Landmark appears in one state 99% (40,211),
+      Abbreviation in landmark field (10,059), episode (1,892); NA where
+      state remains missing.
+    event_landmark: >
+      Renamed and reformatted successor to apprehension_site_landmark
+      (201,073 NAs). Many values now embed the state, e.g. "JACKSONVILLE
+      FL ERO"; content is not identical to the old field on matched rows.
+    apprehension_city_original / apprehension_city_common_case: >
+      Raw arrest city and a case-normalized variant (~111k NAs).
 
   arrest_fields:
     apprehension_date: "Date of arrest (Date; no NAs)."
     apprehension_date_time: "Datetime of arrest (POSIXct; no NAs)."
-    apprehension_type: >
-      Targeted (planned operation against specific individual) or
-      Collateral (incidental arrest during another operation).
-      467,445 NAs — missing for most of the pre-FY25 data.
-    apprehension_method: "Method of arrest (e.g. Criminal arrest, Administrative)."
+    apprehension_method: "Raw method of arrest (no NAs)."
+    apprehension_method_simple: >
+      DDP-normalized method: At-Large Arrest (408,055), Custodial Arrest
+      (389,386), 287(g) Program (53,219), Other (45,733). No NAs.
     apprehension_criminality: >
       ICE criminality classification at time of arrest:
       1 Convicted Criminal / 2 Pending Criminal Charges /
-      3 Other Immigration Violator.
-    arresting_agency: "Agency that made the arrest (e.g. ICE, CBP)."
-    operation: "Named ICE enforcement operation, if applicable. 535,105 NAs."
+      3 Other Immigration Violator. No NAs in 20260806 (previously sparse).
+    final_order_before_apprehension: >
+      New boolean: whether a final order of removal predated the arrest.
 
   case_and_legal_fields:
-    case_status: "Case status at time of record extraction."
-    case_category: "ICE case category. 39,922 NAs."
-    case_criminality: "Criminality classification at case level. 18,760 NAs."
+    case_status: "Case status at time of record extraction. 25,133 NAs."
+    case_category: "ICE case category. 25,133 NAs."
     case_threat_level: >
       ICE threat level 1/2/3 or the string "NA" (non-criminal).
-      18,760 true NAs. Same string-vs-NA caveat as the stints dataset.
-    final_order_yes_no: "Whether a final order of removal is in effect."
-    final_order_date: "Date of final order. 324,692 NAs."
+      25,133 NAs.
+    final_order_yes_no: "Whether a final order of removal is in effect. 25,133 NAs."
+    final_order_date: "Date of final order. 396,938 NAs."
+    final_program: "Final program classification (no NAs)."
+    final_program_group: >
+      DDP grouping of final_program — constant "ICE" in 20260806; not useful.
 
   demographic_fields:
     gender: "Male / Female."
-    birth_year: "Year of birth (integer). 2 NAs."
+    birth_year: "Year of birth (integer; no NAs)."
+    age_at_apprehension_approximate: >
+      New: approximate age at arrest in years, derived by DDP from
+      birth_year and apprehension_date (no NAs).
     citizenship_country: "Country of citizenship as recorded by ICE."
 
   removal_fields:
-    departed_date: "Date of departure/removal. 273,664 NAs."
-    departure_country: "Country removed to. 273,836 NAs."
-    final_program: "Final program classification."
+    departed_date: "Date of departure/removal. 314,226 NAs."
+    departure_country: "Country removed to. 314,442 NAs."
 
   provenance_fields:
     file_original: "Source XLSX filename from the FOIA response."
@@ -105,17 +134,51 @@ data:
 
   crosswalk_to_stays:
     note: >
-      99.6% of post-inauguration Minnesota arrests (unique_identifier
-      values) match a row in the detention stays dataset. The arrests
-      dataset covers 651,237 distinct persons vs. 1,014,866 in stays,
-      reflecting that some persons are detained without a preceding
-      arrest record in this FOIA production (e.g. transfers from other
-      agencies, or arrests in a different FOIA file).
+      Arrests link to stays/stints via unique_identifier. The 20260806
+      release covers 812,824 distinct persons vs. the stays dataset,
+      reflecting that some persons are detained without a preceding arrest
+      record in this FOIA production.
     join_key: unique_identifier
 
 import:
   source_url: "https://github.com/deportationdata/ice/raw/refs/heads/main/data/arrests-latest.parquet"
-  local_path: "data/ddp/arrests-latest.parquet"
+  local_path: "data/ddp/arrests-latest_20260806.parquet"
   imported_with: "arrow::read_parquet()"
-  pipeline_target: "not yet wired as a pipeline target"
-  date_downloaded: "2026-05-24"
+  pipeline_target: "arrests_file (format = 'file') -> arrests_raw"
+  date_downloaded: "2026-10-03"
+
+versions:
+  - release: "20260806"
+    local_file: "data/ddp/arrests-latest_20260806.parquet"
+    rows: 896393
+    columns: 34
+    date_min: "2022-10-01"
+    date_max: "2026-08-06"
+    distinct_persons: 812824
+    date_downloaded: "2026-10-03"
+    changes_from_20260330: >
+      Schema rework: apprehension_state replaced by the filled-in /
+      original / fill_source trio; apprehension_site_landmark renamed to
+      event_landmark (values reformatted, often with state embedded);
+      apprehension_type, arresting_agency, operation, toa_current_duty_site,
+      and case_criminality dropped; duplicate-episode flag family,
+      apprehension_method_simple, age_at_apprehension_approximate,
+      final_order_before_apprehension, and city columns added. MN arrests
+      (apprehension_state_filled_in == MINNESOTA) rise from 8,235 to 9,336.
+      Downstream code in R/state-arrests.R, R/mn-arrests.R, and
+      nationwide-arrests.qmd still references dropped column names and
+      requires adaptation.
+  - release: "20260330"
+    local_file: "data/ddp/arrests-latest_20260330.parquet"
+    rows: 713464
+    columns: 28
+    date_min: "2022-10-01"
+    date_max: "2026-03-11"
+    distinct_persons: 651237
+    duplicate_likely_flagged: 14343
+    date_downloaded: "2026-05-24"
+    notes: >
+      Original wired release. apprehension_type had 467,445 NAs (missing for
+      most pre-FY25 data); apprehension_state 107,376 NAs;
+      apprehension_aor 7,383 NAs; apprehension_site_landmark 15,257 NAs;
+      operation 535,105 NAs.
