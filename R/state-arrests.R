@@ -25,11 +25,265 @@ STATE_ABBREVS <- c(
   "WISCONSIN" = "wi", "WYOMING" = "wy"
 )
 
+# ── MN general-area apprehension codes ────────────────────────────────────────
+# Three-letter arresting-office codes that appear in apprehension_site_landmark
+# as "XXX GENERAL AREA, NON-SPECIFIC". Locations inferred from each code's modal
+# toa_current_duty_site across all arrests (DDP 20260806 release); e.g. STC is
+# South Texas (Pearsall), not St. Cloud. Only Minnesota-located codes are
+# mapped to counties by .parse_county_landmark(): on rows where the code's
+# office sits outside MN, apprehension_state = "MINNESOTA" conflicts with the
+# office's actual state, so assigning that state's county to an MN arrest would
+# fabricate geography.
+mn_general_area_codes <- tibble::tribble(
+  ~code, ~location,                                     ~county,         ~state,
+  "SPM", "St. Paul ERO",                                "Ramsey",        "MN",
+  "XMS", "HSI St. Paul",                                "Ramsey",        "MN",
+  "XDU", "HSI RA Duluth",                               "St. Louis",     "MN",
+  "INT", "HSI RA Duluth (International Falls)",         "Koochiching",   "MN",
+  "GPM", "HSI RA Duluth (Grand Portage)",               "Cook",          "MN",
+  "GRF", "Grand Forks ERO sub-office",                  "Grand Forks",   "ND",
+  "SFD", "Sioux Falls sub-office",                      "Minnehaha",     "SD",
+  "EPC", "El Paso, TX (SPC sub-office)",                "El Paso",       "TX",
+  "ELP", "El Paso, TX",                                 "El Paso",       "TX",
+  "SNA", "San Antonio ERO",                             "Bexar",         "TX",
+  "STC", "South Texas Detention Facility (Pearsall)",   "Frio",          "TX",
+  "KCD", "Karnes City sub-office",                      "Karnes",        "TX",
+  "HLG", "Harlingen",                                   "Cameron",       "TX",
+  "EDN", "Edinburg sub-office",                         "Hidalgo",       "TX",
+  "PIC", "Port Isabel",                                 "Cameron",       "TX",
+  "SPG", "Springfield, MO sub-office",                  "Greene",        "MO",
+  "CHI", "Chicago",                                     "Cook",          "IL",
+  "AUS", "Austin, TX",                                  "Travis",        "TX",
+  "ABQ", "Albuquerque",                                 "Bernalillo",    "NM",
+  "SAC", "Sacramento sub-office",                       "Sacramento",    "CA",
+  "SMA", "Santa Maria sub-office",                      "Santa Barbara", "CA",
+  "LVG", "Las Vegas",                                   "Clark",         "NV"
+)
+
+# ── MN OTHER apprehension-site landmarks ──────────────────────────────────────
+# Exact-match lookup for loc_type == "OTHER" landmarks in Minnesota arrests:
+# state correctional facilities, federal facilities, county jails, police
+# departments, and probation offices. State is MN unless noted; out-of-state
+# entries are kept for documentation but mapped to NA county for the MN
+# choropleth (same rule as mn_general_area_codes).
+mn_other_landmarks <- tibble::tribble(
+  ~landmark,                                                          ~county,     ~state,
+  "APPLE VALLEY, MN POLICE DEPARTMENT",                               "Dakota",    "MN",
+  "BEADLE CO REGIONAL CORR. CENT., HURON, SD",                        "Beadle",    "SD",
+  "BLOOMINGTON POLICE DEPARTMENT, MN",                                "Hennepin",  "MN",
+  "COTTONWOOD CO JAIL, WINDOM, MN",                                   "Cottonwood", "MN",
+  "FCI SANDSTONE- MN",                                                "Pine",      "MN",
+  "FCI WASECA- MN",                                                   "Waseca",    "MN",
+  "FMC ROCHESTER- MN",                                                "Olmsted",   "MN",
+  "GRAND FORKS ICE ERO OFFICE",                                       "Grand Forks", "ND",
+  "GRAND FORKS COUNTY JAIL",                                          "Grand Forks", "ND",
+  "LAKE REGIONAL LAW ENFORCEMENT CENTER, ND",                         "Ramsey",    "ND",
+  "MINNETONKA PD, MN",                                                "Hennepin",  "MN",
+  "MN CORR FACILITY - SHAKOPEE, MN",                                  "Scott",     "MN",
+  "MN CORR FACILITY FARIBAULT, MN",                                   "Rice",      "MN",
+  "MN CORR FACILITY MOOSE LAKE, MN",                                  "Carlton",   "MN",
+  "MN CORR FACILITY OAK PARK HEIGHTS, MN",                            "Washington", "MN",
+  "MN CORR FACILITY RUSH CITY, MN",                                   "Chisago",   "MN",
+  "MN CORR FACILITY, MN",                                             NA,          "MN",
+  "MN CORR FACILITY-LINO LAKES, MN",                                  "Anoka",     "MN",
+  "MN CORR FACILITY-ST. CLOUD, MN",                                   "Stearns",   "MN",
+  "MN OCRR FACILITY STILLWATER, MN",                                  "Washington", "MN",
+  "MN PROBATION - CO - HENNEPIN CO COMM CORR REHAB - MPLS, MN",       "Hennepin",  "MN",
+  "MN PROBATION - CO - KANDIYOHI CO COMM CORR - WILLMAR, MN",         "Kandiyohi", "MN",
+  "MN PROBATION - CO - MOWER CO CORR SERV - AUSTIN, MN",              "Mower",     "MN",
+  "MN PROBATION - CO - ROCK-NOBLES COMM CORR - WORTHINGTON, MN",      "Nobles",    "MN",
+  "MN PROBATION - CO - STEELE CO CRT SERV - OWATONNA, MN",            "Steele",    "MN",
+  "MN PROBATION - CO - WRIGHT CO COURT SERV - BUFFALO, MN",           "Wright",    "MN",
+  "MN PROBATION - FED - FEDERAL COURTHOUSE - HENNEPIN CO - MPLS, MN", "Hennepin",  "MN",
+  "MN PROBATION - FED - FEDERAL COURTHOUSE - RAMSEY CO - ST PAUL, MN", "Ramsey",   "MN",
+  "MN PROBATION - STATE - 6 W COMM CORR - MONTEVIDEO, MN",            "Chippewa",  "MN",
+  "MN PROBATION - STATE - MN DEPT OF CORR - CHASKA, MN",              "Carver",    "MN",
+  "MN PROBATION - STATE - MN DEPT OF CORR - LYON CO - MARSHALL, MN",  "Lyon",      "MN",
+  "MOOSE LAKE CORR FACILITY, MN",                                     "Carlton",   "MN",
+  "NOBLES CO JAIL, WORTHINGTON, MN",                                  "Nobles",    "MN",
+  "PIPESTONE CO JAIL, PIPESTONE, MN",                                 "Pipestone", "MN",
+  "RICHFIELD POLICE DEPARTMENT, MN",                                  "Hennepin",  "MN",
+  "ROSEAU CO JAIL, ROSEAU, MN",                                       "Roseau",    "MN",
+  # Values first seen in the 20260806 release
+  "WILLMAR, MN AREA",                                                 "Kandiyohi", "MN",
+  "STEVENS CO JAIL, MN",                                              "Stevens",   "MN",
+  "CRYSTAL PD, MN",                                                   "Hennepin",  "MN",
+  "NORTHEAST REGIONAL CORRECTIONAL CENTER, MN",                       "St. Louis", "MN",
+  "MN PROBATION - CO - SHERBURNE CO PROB DEPT - ELK RIVER, MN",       "Sherburne", "MN",
+  "BROOKINGS CO JAIL, BROOKINGS, SD",                                 "Brookings", "SD",
+  "ST. TAMMANY PARISH, LA",                                           "St. Tammany Parish", "LA",
+  "US MARSHAL SERVICE, SIOUX FALLS, SD",                              "Minnehaha", "SD",
+  "US MARSHALS SERVICE, ND",                                          NA,          "ND",
+  "US MARSHALS, MN",                                                  NA,          "MN",
+  "WILLIAMSBURG FEDERAL CORRECTIONAL INSTITUTION",                    "Williamsburg County", "SC"
+)
+
+# ── Named landmark regex patterns ─────────────────────────────────────────────
+# Regex patterns matched (first match wins, in table order) against
+# apprehension_site_landmark before the general-area / OTHER / "X COUNTY"
+# fallbacks in .parse_landmark_county_state(). One row per pattern with the
+# county and state it implies; NA county means the pattern pins the state but
+# not the county. state = "report" means the report's own state (the only
+# sensible attribution for MN-report landmarks); state = "suffix" means the
+# ", XX" state suffix in the landmark, falling back to the report state; a
+# 2-letter abbr pins a specific state. Extend or replace this table per
+# state as needed.
+mn_landmark_patterns <- tibble::tribble(
+  ~pattern,                                            ~county,     ~state,
+  # MSP airport sits in Hennepin County — must precede the "ST. PAUL" arm
+  "MINNEAPOLIS.*INTERNATIONAL AIRPORT",                "Hennepin",  "suffix",
+  "SPM GENERAL|ST\\.? PAUL",                           "Ramsey",    "report",
+  # Whipple Federal Building is in Minneapolis (Hennepin), not Ramsey
+  "WHIPPLE",                                           "Hennepin",  "report",
+  "BLOOMINGTON|MINNEAPOLIS|HENNEPIN",                  "Hennepin",  "report",
+  "US MARSHALS, MN",                                   NA,          "report"
+)
+
+# ── Airport landmark locations ────────────────────────────────────────────────
+# Exact-match lookup for named airports appearing in apprehension_site_landmark
+# (airport arrests can happen in any state's report, so this table is
+# location-independent rather than per-report). County is where the airport
+# physically sits; DFW straddles county lines and is attributed to Tarrant,
+# where most of the airport lies.
+airport_landmarks <- tibble::tribble(
+  ~landmark,                                                            ~county,        ~state,
+  "BOSTON LOGAN AIRPORT",                                               "Suffolk",      "MA",
+  "CAP TUCSON INTERNATIONAL AIRPORT AZ STATE",                          "Pima",         "AZ",
+  "CHARLOTTE AIRPORT",                                                  "Mecklenburg",  "NC",
+  "CHI O'HARE INTERNATIONAL AIRPORT",                                   "Cook",         "IL",
+  "CHICAGO O'HARE AIRPORT",                                             "Cook",         "IL",
+  "CINCINNATI/KENTUCKY INT AIRPORT",                                    "Boone",        "KY",
+  "DFW AIRPORT",                                                        "Tarrant",      "TX",
+  "HARTSFIELD (AIRPORT) OFFICE (FEDERAL PROBATION & PAROLE)",           "Fulton",       "GA",
+  "LEAR - SKY HARBOR AIRPORT",                                          "Maricopa",     "AZ",
+  "MINNEAPOLIS ST. PAUL INTERNATIONAL AIRPORT, MN",                     "Hennepin",     "MN",
+  "ORLANDO INTERNATIONAL AIRPORT",                                      "Orange",       "FL",
+  "PORTLAND INTERNATIONAL AIRPORT",                                     "Multnomah",    "OR",
+  "SAN BERNARDINO INTERNATIONAL AIRPORT",                               "San Bernardino", "CA",
+  "SANFORD ORLANDO INTERNATIONAL AIRPORT",                              "Seminole",     "FL"
+)
+
+# ── Arrests schema compatibility ──────────────────────────────────────────────
+# DDP reworked the arrests schema in the 20260806 release: apprehension_state
+# became the apprehension_state_filled_in/_original/_fill_source trio, and
+# apprehension_site_landmark was renamed event_landmark. This shim restores
+# the old column names ( preferring original fields when present) so all
+# builders and reports can consume either schema. apprehension_type and
+# other dropped columns have no replacement and are recreated as all-NA.
+.normalize_arrests_schema <- function(arrests, quiet = FALSE) {
+  fallbacks <- c(
+    apprehension_state         = "apprehension_state_filled_in",
+    apprehension_site_landmark = "event_landmark"
+  )
+  for (old in names(fallbacks)) {
+    new <- fallbacks[[old]]
+    if (!old %in% names(arrests) && new %in% names(arrests)) {
+      if (!quiet) message(glue::glue("arrests: '{old}' not present; using '{new}'"))
+      arrests[[old]] <- arrests[[new]]
+    }
+  }
+  if (!"apprehension_type" %in% names(arrests)) {
+    arrests$apprehension_type <- NA_character_
+  }
+  arrests
+}
+
 # ── County name parsing ───────────────────────────────────────────────────────
 
-#' Extract county name from apprehension_site_landmark.
-#' Uses a regex for the general "XXXXX COUNTY" pattern, plus state-specific
-#' augmentations for states with large non-specific landmark categories.
+#' Parse county AND state from apprehension_site_landmark values.
+#'
+#' Returns one row per landmark with `county` and `state` (2-letter abbr),
+#' including out-of-state locations so they can be mapped separately.
+#' Resolution order: named regex patterns (`landmark_patterns`, first match
+#' wins), airport exact-match lookup (`airport_landmarks`), then a generic
+#' "AIRPORT" arm attributing state via the ", XX" suffix (falling back to the
+#' report state; county unknown), general-area code lookup (`GENERAL AREA`
+#' landmarks), OTHER landmark exact-match lookup, then the general "X COUNTY"
+#' regex attributed to the ", XX" state suffix (falling back to the report
+#' state; NA if neither is available). The default lookup tables are MN-report
+#' specific; other states should pass their own tables.
+.parse_landmark_county_state <- function(landmark, state_upper,
+                                         landmark_patterns = mn_landmark_patterns,
+                                         ga_codes          = mn_general_area_codes,
+                                         other_landmarks   = mn_other_landmarks,
+                                         airports          = airport_landmarks) {
+  abbr <- toupper(unname(STATE_ABBREVS[state_upper]))
+  general <- stringr::str_to_title(
+    stringr::str_remove(
+      stringr::str_extract(stringr::str_to_upper(landmark),
+                           "^([A-Z .'-]+) COUNTY"),
+      " COUNTY$"
+    )
+  )
+  suffix <- sub(", ", "", stringr::str_to_upper(
+    stringr::str_extract(stringr::str_to_upper(landmark), ", [A-Z]{2}$")
+  ))
+
+  # First matching pattern row (in table order) supplies county/state;
+  # state == "report" defers to the report's state.
+  n <- length(landmark)
+  matched <- rep(FALSE, n)
+  pattern_county <- rep(NA_character_, n)
+  pattern_state  <- rep(NA_character_, n)
+  for (i in seq_len(nrow(landmark_patterns))) {
+    hit <- stringr::str_detect(landmark, landmark_patterns$pattern[i]) & !matched
+    matched <- matched | hit
+    st <- if (landmark_patterns$state[i] == "report") {
+      abbr
+    } else if (landmark_patterns$state[i] == "suffix") {
+      dplyr::coalesce(suffix, abbr)
+    } else {
+      landmark_patterns$state[i]
+    }
+    pattern_county <- dplyr::if_else(hit, landmark_patterns$county[i], pattern_county)
+    pattern_state  <- dplyr::if_else(hit, st, pattern_state)
+  }
+
+  tibble::tibble(landmark = landmark) |>
+    dplyr::mutate(code = stringr::word(stringr::str_to_upper(landmark), 1)) |>
+    dplyr::left_join(
+      ga_codes |> dplyr::select(code, ga_county = county, ga_state = state),
+      by = "code"
+    ) |>
+    dplyr::left_join(
+      other_landmarks |>
+        dplyr::select(landmark, other_county = county, other_state = state),
+      by = "landmark"
+    ) |>
+    dplyr::left_join(
+      airports |>
+        dplyr::select(landmark, airport_county = county, airport_state = state),
+      by = "landmark"
+    ) |>
+    dplyr::mutate(
+      county = dplyr::case_when(
+        !is.na(pattern_county)                                           ~ pattern_county,
+        !is.na(airport_county)                                           ~ airport_county,
+        # Unrecognized airports: state via ", XX" suffix, county unknown
+        stringr::str_detect(landmark, "AIRPORT")                         ~ NA_character_,
+        stringr::str_detect(landmark, "GENERAL AREA")                    ~ ga_county,
+        !is.na(other_county)                                             ~ other_county,
+        # "X COUNTY" landmarks must carry an explicit ", XX" state suffix —
+        # otherwise out-of-state jails (e.g. ADAMS COUNTY JAIL, IA) leak in
+        !is.na(general)                                                  ~ general,
+        TRUE                                                             ~ NA_character_
+      ),
+      state = dplyr::case_when(
+        !is.na(pattern_state)                                            ~ pattern_state,
+        !is.na(airport_state)                                            ~ airport_state,
+        stringr::str_detect(landmark, "AIRPORT")                         ~ dplyr::coalesce(suffix, abbr),
+        stringr::str_detect(landmark, "GENERAL AREA")                    ~ ga_state,
+        !is.na(other_state)                                              ~ other_state,
+        !is.na(general)                                                  ~ dplyr::coalesce(suffix, abbr),
+        TRUE                                                             ~ NA_character_
+      )
+    ) |>
+    dplyr::select(landmark, county, state)
+}
+
+#' Extract county name from apprehension_site_landmark (report state only).
+#' Out-of-state locations return NA; see .parse_landmark_county_state() when
+#' the state attribution is also needed.
 .parse_county_landmark <- function(landmark, state_upper = NULL) {
   general <- stringr::str_to_title(
     stringr::str_remove(
@@ -40,15 +294,191 @@ STATE_ABBREVS <- c(
   )
 
   if (!is.null(state_upper) && state_upper == "MINNESOTA") {
-    dplyr::case_when(
-      stringr::str_detect(landmark, "SPM GENERAL|ST\\.? PAUL|US MARSHALS, MN|WHIPPLE") ~ "Ramsey",
-      stringr::str_detect(landmark, "BLOOMINGTON|MINNEAPOLIS|HENNEPIN")                ~ "Hennepin",
-      !is.na(general)                                                                  ~ general,
-      TRUE                                                                             ~ NA_character_
-    )
+    geo <- .parse_landmark_county_state(landmark, state_upper)
+    dplyr::if_else(geo$state == "MN", geo$county, NA_character_)
   } else {
     general
   }
+}
+
+# ── County choropleth (leaflet) ───────────────────────────────────────────────
+
+# Lower bounds of non-overlapping count bands: 1; 2–9; 10–49; 50–99;
+# 100–499; 500–999; 1,000–4,999; 5,000–9,999; ... The last returned low is the
+# floor of the open-ended top band and is <= max_n.
+.county_band_lows <- function(max_n) {
+  lows <- c(1, 2, 10, 50, 100, 500, 1000, 5000, 10000, 50000, 100000,
+            500000, 1000000, 5000000, 10000000)
+  lows[lows <= max_n]
+}
+
+.county_band_labels <- function(lows, max_n) {
+  fmt <- function(x) format(x, big.mark = ",", trim = TRUE, scientific = FALSE)
+  vapply(seq_along(lows), function(i) {
+    if (i < length(lows)) {
+      upper <- lows[i + 1] - 1
+      if (upper == lows[i]) fmt(lows[i]) else paste0(fmt(lows[i]), "\u2013", fmt(upper))
+    } else if (max_n == lows[i]) {
+      fmt(lows[i])
+    } else {
+      paste0(fmt(lows[i]), "+")
+    }
+  }, character(1))
+}
+
+# Band index per count: i-th band is [lows[i], lows[i+1] - 1], top band is
+# [lows[end], max_n]. n < lows[1] (i.e. 0) gets NA.
+.county_band_index <- function(n, lows, max_n) {
+  idx <- rep(NA_integer_, length(n))
+  for (i in seq_along(lows)) {
+    upper <- if (i < length(lows)) lows[i + 1] - 1 else max_n
+    idx[n >= lows[i] & n <= upper] <- i
+  }
+  idx
+}
+
+# Normalize a county name for joining maps-package polygons to parsed counts
+# (case, periods, spaces, "Saint" -> "St").
+.norm_county_key <- function(x) {
+  x <- tolower(x)
+  x <- gsub("[. ']", "", x)
+  sub("^saint", "st", x)
+}
+
+#' County choropleth of arrests with landmark hover detail.
+#'
+#' Zero-arrest counties in the report state render as transparent outlines;
+#' counties with one arrest share the lightest fill; legend labels are
+#' non-overlapping (1, 2–9, 10–49, 50–99, ...). Hovering a county shows its
+#' bold arrest count and the top apprehension-site landmarks within it.
+#' Counties in states adjoining the report state (rows in `county_counts`
+#' with a different `state`) are overlaid on the same map, outlined with a
+#' heavier border to set them apart.
+#'
+#' @param county_counts    Tibble with `county` and `n`; an optional `state`
+#'   column (2-letter abbr) adds out-of-state counties to the map.
+#' @param county_landmarks Tibble with `county`, `landmark`, `n` (and optional
+#'   `state`); landmark counts within each county; optional.
+#' @param state_name       Uppercase report-state name.
+#' @param include_states   2-letter abbreviations of additional states to draw
+#'   (e.g. states adjoining the report state). NULL draws every state present
+#'   in `county_counts`.
+#' @param n_top_landmarks  Number of landmark lines in the hover label.
+#' @param fill_palette     ColorBrewer palette for positive counts.
+#' @param zoom             Initial leaflet zoom.
+county_choropleth <- function(county_counts,
+                              county_landmarks = NULL,
+                              state_name       = "MINNESOTA",
+                              include_states   = NULL,
+                              n_top_landmarks  = 3,
+                              fill_palette     = "YlOrRd",
+                              zoom             = 6) {
+  base_abbr <- toupper(unname(STATE_ABBREVS[state_name]))
+  if (!"state" %in% names(county_counts)) county_counts$state <- base_abbr
+  county_counts$state <- toupper(county_counts$state)
+
+  states_to_draw <- sort(unique(county_counts$state))
+  if (!is.null(include_states)) {
+    states_to_draw <- intersect(states_to_draw, c(base_abbr, toupper(include_states)))
+  }
+
+  abbr_to_name <- function(abbr) {
+    tolower(names(STATE_ABBREVS)[match(abbr, toupper(unname(STATE_ABBREVS)))])
+  }
+
+  sf_by_state <- lapply(states_to_draw, function(ab) {
+    sf <- sf::st_as_sf(
+      maps::map("county", abbr_to_name(ab), fill = TRUE, plot = FALSE)
+    ) |>
+      dplyr::mutate(
+        # strip everything before the first comma ("north dakota,", "minnesota,")
+        county = tools::toTitleCase(sub("^[^,]+,", "", ID)),
+        key    = paste(ab, .norm_county_key(county)),
+        state  = ab
+      ) |>
+      dplyr::left_join(
+        county_counts |>
+          dplyr::filter(state == ab) |>
+          dplyr::mutate(key = paste(ab, .norm_county_key(county))) |>
+          dplyr::select(key, n),
+        by = "key"
+      ) |>
+      dplyr::mutate(n = dplyr::coalesce(n, 0L))
+    # adjoining states: only counties with arrests, drawn with a heavier outline
+    if (ab != base_abbr) sf <- sf |> dplyr::filter(n > 0)
+    sf
+  })
+  county_sf <- do.call(rbind, sf_by_state)
+
+  if (!is.null(county_landmarks) && nrow(county_landmarks) > 0) {
+    if (!"state" %in% names(county_landmarks)) county_landmarks$state <- base_abbr
+    county_landmarks$state <- toupper(county_landmarks$state)
+    lm_detail <- county_landmarks |>
+      dplyr::mutate(key = paste(state, .norm_county_key(county))) |>
+      dplyr::group_by(key) |>
+      dplyr::slice_max(n, n = n_top_landmarks) |>
+      dplyr::summarise(
+        detail = paste(paste0(landmark, " ", n), collapse = "<br>"),
+        .groups = "drop"
+      )
+    county_sf <- county_sf |> dplyr::left_join(lm_detail, by = "key")
+  } else {
+    county_sf$detail <- NA_character_
+  }
+
+  max_n <- max(county_sf$n, 1L)
+  lows  <- .county_band_lows(max_n)
+  pal   <- leaflet::colorBin(fill_palette, domain = c(0, max_n),
+                             bins = c(0, lows[-1], max_n))
+  band_idx <- .county_band_index(county_sf$n, lows, max_n)
+
+  county_sf <- county_sf |>
+    dplyr::mutate(
+      display_name = dplyr::if_else(state == base_abbr,
+                                    paste0(county, " County"),
+                                    paste0(county, " County, ", state)),
+      fill_col  = dplyr::if_else(n == 0, "transparent", unname(pal(lows)[band_idx])),
+      line_col  = dplyr::if_else(state == base_abbr, "#888", "#444"),
+      line_w    = dplyr::if_else(n == 0, 0.4, dplyr::if_else(state == base_abbr, 0.8, 1.4)),
+      hover = dplyr::case_when(
+        n == 0 ~ sprintf("<b>%s: 0</b>", display_name),
+        is.na(detail) ~ sprintf("<b>%s: %s</b>", display_name, format(n, big.mark = ",", trim = TRUE)),
+        TRUE ~ sprintf(
+          "<b>%s: %s</b><br>%s",
+          display_name, format(n, big.mark = ",", trim = TRUE), detail
+        )
+      )
+    )
+
+  # Legend: one entry per non-empty band, colors sampled at band lower bounds
+  present   <- sort(unique(band_idx[!is.na(band_idx)]))
+  band_lab  <- .county_band_labels(lows, max_n)
+  legend_cols <- unname(pal(lows)[present])
+  legend_labs <- band_lab[present]
+
+  base_sf <- sf_by_state[[match(base_abbr, states_to_draw)]]
+  bb      <- sf::st_bbox(base_sf)
+  center  <- c((bb[["xmin"]] + bb[["xmax"]]) / 2, (bb[["ymin"]] + bb[["ymax"]]) / 2)
+  hover_html <- lapply(county_sf$hover, htmltools::HTML)
+
+  leaflet::leaflet(county_sf, options = leaflet::leafletOptions(minZoom = 5)) |>
+    leaflet::addPolygons(
+      fillColor  = ~fill_col,
+      fillOpacity = 0.8,
+      color      = ~line_col,
+      weight     = ~line_w,
+      label      = hover_html,
+      labelOptions = leaflet::labelOptions(direction = "top", sticky = TRUE)
+    ) |>
+    leaflet::addLegend(
+      colors   = legend_cols,
+      labels   = legend_labs,
+      values   = ~n,
+      title    = "Arrests",
+      position = "bottomright",
+      opacity  = 0.9
+    ) |>
+    leaflet::setView(lng = center[1], lat = center[2], zoom = zoom)
 }
 
 # ── Geocoding lookup ──────────────────────────────────────────────────────────

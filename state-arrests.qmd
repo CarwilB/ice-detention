@@ -326,8 +326,9 @@ geo_lookup_names <- bind_rows(
 
 short_name <- function(code) {
   nm <- geo_lookup_names$name[match(code, geo_lookup_names$code)]
-  ifelse(is.na(nm), code,
-         paste0(code, "\n(", str_trunc(nm, 22, ellipsis = "…"), ")"))
+  if (length(nm) == 0) nm <- rep(NA_character_, length(code))
+  dplyr::if_else(is.na(nm), code,
+                 paste0(code, "\n(", str_trunc(nm, 22, ellipsis = "…"), ")"))
 }
 
 san <- d$sankey_data |>

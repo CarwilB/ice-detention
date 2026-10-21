@@ -29,6 +29,7 @@ library(knitr)
 
 source(here::here("add-carto-tiles.R"))
 source(here::here("R", "removal-grid.R"))
+source(here::here("R", "state-arrests.R"))
 
 d <- tar_read(mn_arrests_data)
 cutoff_str <- format(d$cutoff, "%B %e, %Y")
@@ -133,38 +134,10 @@ County jails, federal facilities, and specific police departments allow more pre
 placement for the remainder.
 
 ```{r county-choropleth}
-# Build MN county sf from maps package
-mn_sf <- sf::st_as_sf(
-  maps::map("county", "minnesota", fill = TRUE, plot = FALSE)
-) |>
-  mutate(county = str_to_title(str_remove(ID, "minnesota,")))
-
-# Join with arrest counts
-county_sf <- mn_sf |>
-  left_join(d$county_counts, by = "county") |>
-  replace_na(list(n = 0)) |>
-  mutate(label = paste0("<b>", county, " County</b><br>Arrests: ", n))
-
-bins <- c(0, 1, 10, 50, 100, 500, 5000)
-pal  <- colorBin("YlOrRd", county_sf$n, bins = bins, na.color = "#ddd")
-
-leaflet(county_sf, options = leafletOptions(minZoom = 6)) |>
-  addCartoTiles("CartoDB.Positron") |> # custom function to send API key
-  addPolygons(
-    fillColor  = ~pal(n),
-    fillOpacity = 0.75,
-    color       = "#666",
-    weight      = 0.6,
-    popup       = ~label,
-    label       = ~paste0(county, ": ", n)
-  ) |>
-  addLegend(
-    pal      = pal,
-    values   = ~n,
-    title    = "Arrests",
-    position = "bottomright"
-  ) |>
-  setView(lng = -94.5, lat = 46.5, zoom = 6)
+# Adjoining states: ND, SD, IA, WI, MI (Water-border MI has no mapped sites)
+county_choropleth(d$county_counts, d$county_landmarks, state_name = "MINNESOTA",
+                  include_states = c("ND", "SD", "IA", "WI", "MI")) |>
+  addCartoTiles("CartoDB.Positron")
 ```
 
 > **Note:** `r sum(d$county_counts$n)` of `r d$n_arrests` arrests
