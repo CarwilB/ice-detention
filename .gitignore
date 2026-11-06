@@ -4,10 +4,8 @@
 .RData
 .Ruserdata
 *.Rproj.user
-
 # targets store
 _targets/
-
 # renv
 renv/library/
 renv/staging/
@@ -15,18 +13,16 @@ renv/sandbox/
 renv/cellar/
 renv/local/
 renv/python/
-
 # OS
 .DS_Store
 Thumbs.db
-
 # Data files (large; track selectively if desired)
 # data/*.xlsx
 # data/*.xls
 .positai
-
 # Large datasets
 data/ddp/*.parquet
-
 /.quarto/
 **/*.quarto_ipynb
+*.html
+ddp-comparison.html
