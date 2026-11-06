@@ -31,6 +31,8 @@ library(leaflet)
 library(leaflet.extras)
 library(htmltools)
 library(knitr)
+
+source(here::here("add-carto-tiles.R"))
 ```
 
 ```{r}
@@ -206,7 +208,7 @@ add_rec_layer <- function(map, df, group, preferred_color) {
 }
 
 m <- leaflet() |>
-  addProviderTiles(providers$CartoDB.Positron) |>
+  addCartoTiles("CartoDB.Positron") |> # custom function to send API key
   # Line segments connecting Google ↔ source for each facility
   addPolylines(
     data = st_sf(divergent, geometry = line_features),

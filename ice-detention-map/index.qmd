@@ -1,0 +1,62 @@
+---
+title: "Interactive Map of ICE Detention Facilities"
+description: "An interactive map of 390 ICE detention facilities (FY2010–FY2026), colored by facility type and sized by average daily population"
+author: "Carwil Bjork-James"
+date: "31 March 2026"
+image: facilities_map_screenshot.png
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+This interactive map shows 390 U.S. Immigration and Customs Enforcement (ICE) detention facilities active between fiscal years 2010 and 2026. Circle size represents the facility's average daily population (ADP). Color indicates facility type. Open facilities are shown in saturated colors sized by their most recent ADP; closed facilities appear in desaturated tones sized by their peak ADP.
+
+The white circle represents the population-weighted geographic center of all facilities for each fiscal year. You will need to zoom out or scroll to see facilities in Hawaii, Alaska, and several Pacific islands.
+
+Click any facility to see its name, location, type, operational status, and a bar chart of ADP across all available fiscal years. The map is searchable by facility name and location; use two-letter abbreviations to search for states.
+
+::: column-screen-inset
+```{r map}
+#| fig-asp: 1.1
+source("facilities-map-post.R")
+facilities_map
+```
+:::
+
+### Facility types
+
+| Color        | Type                                              |
+|--------------|---------------------------------------------------|
+| Brown        | Family Detention Center                           |
+| Green        | Dedicated Migrant Detention Center (DIGSA)        |
+| Pink         | Federal Prison (BOP)                              |
+| Blue         | Jail (IGSA / USMS IGA)                            |
+| Purple       | ICE Migrant Detention Center (SPC)                |
+| Orange       | ICE Short-Term Migrant Detention Center (Staging) |
+| Dark Brown   | Juvenile Detention Center                         |
+| Teal (light) | Military Detention Center                         |
+| Red          | Private Migrant Detention Center (CDF)            |
+| Gold         | State Migrant Detention Center                    |
+| Teal (dark)  | Other                                             |
+
+Please note that multipe facilities not listed as "private" are subcontracted by these government entities to private prison corporations.
+
+### Data sources
+
+-   **FY2019–FY2026**: ICE annual detention statistics spreadsheets, published by the [ICE Detention Management Division](https://www.ice.gov/detain/detention-management).
+-   **FY2010–FY2017**: ICE Detention Management Compliance Program (DMCP) authorized facility listings ([December 2015 Excel file](https://www.ice.gov/doclib/foia/dfs/2015IceDetentionFacilityListing.xlsx%22) and [July 2017 PDF](https://www.prisonlegalnews.org/media/publications/ICE_DMCP_Facility_List_ERO_Custody_Management_Division_2017.pdf)). The older file was released under the Freedom of Information Act. The 2017 file was obtained in a lawsuit against the government.
+-   Data for FY2018 was not immediately available.
+-   **Geocoding**: Google Maps Geocoding API.
+
+### Data wrangling process and AI usage
+
+Building this multi-year map was a multi-step process that I began with a single pass of scraping the FY2026 dataset, cleaning variable names, processing facilities, and geocoding locations. I rewrote and functionalized that code to loop through the other fiscal yaers with their own individual spreadsheets. Neither the list of facilities nor the variable names were consistent across years, so keeping track of the changes in each of them was a significant part of the task. This was helped along by creating a presence matrix for both variables and facilities.
+
+It was around this point that I joined Posit's beta test for integrating an AI assistant into RStudio. The Posit Assistant is essential an integration for Claude models as agents with a Posit-specific set of skills into the RStudio IDE. My approach to using the assistant focused on iteratively improving code while maintaining documentation of the wrangling and analysis in Quarto Markdown files. The Posit skills seem particularly well-adapted to creating correspondences among different source encodings of the same entities, a process that can be very manually time-consuming and that is at the heart of stitching together the multiple datasets used here.
+
+Once the number of datasheets I was using grew past two, I used the agent to assemble a canonical list of sites. The 2015 and 2017 datasheets covered multiple years and also introduced the DHS's own unique identifiers (though these are not always in 1-to-1 correspondence with facilities). The 390 facilities shown here are the result of merging the data by facility.
+
+My initial purpose for this data wrangling was to write a comprehensive update for the Wikipedia page, [List of Immigration Detention Sites in the United States](https://en.wikipedia.org/wiki/List_of_immigrant_detention_sites_in_the_United_States). To effectively contribute there, one has to keep track of which sites have Wikipedia links and under what titles those links appear. This is a further name-matching effort
+
+I was also using this process as a chance to test drive the use of `{targets}` and `renv` as tools in a new R project. I plan to make the code as a whole shareable in the future.

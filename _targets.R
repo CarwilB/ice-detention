@@ -734,9 +734,23 @@ list(
     format = "file"
   ),
 
+  # Renders ddp-comparison-26.qmd locally so changes can be reviewed before
+  # deploying to the quarto website (posts/ddp-comparison-26/). The qmd reads
+  # pipeline targets directly via tar_read(). After review, run the
+  # ddp_fy26_comparison_export target to produce the pre-computed RDS files,
+  # then copy-data.sh in the post directory to deploy.
+  tar_quarto(
+    ddp_fy26_comparison_report,
+    "ddp-comparison-26.qmd",
+    description = "Rendered DDP vs ICE FY26 comparison report; review locally before deploying to quarto website"
+  ),
+
   # ── DDP stays dataset (one row per detention stay, incl. full facility chain) ─
   tar_target(
     stays_file,
+    # Must come from the same DDP release as arrests_file: unique_identifier is
+    # hashed per release, so stays from another release (e.g. the 2026-08-06
+    # file) share zero IDs with these arrests.
     here::here("data/ddp/detention-stays-latest.parquet"),
     format = "file",
     description = "Tracks the DDP detention stays parquet file for changes"
@@ -760,6 +774,55 @@ list(
     description = "Raw DDP arrests (713k rows x 28 cols; one row per arrest event with apprehension_state, date, unique_identifier)"
   ),
 
+  # ── Illinois report: DDP Aug 2026 release ──────────────────────────────────
+  # Separate from arrests_raw / stays_raw (March 2026 release) so the
+  # Minnesota and nationwide analyses are unaffected. Arrests and stays must
+  # come from the same release (IDs are hashed per release).
+  tar_target(
+    arrests_aug_file,
+    here::here("data/ddp/arrests-latest_20260806.parquet"),
+    format = "file",
+    description = "DDP arrests parquet, Aug 2026 release (Illinois report)"
+  ),
+  tar_target(
+    arrests_aug_raw,
+    standardize_ddp_arrests(arrow::read_parquet(arrests_aug_file)),
+    description = "DDP arrests, Aug 2026 release (896k rows, Oct 2022 - Aug 6 2026); columns normalized to March names by standardize_ddp_arrests(); adds apprehension_city_*"
+  ),
+  tar_target(
+    stays_aug_file,
+    here::here("data/ddp/detention-stays-latest_20260806.parquet"),
+    format = "file",
+    description = "DDP detention stays parquet, Aug 2026 release (Illinois report)"
+  ),
+  tar_target(
+    stays_aug_raw,
+    arrow::read_parquet(stays_aug_file),
+    description = "DDP detention stays, Aug 2026 release (1.26M rows); links to arrests_aug_raw"
+  ),
+
+  # ── Census place-county crosswalk (city -> county for arrests) ─────────────
+  # Census 2023 cartographic boundary files, downloaded once by hand into
+  # data/census/. Add a state's cb_2023_SS_place_500k.zip to extend coverage.
+  tar_target(
+    census_place_files,
+    list.files(here::here("data/census"), pattern = "^cb_2023_\\d{2}_place_500k\\.zip$",
+               full.names = TRUE),
+    format = "file",
+    description = "Census 2023 place boundary zips (one per state; currently Illinois only)"
+  ),
+  tar_target(
+    census_county_file,
+    here::here("data/census/cb_2023_us_county_500k.zip"),
+    format = "file",
+    description = "Census 2023 county boundary zip (national)"
+  ),
+  tar_target(
+    place_county,
+    build_place_county(census_place_files, census_county_file),
+    description = "Place -> primary county crosswalk with multi-county flag, for states with a place file"
+  ),
+
   # ── Minnesota post-inauguration arrest analysis ────────────────────────────
   tar_target(
     mn_arrests_data,
@@ -780,12 +843,6 @@ list(
   #   execute_params = list(state = "MINNESOTA", cutoff = "2025-01-20"),
   #   description = "Rendered state-arrests.qmd for Minnesota post-2025-01-20 (parameterized; render for other states with quarto render state-arrests.qmd -P state:TEXAS)"
   # ),
-  tar_quarto(
-    il_arrests_report,
-    "state-arrests.qmd",
-    execute_params = list(state = "ILLINOIS", cutoff = "2025-01-20"),
-    description = "Rendered state-arrests.qmd for Illinois post-2025-01-20 (parameterized; render for other states with quarto render state-arrests.qmd -P state:TEXAS)"
-  ),
   tar_quarto(
     tn_arrests_report,
     "state-arrests.qmd",

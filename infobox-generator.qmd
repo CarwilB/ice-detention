@@ -21,12 +21,12 @@ source("R/crosswalk.R")
 source("R/wikipedia.R")
 source("scripts/gh-copy-assets.R")
 
-fw   <- tar_read(facilities_fy26_wiki)
-fp   <- tar_read(facility_presence)
-cf   <- tar_read(panel_facilities)
-geo  <- tar_read(facilities_geocoded_full)
-panel <- tar_read(facilities_panel)
-xwalk <- tar_read(facility_crosswalk)
+facilities_fy26_wiki  <- tar_read(facilities_fy26_wiki)
+facility_presence     <- tar_read(facility_presence)
+panel_facilities      <- tar_read(panel_facilities)
+facilities_geocoded   <- tar_read(facilities_geocoded_all)
+facilities_panel      <- tar_read(facilities_panel)
+facility_crosswalk    <- tar_read(facility_crosswalk)
 ```
 
 ```{r}
@@ -66,15 +66,15 @@ facility_block <- function(cid, facility_name, facility_city, facility_state,
                            wiki_slug = NA_character_) {
   ib <- generate_infobox(
     cid,
-    panel_facilities = cf,
-    presence = fp,
-    geocoded = geo,
-    panel = panel,
-    crosswalk = xwalk,
-    wiki_matches = fw
+    panel_facilities = panel_facilities,
+    presence = facility_presence,
+    geocoded = facilities_geocoded,
+    panel = facilities_panel,
+    crosswalk = facility_crosswalk,
+    wiki_matches = facilities_fy26_wiki
   )
 
-  bar <- generate_adp_bar_chart(cid, panel, fp)
+  bar <- generate_adp_bar_chart(cid, facilities_panel, facility_presence)
 
   tagList(
     tags$details(
@@ -109,16 +109,16 @@ render_facility_blocks <- function(df) {
 #| label: classify-facilities
 #| include: false
 
-has_article <- fw |>
+has_article <- facilities_fy26_wiki |>
   filter(!is.na(wiki_slug), wiki_slug != "") |>
   arrange(facility_name)
 
-has_match_only <- fw |>
+has_match_only <- facilities_fy26_wiki |>
   filter((is.na(wiki_slug) | wiki_slug == ""),
          !is.na(wiki_match), wiki_match != "") |>
   arrange(facility_name)
 
-redlinks <- fw |>
+redlinks <- facilities_fy26_wiki |>
   filter(is.na(wiki_slug) | wiki_slug == "",
          is.na(wiki_match) | wiki_match == "") |>
   arrange(facility_name)

@@ -354,7 +354,7 @@ display: none;
 
 <div id="pipeline-targets-catalog" class="section level1">
 <h1>Pipeline Targets Catalog</h1>
-<p><em>Auto-generated on 2026-03-28. Descriptions are hand-maintained in
+<p><em>Auto-generated on 2026-05-22. Descriptions are hand-maintained in
 <code>R/catalog.R</code>.</em></p>
 <p>All targets can be loaded with <code>tar_load(target_name)</code> or
 <code>tar_read(target_name)</code>. Run the pipeline with
@@ -384,7 +384,7 @@ data columns for each FY19–FY26 XLSX file.</td>
 </tr>
 <tr class="even">
 <td><code>raw_xlsx_files</code></td>
-<td>char (8)</td>
+<td></td>
 <td>Local paths to downloaded ICE annual stats XLSX files. <strong>cue =
 “never”</strong>.</td>
 </tr>
@@ -420,7 +420,7 @@ type coercion, and Guantanamo patch.</td>
 </tr>
 <tr class="even">
 <td><code>id_registry</code></td>
-<td>400 × 4</td>
+<td>405 × 4</td>
 <td>Frozen registry of canonical IDs 1–398 (FY19–FY26 facilities).
 Append-only; new annual stats extend from 399.</td>
 </tr>
@@ -448,7 +448,7 @@ column to FY19–26.</td>
 </tr>
 <tr class="even">
 <td><code>facility_presence</code></td>
-<td>390 × 24</td>
+<td></td>
 <td>One row per canonical facility with FY10–FY26 boolean presence
 columns and a trajectory label (<code>continuous</code>,
 <code>persistent_gaps</code>, <code>closed</code>, <code>new</code>,
@@ -462,10 +462,17 @@ FY18). All ~30 measurement variables plus canonical IDs and DETLOCs. The
 primary analytical dataset.</td>
 </tr>
 <tr class="even">
-<td><code>canonical_facilities</code></td>
-<td>390 × 7</td>
-<td>One row per canonical facility with the most recent address, city,
-state, ZIP, and DETLOC. Authoritative input for geocoding.</td>
+<td><code>panel_facilities</code></td>
+<td></td>
+<td>One row per panel facility (IDs 1–398) with the most recent address,
+city, state, ZIP, DETLOC, and facility_type_wiki. Input for geocoding
+and wiki matching.</td>
+</tr>
+<tr class="odd">
+<td><code>facility_roster</code></td>
+<td></td>
+<td>Full roster: one row per canonical facility (~962) across all ID
+ranges with best-available address, type, DETLOC, and geocoding.</td>
 </tr>
 </tbody>
 </table>
@@ -488,19 +495,19 @@ state, ZIP, and DETLOC. Authoritative input for geocoding.</td>
 <tbody>
 <tr class="odd">
 <td><code>facilities_geocoded</code></td>
-<td>348 × 7</td>
+<td></td>
 <td>Google Maps API geocoded coordinates for FY19–FY26 canonical
 facilities (IDs 1–398). <strong>cue = “never”</strong>.</td>
 </tr>
 <tr class="even">
 <td><code>facilities_geocoded_full</code></td>
-<td>401 × 9</td>
+<td></td>
 <td>Extends geocoding to DMCP-only facilities (IDs 1001+) using
 faclist15/faclist17 addresses. <strong>cue = “never”</strong>.</td>
 </tr>
 <tr class="odd">
 <td><code>facilities_geocoded_all</code></td>
-<td>573 × 5</td>
+<td></td>
 <td>Unified geocoded table merging Google Maps, ERO, Marshall Project,
 and Vera coordinates with a <code>geocode_source</code> column.</td>
 </tr>
@@ -617,8 +624,28 @@ Project (Sep 2023–Oct 2025). One row per facility per day.</td>
 <code>ddp_raw</code>.</td>
 </tr>
 <tr class="even">
+<td><code>ddp_facility_canonical</code></td>
+<td></td>
+<td>Assigns canonical IDs to 376 unmapped DDP facility codes: 150
+non-medical (IDs 1054–1203) and 226 medical (IDs 3001–3226). Uses Vera
+Institute metadata for addresses and types.</td>
+</tr>
+<tr class="odd">
+<td><code>ddp_fy25_summary</code></td>
+<td></td>
+<td>DDP daily population summarized to one row per facility for FY25
+(Oct 2024–Sep 2025). ADP by sex/criminality/age, peak population, and
+derived shares.</td>
+</tr>
+<tr class="even">
+<td><code>ddp_fy25_summary_file</code></td>
+<td></td>
+<td>Exports <code>ddp_fy25_summary</code> to
+<code>data/ddp-fy25-summary.csv</code>. format = “file”.</td>
+</tr>
+<tr class="odd">
 <td><code>ddp_canonical_map</code></td>
-<td>136 × 5</td>
+<td>142 × 5</td>
 <td>Maps DDP DETLOCs to canonical facilities not already in DMCP data.
 Three-tier matching: fuzzy OSA, county name, confirmed keyword.</td>
 </tr>
@@ -643,14 +670,14 @@ Three-tier matching: fuzzy OSA, county name, confirmed keyword.</td>
 <tbody>
 <tr class="odd">
 <td><code>detloc_lookup</code></td>
-<td>554 × 3</td>
+<td>574 × 3</td>
 <td>Deduplicated 1:1 mapping of DETLOC to <code>canonical_id</code>.
 Each DETLOC and each canonical_id appears at most once. Source priority:
 DDP &gt; DMCP &gt; hold/ERO &gt; Vera.</td>
 </tr>
 <tr class="even">
 <td><code>detloc_lookup_full</code></td>
-<td>565 × 4</td>
+<td></td>
 <td>Multi-row reference preserving all DETLOC variants from all sources,
 including <code>ddp_role</code> (sole/primary/component). Use when
 matching all known codes for a facility.</td>
@@ -764,7 +791,7 @@ first/last use dates, and geocoded lat/lon.</td>
 </tr>
 <tr class="odd">
 <td><code>vera_facilities</code></td>
-<td>1464 × 12</td>
+<td>1482 × 14</td>
 <td>Cleaned Vera facility data with geocoded locations, addresses,
 county, AOR, and type classifications (<code>type_grouped</code>,
 <code>type_detailed</code>).</td>
@@ -804,13 +831,13 @@ edits.</td>
 </tr>
 <tr class="odd">
 <td><code>wiki_match_table</code></td>
-<td>21 × 5</td>
+<td></td>
 <td>City/state alias matches between ICE FY26 facility names and
 Wikipedia table names.</td>
 </tr>
 <tr class="even">
 <td><code>facilities_fy26_wiki_search</code></td>
-<td>225 × 41</td>
+<td></td>
 <td>Wikipedia API search results for each FY26 facility name.
 <strong>cue = “never”</strong>.</td>
 </tr>
@@ -822,7 +849,7 @@ changes.</td>
 </tr>
 <tr class="even">
 <td><code>facilities_fy26_wiki</code></td>
-<td>225 × 40</td>
+<td></td>
 <td>FY26 facilities with <code>wiki_match</code>,
 <code>wiki_slug</code>, and <code>management</code> columns. Applies
 slug overrides, contractors patch, fl17 management backfill, and
@@ -830,19 +857,19 @@ standardization.</td>
 </tr>
 <tr class="odd">
 <td><code>canonical_wiki_match</code></td>
-<td>58 × 5</td>
+<td></td>
 <td>All canonical facilities matched to Wikipedia articles via 4-pass
 matching (direct name, city/state alias, manual, external API).</td>
 </tr>
 <tr class="even">
 <td><code>fy26_wikitable</code></td>
-<td>char (1)</td>
+<td></td>
 <td>MediaWiki table markup for active facilities in the Wikipedia list
 article.</td>
 </tr>
 <tr class="odd">
 <td><code>closed_wikitable</code></td>
-<td>char (1)</td>
+<td></td>
 <td>MediaWiki table markup for closed facilities in the Wikipedia list
 article.</td>
 </tr>
@@ -867,22 +894,47 @@ article.</td>
 <tbody>
 <tr class="odd">
 <td><code>source_presence</code></td>
-<td>573 × 13</td>
+<td></td>
 <td>One row per canonical facility (all ID ranges) with boolean flags
 for each data source (ICE stats, DMCP, DDP, Marshall, Vera, geocoded,
 etc.).</td>
 </tr>
 <tr class="even">
 <td><code>saved_files</code></td>
-<td>char (8)</td>
+<td></td>
 <td>Exported RDS + CSV files written to <code>data/</code> (crosswalk,
 presence, panel, source_presence).</td>
 </tr>
 <tr class="odd">
 <td><code>facility_summary_report</code></td>
-<td>char (3)</td>
+<td></td>
 <td>Rendered <code>facility-summary.qmd</code> Quarto report. Re-renders
 when upstream targets change.</td>
+</tr>
+<tr class="even">
+<td><code>geocoding_divergence_report</code></td>
+<td></td>
+<td>Rendered <code>geocoding-divergence.qmd</code>; maps and tables of
+Google vs. source coordinate divergences.</td>
+</tr>
+<tr class="odd">
+<td><code>ddp_comparison_report</code></td>
+<td></td>
+<td>Rendered <code>ddp-comparison.qmd</code> locally; review before
+deploying to quarto website.</td>
+</tr>
+<tr class="even">
+<td><code>ddp_comparison_export</code></td>
+<td></td>
+<td>Exports 11 RDS files to <code>data/ddp-comparison-export/</code> for
+deploying the DDP comparison blog post. <strong>cue =
+“never”</strong>.</td>
+</tr>
+<tr class="odd">
+<td><code>targets_catalog</code></td>
+<td></td>
+<td>Auto-generates <code>data/targets-catalog.md</code> with
+hand-maintained descriptions and current dimensions.</td>
 </tr>
 </tbody>
 </table>

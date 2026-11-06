@@ -29,6 +29,8 @@ library(leaflet)
 library(leafpop)
 library(targets)
 
+source(here::here("add-carto-tiles.R"))
+
 tar_source()  # load all R/ functions, including dmcp_manual_matches()
 tar_load(c(ice_office_nodes, ice_office_nodes_es,
            facility_roster, vera_facilities, ero_canonical))
@@ -214,3 +216,4 @@ true_unknowns |>
   dplyr::select(page_title, field_office_name, address_line1, city, state) |>
   arrange(state, city)
 ```
+

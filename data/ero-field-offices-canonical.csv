@@ -7,7 +7,7 @@ canonical_id,canonical_name,address,city,state,zip,detloc,facility_type_wiki,are
 2006,Dallas Field Office,8101 N. Stemmons Frwy,Dallas,TX,75247,DALHOLD,ICE ERO Field Office,"North Texas, Oklahoma",NA,Dallas.Outreach@ice.dhs.gov
 2007,Denver Field Office,12445 E. Caley Avenue,Centennial,CO,80111,DENHOLD,ICE ERO Field Office,"Colorado, Wyoming",(720) 873-2899,Denver.Outreach@ice.dhs.gov
 2008,Detroit Field Office,"985 Michigan Avenue, Suite 207",Detroit,MI,48226,DETHOLD,ICE ERO Field Office,"Michigan, Ohio",(313) 771-6601,Detroit.Outreach@ice.dhs.gov
-2009,El Paso Field Office,"11541 Montana Ave, Suite E",El Paso,TX,79936,NA,ICE ERO Field Office,"West Texas, New Mexico",(915) 225-1901,ElPaso.Outreach@ice.dhs.gov
+2009,El Paso Field Office,"11541 Montana Ave, Suite E",El Paso,TX,79936,IEPHOLD,ICE ERO Field Office,"West Texas, New Mexico",(915) 225-1901,ElPaso.Outreach@ice.dhs.gov
 2010,Harlingen Field Office,1717 Zoy Street,Harlingen,TX,78552,HLGHOLD,ICE ERO Field Office,South Texas,(956) 389-7884,Harlingen.Outreach@ice.dhs.gov
 2011,Houston Field Office,126 Northpoint Drive,Houston,TX,77060,HOUHOLD,ICE ERO Field Office,Southeast Texas,(281) 774-4816,Houston.Outreach@ice.dhs.gov
 2012,Los Angeles Field Office,"300 North Los Angeles St., Room 7631",Los Angeles,CA,90012,LOSHOLD,ICE ERO Field Office,"LA Metro (LA, Orange, Riverside, San Bernardino); Central Coast (Ventura, Santa Barbara, San Luis Obispo)",(213) 830-7911,LosAngeles.Outreach@ice.dhs.gov

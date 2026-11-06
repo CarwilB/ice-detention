@@ -26,6 +26,8 @@ library(htmltools)
 library(leaflet.extras)
 library(targets)
 
+source(here::here("R/add-carto-tiles.R"))
+
 # ── Load pipeline data ──────────────────────────────────────────────────────
 
 tar_load(c(facilities_geocoded_full, facility_presence, facilities_panel))
@@ -250,7 +252,7 @@ legend_colors <- unname(type_colors[legend_types])
 # Continental US + Puerto Rico bounding box
 facilities_map <- leaflet() |>
   fitBounds(lng1 = -125, lat1 = 17.5, lng2 = -65, lat2 = 49.5) |>
-  addProviderTiles(providers$CartoDB.Positron) |>
+  addCartoTiles("CartoDB.Positron") |> # custom function to send API key
   # Closed facilities first (underneath)
   addCircleMarkers(
     data = map_sf[!is_open, ],

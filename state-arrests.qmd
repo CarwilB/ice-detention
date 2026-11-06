@@ -1,5 +1,5 @@
 ---
-title: "ICE Arrests: `r stringr::str_to_title(stringr::str_to_lower(params$state))` After January 20, 2025"
+title: "ICE Arrests: `r stringr::str_to_title(stringr::str_to_lower(params$state))` Since `r gsub('  ', ' ', format(as.Date(params$cutoff), '%B %e, %Y'))`"
 subtitle: "Detention itineraries, transfer flows, and removal outcomes"
 date: today
 format:
@@ -8,6 +8,9 @@ format:
     toc-depth: 3
     toc-float: true
     self-contained: true
+# With self-contained output, prev/next links embed the neighbouring pages
+# (e.g. mn-arrests, ~30 MB) into this file.
+page-navigation: false
 params:
   state: "ILLINOIS"
   cutoff: "2025-01-20"
@@ -31,13 +34,17 @@ library(maps)
 library(knitr)
 
 source(here::here("R/state-arrests.R"))
+source(here::here("R/add-carto-tiles.R"))
+
 
 # Read raw pipeline targets — works for any state without rebuilding pipeline
-arrests_raw   <- tar_read(arrests_raw)
-stays_raw     <- tar_read(stays_raw)
+# Aug 2026 DDP release (separate targets from the March data used elsewhere)
+arrests_raw   <- tar_read(arrests_aug_raw)
+stays_raw     <- tar_read(stays_aug_raw)
 detloc_lkp    <- tar_read(detloc_lookup_complete)
 geo_all       <- readr::read_csv(here::here("data/facilities-geocoded-all.csv"),
                                   show_col_types = FALSE)
+place_county  <- tar_read(place_county)
 
 d <- build_state_arrests_data(
   arrests      = arrests_raw,
@@ -45,8 +52,11 @@ d <- build_state_arrests_data(
   detloc_lookup = detloc_lkp,
   geo_all      = geo_all,
   state        = params$state,
-  cutoff       = as.Date(params$cutoff)
+  cutoff       = as.Date(params$cutoff),
+  place_county = place_county
 )
+data_end_str <- gsub("  ", " ", format(max(arrests_raw$apprehension_date, na.rm = TRUE), "%B %e, %Y"))
+city_based   <- any(d$county_source$county_source %in% "City")
 
 state_full  <- str_to_title(str_to_lower(d$state))
 state_lower <- str_to_lower(d$state)
@@ -87,7 +97,8 @@ d$monthly_vol |>
   geom_vline(xintercept = as.Date(params$cutoff),
              linetype = "dashed", color = "firebrick", linewidth = 0.7) +
   annotate("text", x = as.Date(params$cutoff), y = Inf,
-           label = "Inauguration", hjust = -0.1, vjust = 1.5,
+           label = if (as.Date(params$cutoff) == as.Date("2025-01-20")) "Inauguration" else "Cutoff",
+           hjust = -0.1, vjust = 1.5,
            size = 3, color = "firebrick") +
   scale_fill_manual(values = c("FALSE" = "#888", "TRUE" = "#c0392b"),
                     guide = "none") +
@@ -113,7 +124,7 @@ d$nationalities |> head(15) |>
 **Arrest type**
 ```{r type-table}
 d$arrest_type |>
-  rename(`Arrest type` = apprehension_type, N = n, `%` = pct) |> kable()
+  rename(`Arrest type` = arrest_type, N = n, `%` = pct) |> kable()
 ```
 **Criminality at arrest**
 ```{r crim-table}
@@ -127,11 +138,9 @@ d$criminality |>
 
 ## Arrest Locations in `r state_full`
 
-County-level map based on `apprehension_site_landmark`. Records with non-specific
-landmarks (e.g. "SPM General Area") are mapped using state-specific rules where
-possible; others are excluded.
+`r if (city_based) "County-level map based mainly on the apprehension city: each cleaned city name is matched to a Census place and assigned the county holding most of that place's area. Cities spanning more than one county (e.g. Aurora: Kane, DuPage, Will, Kendall) go to their main county; popups show how many arrests in each county came from such cities. Where no city matches, the county is taken from \x60apprehension_site_landmark\x60." else "County-level map based on \x60apprehension_site_landmark\x60. Landmarks naming a county in the state, or a place with a known county (prisons, field offices, airports), are mapped. Field-office-wide landmarks (e.g. \"CHI GENERAL AREA, NON-SPECIFIC\") cover several states and can't be placed in a county."` Arrests that can't be placed are summarized alongside the map. The map counts all arrests, including custodial transfers from prisons and jails; popups also show at-large arrests.
 
-```{r county-choropleth}
+```{r county-setup}
 county_coverage <- sum(d$county_counts$n) / d$n_arrests
 
 state_map_sf <- tryCatch({
@@ -141,13 +150,25 @@ state_map_sf <- tryCatch({
     mutate(county = str_to_title(str_remove(ID, paste0(state_lower, ","))))
 }, error = function(e) NULL)
 
-if (!is.null(state_map_sf) && nrow(d$county_counts) > 0 && county_coverage >= 0.20) {
+show_map <- !is.null(state_map_sf) && nrow(d$county_counts) > 0
+```
+
+:::: {.columns}
+
+::: {.column width="64%"}
+
+```{r county-choropleth}
+if (show_map) {
   county_sf <- state_map_sf |>
     left_join(d$county_counts, by = "county") |>
-    replace_na(list(n = 0)) |>
+    replace_na(list(n = 0L, at_large = 0L, from_multi_county_city = 0L)) |>
     mutate(
       n_map = if_else(n <= 1, NA_real_, as.double(n)),
-      label = paste0("<b>", county, " County</b><br>Arrests: ", n)
+      label = paste0(
+        "<b>", county, " County</b><br>Arrests: ", n,
+        "<br>At-large: ", at_large,
+        if_else(from_multi_county_city > 0,
+                paste0("<br>From multi-county cities: ", from_multi_county_city), ""))
     )
 
   max_n <- max(county_sf$n, na.rm = TRUE)
@@ -155,7 +176,7 @@ if (!is.null(state_map_sf) && nrow(d$county_counts) > 0 && county_coverage >= 0.
   pal   <- colorBin("YlOrRd", county_sf$n_map, bins = bins, na.color = "transparent")
 
   leaflet(county_sf) |>
-    addProviderTiles(providers$CartoDB.Positron) |>
+    addCartoTiles("CartoDB.Positron") |> # custom function to send API key
     addPolygons(
       fillColor   = ~pal(n_map), fillOpacity = 0.75,
       color = "#999", weight = 0.4,
@@ -164,21 +185,47 @@ if (!is.null(state_map_sf) && nrow(d$county_counts) > 0 && county_coverage >= 0.
     addLegend(pal = pal, values = ~n_map, title = "Arrests",
               position = "bottomright")
 } else {
-  # Low county coverage — show top apprehension landmarks instead
+  # No county could be parsed — show top apprehension landmarks instead
   knitr::kable(
     d$landmark_counts |>
       head(30) |>
       rename(`Arrest location` = apprehension_site_landmark, N = n, `%` = pct),
-    caption = paste0(
-      "Top arrest locations (county data available for only ",
-      round(county_coverage * 100, 0), "% of arrests)"
-    )
+    caption = "Top arrest locations (no landmarks could be mapped to a county)"
   )
 }
 ```
 
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="32%"}
+
+```{r county-unassigned}
+bind_rows(
+  tibble(reason = "Mapped to a county",
+         n = sum(d$county_counts$n),
+         pct = round(county_coverage * 100, 1)),
+  d$unassigned_reasons
+) |>
+  knitr::kable(col.names = c("Arrest location", "N", "% of arrests"),
+               caption = "Share of arrests shown on the map")
+
+d$unassigned_landmarks |>
+  head(8) |>
+  mutate(apprehension_site_landmark = str_to_title(apprehension_site_landmark)) |>
+  select(apprehension_site_landmark, n, pct) |>
+  knitr::kable(col.names = c(if (city_based) "Unmapped city / landmark" else "Unmapped landmark", "N", "%"),
+               caption = "Largest unmapped locations")
+```
+
+:::
+
+::::
+
 > **Coverage:** `r round(county_coverage * 100, 0)`% of arrests mapped to a county.
-> `r if (county_coverage < 0.20) "Landmark table shown in place of choropleth."`
+> The map shows only these arrests; the tables at right show what is left out.
 
 ---
 
@@ -196,7 +243,7 @@ flows <- d$flow_arrows
 rad <- function(n) pmax(3, log10(n + 1) * 8.4)   # ~70% of prior scale
 
 base_map <- leaflet() |>
-  addProviderTiles(providers$CartoDB.Positron)
+  addCartoTiles("CartoDB.Positron")
 
 # Geodetic bearing in degrees (0 = North, clockwise)
 .bearing <- function(lon1, lat1, lon2, lat2) {
@@ -501,7 +548,10 @@ m$outcomes |>
 
 ## Data notes
 
-- Source: [Deportation Data Project](https://deportationdata.org), FOIA 2026-ICLI-00005.
+- Source: [Deportation Data Project](https://deportationdata.org) ICE arrests and
+  detention stays, release covering arrests through `r data_end_str`.
+- State is DDP's `apprehension_state_filled_in` (fills missing states from the
+  landmark/AOR). Arrest type is `apprehension_method_simple` where available.
 - Filtered to `apprehension_state == "`r params$state`"` and
   `apprehension_date >= `r params$cutoff``. Duplicate-flagged rows excluded.
 - Stays linked via `unique_identifier`; only stays beginning on or after
@@ -510,6 +560,9 @@ m$outcomes |>
   min threshold = `r max(5L, as.integer(d$n_stays * 0.001))` transfers.
 - County choropleth coverage: `r round(sum(d$county_counts$n)/d$n_arrests*100,0)`%
   of arrests mapped to a county.
-- `stay_release_reason` is NA for stays open as of March 2026 (shown as "Pending / Unknown").
+- City-to-county uses Census 2023 place and county boundaries; city spellings
+  cleaned with the reviewed fixes in `R/state-arrests.R` (`.city_fixes()`).
+- `stay_release_reason` is NA for stays still open at the end of the data
+  (`r data_end_str`).
 - EROFCB = ERO El Paso Camp East Montana (militarized facility in Montana operated
   by El Paso ERO).
