@@ -38,11 +38,13 @@ source(here::here("R/add-carto-tiles.R"))
 
 
 # Read raw pipeline targets — works for any state without rebuilding pipeline
-arrests_raw   <- tar_read(arrests_raw)
-stays_raw     <- tar_read(stays_raw)
+# Aug 2026 DDP release (separate targets from the March data used elsewhere)
+arrests_raw   <- tar_read(arrests_aug_raw)
+stays_raw     <- tar_read(stays_aug_raw)
 detloc_lkp    <- tar_read(detloc_lookup_complete)
 geo_all       <- readr::read_csv(here::here("data/facilities-geocoded-all.csv"),
                                   show_col_types = FALSE)
+place_county  <- tar_read(place_county)
 
 d <- build_state_arrests_data(
   arrests      = arrests_raw,
@@ -50,8 +52,11 @@ d <- build_state_arrests_data(
   detloc_lookup = detloc_lkp,
   geo_all      = geo_all,
   state        = params$state,
-  cutoff       = as.Date(params$cutoff)
+  cutoff       = as.Date(params$cutoff),
+  place_county = place_county
 )
+data_end_str <- gsub("  ", " ", format(max(arrests_raw$apprehension_date, na.rm = TRUE), "%B %e, %Y"))
+city_based   <- any(d$county_source$county_source %in% "City")
 
 state_full  <- str_to_title(str_to_lower(d$state))
 state_lower <- str_to_lower(d$state)
@@ -119,7 +124,7 @@ d$nationalities |> head(15) |>
 **Arrest type**
 ```{r type-table}
 d$arrest_type |>
-  rename(`Arrest type` = apprehension_type, N = n, `%` = pct) |> kable()
+  rename(`Arrest type` = arrest_type, N = n, `%` = pct) |> kable()
 ```
 **Criminality at arrest**
 ```{r crim-table}
@@ -133,10 +138,7 @@ d$criminality |>
 
 ## Arrest Locations in `r state_full`
 
-County-level map based on `apprehension_site_landmark`. Landmarks naming a county
-in the state, or a place with a known county (prisons, field offices, airports), are
-mapped. Field-office-wide landmarks (e.g. "CHI GENERAL AREA, NON-SPECIFIC") cover
-several states and can't be placed in a county; they are summarized alongside the map.
+`r if (city_based) "County-level map based mainly on the apprehension city: each cleaned city name is matched to a Census place and assigned the county holding most of that place's area. Cities spanning more than one county (e.g. Aurora: Kane, DuPage, Will, Kendall) go to their main county; popups show how many arrests in each county came from such cities. Where no city matches, the county is taken from \x60apprehension_site_landmark\x60." else "County-level map based on \x60apprehension_site_landmark\x60. Landmarks naming a county in the state, or a place with a known county (prisons, field offices, airports), are mapped. Field-office-wide landmarks (e.g. \"CHI GENERAL AREA, NON-SPECIFIC\") cover several states and can't be placed in a county."` Arrests that can't be placed are summarized alongside the map. The map counts all arrests, including custodial transfers from prisons and jails; popups also show at-large arrests.
 
 ```{r county-setup}
 county_coverage <- sum(d$county_counts$n) / d$n_arrests
@@ -159,10 +161,14 @@ show_map <- !is.null(state_map_sf) && nrow(d$county_counts) > 0
 if (show_map) {
   county_sf <- state_map_sf |>
     left_join(d$county_counts, by = "county") |>
-    replace_na(list(n = 0)) |>
+    replace_na(list(n = 0L, at_large = 0L, from_multi_county_city = 0L)) |>
     mutate(
       n_map = if_else(n <= 1, NA_real_, as.double(n)),
-      label = paste0("<b>", county, " County</b><br>Arrests: ", n)
+      label = paste0(
+        "<b>", county, " County</b><br>Arrests: ", n,
+        "<br>At-large: ", at_large,
+        if_else(from_multi_county_city > 0,
+                paste0("<br>From multi-county cities: ", from_multi_county_city), ""))
     )
 
   max_n <- max(county_sf$n, na.rm = TRUE)
@@ -210,8 +216,8 @@ d$unassigned_landmarks |>
   head(8) |>
   mutate(apprehension_site_landmark = str_to_title(apprehension_site_landmark)) |>
   select(apprehension_site_landmark, n, pct) |>
-  knitr::kable(col.names = c("Unmapped landmark", "N", "%"),
-               caption = "Largest unmapped landmarks")
+  knitr::kable(col.names = c(if (city_based) "Unmapped city / landmark" else "Unmapped landmark", "N", "%"),
+               caption = "Largest unmapped locations")
 ```
 
 :::
@@ -542,7 +548,10 @@ m$outcomes |>
 
 ## Data notes
 
-- Source: [Deportation Data Project](https://deportationdata.org), FOIA 2026-ICLI-00005.
+- Source: [Deportation Data Project](https://deportationdata.org) ICE arrests and
+  detention stays, release covering arrests through `r data_end_str`.
+- State is DDP's `apprehension_state_filled_in` (fills missing states from the
+  landmark/AOR). Arrest type is `apprehension_method_simple` where available.
 - Filtered to `apprehension_state == "`r params$state`"` and
   `apprehension_date >= `r params$cutoff``. Duplicate-flagged rows excluded.
 - Stays linked via `unique_identifier`; only stays beginning on or after
@@ -551,6 +560,9 @@ m$outcomes |>
   min threshold = `r max(5L, as.integer(d$n_stays * 0.001))` transfers.
 - County choropleth coverage: `r round(sum(d$county_counts$n)/d$n_arrests*100,0)`%
   of arrests mapped to a county.
-- `stay_release_reason` is NA for stays open as of March 2026 (shown as "Pending / Unknown").
+- City-to-county uses Census 2023 place and county boundaries; city spellings
+  cleaned with the reviewed fixes in `R/state-arrests.R` (`.city_fixes()`).
+- `stay_release_reason` is NA for stays still open at the end of the data
+  (`r data_end_str`).
 - EROFCB = ERO El Paso Camp East Montana (militarized facility in Montana operated
   by El Paso ERO).
