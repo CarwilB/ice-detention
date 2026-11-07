@@ -1,0 +1,34 @@
+{{Short description|Men's prison in Chaparral, New Mexico, United States}}
+{{Use American English|date=August 2025}}
+{{Infobox Prison
+| name           = Otero County Prison Facility
+| image          = 
+| location       = 26 McGregor Range Road <br> [[Chaparral, New Mexico]]
+| coordinates    = 
+| status         = maximum
+| classification = 
+| capacity       = 1420
+| opened         = 2003
+| closed         = 
+| managed_by     = [[Management and Training Corporation]]
+| director       = Hector Rios
+}}
+The '''Otero County Prison Facility''' is a privately managed prison for men located in [[Chaparral, New Mexico|Chaparral]], [[Otero County, New Mexico]], operated by the [[Management and Training Corporation]].<ref>{{cite web|title=Guadalupe County Correctional Facility|url=http://cd.nm.gov/apd/ocpf.html|website=New Mexico Corrections Department|accessdate=7 August 2016}}</ref>  The facility opened in 2003, and has a capacity of 1420.
+
+Otero County is the owner of the facility.  Clients include the state, which began sending about 300 sex offenders to the institution beginning in early 2013.<ref>{{cite news|last1=Gallagher|first1=Mike|title=Mass sex offender transfer planned|url=http://www.abqjournal.com/170055/mass-sex-offender-transfer-planned.html|accessdate=7 August 2016|publisher=Albuquerque Journal|date=11 February 2013}}</ref>  Most of the facility is dedicated to housing federal prisoners of the [[United States Marshals Service]], [[U.S. Immigration and Customs Enforcement]], and the [[Federal Bureau of Prisons]].<ref>{{cite web|title=Otero County Prison Facility Dedicates New Building for State's Sex Offenders|url=https://www.mtctrains.com/otero-county-prison-facility-dedicates-new-building-states-sex-offenders|website=Management & Training Corporation|accessdate=7 August 2016|archive-url=https://web.archive.org/web/20150127022257/http://www.mtctrains.com/otero-county-prison-facility-dedicates-new-building-states-sex-offenders|archive-date=27 January 2015|url-status=dead}}</ref>
+
+A 2011 [[ACLU]] report was highly critical of prison conditions in Otero County, access to legal resources, and the level of health care provided.<ref>{{cite web|title=ACLU Releases Report on Immigrant Detention in Otero County|url=https://www.aclu-nm.org/aclu-releases-report-on-immigrant-detention-in-otero-county/2011/01/|website=ACLU of New Mexico|accessdate=7 August 2016}}</ref>  As of December 2017, the ICE Processing Center at Otero County "landed at the center of ongoing controversy surrounding private prisons and ICE detention" when a report of the [[Department of Homeland Security Office of Inspector General]] found that conditions undermined the rights of detainees meant to be held in civil, not punitive, custody.<ref>{{cite news |last1=Macaraeg |first1=Sarah |title=Problems at Otero County ICE detention center found in audit |url=https://www.lcsun-news.com/story/news/local/new-mexico/2017/12/23/problems-otero-county-ice-prison-found-audit/978394001/ |accessdate=12 September 2018 |publisher=Las Cruces Sun News |date=23 December 2017}}</ref>
+
+In 2018, some of the detained immigrant parents affected by the [[Trump administration family separation policy]] were housed at Otero County.<ref>{{cite news |last1=Blitzer |first1=Jonathon |title=The Government Has Decided That Hundreds of Immigrant Parents Are Ineligible to Be Reunited with Their Kids. Who Are They? |url=https://www.newyorker.com/news/news-desk/the-government-has-decided-that-hundreds-of-immigrant-parents-are-ineligible-to-be-reunited-with-their-kids-who-are-they |accessdate=12 September 2018 |date=26 June 2018}}</ref>
+
+==References==
+{{reflist}}
+
+{{coord|32.078488|-106.278477|format=dms|display=title|type:landmark}}
+
+{{State prisons in New Mexico}}
+
+[[Category:Prisons in New Mexico]]
+[[Category:Buildings and structures in Otero County, New Mexico]]
+[[Category:Management and Training Corporation]]
+[[Category:2008 establishments in New Mexico]]

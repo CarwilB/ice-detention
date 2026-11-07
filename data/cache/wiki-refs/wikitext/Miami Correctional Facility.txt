@@ -1,0 +1,57 @@
+{{Short description|State prison in Indiana, United States}}
+{{distinguish|Federal Correctional Institution, Miami|Federal Detention Center, Miami}}
+{{Use American English|date=July 2025}}
+{{Use mdy dates|date=August 2025}}
+{{Infobox prison
+| name            = Miami Correctional Facility
+| image           = Seal of the Indiana Department of Corrections.jpg
+| caption         = 
+| location        = [[Grissom Air Reserve Base]], [[Deer Creek Township, Miami County, Indiana|Deer Creek Township]], [[Miami County, Indiana|Miami County]], near [[Bunker Hill, Indiana]], US
+| coordinates     = {{Coord|40.645|-86.135|type:landmark|display=inline,title}}
+| status          = Operational
+| classification  = &nbsp;&ndash; level 4 max security
+| capacity        = 3188
+| population      = 3147
+| population_date = 2011
+| opened          = {{Start date|1998}}
+| closed          = 
+| former_name     = 
+| managed_by      = [[Indiana Department of Corrections]]
+| director        = 
+| governor        = 
+| warden          = Brian English
+| website         = {{URL|https://www.in.gov/idoc/facilities/adult/miami-correctional-facility/}}
+| prisoners       = [[J. J. Paulsen]]
+}}
+
+The '''Miami Correctional Facility''' is a state prison located near [[Bunker Hill, Indiana]], on the site of the [[Grissom Joint Air Reserve Base]] at West 850 South and [[U.S. Route 31 in Indiana|US-31]], about {{convert|11| miles}} north of [[Kokomo, Indiana]]. It was established in 1998 and houses high-, medium-, and minimum-security inmates, all of whom are adult males. At full capacity, Miami can house 3,188 prisoners, making it the largest facility in the state of Indiana. The level-one inmates are housed outside of the prison fence in dormitory-style living units which can accommodate a maximum of 204 prisoners. The high- and medium-security facilities are inside of the fence and hold the level-two, three, and four inmates in two-man cells.<ref>{{cite web |url=http://www.in.gov/indcorrection/facility/mcf/general.htm |archive-url=https://web.archive.org/web/20070326215459/https://www.in.gov/indcorrection/facility/mcf/general.htm |archive-date=26 March 2007 |title=Miami Correctional Facility |url-status=dead}}</ref>
+
+==History==
+On March 6, 1996, the Indiana Prison Site Selection Committee announced that the downsized [[Grissom Air Force Base]] would be the site for the state's newest prison. The committee had wanted to ensure that the prison was erected in an area that was not in opposition to a prison. The Miami community had promoted their county through a yellow ribbon campaign for the new prison site because such a facility would provide needed local jobs that had been lost when the air force base, the county's largest employer, downsized.
+
+Construction of Phase I began in August 1997 and was ready for the first inmates to arrive in May 1999. John VanNatta, the first superintendent of Miami Correctional Facility, arrived with the first wave of prisoners. He had previously served as the superintendent of the Atterbury Correctional Facility for ten years. Construction of Phase II of the facility began in 1999 and opened to inmates in October 2001. Superintendent VanNatta was called up in January 2003 from Indiana's reserve to serve as warden of [[Guantanamo Bay detainment camp|Guantanamo Bay Prison]]. Stanley Knight filled in for VanNatta during his absence.  Walter Martin assumed the post in June 2006 when VanNatta took a job with the federal government. Mark Sevier became the next superintendent and transferred to Westville Correctional Facility in 2014, who was followed by Kathy Griffin in December 2014. Griffin is a retired Army First Sergeant and former Superintendent of Chain O' Lakes Correctional Facility. In late 2017, William Wilson became the interim warden until March 2018, when he was replaced by the current warden, William "Bill" Hyatte. In late 2015, Miami Correctional Facility was upgraded from a level 2/3 facility to a level 3/4 facility. Level 4 offenders are the highest offender classification in Indiana, meaning that this facility currently houses offenders who have committed the worst crimes.
+
+==Methamphetamine unit==
+In April 2005, a prison unit designed to work with inmates who are addicted to the drug [[methamphetamine]] (meth) was opened at Miami Correctional Facility. This program was one of the first of its kind in the nation. Methamphetamine use has increased significantly in Indiana since 1994, as [[clandestine chemistry|meth labs]] are the most concentrated in the Midwest.{{citation needed|date=June 2012}} The goal of the program is to prevent repeat crimes related to methamphetamine use that would land inmates back in prison after their release.
+
+The program, titled ''Clean Lifestyle is Freedom Forever'' (CLIFF), is voluntary as well as residential; inmates must live in the unit which is separate from rest of the prison. This intensive four-stage program requires that participants spend 10 hours a day on weekdays participating in program activities. The first stage of the program is education about the circumstances that lead to addiction to meth and ways to avoid these traps. The second and third stage are treatment, which addresses various medical problems that are consequences of meth abuse. The fourth stage of the program prepares participants for re-entry into the outside world. After inmates are released, the program will continue to monitor participants' progress as they readjust to life outside of confinement. CLIFF deducts 6 months from prisoners' sentences upon successful completion. In 2018, the CLIFF program was replaced by the RWI (Recovery While Incarcerated) Program, which focuses on drug rehabilitation in general.
+
+==Migrant detention unit==
+In 2025, the [[Department of Homeland Security]] (DHS) announced a partnership with the state of Indiana to house up to 1000 detained migrants. DHS has branded it as the ''Speedway Slammer'' in a similar naming convention to the moniker [[Alligator Alcatraz]] in Florida.<ref name="independent-2025-8-6">{{cite news |last1=Keane |first1=Isabel |title=Indiana announces a 'Speedway Slammer' to house migrants like 'Alligator Alcatraz' |url=https://www.independent.co.uk/news/world/americas/us-politics/indiana-speedway-slammer-migrant-detention-center-b2803044.html |access-date=6 August 2025 |work=The Independent |date=6 August 2025 |language=en}}</ref> The [[IndyCar series]], who run the [[Indianapolis 500]] at [[Indianapolis Motor Speedway]], stated that they are "communicating our preference that our IP not be utilized moving forward in relation to this matter".<ref>{{cite news |title=IndyCar officials and Pato O'Ward shocked by ICE-related 'Speedway Slammer' post |url=https://apnews.com/article/pato-oward-indycar-ice-106baa57f854ffcf86c654f0ff8987b7 |access-date=6 August 2025 |work=AP News |date=6 August 2025 |language=en}}</ref>
+
+==References==
+{{reflist}}
+*"Battle Plan for Correction." Indianapolis Star 15 May 2000.
+*"Business booming for Miami Prison." Kokomo Tribune 12 August 2002.
+*"New prison unit to treat inmates addicted to meth." Indianapolis Star 9 April 2005.
+*"Prison unit to help kick meth habit." Indianapolis Star 12 April 2005.
+*"Inmate from Bronx dies after fight with state prison guards." Indianapolis Star 5 December 2002.
+*"Call up brings tough times." Indianapolis Star 17 January 2003.
+*"Taking a step towards recovery." Indianapolis Star 14 October 2005.
+
+{{State prisons in Indiana}}
+
+[[Category:Buildings and structures in Miami County, Indiana]]
+[[Category:Prisons in Indiana]]
+[[Category:1998 establishments in Indiana]]
+[[Category:Immigration detention centers and prisons in the United States]]

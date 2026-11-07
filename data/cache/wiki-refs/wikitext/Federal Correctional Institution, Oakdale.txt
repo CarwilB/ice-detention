@@ -1,0 +1,141 @@
+{{Short description|Prison in Oakdale, Louisiana, US}}
+{{Use American English|date=August 2025}}
+{{Infobox prison
+| name           = Federal Correctional Institution, Oakdale
+| image          = FCI Oakdale I (2026).jpg
+| image_size     = 300
+| caption        =  FCI Oakdale I
+| location       = [[Oakdale, Louisiana|Oakdale]], [[Allen Parish, Louisiana]]
+| coordinates    = 
+| status         = Operational
+| classification = Low-security
+| population     = 1,700
+| opened         = 
+| closed         = 
+| managed_by     = [[Federal Bureau of Prisons]]
+| warden         = Felipe Martinez
+}}
+[[File:Federal Correctional Institution, Oakdale IMG 0169.JPG|250px|right|thumb|Entrance to the prison complex in [[Oakdale, Louisiana|Oakdale]], [[Louisiana]]]]
+[[File:FCI Oakdale II (2026).jpg|250px|right|thumb|Entrance to FCI Oakdale II]]
+
+The '''Federal Correctional Institution, Oakdale''' ('''FCI Oakdale''') is a low-security United States [[federal prison]] for male inmates in [[Oakdale, Louisiana]]. It is part of the Oakdale Federal Correctional Complex (FCC) and operated by the [[Federal Bureau of Prisons]], a division of the [[United States Department of Justice]].
+
+The complex consists of two facilities:
+
+* Federal Correctional Institution, Oakdale (FCI Oakdale I): a low-security facility
+* Federal Correctional Institution, Oakdale (FCI Oakdale II): a low-security facility
+
+FCI Oakdale is located in central Louisiana, {{convert|35|mi|km}} south of [[Alexandria, Louisiana|Alexandria]] and fifty-eight miles north of [[Lake Charles, Louisiana|Lake Charles]].<ref>{{cite web|url=http://www.bop.gov/locations/institutions/oak/index.jsp |title=FCI Oakdale I |publisher=Bop.gov |date=2014-10-29 |access-date=2015-10-30}}</ref>
+
+==Notable incidents==
+June 22, 2009, 29-year-old inmate Alberto Gallegos-Velazquez violently assaulted another inmate in the recreational yard at FCI Oakdale. The victim inmate, whom the Bureau of Prisons did not identify, suffered a [[fractured skull]] and an [[intracranial hemorrhage]] which resulted in long-term disabilities including [[seizures]], loss of speech, and an inability to move his right extremities. Gallegos-Velazquez subsequently pleaded guilty to assault resulting in serious bodily injury. He was sentenced an additional fifty-one months in prison and ordered to pay more than $158,000 in [[restitution]].<ref>{{cite web|url=https://www.fbi.gov/neworleans/press-releases/2010/no042210.htm |title=FBI — Oakdale Federal Correctional Institution Inmate Sentenced on Assault Charges |publisher=Fbi.gov |access-date=2015-10-30}}</ref><ref>[ftp://opinions.ca5.uscourts.gov/byDate/Feb2011/Feb25/10-30425.0.wpd.pdf]{{dead link|date=May 2025|bot=medic}}{{cbignore|bot=medic}} </ref>
+
+On April 6, 2020, the ACLU sued the Bureau of Prisons and FCI-Oakdale Warden Rodney Myers on behalf of incarcerated people. According to the ACLU, "The legal team seeks the release of people who are incarcerated and at high risk for serious injury or death in the event of COVID-19 infection due to age and/or underlying medical conditions."<ref>{{Cite web|title=ACLU Sues Oakdale Federal Prison for Release of Those Most at Risk From COVID-19|url=https://www.aclu.org/press-releases/aclu-sues-oakdale-federal-prison-release-those-most-risk-covid-19|access-date=2021-02-23|website=American Civil Liberties Union|language=en}}</ref> Days later, incarcerated people refused orders when staff attempted to move people who had been potentially exposed to the virus into housing units with no known cases. Authorities used "paintball guns to fire paintballs full of pepper spray at prisoners, as well as teargas, according to Vice News."<ref>{{Cite web|date=2020-04-08|title=Uprising at FCI Oakdale I, Louisiana Following Multiple COVID-19 Deaths|url=https://perilouschronicle.com/2020/04/08/uprising-at-fci-oakdale-i-louisiana-following-multiple-covid-19-deaths/|access-date=2021-02-23|website=Perilous|language=en-US}}</ref> As of February 23, 2021, at least eight incarcerated people at FCI-Oakdale had died from COVID-19.<ref>{{Cite web|title=COVID-19: Death by Incarceration|url=https://docs.google.com/spreadsheets/d/1bTMdmt2IG2UrRDcDhKK2ws_ZS-sXqDsPMVC_2SDb3Lw/edit?usp=embed_facebook|access-date=2021-02-23|website=Google Docs|language=en-US}}</ref>
+
+==Notable inmates==
+{|class="wikitable sortable"
+|-
+!width=13%|Inmate name
+!width=10%|Register number
+!width=5%|Photo
+!width=28%|Status
+!width=49%|Details
+|-
+| align="center" | [[Cali Cartel|Joaquin Valencia-Trujillo]]
+| align="center" | 02440-748
+| 
+| Scheduled for release April 12, 2036.
+| Former leader of the [[Cali Cartel]] in Colombia; extradited to the US in 2004; convicted in 2006 of [[drug trafficking]] [[conspiracy (crime)|conspiracy]] for directing the shipment of more than 100 tons of [[cocaine]] a year into the US over a ten-year period.<ref>{{cite news|last=Weimar|first=Carrie|title=Cartel leader gets 40 years|url=http://www.sptimes.com/2007/02/02/Hillsborough/Cartel_leader_gets_40.shtml|access-date=27 October 2013|newspaper=Tampa Bay Times|date=February 2, 2007}}</ref>
+|-
+
+| align="center" | Kai Lundstroem Pedersen
+| align="center" | 76335-053
+| 
+| Scheduled for release March 27, 2036.
+| Danish man sentenced to 30 years in prison in 2012 for producing [[child pornography]] and extorting a minor.<ref>{{cite news|last=Weimar|first=Carrie|title=Danish Man Sentenced to 30 Years in Prison|url=https://www.justice.gov/opa/pr/danish-man-sentenced-30-years-prison-producing-child-pornography-and-extorting-minor|access-date=2 February 2012|newspaper=Justice|date=February 2, 2012}}</ref>
+|-
+| style="text-align:center;"| [[Kwame Kilpatrick]] 
+| style="text-align:center;"| 44678-039
+| [[File:Kwame-2006 (1).jpg|80px]]
+| Was serving a 28-year sentence.<ref>{{cite news|title=Kwame Kilpatrick Sentenced To 28 Years, 'I Really, Really, Really Messed Up'|url=https://detroit.cbslocal.com/2013/10/10/sentencing-underway-for-ex-detroit-mayor-kwame-kilpatrick/|access-date=5 May 2020|publisher=CBS Broadcasting|date=October 10, 2013}}</ref> On January 20, 2021, President [[Donald Trump]] commuted his sentence.
+| Former Mayor of [[Detroit]]. On March 11, 2013, he was convicted on 24 federal felony counts, including [[mail fraud]], [[wire fraud]], and [[Racket (crime)|racketeering]].<ref name="npr.org">{{cite news | url = https://www.npr.org/2010/12/15/132093499/ex-detroit-mayor-faces-new-corruption-charges?ft=1&f= | title = Ex Detroit Mayor Faces New Corruption Charges | date = 15 December 2010 | publisher = [[National Public Radio]]}}{{dead link | date = December 2012}}</ref> On October 10, 2013, Kilpatrick was sentenced to 28 years in federal prison.<ref name="fed sentence">{{cite news|last=Baldas|first=Tresa|title='Corruption no more': Judge sends a message with 28-year sentence for Kilpatrick|url=http://www.freep.com/article/20131010/NEWS0102/310100095/|access-date=21 October 2013|newspaper=Detroit Free Press|date=10 October 2013|author2=Shaefer, Jim|author3=Damron, Gina}}</ref>
+|-
+| style="text-align:center;"| [[Max Butler]]
+| style="text-align:center;"| 09954-011
+| 
+| Was serving a 13-year sentence; released from custody on April 14, 2021.
+| Computer hacker; pleaded guilty in 2009 to [[wire fraud]] for stealing credit card information from 2 million customers, which was used in $86 million fraudulent charges; received the longest sentence for [[Hacker (computer security)|computer hacking]] in US history.<ref>{{cite magazine| url=https://www.wired.com/2010/02/max-vision-sentencing/ | magazine=Wired | first=Kevin | last=Poulsen | title=Record 13-Year Sentence for Hacker Max Vision | date=February 12, 2010}}</ref><ref>{{cite web|url=https://www.justice.gov/criminal/cybercrime/press-releases/2010/butlerSent.pdf |title="ICEMAN" Computer Hacker Receives 13-Year Prison Sentence |publisher=Justice.gov |access-date=2015-10-30}}</ref>
+|-
+| style="text-align:center;"| [[Yevgeniy Nikulin]]
+| style="text-align:center;"| 24827-111
+| [[File:Yevgeniy Nikulin (cropped).jpg|80px]]
+|Serving an 88-month sentence; released on February 24, 2023.
+|Computer Hacker arrested in [[Prague]] in 2016 for the [[2012 LinkedIn hack]].
+|-
+| style="text-align:center;"| [[Bernard Ebbers]] 
+| style="text-align:center;"| 56022-054
+| [[File:Bernard Ebbers (cropped) (2).jpg|80px]]
+| Deceased; began a 25-year sentence here in 2006,<ref>{{Cite web|url=https://money.cnn.com/2006/09/26/news/newsmakers/ebbers_prison/index.htm?postversion=2006092617|archive-url=https://web.archive.org/web/20201005191652/https://money.cnn.com/2006/09/26/news/newsmakers/ebbers_prison/index.htm?postversion=2006092617|url-status=dead|archive-date=October 5, 2020|title = Prison life for Bernard Ebbers - Sep. 26, 2006}}</ref> later transferred to [[Federal Medical Center, Fort Worth|FMC Fort Worth]], where he was released early on compassionate grounds after serving 13 years, and died about a month later.
+|Former [[CEO]] of [[Worldcom]]; convicted in 2005 of orchestrating an $11 billion accounting fraud that brought down the telecommunications company in 2002.<ref>{{cite news |url=https://www.nbcnews.com/id/wbna8474930 |title=Ebbers sentenced to 25 years in prison |agency=Associated Press |publisher=[[NBC News Digital]] |date=2012 |access-date=2012-08-05 }}</ref>
+|-
+| style="text-align:center;"| [[Edwin Edwards]] 
+| style="text-align:center;"| [http://www.bop.gov/inmateloc/ 03128-095]
+| [[File:Edwin Edwards (1986) (cropped).png|80px]]
+| Released from custody in 2011; served 10 years.<ref>{{cite news|title=Former Gov. Edwin Edwards out of federal prison|url=http://www.nola.com/politics/index.ssf/2011/01/former_gov_edwin_edwards_out_o.html|archive-url=https://web.archive.org/web/20110114213418/http://www.nola.com/politics/index.ssf/2011/01/former_gov_edwin_edwards_out_o.html|url-status=dead|archive-date=January 14, 2011|access-date=19 October 2015|publisher=NOLA Media Group|date=January 13, 2011}}</ref>
+| Four-term Governor of Louisiana; convicted in 2000 of [[racketeering]], [[conspiracy (crime)|conspiracy]] and [[extortion]] for demanding hundreds of thousands of dollars from businessmen applying for riverboat casino licenses from 1991 through 1997.<ref>{{cite news |url=https://www.nytimes.com/2000/05/10/us/former-louisiana-governor-guilty-of-extortion-on-casinos.html?ref=edwinwedwards |title=Former Louisiana Governor Guilty of Extortion on Casinos |first=Kevin |last=Sack |newspaper=[[The New York Times]] |date=2000-05-10 |access-date=2012-05-08}}</ref>
+|-
+| style="text-align:center;"| [[Andrew Fastow]] 
+| style="text-align:center;"| [http://www.bop.gov/inmateloc/ 14343-179]
+| 
+| Released from custody in 2011; served 5 years.<ref>{{cite news|last1=Smith|first1=Aaron|title=Enron exec Andy Fastow nears prison release|publisher=Cable News Network|date=May 18, 2011}}</ref>
+| Former [[Chief Financial Officer]] of [[Enron]]; pleaded guilty to [[wire fraud]] and [[securities fraud]] in 2004 for his role in the company's 2001 collapse.<ref>{{cite news|url=https://www.nytimes.com/2006/09/27/business/27enron.html?pagewanted=all|title=Fastow Sentenced to 6 Years|newspaper=[[The New York Times]]|date=27 September 2006 |access-date=2015-10-30 |last1=Murphy |first1=Kate |last2=Barrionuevo |first2=Alexei }} {{subscription required}}</ref>
+|-
+| style="text-align:center;"| [[William J. Jefferson]]
+| style="text-align:center;"| 72121-083
+| [[File:William Jefferson, official photo (cropped).jpg|80px]]
+| Originally received a 13-year sentence; resentenced to credit for time served in 2017.<ref name="stole">[http://www.theadvocate.com/baton_rouge/news/politics/article_b95df370-d6ba-11e7-9c87-3fe6b78b8b81.html Bryn Stole, "Federal judge approves plea deal for ex-New Orleans congressman Bill Jefferson"], ''The Advocate'', 1 December 2017. Retrieved 8 December 2017</ref>
+| Louisiana [[United States Congress|Congressman]] from 1991 to 2009; convicted in 2009 of [[bribery]], [[racketeering]] and [[money laundering]] for using his influence to promote the interests of international companies in exchange for $400,000 in bribes.<ref>{{cite news|last1=Stout|first1=David|title=Ex-Rep. Jefferson Convicted in Bribery Scheme|url=https://www.nytimes.com/2009/08/06/us/06jefferson.html?_r=0|access-date=22 July 2015|newspaper=[[The New York Times]]|date=August 5, 2009}}</ref><ref>{{cite news|last1=Alpert|first1=Bruce|title=Former Rep. William Jefferson transferred to Oakdale prison camp|url=http://www.nola.com/politics/index.ssf/2014/01/former_rep_william_jefferson_t.html|archive-url=https://web.archive.org/web/20140122083145/http://www.nola.com/politics/index.ssf/2014/01/former_rep_william_jefferson_t.html|url-status=dead|archive-date=January 22, 2014|access-date=22 July 2015|newspaper=New Orleans Times-Picayune|date=January 21, 2014}}</ref>
+|-
+| style="text-align:center;"| Shannon Kepler
+| style="text-align:center;"| 14007-509
+| 
+| Serving a 25-year sentence; scheduled for release in 2039.
+| Killed his daughter's boyfriend, Jeremey Lake, in 2014. The murder drew attention over allegations it was racially motivation.<ref>{{Cite web |date=2022-01-07 |title=Shannon Kepler Sentenced to 25 Years for Murder |url=https://www.justice.gov/usao-ndok/pr/shannon-kepler-sentenced-25-years-murder |access-date=2022-03-08 |website=www.justice.gov |language=en}}</ref>
+|-
+| style="text-align:center;"| [[Paul Schlesselman]]
+| style="text-align:center;"| {{Deprecated archive|url=https://archive.today/20121212044717/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=22539-076&x=91&y=3|title=22539-076}}
+| 
+| Released in 2017.
+| [[White supremacist]]; pleaded guilty in 2010 to plotting the [[assassination]] of then-Presidential nominee [[Barack Obama]] in 2008; co-conspirator Daniel Cowart was sentenced to 14 years.<ref>{{cite web|last=Date|first=Jack|title=Feds Thwart Alleged Obama Assassination Plot|url=https://abcnews.go.com/TheLaw/Vote2008/story?id=6122962&page=1#.T-8RzVLNmZ4|work=ABC News|access-date=16 March 2013}}</ref><ref>{{cite web|last=Frieden|first=Terry|title=Arkansas man pleads guilty to threatening to kill Obama|url=http://articles.cnn.com/2010-01-14/justice/arkansas.obama.threat_1_paul-schlesselman-justice-department-arkansas-man?_s=PM:CRIME|archive-url=https://archive.today/20130119135320/http://articles.cnn.com/2010-01-14/justice/arkansas.obama.threat_1_paul-schlesselman-justice-department-arkansas-man?_s=PM:CRIME|url-status=dead|archive-date=19 January 2013|publisher=CNN|access-date=16 March 2013}}</ref><ref>{{cite news|last=News Wire Services|title=Obama assassination plot: Paul Schlesselman sentenced to 10 years for plotting murder spree|url=http://www.nydailynews.com/news/national/obama-assassination-plot-paul-schlesselman-sentenced-10-years-plotting-murder-spree-article-1.168661|access-date=16 March 2013|newspaper=New York Daily News|date=April 16, 2010}}</ref>
+|-
+| style="text-align:center;"| [[Don Siegelman]]
+| style="text-align:center;"| [http://www.bop.gov/inmateloc/ 24775-001]
+| [[File:Don Siegelman at Netroots Nation 2008 (cropped).jpg|80px]]
+| Served a 6-year sentence; released in 2017.<ref>{{cite web|last1=Stinson|first1=Jim|title=Former Alabama Gov. Don Siegelman could soon be released from prison|url=http://www.al.com/news/index.ssf/2014/12/former_gov_don_siegelman_will.html|website=AL.com|publisher=Alabama Media Group|access-date=19 October 2015|date=December 15, 2014}}</ref>
+| Governor of Alabama from 1999 to 2003; convicted in 2006 of [[conspiracy (crime)|conspiracy]], [[bribery]], and [[obstruction of justice]] for naming [[HealthSouth]] [[CEO]] [[Richard Scrushy]] to a state health planning board in return for a $500,000 campaign contribution.<ref>{{cite web|url=http://www.al.com/news/index.ssf/2014/12/former_gov_don_siegelman_will.html|title=Former Alabama Gov. Don Siegelman could soon be released from prison|author=Jim Stinson|date=December 15, 2014|publisher=Alabama News|access-date=May 8, 2015}}</ref>
+|-
+| style="text-align:center;"| Justin Solondz
+| style="text-align:center;"| {{Deprecated archive|url=https://archive.today/20130213151822/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=98291-011&x=89&y=10|title=98291-011}}
+| 
+| Released in 2017; served 7 years.
+| Member of the group [[Earth Liberation Front]]; pleaded guilty to [[conspiracy (crime)|conspiracy]] and [[arson]] for planning and executing the [[University of Washington firebombing incident]].<ref>{{cite news|title=Firebomb maker gets 7 years for 2001 UW arson|url=http://blogs.seattletimes.com/today/2012/03/firebomb-maker-gets-7-years-for-2001-uw-arson/|access-date=6 March 2013|newspaper=The Seattle Times|date=March 16, 2012}}</ref><ref>{{cite web|title=Last Defendant Arrested In Uw {{Sic|nolink=y|Horticu|lure}} Center Arson Sentenced To Prison|url=https://www.justice.gov/usao/waw/press/2012/Mar/solondz.html|archive-url=https://archive.today/20130217140551/http://www.justice.gov/usao/waw/press/2012/Mar/solondz.html|url-status=dead|archive-date=17 February 2013|publisher=US Department of Justice|access-date=6 March 2013}}</ref>
+|}
+
+==See also==
+{{Portal|United States|Politics|Law}}
+*[[List of U.S. federal prisons]]
+*[[Federal Bureau of Prisons]]
+*[[Incarceration in the United States]]
+
+==References==
+{{Reflist|30em}}
+
+==External links==
+*[https://web.archive.org/web/20120621075516/http://www.bop.gov/locations/institutions/oax/index.jsp Official website]
+
+{{coord|30|49|26|N|92|38|26|W|scale:10000|display=title}}
+{{Federal Bureau of Prisons}}
+
+[[Category:Prisons in Louisiana]]
+[[Category:Buildings and structures in Allen Parish, Louisiana]]
+[[Category:Federal Correctional Institutions in the United States|Oakdale]]

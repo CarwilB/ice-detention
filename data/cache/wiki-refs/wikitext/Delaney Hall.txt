@@ -1,0 +1,104 @@
+{{Short description|Prison in Newark, New Jersey, United States}}
+{{Use American English|date=August 2025}}
+{{Use mdy dates|date=February 2026}}
+{{Infobox Prison
+| name           = Delaney Hall
+| image          = {{Multiple image|border=infobox|perrow=1/2|total_width=330
+  | image1 = Detainees wave from windows, Delaney Hall, May 25, 2026.png
+  | image2 = ICE agents in a line against protesters Delaney Hall cropped, May 28, 2026.jpg
+  | image3 = Delaney Hall riot police before mass arrests, May 31, 2026.jpg
+  | width = 280
+  | footer_align = center
+  | footer =  {{Flatlist|
+* Detainees wave at protesters from windows, May 25
+* [[United States Immigration and Customs Enforcement|ICE]] agents outside the facility, May 28
+* [[Riot police]] outside the facility, May 31, 2026
+}}}}
+| location       = 451 Doremus Avenue<br />[[Newark, New Jersey]], U.S.
+| coordinates    = {{Coord|40|43|05.2|N|74|07|42.6|W|region:US-NJ_type:landmark|display=title,inline}}
+| status         = Open
+| classification = Minimum–medium
+| capacity       = 1,196<ref>{{cite court |litigants=City of Newark v. GEO Re-Entry Group, LLC |court=[[United States District Court for the District of New Jersey]] |date=April 1, 2025 |url=https://storage.courtlistener.com/recap/gov.uscourts.njd.565061/gov.uscourts.njd.565061.1.0_1.pdf}}</ref><ref name="auto">{{Cite web|url=https://www.northjersey.com/story/news/new-jersey/2025/01/28/delaney-hall-ice-could-use-to-house-detainees-if-lawsuit-prevails/77665858007/|title=This Newark building could house ICE detainees if it reopens after a lawsuit against NJ|first=Ricardo|last=Kaulessar|date=January 28, 2025|website=North Jersey Media Group}}</ref><ref>{{cite letter |first=Booker |last=Corey |recipient=Alejandro Mayorkas, Patrick Lechleitner |date=June 6, 2024 |subject=Contract for the provision of immigration detention services at the Delaney Hall Facility |url=https://www.booker.senate.gov/imo/media/doc/6624cblettericedetentionnewark1.pdf}}</ref>
+| opened         = 2011–2017<br/>2023 (closed)<br/>2025 (re-opened)
+| closed         = 
+| managed_by     = [[GEO Group]]
+| director       = 
+| website        = https://www.geogroup.com/facilities/delaney-hall/
+}}
+{{Immigration policy of the second Trump administration sidebar|detention}}
+
+'''Delaney Hall''' is a facility used for [[Immigration detention in the United States|immigrant detention]] in [[Newark, New Jersey]], United States. The [[private prison]] is managed by the [[GEO Group]] under contract for [[U.S. Immigration and Customs Enforcement]] (ICE), which awarded GEO Group a {{USD|1}} billion contract for 15 years.<ref name=":2">{{Cite web |last=Janoski |first=Steve |date=2025-09-25 |title=Inside New Jersey's troubled immigration detention center: 'It's designed to break people' |url=https://jerseyvindicator.org/2025/09/25/inside-new-jerseys-troubled-immigration-detention-center-its-designed-to-break-people/ |access-date=2026-05-27 |website=The Jersey Vindicator |language=en-US}}</ref> Delaney Hall previously held immigrant detainees from 2011 to 2017. The facility re-opened in 2025 and has an authorized capacity of up to 1,196.
+
+It is the largest facility of its type on the [[East Coast of the United States]] and the largest of the two in New Jersey, the other being the Elizabeth Detention Center.<ref name=":Raji">{{Cite news |last1=Raji |first1=Tobi |last2=Hernández |first2=Arelis |url=https://www.washingtonpost.com/nation/2025/05/10/delaney-hall-detention-facility-explained/ |title=What to know about Delaney Hall, where Newark's mayor was arrested |date=May 10, 2025 |newspaper=[[The Washington Post]] |access-date=May 19, 2025}}</ref> Both facilities are located near [[Newark Liberty International Airport]] and are used for the entire [[New York metropolitan area]]. It is located in an industrial area of Newark, neighbored by a natural-gas plant, a sewage-treatment facility, and an animal-fat–rendering plant amongst other facilities.<ref name=":2" />
+
+Delaney Hall has received significant media attention due to [[Delaney Hall oversight incident|the arrest of the mayor of Newark]] during an oversight visit, poor facility living conditions and allegations of abuse by guards, a death in the facility as well as multiple hospitalizations, and detainee escapes from the facility over allegations of poor conditions. Detainees held a 30-day [[2026 Delaney Hall hunger strike and protests|hunger strike which led to an escalation of protests outside the facility]], leading to violent clashes between ICE agents and protesters blocking vehicles from entering the facility, as well as [[arrest]]s of protesters and journalists and retaliation against strikers inside the facility.
+
+==Background and operation before 2025==
+Delaney Hall opened in 2000 and had been used to house federal, state, and county detainees.<ref>{{Cite web |date=June 6, 2024 |title=United States Senate Washington, DC 20510 |url=https://www.booker.senate.gov/imo/media/doc/6624cblettericedetentionnewark1.pdf |access-date=May 5, 2026 |website=booker.senate.gov}}</ref> It was named to honor Geraldine O. Delaney, a pioneer in New Jersey drug and addiction treatment. While initially designed as a 250-bed rehabilitation center, the facility later transitioned to a high-capacity detention center operated by the GEO Group.<ref>{{cite news |last=Dolnick |first=Sam |date=June 18, 2012 |url=https://www.nytimes.com/2012/06/19/nyregion/at-a-new-jersey-halfway-house-a-volatile-mix-fuels-a-murder.html |title=At Penal Unit, a Volatile Mix Fuels a Murder |work=The New York Times |access-date=May 28, 2026}}</ref><ref>{{cite news |last=Fahy |first=Claire |date=June 13, 2026 |url=https://www.nytimes.com/2026/06/13/nyregion/delaney-hall-family-ice-center-close.html |title=Delaney Hall Is Named After Their Family. They Want It to Close. |work=The New York Times |access-date=June 14, 2026}}</ref> GEO Group operated the facility from 2011 to 2017, at the time having a 450 capacity for immigrant detainees. It was then used as a drug rehabilitation center and [[halfway house]] until 2023, when it was vacated. In 2021, New Jersey passed legislation prohibiting local jails and private facilities from housing immigrant detainees. It was challenged in court and in 2023, the statute was struck down.<ref name="auto"/><ref>{{cite news |last=Hulac |first=Benjamin J. |date=July 23, 2025 |url=https://www.njspotlightnews.org/2025/07/court-rules-nj-cant-block-private-immigrant-detention-centers/ |title=NJ can't block private immigrant detention centers, judges rule |work=NJ Spotlight News |access-date=March 6, 2026 }}</ref>
+
+== Reopening in 2025 ==
+The Geo Group entered into a 15-year contract with [[United States Immigration and Customs Enforcement|US Immigration and Customs Enforcement]] to operate the facility, which was announced on February 26, 2025.<ref name=":3">{{Cite web |date=2025-02-26 |title=ICE expands detention capacity with Delaney Hall Facility in New Jersey |url=https://www.ice.gov/news/releases/ice-expands-detention-capacity-delaney-hall-facility-new-jersey |access-date=2026-05-27 |website=ice.gov |language=en}}</ref><ref>{{cite news |last1=Ferré-Sadurní |first1=Luis |last2=Tully |first2=Tracey |date=February 27, 2025 |url=https://www.nytimes.com/2025/02/27/nyregion/trump-deportation-facility-newark.html |title=Trump to Reopen 1,000-Bed Detention Center for Migrants in New Jersey |work= [[The New York Times]] |access-date=March 4, 2026}}</ref><ref>{{Cite web|url=https://newjerseymonitor.com/2024/04/19/private-prison-company-eyes-newark-site-for-new-ice-jail/|title=Private prison company eyes Newark site for new ICE jail|website=New Jersey Monitor|first=Sophie|last=Nieto-Munoz|date=April 19, 2024|access-date=March 2, 2026}}</ref>  [[Caleb Vitello]], then-acting Director of ICE, stated, "The location near an international airport streamlines logistics, and helps facilitate the timely processing of individuals in our custody as we pursue President Trump’s mandate to arrest, detain and remove illegal aliens from our communities.”<ref name=":3" />
+
+Soon after, [[Mayor of Newark]] [[Ras Baraka]], stated that the GEO Group had not complied with standard municipal building and safety regulations.<ref>{{Cite web|url=https://www.njspotlightnews.org/video/newark-mayor-threatens-stop-work-order-on-ice-detention-facility/|title=Newark mayor threatens stop-work order for ICE detention facility|website=NJ Spotlight News|first=Briana|last=Vannozzi|date=February 28, 2025|access-date=March 2, 2026}}</ref> Newark sued the GEO Group in [[New Jersey Superior Court]] in March, alleging that the facility did not have a valid [[certificate of occupancy]] (CO). In April, the case was transferred to federal court, where a judge was weighing Newark's request to close the facility "pending inspection and compliance with local, State, and administrative codes".<ref name=":Raji" /><ref>{{Cite web|url=https://newjerseymonitor.com/2025/04/10/newark-lawsuit-aims-to-cripple-immigrant-enforcement-prison-company-alleges/|title=Newark lawsuit aims to 'cripple' immigrant enforcement, prison company alleges|website=New Jersey Monitor|first=Sophie|last=Nieto-Munoz|date=April 10, 2025|access-date=March 2, 2026}}</ref> When it opened in May 2025, the GEO Group stated that the certificate of occupancy issued in 2007 was still valid.<ref>{{Cite web|last=Nieto-Munoz|first=Sophie|date=May 5, 2025|url=https://newjerseymonitor.com/briefs/new-migrant-jail-in-newark-begins-housing-detainees-despite-legal-challenge/|title=New migrant jail in Newark begins housing detainees despite legal challenge|website=New Jersey Monitor|access-date=March 2, 2026}}</ref> That assessment is challenged by the city. In May 2025, Mayor Baraka's office stated, "The Health Department found minor violations at Delaney Hall that were corrected on-site at the time of the inspection. There are no open health violations."<ref>{{cite news |last=Strunsky |first=Steve |date=May 23, 2025 |url=https://www.nj.com/essex/2025/05/after-inspection-newark-says-violations-were-addressed-at-ice-facility.html |title=After inspection, Newark says violations were addressed at ICE facility |website=The Star-Ledger |access-date=March 5, 2026}}</ref><ref>{{cite news |last=Duddridge |first=Natalie |date=May 5, 2025 |url=https://www.cbsnews.com/newyork/news/newark-nj-migrant-detention-delaney-hall-ice/ |title=Newark, New Jersey facility begins housing detained migrants, prompting outrage from officials |publisher=CBS News |access-date=March 8, 2026}}</ref>
+
+== May 2025 inspection visit and arrests ==
+{{main|Delaney Hall oversight incident}}
+{{excerpt|Delaney Hall oversight incident|only=paragraphs|hat=no}}
+
+== Unrest, escape of detainees, transfer of women detainees ==
+On June 12, 2025, following days of Delaney Hall detainees complaining about unacceptable conditions and lack of food, a small uprising occurred and four people escaped the facility<ref>{{Cite web|url=https://www.nytimes.com/2025/06/14/nyregion/newark-ice-detainees-escape.html|title=Inside the Tumult That Led 4 Men to Escape from a Migrant Facility|first1=Tracey|last1=Tully|first2=Luis|last2=Ferré-Sadurní|first3=Raúl|last3=Vilchis|date=June 14, 2025|work=The New York Times|access-date=March 2, 2026}}</ref> after breaking through a sheet-rock interior wall.<ref>{{cite news |first=Steve |last=Strunsky |date=June 12, 2025 |url=https://www.nj.com/essex/2025/06/ice-detainees-tear-down-a-wall-in-uprising-at-nj-detention-facility-lawyer-says.html |title=ICE detainees tear down a wall in uprising at N.J. detention facility, lawyer says |website=The Star-Ledger |access-date=March 3, 2026 }}</ref><ref>{{Cite web|url=https://www.cnn.com/2025/06/13/us/newark-migrant-detention-center-escape|title=4 detainees escaped from a Newark ICE detention facility after advocates say poor conditions led to 'chaos'|first1=Zoe|last1=Sottile|first2=Priscilla|last2=Alvarez|first3=Holmes|last3=Lybrand|date=June 13, 2025|publisher=CNN|access-date=March 2, 2026}}</ref> Two of the men were recaptured after three days.<ref>{{Cite web|url=https://www.nytimes.com/2025/06/15/nyregion/newark-escapees-caught.html|title=2 of 4 Men Who Escaped From Immigration Detention Center Are Caught|first=Chelsia Rose|last=Marcius|date=June 16, 2025|work=The New York Times}}</ref> The third was captured shortly after, and the fourth was recaptured on July 18.<ref name=2th>{{Cite web|url=https://abcnews.com/US/delaney-hall-fourth-escapee-found-los-angeles/story?id=123865778|title=4th detainee who escaped from New Jersey ICE facility located in Los Angeles: FBI|first=Meredith|last= Deliso|date=July 18, 2025|website=ABC News}}</ref> Following the unrest, around 50 women were transferred from Delaney Hall to El Paso, Texas, where they were held in a tent-like facility opened in 2023.<ref>{{Cite web |last=Ramirez |first=Cindy |last2=Moore |first2=Robert |date=2025-06-16 |title=Women from turbulent New Jersey ICE detention facility moved to El Paso |url=https://elpasomatters.org/2025/06/15/ice-moves-detainees-to-el-paso-after-escape-at-new-jersey-delaney-hall/ |access-date=2026-05-27 |website=El Paso Matters |language=en-US}}</ref>
+
+== Deaths of detainees ==
+{{further|List of deaths in ICE detention}}
+In December 2025, 41-year-old Jean Wilson Brutus died while in custody at Delaney Hall. According to ICE, "On Dec. 11, 2025, Brutus entered ICE custody. He had no signs of distress during intake nor a medical history of cardiovascular issues." Roughly one day after arriving at Delaney Hall, ICE said that Brutus suffered a "medical emergency". He was brought to [[University Hospital]] in Newark, where he was pronounced dead.<ref>{{Cite web|url=https://newjerseymonitor.com/2026/02/09/family-of-nj-migrant-who-died-in-federal-custody-seeks-answers/|title=Family of NJ migrant who died in federal custody seeks answers|website=New Jersey Monitor|first=Sophie|last=Nieto-Munoz|date=February 9, 2026|access-date=March 2, 2026}}</ref><ref>{{Cite web|date=December 19, 2025|url=https://mciver.house.gov/media/press-releases/delaney-hall-detainee-dies-in-ice-custody-mciver-demands-accountability|title=Delaney Hall Detainee Dies in ICE Custody, McIver Demands Accountability &#124; U.S. House Representative LaMonica McIver|website=mciver.house.gov}}</ref><ref>{{Cite web|url=https://www.independent.co.uk/news/world/americas/ice-death-jean-wilson-brutus-new-jersey-b2908884.html|title=Family of 'perfectly healthy' asylum-seeker who died in ICE custody demand answers|date=January 27, 2026|website=The Independent|last=Rohrlich|first=Justin}}</ref> The reason for death has been described inconclusive.<ref>{{Cite web|url=https://haitiantimes.com/2026/01/14/jean-wilson-brutus-ice-death-delaney-hall/|title=Family of Haitian man who died in ICE custody seeks own autopsy|first=Fredner|last=Cayemitte|date=January 14, 2026|website=The Haitian Times}}</ref>
+
+In August 2026, Salvadoran immigrant Edwin Lopez-Cornejo, 41, died while in custody. ICE said that Mr. Lopez-Cornejo was pronounced dead in August 2026 at University Hospital after he experienced a medical emergency at Delaney Hall. The cause of his death was not known.<ref>{{cite news |last=Ley |first=Ana |last2=Tully |first2=Tracey |last3=Bonamo |first3=Mark |title=Immigrant Held at Delaney Detention Center Has Died, Officials Say |url=https://www.nytimes.com/2026/08/03/nyregion/ice-detention-center-death-delaney-hall-nj.html |work=The New York Times |date=August 3, 2026 |access-date=August 4, 2026 |url-access=limited}}</ref>
+
+==Hunger strike and protests==
+{{More citations needed section|date=July 2026}}
+
+{{Multiple image|perrow=1/3|total_width=300
+  | image1 = "Delaney Hall Concentration Camp" banner.jpg
+  | image2 = ICE attack protesters with batons Delaney Hall May 27, 2026.webm
+  | image3 = Delaney Hall tear gas May 29.webm
+  | image4 = Delaney Hall - police arrest protester in kettle.webm
+  | footer_align = center
+  | footer =  {{Flatlist|'''By row:'''
+* [[Banner drop]] outside the facility
+* [[United States Immigration and Customs Enforcement|ICE]] agents clash with protesters outside the facility
+* '''3 and 4''': [[Riot police]] clash with protesters outside the facility, May 2026
+}}}}
+
+{{excerpt|Delaney Hall hunger strike and protests|only=paragraphs|hat=yes}}
+
+==Population==
+A ''[[New York Times]]'' analysis reported that in early April 2026, Delaney Hall was holding 591 prisoners: 76 of them had criminal convictions and 123 faced criminal charges, according to government data. The data countered the DHS/ICE claims that most prisoners were criminals.<ref>{{Cite news |last=Shanahan |first=Ed |last2=Aleaziz |first2=Hamed |date=2026-06-06 |title=ICE Says Detainees Are 'Worst of the Worst.' Government Data Disagrees. |url=https://www.nytimes.com/2026/06/06/nyregion/delaney-hall-ice-detainees.html |access-date=2026-06-11 |work=The New York Times |language=en-US |issn=0362-4331}}</ref>
+{{Bar chart|title=Average daily population at Delaney Hall Detention Facility<ref name="ice-detention-fy19-fy26">{{Cite web | publisher = U.S. Department of Homeland Security | last = U.S. Immigration and Customs Enforcement | title = ICE Detention Statistics FY 2019 | date = 2019-09-30 | url = https://www.ice.gov/doclib/detention/FY19-detentionstats.xlsx }} Additional fiscal year data: [https://www.ice.gov/doclib/detention/FY20-detentionstats.xlsx FY20], [https://www.ice.gov/doclib/detention/FY25_detentionStats09242025.xlsx FY25], [https://www.ice.gov/doclib/detention/FY26_detentionStats02022026.xlsx FY26].</ref><ref name="ice-dmcp-faclist17">{{Cite web | publisher = U.S. Department of Homeland Security | last = U.S. Immigration and Customs Enforcement | title = ICE DMCP Facility List — ERO Custody Management Division, FY2017 | date = 2017-07-10 | url = https://www.prisonlegalnews.org/media/publications/ICE_DMCP_Facility_List_ERO_Custody_Management_Division_2017.pdf}}</ref>{{citation needed |date=June 2026 |reason=Refs only cover a few FYs in the chart. Too early to cover FY20-FY26.}}|bar_width=35|data_max=957|label_type=Fiscal year|data_type=ADP|label1=FY 2010|data1=395|label2=FY 2011|data2=510|label3=FY 2012|data3=911|label4=FY 2013|data4=829|label5=FY 2014|data5=852|label6=FY 2015|data6=536|label7=FY 2016|data7=539|label8=FY 2017|data8=679|label9=FY 2019|data9=781|label10=FY 2020|data10=506|label11=FY 2025|data11=234|label12=FY 2026|data12=905|float=right}}
+
+== See also ==
+{{Portal|New Jersey|Politics}}
+* [[Deportation in the second Trump administration]]
+* [[List of immigrant detention sites in the United States]]
+* [[Prison–industrial complex]]
+{{Clear}}
+
+== References ==
+{{Reflist|30em}}
+
+== External links ==
+* [https://www.geogroup.com/facilities/delaney-hall/ GEO Group Delaney Hall]
+* [https://www.ice.gov/detain/detention-facilities/delaney-hall-detention-facility ICE Delaney Hall]
+
+[[Category:2011 establishments in New Jersey]]
+[[Category:2017 disestablishments in New Jersey]]
+[[Category:2025 establishments in New Jersey]]
+[[Category:Buildings and structures in Newark, New Jersey]]
+[[Category:GEO Group]]
+[[Category:Immigration detention centers and prisons in the United States]]
+[[Category:Organizations disestablished in 2017]]
+[[Category:American organizations established in 2012]]
+[[Category:Prisons in New Jersey]]
+[[Category:Private prisons in the United States]]
+[[Category:Second Trump administration controversies]]
+[[Category:American organizations established in 2025]]
+[[Category:United States Immigration and Customs Enforcement operations during the second Trump administration]]

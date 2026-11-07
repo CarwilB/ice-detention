@@ -1,0 +1,311 @@
+{{Short description|Federal prison in Butner, North Carolina, US}}
+{{Use American English|date=July 2025}}
+{{Infobox prison
+| name           = Federal Correctional Complex, Butner
+| image          = FCI Butner Medium.jpg
+| image_size     = 300
+| location       = [[Mangum Township, Durham County, North Carolina|Mangum Township, Durham County]] / Dutchville Township, [[Granville County, North Carolina|Granville County]], [[North Carolina]]
+| coordinates    = 
+| status         = Operational
+| classification = Minimum, Low, Medium and administrative security (FMC Butner is a medical facility)
+| population     = 5,000 (four facilities)
+| opened         = 
+| closed         = 
+| managed_by     = [[Federal Bureau of Prisons]]
+| warden         = 
+}}
+The '''Federal Correctional Complex, Butner''' ('''FCC Butner''') is a United States federal prison complex for men near [[Butner, North Carolina]]. It is operated by the [[Federal Bureau of Prisons]], a division of the [[United States Department of Justice]]. FCC Butner is about {{convert|25|mi|km}} northwest of [[Raleigh, North Carolina|Raleigh]], the [[List of capitals in the United States|state capital]]. It includes the Bureau's largest medical complex, which operates a drug treatment program and specializes in [[oncology]] and [[behavioral science]].<ref>[https://web.archive.org/web/20130412235200/http://www.bop.gov/locations/institutions/bux/index.jsp Archived version of "FCC Butner"] from BOP website. Archived at the [[Internet Archive]].</ref> Among its inmates was [[Bernie Madoff]], who was convicted of perpetrating the largest [[Ponzi scheme]] in history. He died at the prison in April 2021.<ref name="wxyz.com">{{cite news|url=https://www.wxyz.com/news/national/bernie-madoff-dies-in-prison-at-82 |title=Bernie Madoff dies in prison at 82 |date=April 14, 2021 | website=WXYZ Detroit}}</ref>
+
+The complex consists of four facilities:
+
+* Federal Correctional Institution, Butner Low (FCI Butner Low): a low-security facility, opened in 1995.<ref>{{cite web | url=https://prisonpath.com/federal/north-carolina/federal-correctional-complex-butner-fci-butner-low/ | title=Federal Correctional Complex, Butner (FCI Butner Low) }}</ref>
+* Federal Correctional Institution, Butner Medium I (FCI Butner Medium I): a medium-security facility, opened in 1976<ref>{{cite web | url=https://prisonpath.com/federal/north-carolina/federal-correctional-institution-fci-butner-medium/ | title=Federal Correctional Complex, Butner (FCI Butner Medium I) }}</ref>
+*Federal Correctional Institution, Butner Medium II (FCI Butner Medium II): a medium-security facility, opened in 2006<ref>{{cite web | url=https://prisonpath.com/federal/north-carolina/federal-correctional-complex-butner-fci-butner-medium-ii/ | title=Federal Correctional Complex, Butner (FCI Butner Medium II) }}</ref>
+* [[Federal Medical Center, Butner]] (FMC Butner): a facility which houses inmates of all security levels with health issues, opened in 1995.<ref>{{cite web | url=https://prisonpath.com/federal/north-carolina/federal-medical-center-fmc-butner/ | title=Federal Medical Center, Butner (FMC Butner) }}</ref>
+
+The complex lies in an [[unincorporated area]] on the county line between [[Durham County, North Carolina|Durham County]] to the west and [[Granville County, North Carolina|Granville County]] to the east.<ref>{{cite web|url=https://www2.census.gov/geo/maps/DC2020/DC20BLK/st37_nc/county/c37063_durham/DC20BLK_C37063.pdf|title=2020 CENSUS - CENSUS BLOCK MAP: Durham County, NC|publisher=[[U.S. Census Bureau]]|accessdate=2022-08-15|page=6 (PDF p. 7/19)|quote=Butner Federal Correctional Complex}}</ref><ref>{{cite web|url=https://www2.census.gov/geo/maps/DC2020/DC20BLK/st37_nc/county/c37077_granville/DC20BLK_C37077.pdf|title=2020 CENSUS - CENSUS BLOCK MAP: Granville County, NC|publisher=[[U.S. Census Bureau]]|accessdate=2022-08-15|page=8 (PDF p. 9/14)|quote=Butner Federal Correctional Complex}}</ref> On the Durham County side, the portion of the prison is in [[Mangum Township, Durham County, North Carolina|Mangum Township]],<ref>{{cite web|url=https://www2.census.gov/geo/maps/DC2020/DC20BLK/st37_nc/cousub/cs3706391972_mangum/DC20BLK_CS3706391972.pdf|title=2020 CENSUS - CENSUS BLOCK MAP (INDEX): Mangum township, NC|publisher=[[U.S. Census Bureau]]|accessdate=2022-08-15|page=2 (PDF p. 3/3)|quote=Butner Federal Correctional Complex}}</ref> while on the Granville County side, it is in Dutchville Township.<ref>{{cite web|url=https://www2.census.gov/geo/maps/DC2020/DC20BLK/st37_nc/cousub/cs3707790936_dutchville/DC20BLK_CS3707790936.pdf|title=2020 CENSUS - CENSUS BLOCK MAP: Dutchville township, NC|publisher=[[U.S. Census Bureau]]|accessdate=2022-08-15|quote=Butner Federal Correctional Complex}}</ref>
+
+==Incidents==
+
+===Alleged Madoff assault===
+On March 18, 2010, ''[[The Wall Street Journal]]'' reported that Bernie Madoff, the New York financier serving a 150-year sentence at FCI Butner for running a Ponzi scheme that cost investors billions of dollars, was assaulted by another inmate in December 2009. Citing three sources, a current inmate, a former inmate, and a prison employee, the newspaper reported that the assailant was an inmate serving time for a drug conviction who believed that Madoff owed him money. The inmate reported that Madoff suffered a broken nose, fractured ribs, and cuts to his head and face. In response to the report, Bureau of Prisons spokeswoman Denise Simmons said, "We have no knowledge or information to confirm he was assaulted."<ref>{{cite news|last1=Searcey|first1=Dionne|last2=Efrati|first2=Amir|title=Madoff Beaten in Prison|url=https://www.wsj.com/articles/SB10001424052748704743404575128031143424928|access-date=22 October 2015|publisher=The Wall Street Journal|date=March 18, 2010}}</ref>
+
+===Murder plot===
+On November 16, 2011, James Lukinoff, an inmate at FCI Butner, was [[indicted]] for planning to assault and kill an [[FBI]] agent who had been involved in investigating the crime for which Lukinoff was sent to prison. The indictment alleged that, from February 2009 to April 2011, Lukinoff developed and pursued a plan to purchase a [[Silencer (firearm)|suppressor]] and had a friend or family member store it until his release from prison. Once released, Lukinoff planned to retrieve the suppressor and his firearm, and kill the agent. Lukinoff pleaded guilty to retaliating against a federal official by threat on June 20, 2012. He was held at the [[Federal Medical Center, Butner]] and was scheduled for release in 2024.
+{{citation needed|date=July 2021}}
+
+==Inmates==
+
+===High-profile crimes===
+{|class="wikitable sortable"
+|-
+!width=13%|Inmate Name
+!width=9%|Register Number
+!width=5%|Photo
+
+!width=24%|Status
+!width=54%|Details
+|-
+| style="text-align: center;" |[[Larry Hall (criminal)|Larry Hall]]
+| style="text-align: center;" |10332-026
+| style="text-align: center;" |[[File:Larry-Hall-1.png|80px]]
+|Serving a life sentence without parole.
+|American kidnapper, rapist, murderer, and suspected [[serial killer]]. An [[Fan (person)|aficionado]] of the [[American Revolution]] and [[American Civil War|Civil War]], Hall traveled around the [[Midwestern United States|Midwest]] for [[Historical reenactment|historical reenactments]] and is believed to have [[Kidnapping|abducted]], [[Rape|raped]], [[Torture|tortured]], and murdered dozens of girls and women.
+|-
+| style="text-align:center;"|[[Mel Reynolds]]
+| style="text-align:center;"|[https://web.archive.org/web/20131029190613/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=07476-424&x=91&y=23 07476-424]
+| style="text-align:center;"|[[File:Mel Reynolds.jpg|80px]]
+| Sentence commuted by President [[Bill Clinton]] in 2001; served his sentence at the minimum-security prison camp.<ref>{{cite news|url=http://usatoday30.usatoday.com/news/opinion/2001-01-29-ncguest1.htm|title=Why so little work in prisons' work camp?|last1=Reynolds|first1=Mel|date=January 29, 2001|access-date=29 September 2015|publisher=USA Today}}</ref>
+| Illinois Congressman from 1993 to 1995; convicted in 1995 of sexual assault, [[obstruction of justice]] and solicitation of [[child pornography]] in connection with his relationship with a 16-year-old campaign worker; convicted in 1997 of [[bank fraud]].<ref>{{cite web|url=https://www.cnn.com/US/9611/07/reynolds.indict/|title=Ex-Congressman Reynolds & wife indicted for fraud|date=November 7, 1996|publisher=CNN|access-date=22 October 2013}}</ref><ref>{{cite news|url=https://www.chicagotribune.com/2001/01/21/clinton-grants-clemency-frees-reynolds/|title=Clinton Grants Clemency, Frees Reynolds|last=Dorning|first=Mike|date=January 21, 2001|newspaper=The New York Times|access-date=22 October 2013}}</ref>
+|-
+| align="center" |[[Bernard Madoff]]
+| align="center" |{{Deprecated archive|url=https://archive.today/20121213000333/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=61727-054&x=98&y=16|title=61727-054}}
+| style="text-align:center;"|[[File:BernardMadoff.jpg|80px]]
+| Served 11 years of a 150-year sentence until his death on April 14, 2021.<ref>{{cite web|url=https://www.politico.com/story/2014/03/bernie-madoff-interview-104838#superComments|title=Madoff: Politics, remorse, Wall Street|last1=Lee|first1=MJ|date=March 20, 2014|website=Politico|publisher=POLITICO LLC}}</ref>
+| Former [[financier]]; pleaded guilty in 2009 to [[fraud]], [[money laundering]], [[perjury]] and [[theft]] for perpetrating the largest [[Ponzi scheme]] in US history, robbing thousands of investors of over $65 billion over 20 years; the story was featured on the [[CNBC]] television program ''[[American Greed]]''.<ref>{{cite news|url=https://www.nytimes.com/2009/03/13/business/13madoff.html?pagewanted=all&_r=0|title=Madoff Goes to Jail After Guilty Pleas|last=Henriques|first=Diana B.|date=March 12, 2009|newspaper=The New York Times|access-date=14 March 2013}}</ref><ref>{{cite news|url=https://www.nytimes.com/2009/07/15/business/15madoff.html|title=Madoff Arrives at Federal Prison in North Carolina|last=Kouwe|first=Zachery|date=July 14, 2009|newspaper=The New York Times|access-date=14 March 2013}}</ref> Died in 2021.<ref name="wxyz.com"/>
+|-
+|style="text-align:center;"| [[John Hinckley Jr.]]
+|style="text-align:center;"| 00137-177
+|[[File:John Hinckley Jr. FBI Mugshot.jpg|border|center|frameless|112x112px]]
+|Released to a psychiatric hospital in 1981.
+|Attempted to [[assassinate]] President [[Ronald Reagan]] in Washington, D.C., on March 30, 1981, as the culmination of an effort to impress teen actress [[Jodie Foster]]; found not guilty by reason of insanity in 1982.<ref>{{cite web |title=John Hinckley, Jr. . Reagan . WGBH American Experience |url=https://www.pbs.org/wgbh/americanexperience/features/biography/reagan-hinckley/ |url-status=dead |archive-url=https://web.archive.org/web/20110213093714/https://www.pbs.org/wgbh/americanexperience/features/biography/reagan-hinckley/ |archive-date=2011-02-13 |access-date=2012-08-27 |publisher=PBS}}</ref>
+|-
+|style="text-align:center;"| [[R. Kelly]]
+|style="text-align:center;"| [https://www.bop.gov/inmateloc/ 09627-035]
+| style="text-align:center;"| [[File:R. Kelly 2002 Mugshot.jpg|80px]]
+|Serving a 31 year sentence, Scheduled for release on December 21, 2045.
+|Former R&B singer and music artist, convicted of racketeering, violations of the [[Mann Act]], producing child pornography, sex trafficking, and child exploitation charges.
+|-
+| style="text-align:center;"| [[Jon Burge]]
+| style="text-align:center;"| {{Deprecated archive|url=https://archive.today/20121213010155/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=50504-018&x=80&y=18|title=50504-018}}
+| style="text-align:center;"|
+| Released from custody in 2015; served 4 years.<ref>{{cite web|title=Former Chicago Police Commander Jon Burge Reports To Prison|url=https://chicago.cbslocal.com/2011/03/16/burge-set-to-report-to-prison/|website=CBS Chicago|publisher=CBS Local Media|access-date=29 September 2015|date=March 16, 2011}}</ref> 
+| Former [[Chicago Police Department]] commander; convicted in 2010 of [[obstruction of justice]] and [[perjury]] for torturing more than 200 criminal suspects between 1972 and 1991, eliciting dozens of [[false confessions]].<ref>{{cite news|url=https://www.chicagotribune.com/2010/06/28/burge-found-guilty/ |title=Burge found guilty - Chicago Tribune |publisher=Chicago Tribune |date=June 28, 2010 |access-date=July 27, 2012 |first1=Matthew |last1=Walberg |first2=William |last2=Lee}}</ref><ref>{{cite news|url=https://www.chicagotribune.com/2011/01/22/burge-sentence-leaves-torn-emotions/ |title=Burge sentence leaves torn emotions - Chicago Tribune |publisher=Chicago Tribune |date=January 22, 2011 |access-date=July 27, 2012 |first=Ryan |last=Haggerty}}</ref>
+|-
+| style="text-align:center;"| [[Criminal proceedings in the January 6 United States Capitol attack|Scott Kevin Fairlamb]]
+| style="text-align:center;"| 26840-509
+| style="text-align:center;"|
+|Released on June 8, 2023.
+|Former [[Mixed martial arts|MMA]] fighter pleaded guilty to assaulting an officer during the [[January 6 United States Capitol attack|United States Capitol attack]].
+|-
+| style="text-align:center;"| [[Sami Osmakac]]
+| style="text-align:center;"| 55958-018
+| style="text-align:center;"| 
+|Serving a 40-year sentence, scheduled for release in 2046. Currently at [[United States Penitentiary, McCreary|USP McCreary]].
+|Convicted of one count of attempted use of a [[weapon of mass destruction]], and one count of possession of an unregistered [[automatic firearm]] in connection with a terrorist plot.
+|-
+| style="text-align:center;"| Christopher Paul Hasson
+| style="text-align:center;"| 64544-037
+| style="text-align:center;"| [[File:Christopher Hasson.jpg|80px]]
+|Serving a 13-year sentence, scheduled for release in 2033.<ref>{{cite web |title=Case Studies - Christopher Paul Hasson |url=https://securityawareness.dcsa.mil/cdse/case-studies/case.html?Hasson |website=Center for Development of Security Excellence |publisher=[[Defense Counterintelligence and Security Agency]] |access-date=3 September 2026 |date=January 2020}}</ref>
+|Former [[United States Coast Guard|USCG]] [[Lieutenant (navy)|lieutenant]] and [[White nationalism|White Nationalist]] arrested in connection to [[Terrorism in the United States#White nationalism and white supremacy|domestic terrorism]] plot. Plead guilty in 2020 to federal charges of unlawful possession of unregistered [[Silencer (firearms)|silencers]], unlawful possession of un-serialized silencers, possession of firearms by an unlawful user of a controlled substance, and unlawful possession of a [[Controlled Substances Act#Schedule IV|controlled substance]] ([[tramadol]]).<ref>{{cite web |title=Christopher Hasson Sentenced to More Than 13 Years in Federal Prison on Federal Charges of Illegal Possession of Silencers, Possession of Firearms by an Addict to and Unlawful User of a Controlled Substance, and Possession of a Controlled Substance |url=https://www.justice.gov/usao-md/pr/christopher-hasson-sentenced-more-13-years-federal-prison-federal-charges-illegal |website=[[United States Attorney for the District of Maryland]] |publisher=[[United States Department of Justice]] |access-date=3 September 2026 |date=31 January 2020}}</ref>
+|-
+| align="center" | [[Jesse Jackson Jr.]]
+| align="center" | {{Deprecated archive|url=https://archive.today/20121213010155/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=50504-018&x=80&y=18|title=32451-016}}
+| style="text-align:center;"| [[File:Jesse Jackson, Jr., official photo portrait.jpg|80px]]
+| Served 30 months. Released on the morning of June 22, 2015, after spending three months serving his remaining sentence in a halfway house.<ref>{{cite web|url=http://www.chicagobusiness.com/article/20150622/NEWS02/150629995/jesse-jackson-jr-released-from-halfway-house|title=Jesse Jackson Jr. leaves halfway house for D.C. home|website=chicagobusiness.com|date=21 June 2015}}</ref>
+| Illinois Congressman from 1995 to 2012, and son of [[Jesse Jackson]]. In early February 2013, Jackson pleaded guilty to charges of fraud, conspiracy, [[making false statements]], [[mail fraud]], [[wire fraud]], and [[criminal forfeiture]]—having used about $750,000 in campaign money for over 3,000 personal purchases that included a [[Michael Jackson]] [[fedora]] and [[cashmere wool|cashmere]] capes.<ref>{{cite news |first1=Katherine |last1=Skiba |first2=Jeff |last2=Coen |first3=Wes |last3=Venteicher |title=Jacksons' guilt a tale of excess |url=https://www.chicagotribune.com/2013/02/20/jacksons-guilt-a-tale-of-excess-3/ |newspaper=[[Chicago Tribune]] |date=2013-02-20}}</ref>
+|-
+| align="center" | [[Roman Seleznev]]
+| align="center" | [https://www.bop.gov/inmateloc/ 04385-093]
+| align="center" |
+|Served 10 years of a 27-year sentence,<ref name=":0">{{Cite web|url=https://www.justice.gov/opa/pr/russian-cyber-criminal-sentenced-27-years-prison-hacking-and-credit-card-fraud-scheme|title=Russian Cyber-Criminal Sentenced to 27 Years in Prison for Hacking and Credit Card Fraud Scheme|date=2017-04-21|website=www.justice.gov|language=en|access-date=2019-12-31}}</ref> released in [[2024 Russian prisoner exchange|a prisoner exchange]] on August 1, 2024.
+|Russian [[hacker]]; convicted in 2017 on 38 counts of hacking, [[wire fraud]], and [[racketeering]] for stealing and selling millions of credit card numbers, causing more than $169 million in damages to businesses and banks.<ref name=":0" />
+|-
+| align="center" | Scott Tyree
+| style="text-align:center;" |45380-083
+| style="text-align:center;" |
+| Released in September 2021; served 17 years.
+| Kidnapper of [[Alicia Kozakiewicz]].<ref>{{Cite web|url=https://www.wpxi.com/news/top-stories/scott-tyree-kidnapping-rape-victim-asks-to-testify-in-relocation-hearing-for-attacker/941433011/|title = Kidnapping, rape victim asks to testify in relocation hearing for attacker|date = 18 April 2019}}</ref><ref>{{Cite web|url=https://www.nbcwashington.com/news/local/congress-questions-transfer-of-child-sex-criminal-to-victims-community/3877/|title=Congress Questions Transfer of Child Sex Criminal to Victim's Community|date=13 February 2019 }}</ref><ref>{{cite web | title=Man convicted in kidnapping of Pittsburgh-area teen released from jail | url=https://www.wpxi.com/news/top-stories/man-convicted-in-kidnapping-of-pittsburgh-area-teen-released-from-jail/913204671 | publisher=[[WPXI-TV]] | date=1 February 2019}}</ref><ref>{{Cite web|url=https://casetext.com/case/tyree-v-united-states-5|title=Tyree v. United States, No. 5:14-CT-3158-BO &#124; Casetext Search + Citator|access-date=2020-04-22|archive-date=2023-06-07|archive-url=https://web.archive.org/web/20230607161103/https://casetext.com/case/tyree-v-united-states-5|url-status=dead}}</ref>
+|-
+| style="text-align:center;"| [[Nicholas Ochs]]
+| style="text-align:center;"| 12336-122
+|
+|Serving a 4 year sentence; was [[Pardon of January 6 United States Capitol attack defendants|pardoned by Donald Trump in 2025]].
+|Leader of the Proud Boys Hawaii chapter. Arrested for participating in the [[January 6 United States Capitol attack|U.S. Capitol attack]].
+|-
+| align="center" | [[Murders of Bobby Whitt and Myoung Hwa Cho|John Russell Whitt]]
+| style="text-align:center;" |{{Deprecated archive|url=https://archive.today/20121212003253/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=22449-037&x=110&y=26|title=19945-057}}
+| style="text-align:center;" |
+| Transferred from [[FCI Ashland]];<ref>{{Cite web|url=https://www.wcnc.com/article/news/investigations/two-decades-ago-a-10-year-old-was-killed-now-his-fathers-been-charged-with-murder/275-b4a44661-02a5-4269-a8ee-fad621c769ee|title=Two decades ago, a 10-year-old was killed. Now, his father's been charged with murder|date=15 May 2019}}</ref> scheduled for release in 2037
+| Sentenced to two consecutive 26 to 32 year sentences for the murders of his wife and son.<ref>{{Cite web|url=https://www.wral.com/man-to-spend-rest-of-life-behind-bars-for-killing-wife-boy-whose-remains-were-found-under-mebane-billboard/18888831/|title = Man to spend rest of life behind bars for killing wife, boy whose remains were found under Mebane billboard|date = 15 January 2020}}</ref>
+|-
+| style="text-align:center;"|[[James von Brunn|James Von Brunn]]
+| style="text-align:center;"| 07128-016
+| style="text-align:center;"|[[File:James von Brunn.jpg|80px]]
+|Died while awaiting trial in 2010
+|White supremacist who perpetrated the 2009 [[United States Holocaust Memorial Museum shooting]], which killed an officer.<ref name="death">{{cite news|date=January 6, 2010|title=US Holocaust museum murder suspect dies aged 89|work=[[BBC News]]|url=http://news.bbc.co.uk/2/hi/americas/8444654.stm|access-date=January 7, 2010}}</ref><ref>{{cite news|date=January 7, 2010|title=J. W. von Brunn, Accused Museum Gunman, Dies at 89|page=B19|newspaper=[[New York Times]]|url=https://www.nytimes.com/2010/01/07/us/07vonbrunn.html}}</ref>
+|-
+| style="text-align:center;" | [[Ted Kaczynski]]
+| style="text-align:center;" | 04475-046
+| style="text-align:center;" | [[File:Ted Kaczynski 2 (cropped).jpg|80px]]
+|Served multiple life sentences before his death in 2023 
+|American mathematician and [[Domestic terrorism in the United States|domestic terrorist]] known as the "Unabomber" who was convicted of multiple counts of first-degree murder in 1998.<ref>{{Cite news |url=https://www.washingtonpost.com/wp-srv/national/longterm/unabomber/bkgrdstories/sentence050598.htm |title=Kaczynski Sentenced to Four Life Terms |newspaper=The Washington Post |date=May 5, 1998 |access-date=August 8, 2024}}</ref>
+|-
+| style="text-align:center;" | [[Keith Raniere]]
+| style="text-align:center;" | 57005-177
+| style="text-align:center;" | [[File:US_v._Raniere_GovtExhibit_GX46.JPG|80px]]
+|Serving 120 years. Previously at [[Tucson USP]]
+|American [[cult]] leader and co-founder of [[NXIVM]] who was convicted of a pattern of [[Racketeer Influenced and Corrupt Organizations Act|racketeering activity]], including [[human trafficking]], [[Sex offender|sex offenses]], and [[fraud]].<ref>{{Cite news |url=https://www.justice.gov/usao-edny/pr/jury-finds-nxivm-leader-keith-raniere-guilty-all-counts |title=Jury Finds Nxivm Leader Keith Raniere Guilty of All Counts |date=June 19, 2019 | access-date=July 16, 2026}}</ref>
+|-
+| style="text-align:center;" | [[2023 Lafayette Square U-Haul crash|Sai Varshith Kandula]]
+| style="text-align:center;" | 60742-510
+| style="text-align:center;" | 
+|Serving eight years. Set to be released August 17, 2029
+|Indian national who drove a [[U-Haul]] truck into the north barriers of [[Lafayette Square, Washington, D.C.|Lafayette Square]] with the goal of replacing the government with a Nazi dictatorship.<ref>{{cite web |last1=Kunzelman |first1=Michael |title=Nazi flag-bearing man gets 8 years in prison for truck crashing near White House |url=https://apnews.com/article/sai-varshith-kandula-white-house-truck-attack-6ac3ebf54d0167892ed4d9c8b2ed88d8 |website=The Associated Press |access-date=September 6, 2026 |language=en |date=January 16, 2025}}</ref>
+|}
+
+===Organized crime===
+{|class="wikitable sortable"
+|-
+!width=13%|Inmate Name
+!width=9%|Register Number
+!width=5%|Photo
+!width=24%|Status
+!width=54%|Details
+|-
+| align="center" | [[Gilberto Rodríguez Orejuela]]
+| align="center" | {{Deprecated archive|url=https://archive.today/20121213032537/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=14022-059&x=73&y=15|title=14023-059}}
+| style="text-align:center;"| [[File:Traqueticogilberticorodriguez.png|80px]] 
+| Died in 2022 while serving a 30-year sentence; had been scheduled for release in 2029.
+| Co-founder of the now-[[wikt:Defunct|defunct]] [[Cali Cartel]], which was responsible for as much as 80% of the cocaine brought into the US in the 1970s and 1980s; co-founder [[Miguel Rodríguez Orejuela]] is also serving a 30-year sentence.<ref>{{cite web|title=Cali Cartel Leaders Plead Guilty to Drug and Money Laundering Conspiracy Charges|url=https://www.justice.gov/opa/pr/2006/September/06_crm_646.html|publisher=US Department of Justice|access-date=26 October 2013|date=September 26, 2006}}</ref>
+|-
+| style="text-align:center;"| [[Carmine Persico]]
+| style="text-align:center;"| {{Deprecated archive|url=https://archive.today/20121212063952/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=74666-158&x=93&y=5|title=74666-158}}
+| style="text-align:center;"|
+| Died at [[Duke University Medical Center]]<ref>{{cite web|url=https://www.nbcnewyork.com/news/local/Legendary-New-York-Mob-Boss-Carmine-Persico-Dead-at-Age-85-506873551.html|title=Legendary New York Mob Boss Carmine Persico, Head of Colombo Family, Dead at Age 85|publisher=nbcnewyork.com|date=7 March 2019}}</ref> while serving a combined sentence of 139 years; was eligible for release in 2050.<ref>{{cite news|last1=Capeci|first1=Jerry|title=Turncoat Capo Fingers Persico Family Crony In Mob War Rubout|url=https://www.huffingtonpost.com/news/carmine-persico/|access-date=17 October 2015|publisher=TheHuffingtonPost.com, Inc.|date=May 25, 2011}}</ref>
+| Mafia figure; former [[Colombo crime family]] Boss; convicted in 1986 of murder, [[loansharking]], [[bribery]] and [[extortion]], all in aid of [[racketeering]], in order to control and profit from the concrete industry in New York City.<ref>{{cite web|author=Arnold H. Lubasch |url=https://www.nytimes.com/1986/06/14/nyregion/persico-convicted-in-colombo-trial.html?scp=13&sq=%22carmine+persico%22&st=nyt |title=Persico Convicted In Colombo Trial |location=New York City |work=The New York Times |date=June 14, 1986 |access-date=July 27, 2012}}</ref><ref>{{cite web|last=Lubasch |first=Arnold H. |url=https://www.nytimes.com/1986/11/20/nyregion/us-jury-convicts-eight-as-members-of-mob-commission.html?pagewanted=all |title=U.S. Jury Convicts Eight As Members Of Mob Commission |work=The New York Times |date=November 20, 1986 |access-date=July 27, 2012}}</ref>
+|-
+| style="text-align:center;"| [[John Connolly (FBI)|John Connolly]]
+| style="text-align:center;"| [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=22928-038&x=104&y=22 22928-038] {{Webarchive|url=https://web.archive.org/web/20131004234949/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=22928-038&x=104&y=22 |date=2013-10-04 }}
+| style="text-align:center;"| 
+| Transferred to state prison in 2011; served 10 years.<ref>{{cite news|last1=Serrano|first1=Richard A.|title=100 FBI retirees defend disgraced Boston agent|url=https://www.latimes.com/world/la-xpm-2011-may-08-la-na-fbi-connolly-20110509-story.html|access-date=29 September 2015|work=Los Angeles Times|date=May 8, 2011}}</ref>
+| Former [[FBI Agent]]; convicted in 2002 of [[conspiracy (crime)|racketeering conspiracy]] for aiding [[Irish Mob]] figure [[Whitey Bulger]]; currently serving a 40-year sentence in a Florida state prison for the murder of a witness.<ref name=CNN>Phillips, Rich. [https://www.cnn.com/2009/CRIME/01/15/connolly.sentence/index.html Rogue FBI agent sentenced to 40 years in mob hit]. [[CNN]], 2009-01-15.</ref>
+|-
+| style="text-align:center;"|[[Gerard Ouimette]]
+| style="text-align:center;"|[https://www.bop.gov/inmateloc/ 02519-070]
+|
+|Served 21 years until his death in 2015
+|Mafia figure; former [[Patriarca crime family]] associate; convicted of extortion
+|-
+| align="center" | [[Vittorio "Vic" Amuso]]
+| align="center" | [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=38740-079&x=98&y=16 38740-079]{{Dead link|date=August 2025 |bot=InternetArchiveBot |fix-attempted=yes }}
+| style="text-align:center;"| [[File:Victor Amuso.jpg|80px]] 
+| Serving a life sentence. 
+| Boss of the current [[Lucchese crime family]] in New York City; convicted in 1992 of [[racketeering]] and murder in connection with nine murders, as well as [[extortion]], gambling and labor corruption.<ref>{{cite news|title=Key Mafia Figure Guilty of Murder. Racketeering|url=https://www.latimes.com/archives/la-xpm-1992-06-16-mn-527-story.html|newspaper=Los Angeles Times|date=June 16, 1992}}</ref> 
+|-
+| style="text-align:center;"|[[Nicodemo Scarfo]]
+| style="text-align:center;"|[https://www.bop.gov/inmateloc/ 09813-050]
+|
+|Died in 2017 while serving a 55-year sentence; was scheduled for release in 2033. 
+|Former boss of the [[Bruno crime family]] in Philadelphia, he was convicted on multiple counts of murder, attempted murder, distribution of methamphetamine, and extortion.<ref>{{cite web|url=https://www.nytimes.com/2017/01/17/nyregion/nicky-scarfo-mob-boss-who-plundered-atlantic-city-in-the-80s-dies-at-87.html|title=Nicky Scarfo, Mob Boss Who Plundered Atlantic City in the '80s, Dies at 87|first=Sam|last=Roberts|date=17 January 2017|access-date=30 January 2019|website=[[The New York Times]]}}</ref>
+|-
+| style="text-align:center;"|[[Peter Gotti]]
+| style="text-align:center;"|[https://www.bop.gov/inmateloc/ 99109-012]
+| align="center" |
+|Served 15 years of a 25-year sentence until his death in 2021.
+|Mafia figure; former [[Gambino crime family]] boss; convicted of racketeering and other crimes
+|}
+
+=== Financial crimes ===
+{|class="wikitable sortable"
+|-
+!width=13%|Inmate Name
+!width=9%|Register Number
+!width=5%|Photo
+!width=24%|Status
+!width=54%|Details
+|-
+| style="text-align:center;"| Troy Titus
+| style="text-align:center;"| {{Deprecated archive|url=https://archive.today/20121212040723/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=58299-083&x=107&y=24|title=58299-083}}
+| style="text-align:center;"| 
+| Serving a 30-year sentence; scheduled for release in 2034. Currently at [[Federal Correctional Institution, Ashland|FCI Ashland]].
+| Former [[real estate investor]]; convicted in 2009 of [[fraud]], [[money laundering]] and other charges for orchestrating a [[Ponzi scheme]] in which 30 victims lost over $5 million; Titus's story was featured on the [[CNBC]] television program ''[[American Greed]]''.<ref>{{cite web |last=McGlone |first=Tim |url=http://hamptonroads.com/2010/04/disbarred-attorney-titus-sentenced-30-years-fraud |title=Disbarred attorney sentenced to 30 years for fraud &#124; HamptonRoads.com &#124; PilotOnline.com |publisher=HamptonRoads.com |date=2010-04-16 |access-date=2012-07-01 |archive-date=2011-04-26 |archive-url=https://web.archive.org/web/20110426154957/http://hamptonroads.com/2010/04/disbarred-attorney-titus-sentenced-30-years-fraud |url-status=dead }}</ref><ref>{{cite web|url=https://www.fbi.gov/norfolk/press-releases/2010/nf041610.htm |title=FBI — Real Estate Investor, Disbarred Lawyer Sentenced 30 Years for Massive Fraud Schemes |publisher=Fbi.gov |access-date=2012-07-01}}</ref>
+|-
+| style="text-align:center;"| [[Taylor, Bean & Whitaker|Lee Farkas]]
+| style="text-align:center;"| {{Deprecated archive|url=https://archive.today/20121212091258/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=43560-018&x=80&y=29|title=43560-018}}
+| style="text-align:center;"| 
+| Sentenced to 30 years; originally scheduled for release in 2037.<ref>{{cite web|last1=Ginsberg, Esq.|first1=Nina|last2=Fahringer, Esq.|first2=Herald Price|last3=Dubno, Esq.|first3=Erica T.|title=LEE BENTLEY FARKAS, Movant against UNITED STATES OF AMERICA, Respondent: Memorandum of Law in Support of Amended Motion Under 28 U.S.C. § 2255|url=http://www.leefarkas.com/images/Document-d.pdf|website=leefarkas.com|access-date=17 October 2015|date=October 8, 2013|archive-url=https://web.archive.org/web/20160304033537/http://www.leefarkas.com/images/Document-d.pdf|archive-date=4 March 2016|url-status=dead}}</ref> [[Compassionate release|Compassionately released]] on September 29, 2020.<ref>{{Cite news |last=Clough |first=Craig |date=15 September 2020 |title=Jailed Ex-Taylor Bean Exec Gets Compassionate Release |work=[[Law360]] |url=https://www.law360.com/articles/1310433/jailed-ex-taylor-bean-exec-gets-compassionate-release |access-date=23 July 2023}}</ref>
+| Former Chairman of [[Taylor, Bean & Whitaker]] Mortgage Corporation; convicted in 2011 of [[fraud]] for masterminding a $2.9 billion scheme that led to the 2009 collapse of [[Colonial Bank (United States)|Colonial Bank]]; the story was featured on the [[CNBC]] program ''[[American Greed]]''.<ref>{{cite news|last=Schoenberg |first=Tom |url=https://www.bloomberg.com/news/2011-04-19/ex-taylor-bean-chairman-convicted-of-conspiracy-fraud-1-.html |title=Ex-Taylor Bean Chairman Farkas Found Guilty on All 14 Counts in Fraud Case |newspaper=Bloomberg |date=20 April 2011 |access-date=July 27, 2012}}</ref><ref>{{cite web|last=Protess |first=Ben |url=https://dealbook.nytimes.com/2011/06/30/mortgage-executive-receives-30-year-sentence/ |title=Mortgage Executive Receives 30-Year Sentence - NYTimes.com |work=The New York Times |date=June 30, 2011 |access-date=July 27, 2012}}</ref>
+|-
+| style="text-align:center;"| [[Samuel Israel III|Samuel Israel]]
+| style="text-align:center;"| {{Deprecated archive|url=https://archive.today/20121213002424/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=84430-054&x=84&y=11|title=84430-054}}
+| style="text-align:center;"| [[File:Samuel Israel III.jpg|80px]]
+| Serving a 22-year sentence. Currently at [https://www.bop.gov/locations/ccm/cda/ RRM Dallas]; scheduled for release in 2026.<ref>{{cite news|last1=Sorkin|first1=Andrew Ross|title=A Con Man Who Lives Between Truth and Fiction|url=https://dealbook.nytimes.com/2012/06/25/a-con-man-who-lives-between-truth-and-fiction/?_r=0|access-date=17 October 2015|publisher=The New York Times Company|date=June 25, 2012}}</ref>
+| Founder of the now defunct [[Bayou Hedge Fund Group]]; pleaded guilty in 2008 to defrauding investors of $400 million; attempted to fake his own suicide to avoid prison; the story was featured on the [[CNBC]] television program ''[[American Greed]]''.<ref>{{cite web |url=https://abc7ny.com/archive/6202114/ |title=Authorities: Samuel Israel definitely faked death &#124; 7online.com |publisher=Abclocal.go.com |date=June 12, 2008 |access-date=July 27, 2012 |archive-url=https://archive.today/20130124102521/http://abclocal.go.com/wabc/story?section=news/local&id=6202114 |archive-date=January 24, 2013 |url-status=live }}</ref><ref>{{cite news| url=https://www.nytimes.com/2008/07/04/business/04bayou.html?_r=1&ref=samuelisraeliii | work=The New York Times | first=Abha | last=Bhattarai | title=Fund Manager Turned Fugitive Is Sent to Prison | date=July 4, 2008}}</ref>
+|-
+| style="text-align:center;"|[[Al Parish]]
+| style="text-align:center;"|[http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=12031-171&x=80&y=29 12031-171]{{Dead link|date=February 2023 |bot=InternetArchiveBot |fix-attempted=yes }}
+|
+|Sentenced to 24 years; originally scheduled for release in 2029. [[Compassionate release|Compassionately released]] on March 24, 2021.<ref>{{Cite news |last=Balchunas |first=Caroline |date=25 March 2021 |title=Al Parish still owes fraud victims nearly $63 million as feds grant release from prison |work=ABC News |url=https://abcnews4.com/news/local/al-parish-still-owes-fraud-victims-nearly-63-million-as-feds-grant-release-from-prison |access-date=23 July 2023}}</ref>
+|Former [[Charleston Southern University]] [[economist]], who was sentenced to [[federal prison]] in 2008 after pleading guilty to financial fraud.<ref>{{cite news|url=https://www.usatoday.com/news/nation/2007-10-05-968508865_x.htm|title=S.C. economist pleads guilty in fraud|last=Smith|first=Bruce|date=5 October 2007|work=USA Today|publisher=The Associated Press|access-date=2009-09-29}} {{verify source |date=September 2019 |reason=This ref was deleted Special:Diff/908525314 by a bug in VisualEditor and later restored by a bot from the original cite located at Special:Permalink/875510911 cite #1 - verify the cite is accurate and delete this template. [[User:GreenC bot/Job 18]]}}</ref><ref>{{cite news|url=http://www.postandcourier.com/news/2008/jun/26/al_parish_discusses_collapse_his_investment_empire/|archive-url=https://web.archive.org/web/20101030233558/http://www.postandcourier.com/news/2008/jun/26/al_parish_discusses_collapse_his_investment_empire/|url-status=dead|archive-date=October 30, 2010|title=Al Parish discusses the collapse of his investment empire|last=Stock|first=Kyle|author2=Schuyler Kropf|date=26 June 2008|work=The Post and Courier|access-date=2009-09-29}} {{verify source |date=September 2019 |reason=This ref was deleted Special:Diff/908525314 by a bug in VisualEditor and later restored by a bot from the original cite located at Special:Permalink/875510911 cite #2 - verify the cite is accurate and delete this template. [[User:GreenC bot/Job 18]]}}</ref> Nearly 300 people lost up to $66 million invested in Parish Economic's private investment funds. Before being charged with fraud, Parish was known as a flamboyant local financial expert dubbed 'Economan',<ref>{{cite news|url=https://www.cnbc.com/id/27087339|archive-url=https://web.archive.org/web/20091013170236/http://www.cnbc.com/id/27087339|url-status=dead|archive-date=October 13, 2009|title=Economan: Superthief|work=American Greed|publisher=CNBC|access-date=2009-09-29}} {{verify source |date=September 2019 |reason=This ref was deleted Special:Diff/908525314 by a bug in VisualEditor and later restored by a bot from the original cite located at Special:Permalink/875510911 cite #3 - verify the cite is accurate and delete this template. [[User:GreenC bot/Job 18]]}}</ref> and was known for his $1.2 million pen collection, including a $170,000 diamond-encrusted pen.<ref>{{cite news|url=https://www.denverpost.com/2006/11/09/college-professor-displays-170000-pen/|title=College Professor Displays $170,000 Pen|last=Associated Press|date=9 November 2006|work=The Denver Post|access-date=July 21, 2024}}</ref> Included in the fraud was over $4 million set aside for athletic facilities improvements at Charleston Southern University.
+|-
+| style="text-align:center;"|[[Peanut Corporation of America|Michael Parnell]]
+| style="text-align:center;"|[https://www.bop.gov/inmateloc/ 96286-020]
+|
+|Serving a 20-year sentence; scheduled for release in 2031.
+|Former Peanut Broker convicted of conspiracy, fraud and other federal charges.<ref>{{Cite web |date=April 12, 2021 |title=Vaccines but no 'compassionate release' for Parnell brothers prior to May hearings |url=https://www.foodsafetynews.com/2021/04/vaccines-but-no-compassionate-release-for-parnell-brothers-prior-to-may-hearings/}}</ref><ref>{{Cite web |date=March 3, 2021 |title=Parnell brothers are also asking for 'compassionate release' |url=https://www.newsmag365.com/parnell-brothers-are-also-asking-for-compassionate-release/}}</ref>
+|}
+
+===Espionage===
+{|class="wikitable sortable"
+|+
+|-
+! width="13%" |Inmate Name
+! width="9%" |Register Number
+! width="5%" |Photo
+! width="24%" |Status
+! width="54%" |Details
+|-
+| style="text-align:center;" |[[John Anthony Walker|John Walker]]
+| style="text-align:center;" |{{Deprecated archive|url=https://archive.today/20121212003253/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=22449-037&x=110&y=26|title=22449-037}}
+| style="text-align:center;" |[[File:John Anthony Walker.jpg|80px]]
+| Died in custody in 2014 while serving a life sentence.<ref>{{cite news|last1=Mitchell|first1=Becca|last2=Ciara|first2=Barbara|title=Notorious Navy spy John Walker dies in NC federal prison|url=http://wtkr.com/2014/08/29/notorious-navy-spy-john-walker-dies-in-nc-federal-prison/|access-date=27 August 2015|agency=WKTR News VA, NC|date=August 29, 2014}}</ref>
+| Former [[Chief Warrant Officer]] for the [[US Navy]]; pleaded guilty to [[espionage]] in 1986 for selling classified documents to the Soviet Union. Co-conspirator [[Jerry Whitworth]] is also serving a life sentence.<ref>{{cite news|url=https://www.latimes.com/archives/la-xpm-1986-08-29-mn-14560-story.html |title=Whitworth Given 365-Year Sentence : Castigated by Judge, Spy Also Is Fined $410,000; Penalty Harshest Since '53 - Los Angeles Times |publisher=Articles.latimes.com |date=1988-12-10 |access-date=2012-08-27 |first=Dan |last=Morain}}</ref>
+|-
+| style="text-align:center;" |[[Jonathan Pollard]]
+| style="text-align:center;" |{{Deprecated archive|url=https://archive.today/20121212003253/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=22449-037&x=110&y=26|title=09185-016}}
+| style="text-align:center;" |[[File:Jonathan Pollard.png|80px]]
+|Granted parole and released in 2015 after serving 30 years of a life sentence<ref name="WSJ Parole">"After 30 Years, Jonathan Pollard Released From American Prison." Haaretz. November 20, 2015.https://www.haaretz.com/israel-news/2015-11-20/ty-article/.premium/jonathan-pollard-released-after-30-years/0000017f-e31f-d75c-a7ff-ff9fbc370000</ref>
+| Former [[Intelligence (information gathering)|intelligence]] analyst for the [[United States]] government. In 1987, as part of a [[plea agreement]], Pollard pleaded guilty to [[spy]]ing for and providing top-secret [[classified information]] to [[Israel]]. He was sentenced to life in prison for violations of the [[Espionage Act of 1917|Espionage Act]].<ref name="free-pollard">{{cite web|title=Top US Officials: Free Jonathan Pollard Now|website = [[YouTube]]| date=22 February 2012 |url=https://www.youtube.com/watch?v=5e_OqB0lQeM |archive-url=https://ghostarchive.org/varchive/youtube/20211213/5e_OqB0lQeM |archive-date=2021-12-13 |url-status=live|access-date=November 7, 2013}}{{cbignore}}</ref>
+|}
+
+{| class="wikitable sortable"
+|-
+! width="13%" |Inmate Name
+! width="9%" |Register Number
+! width="5%" |Photo
+! width="24%" |Status
+! width="54%" |Details
+|-
+| style="text-align:center;" |{{sortname|Roger|Loughry, Sr.|nolink=1}}
+| style="text-align:center;" |[http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=43691-037&x=78&y=8 43691-037]{{Dead link|date=August 2025 |bot=InternetArchiveBot |fix-attempted=yes }}
+| style="text-align:center;" |
+| Died in custody in 2025 while serving a 30-year sentence.<ref>{{cite web |date=December 5, 2014 |title=Loughry v. Campbell |url=http://in.findacase.com/research/wfrmDocViewer.aspx/xq/fac.20141205_0001554.SIN.htm/qx |access-date=18 October 2015 |website=FindACase |publisher=LRC, Inc.}}</ref>
+| Administrator of "The Cache," an online bulletin board where hundreds of child pornographers from around the world shared images and videos of children being molested; convicted in 2013 of advertising and distributing [[child pornography]].<ref>{{cite web |last=Associated Press |date=February 1, 2013 |title=Maryland man sentenced to 30 years in Ind. on charges he helped run child porn sharing website |url=https://www.foxnews.com/us/maryland-man-sentenced-to-30-years-in-ind-on-charges-he-helped-run-child-porn-sharing-website/ |access-date=16 May 2013 |publisher=Fox News}}</ref><ref>{{cite web |last=Wilson |first=Charles |date=February 1, 2013 |title=Maryland Man Sentenced for Role in Child Porn Ring |url=https://abcnews.go.com/m/story?id=18380235&sid=81 |access-date=16 May 2013 |work=ABC News}}</ref>
+|}
+
+==In popular culture==
+* In the [[Saul Gone|final episode]] of the television series ''[[Better Call Saul]]'', the series' main character [[Saul Goodman]] refers to FCI Butner Low as his ideal prison, and manages to get approval to serve his sentence there.
+
+==See also==
+{{Portalbar|Law|United States<!--Federal facility-->|North Carolina|Politics}}
+*[[List of U.S. federal prisons]]
+*[[Federal Bureau of Prisons]]
+*[[Incarceration in the United States]]
+
+==References==
+{{Reflist|30em}}
+
+==External links==
+*[https://web.archive.org/web/20130412235200/http://www.bop.gov/locations/institutions/bux/index.jsp Official profile] from the [[Federal Bureau of Prisons]]
+*"[https://web.archive.org/web/20140207102007/http://jjkllc.com/correctional/butner.html FCI Butner Medium II (design)]." John J. Kirlin, LLC.
+*"[http://www.moseleyarchitects.com/correctiondetention-projects/federal-detenion/butner-federal-correctional-institution/ Butner Federal Correctional Institution]." [[Moseley Architects]].
+
+{{Coord|36.13944|N|78.80442|W|scale:10000|display=title}}
+{{Federal Bureau of Prisons}}
+
+[[Category:Buildings and structures in Durham County, North Carolina]]
+[[Category:Federal Correctional Complexes in the United States|Butner]]
+[[Category:Buildings and structures in Granville County, North Carolina]]
+[[Category:Prisons in North Carolina]]

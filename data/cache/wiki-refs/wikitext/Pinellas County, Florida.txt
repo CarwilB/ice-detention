@@ -1,0 +1,1281 @@
+{{short description|County in Florida, United States}}
+{{Use American English|date=June 2025}}
+{{Use mdy dates|date=April 2024}}
+{{Infobox U.S. county
+| county = Pinellas County
+| state = Florida
+| type = [[County (United States)|County]]
+| logo = Logo of Pinellas County, Florida.svg
+| seal_size = 100px
+| founded = January 1, 1912
+| seat_wl = Clearwater
+| largest_city_wl = St. Petersburg
+| coordinates = {{Coord|27.90|-82.74|type:adm2nd_region:US-FL_source:UScensus1990|display=title,inline}}
+| area_total_sq_mi = 608
+| area_land_sq_mi = 274
+| area_water_sq_mi = 334
+| area_water_percent = 55.0%
+| population_as_of = 2020
+| population_total = 959107
+| pop_est_as_of = 2025<ref name="census2">{{cite web|url=https://www.census.gov/quickfacts/fact/table/pinellascountyflorida/PST045221 |title=U.S. Census Bureau QuickFacts: Pinellas County, Florida |publisher=Census.gov |access-date=March 3, 2025}}</ref>
+| population_est =  948563 {{loss}}
+| population_density_sq_mi = auto
+| website = {{url|www.pinellas.gov}}
+| named_for = Spanish ''Punta Pinal'' ("Point of Pines")
+| district = 13th
+| district2 = 14th
+| time_zone = Eastern
+| image = Clearwater Beach, Florida (35188097760).jpg
+| caption=[[Clearwater Beach]]
+}}
+
+'''Pinellas County''' ({{IPAc-en|US|p|ɪ|ˈ|n|ɛ|l|ə|s}}, {{respell|pih-NEL-əss}}) is located on the west central coast of the U.S. state of [[Florida]].<ref name="orlandosentinel.com">{{cite web|url=https://www.orlandosentinel.com/news/os-xpm-2014-06-05-os-orlando-fourth-largest-city-20140604-story.html|title=Orlando moves past St. Petersburg to become Florida's fourth largest city|first=Jeff |last=Kunerth |work=Orlando Sentinel |date=June 5, 2014 }}</ref> As of the [[2020 United States census|2020 census]], the population was 959,107, making it the seventh-most populous county in the state.<ref>{{cite web |title=Census.gov Quick Facts Pinellas County, Florida |url=https://www.census.gov/quickfacts/fact/table/pinellascountyflorida/PST045221 |access-date=March 5, 2022}}</ref> It is also the most densely populated county in Florida, with 1,292 people per square kilometer (3,348 people per square mile).<ref>{{Cite web |title=Measuring Population Density For Counties In Florida {{!}} B.E.B.R. - Bureau of Economic and Business Research |url=https://bebr.ufl.edu/articles_publication/measuring-population-density-for-counties-in-florida/ |access-date=2026-06-01 |language=en-US}}</ref> The county is part of the [[Tampa Bay area|Tampa–St. Petersburg–Clearwater Metropolitan Statistical Area]].<ref name="orlandosentinel.com"/> [[Clearwater, Florida|Clearwater]] is the [[county seat]].<ref name="GR6">{{cite web|url=http://www.naco.org/Counties/Pages/FindACounty.aspx |access-date=June 7, 2011 |title=Find a County |publisher=National Association of Counties |url-status=dead|archive-url=https://web.archive.org/web/20110531210815/http://www.naco.org/Counties/Pages/FindACounty.aspx |archive-date=May 31, 2011 }}</ref> [[St. Petersburg, Florida|St. Petersburg]] is the largest city in the county, as well as the largest city in Florida that is not a county seat.<ref name="orlandosentinel.com"/>
+
+==History==
+[[File:Safety Harbor Site top-down 01.jpg|thumb|View from the top of the [[Tocobaga]] mound at [[Philippe Park]]]]
+[[File:Jungle Prada 10.jpg|thumb|Marker at the site of the 1528 Narvaez landing, Jungle Prada, St. Petersburg]]
+[[File:McMullen-Coachman Log Cabin.jpg|thumb|The McMullen-Coachman Log Cabin, built in 1852, is located at Heritage Village in Largo, Florida, and is the oldest standing structure in Pinellas County<ref>{{cite web| url=http://www.pinellascounty.org/Heritage/log_house.htm| title=McMullen-Coachman Log Cabin| publisher=Heritage Village| access-date=December 25, 2016|archive-url=https://web.archive.org/web/20220707081127/http://www.pinellascounty.org/Heritage/log_house.htm|archive-date=July 7, 2022|url-status=dead}}</ref>]]
+[[File:Belleview.jpg|thumb|The [[Belleview-Biltmore Hotel]] built by [[Henry Plant]]]]
+[[File:FortDesotoMortars.jpg|thumb|Battery and guns at [[Fort De Soto]]]]
+[[File:Firstgandy.jpg|thumb|The original span of the [[Gandy Bridge]]]]
+[[File:St. Pete Vinoy pano01.jpg|thumb|The Renaissance Vinoy Hotel]]
+
+===Pre-European settlement===
+The first evidence of human habitation in what is now Pinellas County comes from [[Weedon Island, Florida|Weedon Island]]. Various stone tools dated to the [[Archaic period (North America)|Middle Archaic Period]] (5000-3000 BCE) have been found on the island.<ref>{{Cite book |last=Pinellas County Department of Environmental Management, Environmental Lands Division |url=https://www.weedonislandpreserve.org/pdf/WIBookWeb.pdf |title=The Weedon Island Story |date=April 2005 |publisher=Pinellas County Department of Environmental Management, Environmental Lands Division |edition=3rd |pages=7–14}}</ref>
+
+When Europeans first reached the Pinellas peninsula, the Tampa Bay area was inhabited by people of the [[Safety Harbor culture]]. The Safety Harbor culture area was divided into [[chiefdom]]s.<ref>{{Cite web |title=De Soto National Memorial |url=https://www.trailoffloridasindianheritage.org/tocobaga-culture/ |access-date=2025-06-08 |website=Trail of Florida's Indian Heritage |language=en-US}}</ref> One documented chiefdom in what is now Pinellas County was that of the [[Tocobaga]], who occupied a town and large temple mound, the [[Safety Harbor site]], overlooking Safety Harbor in what is now the eponymous town of [[Safety Harbor, Florida|Safety Harbor]].<ref>{{Cite book|title=Florida Indians and the Invasion from Europe|last=Milanich|first=Jerald T.|year=1995|isbn=0-8130-1636-3|publisher=University Press of Florida|location=Gainesville, Florida|pages=72–73}}</ref>
+
+===Spanish and British Florida===
+During the early 16th century [[Conquistador|Spanish explorers]] discovered and slowly began exploring Florida, including Tampa Bay. In 1528 [[Pánfilo de Narváez]] [[Narváez expedition#Arrival in Florida|landed in Pinellas]], and 10 years later [[Hernando de Soto]] is [[Hernando de Soto#De Soto's exploration of North America|thought]] to have explored the [[Tampa Bay area]]. By the early 18th century the [[Tocobaga]] had been virtually annihilated, having fallen victim to [[Smallpox|European diseases]] from which they had no immunity, as well as [[Queen Anne's War|European conflicts]]. Later Spanish explorers named the area ''Punta Pinal'' (Spanish for "Point of Pines" or "Piney Point"). After trading hands [[History of Florida#Colonial battleground|multiple times]] between the [[British Empire|British]] and the [[Spanish Empire|Spanish]], Spain finally [[Adams–Onís Treaty|ceded Florida]] to the United States in 1821, and in 1823 the U.S. Army established [[Fort Brooke]] (later [[Tampa, Florida|Tampa]]).
+
+===Settlement of West Hillsborough===
+In 1834 much of west central Florida, including the Pinellas peninsula (then known simply as ''West Hillsborough''), was organized as [[Hillsborough County, Florida|Hillsborough County]].<ref>{{cite web |url=http://www.hillsboroughcounty.org/en/about-hillsborough/history/hillsborough-county-history |title=Hillsborough County History |website=Hillsborough County Official Website }}</ref> The very next year [[Odet Philippe]], a French Huguenot from Charleston, South Carolina became the first permanent, non-native resident of the peninsula when he established a plantation near the site of the Tocobaga village in Safety Harbor. It was Philippe who first introduced both [[citrus]] culture and [[cigar]]-making to Florida.<ref>{{cite web|url=http://www.hmdb.org/marker.asp?marker=13637|title=Odet Philippe Marker|work=hmdb.org|access-date=November 6, 2015|archive-date=September 19, 2015|archive-url=https://web.archive.org/web/20150919144250/http://www.hmdb.org/Marker.asp?Marker=13637|url-status=dead}}</ref><ref>{{cite web|url=http://www.pinellascounty.org/park/11_philippe.htm|title=Pinellas County, Florida, Park and Conservation Resources - Philippe Park|work=pinellascounty.org|access-date=November 6, 2015}}</ref><ref>{{cite web|url=http://genforum.genealogy.com/philippe/messages/112.html|title=ODET PHILIPPE - FLORIDA PIONEE - Genealogy.com|work=genealogy.com|access-date=November 6, 2015}}</ref>
+
+Around the same time, the United States Army began construction of [[Fort Harrison, Florida|Fort Harrison]], named after [[William Henry Harrison]], as a rest post for soldiers from nearby Fort Brooke during the [[Second Seminole War]]. The new fort was located on a bluff overlooking [[Clearwater, Florida|Clear Water Harbor]], which later became part of an early 20th-century residential development (now historic district) called [[Harbor Oaks Residential District|Harbor Oaks]]. University of South Florida archaeologists excavated the site in 1977 after Alfred C. Wyllie discovered an underground ammunition bunker while digging a swimming pool on his estate. Clearwater would later become the first organized community on the peninsula as well as the site of its first post office.
+
+The [[Armed Occupation Act]], passed in 1842, encouraged further settlement of Pinellas, like all of Florida, by offering 160 acres (0.65&nbsp;km<sup>2</sup>) to anyone who would bear arms and cultivate the land. Pioneer families like the Booths, the Coachmans, the Marstons, and the McMullens established homesteads in the area in the years following, planting more citrus groves and raising cattle. During the [[American Civil War]], many residents fought for the [[Confederate States of America]]. Brothers James and Daniel McMullen <ref>{{cite web|url=http://fl-genweb.org/decole/Polk/genealogy/7Brothers.html|title=7Brothers|work=fl-genweb.org|access-date=November 6, 2015}}</ref> were members of the Confederate [[1st Florida Special Cavalry Battalion|Cow Cavalry]], driving Florida cattle to Georgia and the Carolinas to help sustain the war effort. John W. Marston served in the 9th Florida Regiment as a part of the Appomattox Campaign. Many other residents served in other capacities. Otherwise the peninsula had virtually no significance during the war, and the war largely passed the area by.<ref>{{cite web |url=http://www.ussforthenry.com/USSFHpdf/Pinellas_Whitehurst.PDF |title=Pinellas During the Civil War |access-date=January 24, 2012 |archive-url=https://web.archive.org/web/20150226192309/http://www.ussforthenry.com/USSFHpdf/Pinellas_Whitehurst.PDF |archive-date=February 26, 2015 |url-status=dead }}</ref>
+
+On September 27, 1848, a strong hurricane struck the West Coast of Florida. It separated the barrier island on the coast and created a waterway known today as John's Pass. John Levique, along with Joseph Silva, was the one who discovered it and named it after himself and is now a federally owned canal.{{citation needed|date=September 2022}}
+
+[[Tarpon Springs, Florida|Tarpon Springs]] became West Hillsborough's first incorporated city in 1887, and in 1888 the [[Orange Belt Railway]] was extended into the southern portion of the peninsula. Railroad owner [[Peter Demens]] named the town that grew near the railroad's terminus [[St. Petersburg, Florida|St. Petersburg]] in honor of his [[Saint Petersburg|hometown]]. The town would incorporate in 1892. Other major towns in the county incorporated during this time were Clearwater (1891), [[Dunedin, Florida|Dunedin]] (1899), and [[Largo, Florida|Largo]] (1905).
+
+Construction of [[Fort De Soto]], on Mullet Key facing the mouth of Tampa Bay, was begun in 1898 during the [[Spanish–American War]] to protect Tampa Bay from potential invading forces. The fort, a subpost of [[Fort Dade]] on adjacent [[Egmont Key]] (which lies in the mouth of Tampa Bay), was equipped with artillery and mortar batteries.<ref>{{cite web|url=http://www.fortdesoto.com/twelveinchmortars.php|title=Twelve-inch mortars|work=fortdesoto.com|access-date=November 6, 2015}}</ref>
+
+===Birth of Pinellas County===
+Even into the early years of the 20th century, West Hillsborough had no paved roads, and transportation posed a major challenge. A trip to the county seat, across the bay in Tampa, was generally an overnight affair and the automobiles that existed on the peninsula at that time would frequently become bogged down in the muck after rainstorms. Angry at what was perceived as neglect by the county government, residents of Pinellas began a push to secede from Hillsborough. They succeeded, and on January 1, 1912, Pinellas County came into being.<ref>{{cite web|url=http://www.tampabay.com/features/humaninterest/pinellas-county-turns-100-years-old/1208294|title=Pinellas County turns 100 years old|work=Tampa Bay Times|access-date=November 6, 2015|url-status=dead|archive-url=https://web.archive.org/web/20150924132337/http://www.tampabay.com/features/humaninterest/pinellas-county-turns-100-years-old/1208294|archive-date=September 24, 2015}}</ref><ref>{{Cite web |url=http://www.pinellascounty.org/PDF/HEObook.pdf |title=The Constitutional Officers of Pinellas County: A Brief History |access-date=January 22, 2012 |archive-date=January 23, 2012 |archive-url=https://web.archive.org/web/20120123022346/http://www.pinellascounty.org/PDF/HEObook.pdf |url-status=dead }}</ref> The peninsula, along with a small [[Oldsmar, Florida|part of the mainland]] were incorporated into the new county.
+
+===Land boom and prohibition===
+Aviation history was made in St. Petersburg on January 1, 1914, when [[Tony Jannus]] made the world's first scheduled commercial airline flight with the [[St. Petersburg–Tampa Airboat Line]] from St. Petersburg to Tampa. The popular open-air St. Petersburg concert venue [[Jannus Live]] (formerly known as Jannus Landing) memorializes the flight.
+
+The early 1920s saw the beginning of a land boom in much of Florida, including Pinellas. During this period municipalities issued a large number of bonds to keep pace with the needed infrastructure, such as roads and bridges. The travel time to Tampa was cut in half—from {{convert|43|to|19|mi}}—by the opening of the [[Gandy Bridge]] in 1924, along the same route Jannus' airline used. It was the longest automobile toll bridge in the world at the time.
+
+[[Prohibition in the United States|Prohibition]] was unpopular in the area and the peninsula's inlets and islands were used by [[Rum-running|rum-runners]] bringing in liquor from Cuba. Others distilled [[moonshine]] in the county's still plentiful woods.<ref>{{cite web|url=http://www.sptimes.com/2002/09/04/SouthPinellas/For_Coquina_Key__cycl.shtml|title=Southpinellas: For Coquina Key, cycle of rum, boom and bust|work=sptimes.com|access-date=November 6, 2015|archive-url=https://web.archive.org/web/20160304201943/http://www.sptimes.com/2002/09/04/SouthPinellas/For_Coquina_Key__cycl.shtml|archive-date=March 4, 2016|url-status=dead}}</ref>
+
+===Great Depression and World War II===
+As was the case in much of Florida, the [[Great Depression]] came early to Pinellas with the collapse of the real estate boom in 1926. Local economies came into severe difficulties, and by 1930, St. Petersburg defaulted on its bonds. Only after World War II would significant growth return to the area. During the war, the area's tourist industry collapsed, but thousands of recruits came to the area when the U.S. military decided to use the area for training. Area hotels became barracks. The [[Vinoy Park Hotel]] was used as an Army training school. The area's women and girls participated in the war effort as well. Hundreds of girls from the area's most prominent families formed a group called the Bomb-a-Dears, holding dances, socializing with recruits, and selling war bonds.<ref>{{cite web|url=http://www.tampabay.com/opinion/columns/during-world-war-ii-st-pete-had-its-bomb-a-dears/1197832|title=During World War II, St. Pete had its Bomb-a-Dears|work=Tampa Bay Times|access-date=November 6, 2015|url-status=dead|archive-url=https://web.archive.org/web/20150924151958/http://www.tampabay.com/opinion/columns/during-world-war-ii-st-pete-had-its-bomb-a-dears/1197832|archive-date=September 24, 2015}}</ref> After the war many of these same soldiers remembered their wartime experience in Pinellas well, and returned as tourists or residents.
+
+===Recent history===
+With the end of the Second World War, Pinellas would enter another period of rapid growth and development. In 1954 the original span of the [[Sunshine Skyway Bridge]] was opened, replacing earlier ferry service. By 1957 Clearwater was America's fastest growing city.<ref>{{cite news|url=http://www.tampabay.com/news/obituaries/mayor-packed-ideas-pipe-tobacco-in-rich-public-life/1121765|title=Andrew Meacham, "Mayor packed ideas, pipe tobacco in rich public life," September 15, 2010|newspaper=[[Tampa Bay Times]]|access-date=June 1, 2014|url-status=dead|archive-url=https://web.archive.org/web/20140605052841/http://www.tampabay.com/news/obituaries/mayor-packed-ideas-pipe-tobacco-in-rich-public-life/1121765|archive-date=June 5, 2014}}</ref>
+
+Tragedy struck on May 9, 1980, when the southbound span of the original Sunshine Skyway Bridge was struck by the freighter [[MV Summit Venture|MV ''Summit Venture'']] during a storm, sending over {{convert|1200|ft}} of the bridge plummeting into Tampa Bay. The collision caused seven personal vehicles and a Greyhound bus to fall {{convert|150|ft}} into the water, killing 35 people.<ref>{{Cite web |title=The Skyway bridge collapsed 40 years ago. Here's how we're remembering the tragedy. |url=https://www.tampabay.com/news/florida/2020/05/08/the-skyway-bridge-collapsed-40-years-ago-heres-how-were-remembering-the-tragedy/ |access-date=June 7, 2023 |website=Tampa Bay Times}}</ref><ref>{{cite web|url=http://www2.sptimes.com/Weather/SW.2.html|title=Sunshine Skyway Disaster|work=sptimes.com|access-date=November 6, 2015|archive-url=https://web.archive.org/web/20070224072620/http://www2.sptimes.com/weather/SW.2.html|archive-date=February 24, 2007|url-status=dead}}</ref><ref>{{cite web|url=http://www.sptimes.com/News/050700/TampaBay/Horrific_accident_cre.shtml|title=Tampabay: Horrific accident created an unforgettable scene|work=sptimes.com|access-date=November 6, 2015}}</ref> The new bridge opened in 1987 and has since been listed as number 3 of the "Top 10 Bridges" in the World by the [[Travel Channel]].<ref>{{cite web|url=http://www.travelchannel.com/interests/road-trips/articles/worlds-top-10-bridges|title=World's Top 10 Bridges|work=Travel Channel|access-date=November 6, 2015}}</ref>
+
+The county operates a {{convert|21|acre|adj=on}} [[living history]] museum called Heritage Village containing more than 28 historic structures, some dating back to the 19th century, where visitors can experience what life was once like in Pinellas.
+
+==Geography==
+According to the [[U.S. Census Bureau]], the county has a total area of {{convert|608|sqmi}}, of which {{convert|274|sqmi}} is land and {{convert|334|sqmi}} (55.0%) is water.<ref name="GR1">{{cite web|url=https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html|publisher=[[United States Census Bureau]]|access-date=April 23, 2011|date=February 12, 2011|title=US Gazetteer files: 2010, 2000, and 1990}}</ref> It is the second-smallest county in Florida by land area, larger than only [[Union County, Florida|
+Union County]]. Pinellas forms a [[peninsula]] bounded on the west by the [[Gulf of Mexico]] and on the south and east by [[Tampa Bay]]. It is {{convert|38|mi}} long and {{convert|15|mi}} wide at its broadest point, with {{convert|587|mi}} of coastline.<ref name="Fact About Pinellas">{{cite web
+|url=http://www.pinellascounty.org/facts.htm
+|title=Fact About Pinellas
+|publisher=Pinellas County government
+|quote=Pinellas County is 38 miles long, and 15 miles at {{sic|i|t's}} broadest point, for a total of 280 square miles. 587 miles of coastline.
+|access-date=July 3, 2012
+}}</ref>
+
+===Physical geography===
+[[File:Honeymoon Island State Park (Image 1).jpg|thumb|[[Honeymoon Island State Park]] near [[Dunedin, Florida|Dunedin]], one of the county's barrier islands]]
+[[File:USCG Anclote Keys Lighthouse.jpg|thumb|The [[Anclote Keys Light|Anclote Key Light]]]]
+[[File:Palm Arboretum St. Petersburg, FL.JPG|thumb|Gizella Kopsick Palm Arboretum in St. Petersburg]]
+
+Elevation in the county ranges from mean [[sea level]] to its highest natural point of {{convert|110|ft}} near the intersection of SR 580 and Countryside Blvd. in Clearwater.<ref>{{cite web|url=http://www.pinellascounty.org/facts.htm|title=Pinellas County, Florida - About Pinellas - Facts|work=pinellascounty.org|access-date=November 6, 2015}}</ref> Due to its small size and high population, by the early 21st century Pinellas County has been mostly [[build-out|built out]], with very little developable land left available. The county has maintained a fairly large system of parks and preserves that provide residents and visitors retreat from the city and a glimpse of the peninsula's original state.
+
+Geologically, Pinellas is underlain by a series of [[limestone]] formations, the [[Hawthorn Group|Hawthorne limestone]] and the [[Arcadia Formation|Tampa limestone]]. The limestone is porous and stores a large quantity of water. The Hawthorne formation forms a prominent ridge down the spine of the county, from east of Dunedin, south to the Walsingham area and east towards St. Petersburg.<ref>{{Cite web |url=http://www.pinellascounty.org/Plan/comp_plan/04natural/ch-1.pdf |title=Geology and Topography |access-date=January 13, 2012 |archive-date=March 4, 2016 |archive-url=https://web.archive.org/web/20160304103219/http://www.pinellascounty.org/Plan/comp_plan/04natural/ch-1.pdf |url-status=dead }}</ref>
+
+The 35 miles of beaches and dunes which make up the county's 11 [[barrier island]]s provide habitat for coastal species, serve as critical storm protection for the inland communities, and form the basis of the area's thriving tourism industry. The islands are dynamic, with wave action building some islands further up, eroding others, and forming entirely new islands over time. Though hurricanes are infrequent on this part of Florida's coast, they have had a major impact on the islands, with the [[1848 Tampa Bay hurricane|Hurricane of 1848]] forming John's Pass between Madeira Beach and Treasure Island, a [[1921 Tampa Bay hurricane|hurricane in 1921]] creating Hurricane Pass and cleaving Hog Island into Honeymoon and Caladesi Islands, and 1985's [[Hurricane Elena]] sealing Dunedin Pass to join Caladesi with [[Clearwater Beach]].<ref>{{Cite web |url=http://www.pinellascounty.org/Plan/comp_plan/05coastal/ch-2.pdf |title=Beaches and Dunes: Overview |access-date=January 13, 2012 |archive-date=March 4, 2016 |archive-url=https://web.archive.org/web/20160304054119/http://www.pinellascounty.org/Plan/comp_plan/05coastal/ch-2.pdf |url-status=dead }}</ref>
+
+Between the barrier islands and the peninsula are several bodies of water, through which traverses a section of the Gulf [[Intracoastal Waterway]]. From north to south they are: [[St. Joseph Sound]] between the islands and Dunedin, Clearwater Harbor between Clearwater and Clearwater Beach, and Boca Ciega Bay in the southern third of the county. Connecting Clearwater Harbor to Boca Ciega Bay is a thin, approximately {{convert|3.5|mi|adj=on}} stretch of water known as The Narrows, which runs next to the town of Indian Shores.
+
+Extending from northeastern [[Boca Ciega Bay]], Long Bayou separates Seminole from St. Petersburg near Bay Pines. Long Bayou once extended significantly farther up the peninsula until the northern portion was sealed off to create [[Lake Seminole (Pinellas County, Florida)|Lake Seminole]]. Extending further still from Long Bayou, the Cross Bayou Canal traverses the peninsula, crossing Pinellas Park in a northeasterly direction before emptying into Tampa Bay on the northwest side of [[St. Pete–Clearwater International Airport]].
+
+====Barrier islands and passes====
+* [[Anclote Key]]: offshore of [[Tarpon Springs, Florida|Tarpon Springs]] and the northernmost point in the county
+* Howard Park: a man-made [[pocket beach]] created in the 1960s
+* [[Three Rooker Bar]]: the most geologically recent of Pinellas' barrier islands
+* [[Honeymoon Island]]
+* Hurricane Pass
+* [[Caladesi Island]]
+* Dunedin Pass: shoaled and closed in the 1980s, linking Caladesi Island and Clearwater Beach
+* [[Clearwater Beach]]
+* Clearwater Pass
+* [[Sand Key, Florida|Sand Key]]: the longest of Pinellas' barrier islands
+* John's Pass
+* [[Treasure Island, Florida|Treasure Island]]
+* Blind Pass
+* Long Key ([[St. Pete Beach, Florida|St. Pete Beach]])
+* Pass-a-Grille Channel
+* [[Shell Key Preserve|Shell Key]]
+* [[Tierra Verde, Florida|Tierra Verde]]: on the bay side of Shell Key, links the mainland to Fort De Soto. Created by a dredge-and-fill project that merged several smaller Keys, including Cabbage and Pine Keys
+* Bunces Pass
+* [[Fort De Soto Park|Mullet Key]]: home to Fort De Soto and the southernmost point in the county
+
+===National protected area===
+* [[Pinellas National Wildlife Refuge]]
+
+===State protected areas===
+* [[Honeymoon Island State Park]]
+* [[Caladesi Island State Park]]
+* [[Anclote Key Preserve State Park]]
+
+===County parks and preserves===
+'''Source:'''<ref>{{cite web|url=http://www.pinellascounty.org/park/|title=Pinellas County Florida - Parks & Preserves|work=pinellascounty.org|access-date=November 6, 2015}}</ref>
+{{Div col|colwidth=20em}}
+* A.L. Anderson Park, Tarpon Springs
+* Boca Ciega Millenium Park, Seminole
+* [[John Chesnut Sr. Park]], Palm Harbor
+* Eagle Lake Park, Largo
+* [[Fort De Soto Park]], Tierra Verde
+* [[Fred Howard Park]], Tarpon Springs
+* [[Lake Seminole Park]], Seminole
+* [[Philippe Park]], Safety Harbor
+* Ridgecrest Park, Largo
+* [[Sand Key Park]], Clearwater
+* [[Sawgrass Lake Park]], St. Petersburg
+* John S. Taylor Park, Largo
+* [[Wall Springs Park]], Palm Harbor
+* [[Walsingham Park]], Largo
+* War Veterans Memorial Park, St. Petersburg
+* [[Brooker Creek Preserve]]
+* [[Mobbly Bayou Preserve]]
+* [[Shell Key Preserve]]
+* [[Weedon Island Preserve]]
+{{Div col end}}
+
+===Pinellas County parks gallery===
+<gallery class="center" widths="200px" heights="200px">
+File:Brooker creek nature walkway.jpg|Brooker Creek Nature Preserve walkway
+File:Chestnutparklaketarpon.jpg|View of Lake Tarpon from John Chestnut Park
+File:Wall springs st joseph sound.jpg|Wall Springs View of St Joseph Sound from the old observation tower
+File:Howard Park Tarpon.jpg|Sunset at Fred Howard Park
+</gallery>
+
+{{Wide image|Andersonparkpano.jpg|800px|Anderson Park Panorama}}
+
+===Other protected areas===
+[[Boyd Hill Nature Preserve]]: A {{Convert|245|acre|ha|adj=on}} park on the shores of Lake Maggiore in south St. Petersburg, operated by the city and featuring a nature center, bird-of-prey aviary, and over three miles of trails through a variety of ecosystems.<ref>{{cite web|url=http://stpete.org/boyd/|title=Boyd Hill Nature Preserve - St. Petersburg, Florida|access-date=February 13, 2012|archive-url=https://web.archive.org/web/20120301121607/http://www.stpete.org/boyd/|archive-date=March 1, 2012|url-status=dead}}</ref>
+
+===Adjacent counties===
+* [[Pasco County, Florida|Pasco County]]—north
+* [[Hillsborough County, Florida|Hillsborough County]]—east and south
+
+Hillsborough County extends along the shipping channel towards [[Egmont Key State Park and National Wildlife Refuge|Egmont Key]] and into the Gulf of Mexico, separating Pinellas County from Manatee County.
+
+==Ecosystems==
+[[File:Spalmetto2.JPG|thumb|Cabbage palms, the state tree of Florida]]
+[[File:Pelican Brown122.JPG|thumb|The brown pelican is commonly seen along the Gulf coast]]
+
+===Plant life===
+Several natural communities exist within the county, including areas of freshwater wetlands (dominated by [[Taxodium distichum|bald cypresses]] and ferns), coastal [[mangrove]] swamps, sporadic [[Tropical hardwood hammock|hardwood hammocks]] (dominated by [[Quercus hemisphaerica|laurel oaks]] and [[Quercus virginiana|live oaks]], [[Sabal palmetto|cabbage palms]], and [[Magnolia grandiflora|southern magnolias]]), low-lying, poorly drained pine [[flatwoods]] (dominated by [[Pinus palustris|longleaf pines]] and [[Serenoa|saw palmettos]]), and well-drained, upland sandhills (dominated by longleaf pines and [[Quercus laevis|turkey oaks]]) and sand pine scrub (dominated by [[Pinus clausa|sand pines]], saw palmettos, and various oaks). Offshore ecosystems include the Tampa Bay [[estuary]] and numerous gulf [[seagrass]] beds. The county also maintains several [[artificial reefs]].
+
+===Animal life===
+Numerous bird species can be sighted in Pinellas, either as permanent residents or during the winter migration, including wading birds like [[great blue herons]], [[egrets]], [[American white ibis|white ibises]] and [[roseate spoonbills]], aquatic birds like [[brown pelican]]s, [[American white pelican|white pelicans]], and [[cormorants]], numerous species of [[shorebirds]], and very-common birds like [[seagulls]] and [[passerines]] like the [[blue jay]], [[mockingbird]], and [[American crow|crow]]. [[Osprey]]s are a commonly seen [[bird-of-prey]], with other birds of prey like [[turkey vultures]], [[red-tailed hawk|red tailed hawks]], [[great horned owls]], [[screech owl]]s, [[American barn owl|barn owls]], and [[bald eagles]], among others, seen as well.
+
+[[Gopher tortoises]] are found in many areas, the burrows they dig making them a [[keystone species]]. [[Coyotes]], though often associated with the American West, are native-to and can be found in Pinellas. [[White-tailed deer]], [[wild turkeys]], [[bobcats]], [[otters]], and [[alligators]] can be found in the county as well.
+
+[[Sea turtles]] nest on the shores or Pinellas' barrier islands and have been threatened by development. Offshore, [[dolphins]], [[sharks]], and [[manatees]] are numerous as well, while closer inshore [[stingrays]] are a common sight, leading those in-the-know to do the "stingray shuffle" (shuffling up the sand to scare nearby stingrays off) when entering gulf waters. Species of fish commonly caught in the waters surrounding the county include [[spotted seatrout]], [[red drum]] or redfish, [[common snook|snook]], [[Florida pompano|pompano]], [[Sheepshead (Archosargus)|sheepshead]], [[Atlantic Spanish mackerel|Spanish mackerel]], [[grouper]], [[Mullet (fish)|mullet]], [[flounder]], [[King mackerel|kingfish]], and [[tarpon]].
+
+===Invasive species===
+Like much of Florida, Pinellas County is home to several invasive species that propagate easily outside their (and their natural predators') native range. Examples of commonly seen invasives include [[Schinus terebinthifolius|Brazilian pepper]], [[Eichhornia crassipes|water hyacinth]], [[Casuarina equisetifolia|Australian pine]], [[Melaleuca quinquenervia|melaleuca]] and [[Dioscorea bulbifera|air potato]]. These species are considered serious pests, and varying methods have been tried to eradicate them. Examples of invasive animals include the [[wild boar]], which poses significant health and agricultural problems in Florida and can sometimes be found in Pinellas, and the [[monk parakeet]], small flocks of which can sometimes be seen in flight or building nests on electrical poles or telecommunications towers.<ref>{{cite web |url=http://www.fpl.com/environment/exotic/exotic_and_invasive_species_index.shtml |title=FPL &#124; Florida's Exotic and Invasive Species |access-date=February 27, 2012 |url-status=dead|archive-url=https://web.archive.org/web/20120201210158/http://www.fpl.com/environment/exotic/exotic_and_invasive_species_index.shtml |archive-date=February 1, 2012 }}</ref> There is also a large flock of feral [[Peafowl|peacocks]] residing in St. Petersburg's Jungle Terrace, Jungle Prada and Disston Heights neighborhoods.<ref>{{Cite web |title=Why do peacocks roam Tampa Bay? |url=https://www.tampabay.com/life-culture/history/2020/09/23/why-do-peacocks-roam-tampa-bay/ |access-date=July 7, 2023 |website=Tampa Bay Times |language=en}}</ref>
+
+Pinellas gained some national attention as the home of the ''[[Feral rhesus macaque#Tampa Bay|Mystery Monkey of Tampa Bay]]'', a non-native, feral [[rhesus macaque]] that had been on the loose for approximately three years in the south of the county. No one was sure where the monkey came from, and a [http://www.facebook.com/MysteryMonkeyOfTampaBay Facebook page] set up for the monkey had over 84,000 [[Like button|likes]] (as of October 2012). The monkey was the subject of a sketch on the March 11, 2010, episode of ''[[the Colbert Report]]''. As of February 2012, the monkey had apparently taken up semi-permanent residence behind a family's home at an undisclosed location in St. Petersburg, according to the ''Tampa Bay Times''.<ref>{{cite web|url=https://www.tampabay.com/news/bizarre/article1214763.ece|title=Mystery Monkey of Tampa Bay finds a home, family in the woods|work=Tampa Bay Times|access-date=November 6, 2015|url-status=dead|archive-url=https://web.archive.org/web/20121027233304/http://www.tampabay.com/news/bizarre/article1214763.ece|archive-date=October 27, 2012}}</ref> Efforts to capture the monkey were reignited after it reportedly bit a woman living near where it had taken up residence, and the monkey was captured in late October 2012 and eventually was sent to live at Dade City's Wild Things, a {{convert|22|acre|adj=on}} zoo north of Tampa.
+
+==Climate==
+[[File:Cumulonimbus Cloud Formation Over Florida.tif|thumb|Cumulonimbus clouds like this one are a frequent sight during the rainy season]]
+
+{{Main|Climate of the Tampa Bay area}}
+
+Pinellas, like the rest of the Tampa Bay area, has a [[humid subtropical climate]], which shares characteristics with a [[tropical monsoon climate]], resulting in warm, humid summers with frequent thunderstorms, and drier winters. Pinellas County's geographic position- lying on a peninsula between [[Tampa Bay]] and the [[Gulf of Mexico]] introduces large amounts of humidity into the atmosphere and serves to moderate temperatures. The geography of the peninsula also causes some variance in the county's average temperatures. St. Petersburg, further south on the peninsula, tends to have warmer daily average lows (by about 3 degrees) than areas such as Dunedin and Palm Harbor further north, though daily highs are very close. The north of the county also has fewer overall days of rain, but higher total annual precipitation when measured in inches, the county's south being prone to shorter, more frequent thunderstorms especially in the late summer.
+
+Freezing temperatures occur only every 2–3 years, with freezing precipitation occurring [[Climate of the Tampa Bay area#Winter|extremely rarely]]. Springs are usually short, mild, and dry, with occasional late-season cold fronts. Summertime weather is very consistent, with highs in the low 90s °F (around 32&nbsp;°C), lows in the mid-70s °F (around 24&nbsp;°C), accompanied by high humidity and an almost daily chance of afternoon thundershowers. The area experiences significant rainfall during its summer months (approximately May through October), with nearly two-thirds of annual precipitation falling between the months of June and September. The area is occasionally affected by tropical storms and hurricanes, but has not suffered a direct hit [[1921 Tampa Bay hurricane|since 1921]]. Fall, like spring, is usually mild and dry, with the hurricane season extending through November and sometimes affecting the area.
+
+Many portions of south Pinellas, especially near the bay and gulf, have tropical microclimates. Tropical trees such as coconut palms and royal palms and fruit trees like mangoes grow very well in these microclimates.
+
+{{Weather box
+|location = St. Petersburg, Florida
+|single line = Y
+|Jan high F = 69.3
+|Feb high F = 70.7
+|Mar high F = 75.2
+|Apr high F = 80
+|May high F = 85.8
+|Jun high F = 89.2
+|Jul high F = 90.2
+|Aug high F = 89.9
+|Sep high F = 88.2
+|Oct high F = 83
+|Nov high F = 76.6
+|Dec high F = 71.1
+|year high F = 80.8
+|Jan low F = 54
+|Feb low F = 55.2
+|Mar low F = 59.7
+|Apr low F = 64.6
+|May low F = 70.8
+|Jun low F = 75.2
+|Jul low F = 76.6
+|Aug low F = 76.8
+|Sep low F = 75.8
+|Oct low F = 70
+|Nov low F = 62.9
+|Dec low F = 56.3
+|year low F = 66.5
+|Jan rain inch = 2.76
+|Feb rain inch = 2.87
+|Mar rain inch = 3.29
+|Apr rain inch = 1.92
+|May rain inch = 2.80
+|Jun rain inch = 6.09
+|Jul rain inch = 6.72
+|Aug rain inch = 8.26
+|Sep rain inch = 7.59
+|Oct rain inch = 2.64
+|Nov rain inch = 2.04
+|Dec rain inch = 2.60
+|year rain inch = 49.58
+|Jan rain days = 6.3
+|Feb rain days = 6.1
+|Mar rain days = 6.1
+|Apr rain days = 4.2
+|May rain days = 5
+|Jun rain days = 10.3
+|Jul rain days = 13.5
+|Aug rain days = 14.2
+|Sep rain days = 12
+|Oct rain days = 5.9
+|Nov rain days = 5
+|Dec rain days = 5.5
+|source 1 = NOAA<ref name=NCDC2>{{cite web
+ |url         = http://cdo.ncdc.noaa.gov/climatenormals/clim20/fl/087886.pdf
+ |title       = NCDC: U.S. Climate Normals
+ |access-date = May 16, 2010
+ |publisher   = National Oceanic and Atmospheric Administration
+}}{{Dead link|date=August 2018 |bot=InternetArchiveBot |fix-attempted=yes }}</ref>
+|date=August 2010
+}}
+
+{{Weather box
+|location = Dunedin, Florida
+|single line = Y
+|Jan high F = 69
+|Feb high F = 72
+|Mar high F = 75
+|Apr high F = 80
+|May high F = 85
+|Jun high F = 89
+|Jul high F = 90
+|Aug high F = 90
+|Sep high F = 88
+|Oct high F = 83
+|Nov high F = 77
+|Dec high F = 71
+|year high F = 80.75
+|Jan low F = 50
+|Feb low F = 53
+|Mar low F = 57
+|Apr low F = 62
+|May low F = 68
+|Jun low F = 73
+|Jul low F = 75
+|Aug low F = 75
+|Sep low F = 72
+|Oct low F = 66
+|Nov low F = 59
+|Dec low F = 53
+|year low F = 63.58
+|Jan rain inch = 2.99
+|Feb rain inch = 3.05
+|Mar rain inch = 3.81
+|Apr rain inch = 2.37
+|May rain inch = 2.02
+|Jun rain inch = 6.69
+|Jul rain inch = 8.09
+|Aug rain inch = 8.32
+|Sep rain inch = 6.99
+|Oct rain inch = 3.31
+|Nov rain inch = 2.15
+|Dec rain inch = 2.95
+|year rain inch = 52.74
+|Jan rain days = 4.3
+|Feb rain days = 3.9
+|Mar rain days = 4.5
+|Apr rain days = 3.4
+|May rain days = 3.6
+|Jun rain days = 9.6
+|Jul rain days = 11
+|Aug rain days = 11.6
+|Sep rain days = 8.3
+|Oct rain days = 4.1
+|Nov rain days = 3.2
+|Dec rain days = 3.6
+|source 1 = Weather Channel<ref>http://www.weather.com/outlook/homeandgarden/home/wxclimatology/monthly/graph/USFL0119{{Dead link|date=January 2022 |bot=InternetArchiveBot |fix-attempted=yes }}</ref>
+|date=April 2012}}
+
+==Demographics==
+{{US Census population
+| 1920 = 28265
+| 1930 = 62149
+| 1940 = 91852
+| 1950 = 159249
+| 1960 = 374665
+| 1970 = 522329
+| 1980 = 728531
+| 1990 = 851659
+| 2000 = 921482
+| 2010 = 916542
+| 2020 = 959107
+| estyear = 2025
+| estimate = 948563
+| estref = <ref name="USCensusEst2025">{{cite web|url=https://www.census.gov/data/tables/time-series/demo/popest/2020s-counties-total.html|title=County Population Totals and Components of Change: 2020-2025|publisher=United States Census Bureau|access-date=April 6, 2026}}</ref> {{decrease}}
+| align-fn = center
+| footnote = U.S. Decennial Census<ref>{{cite web|url=https://www.census.gov/programs-surveys/decennial-census.html|title=U.S. Decennial Census|publisher=United States Census Bureau|access-date=June 16, 2014}}</ref><br />1790–1960<ref>{{cite web|url=http://mapserver.lib.virginia.edu|title=Historical Census Browser|publisher=University of Virginia Library|access-date=June 16, 2014}}</ref> 1900–1990<ref>{{cite web|url=https://www.census.gov/population/cencounts/fl190090.txt|title=Population of Counties by Decennial Census: 1900 to 1990|publisher=United States Census Bureau|access-date=June 16, 2014}}</ref><br />1990–2000<ref>{{cite web|url=https://www.census.gov/population/www/cen2000/briefs/phc-t4/tables/tab02.pdf|title=Census 2000 PHC-T-4. Ranking Tables for Counties: 1990 and 2000|publisher=United States Census Bureau|access-date=June 16, 2014}}</ref> 2010–2021<ref name="QF">{{cite web|title=State & County QuickFacts|url=http://quickfacts.census.gov/qfd/states/12/12103.html|publisher=United States Census Bureau|access-date=June 16, 2014|url-status=dead|archive-url=https://web.archive.org/web/20110715142714/http://quickfacts.census.gov/qfd/states/12/12103.html|archive-date=July 15, 2011}}</ref> 2022<ref name="2022PopulationEstimate">{{cite web |title=County Population Totals and Components of Change: 2020–2022 |url=https://www.census.gov/data/tables/time-series/demo/popest/2020s-counties-total.html |website=County Population Totals: 2020–2022 |publisher=U.S. Census Bureau |access-date=March 30, 2023 |date=March 30, 2023 }}</ref>
+| align = right
+}}
+
+===2020 census===
+
+As of the [[2020 United States census|2020 census]], the county had a population of 959,107. The median age was 49.3 years. 15.5% of residents were under the age of 18 and 25.3% of residents were 65 years of age or older. For every 100 females there were 92.3 males, and for every 100 females age 18 and over there were 90.2 males age 18 and over. There were 232,884 families residing in the county.<ref name="Census2020DP">{{cite web|title=2020 Decennial Census Demographic Profile (DP1)|url=https://api.census.gov/data/2020/dec/dp?get=NAME,DP1_0021P,DP1_0024P,DP1_0025C,DP1_0049C,DP1_0045C,DP1_0069C,DP1_0073C,DP1_0125P,DP1_0126P,DP1_0129P,DP1_0133P,DP1_0137P,DP1_0138P,DP1_0139P,DP1_0141P,DP1_0142P,DP1_0143P,DP1_0145P,DP1_0146P,DP1_0147C,DP1_0148C,DP1_0149C,DP1_0156C,DP1_0157C,DP1_0158C,DP1_0159P,DP1_0160P&for=county%3A103&in=state%3A12|website=United States Census Bureau|year=2021|access-date=December 26, 2025|df=mdy}}</ref><ref name="Census2020PL">{{cite web|title=2020 Decennial Census Redistricting Data (Public Law 94-171)|url=https://api.census.gov/data/2020/dec/pl?get=NAME,P1_001N,P1_003N,P1_004N,P1_005N,P1_006N,P1_007N,P1_008N,P1_009N,P2_001N,P2_002N,H1_001N,H1_002N&for=county%3A103&in=state%3A12|website=United States Census Bureau|year=2021|access-date=December 26, 2025|df=mdy}}</ref>
+
+The racial makeup of the county was 73.9% [[White Americans|White]], 9.8% [[African Americans|Black or African American]], 0.4% [[Native Americans in the United States|American Indian and Alaska Native]], 3.6% [[Asian Americans|Asian]], 0.1% [[Native Hawaiians|Native Hawaiian]] and [[Pacific Islander|Pacific Islander]], 3.4% from some other race, and 8.8% from [[Multiracial Americans|two or more races]]. [[Hispanic and Latino Americans|Hispanic or Latino]] residents of any race comprised 10.7% of the population.<ref name="Census2020PL"/>
+
+99.8% of residents lived in urban areas, while 0.2% lived in rural areas.<ref name="Census2020DHC">{{cite web|title=2020 Decennial Census Demographic and Housing Characteristics (DHC)|url=https://api.census.gov/data/2020/dec/dhc?get=NAME,P2_002N,P2_003N&for=county%3A103&in=state%3A12|website=United States Census Bureau|year=2023|access-date=December 26, 2025|df=mdy}}</ref>
+
+There were 442,789 households in the county, of which 19.4% had children under the age of 18 living in them. Of all households, 39.2% were married-couple households, 20.9% were households with a male householder and no spouse or partner present, and 31.9% were households with a female householder and no spouse or partner present. About 36.0% of all households were made up of individuals and 16.8% had someone living alone who was 65 years of age or older.<ref name="Census2020DP"/>
+
+There were 516,324 housing units, of which 14.2% were vacant. Among occupied housing units, 65.1% were owner-occupied and 34.9% were renter-occupied. The homeowner vacancy rate was 2.0% and the rental vacancy rate was 8.8%.<ref name="Census2020DP"/>
+
+===Racial and ethnic composition===
+
+{| class="wikitable sortable" style="text-align:center;"
+|+'''Pinellas County, Florida – Racial and ethnic composition'''<br><small>{{nobold|''Note: the US Census treats Hispanic/Latino as an ethnic category. This table excludes Latinos from the racial categories and assigns them to a separate category. Hispanics/Latinos may be of any race.''}}</small>
+!Race / Ethnicity <small>(''NH = Non-Hispanic'')</small>
+!Pop 1980<ref>{{Cite web|first= |last= |authorlink=   |title= 1980 U.S. Census - General Population Characteristics - Table 16 Total Persons and Spanish Origin Persons by Type of Spanish Origin and Race: 1980 |website=[[United States Census Bureau]]|date=1980 |url= https://www2.census.gov/prod2/decennial/documents/1980a_flABCs1-02.pdf |accessdate=|archive-url=https://web.archive.org/web/20250311204220/https://www2.census.gov/prod2/decennial/documents/1980a_flABCs1-02.pdf| archive-date=March 11, 2025}}</ref>
+!Pop 1990<ref>{{Cite web|first= |last= |authorlink=   |title= 1990 U.S. Census - Social and Economic Characteristics - Table 6. Race and Hispanic Origin: 1990 |website=[[United States Census Bureau]]|date=1980 |url= https://www2.census.gov/library/publications/decennial/1990/cp-2/cp-2-11-1.pdf |accessdate=|archive-url=https://web.archive.org/web/20260206111828/https://www2.census.gov/library/publications/decennial/1990/cp-2/cp-2-11-1.pdf| archive-date=February 6, 2026}}</ref>
+!Pop 2000<ref name=2000CensusP004>{{Cite web|title=P004: Hispanic or Latino, and Not Hispanic or Latino by Race – 2000: DEC Summary File 1 – Pinellas County, Florida|url=https://data.census.gov/table?g=050XX00US12103&tid=DECENNIALSF12000.P004|website=[[United States Census Bureau]] |access-date= }}</ref>
+!Pop 2010<ref name=2010CensusP2>{{Cite web|title=P2: Hispanic or Latino, and Not Hispanic or Latino by Race – 2010: DEC Redistricting Data (PL 94-171) – Pinellas County, Florida|url=https://data.census.gov/cedsci/table?q=p2&g=050XX00US12103&tid=DECENNIALPL2010.P2|website=[[United States Census Bureau]] |access-date= }}</ref>
+!style="background-color: #ffffb3;" | Pop 2020<ref name=2020CensusP2>{{Cite web|title=P2: Hispanic or Latino, and Not Hispanic or Latino by Race – 2020: DEC Redistricting Data (PL 94-171) – Pinellas County, Florida|url=https://data.census.gov/cedsci/table?q=p2&g=050XX00US12103&tid=DECENNIALPL2020.P2|website=[[United States Census Bureau]] |access-date= }}</ref>
+!% 1980
+!% 1990
+!% 2000
+!% 2010
+!style="background-color: #ffffb3;" |% 2020
+|-
+|[[Non-Hispanic or Latino whites|White]] alone (NH)
+|658,296
+|754,802
+|762,614
+|704,786
+|style='background: #ffffe6; |684,463
+|90.36%
+|88.63%
+|82.76%
+|76.90%
+|style='background: #ffffe6; |71.36%
+|-
+|[[Non-Hispanic or Latino African Americans|Black or African American]] alone (NH)
+|54,484
+|65,046
+|81,146
+|91,922
+|style='background: #ffffe6; |91,431
+|7.48%
+|7.64%
+|8.81%
+|10.03%
+|style='background: #ffffe6; |9.53%
+|-
+|[[Native Americans in the United States|Native American]] or [[Alaska Native]] alone (NH)
+|993
+|1,863
+|2,292
+|2,066
+|style='background: #ffffe6; |1,942
+|0.14%
+|0.22%
+|0.25%
+|0.23%
+|style='background: #ffffe6; |0.20%
+|-
+|[[Asian Americans|Asian]] alone (NH)
+|3,134
+|9,506
+|18,794
+|26,749
+|style='background: #ffffe6; |33,700
+|0.43%
+|1.12%
+|2.04%
+|2.92%
+|style='background: #ffffe6; |3.51%
+|-
+|[[Native Hawaiian]] or [[Pacific Islander Americans|Pacific Islander]] alone (NH)
+|x <ref>included in the Asian category in the 1980 Census</ref>
+|x <ref>included in the Asian category in the 1990 Census</ref>
+|435
+|724
+|style='background: #ffffe6; |797
+|x
+|x
+|0.05%
+|0.08%
+|style='background: #ffffe6; |0.08%
+|-
+|[[Race and ethnicity in the United States census|Other race]] alone (NH)
+|1,098
+|373
+|1,326
+|1,802
+|style='background: #ffffe6; |4,835
+|0.15%
+|0.04%
+|0.14%
+|0.20%
+|style='background: #ffffe6; |0.50%
+|-
+|[[Multiracial Americans|Mixed race or Multiracial]] (NH)
+|x <ref>not an option in the 1980 Census</ref>
+|x <ref>not an option in the 1990 Census</ref>
+|12,115
+|15,252
+|style='background: #ffffe6; |39,500
+|x
+|x
+|1.31%
+|1.66%
+|style='background: #ffffe6; |4.12%
+|-
+|[[Hispanic and Latino Americans|Hispanic or Latino]] (any race)
+|10,526
+|20,069
+|42,760
+|73,241
+|style='background: #ffffe6; |102,439
+|1.44%
+|2.36%
+|4.64%
+|7.99%
+|style='background: #ffffe6; |10.68%
+|-
+|'''Total'''
+|'''728,531'''
+|'''851,659'''
+|'''921,482'''
+|'''916,542'''
+|style='background: #ffffe6; |'''959,107 '''
+|'''100.00%'''
+|'''100.00%'''
+|'''100.00%'''
+|'''100.00%'''
+|style='background: #ffffe6; |'''100.00%'''
+|}
+
+===2010 census===
+U.S. Census Bureau 2010 Ethnic/Race Demographics:<ref name=pinDemo>{{cite web |url=https://www.census.gov |title=Pinellas County: SELECTED SOCIAL CHARACTERISTICS IN THE UNITED STATES 2006-2010 American Community Survey 5-Year Estimates |publisher=[[United States Census Bureau]] |access-date=October 20, 2015 }}</ref><ref name=pinDC>{{cite web |url=http://data.ocala.com/census/florida/pinellas-county/103/ |title=Pinellas County Demographic Characteristics |publisher=ocala.com |access-date=October 20, 2015 |archive-url=https://web.archive.org/web/20160305061316/http://data.ocala.com/census/florida/pinellas-county/103/ |archive-date=March 5, 2016 |url-status=dead }}</ref>
+* [[White (U.S. Census)|White (non-Hispanic)]] (82.1% when including [[White Hispanic]]s): 76.9% <small>(17.7% German, 15.5% Irish, 12.6% English, 8.9% Italian, 4.3% Polish, 4.0% French, 2.6% Scottish, 1.9% Scotch-Irish, 1.7% Dutch, 1.4% Swedish, 1.4% Greek, 1.1% Russian, 1.0% French Canadian, 0.9% Norwegian, 0.8% Welsh, 0.8% Hungarian, 0.5% Czech, 0.5% Portuguese, 0.5% Ukrainian)</small><ref name=pinDemo/>
+* [[Black or African-American (U.S. Census)|Black or African-American (non-Hispanic)]] (10.3% when including [[Black Hispanic]]s): 10.0% <small>(0.6% [[Sub-Saharan Africa|Subsaharan African]], 0.5% [[West Indian]]/[[Afro-Caribbean American]] [0.2% Jamaican, 0.1% Haitian, 0.1% Trinidadian and Tobagonian, 0.1% [[Afro-Caribbean|Other or Unspecified West Indian]]])</small><ref name=pinDemo/><ref>{{cite web |url=https://www.census.gov |title=Miami-Dade County, Florida FIRST ANCESTRY REPORTED Universe: Total population - 2006-2010 American Community Survey 5-Year Estimates |publisher=[[United States Census Bureau]] |access-date=November 12, 2015 }}</ref>
+* [[Hispanic (U.S. Census)|Hispanic]] or [[Latino (U.S. Census)|Latino]] of any race: 8.0% <small>(2.4% Puerto Rican, 2.4% Mexican, 0.9% Cuban)</small><ref name=pinDemo/><ref>{{cite web |url=https://www.census.gov |title=Hispanic or Latino by Type: 2010 -- 2010 Census Summary File 1 |publisher=[[United States Census Bureau]] |access-date=October 20, 2015 }}</ref>
+* [[Asian (U.S. Census)|Asian]]: 3.0% <small>(0.8% Vietnamese, 0.7% Other Asian, 0.6% Indian, 0.5% Filipino, 0.3% Chinese, 0.1% Korean, 0.1% Japanese)</small><ref name=pinDemo/><ref name=pinDC/>
+* [[Multiracial American|Two or more races]]: 2.2%
+* [[Native American (U.S. Census)|American Indian and Alaska Native]]: 0.3%
+* [[Pacific Islander (U.S. Census)|Native Hawaiian and Other Pacific Islander]]: 0.1%<ref name=pinDemo/><ref name=pinDC/>
+* [[Race (United States Census)|Other Races]]: 2.0% <small>(0.6% Arab)</small><ref name=pinDemo/>
+
+In 2010, 6.5% of the population considered themselves to be of only [[American people|American]] ancestry (regardless of race or ethnicity.)<ref name=pinDemo/>
+
+There were 415,876 households, out of which 19.89% had children under the age of 18 living with them, 40.33% were [[Marriage|married couples]] living together, 11.86% had a female householder with no husband present, and 43.67% were non-families. 35.42% of all households were made up of individuals, and 15.14% (4.53% male and 10.61% female) had someone living alone who was 65 years of age or older. The average household size was 2.16 and the average family size was 2.79.<ref name=pinDC/><ref name=pinAge>{{cite web |url=https://www.census.gov |title=Pinellas County: Age Groups and Sex: 2010 - 2010 Census Summary File 1 |publisher=[[United States Census Bureau]] |access-date=October 20, 2015 }}</ref>
+
+The age distribution is 17.8% under the age of 18, 7.3% from 18 to 24, 23.0% from 25 to 44, 30.8% from 45 to 64, and 21.2% who were 65 years of age or older. The median age was 46.3 years. For every 100 females there were 92.3 males. For every 100 females age 18 and over, there were 89.8 males.<ref name=pinAge/>
+
+The median income for a household in the county was $45,258, and the median income for a family was $58,335. Males had a median income of $41,537 versus $35,003 for females. The [[per capita income]] for the county was $28,742. About 8.1% of families and 12.1% of the population were below the [[poverty line]], including 17.7% of those under age 18 and 9.0% of those aged 65 or over.<ref>{{cite web|url=https://www.census.gov |title=Pinellas County, Florida: SELECTED ECONOMIC CHARACTERISTICS - 2006-2010 American Community Survey 5-Year Estimates |publisher=[[United States Census Bureau]] |access-date=November 18, 2015 }}</ref>
+
+In 2010, 11.2% of the county's population was [[foreign born]], with 50.3% being [[Naturalized citizen of the United States|naturalized American citizens]]. Of foreign-born residents, 33.6% were born in [[Europe]], 32.1% were born in [[Latin America]], 20.9% born in [[Asia]], 9.8% in [[North America]], 3.0% born in [[Africa]], and 0.6% were born in [[Oceania]].<ref name=pinDemo/>
+
+===List of cities by population===
+The following is a list of all cities, towns, and [[census-designated place]]s in Pinellas County, Florida.
+
+'''Source: 2010 Florida Census of Population and Housing'''<ref>{{cite web|date=October 2012|title=Florida: 2010; Summary Population and Housing Characteristics|url=https://www.census.gov/prod/cen2010/cph-1-11.pdf|access-date=August 23, 2020|website=United States Census Bureau|archive-url=https://web.archive.org/web/20210308131024/https://www.census.gov/prod/cen2010/cph-1-11.pdf|archive-date=March 8, 2021|url-status=dead}}</ref>
+
+{| class="wikitable sortable"
+|+
+!Name
+!Type
+!2010 census
+|-
+|[[St. Petersburg, Florida|St. Petersburg]]
+|City
+|244,769
+|-
+|[[Clearwater, Florida|Clearwater]]
+|City
+|107,685
+|-
+|[[Largo, Florida|Largo]]
+|City
+|77,648
+|-
+|[[Palm Harbor, Florida|Palm Harbor]]
+|CDP
+|57,439
+|-
+|[[Pinellas Park, Florida|Pinellas Park]]
+|City
+|49,079
+|-
+|[[Dunedin, Florida|Dunedin]]
+|City
+|35,962
+|-
+|[[East Lake, Pinellas County, Florida|East Lake]]
+|CDP
+|30,962
+|-
+|[[Tarpon Springs, Florida|Tarpon Springs]]
+|City
+|23,484
+|-
+|[[Lealman, Florida|Lealman]]
+|CDP
+|19,879
+|-
+|[[Seminole, Florida|Seminole]]
+|City
+|17,233
+|-
+|[[Safety Harbor, Florida|Safety Harbor]]
+|City
+|16,884
+|-
+|[[West Lealman, Florida|West Lealman]]
+|CDP
+|15,651
+|-
+|[[Oldsmar, Florida|Oldsmar]]
+|City
+|13,591
+|-
+|[[Gulfport, Florida|Gulfport]]
+|City
+|12,029
+|-
+|[[Bardmoor, Florida|Bardmoor]]
+|CDP
+|9,732
+|-
+|[[St. Pete Beach, Florida|St. Pete Beach]]
+|City
+|9,346
+|-
+|[[Treasure Island, Florida|Treasure Island]]
+|City
+|6,705
+|-
+|[[South Highpoint, Florida|South Highpoint]]
+|CDP
+|5,195
+|-
+|[[Kenneth City, Florida|Kenneth City]]
+|Town
+|4,980
+|-
+|[[South Pasadena, Florida|South Pasadena]]
+|City
+|4,964
+|-
+|[[Madeira Beach, Florida|Madeira Beach]]
+|City
+|4,263
+|-
+|[[Indian Rocks Beach, Florida|Indian Rocks Beach]]
+|City
+|4,113
+|-
+|[[Belleair, Florida|Belleair]]
+|Town
+|3,869
+|-
+|[[Tierra Verde, Florida|Tierra Verde]]
+|CDP
+|3,721
+|-
+|[[Feather Sound, Florida|Feather Sound]]
+|CDP
+|3,420
+|-
+|[[Bay Pines, Florida|Bay Pines]]
+|CDP
+|2,931
+|-
+|[[Harbor Bluffs, Florida|Harbor Bluffs]]
+|CDP
+|2,860
+|-
+|[[Ridgecrest, Florida|Ridgecrest]]
+|CDP
+|2,558
+|-
+|[[Greenbriar, Florida|Greenbriar]]
+|CDP
+|2,502
+|-
+|[[Redington Shores, Florida|Redington Shores]]
+|Town
+|2,121
+|-
+|[[Belleair Bluffs, Florida|Belleair Bluffs]]
+|City
+|2,031
+|-
+|[[Bear Creek, Florida|Bear Creek]]
+|CDP
+|1,948
+|-
+|[[Belleair Beach, Florida|Belleair Beach]]
+|City
+|1,560
+|-
+|[[Redington Beach, Florida|Redington Beach]]
+|Town
+|1,427
+|-
+|[[Indian Shores, Florida|Indian Shores]]
+|Town
+|1,420
+|-
+|[[North Redington Beach, Florida|North Redington Beach]]
+|Town
+|1,417
+|-
+|[[Belleair Shore, Florida|Belleair Shore]]
+|Town
+|109
+|}
+
+===2000 census===
+As of 2000, there were 921,482 people, 414,968 households, and 243,171 families residing in the county. The [[population density]] was 1,271/km<sup>2</sup> (3,292/sq mi), making it the most densely populated county in Florida. There were 481,573 housing units at an average density of {{convert|1,720|/sqmi|/km2|sp=us|adj=off}}. The racial makeup of the county was 85.85% [[Race (United States Census)|White]] (82.8% were [[Non-Hispanic White]],)<ref>{{cite web |url=http://www.muninetguide.com/states/florida/Pinellas.php |title=Demographics Pinellas County, FL |publisher=MuniNetGuide.com |access-date=October 20, 2015 |archive-url=https://web.archive.org/web/20101104150335/http://www.muninetguide.com/states/florida/Pinellas.php |archive-date=November 4, 2010 |url-status=dead }}</ref> 8.96% Black or African American, 0.30% Native American, 2.06% Asian, 0.05% Pacific Islander, 1.14% from other races, and 1.64% from two or more races. 4.64% of the population were Hispanic or Latino of any race.
+
+There were 414,968 households, out of which 22.10% had children under the age of 18 living with them, 44.80% were [[Marriage|married couples]] living together, 10.50% had a female householder with no husband present, and 41.40% were non-families. 34.10% of all households were made up of individuals, and 15.50% had someone living alone who was 65 years of age or older. The average household size was 2.17 and the average family size was 2.77.
+
+In the county, the population was spread out, with 19.30% under the age of 18, 6.40% from 18 to 24, 27.30% from 25 to 44, 24.50% from 45 to 64, and 22.50% who were 65 years of age or older. The median age was 43 years. For every 100 females there were 91.00 males. For every 100 females age 18 and over, there were 87.80 males.
+
+In 2000, 87.8% of persons age 25 or above were high school graduates, slightly above Florida's average of 84.9% for Florida. 26.7% of persons age 25 or above held a bachelor's degree or higher, also slightly higher than Florida's rate of 25.6%.<ref name="census.gov">{{cite web|url=https://www.census.gov/quickfacts/pinellascountyflorida|title=American FactFinder|work=census.gov|access-date=August 13, 2019}}</ref>
+
+The median income for a household in the county was $37,111, and the median income for a family was $46,925. Males had a median income of $32,264 versus $26,281 for females. The [[per capita income]] for the county was $23,497. About 6.70% of families and 10.00% of the population were below the [[poverty line]], including 13.90% of those under age 18 and 8.20% of those age 65 or over.
+
+In 2000, as Florida's 6th and the nation's 53rd [[List of the most populous counties in the United States|most populous]] county, Pinellas has a population greater than that of the individual states of [[Wyoming]], [[Montana]], [[Delaware]], [[South Dakota]], [[Alaska]], [[North Dakota]], and [[Vermont]], as well as the [[District of Columbia]]. With a  [[population density]] (as of the [[2000 United States census|2000 census]]) of 3292 inhabitants/mi<sup>2</sup>, Pinellas County is by far the most densely populated county in the state, more than double that of [[Broward County, Florida|Broward County]], the next most densely populated.<ref>{{cite web |url=http://factfinder.census.gov/servlet/GCTTable?_bm=y&-geo_id=04000US12&-_box_head_nbr=GCT-PH1&-ds_name=DEC_2000_SF1_U&-format=ST-2 |title=American FactFinder - Results |access-date=January 12, 2012 |archive-url=https://archive.today/20200214062135/http://factfinder.census.gov/servlet/GCTTable?_bm=y&-geo_id=04000US12&-_box_head_nbr=GCT-PH1&-ds_name=DEC_2000_SF1_U&-format=ST-2 |archive-date=February 14, 2020 |url-status=dead }}</ref>
+
+===Languages===
+As of 2010, 87.17% of all residents spoke [[English language|English]] as their [[first language]], while 5.56% spoke [[Spanish language|Spanish]], 0.78% [[Vietnamese language|Vietnamese]], 0.70% [[French language|French]], 0.65% [[Greek language|Greek]], 0.56% [[German language|German]], and 0.52% of the population spoke [[Serbo-Croatian language|Serbo-Croatian]] as their [[mother language]].<ref name="MLA">{{cite web | url=https://apps.mla.org/map_data_results&SRVY_YEAR=2010&geo=county&state_id=12&county_id=103&mode=geographic&lang_id=&zip=&place_id=&cty_id=&region_id=&division_id=&a=&ea=&order=&ll=all| title=Modern Language Association Data Center Results of Pinellas County, Florida | publisher=Modern Language Association | access-date=October 20, 2015}}</ref> In total, 12.83% of the population spoke languages other than English as their [[primary language]].<ref name="MLA"/>
+==Government==
+[[File:Clearwater Pinellas cty crths02.jpg|thumb|upright|The Old Pinellas County Courthouse in Clearwater]]
+
+The [[County commission|Board of County Commissioners]] governs all unincorporated areas of the county under the [[Florida Constitution|state's constitution]], with the power to adopt ordinances, approve the county budget, set millages, and provide services. The county's [[Municipality|municipalities]], while governing their own affairs, may call upon the county for specialized services.<ref>{{cite web|url=http://www.pinellascounty.org/commission/default.htm|title=Pinellas County, Florida, Board of County Commissioners|work=pinellascounty.org|access-date=November 6, 2015}}</ref> The [[county administrator]], appointed by and reporting to the Board, oversees most of the day-to-day operations of the county.<ref>{{cite web|url=http://www.pinellascounty.org/Admin/default.htm|title=Pinellas County, Florida, Administration|work=pinellascounty.org|access-date=November 6, 2015}}</ref> In November 2024, Pinellas County voters approved a charter amendment (Amendment 1) that established term limits for County Commissioners, restricting them to twelve consecutive years of service.<ref>{{Cite web |last=Heinzen |first=Patrick |date=2024-11-13 |title=Learn About the 2024 Pinellas County Election Results |url=https://thegabber.com/learn-about-the-2024-pinellas-county-election-results/ |access-date=2026-03-08 |website=The Gabber Newspaper |language=en-US|archive-url=https://web.archive.org/web/20241116071117/https://thegabber.com/learn-about-the-2024-pinellas-county-election-results/|archive-date=November 16, 2024|url-status=dead}}</ref>
+
+As of 2025, The members of the Board are as follows:<ref>{{cite web | url=https://thetampabay100.com/politics-category/2024/11/14/republicans-grow-majority-on-pinellas-commission-leaving-just-one-democrat-standing/30123 | title=Republicans grow majority on Pinellas Commission, leaving just one Democrat standing | date=November 14, 2024 }}</ref>
+
+* Chris Scherer ([[Republican Party (United States)|R]]): At-Large District #1 (2024–present)
+* Brian Scott ([[Republican Party (United States)|R]]): At-Large District #2 (2022–present) (chair) 
+* Vince Nowicki ([[Republican Party (United States)|R]]): At-Large District #3 (2024–present)
+* Dave Eggers ([[Republican Party (United States)|R]]), Single-Member District #4 (2014–present) (vice chair) 
+* [[Chris Latvala]] ([[Republican Party (United States)|R]]), Single-Member District #5 (2022–present)
+* [[Kathleen Peters]] ([[Republican Party (United States)|R]]): Single-Member District #6 (2019–present)
+* Rene Flowers ([[Democratic Party (United States)|D]]): Single-Member District #7 (2020–present)
+* Barry Burton: County Administrator (2018–present)
+
+The county's government website won a "Sunny Award" from [[Sunshine Review]] in 2010 for its proactive disclosure of government data.<ref>{{cite web|url=https://www.tbnweekly.com/pinellas_county/article_ec951a72-2c56-586a-af03-a95334772aab.html|title=County receives A+ for Web site|website=TBNweekly|date=June 21, 2010 }}</ref>
+
+==Politics==
+{{PresHead|place=Pinellas County, Florida|source=<ref>{{cite web|url=http://uselectionatlas.org/RESULTS/|title=Dave Leip's Atlas of U.S. Presidential Elections|last=Leip|first=David|website=uselectionatlas.org|access-date=June 15, 2018}}</ref><ref>{{Cite web |title=2024 Presidential General Election Results - Florida |url=https://uselectionatlas.org/RESULTS/state.php?year=2024&off=100&elect=0&fips=12&f=0 |access-date=2026-04-03 |website=uselectionatlas.org}}</ref>}}
+<!-- PresRow should be {{PresRow|Year|Winning party|GOP vote #|Dem vote #|3rd party vote #|State}} -->
+{{PresRow|1912|Democratic|87|853|478|Florida}}
+{{PresRow|1916|Democratic|555|1,503|370|Florida}}
+{{PresRow|1920|Democratic|2,529|2,848|442|Florida}}
+{{PresRow|1924|Republican|2,872|2,633|538|Florida}}
+{{PresRow|1928|Republican|10,545|3,439|167|Florida}}
+{{PresRow|1932|Democratic|7,024|9,670|0|Florida}}
+{{PresRow|1936|Democratic|8,183|12,072|0|Florida}}
+{{PresRow|1940|Democratic|13,327|18,941|0|Florida}}
+{{PresRow|1944|Democratic|14,340|19,574|0|Florida}}
+{{PresRow|1948|Republican|24,900|15,724|3,900|Florida}}
+{{PresRow|1952|Republican|55,691|22,365|0|Florida}}
+{{PresRow|1956|Republican|74,314|28,113|0|Florida}}
+{{PresRow|1960|Republican|101,779|58,054|0|Florida}}
+{{PresRow|1964|Democratic|80,414|98,381|0|Florida}}
+{{PresRow|1968|Republican|109,235|68,209|33,814|Florida}}
+{{PresRow|1972|Republican|179,541|77,197|378|Florida}}
+{{PresRow|1976|Republican|150,003|141,879|3,687|Florida}}
+{{PresRow|1980|Republican|185,728|138,428|20,847|Florida}}
+{{PresRow|1984|Republican|240,612|128,574|63|Florida}}
+{{PresRow|1988|Republican|211,049|152,420|1,901|Florida}}
+{{PresRow|1992|Democratic|159,121|160,528|103,202|Florida}}
+{{PresRow|1996|Democratic|152,155|184,748|39,369|Florida}}
+{{PresRow|2000|Democratic|184,849|200,657|13,020|Florida}}
+{{PresRow|2004|Republican|225,686|225,460|4,211|Florida}}
+{{PresRow|2008|Democratic|210,066|248,299|6,787|Florida}}
+{{PresRow|2012|Democratic|213,258|239,104|6,750|Florida}}
+{{PresRow|2016|Republican|239,201|233,701|24,583|Florida}}
+{{PresRow|2020|Democratic|276,209|277,450|7,502|Florida}}
+{{PresRow|2024|Republican|269,472|242,452|5,150|Florida}}
+{{PresFoot}}
+
+In national politics, Pinellas County, was one of the first areas of Florida to break from the [[Solid South]] and elect [[Republican Party (United States)|Republicans]] to public office. Riding on the coattails of [[Herbert Hoover]]'s victory in the [[1928 United States presidential election in Florida|1928 election]], [[Albert R. Welsh]] was elected to the [[Florida Senate]] and [[Kenneth W. Kerr]] to the [[Florida House of Representatives]].<ref>{{cite journal|title=The Politics of Patronage: Florida Republicans during the Hoover Administration|first=David J.|last=Ginzl|journal=[[Florida Historical Quarterly]]|volume=61|number=1|year=1982|pages=1–19|publisher=[[Florida Historical Society]]|jstor=30146154}}</ref><ref name="FL Handbook 13-14">{{cite book|chapter=Florida's Legislature|title=The Florida Handbook 2013-2014|editor-last1=Morris|editor-first1=Allen|editor-last2=Perry Morris|editor-first2=Joan|publisher=[[Florida House of Representatives]]|location=[[Tallahassee, Florida]]|page=218|url=https://www.myfloridahouse.gov/filestores/Adhoc/FloridaHandbook/Florida%27s%20Legislature%202013-2014.pdf}}</ref> In that same election, Gladstone R. Beattie, became the Pinellas County Sheriff and first Republican sheriff in Florida since Reconstruction, and Harry R. Hewitt became the Pinellas County Judge and the first Republican county judge in Florida.<ref name="Schnur 2016">Schnur, James Anthony, "[https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=4079&context=fac_publications The Land Boom and Distant Clouds on the Horizon, 1922-1931]" (2016). USF St. Petersburg campus Faculty Publications. 3079.</ref> In 1951, Pinellas was the first county to send a majority-Republican delegation to the Florida House of Representatives in the twentieth-century.<ref name="FL Handbook 13-14"/>
+
+From 1948 to 1988, it went Republican in every presidential election except [[Lyndon Johnson]]'s 44-state landslide of 1964. However, for the last quarter-century, as part of the [[Interstate 4|I-4 Corridor]] stretching from Tampa Bay to [[Orlando, Florida]], it has been a powerful swing county in one of the nation's most critical [[swing state]]s. Voter registration is almost tied, with Republicans having a small plurality of registered voters. It is closely divided between predominantly [[liberalism|liberal]] St. Petersburg and its predominantly suburban and [[conservative]] north and beaches. Due in part to the more populated southern portion around St. Petersburg, it has supported a Democrat for president in all but three elections since 1992. The brand of Republicanism in Pinellas County has traditionally been a moderate one, so the county has become friendlier to Democrats as a result of the national GOP having shifted right.<ref>{{cite web |last= |first= |title=Five counties key to Florida's presidential primary results |url=https://www.tampabay.com/news/politics/national/five-counties-key-to-floridas-presidential-primary-results/1213103/ |website=[[Tampa Bay Times]]}}</ref>
+
+In 2000, [[Al Gore]] became the first Democrat to win a majority of the county's vote since 1964, and only the second since [[Franklin D. Roosevelt]]. In 2004, Pinellas County swung the other way when George W. Bush carried the county by a narrow [[Plurality (voting)|plurality]] of 49.56% (225,686 votes), with [[John F. Kerry|John Kerry]] following closely behind with 49.51% (225,460 votes)—a margin of just 226 votes. In the [[2012 United States presidential election|2012 Presidential Election]], [[Barack Obama]] won Pinellas with 52% of the vote (239,104 votes) to [[Mitt Romney]]'s 46.5% (213,258 votes), slightly narrower than Obama's [[2008 United States presidential election|2008 election]] results in Pinellas of 53% (248,299 votes) to [[John McCain]]'s 45% (210,066 votes).<ref>{{cite web|url=http://www.uselectionatlas.org/RESULTS/|title=Dave Leip's Atlas of U.S. Presidential Elections|author=David Leip|work=uselectionatlas.org|access-date=November 6, 2015|archive-url=https://web.archive.org/web/20260914063513/https://uselectionatlas.org/RESULTS/|archive-date=September 14, 2026|url-status=dead}}</ref> Republican victories in the county since [[George H. W. Bush|Bush]] in 1988 have been narrow pluralities. The exception to this is Donald Trump in 2024, who won the county with nearly 52% of the vote.
+
+The county is considered a [[List of election bellwether counties in the United States|bellwether]] politically.<ref>{{citation |url=https://www.nytimes.com/2020/10/06/opinion/biden-trump-bellwether-counties-.html |work= [[The New York Times]] |title= The 10 Bellwether Counties That Show How Trump Is in Serious Trouble |author= David Wasserman |date= October 6, 2020 }}</ref>
+
+In the [[United States Senate election in Florida, 2012|2012 U.S. Senate election]], Pinellas voters helped re-elect [[United States Senate|U.S. Senator]] [[Bill Nelson (politician)|Bill Nelson]] over challenger [[Connie Mack IV]] with 59% of the vote, greater than his statewide average of 55%. In the [[United States Senate election in Florida, 2010|2010 U.S. Senate election]], Pinellas was one of only four Florida counties won by outgoing Republican Governor [[Charlie Crist]], a St. Petersburg native, who won 42% of Pinellas voters running as an [[Independent (politician)|Independent]] in a three-way race with Republican nominee (and eventual winner) [[Marco Rubio]] and former Democratic U.S. Representative [[Kendrick Meek]], who won 37% and 16.8% of the Pinellas vote, respectively. Statewide, Rubio won almost 49% of the vote to Crist's 29.7% and Meek's 20%<ref>{{cite web|url=http://uselectionatlas.org/RESULTS/state.php?year=2010&off=3&f=0&fips=12&class=3|title=2010 Senatorial General Election Results - Florida|author=David Leip|work=uselectionatlas.org|access-date=November 6, 2015}}</ref> in a highly polarized election that would witness Crist depart from the Republican Party and eventually become a Democrat.<ref>{{cite web|url=http://www.tampabay.com/news/politics/stateroundup/article1265224.ece|title=Charlie Crist signs papers to become a Democrat|work=Tampa Bay Times|access-date=November 6, 2015|url-status=dead|archive-url=https://web.archive.org/web/20130211020146/http://www.tampabay.com/news/politics/stateroundup/article1265224.ece|archive-date=February 11, 2013}}</ref>
+
+In the [[2024 United States presidential election|2024 election]], Pinellas County shifted markedly to the right, with [[Donald Trump]] winning the county by just over 5 percentage points. This shift coincided with Republicans securing a supermajority on the Board of County Commissioners.
+
+In the [[United States House of Representatives|House of Representatives]], most of Pinellas is represented by [[Republican Party (United States)|Republican]] [[Anna Paulina Luna]] of the [[Florida's 13th congressional district|13th]] district. Most of the city of St. Petersburg, including the most Democratic parts of Pinellas, is represented by [[Democratic Party (United States)|Democrat]] [[Kathy Castor]] of the [[Florida's 14th congressional district|14th]] district, which spans the [[Tampa Bay]]. The way this map has been drawn has been considered an example of a pro-Republican [[Gerrymandering|gerrymander]], given the previous Democratic lean of the 13th.<ref>{{Cite web |last=Fineout |first=Gary |title=Florida Supreme Court locks in DeSantis-backed redistricting map |url=https://www.politico.com/news/2022/06/02/florida-redistricting-map-court-decision-00036740 |access-date=May 3, 2023 |website=Politico |date=June 2, 2022 |language=en}}</ref>
+
+In [[Government of Florida|state politics]], portions of Pinellas are represented in the [[Florida Senate]] by [[Florida Democratic Party|Democratic]] State Senator [[Darryl Rouson]] ([[Florida's 16th Senate district|District 16]]) and [[Republican Party of Florida|Republican]] State Senators [[Nick DiCeglie]] ([[Florida's 18th Senate district|District 18]]) and [[Ed Hooper (politician)|Ed Hooper]] ([[Florida's 21st Senate district|District 21]]). In the [[Florida House of Representatives|Florida House]] parts of the county are represented by Republicans [[Adam Anderson (politician)|Adam Anderson]] ([[Florida's 57th House of Representatives district|District 57]]-[[Palm Harbor, Florida|Palm Harbor]], [[Tarpon Springs, Florida|Tarpon Springs]]), [[Kim Berfield]] ([[Florida's 58th House of Representatives district|District 58]]-[[Clearwater, Florida|Clearwater]]), [[Berny Jacques]] ([[Florida's 59th House of Representatives district|District 59]]-Largo), and [[Linda Chaney]] ([[Florida's 61st House of Representatives district|District 61]]), as well as Democrat [[Lindsay Cross]] ([[Florida's 60th House of Representatives district|District 60]]-Pinellas Park). Portions of St. Pete are also included in [[Florida's 62nd House of Representatives district|District 62]], represented by [[Michele Rayner|Michele Rayner-Goolsby]].
+
+===Voter registration===
+Voter registration data is as of April 2025.
+{| class="wikitable"
+|-
+! colspan="2" |Party
+!Number of Voters
+!%
+|-
+| {{party color cell|Republican Party (United States)}}
+|[[Republican Party (United States)|Republican]]
+|236,269
+|{{percentage|236,269|645,309|2}}
+|-
+| {{party color cell|Democratic Party (United States)}}
+|[[Democratic Party (United States)|Democratic]]
+|203,666
+|{{percentage|203,666|645,309|2}}
+|-
+|
+|Other
+|181,999
+|{{percentage|181,999|645,309|2}}
+|-
+!
+!Total
+!645,309
+!100%
+|-
+| colspan="4" style="text-align: center;" | '''Source:'''<ref>{{Cite web |date=April 2025 |title=Month End Voter Statistics |url=https://www.votepinellas.gov/General-Information/Statistics/Voter-Registration-Statistics/Month-End-Voter-Statistics |access-date=May 21, 2025 |website=Pinellas County Supervisor of Elections|archive-url=https://web.archive.org/web/20250709151801/https://www.votepinellas.gov/General-Information/Statistics/Voter-Registration-Statistics/Month-End-Voter-Statistics|archive-date=July 9, 2025|url-status=dead}}</ref>
+|}
+
+==Education==
+[[File:Stetson College of Law Gulfport, Florida.JPG|thumb|Stetson University College of Law in [[Gulfport, Florida|Gulfport]]]]
+
+===Primary and secondary education===
+
+====Pinellas County School District====
+The entire county is served by the [[Pinellas County Schools|Pinellas County School District]].<ref>{{cite web|url=https://www2.census.gov/geo/maps/DC2020/PL20/st12_fl/schooldistrict_maps/c12103_pinellas/DC20SD_C12103.pdf|title=2020 CENSUS - SCHOOL DISTRICT REFERENCE MAP: Pinellas County, FL|publisher=[[U.S. Census Bureau]]|access-date=August 1, 2022}} - [https://www2.census.gov/geo/maps/DC2020/PL20/st12_fl/schooldistrict_maps/c12103_pinellas/DC20SD_C12103_SD2MS.txt Text list]</ref> The current superintendent is Kevin Hendrick. The district, the nation's 24th largest, comprises 143 schools, including 72 elementary schools, 18 middle schools, two K–8 schools, 17 high schools, and 35 additional facilities including ESE, adult ed, career/technical, and [[charter school|charters]]. The district also operates the K–12 Pinellas Virtual School (PVS). Among the many notable [[Magnet school|magnet programs]] in the district are three [[International Baccalaureate]] (IB) programs, at [[St. Petersburg High School]], [[Palm Harbor University High School]], and [[Largo High School (Florida)|Largo High School]], [[Project Lead the Way]]'s (PLTW) engineering program at [[East Lake High School (Tarpon Springs, Florida)|East Lake High School]], the [[Center for Advanced Technologies]] (CAT) at [[Lakewood High School (Florida)|Lakewood High School]], the [[Pinellas County Center for the Arts]] (PCCA) at [[Gibbs High School (St. Petersburg, Florida)|Gibbs High School]], the [[Advanced International Certificate of Education]] (AICE) at [[Hollins High School]], [[Clearwater High School]], [[Tarpon Springs High School]], and [[Northeast High School (St. Petersburg, Florida)|Northeast High School]], four middle school Centers for [[Gifted education|Gifted Studies]], at Thurgood Marshall Fundamental, Morgan Fitzgerald, John Hopkins and Dunedin Highland Middle Schools, and Florida's only Fundamental High School, at [[Osceola High School (Largo, Florida)|Osceola High School]].
+
+===Private Schools===
+The county is also home to many private schools, including [[Admiral Farragut Academy]], [[Canterbury School (St. Petersburg, Florida)|Canterbury School]], [[Calvary Christian High School (Clearwater, Florida)|Calvary Christian]], [[Clearwater Central Catholic High School|Clearwater Central Catholic]], [[Keswick Christian School]], [[Shorecrest Preparatory School]], Indian Rocks Christian School <ref>{{cite web|url=https://www.ircs.org/|title=Indian Rocks Christian School &#124; Private School Pinellas County|website=Indian Rocks Christian School}}</ref> and [[St. Petersburg Catholic High School]], among others.
+
+===Colleges and universities===
+Pinellas County is home several institutions of higher learning, including [[Eckerd College]], the [[University of South Florida St. Petersburg]], [[Nova Southeastern University]], the multi-campus [[St. Petersburg College]], the [[Stetson University College of Law]] in Gulfport, and the main campus of [[Schiller International University]] in [[Largo, Florida|Largo]],<ref>"[http://www.schiller.edu/ Home]." [[Schiller International University]]. Retrieved on August 28, 2011 "Main Campus 8560 Ulmerton Road Largo, Florida 33771 "</ref> after previously being located in [[Dunedin, Florida|Dunedin]].<ref>Helfand, Lorri. "[https://news.google.com/newspapers?id=G_ZRAAAAIBAJ&sjid=2HIDAAAAIBAJ&pg=6172,2557882&dq=schiller+international+university+largo+dunedin&hl=en Largo makes Schiller a priority]." ''[[Clearwater Times]]'' (Edition of ''[[St. Petersburg Times]]''). Thursday February 23, 2006. Page 1. Retrieved from [[Google News]] (83 of 108) on August 28, 2011.</ref>
+
+===Libraries===
+The Pinellas Public Library Cooperative (PPLC) has 14 member libraries:<ref>{{cite web|url= http://www.pplc.us/about.shtml|title= PPLC: About|access-date= March 26, 2014|archive-url= https://web.archive.org/web/20140210082323/http://www.pplc.us/about.shtml|archive-date= February 10, 2014|url-status= dead}}</ref><ref>{{cite web|url=http://www.pplc.us/libraries.shtml|title=PPLC Member Libraries|access-date=February 12, 2019|archive-url=https://web.archive.org/web/20190213005915/http://www.pplc.us/libraries.shtml|archive-date=February 13, 2019|url-status=dead}}</ref>
+
+{{Div col|colwidth=20em}}
+* [[Clearwater Public Library System]]
+* [[Dunedin, Florida#Library|Dunedin Public Library]]
+* [[East Lake, Pinellas County, Florida#Public Library|East Lake Community Library]]
+* [[Gulf Beaches Public Library]]
+* [[Gulfport Public Library]]
+* [[Largo Public Library]]
+* [[Oldsmar Public Library]]
+* [[Palm Harbor, Florida#Palm Harbor Library|Palm Harbor Library]]
+* [[Pinellas Park, Florida#Library|Barbara S. Ponce Public Library]]
+* [[Safety Harbor, Florida#Library|Safety Harbor Public Library]]
+* [[St. Petersburg Library System]]
+* [[St. Pete Beach, Florida#Library|St. Pete Beach Public Library]]
+* [[Seminole, Florida#Recreation and library|Seminole Community Library]]
+* [[Tarpon Springs, Florida#Library|Tarpon Springs Public Library]]
+{{Div col end}}
+
+The Pinellas Public Library Cooperative was established by referendum in March 1989 to serve the unincorporated areas of Pinellas County. The original Interlocal Agreement, which described the legal basis, leadership and operations of the Cooperative, was signed by sixteen cities, the taxing district of Palm Harbor, and the County in 1989. In 1994, the City of Clearwater applied for and became a member of the Cooperative, which made all existing public libraries in the county members of the first countywide public library cooperative in Florida.<ref>{{cite web |last1=Jasper |first1=Catherine |last2=McCook |first2=Kathleen de la Pena |title=The Florida Library History Project |url=https://eric.ed.gov/?id=ED422005 |website=ERIC |date=August 1998 |access-date=7 July 2024}}</ref> 
+
+The Pinellas Talking Book Library is administered through the Pinellas Public Library Cooperative. It serves county residents who are unable to read standard print material due to visual, physical or learning disabilities whether permanent or temporary. It provides free access to recorded, Braille, and Large print materials as well as a collection of descriptive videos. These materials are sent to members through postage free mail.<ref>{{Cite web |date=2019-02-08 |title=Pinellas Public Library Cooperative - Talking Book Library |url=http://www.pplc.us/tbl/index.shtml |access-date=2025-03-24 |archive-url=https://web.archive.org/web/20190208235112/http://www.pplc.us/tbl/index.shtml |archive-date=February 8, 2019 }}</ref>
+
+====Mobile Book Bus====
+Part of the Pinellas Public Library Cooperative's efforts to reach out to underserved communities, is coordinating with the Juvenile Wellness Board, which hosts a Summer Book Bus Program.<ref>{{Cite web |date=2024-07-03 |title=Mobile Book Bus Pushes to Increase Pinellas Reading Proficiency |url=https://www.jwbpinellas.org/mobile-book-bus-pushes-to-increase-pinellas-reading-proficiency/ |access-date=2025-04-28 |website=JWB |language=en-US}}</ref> Under this program, mobile book buses go to each of the PPLC libraries and other community locations, giving away free books during the summers to encourage reading proficiency among children from beginner to the third grade.<ref>{{Cite web |date=2024-07-03 |title=Mobile Book Bus Pushes to Increase Pinellas Reading Proficiency |url=https://www.jwbpinellas.org/mobile-book-bus-pushes-to-increase-pinellas-reading-proficiency/ |access-date=2025-04-28 |website=JWB |language=en-US}}</ref> Each summer on average more than 12,000 books are given away to children in Pinellas County through this program.<ref>{{Cite web |date=2024-07-03 |title=Mobile Book Bus Pushes to Increase Pinellas Reading Proficiency |url=https://www.jwbpinellas.org/mobile-book-bus-pushes-to-increase-pinellas-reading-proficiency/ |access-date=2025-04-28 |website=JWB |language=en-US}}</ref>
+
+==Economy==
+{{update|section|date=March 2017}}
+[[File:ClearwaterBeachSunsetFromHiltonHotel.JPG|thumb|Sunset on [[Clearwater Beach]]]]
+
+===Historical economic strengths===
+Agriculture was the single most important industry in Pinellas until the early 20th century, with much of the best land devoted to citrus production. Cattle ranching was another major industry. In 1885 the American Medical Society declared the Pinellas peninsula the "healthiest spot on earth",<ref>{{cite web|url=http://webcoast.com/pinellas.htm|title=ABOUT TAMPA BAY - PINELLAS COUNTY HISTORY - WEBCOAST PAGE|website=webcoast.com|access-date=October 31, 2017|archive-date=August 15, 2017|archive-url=https://web.archive.org/web/20170815192204/http://www.webcoast.com/pinellas.htm|url-status=dead}}</ref> which helped spur the growth of the tourist industry.
+
+===Economy today===
+Anchored by the urban markets of Clearwater and St. Petersburg, Pinellas has the second largest base of manufacturing employment in Florida.
+
+Pinellas has various, yet symbiotic, [[Industry cluster|industry clusters]], including aviation/aerospace, defense/national security, medical technologies, business and financial services, and information technology.
+
+Fortune 500 technology manufacturers [[Jabil Circuit]] and [[Tech Data]] and a Fortune 500 financial company [[Raymond James Financial]] are headquartered in the [[Gateway, Pinellas County, Florida|Gateway area]] in and adjacent to Pinellas. Other large companies include [[Home Shopping Network|HSN]], [[Nielsen Holdings PLC|Nielsen]], and [[Valpak]].
+
+Service industries such as healthcare, business services and education account for more than 200,000 jobs in the county, generating almost $19 billion in revenue. Other major sectors include retail, with close to 100,000 employees in jobs such as food service, bars, and retail sales generating $12 billion for the local economy in 2010, and industries related to finance, insurance and real estate with approximately 44,000 workers generating $8.5 billion in sales.
+
+==Culture==
+[[File:Salvador Dalí Museum.JPG|thumb|The [[Salvador Dalí Museum]]]]
+
+===Museums===
+* [[Museum of Fine Arts (St. Petersburg, Florida)|Museum of Fine Arts]] near [[St. Petersburg Pier|the Pier]] in downtown St. Petersburg
+* [[Salvador Dalí Museum]] in downtown St. Petersburg
+* The [[James Museum of Western and Wildlife Art|James Museum of Western & Wildlife Art]] in downtown St. Petersburg
+* [[Florida Holocaust Museum]] in downtown St. Petersburg
+* [[Morean Arts Center]] in downtown St. Petersburg
+* [[Dr. Carter G. Woodson African American Museum]] in South St. Petersburg
+* [[Leepa-Rattner Museum of Art]] on the Tarpon Springs Campus of [[St. Petersburg College]]
+* [[Great Explorations Children's Museum]] in St. Petersburg
+* [[Dunedin History Museum]] in Dunedin <ref>{{cite web|url=https://www.dunedinmuseum.org/|title=Home &#124; Dunedin History Museum|website=website-1}}</ref>
+* Imagine Museum in St. Petersburg <ref>{{cite web|url=https://www.imaginemuseum.com/|title=Imagine Museum: Glass museum St Petersburg (Florida)|website=Imagine Museum}}</ref>
+* Museum of the Arts and Crafts Movement (MAACM) in St. Petersburg<ref>{{cite web|title=Museum of the Arts and Crafts Movement - About|url=https://www.museumaacm.org/about.html|access-date=January 4, 2022}}</ref>
+* [[St. Petersburg Museum of History]] in downtown St. Petersburg
+* Chihuly Collection in downtown St. Petersburg<ref>{{cite web|title=Chihuly Collection|url=https://www.chihuly.com/exhibitions/morean-arts-center/chihuly-collection|access-date=January 4, 2022}}</ref>
+* [[Great Explorations Children's Museum]] in St. Petersburg
+
+===Performing arts venues===
+[[File:St. Petersburg FL Mahaffey Theater04.jpg|thumb|Duke Energy Center For The Arts--[[Mahaffey Theater]]]]
+
+* [[Ruth Eckerd Hall]] in Clearwater
+* The BayCare Sound in Clearwater
+* [[Mahaffey Theater]] in St. Petersburg
+* [[Jannus Landing]] in St. Petersburg
+* [[Palladium at St. Petersburg College]] in St. Petersburg
+* freeFall Theatre in St. Petersburg
+* American Stage in St. Petersburg
+* Studio@620 in St. Petersburg
+
+The [[Florida Orchestra]] splits its performances between Ruth Eckerd Hall, the Mahaffey Theater, and the [[Straz Center for the Performing Arts]] in Tampa. Clearwater Jazz Holiday held every October in Coachman Park in downtown Clearwater; in its 32nd year.
+
+===Other points of interest===
+{{see also|National Register of Historic Places listings in Pinellas County, Florida|List of ghost towns in Florida}}Long established communities, particularly [[North Shore Historic District (St. Petersburg, Florida)|Old Northeast]] in St. Petersburg, [[Pass-a-Grille Historic District|Pass-a-Grille]] in St. Pete Beach, [[Harbor Oaks Residential District|Harbor Oaks]] in Clearwater, and [[Tarpon Springs Historic District|old Tarpon Springs]] contain notable historic architecture.
+
+The area has embraced farmer's markets, with St. Petersburg's Saturday Morning Market drawing large crowds, and other markets located weekly in several other parts of the county also seeing a growth in popularity.
+
+Downtowns in St. Petersburg and Dunedin, and many of the beaches, especially Clearwater Beach, all feature [[Nightlife]] activities.
+
+In addition to the [[#Recent history|above-mentioned]] Heritage Village in Largo, a number of small local history museums operate within the county: the [[St. Petersburg Museum of History]] on the downtown St. Petersburg waterfront, the [[Pass-a-Grille Historic District|Gulf Beaches Historical Museum]] in Pass-a-Grille, the [[Dunedin History Museum]] in Dunedin, the [[Palm Harbor Museum]] in Palm Harbor, and the [[Tarpon Springs Depot|Historic Depot Museum]] in Tarpon Springs all provide visitors a glimpse of the area's history.
+
+Two [[botanical gardens]] are located within the county: the [[Florida Botanical Gardens]], a part of the Pinewood Cultural Park in Largo, and [[Sunken Gardens (Florida)|Sunken Gardens]], a former tourist attraction located in and now run by the City of St. Petersburg.
+
+Indian Shores is home to the [[Suncoast Seabird Sanctuary]], currently the largest non-profit wild bird hospital in the United States and considered one of the top avian rehabilitation centers in the world. A variety of species can be found at the sanctuary, which is open 365 days a year and is free to the public.
+
+On Clearwater Beach is the [[Clearwater Marine Aquarium]], a non-profit dedicated to the rescue, rehabilitation and release of injured marine animals and public education. CMA's best-known permanent resident, is Winter, a bottlenose dolphin who was rescued in December 2005 after having her tail caught in a crab trap. Her injuries caused the loss of her tail; CMA successfully fitted Winter with a prosthetic tail which brought worldwide attention to the facility. Winter was the subject of the 2011 film ''[[Dolphin Tale]]'', shot partially on location at CMA.
+
+On the south end of [[Anclote Key]], off of Tarpon Springs, is the [[Anclote Keys Light|Anclote Key Light]], a lighthouse built in 1887. The light is Pinellas County's only functioning lighthouse, and [[Egmont Key Light|one of only two]] in the Tampa Bay area. The light was deactivated in 1984, but by 2003 had been restored and as of 2013 continues to be in use. The island forms [[Anclote Key Preserve State Park]] and is accessible only by private boat.
+
+Dunedin is home to the [[Dunedin Brewery]], Florida's oldest [[microbrewery]].
+
+==Sports and recreation==
+[[File:Tropicana field.jpg|thumb|[[Tropicana Field]], home of the [[Tampa Bay Rays]]]]
+
+===Sports teams===
+====Tampa Bay Rays====
+Professionally, [[Major League Baseball|baseball's]] [[Tampa Bay Rays]] have historically played at [[Tropicana Field]] in St. Petersburg. However, in October 2024, the stadium's roof was destroyed by [[Hurricane Milton]], rendering the facility unusable for the 2025 season. Consequently, the Rays temporarily relocated their home games to [[George M. Steinbrenner Field]] in Tampa for the 2025 season.<ref>{{Cite web|title=Rays to play 2025 season at Steinbrenner Field in Tampa|url=https://www.mlb.com/news/rays-to-play-2025-season-at-steinbrenner-field|website=MLB.com|date=November 14, 2024}}</ref> Before the storm, the Pinellas County Commission and St. Petersburg City Council had approved a financing agreement for a new stadium as part of the [[Historic Gas Plant District]] redevelopment, though the timeline faced scrutiny following the hurricane damage.
+
+====Baseball spring training====
+During spring training, the Philadelphia Phillies play at [[BayCare Ballpark]] in [[Clearwater, Florida|Clearwater]] while the [[Toronto Blue Jays]] play at [[TD Ballpark]] in [[Dunedin, Florida|Dunedin]]. 
+
+====Minor league baseball teams====
+Additionally, [[Minor League Baseball]] affiliates of those teams play at their spring training ballparks; the [[Clearwater Threshers]] play at BayCare Ballpark and the [[Dunedin Blue Jays]] play at TD Ballpark.
+
+====Tampa Bay Rowdies====
+The [[Tampa Bay Rowdies]] of the [[USL Championship]] play at [[Al Lang Stadium]] in St. Petersburg
+
+The [[Honda Grand Prix of St. Petersburg]] is held every spring on the downtown St. Petersburg waterfront.
+
+====PGA Tour====
+The PGA Tour plays its [[Valspar Championship]] annually in March on the Copperhead Course at the Innisbrook Golf Resort in Palm Harbor.
+
+===Recreational areas===
+* [[Skyway Fishing Pier State Park]]: Remnants of the approaches to the original [[Sunshine Skyway Bridge]] and the longest fishing pier in the world.
+* [[Pinellas Trail|Fred Marquis Pinellas Trail]]: 37-mile running and cycling trail over a former railroad bed connecting [[Tarpon Springs, Florida|Tarpon Springs]] to [[St. Petersburg, Florida|St. Petersburg]].
+
+Other popular fishing locations include Pier 60 on Clearwater Beach and the Gulf and Bay Piers at Fort De Soto Park, as well as countless spots along the bridges and passes of the area, among many others.
+
+Pinellas County's coastal geography, with a long system of [[barrier island]]s on the Gulf and small-to-large [[mangrove]] islands dotting the waters on all sides, provides for an extensive series of [[blueway]]s that are enjoyed by kayakers of all ability levels.<ref>{{cite web|url=http://www.pinellascounty.org/Plan/blueways/default.htm|title=Pinellas County Blueways Paddling Guide|work=pinellascounty.org|access-date=November 6, 2015|archive-url=https://web.archive.org/web/20150924073413/http://www.pinellascounty.org/Plan/blueways/default.htm|archive-date=September 24, 2015|url-status=dead}}</ref> The county also maintains a series of [[artificial reef]]s in the Gulf which are popular spots for fishing and [[scuba diving]]<ref>{{Cite web |url=http://www.pinellascounty.org/utilities/reef/default.htm |title=Pinellas County Utilities Artificial Reefs |access-date=January 13, 2012 |archive-date=January 23, 2012 |archive-url=https://web.archive.org/web/20120123071457/http://www.pinellascounty.org/utilities/reef/default.htm |url-status=dead }}</ref>
+
+The county's two largest freshwater lakes, [[Lake Tarpon]] (accessible through Chestnut and Anderson parks) and [[Lake Seminole (Pinellas County, Florida)|Lake Seminole]] (accessible through Lake Seminole Park), are popular for water skiing, jet-skiing, and sailing, as well as for fishing and kayaking.
+
+Both the North Beach of [[Fort De Soto Park]] (2005) and [[Caladesi Island]] (2008) have been named by [[Dr. Beach]] as America's Top Beach.<ref>{{cite web|url=http://www.drbeach.org/|title=Dr. Beach: America's Foremost Beach Expert.|work=drbeach.org|access-date=November 6, 2015|archive-url=https://web.archive.org/web/20130305062027/http://drbeach.org/|archive-date=March 5, 2013|url-status=dead}}</ref>
+
+==Media==
+{{see also|Media in the Tampa Bay area}}
+
+Pinellas County, as a part of the Tampa Bay area (the nation's 14th largest television market<ref>{{cite web |url=http://blog.nielsen.com/nielsenwire/wp-content/uploads/2009/08/2009-2010-dma-ranks.pdf |title=Local Television Market Universe Estimates: Comparisons of 2008-09 and 2009-10 Market Ranks |access-date=January 20, 2012 |archive-url=https://web.archive.org/web/20110317170600/http://blog.nielsen.com/nielsenwire/wp-content/uploads/2009/08/2009-2010-dma-ranks.pdf |archive-date=March 17, 2011 |url-status=dead}}</ref>), is served by fourteen local [[Terrestrial television|broadcast]] television stations, as well as a variety of [[Cable television|cable]]-only local stations. More than 70 [[FM broadcasting|FM]] and [[AM broadcasting|AM]] stations compete for listenership in what is the nation's 19th largest radio market.<ref>{{cite web|url=http://www.arbitron.com/home/mm001050.asp|title=Audio|work=arbitron.com|access-date=November 6, 2015}}</ref>
+
+Major daily newspapers serving Pinellas are the ''[[Tampa Bay Times]]'', known as the ''St. Petersburg Times'' from 1884 to 2011 and first in circulation and readership, and ''[[The Tampa Tribune]]''. The ''Times'' also distributes a free daily (Monday-Friday) tabloid called ''tbt*'' in the most heavily populated areas of the county. ''[[Creative Loafing|Creative Loafing Tampa]]'' is the main [[Alternative newspaper|alternative weekly]].
+
+==Transportation==
+[[File:2010-09-10 Sunshine Skyway Bridge.jpg|thumb|The [[Sunshine Skyway Bridge]]]]
+[[File:Jungle Prada.JPG|thumb|Brick-covered section of Park St. in the Jungle Prada neighborhood of St. Petersburg]]
+
+===Major highways===
+* {{jct|state=FL|I|175|FL|594|nolink2=yes}}
+* {{jct|state=FL|I|275|FL|93}}
+* {{jct|state=FL|I|375|SR|592}}
+* {{jct|state=FL|US|19}}
+* {{jct|state=FL|US-Alt|19|FL|595}}
+* {{jct|state=FL|US|92}}
+* {{jct|state=FL|FL|60}}
+* {{jct|state=FL|FL|580}}
+* {{jct|state=FL|FL|586}}
+* {{jct|state=FL|FL|590}}
+* {{jct|state=FL|FL|679}}
+* {{jct|state=FL|FL|682}}
+* {{jct|state=FL|FL|686}}
+* {{jct|state=FL|FL|687}}
+* {{jct|state=FL|FL|688}}
+* {{jct|state=FL|FL|689}}
+* {{jct|state=FL|FL|693}}
+* {{jct|state=FL|FL|694}}
+* {{jct|state=FL|FL|699}}
+
+===Airports===
+[[File:Benoist XIV replica.jpg|thumb|Replica of the airplane flown by [[Tony Jannus]] at [[St. Pete–Clearwater International Airport]]]]
+
+* [[St. Pete–Clearwater International Airport]] in Pinellas Park
+* [[Albert Whitted Airport]] in St. Petersburg
+* Clearwater Executive Airpark
+* [[Tampa International Airport]] in Tampa
+
+===Railroads===
+{{update|section|date=February 2024}}
+[[File:Amtrak Bus Station - Pinellas Park, Florida.jpg|right|thumb|Amtrak continues to have a presence in Pinellas County through a bus station in Pinellas Park]]
+
+The [[CSX Transportation|CSX]] railroad company operates the [[Clearwater Subdivision]] in Pinellas County, made up of segments of branch lines of the former [[Atlantic Coast Line Railroad]] and the [[Seaboard Air Line Railroad]]. Beginning in Tampa, the line has daily freight rail traffic through Oldsmar, Safety Harbor, Clearwater, Largo, Pinellas Park, and into St. Petersburg. Regularly scheduled passenger rail services in Pinellas County ended on February 1, 1984, when [[Amtrak]] discontinued its rail operations in the county, and the last passenger rail service in the county of any kind, a series of special excursion runs between [[Tarpon Springs, Florida|Tarpon Springs]] and [[Dunedin, Florida|Dunedin]], occurred on March 8, 1987.<ref name="Luisi2010p116">{{Harvnb|Luisi|2010|p=116}}.</ref> CSX owned the last remaining trackage in downtown St. Petersburg until March 2008 when it, along with the remaining trackage south of Central Avenue and east of [[U.S. Route 19 in Florida|34th Street South]], began to be dismantled.<ref>{{cite news|title=Trail enters downtown – A Pinellas Trail extension will reach the waterfront|url=http://www.sptimes.com/2008/03/09/Neighborhoodtimes/Trail_enters_downtown.shtml|newspaper=[[St. Petersburg Times]]|date=March 9, 2008|access-date=December 26, 2016|archive-url=https://web.archive.org/web/20160514091757/http://www.sptimes.com:80/2008/03/09/Neighborhoodtimes/Trail_enters_downtown.shtml|archive-date=May 14, 2016|url-status=dead}}</ref> That right-of-way, as well as the right-of-way of several other former CSX railroad lines in the county beginning in the 1990s, was converted into a section of the [[Pinellas Trail]].
+
+In 2012, proposals began being developed<ref>{{cite web|url=http://clearwater.patch.com/articles/transit-leaders-talk-rail-in-pinellas-67875564|title=Transit Leaders Talk Rail in Pinellas|date=January 20, 2012|work=Clearwater, FL Patch|access-date=November 6, 2015}}</ref> by community leaders for a light rail system which would connect the regional core cities of Clearwater, St. Petersburg, and Tampa. The proposal, which  won the backing of the Clearwater and St. Petersburg City Councils<ref>{{cite web |url=http://oldnortheast.patch.com/articles/city-council-weighs-in-on-light-rail |title=City Council Weighs in on Light Rail - Old Northeast-Downtown St. Pete, FL Patch |access-date=February 13, 2012 |url-status=dead|archive-url=https://web.archive.org/web/20120205043002/http://oldnortheast.patch.com/articles/city-council-weighs-in-on-light-rail |archive-date=February 5, 2012 }}</ref> would have relied on a 1% sales tax. In a 2014 referendum, the proposal was soundly defeated, with only 38% of voters in favor of the plan [https://t4america.org/tag/greenlight-pinellas/]
+
+===Mass transit===
+The [[Pinellas Suncoast Transit Authority]] (PSTA) operates 205 buses and trolleys servicing 37 routes across the county, with major stops at all commercial centers. Along the Gulf Beaches, PTSA operates the Suncoast Beach Trolley. PTSA also offers two express routes to downtown Tampa via the Howard Frankland and Gandy Bridges, connecting with Tampa's [[Hillsborough Area Regional Transit|HartLine]], and connects with Pasco's [[Pasco County Public Transportation|PCPT]] in Tarpon Springs to continue service in that county. The system's two main bus terminals are located in downtown Clearwater and downtown St. Petersburg. During fiscal year 2005–06, PSTA transported 11,400,484 passengers.<ref>{{cite web|url=http://www.psta.net/index.php|archive-url=https://web.archive.org/web/20110718113348/http://www.psta.net/index.php|url-status=dead|archive-date=July 18, 2011|title=PSTA}}</ref> Additionally, the city of St. Pete operates a rapid bus service, the ''SunRunner'', from downtown St. Pete to [[St. Pete Beach, Florida|St. Pete Beach]].<ref>{{Cite web |title=Pinellas SunRunner no longer free to ride: Here's what to know |url=https://www.tampabay.com/news/pinellas/2023/10/02/sunrunner-fares-psta-st-pete-beach-homeless/ |access-date=November 22, 2023 |website=Tampa Bay Times |language=en}}</ref>
+
+==Emergency management==
+[[File:Mound Park Hospital.JPG|thumb|upright|The original building of Mound Park Hospital in St. Petersburg, around which [[Bayfront Medical Center]] was built]]
+
+===Fire departments===
+'''Source:'''<ref>{{cite news|url=http://www.pinellascounty.org/publicsafety/fire_admin.htm|title=Pinellas County, Florida - Safety & Emergency Services - Fire Administration|work=pinellascounty.org|access-date=November 6, 2015}}</ref>
+{{Div col|colwidth=22em}}
+* Clearwater Fire Rescue
+* Dunedin Fire Rescue
+* East Lake Fire Rescue
+* Gulfport Fire Rescue
+* Largo Fire Rescue
+* Lealman Fire District
+* Maderia Beach Fire Rescue
+* Oldsmar Fire Rescue
+* [[Palm Harbor Fire Rescue]]
+* Pinellas Park Fire Rescue
+* Pinellas Suncoast Fire District
+* Safety Harbor Fire Rescue
+* Seminole Fire Rescue
+* St. Pete Beach Fire Rescue
+* [[St. Petersburg Fire Rescue]]
+* South Pasadena Fire Rescue
+* Tarpon Springs Fire Rescue
+* Treasure Island Fire Rescue
+{{div col end}}
+
+===Emergency Medical Services===
+{{Div col|colwidth=22em}}
+* Sunstar Paramedics<ref>{{cite web|url=http://www.sunstarems.com/about-sunstar/about/history/|title=History|work=sunstarems.com|date=August 5, 2013|access-date=November 6, 2015|archive-date=November 3, 2015|archive-url=https://web.archive.org/web/20151103062931/http://www.sunstarems.com/about-sunstar/about/history/|url-status=dead}}</ref>
+{{div col end}}
+
+===Law enforcement agencies===
+{{Infobox law enforcement agency
+| agencyname        = Pinellas County Sheriff's Office
+| nativename        = 
+| nativenamea       = 
+| nativenamer       = 
+| commonname        = 
+| abbreviation      = PCSO
+| fictional         = 
+| patch             = Patch of the Pinellas County Sheriff's Office.jpg
+| patchcaption      = Patch of the Pinellas County Sheriff's Office
+| logo              = 
+| logocaption       = 
+| badge             = 
+| badgecaption      = 
+| image_flag        = 
+| flagcaption       = 
+| imagesize         = 
+| motto             = 
+| mottotranslated   = 
+| mission           = 
+| formedyear        = {{start date and age|1912}}
+| formedmonthday    = 
+| preceding1        = 
+| dissolved         = 
+| superseding       = 
+| employees         = 
+| volunteers        = 
+| budget            = 
+| nongovernment     = 
+| legaljuris        = 
+| governingbody     = 
+| governingbodyscnd = 
+| constitution1     = 
+| police            = Yes
+| local             = Yes
+| military          = 
+| provost           = 
+| gendarmerie       = 
+| religious         = 
+| speciality        = 
+| secret            = 
+| overviewtype      = 
+| overviewbody      = 
+| headquarters      = [[Largo, Florida]]
+| hqlocmap          = 
+| hqlocleft         = 
+| hqloctop          = 
+| hqlocmappoptitle  = 
+| sworntype         = 
+| sworn             = 
+| unsworntype       = 
+| unsworn           = 
+| multinational     = 
+| electeetype       = 
+| minister1name     = 
+| minister1pfo      = 
+| chief1name        = Bob Gualtieri (R)
+| chief1position    = [[Sheriffs in the United States#Florida|Sheriff]]
+| parentagency      = 
+| child1agency      = 
+| unittype          = 
+| unitname          = 
+| officetype        = 
+| officename        = 
+| provideragency    = 
+| uniformedas       = 
+| stationtype       = 
+| stations          = 
+| airbases          = 
+| lockuptype        = 
+| lockups           = 
+| vehicle1type      = 
+| vehicles1         = 
+| boat1type         = 
+| boats1            = 
+| aircraft1type     = 
+| aircraft1         = 
+| animal1type       = 
+| animals1          = 
+| person1name       = 
+| person1reason     = 
+| person1type       = 
+| programme1        = 
+| activity1name     = 
+| activitytype      = 
+| anniversary1      = 
+| award1            = 
+| website           = [http://www.pcsoweb.com/ Pinellas County Sheriff's Office]
+| footnotes         = 
+| reference         = 
+}}
+
+The '''Pinellas County Sheriff's Office''' ('''PCSO''') was founded in 1912 at the founding of the county. The Sheriff's Office absorbed the County Patrol in 1960.{{citation needed|date=November 2022}} {{As of|2022}} the sheriff is [[Bob Gualtieri]].<ref>{{Cite web |last=Jordan Anderson |date=February 10, 2022 |title=Report critical of Pinellas Sheriff Bob Gualtieri for campaign donations |url=https://dc.medill.northwestern.edu/blog/2022/02/10/report-critical-of-pinellas-sheriff-bob-gualtieri-for-campaign-donations/ |access-date=November 12, 2022 |website=Medill News Service |language=en-US}}</ref>
+
+[[File:Deputy Renee Pappamihiel from Pinellas County Sheriff's Office.jpg|thumb|Community Deputy, Deputy Renee Pappahimiel on foot patrol in Downtown on a Friday night]]
+
+The PCSO serves unincorporated areas of the county. These  municipalities contract with the PCSO to be their primary law enforcement provider:
+{{Div col|colwidth=22em}}
+*[[Belleair Beach]]
+*[[Belleair Bluffs]]
+*[[Dunedin, Florida|Dunedin]]
+*[[Indian Rocks Beach]]
+*[[Madeira Beach]]
+*[[North Redington Beach]]
+*[[Oldsmar]]
+*[[Redington Beach]]
+*[[Safety Harbor]]
+*[[Seminole, Florida|Seminole]]
+*[[South Pasadena, Florida|South Pasadena]]
+*[[St. Pete Beach]] 
+{{div col end}}
+
+Many cities in the county have their own city police departments:<ref>{{cite web |url=http://www.pinellascounty.org/justice/law_enforcement.htm |title=Pinellas County Justice Coordination - Law Enforcement Agencies |access-date=January 11, 2012 |url-status=dead|archive-url=https://web.archive.org/web/20081201225906/http://www.pinellascounty.org/justice/law_enforcement.htm |archive-date=December 1, 2008 }}</ref>
+
+{{Div col|colwidth=22em}}
+* Belleair Police Department
+* Clearwater Police Department
+* Gulfport Police Department
+* Indian Shores Police Department
+* Kenneth City Police Department
+* Largo Police Department
+* Pinellas Park Police Department
+* [[St. Petersburg Police Department (Florida)|St. Petersburg Police Department]]
+* Tarpon Springs Police Department
+* Treasure Island Police Department
+{{div col end}}
+
+===Hospitals===
+{{Main|List of hospitals in Florida}}
+
+There are several hospitals in Pinellas and the surrounding counties.
+
+==Communities==
+[[File:Cities of Pinellas County.svg|thumb|300px|Location of [[municipality|municipalities]] in Pinellas County as indicated by the list in this sections]]
+[[File:St Pete Skyline from Pier.jpg|thumb|St. Petersburg skyline from the old [[St. Petersburg Pier|Pier]]]]
+[[File:Clearwater CountyRd699 Panorama.jpg|thumb|Clearwater pass from Clearwater Beach]]
+
+===Cities===
+{{div col|colwidth=22em}}
+* [[Belleair Beach, Florida|Belleair Beach]] (2)
+* [[Belleair Bluffs, Florida|Belleair Bluffs]] (3)
+* [[Clearwater, Florida|Clearwater]] (5)
+* [[Dunedin, Florida|Dunedin]] (6)
+* [[Gulfport, Florida|Gulfport]] (7)
+* [[Indian Rocks Beach, Florida|Indian Rocks Beach]] (8)
+* [[Largo, Florida|Largo]] (11)
+* [[Madeira Beach, Florida|Madeira Beach]] (12)
+* [[Oldsmar, Florida|Oldsmar]] (14)
+* [[Pinellas Park, Florida|Pinellas Park]] (15)
+* [[Safety Harbor, Florida|Safety Harbor]] (18)
+* [[Seminole, Florida|Seminole]] (19)
+* [[South Pasadena, Florida|South Pasadena]] (20)
+* [[St. Pete Beach, Florida|St. Pete Beach]] (21)
+* [[St. Petersburg, Florida|St. Petersburg]] (22)
+* [[Tarpon Springs, Florida|Tarpon Springs]] (23)
+* [[Treasure Island, Florida|Treasure Island]] (24)
+{{div col end}}
+
+===Towns===
+{{div col}}
+* [[Belleair, Florida|Belleair]] (1)
+* [[Belleair Shore, Florida|Belleair Shore]] (4)
+* [[Indian Shores, Florida|Indian Shores]] (9)
+* [[Kenneth City, Florida|Kenneth City]] (10)
+* [[North Redington Beach, Florida|North Redington Beach]] (13)
+* [[Redington Beach, Florida|Redington Beach]] (16)
+* [[Redington Shores, Florida|Redington Shores]] (17)
+{{div col end}}
+
+===Census-designated places===
+{{div col|colwidth=22em}}
+* [[Bardmoor, Florida|Bardmoor]]
+* [[Bay Pines, Florida|Bay Pines]]
+* [[Bear Creek, Florida|Bear Creek]]
+* [[East Lake, Pinellas County, Florida|East Lake]]
+* [[Feather Sound, Florida|Feather Sound]]
+* [[Greenbriar, Florida|Greenbriar]]
+* [[Harbor Bluffs, Florida|Harbor Bluffs]]
+* [[Lealman, Florida|Lealman]]
+* [[Palm Harbor, Florida|Palm Harbor]]
+* [[Ridgecrest, Florida|Ridgecrest]]
+* [[South Highpoint, Florida|South Highpoint]]
+* [[Tierra Verde, Florida|Tierra Verde]]
+* [[West Lealman, Florida|West Lealman]]
+{{div col end}}
+
+===Other unincorporated communities===
+{{div col|colwidth=15em}}
+* [[Baskin, Florida|Baskin]]
+* [[Crystal Beach, Florida|Crystal Beach]]
+* [[Curlew, Florida|Curlew]]
+* [[Gandy, Florida|Gandy]]
+* [[Highpoint, Florida|Highpoint]]
+* [[Oakhurst, Florida|Oakhurst]]
+* [[Ozona, Florida|Ozona]]
+* [[St. George, Pinellas County, Florida|St. George]]
+* [[Seminole Park, Florida|Seminole Park]]
+* [[Wall Springs, Florida|Wall Springs]]
+* [[Walsingham, Florida|Walsingham]]
+{{div col end}}
+
+==In popular culture==
+Movies filmed or set in Pinellas County include:
+
+* ''[[Gifted (2017 film)|Gifted]]'' (2017): Set in Pinellas County, with scenes in the Pinellas County Courthouse, but filmed in [[Chatham County, Georgia]]
+* ''[[The Infiltrator (2016 film)|The Infiltrator]]'' (2016): Some scenes filmed at [[Derby Lane Greyhound Track]] and [[St. Pete Beach]]<ref>{{cite web |title=Going to see The Infiltrator? Here are the spots around Tampa Bay that show up in the movie |url=https://www.tampabay.com/news/business/tourism/going-to-see-the-infiltrator-here-are-the-spots-around-tampa-bay-that-show/2284934/ |website=[[Tampa Bay Times]]}}</ref>
+* ''[[Sunlight Jr.]]'' (2013): Some shots filmed in Clearwater at the Floridian Inn at [[Gulf-to-Bay Boulevard]].<ref>{{cite web|url=https://www.tampabay.com/features/sunlight-jr-another-movie-with-dark-tendencies-filmed-in-pinellas/2150721/ |title = 'Sunlight Jr.' another movie with dark tendencies filmed in Pinellas}}</ref>
+* ''[[Spring Breakers]]'' (2013): Primarily filmed in Treasure Island, St. Pete Beach, and Gulfport.<ref>{{cite web|url=https://www.tampabay.com/things-to-do/movies/spring-breakers-gives-sexy-violent-image-of-st-pete-beach/2107865/ |title = 'Spring Breakers' gives sexy, violent image of St. Pete Beach}}</ref>
+* ''[[Magic Mike]]'' (2012): Set in Tampa, it was filmed in St. Petersburg, Treasure Island, and Ybor City alongside set filming in [[Los Angeles|Los Angeles, California]].<ref>{{cite web|url=http://www.movie-locations.com/movies/m/Magic-Mike.php|title=Filming Locations for Magic Mike (2012), in Florida and Los Angeles.|website=The Worldwide Guide to Movie Locations}}</ref>  
+* ''[[Dolphin Tale]]'' (2011): Filmed and set at the [[Clearwater Marine Aquarium]] in Clearwater
+* ''Immortal Island'' (2011)
+* ''[[A Fonder Heart]]'' (2011): Scenes filmed in Clearwater
+* ''Misconceptions'' (2008): Scenes filmed at [[Eckerd College]] in St. Petersburg
+* ''[[Grace Is Gone]]'' (2007): Scenes filmed at  [[Fort DeSoto Park]] in St. Petersburg
+* ''[[Love Comes Lately]]'' (2007): Scenes filmed in the [[Pass A Grille]] neighborhood of St. Pete Beach
+* ''[[Loren Cass]]'' (2006): Scenes filmed throughout St. Petersburg
+* ''[[The Punisher (2004 film)|The Punisher]]'' (2004): Scenes filmed at [[Honeymoon Island State Park]] in Dunedin, Fort De Soto and the [[Sunshine Skyway Bridge]] at the mouth of [[Tampa Bay]]
+* ''[[American Outlaws (2001 film)|American Outlaws]]'' (2001): Scenes filmed at Fort DeSoto Park
+* ''[[Ocean's Eleven]]'' (2001): Single scene filmed at the former [[Derby Lane Greyhound Track]] in St. Petersburg
+* ''[[Great Expectations (1998 film)|Great Expectations]]'' (1998): Scenes filmed at Fort DeSoto Park 
+* ''[[Lethal Weapon 3]]'' (1992): scenes filmed at the former Soreno Hotel in St. Petersburg
+* ''[[Cocoon (film)|Cocoon]]'' (1985): Filmed and set in St. Petersburg
+* ''[[Summer Rental]]'' (1985): Filmed in St. Pete Beach
+* ''[[Once Upon a Time in America]]'' (1984): Scenes filmed at [[the Don CeSar]] hotel on St. Pete Beach
+* ''[[Porky's]]'' (1982): Based on actual occurrences at [[Boca Ciega High School]] in [[Gulfport, Florida|Gulfport]] the early 1960s
+* ''[[Health (film)|HealtH]]'' (1980): Filmed entirely at the Don CeSar hotel
+
+==See also==
+{{Portal|Florida}}
+* [[Community Service Foundation]]
+* [[Robert J. Goldstein]] (2002)
+* [[National Register of Historic Places listings in Pinellas County, Florida]]
+* [[Timeline of Pinellas County, Florida history]]
+* [[List of tallest buildings in St. Petersburg]]
+
+==Explanatory notes==
+{{notelist}}
+
+==Citations==
+{{reflist|colwidth=30em}}
+
+==General and cited references==
+* {{Citation |last=Luisi |first=Vincent |year=2010 |title=Railroading in Pinellas County |edition=1st |publisher=[[Arcadia Publishing]] |isbn=978-0-7385-8550-5 }}
+
+==External links==
+{{Commons}}
+* [https://pinellas.gov/ Official website] with info for businesses, residents, and visitors
+* [https://www.swfwmd.state.fl.us/ Southwest Florida Water Management District]
+* [http://fcit.usf.edu/florida/maps/county/pinellas/pinellas.htm USF Map Database] Maps of early Pinellas County
+* [https://sfyl.ifas.ufl.edu/pinellas/ University of Florida Institute of Food and Agricultural Sciences Extension in Pinellas County]
+* [http://www.pinellas.wateratlas.usf.edu/wse/ Pinellas Watershed Excursion] {{webarchive|url=https://web.archive.org/web/20231004054639/https://pinellas.wateratlas.usf.edu/wse/|date=October 4, 2023}} educational interactive guide
+
+{{Geographic Location
+|Centre = Pinellas County, Florida
+|North = [[Pasco County, Florida|Pasco County]]
+|Northeast =
+|East = [[Hillsborough County, Florida|Hillsborough County]]
+|Southeast =
+|South = [[Manatee County, Florida|Manatee County]]
+|Southwest =
+|West = [[Gulf of Mexico]]
+|Northwest =
+}}
+{{Pinellas County, Florida}}
+{{Tampa Bay Area}}
+{{Geography of Florida}}
+{{Authority control}}
+
+[[Category:Pinellas County, Florida| ]]
+[[Category:1912 establishments in Florida]]
+[[Category:Charter counties in Florida]]
+[[Category:Counties in the Tampa Bay area]]
+[[Category:Populated places in the United States established in 1912]]

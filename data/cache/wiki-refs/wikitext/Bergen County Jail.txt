@@ -1,0 +1,20 @@
+{{Short description|County jail in New Jersey, United States}}
+{{Use American English|date=July 2025}}
+'''Bergen County Jail''' is a facility operated by the [[Bergen County, New Jersey|Bergen County]] Sheriff's Office located at 160 South River Street in [[Hackensack, New Jersey|Hackensack]], [[New Jersey]]. The jail provides a detention for both sentenced and unsentenced prisoners from minimum to maximum security environment. There are computer controls of inmate housing areas, in addition to alarm system and a computerized center control.
+
+The jail also houses detainees of the [[U.S. Immigration and Customs Enforcement]].
+
+==References==
+{{reflist}}
+
+==External links==
+*{{Deprecated archive|url=https://archive.today/20070210040948/http://www.bcsd.us/county_jail.shtml|title=Bergen County Sheriff's Office - Bergen County Jail|sec=el}}
+
+{{coord|40.873417|-74.039995|region:US_type:landmark|display=title}}
+
+[[Category:Buildings and structures in Hackensack, New Jersey]]
+[[Category:Jails in New Jersey]]
+[[Category:Buildings and structures in Bergen County, New Jersey]]
+[[Category:Immigration detention centers and prisons in the United States]]
+
+{{NewJersey-struct-stub}}

@@ -1,0 +1,129 @@
+{{Use American English|date=September 2025}}
+{{Infobox law enforcement agency
+| agencyname       = Guam Department of Corrections
+| nativename       = Depattamenton Mangngurihi
+| nativenamea      = 
+| nativenamer      = 
+| fictional        = 
+| patch            = 
+| patchcaption     = 
+| logo             = 
+| logocaption      = 
+| badge            = 
+| badgecaption     = 
+| flag             = 
+| flagcaption      = 
+| image_size       = 
+| commonname       = 
+| abbreviation     = DEPCOR
+| motto            = 
+| mottotranslated  = 
+| formed           = {{start date|1968|07|18}} 
+| preceding1       = <!-- up to | preceding6 = -->
+| dissolved        = 
+| superseding      = 
+| employees        = 213 (2021)
+| volunteers       = 
+| budget           = $5 million (2021)
+| legalpersonality = [[Government agency]]
+| legaljuris       = [[Guam]]
+| national         = 
+| country          = United States
+| countryabbr      = US
+| federal          = 
+| international    = <!-- NNN or {{collapsible list |title=NNN |[[country1]] . . |[[countryNNN]]}} -->
+| divname          = Guam
+| subdivname       = 
+| map              = 
+| mapcaption       = 
+| dmap             = 
+| sizearea         = 
+| sizepopulation   = 
+| governingbody    = 
+| governingbodyscnd = 
+| constitution1    = <!-- up to | constitution6 = -->
+| gendarmerie      = 
+| provost          = 
+| military         = 
+| police           = 
+| local            = 
+| secret           =
+| religious        = 
+| speciality1      = <!-- up to | speciality6 = -->
+| oversighttype    = 
+| oversightbody    = 
+| headquarters     = [[Mangilao, Guam]]
+| hqlocmap         = {{location map|Guam|lat_deg =13.449195|lon_deg =144.786923}}
+| hqlocmapsize     = 
+| hqlocmappoptitle =
+| sworntype        = [[Corrections officer]]
+| sworn            = 180
+| unsworntype      = 
+| unsworn          = 
+| multinational    = <!-- NNN or {{collapsible list |title=NNN |[[country1]] . . |[[countryNNN]]}} -->
+| electeetype      = 
+| minister1name    = <!-- up to | minister6name = -->
+| minister1pfo     = <!-- up to | minister6pfo = -->
+| chief1name       = Fred Bordallo, Jr.
+| chief1position   = Director
+| parentagency     = 
+| child1agency     = <!-- up to | child7agency = -->
+| unittype         = 
+| unitname         = <!-- NNN or {{collapsible list |title=NNN |[[Unit1]] . . |[[UnitNNN]]}} -->
+| officetype       = 
+| officename       = <!-- NNN or {{collapsible list |title=NNN |[[Office1]] . . |[[OfficeNNN]]}} -->
+| provideragency   = 
+| uniformedas      = 
+| stationtype      = 
+| stations         = <!-- NNN or {{collapsible list |title=NNN |[[Station1]] . . |[[StationNNN]]}} -->
+| airbases         = <!-- NNN or {{collapsible list |title=NNN |[[Airbase1]] . . |[[AirbaseNNN]]}} -->
+| lockuptype       = Facilities
+| lockups          = 4
+| vehicle1type     = <!-- up to | vehicle3type = -->
+| vehicles1        = <!-- NNN or {{collapsible list |title=NNN |[[Vehicle1]] . . |[[VehicleNNN]]}} --><!-- up to | vehicles3 = -->
+| boat1type        = <!-- up to | boat3type = -->
+| boats1           = <!-- NNN or {{collapsible list |title=NNN |[[Boat1]] . . |[[BoatNNN]]}} --><!-- up to | boats3 = -->
+| aircraft1type    = <!-- up to | aircraft3type = -->
+| aircraft1        = <!-- NNN or {{collapsible list |title=NNN |[[Aircraft1]] . . |[[AircraftNNN]]}} --><!-- up to | aircraft3 = -->
+| animal1type      = <!-- up to | animal3type = -->
+| animals1         = <!-- NNN or {{collapsible list |title=NNN |[[Animal1]] . . |[[AnimalNNN]]}} --><!-- up to | animals3 = -->
+| person1name      = <!-- up to | person6name = -->
+| person1reason    = <!-- up to | person6reason = -->
+| person1type      = <!-- up to |person6type = -->
+| programme1       = <!-- or | program1 = --><!-- up to | programme6 = or | program6 = -->
+| activitytype     = 
+| activity1name    = <!-- up to | activity6name = -->
+| anniversary1     = <!-- up to | anniversary6 = -->
+| award1           = <!-- up to | award6 = -->
+| website          = {{URL|doc.guam.gov}}
+| footnotes        = 
+}}
+The '''Guam Department of Corrections''' ('''DEPCOR''', [[Chamorro language|Chamorro]]: '''Depattamenton Mangngurihi''') is an agency of the government of the [[United States territory]] of [[Guam]] that operates the island's correctional facilities.
+
+The facility headquarters and main facility are in [[Mangilao, Guam|Mangilao]].<ref>{{cite web|url=https://doc.guam.gov/contact-us/|title=Contact Numbers and Mailing Addresses|publisher=Guam Department of Corrections|access-date=2020-10-09|quote=PHYSICAL ADDRESS  #1 Mashburn Lane, Dairy Road, Mangilao, GU  96913}} - Compare to the maps</ref><ref>{{cite web|url=https://www2.census.gov/geo/maps/dc10map/GUBlock/st66_gu/place/p6645600_mangilao/DC10BLK_P6645600_001.pdf|title=2010 CENSUS - CENSUS BLOCK MAP: Mangilao, GU|publisher=[[U.S. Census Bureau]]|access-date=2020-10-09}}</ref>
+
+The Guam Adult Correctional Facility (ACF) is the main correctional facility on Guam.<ref>"[http://www.scoop.co.nz/stories/WO0905/S00391.htm Guam’s Adult Correctional Facility]." ''[[The Scoop (New Zealand)|The Scoop]]''. Tuesday May 26, 2009. Retrieved on May 19, 2010.</ref> The other facilities operated by DEPCOR include the community Corrections Center (C3), the Hagåtña Detention Facility, and the Women's Facility. ACF, the women's facility, and the C3 are in Mangilao, while the Hagåtña Detention Facility is in [[Hagåtña]].<ref>"[http://www.doc.guam.gov/Default.aspx?tabid=3173 Prison Security] {{webarchive|url=https://web.archive.org/web/20100924080440/http://www.doc.guam.gov/Default.aspx?tabid=3173 |date=2010-09-24 }}." Guam Department of Corrections. Retrieved on May 19, 2010.</ref><ref>{{cite news |newspaper=The Guam Daily Post |title=Allegations of inhumane jail conditions detailed |date=February 7, 2020 |first=Nick |last=Delgado |url=https://www.postguam.com/news/local/allegations-of-inhumane-jail-conditions-detailed/article_871495aa-48bd-11ea-aa0b-578f21a9bef9.html}}</ref>
+
+== Line of Duty Deaths ==
+According to [[Officer Down Memorial Page|ODMP]], 2 DEPCOR officers have been killed in the line of duty.<ref>{{Cite web |title=Guam Department of Corrections, GU |url=https://www.odmp.org/agency/1540-guam-department-of-corrections-guam |access-date=2025-03-13 |website=The Officer Down Memorial Page (ODMP)}}</ref>
+
+== See also ==
+{{Portal|United States}}
+* [[Government of Guam]]
+
+==References==
+{{reflist}}
+
+==External links==
+* [https://doc.guam.gov/ Guam Department of Corrections]
+{{Mangilao, Guam}}
+{{Incarceration in the United States}}
+{{Prisons and Correctional facilities in Oceania}}
+
+{{authority control}}
+
+[[Category:State corrections departments of the United States]]
+[[Category:Government of Guam]]
+
+{{Guam-stub}}
+{{US-prison-stub}}

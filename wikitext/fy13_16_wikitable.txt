@@ -1,0 +1,2304 @@
+==Centers active in Fiscal Years 2010 through 2016==
+
+{| class="wikitable sortable"
+|+ICE Detention Facilities in FY10–FY16
+!Facility Name
+!Status (year)
+!City
+!State
+!Facility Type
+!Authority
+!Management
+!Average Daily Population
+!Minimum Capacity
+!Demographics
+|-
+|[[Adelanto Detention Center|Adelanto ICE processing center]]
+|Active (FY11 – FY16)
+|[[Adelanto, CA]]
+|[[California|CA]]
+|Dedicated migrant detention center
+|DIGSA
+|[[GEO Group]]
+|1472
+|1940
+|Female/Male
+|-
+|Albany County Jail
+|Active (FY10 – FY16)
+|[[Albany, NY]]
+|[[New York (state)|NY]]
+|Jail
+|USMS IGA
+|New York State Commission of Correction
+|29
+|14
+|Female/Male
+|-
+|[[Alexandria City Jail]]
+|Active (FY15 – FY16)
+|[[Alexandria, VA]]
+|[[Virginia|VA]]
+|Jail
+|USMS IGA
+|Alexandria Sheriff's Office
+|1
+|
+|Female/Male
+|-
+|Alhambra City Jail
+|Closed (Active FY10 – FY14)
+|[[Alhambra, CA]]
+|[[California|CA]]
+|Jail
+|USMS IGA
+|
+|0
+|
+|Female/Male
+|-
+|Allegany County Jail
+|Active (FY10 – FY16)
+|[[Belmont, NY]]
+|[[New York (state)|NY]]
+|Jail
+|IGSA
+|County (Sheriff)
+|12
+|
+|Female
+|-
+|[[Allegheny County Jail]]
+|Closed (Active FY10 – FY14)
+|[[Pittsburgh, PA]]
+|[[Pennsylvania|PA]]
+|Jail
+|USMS IGA
+|Allegheny County Bureau of Corrections
+|4
+|
+|Female/Male
+|-
+|Allen Parish Public Safety Complex
+|Active (FY16)
+|[[Oberlin, LA]]
+|[[Louisiana|LA]]
+|Jail
+|IGSA
+|County
+|18
+|
+|Male
+|-
+|Anchorage Correctional Complex
+|Active (FY10 – FY12)
+|[[Anchorage, AK]]
+|[[Alaska|AK]]
+|Jail
+|USMS IGA
+|County (Corrections)
+|1
+|
+|Female/Male
+|-
+|Apache County Jail
+|Closed (Active FY12 – FY13)
+|[[St. Johns, Arizona|St Johns, AZ]]
+|[[Arizona|AZ]]
+|Jail
+|USMS IGA
+|
+|0
+|
+|Female/Male
+|-
+|[[Atlanta City Detention Center|Atlanta City Detention Center]]
+|Active (FY10 – FY16)
+|[[Atlanta, GA]]
+|[[Georgia (U.S. state)|GA]]
+|Jail
+|USMS IGA
+|City
+|139
+|200
+|Female/Male
+|-
+|Baker County Sheriff's Office
+|Active (FY10 – FY16)
+|[[Macclenny, FL]]
+|[[Florida|FL]]
+|Jail
+|IGSA
+|County
+|188
+|
+|Female/Male
+|-
+|Baldwin County Correctional Center
+|Active (FY11 – FY16)
+|[[Bay Minette, AL]]
+|[[Alabama|AL]]
+|Jail
+|IGSA
+|County (Sheriff)
+|2
+|
+|Male
+|-
+|Bedford Heights City Jail
+|Closed (Active FY10 – FY15)
+|[[Bedford Heights, Ohio|Bedford Hts, OH]]
+|[[Ohio|OH]]
+|Jail
+|IGSA
+|Bedford Heights Police Department
+|0
+|
+|Male
+|-
+|Bedford Municipal Detention Center
+|Active (FY10 – FY16)
+|[[Bedford, TX]]
+|[[Texas|TX]]
+|Jail
+|IGSA
+|City
+|16
+|
+|Female/Male
+|-
+|[[Bergen County Jail]]
+|Active (FY10 – FY16)
+|[[Hackensack, NJ]]
+|[[New Jersey|NJ]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|147
+|128
+|Male
+|-
+|[[Boone County Jail]]
+|Active (FY10 – FY16)
+|[[Burlington, KY]]
+|[[Kentucky|KY]]
+|Jail
+|USMS IGA
+|Boone County Sheriff's Department
+|142
+|200
+|Female/Male
+|-
+|Bristol County Detention Center
+|Active (FY10 – FY16)
+|[[North Dartmouth, MA]]
+|[[Massachusetts|MA]]
+|Jail
+|IGSA
+|County (Sheriff)
+|116
+|
+|Female/Male
+|-
+|[[Brooks County Jail|Brooks County Detention Center]]
+|Active (FY12 – FY16)
+|[[Falfurrias, TX]]
+|[[Texas|TX]]
+|Jail
+|USMS IGA
+|[[GEO Group]]
+|23
+|200
+|Male
+|-
+|[[Broward Transitional Center]]
+|Active (FY10 – FY16)
+|[[Pompano Beach, FL]]
+|[[Florida|FL]]
+|Private migrant detention center
+|CDF
+|[[GEO Group]]
+|618
+|700
+|Female/Male
+|-
+|Buffalo (Batavia) Service Processing Center
+|Active (FY10 – FY16)
+|[[Batavia, NY]]
+|[[New York (state)|NY]]
+|ICE migrant detention center
+|SPC
+|Ahtna Global Services
+|540
+|650
+|Male
+|-
+|Burnet County Jail
+|Active (FY14 – FY16)
+|[[Burnet, TX]]
+|[[Texas|TX]]
+|Jail
+|IGSA
+|County (Sheriff)
+|1
+|
+|Female/Male
+|-
+|Butler County Jail
+|Active (FY10 – FY16)
+|[[El Dorado, KS]]
+|[[Kansas|KS]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|5
+|25
+|Female/Male
+|-
+|Butler County Jail
+|Active (FY10 – FY16)
+|[[Hamilton, OH]]
+|[[Ohio|OH]]
+|Jail
+|IGSA
+|County (Sheriff)
+|81
+|
+|Female/Male
+|-
+|Cabarrus County Jail
+|Active (FY10 – FY11)
+|[[Concord, NC]]
+|[[North Carolina|NC]]
+|Jail
+|IGSA
+|County (Sheriff)
+|1
+|
+|Male
+|-
+|Caldwell County Detention Center
+|Active (FY10 – FY16)
+|[[Kingston, MO]]
+|[[Missouri|MO]]
+|Jail
+|IGSA
+|Caldwell County Sheriff's Office
+|21
+|
+|Female/Male
+|-
+|Calhoun County Correctional Center
+|Active (FY10 – FY16)
+|[[Battle Creek, MI]]
+|[[Michigan|MI]]
+|Jail
+|IGSA
+|County (Sheriff)
+|148
+|125
+|Female/Male
+|-
+|[[Cambria County Jail]]
+|Active (FY16)
+|[[Ebensburg, PA]]
+|[[Pennsylvania|PA]]
+|Jail
+|USMS IGA
+|Cambria County
+|4
+|15
+|Male
+|-
+|Carver County Jail
+|Active (FY10 – FY16)
+|[[Chaska, MN]]
+|[[Minnesota|MN]]
+|Jail
+|IGSA
+|Carver County Sheriff's Office
+|29
+|
+|Female/Male
+|-
+|Cascade County Jail (Montana)
+|Active (FY10 – FY16)
+|[[Great Falls, MT]]
+|[[Montana|MT]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|1
+|35
+|Male
+|-
+|Cass County Jail
+|Active (FY10 – FY16)
+|[[Plattsmouth, NE]]
+|[[Nebraska|NE]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|6
+|50
+|Female/Male
+|-
+|CCA Central Arizona Detention Center
+|Closed (Active FY10 – FY15)
+|[[Florence, AZ]]
+|[[Arizona|AZ]]
+|Jail
+|USMS IGA
+|[[CoreCivic]]
+|32
+|230
+|Male
+|-
+|[[Central Arizona Florence Correctional Complex]]
+|Active (FY10 – FY16)
+|[[Florence, AZ]]
+|[[Arizona|AZ]]
+|Jail
+|USMS IGA
+|[[CoreCivic]]
+|712
+|806
+|Male
+|-
+|Central Texas Detention Facility
+|Active (FY10 – FY14)
+|[[San Antonio, TX]]
+|[[Texas|TX]]
+|Jail
+|USMS IGA
+|[[GEO Group]]
+|1
+|
+|Male
+|-
+|Charleston County Detention Center
+|Active (FY10 – FY16)
+|[[North Charleston, SC]]
+|[[South Carolina|SC]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|9
+|256
+|Male
+|-
+|Chase County Detention Facility
+|Active (FY10 – FY16)
+|[[Cottonwood Falls, KS]]
+|[[Kansas|KS]]
+|Jail
+|IGSA
+|County (Sheriff)
+|44
+|
+|Female/Male
+|-
+|Chautauqua County Jail
+|Active (FY12 – FY16)
+|[[Mayville, NY]]
+|[[New York (state)|NY]]
+|Jail
+|IGSA
+|County (Sheriff)
+|5
+|
+|Female
+|-
+|Chippewa County SSM
+|Active (FY10 – FY16)
+|[[Sault Sainte Marie, MI]]
+|[[Michigan|MI]]
+|Jail
+|IGSA
+|County (Sheriff)
+|18
+|
+|Female/Male
+|-
+|Christian County Jail
+|Active (FY10 – FY16)
+|[[Ozark, MO]]
+|[[Missouri|MO]]
+|Jail
+|IGSA
+|County (Sheriff)
+|13
+|
+|Male
+|-
+|[[Clay County Jail|Clay County Jail]]
+|Active (FY13 – FY16)
+|[[Brazil, IN]]
+|[[Indiana|IN]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|53
+|
+|Male
+|-
+|Clinton County Correctional Facility
+|Active (FY10 – FY16)
+|[[Lock Haven, PA]]
+|[[Pennsylvania|PA]]
+|Jail
+|USMS IGA
+|County (Corrections)
+|12
+|50
+|Female/Male
+|-
+|Clinton County Jail
+|Active (FY10 – FY16)
+|[[Plattsburgh, NY]]
+|[[New York (state)|NY]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|14
+|13
+|Female/Male
+|-
+|Coastal Bend Detention Facility
+|Active (FY12 – FY15)
+|[[Robstown, TX]]
+|[[Texas|TX]]
+|Jail
+|USMS IGA
+|[[GEO Group]]
+|41
+|700
+|Male
+|-
+|Cobb County Jail
+|Active (FY10 – FY16)
+|[[Marietta, GA]]
+|[[Georgia (U.S. state)|GA]]
+|Jail
+|IGSA
+|County (Sheriff)
+|1
+|
+|Male
+|-
+|Coconino County Detention Facility
+|Closed (Active FY10)
+|[[Flagstaff, AZ]]
+|[[Arizona|AZ]]
+|Jail
+|USMS IGA
+|
+|0
+|
+|Female/Male
+|-
+|Collier County Naples Jail Center
+|Active (FY10 – FY16)
+|[[Naples, FL]]
+|[[Florida|FL]]
+|Jail
+|IGSA
+|County (Sheriff)
+|4
+|
+|Male
+|-
+|Contra Costa County Jail West
+|Active (FY10 – FY16)
+|[[Richmond, CA]]
+|[[California|CA]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|196
+|318
+|Female/Male
+|-
+|[[Cumberland County Jail]]
+|Active (FY10 – FY16)
+|[[Portland, ME]]
+|[[Maine|ME]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|1
+|70
+|Male
+|-
+|Dakota County Jail
+|Active (FY16)
+|[[Dakota City, NE]]
+|[[Nebraska|NE]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|1
+|20
+|Female/Male
+|-
+|Dale G. Haile Detention Center
+|Closed (Active FY13)
+|[[Caldwell, ID]]
+|[[Idaho|ID]]
+|Jail
+|IGSA
+|Canyon County Sheriff's Office
+|1
+|
+|Male
+|-
+|Davidson County Sheriff
+|Active (FY10 – FY16)
+|[[Nashville, TN]]
+|[[Tennessee|TN]]
+|Jail
+|IGSA
+|County (Sheriff)
+|4
+|
+|Male
+|-
+|Dearborn Police Department
+|Active (FY10 – FY16)
+|[[Dearborn, MI]]
+|[[Michigan|MI]]
+|Jail
+|IGSA
+|Dearborn Police Department
+|2
+|8
+|Female/Male
+|-
+|Dekalb County Detention Center
+|Active (FY10 – FY16)
+|[[Fort Payne, AL]]
+|[[Alabama|AL]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|22
+|60
+|Female/Male
+|-
+|Delaney Hall Detention Facility
+|Active (FY11 – FY15)
+|[[Newark, NJ]]
+|[[New Jersey|NJ]]
+|Jail
+|IGSA
+|
+|126
+|
+|Female/Male
+|-
+|Delaware County Jail (George W. Hill)
+|Active (FY16)
+|[[Thornton, Pennsylvania|Thornton, PA]]
+|[[Pennsylvania|PA]]
+|Jail
+|USMS IGA
+|County
+|1
+|
+|Female/Male
+|-
+|[[Denver Contract Detention Facility]] <small>(aka Aurora ICE Processing Center)</small>
+|Active (FY10 – FY16)
+|[[Aurora, CO]]
+|[[Colorado|CO]]
+|Private migrant detention center
+|CDF
+|[[GEO Group]]
+|477
+|928
+|Female/Male
+|-
+|Dodge County Jail
+|Active (FY10 – FY16)
+|[[Juneau, WI]]
+|[[Wisconsin|WI]]
+|Jail
+|USMS IGA
+|Dodge County Sheriff's Department
+|199
+|265
+|Female/Male
+|-
+|Douglas County Department of Corrections
+|Active (FY10 – FY16)
+|[[Omaha, NE]]
+|[[Nebraska|NE]]
+|Jail
+|IGSA
+|County (Corrections)
+|82
+|
+|Female/Male
+|-
+|East Hidalgo Detention Center
+|Active (FY12 – FY16)
+|[[La Villa, TX]]
+|[[Texas|TX]]
+|Jail
+|USMS IGA
+|[[GEO Group]]
+|128
+|100
+|Male
+|-
+|Eastern Regional Jail
+|Closed (Active FY10 – FY14)
+|[[Martinsburg, WV]]
+|[[West Virginia|WV]]
+|Jail
+|USMS IGA
+|
+|0
+|
+|Female/Male
+|-
+|El Paso County Criminal Justice Center
+|Active (FY10 – FY16)
+|[[Colorado Springs, CO]]
+|[[Colorado|CO]]
+|Jail
+|IGSA
+|County (Sheriff)
+|6
+|
+|Female/Male
+|-
+|El Paso Service Processing Center
+|Active (FY10 – FY16)
+|[[El Paso, TX]]
+|[[Texas|TX]]
+|ICE migrant detention center
+|SPC
+|ICE
+|819
+|840
+|Female/Male
+|-
+|Elgin Police Department
+|Active (FY10 – FY16)
+|[[Elgin, IL]]
+|[[Illinois|IL]]
+|Jail
+|IGSA
+|City
+|1
+|
+|Male
+|-
+|Elizabeth Detention Center
+|Active (FY10 – FY16)
+|[[Elizabeth, NJ]]
+|[[New Jersey|NJ]]
+|Private migrant detention center
+|CDF
+|[[CoreCivic]]
+|295
+|304
+|Female/Male
+|-
+|Elmore County Jail
+|Active (FY10 – FY16)
+|[[Mountain Home, ID]]
+|[[Idaho|ID]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|5
+|15
+|Male
+|-
+|[[Eloy Detention Center]]
+|Active (FY10 – FY16)
+|[[Eloy, AZ]]
+|[[Arizona|AZ]]
+|Dedicated migrant detention center
+|DIGSA
+|[[CoreCivic]]
+|1433
+|1550
+|Female/Male
+|-
+|[[Erie County Jail]]
+|Active (FY10 – FY16)
+|[[Erie, PA]]
+|[[Pennsylvania|PA]]
+|Jail
+|USMS IGA
+|Erie County Sheriff's Office
+|3
+|5
+|Male
+|-
+|Essex County Correctional Facility
+|Active (FY10 – FY16)
+|[[Newark, NJ]]
+|[[New Jersey|NJ]]
+|Jail
+|IGSA
+|County (Corrections)
+|539
+|800
+|Male
+|-
+|Etowah County Jail (Alabama)
+|Active (FY10 – FY16)
+|[[Gadsden, AL]]
+|[[Alabama|AL]]
+|Jail
+|USMS IGA
+|Etowah County Sheriff's Department
+|278
+|350
+|Male
+|-
+|Euless City Jail
+|Active (FY10 – FY16)
+|[[Euless, TX]]
+|[[Texas|TX]]
+|Jail
+|IGSA
+|City
+|18
+|
+|Female/Male
+|-
+|Fayette County Detention Center
+|Active (FY16)
+|[[Lexington, KY]]
+|[[Kentucky|KY]]
+|Jail
+|USMS IGA
+|County
+|1
+|
+|Female/Male
+|-
+|Florence Service Processing Center
+|Active (FY10 – FY16)
+|[[Florence, AZ]]
+|[[Arizona|AZ]]
+|ICE migrant detention center
+|SPC
+|Asset Protection & Security Services
+|387
+|392
+|Male
+|-
+|Forsyth County Jail
+|Active (FY13 – FY16)
+|[[Winston-Salem, NC]]
+|[[North Carolina|NC]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|1
+|
+|Male
+|-
+|Franklin County House of Correction
+|Active (FY10 – FY16)
+|[[Greenfield, MA]]
+|[[Massachusetts|MA]]
+|Jail
+|USMS IGA
+|Franklin County Sheriff's Office
+|71
+|90
+|Male
+|-
+|Frederick County Detention Center
+|Active (FY10 – FY16)
+|[[Frederick, MD]]
+|[[Maryland|MD]]
+|Jail
+|IGSA
+|County (Sheriff)
+|39
+|
+|Male
+|-
+|Freeborn County Adult Detention Center
+|Active (FY10 – FY16)
+|[[Albert Lea, MN]]
+|[[Minnesota|MN]]
+|Jail
+|IGSA
+|County (Sheriff)
+|61
+|
+|Male
+|-
+|Garvin County Detention Center
+|Active (FY10 – FY16)
+|[[Pauls Valley, OK]]
+|[[Oklahoma|OK]]
+|Jail
+|IGSA
+|County (Sheriff)
+|1
+|
+|Male
+|-
+|Gaston County Jail
+|Active (FY10 – FY11)
+|[[Gastonia, NC]]
+|[[North Carolina|NC]]
+|Jail
+|IGSA
+|County (Sheriff)
+|1
+|
+|Male
+|-
+|Geauga County Jail
+|Active (FY11 – FY16)
+|[[Chardon, OH]]
+|[[Ohio|OH]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|38
+|30
+|Female/Male
+|-
+|[[Glades County Detention Center]]
+|Active (FY10 – FY16)
+|[[Moore Haven, FL]]
+|[[Florida|FL]]
+|Jail
+|IGSA
+|Glades County Sheriff's Department
+|130
+|
+|Female/Male
+|-
+|Glendale Police Department
+|Closed (Active FY10 – FY11)
+|[[Glendale, CA]]
+|[[California|CA]]
+|Jail
+|IGSA
+|City
+|1
+|
+|Male
+|-
+|Grand Forks County Correctional Facility
+|Active (FY10 – FY16)
+|[[Grand Forks, ND]]
+|[[North Dakota|ND]]
+|Jail
+|IGSA
+|County (Sheriff)
+|3
+|
+|Female/Male
+|-
+|Grayson County Jail
+|Active (FY11 – FY16)
+|[[Leitchfield, KY]]
+|[[Kentucky|KY]]
+|Jail
+|USMS IGA
+|County (Jailer)
+|1
+|10
+|Female/Male
+|-
+|Hall County Department of Corrections
+|Active (FY10 – FY16)
+|[[Grand Island, NE]]
+|[[Nebraska|NE]]
+|Jail
+|IGSA
+|County (Sheriff)
+|14
+|
+|Male
+|-
+|Hall County Jail
+|Active (FY10 – FY16)
+|[[Gainesville, GA]]
+|[[Georgia (U.S. state)|GA]]
+|Jail
+|USMS IGA
+|Corrections Corporation of America
+|2
+|
+|Male
+|-
+|Hardin County Jail
+|Active (FY10 – FY16)
+|[[Eldora, IA]]
+|[[Iowa|IA]]
+|Jail
+|IGSA
+|County (Sheriff)
+|45
+|
+|Female/Male
+|-
+|Henderson Detention Center
+|Active (FY11 – FY16)
+|[[Henderson, NV]]
+|[[Nevada|NV]]
+|Jail
+|USMS IGA
+|City
+|240
+|300
+|Female/Male
+|-
+|Houston Processing Center
+|Active (FY10 – FY16)
+|[[Houston, TX]]
+|[[Texas|TX]]
+|Private migrant detention center
+|CDF
+|[[CoreCivic]]
+|916
+|1000
+|Female/Male
+|-
+|Howard County Detention Center
+|Active (FY10 – FY16)
+|[[Jessup, MD]]
+|[[Maryland|MD]]
+|Jail
+|IGSA
+|County (Corrections)
+|60
+|
+|Male
+|-
+|Hudson County Correctional Center
+|Active (FY10 – FY16)
+|[[Kearny, NJ]]
+|[[New Jersey|NJ]]
+|Jail
+|USMS IGA
+|County (Corrections)
+|491
+|476
+|Female/Male
+|-
+|Immigration Centers of America Farmville
+|Active (FY10 – FY16)
+|[[Farmville, VA]]
+|[[Virginia|VA]]
+|Dedicated migrant detention center
+|DIGSA
+|Virginia Department of Corrections
+|579
+|851
+|Male
+|-
+|Imperial Regional Detention Facility
+|Active (FY14 – FY16)
+|[[Calexico, CA]]
+|[[California|CA]]
+|Dedicated migrant detention center
+|DIGSA
+|[[Management and Training Corporation|Management & Training Corporation (MTC)]]
+|681
+|704
+|Female/Male
+|-
+|[[Irwin County Detention Center]]
+|Active (FY11 – FY16)
+|[[Ocilla, GA]]
+|[[Georgia (U.S. state)|GA]]
+|Jail
+|USMS IGA
+|[[LaSalle Corrections]]
+|546
+|512
+|Female/Male
+|-
+|Jack Harwell Detention Center
+|Active (FY11 – FY14)
+|[[Waco, TX]]
+|[[Texas|TX]]
+|Jail
+|USMS IGA
+|[[Community Education Centers]] ([[GEO Group]] subsidiary)
+|129
+|200
+|Male
+|-
+|[[James A. Musick Facility|James A. Musick Facility]]
+|Active (FY11 – FY16)
+|[[Irvine, CA]]
+|[[California|CA]]
+|Jail
+|IGSA
+|County (Sheriff)
+|290
+|
+|Female/Male
+|-
+|[[Jefferson County Jail]]
+|Active (FY10 – FY16)
+|[[Rigby, ID]]
+|[[Idaho|ID]]
+|Jail
+|IGSA
+|County
+|1
+|
+|Male
+|-
+|[[LaSalle Detention Center|Jena/Lasalle Detention Facility]]
+|Active (FY10 – FY16)
+|[[Jena, LA]]
+|[[Louisiana|LA]]
+|Dedicated migrant detention center
+|DIGSA
+|[[GEO Group]]
+|1105
+|1160
+|Female/Male
+|-
+|Joe Corley Detention Facility
+|Active (FY10 – FY16)
+|[[Conroe, TX]]
+|[[Texas|TX]]
+|Jail
+|IGSA
+|[[GEO Group]]
+|894
+|1050
+|Female/Male
+|-
+|Johnson County Law Enforcement Center
+|Active (FY10 – FY16)
+|[[Cleburne, TX]]
+|[[Texas|TX]]
+|Jail
+|IGSA
+|[[Community Education Centers]] ([[GEO Group]] subsidiary)
+|216
+|
+|Male
+|-
+|Josephine County Jail
+|Active (FY10 – FY16)
+|[[Grants Pass, OR]]
+|[[Oregon|OR]]
+|Jail
+|USMS IGA
+|Josephine County Sheriff's Department
+|1
+|31
+|Male
+|-
+|Karnes County Correctional Center
+|Active (FY16)
+|[[Karnes City, TX]]
+|[[Texas|TX]]
+|Jail
+|USMS IGA
+|[[GEO Group]]
+|20
+|60
+|Male
+|-
+|Kenosha County Detention Center
+|Active (FY10 – FY16)
+|[[Kenosha, WI]]
+|[[Wisconsin|WI]]
+|Jail
+|USMS IGA
+|Kenosha County Sheriff's Department
+|166
+|210
+|Female/Male
+|-
+|Kent County Jail
+|Closed (Active FY14)
+|[[Grand Rapids, MI]]
+|[[Michigan|MI]]
+|Jail
+|IGSA
+|County (Sheriff)
+|1
+|
+|Female/Male
+|-
+|Krome North Service Processing Center
+|Active (FY10 – FY16)
+|[[Miami, FL]]
+|[[Florida|FL]]
+|ICE migrant detention center
+|SPC
+|Akima (division of [[NANA Regional Corporation#Akima|NANA Regional Corporation]])<ref>[https://alaskapublic.org/news/politics/2025-10-23/lucrative-ice-detention-centers-bring-money-and-anger-to-an-alaska-native-community "Lucrative ICE detention centers bring money — and anger — to an Alaska Native community"] [[Bloomberg Business]] via [[Alaska Public Media]], October 23, 2025. Retrieved June 9, 2026.</ref>
+|558
+|611
+|Male
+|-
+|La Paz County Adult Detention Facility
+|Active (FY14 – FY15)
+|[[Parker, AZ]]
+|[[Arizona|AZ]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|1
+|
+|Female/Male
+|-
+|La Plata County Jail
+|Closed (Active FY10 – FY15)
+|[[Durango, CO]]
+|[[Colorado|CO]]
+|Jail
+|USMS IGA
+|
+|0
+|
+|Female/Male
+|-
+|La Salle County Regional Detention Center
+|Active (FY11 – FY16)
+|[[Encinal, TX]]
+|[[Texas|TX]]
+|Jail
+|USMS IGA
+|County
+|35
+|250
+|Female/Male
+|-
+|Laredo Processing Center
+|Active (FY10 – FY16)
+|[[Laredo, TX]]
+|[[Texas|TX]]
+|Jail
+|USMS IGA
+|[[CoreCivic]]
+|301
+|400
+|Female
+|-
+|Lexington County Jail
+|Active (FY11 – FY16)
+|[[Lexington, SC]]
+|[[South Carolina|SC]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|2
+|28
+|Male
+|-
+|Lincoln County Detention Center
+|Active (FY10 – FY16)
+|[[Troy, MO]]
+|[[Missouri|MO]]
+|Jail
+|IGSA
+|Lincoln County Sheriff's Office
+|7
+|
+|Female/Male
+|-
+|Linn County Jail
+|Active (FY10 – FY16)
+|[[Cedar Rapids, IA]]
+|[[Iowa|IA]]
+|Jail
+|USMS IGA
+|Linn County Sheriff
+|3
+|25
+|Female/Male
+|-
+|Lonoke Police Department
+|Active (FY10 – FY16)
+|[[Lonoke, AR]]
+|[[Arkansas|AR]]
+|Jail
+|IGSA
+|City
+|1
+|
+|Female/Male
+|-
+|Lubbock County Detention Center
+|Active (FY16)
+|[[Lubbock, TX]]
+|[[Texas|TX]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|1
+|15
+|Male
+|-
+|Marion County Jail
+|Active (FY10 – FY16)
+|[[Indianapolis, IN]]
+|[[Indiana|IN]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|1
+|5
+|Female/Male
+|-
+|Marshall County Jail
+|Active (FY11 – FY16)
+|[[Marshalltown, IA]]
+|[[Iowa|IA]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|31
+|35
+|Female/Male
+|-
+|McHenry County Correctional Facility
+|Active (FY10 – FY16)
+|[[Woodstock, IL]]
+|[[Illinois|IL]]
+|Jail
+|USMS IGA
+|McHenry County Sheriff
+|207
+|250
+|Female/Male
+|-
+|Mecklenburg County Detention Center North
+|Active (FY10 – FY16)
+|[[Charlotte, NC]]
+|[[North Carolina|NC]]
+|Jail
+|USMS IGA
+|Mecklenburg County Sheriff's Department
+|1
+|
+|Female/Male
+|-
+|Mesa Verde Detention Facility
+|Active (FY15 – FY16)
+|[[Bakersfield, CA]]
+|[[California|CA]]
+|Dedicated migrant detention center
+|DIGSA
+|[[GEO Group]]
+|368
+|400
+|Female/Male
+|-
+|Miller County Jail
+|Active (FY16)
+|[[Texarkana, AR]]
+|[[Arkansas|AR]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|1
+|13
+|Male
+|-
+|Minicassia Detention Center
+|Active (FY10 – FY16)
+|[[Burley, ID]]
+|[[Idaho|ID]]
+|Jail
+|IGSA
+|County (Sheriff)
+|3
+|
+|Male
+|-
+|Mississippi County Detention Center
+|Closed (Active FY10 – FY15)
+|[[Charleston, MO]]
+|[[Missouri|MO]]
+|Jail
+|IGSA
+|Mississippi County Sheriff's Office
+|3
+|
+|Male
+|-
+|Moffat County Jail
+|Closed (Active FY10 – FY13)
+|[[Craig, CO]]
+|[[Colorado|CO]]
+|Jail
+|IGSA
+|County (Sheriff)
+|1
+|
+|Male
+|-
+|[[Monroe County Jail|Monroe County Detention Center]]
+|Active (FY10 – FY16)
+|[[Key West, FL]]
+|[[Florida|FL]]
+|Jail
+|IGSA
+|Monroe County Sheriff's Department
+|52
+|72
+|Male
+|-
+|Monroe County Detention-Dorm
+|Active (FY14 – FY16)
+|[[Monroe, MI]]
+|[[Michigan|MI]]
+|Jail
+|IGSA
+|County (Sheriff)
+|51
+|
+|Male
+|-
+|Montgomery City Jail
+|Active (FY11 – FY16)
+|[[Montgomery, AL]]
+|[[Alabama|AL]]
+|Jail
+|IGSA
+|City
+|1
+|
+|Female/Male
+|-
+|Montgomery County Correctional Facility
+|Closed (Active FY10 – FY15)
+|[[Norristown, PA]]
+|[[Pennsylvania|PA]]
+|Jail
+|USMS IGA
+|Montgomery County Sheriff's Department
+|2
+|
+|Female/Male
+|-
+|Montgomery County Jail
+|Active (FY10 – FY16)
+|[[Montgomery City, MO]]
+|[[Missouri|MO]]
+|Jail
+|IGSA
+|Montgomery County Sheriff's Office
+|18
+|
+|Male
+|-
+|Morgan County Adult Detention Center
+|Active (FY10 – FY16)
+|[[Versailles, MO]]
+|[[Missouri|MO]]
+|Jail
+|IGSA
+|Morgan County Sheriff's Office
+|51
+|
+|Male
+|-
+|Morrow County Correctional Facility
+|Active (FY10 – FY16)
+|[[Mount Gilead, OH]]
+|[[Ohio|OH]]
+|Jail
+|IGSA
+|County (Sheriff)
+|29
+|
+|Female/Male
+|-
+|Natrona County Jail
+|Active (FY10 – FY11)
+|[[Casper, WY]]
+|[[Wyoming|WY]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|1
+|
+|Male
+|-
+|Navajo County Sheriff
+|Closed (Active FY10 – FY13)
+|[[Holbrook, AZ]]
+|[[Arizona|AZ]]
+|Jail
+|IGSA
+|
+|0
+|
+|Female/Male
+|-
+|Nevada Southern Detention Center
+|Active (FY16)
+|[[Pahrump, NV]]
+|[[Nevada|NV]]
+|Jail
+|USMS IGA
+|[[CoreCivic]]
+|74
+|250
+|Female/Male
+|-
+|New Hanover County Jail
+|Active (FY13 – FY14)
+|[[Castle Hayne, NC]]
+|[[North Carolina|NC]]
+|Jail
+|IGSA
+|County (Sheriff)
+|1
+|
+|Male
+|-
+|Nobles County Jail
+|Active (FY10 – FY16)
+|[[Worthington, MN]]
+|[[Minnesota|MN]]
+|Jail
+|IGSA
+|County (Sheriff)
+|1
+|
+|Female/Male
+|-
+|[[Norfolk County Jail|Norfolk County Jail]]
+|Closed (Active FY10 – FY15)
+|[[Dedham, MA]]
+|[[Massachusetts|MA]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|1
+|50
+|Female/Male
+|-
+|Northern Oregon Correctional Facility
+|Active (FY10 – FY16)
+|[[The Dalles, OR]]
+|[[Oregon|OR]]
+|Jail
+|IGSA
+|County (Jailer)
+|14
+|
+|Female/Male
+|-
+|[[Northwest Detention Center|Northwest Detention Center]]
+|Active (FY10 – FY16)
+|[[Tacoma, WA]]
+|[[Washington (state)|WA]]
+|Private migrant detention center
+|CDF
+|[[GEO Group]]
+|1411
+|1575
+|Female/Male
+|-
+|Northwest State Correctional Center
+|Active (FY14)
+|[[Swanton, VT]]
+|[[Vermont|VT]]
+|Jail
+|USMS IGA
+|County (Corrections)
+|1
+|
+|Male
+|-
+|Oldham County Jail
+|Active (FY15 – FY16)
+|[[La Grange, KY]]
+|[[Kentucky|KY]]
+|Jail
+|IGSA
+|County (Jailer)
+|1
+|
+|Female/Male
+|-
+|Ontario County Jail
+|Closed (Active FY10 – FY15)
+|[[Canandaigua, NY]]
+|[[New York (state)|NY]]
+|Jail
+|USMS IGA
+|
+|1
+|
+|Female/Male
+|-
+|Orange County Intake Release Facility
+|Closed (Active FY11 – FY12)
+|[[Santa Ana, CA]]
+|[[California|CA]]
+|Jail
+|IGSA
+|County (Sheriff)
+|1
+|
+|Female/Male
+|-
+|Orange County Jail
+|Active (FY15 – FY16)
+|[[Orlando, FL]]
+|[[Florida|FL]]
+|Jail
+|USMS IGA
+|Orange County Sheriff's Department
+|1
+|5
+|Female/Male
+|-
+|Orange County Jail
+|Active (FY10 – FY16)
+|[[Goshen, NY]]
+|[[New York (state)|NY]]
+|Jail
+|IGSA
+|County (Corrections)
+|172
+|
+|Female/Male
+|-
+|Otay Mesa Detention Center (San Diego CDF)
+|Active (FY10 – FY16)
+|[[San Diego, CA]]
+|[[California|CA]]
+|Private migrant detention center
+|USMS CDF
+|[[CoreCivic]]
+|835
+|896
+|Female/Male
+|-
+|[[Otero County Prison Facility|Otero County Prison Facility]]
+|Active (FY10 – FY14)
+|[[Chaparral, NM]]
+|[[New Mexico|NM]]
+|Jail
+|USMS IGA
+|Management & Training Corp (MTC)
+|15
+|
+|Female/Male
+|-
+|Otero County Processing Center
+|Active (FY10 – FY16)
+|[[Chaparral, NM]]
+|[[New Mexico|NM]]
+|Dedicated migrant detention center
+|DIGSA
+|[[Management and Training Corporation|Management & Training Corporation (MTC)]]
+|844
+|1000
+|Male
+|-
+|Pennington County Jail (South Dakota)
+|Active (FY10)
+|[[Rapid City, SD]]
+|[[South Dakota|SD]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|1
+|5
+|Male
+|-
+|[[Phelps County Jail|Phelps County Jail]]
+|Active (FY10 – FY16)
+|[[Holdrege, NE]]
+|[[Nebraska|NE]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|3
+|20
+|Male
+|-
+|Pike County Correctional Facility
+|Active (FY10 – FY16)
+|[[Lords Valley, PA]]
+|[[Pennsylvania|PA]]
+|Jail
+|IGSA
+|County (Sheriff)
+|169
+|
+|Male
+|-
+|Pine Prairie Correctional Center
+|Active (FY16)
+|[[Pine Prairie, LA]]
+|[[Louisiana|LA]]
+|Dedicated migrant detention center
+|DIGSA
+|LCS Corrections Services
+|479
+|700
+|Male
+|-
+|[[Pinellas County Jail]]
+|Active (FY10 – FY14)
+|[[Clearwater, FL]]
+|[[Florida|FL]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|1
+|5
+|Male
+|-
+|Platte County Detention Center
+|Active (FY16)
+|[[Platte City, MO]]
+|[[Missouri|MO]]
+|Jail
+|IGSA
+|County (Sheriff)
+|1
+|
+|Female/Male
+|-
+|Platte County Jail
+|Active (FY10 – FY15)
+|[[Wheatland, WY]]
+|[[Wyoming|WY]]
+|Jail
+|USMS IGA
+|
+|0
+|
+|Female/Male
+|-
+|[[Plymouth House of Correction|Plymouth County Correctional Facility]]
+|Active (FY10 – FY16)
+|[[Plymouth, MA]]
+|[[Massachusetts|MA]]
+|Jail
+|IGSA
+|Plymouth County
+|86
+|
+|Male
+|-
+|Polk County Adult Detention Facility
+|Active (FY10 – FY16)
+|[[Livingston, TX]]
+|[[Texas|TX]]
+|Jail
+|IGSA
+|Polk County Sheriff's Office
+|563
+|1054
+|Male
+|-
+|Polk County Jail
+|Active (FY10 – FY16)
+|[[Des Moines, IA]]
+|[[Iowa|IA]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|3
+|60
+|Female/Male
+|-
+|Pomona City Jail
+|Closed (Active FY10 – FY14)
+|[[Pomona, CA]]
+|[[California|CA]]
+|Jail
+|USMS IGA
+|
+|0
+|
+|Female/Male
+|-
+|Port Isabel
+|Active (FY10 – FY16)
+|[[Los Fresnos, TX]]
+|[[Texas|TX]]
+|ICE migrant detention center
+|SPC
+|Ahtna Global Services
+|1104
+|1175
+|Female/Male
+|-
+|[[Pottawattamie County Jail]]
+|Active (FY10 – FY16)
+|[[Council Bluffs, IA]]
+|[[Iowa|IA]]
+|Jail
+|USMS IGA
+|Pottawattamie County Sheriff
+|12
+|10
+|Male
+|-
+|Pueblo County Jail
+|Closed (Active FY10 – FY13)
+|[[Pueblo, CO]]
+|[[Colorado|CO]]
+|Jail
+|USMS IGA
+|
+|0
+|
+|Female/Male
+|-
+|Pulaski County Jail
+|Active (FY10 – FY16)
+|[[Ullin, IL]]
+|[[Illinois|IL]]
+|Jail
+|IGSA
+|[[GEO Group]]
+|102
+|
+|Female/Male
+|-
+|Ramsey County Adult Detention Center
+|Active (FY10 – FY16)
+|[[St. Paul, MN]]
+|[[Minnesota|MN]]
+|Jail
+|USMS IGA
+|Ramsey County Sheriff's Office
+|11
+|15
+|Female/Male
+|-
+|Randall County Jail
+|Active (FY10 – FY16)
+|[[Amarillo, TX]]
+|[[Texas|TX]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|1
+|40
+|Female/Male
+|-
+|Rice County Detention Center
+|Closed (Active FY10 – FY14)
+|[[Lyons, KS]]
+|[[Kansas|KS]]
+|Jail
+|IGSA
+|
+|1
+|
+|Female/Male
+|-
+|Rio Cosumnes Correctional. Center
+|Active (FY14 – FY16)
+|[[Elk Grove, CA]]
+|[[California|CA]]
+|Jail
+|IGSA
+|County (Sheriff)
+|136
+|
+|Male
+|-
+|[[Rio Grande Detention Center]]
+|Active (FY14 – FY16)
+|[[Laredo, TX]]
+|[[Texas|TX]]
+|Jail
+|USMS IGA
+|[[GEO Group]]
+|476
+|672
+|Male
+|-
+|Roanoke City Jail
+|Active (FY15 – FY16)
+|[[Roanoke, VA]]
+|[[Virginia|VA]]
+|Jail
+|IGSA
+|City
+|1
+|
+|Male
+|-
+|Rock Island County Correctional Center
+|Active (FY10 – FY16)
+|[[Rock Island, IL]]
+|[[Illinois|IL]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|1
+|20
+|Male
+|-
+|Rolling Plains Detention Center
+|Active (FY10 – FY16)
+|[[Haskell, TX]]
+|[[Texas|TX]]
+|Jail
+|IGSA
+|[[LaSalle Corrections]]
+|490
+|525
+|Female/Male
+|-
+|Saint Clair County Jail
+|Active (FY10 – FY16)
+|[[Port Huron, MI]]
+|[[Michigan|MI]]
+|Jail
+|IGSA
+|County (Sheriff)
+|69
+|
+|Female/Male
+|-
+|Saint Tammany Parish Jail
+|Active (FY12 – FY16)
+|[[Covington, LA]]
+|[[Louisiana|LA]]
+|Jail
+|IGSA
+|County (Sheriff)
+|4
+|
+|Female/Male
+|-
+|San Bernardino County Jail
+|Closed (Active FY10 – FY13)
+|[[San Bernardino, CA]]
+|[[California|CA]]
+|Jail
+|USMS IGA
+|
+|0
+|
+|Female/Male
+|-
+|San Luis Regional Detention Center
+|Active (FY13 – FY16)
+|[[San Luis, AZ]]
+|[[Arizona|AZ]]
+|Jail
+|USMS IGA
+|[[LaSalle Corrections]]
+|101
+|400
+|Female/Male
+|-
+|Sangamon County Jail
+|Closed (Active FY12 – FY14)
+|[[Springfield, IL]]
+|[[Illinois|IL]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|1
+|10
+|Male
+|-
+|Santa Ana City Jail
+|Closed (Active FY10 – FY15)
+|[[Santa Ana, CA]]
+|[[California|CA]]
+|Jail
+|IGSA
+|City of Santa Ana
+|161
+|
+|Female/Male
+|-
+|Sebastian County Detention Center
+|Active (FY10 – FY16)
+|[[Fort Smith, AR]]
+|[[Arkansas|AR]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|1
+|20
+|Male
+|-
+|Seneca County Jail
+|Active (FY10 – FY16)
+|[[Tiffin, OH]]
+|[[Ohio|OH]]
+|Jail
+|IGSA
+|Seneca County Sheriff's Office
+|49
+|
+|Female/Male
+|-
+|Shawnee County Department of Corrections
+|Active (FY16)
+|[[Topeka, KS]]
+|[[Kansas|KS]]
+|Jail
+|IGSA
+|County (Corrections)
+|3
+|
+|Female/Male
+|-
+|Sherburne County Jail
+|Active (FY10 – FY16)
+|[[Elk River, MN]]
+|[[Minnesota|MN]]
+|Jail
+|USMS IGA
+|Sherburne County Sheriff's Department
+|127
+|120
+|Female/Male
+|-
+|South Central Regional Jail
+|Active (FY10 – FY16)
+|[[Charleston, WV]]
+|[[West Virginia|WV]]
+|Jail
+|USMS IGA
+|County (Corrections)
+|6
+|5
+|Male
+|-
+|[[Basile Detention Center|South Louisiana Detention Center]]
+|Active (FY10 – FY15)
+|[[Basile, LA]]
+|[[Louisiana|LA]]
+|Jail
+|IGSA
+|
+|578
+|
+|Male
+|-
+|South Texas Detention Complex
+|Active (FY10 – FY16)
+|[[Pearsall, TX]]
+|[[Texas|TX]]
+|Private migrant detention center
+|CDF
+|[[GEO Group]]
+|1728
+|1890
+|Female/Male
+|-
+|[[Stewart Detention Center]]
+|Active (FY10 – FY16)
+|[[Lumpkin, GA]]
+|[[Georgia (U.S. state)|GA]]
+|Dedicated migrant detention center
+|DIGSA
+|[[CoreCivic]]
+|1369
+|1966
+|Male
+|-
+|Strafford County Corrections
+|Active (FY10 – FY16)
+|[[Dover, NH]]
+|[[New Hampshire|NH]]
+|Jail
+|IGSA
+|County (Corrections)
+|67
+|
+|Female/Male
+|-
+|Suffolk County House of Corrections
+|Active (FY10 – FY16)
+|[[Boston, MA]]
+|[[Massachusetts|MA]]
+|Jail
+|IGSA
+|County (Sheriff)
+|192
+|
+|Female/Male
+|-
+|Sweetwater County Jail
+|Active (FY10 – FY14)
+|[[Rock Springs, WY]]
+|[[Wyoming|WY]]
+|Jail
+|USMS IGA
+|
+|0
+|
+|Female/Male
+|-
+|Teller County Jail
+|Active (FY10 – FY16)
+|[[Divide, CO]]
+|[[Colorado|CO]]
+|Jail
+|IGSA
+|County (Sheriff)
+|10
+|
+|Female/Male
+|-
+|Tensas Parish Detention Center
+|Closed (Active FY10 – FY15)
+|[[Waterproof, LA]]
+|[[Louisiana|LA]]
+|Jail
+|IGSA
+|Emerald Correctional Management
+|49
+|
+|Male
+|-
+|[[Theo Lacy Facility|Theo Lacy Facility]]
+|Active (FY11 – FY16)
+|[[Orange, CA]]
+|[[California|CA]]
+|Jail
+|IGSA
+|County (Sheriff)
+|448
+|472
+|Male
+|-
+|Torrance County Detention Facility
+|Active (FY16)
+|[[Estancia, NM]]
+|[[New Mexico|NM]]
+|Jail
+|USMS IGA
+|[[CoreCivic]]
+|45
+|300
+|Female/Male
+|-
+|Tulsa County Jail (David L. Moss Justice Center)
+|Active (FY10 – FY16)
+|[[Tulsa, OK]]
+|[[Oklahoma|OK]]
+|Jail
+|IGSA
+|County (Sheriff)
+|132
+|
+|Female/Male
+|-
+|Utah County Jail
+|Closed (Active FY10 – FY15)
+|[[Spanish Fork, UT]]
+|[[Utah|UT]]
+|Jail
+|IGSA
+|
+|164
+|
+|Female/Male
+|-
+|[[Val Verde Correctional Facility]]
+|Active (FY10 – FY16)
+|[[Del Rio, TX]]
+|[[Texas|TX]]
+|Jail
+|USMS IGA
+|[[GEO Group]]
+|9
+|
+|Female/Male
+|-
+|Virginia Peninsula Regional Jail
+|Active (FY14 – FY16)
+|[[Williamsburg, VA]]
+|[[Virginia|VA]]
+|Jail
+|USMS IGA
+|County
+|50
+|
+|Female/Male
+|-
+|Wake County Sheriff Department
+|Active (FY10 – FY16)
+|[[Raleigh, NC]]
+|[[North Carolina|NC]]
+|Jail
+|IGSA
+|County (Sheriff)
+|3
+|
+|Male
+|-
+|Wakulla County Jail
+|Active (FY10 – FY16)
+|[[Crawfordville, FL]]
+|[[Florida|FL]]
+|Jail
+|IGSA
+|Wakulla County Sheriff's Department
+|62
+|
+|Male
+|-
+|[[Purgatory Correctional Facility|Washington County Jail (Purgatory Correctiona]]
+|Active (FY10 – FY16)
+|[[Hurricane, UT]]
+|[[Utah|UT]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|3
+|6
+|Male
+|-
+|Washoe County Jail
+|Active (FY10 – FY16)
+|[[Reno, NV]]
+|[[Nevada|NV]]
+|Jail
+|USMS IGA
+|Washoe County Sheriff's Office
+|14
+|86
+|Male
+|-
+|[[Wayne County Jail|Wayne County Jail]]
+|Active (FY10 – FY16)
+|[[Lyons, NY]]
+|[[New York (state)|NY]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|4
+|19
+|Female
+|-
+|West Texas Detention Facility
+|Active (FY10 – FY16)
+|[[Sierra Blanca, TX]]
+|[[Texas|TX]]
+|Jail
+|USMS IGA
+|[[LaSalle Corrections]]
+|452
+|450
+|Female/Male
+|-
+|Western Tennessee Detention Facility
+|Active (FY10 – FY16)
+|[[Mason, TN]]
+|[[Tennessee|TN]]
+|Jail
+|USMS IGA
+|[[CoreCivic]]
+|3
+|20
+|Male
+|-
+|Whitfield County Jail
+|Active (FY11 – FY16)
+|[[Dalton, GA]]
+|[[Georgia (U.S. state)|GA]]
+|Jail
+|IGSA
+|County (Sheriff)
+|1
+|
+|Male
+|-
+|[[Willacy County Regional Detention Center|Willacy County Regional Detention Facility]]
+|Active (FY14 – FY16)
+|[[Raymondville, TX]]
+|[[Texas|TX]]
+|Jail
+|USMS IGA
+|Management & Training Corp (MTC)
+|23
+|
+|Male
+|-
+|Worcester County Jail
+|Active (FY10 – FY16)
+|[[Snow Hill, MD]]
+|[[Maryland|MD]]
+|Jail
+|IGSA
+|Worcester County
+|165
+|
+|Female/Male
+|-
+|Yakima County Department of Corrections
+|Active (FY10 – FY16)
+|[[Yakima, WA]]
+|[[Washington (state)|WA]]
+|Jail
+|USMS IGA
+|County (Corrections)
+|8
+|
+|Male
+|-
+|Yavapai County Detention Center
+|Closed (Active FY10 – FY13)
+|[[Camp Verde, AZ]]
+|[[Arizona|AZ]]
+|Jail
+|IGSA
+|County (Sheriff)
+|1
+|
+|Female/Male
+|-
+|York County Detention Center
+|Active (FY10 – FY16)
+|[[York, SC]]
+|[[South Carolina|SC]]
+|Jail
+|USMS IGA
+|County (Sheriff)
+|28
+|70
+|Male
+|-
+|York County Prison
+|Active (FY10 – FY16)
+|[[York, PA]]
+|[[Pennsylvania|PA]]
+|Jail
+|IGSA
+|York County Department of Prisons
+|671
+|800
+|Female/Male
+|-
+|Yuba County Jail
+|Active (FY10 – FY16)
+|[[Marysville, CA]]
+|[[California|CA]]
+|Jail
+|IGSA
+|Yuba County Sheriff's Department
+|189
+|
+|Female/Male
+|}
+Data from ICE DMCP facility authorization listings (except where cited otherwise), with all current data from Fiscal years 2010 through 2016, and status sourced from presence or absence in prior years' data.<ref name="ice-dmcp-faclist17">{{Cite web | publisher = U.S. Department of Homeland Security | last = U.S. Immigration and Customs Enforcement | title = ICE DMCP Facility List — ERO Custody Management Division, FY2017 | date = 2017-07-10 | url = https://www.prisonlegalnews.org/media/publications/ICE_DMCP_Facility_List_ERO_Custody_Management_Division_2017.pdf}}</ref><ref name="ice-dmcp-faclist15">{{Cite web | publisher = U.S. Department of Homeland Security | last = U.S. Immigration and Customs Enforcement | title = ICE Detention Facility Data — December 8, 2015 | date = 2015-12-08 | url = https://www.ice.gov/doclib/foia/dfs/2015IceDetentionFacilityListing.xlsx}}</ref>

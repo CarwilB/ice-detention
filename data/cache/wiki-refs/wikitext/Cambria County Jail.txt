@@ -1,0 +1,72 @@
+{{Use American English|date=July 2025}}
+{{Use mdy dates|date=February 2025}}
+{{Infobox NRHP
+| name         = Cambria County Jail
+| nrhp_type    = 
+| image        = Cambria County Jail original and 1910 extension.JPG
+| caption      = Cambria County Jail, September 2014
+| location     = N. Center and Sample Sts., [[Ebensburg, Pennsylvania]]
+| coordinates  = {{coord|40|29|11|N|78|43|34|W|display=inline,title}}
+| pushpin_map  = Pennsylvania#USA
+| map_caption  = Location in [[Pennsylvania]]##Location in United States
+| built        = 1872
+| architect    = Edward Haviland
+| builder      = William Callan
+| architecture = [[Gothic Revival]]
+| added        = June 30, 1980
+| area         = {{convert|1.6|acre}}
+| ref_num      = 80003450<ref name="nris">{{NRISref|version=2010a}}</ref>
+}}
+'''Cambria County Jail''' is a historic [[jail]] located in downtown [[Ebensburg, Pennsylvania|Ebensburg]], Cambria County, Pennsylvania.<ref name=nrhpdoc>{{cite report|type=none|url=https://catalog.archives.gov/id/71995409 |title=National Register of Historic Places Registration: Pennsylvania SP Cambria County Jail|publisher=National Archives and Records Administration |author= Mary Ann O'Donnell Parfitt|date= n.d.| access-date=December 11, 2025 }} ({{NationalArchivesNote}})</ref>
+
+It was added to the [[National Register of Historic Places]] in 1980.<ref name="nris"/>
+
+== History ==
+In April 1870, the Cambria County commissioners purchased a parcel of land from E. J. McDonald for $2,500 for the construction of a new county prison.<ref name=":1" />
+
+Critics in Johnstown referred to it as a "[[Welsh people|Welsh]] castle" in ridicule, which was also a knock on Ebensburg's Welsh roots.<ref>{{Cite news|date=January 6, 2002|title=Cambria County Jail reopens as a museum|work=Pittsburgh Post-Gazette}}</ref>
+
+The prison was overcrowded for many years. A total of 123 men were confined in only 27 cells. They then went on to build an additional 52 cells in 1911.<ref name="Old Stone Jail History">{{Cite web |title=Old Stone Jail History |url=https://old-stone-jail.com/Home/History |access-date=2023-03-06 |website=old-stone-jail.com}}</ref>
+
+In the spring of 1997 the "Old Stone Jail" was abandoned for a new facility and temporarily was turned into a records center in a $400,000 project.<ref name=":1">{{Cite news|date=November 26, 1998|title=Unknown, Cambria County Historical Society|work=The Tribune-Democrat}}</ref> 
+
+=== Escape of Michael "Mickey" Smith ===
+Convicted in 1884 of killing a man from Johnstown. But after leaving a farewell letter to the warden, he managed to escape without a trace. The officers found that it was impossible to escape, because the walls were made of concrete and iron and they were about 22 feet high. The warden saw no trace of Michael Smith.
+
+<ref name="Khan">{{Cite web |last=Khan |first=Shahjehan |date=2021-03-09 |title=The Hauntings of Cambria County Jail |url=https://shahjehankhan2009.medium.com/the-hauntings-of-cambria-county-jail-803c0c16d75f |access-date=2023-03-06 |website=Medium |language=en}}</ref> Michael "Mickey" Smith would have been the fourth execution at the jail.<ref>{{Cite news|last=Evans|first=Susan|date=August 6, 2004|title=Gallows Tale|work=The Tribune Democrat}}</ref> He was never found. Reenactments of how Mickey may have escaped have been performed and his cell is the site of an exhibition hosted by the Old Stone Jail which includes a recreated noose by his height and weight.<ref>{{Cite news|last=Conrad|first=Hugh|date=August 2, 2004|title=Bicentennial group recreates escape|work=The Tribune Democrat}}</ref>
+
+=== Hauntings ===
+There are many other reported hauntings that the Cambria County Jail holds. The prison built gallows where they would execute men. 11 men were hung and or executed within the walls of the Cambria County Jail. Citizens could buy a ticket to watch people get hung on certain days for entertainment because they had no electricity that was available to them. Now when people tour the jail it is known for them to hear screams and feel cold breezes coming from the gallows.<ref name="Khan"/>  Paranormal Tours and Investigations are available through the Old Stone Jail's website.
+
+== Jail Renovations ==
+The Cambria County Jail is going to be completely changed into a Multi-Purpose building by developer, DSherwoodD Enterprises, LLC. This news came to light in June 2020. The Jail is now going to include offices, retail space, event space, and a breakfast/brunch Wi-Fi hotspot. The renovations will take many years, and it is set to be fully completed by late 2027.<ref>{{Cite web |last=Pesto |first=Mark |title=New plans revealed for old Cambria County Jail redevelopment |url=https://www.tribdem.com/news/new-plans-revealed-for-old-cambria-county-jail-redevelopment/article_e272af1c-c7c1-11ea-bb2c-631d751e5fba.html |access-date=2023-03-02 |website=The Tribune-Democrat |language=en}}</ref>
+
+=== Jail Tours ===
+Tours of the jail are currently being offered through the Old Stone Jail's website.  <ref>{{Cite web |title=Old Stone Jail|url=https://www.old-stone-jail.com/ |access-date=2023-03-06 |language=en-US}}</ref>
+
+== Architecture ==
+It was built in 1872, and is a [[Gothic Revival architecture|Gothic Revival]] style [[sandstone]] building measuring 56 feet wide, 100 feet deep, and 60 feet tall. An addition, (a new cell block) was built in 1910.  The front façade features pointed drop arch windows and a pointed arch portal. The jail is surrounded by a 22 feet tall substantial stone wall. The building also has a tower.<ref name="nrhpdoc"/> The tower is located at the front entrance. The floors are wooden but have iron that lays below. The building also contains a lower and upper floor with cells on each floor.<ref name="Old Stone Jail History"/>
+
+== In the Media ==
+=== Television ===
+The Cambria County Jail was featured as a haunted location on the season 3 episode of ''[[Paranormal Lockdown]]'', titled "Old Cambria Jail", which aired on [[Destination America]] in 2018. Paranormal investigators [[Nick Groff]] and [[Katrina Weidman]] spent 72-hours locked down in the jail to investigate the legend Michael "Mickey" Smith, an inmate who mysteriously disappeared from a locked cell shortly before his execution in 1884.<ref>{{Cite web|url=https://www.destinationamerica.com/tv-shows/paranormal-lockdown/full-episodes/old-cambria-jail|title = Old Cambria Jail &#124; Paranormal Lockdown}}</ref>
+
+The Travel Channel's television show [[Destination Fear (2019 TV series)|Destination Fear]] filmed at the location for the fifth episode of their second season in 2020.
+
+=== Books ===
+A book titled ''The Black Gate'' by David Regala Jr. covers a lot of information that was discussed in the episode of The Cambria County Jail. The book covers many hauntings, and even paranormal activity.<ref>{{Cite web |last=Smolen |first=Katie |title=In The Spotlight {{!}} Book details brothers' journey, history of old stone jail |url=https://www.tribdem.com/news/in-the-spotlight-book-details-brothers-journey-history-of-old-stone-jail/article_ca095e1a-95f8-11ec-b98c-abc51340a312.html |access-date=2023-03-21 |website=The Tribune-Democrat |language=en}}</ref>
+
+==References==
+{{reflist}}
+
+==External links==
+{{commons category-inline}}
+
+{{National Register of Historic Places in Pennsylvania}}
+
+[[Category:Jails on the National Register of Historic Places in Pennsylvania]]
+[[Category:Gothic Revival architecture in Pennsylvania]]
+[[Category:Government buildings completed in 1872]]
+[[Category:Buildings and structures in Cambria County, Pennsylvania]]
+[[Category:National Register of Historic Places in Cambria County, Pennsylvania]]
+[[Category:Jails in Pennsylvania]]

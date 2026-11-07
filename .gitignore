@@ -28,8 +28,5 @@ Thumbs.db
 # Large datasets
 data/ddp/*.parquet
 
-# Pipeline / harvest caches
-data/cache/
-
 /.quarto/
 **/*.quarto_ipynb

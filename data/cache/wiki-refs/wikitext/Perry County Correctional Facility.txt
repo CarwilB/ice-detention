@@ -1,0 +1,42 @@
+{{Short description|Prison in Alabama, United States}}
+{{Use American English|date=August 2025}}
+{{Use dmy dates|date=September 2023}}
+{{Infobox Prison
+| name           = Perry County Correctional Facility
+| image          = 
+| location       = 4805 Hwy 80 East, [[Uniontown, Alabama]]
+| coordinates    = 
+| status         = 
+| classification = 
+| capacity       = 738
+| opened         = 
+| closed         = 
+| managed_by     = [[LCS Corrections Services]]
+| director       = James Mullins
+}}
+:''not to be confused with Perry Correctional Institution, [[Pelzer, South Carolina]]''
+
+
+
+'''Perry County Correctional Facility''' is a privately owned and privately operated prison facility about {{convert|4|mi|spell=in|abbr=out}} east of [[Uniontown, Alabama|Uniontown]] in [[Perry County, Alabama]], and operated by [[LCS Corrections Services]].<ref name="auto">{{Cite web |url=http://www.lcscorrections.com/site23.php |title=Perry County Correctional Center - LCS CORRECTIONS SERVICES, INC |access-date=2014-02-13 |archive-url=https://web.archive.org/web/20090901152417/http://www.lcscorrections.com/site23.php |archive-date=2009-09-01 |url-status=dead }}</ref>
+
+Despite its name the prison has never been operated by, or housed prisoners of, Perry County. It opened in April 2006.{{citation needed|date=November 2020}} A contract with the [[Vermont Department of Corrections]] for the housing of 80 offenders ended in April 2009 amid allegations of understaffing and inmates being injured. It was Vermont's first private-prison contract.<ref>{{Cite web|url=https://www.sevendaysvt.com/vermont/vermont-pulls-its-inmates-from-cut-rate-alabama-prison/Content?oid=2137288|title=Vermont Pulls Its Inmates from Cut-Rate Alabama Prison|first=Ken|last=Picard|website=Seven Days}}</ref>
+
+
+
+On May 25, 2009, prisoners Ashton Mink and Joshua Southwick escaped and were re-captured after a 14-hour shootout in [[Gladstone, North Dakota]].<ref>{{Cite web |url=http://www.tuscaloosanews.com/apps/pbcs.dll/article?AID=%2F20090624%2FWVUA01%2F906249939&Title=Alabama-Suspects-Facing-Charges-in-North-Dakota |title=Alabama Suspects Facing Charges in North Dakota |archive-url=https://web.archive.org/web/20140303182431/http://www.tuscaloosanews.com/apps/pbcs.dll/article?AID=%2F20090624%2FWVUA01%2F906249939&Title=Alabama-Suspects-Facing-Charges-in-North-Dakota |archive-date=3 Mar 2014 |access-date=2022-07-15 }}</ref> Shortly thereafter Alabama removed its 250 prisoners from the facility, citing money concerns, although state Prison Commissioner Richard Allen noted that LCS had taken eleven and a half hours to notify officials of the Memorial Day escape.<ref>{{Cite web|url=https://www.tuscaloosanews.com/article/DA/20090609/NEWS/906089916/TL|title=Article 404 - Tuscaloosa News - Tuscaloosa, AL|website=Tuscaloosa News}}{{dead link|date=November 2020}}</ref>
+
+{{Update|inaccurate=yes|date=March 2026}}
+
+The facility continues to house federal inmates of the [[U.S. Immigration and Customs Enforcement]] and the [[United States Marshals Service]].<ref name="auto"/> {{As of|November 2013}} only about 30 federal prisoners were held in Perry even though the Alabama state system was running at an average 192% capacity.<ref>{{cite web |url=http://annistonstar.com/view/full_story/24099099/article-With-state-prisons-near-double-capacity--Perry-County-facility-resembles-ghost-town |title=Anniston Star - with state prisons near double capacity Perry County facility resembles ghost town |accessdate=2014-02-13 |url-status=dead |archiveurl=https://archive.today/20140213222758/http://annistonstar.com/view/full_story/24099099/article-With-state-prisons-near-double-capacity--Perry-County-facility-resembles-ghost-town |archivedate=2014-02-13 }}</ref>
+
+==References==
+{{reflist}}
+
+{{coord|32.45122|-87.44075|format=dms|display=title|type:landmark}}
+
+[[Category:Prisons in Alabama]]
+[[Category:Buildings and structures in Perry County, Alabama]]
+[[Category:Private prisons in the United States]]
+[[Category:Immigration detention centers and prisons in the United States]]
+[[Category:2006 establishments in Alabama]]

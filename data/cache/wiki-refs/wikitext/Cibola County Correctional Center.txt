@@ -1,0 +1,76 @@
+{{Short description|Minimum-security prison}}
+{{Use American English|date=August 2025}}
+{{Infobox prison
+| name            = Cibola County Correctional Center
+| image           = 
+| pushpin_map     = USA New Mexico
+| pushpin_caption = Location in New Mexico
+| location        = 2000 Cibola Loop, [[Milan, New Mexico]]
+| coordinates     = {{coord|35.18091|-107.90705|format=dms|display=inline,title|type:landmark}}
+| status          = 
+| classification  = medium security
+| capacity        = 1129
+| opened          = 1993
+| closed          = 
+| managed_by      = [[CoreCivic]]
+| warden          = Jeffry Fikes
+}}
+
+'''Cibola County Correctional Center''' is a privately-owned medium-security prison, located at 2000 Cibola Loop in [[Milan, New Mexico|Milan]], [[Cibola County, New Mexico]].<ref>{{Cite web |last=CoreCivic |title=Cibola County Correctional Center |url=https://www.corecivic.com/facilities/cibola-county-correctional-center |access-date=2026-08-07 |website=www.corecivic.com |language=en}}</ref>
+
+The facility first opened in 1993 as a county prison with capacity to house state prisoners, and was then acquired and expanded by the [[Corrections Corporation of America]] (CCA) in 1998.<ref>{{cite web|author=Cibola County through the years 0&nbsp;comments |url=http://www.cibolabeacon.com/archives/cibola-county-through-the-years/article_e645260f-a71e-5bce-9762-650a44b4caed.html |title=Cibola County through the years - Cibola Beacon: Archives |publisher=Cibola Beacon |date= |accessdate=2017-05-22}}</ref>  It has a capacity of 1129 inmates.<ref name=":1" />
+
+This facility is unrelated to Western New Mexico Correctional Facility, also in Cibola County, operated by the [[New Mexico Corrections Department]] with an inmate capacity of 440.
+
+== Bureau of Prisons era ==
+From 2000 to 2016,<ref name=":2">{{Cite news |last=Wessler |first=Seth Freed |date=2016-10-27 |title=ICE Plans to Reopen the Very Same Private Prison the Feds Just Closed |url=https://www.thenation.com/article/archive/ice-plans-to-reopen-the-very-same-private-prison-the-feds-just-closed/ |access-date=2026-08-07 |language=en-US |issn=0027-8378}}</ref> the facility housed federal prisoners as one of 13 "Criminal Alien Requirement" prisons in the United States.<ref>{{Cite web |date=2014-06-10 |title=New Mexico Has Little-Known For-Profit Prison for Immigrants; ACLU Investigation of Such Prisons Reveals Abuse, Inhumane Conditions |url=https://www.aclu-nm.org/news/new-mexico-has-little-known-profit-prison-immigrants-aclu-investigation-such-prisons-reveals/ |access-date=2026-08-07 |website=ACLU of New Mexico |language=en-US}}</ref> 
+
+Almost 700 Cibola County inmates staged a non-violent protest of prison conditions on April 23, 2001 and were tear-gassed.<ref>Invisible Punishment: The Collateral Consequences of Mass Imprisonment, edited by Meda Chesney-Lind, Marc Mauer</ref> As of June 2002, 95% of prisoners held in Cibola County were undocumented Mexican nationals.<ref>{{cite web|url=http://www.prnewswire.com/news-releases/us-prison-company-and-mexico-announce-agreement-on-incarcerated-immigrants-77998427.html |title=U.S. Prison Company and Mexico Announce Agreement on Incarcerated Immigrants |website=Prnewswire.com |date= |accessdate=2017-05-22}}</ref> In March 2013 about 250 inmates staged another non-violent protest, which was resolved peacefully.  Prison officials declined to reveal the reason for the protest.<ref>{{cite web|url=http://www.koat.com/news/new-mexico/albuquerque/Prison-on-lockdown-following-inmate-protest/19512792 |title=Prison on lockdown following inmate protest |website=Koat.com |date=2013-03-29 |accessdate=2017-05-22}}</ref>  
+
+In 2014, Jelacio Martinez-Lopez, a 39-year-old Mexican man who had been put on suicide watch, "hanged himself after he was left alone and untreated in a cell."<ref>{{Cite news |last=Wessler |first=Seth Freed |date=2016-08-15 |title=The Feds Will Shut Down the Troubled Private Prison in a ‘Nation’ Investigation |url=https://www.thenation.com/article/archive/feds-will-shut-down-troubled-private-prison-in-nation-investigation/ |access-date=2026-08-07 |language=en-US |issn=0027-8378}}</ref>
+
+From 2007-2016, 30 of the 34 citations against the facility were related to poor medical care, including the lack of an on-location doctor, failure to perform [[Cardiopulmonary resuscitation|CPR]], and lack of mental health evaluation for a suicidal inmate.<ref>{{Cite news|url=https://www.thenation.com/article/federal-officials-ignored-years-of-internal-warnings-about-deaths-at-private-prisons/|title=Federal Officials Ignored Years of Internal Warnings About Deaths at Private Prisons|last=Wessler|first=Seth Freed|journal=The Nation|date=2016-06-15|access-date=2019-05-07|language=en-US|issn=0027-8378}}</ref>
+
+== Closure and reopening ==
+
+Before the facility stopped housing federal inmates in 2016, it had been a "standout example of the problems at the BOP's private prisons."<ref>[https://www.thenation.com/article/ice-plans-to-reopen-the-very-same-private-prison-the-feds-just-closed/ ICE Plans to Reopen the Very Same Private Prison the Feds Just Closed]. 
+''[[The Nation]]'', Seth Freed Wessler, October 27, 2016. Retrieved November 30, 2017.</ref>
+
+In August 2016, Justice Department officials announced that the FBOP would be phasing out its use of contracted facilities, on the grounds that private prisons provided less safe and less effective services with no substantial cost savings.  The agency expected to allow current contracts on its thirteen remaining private facilities to expire.<ref>{{cite news |last1=Zapotosky |first1=Matt |title=Justice Department says it will end use of private prisons |url=https://www.washingtonpost.com/news/post-nation/wp/2016/08/18/justice-department-says-it-will-end-use-of-private-prisons/ |accessdate=19 August 2016 |work=Washington Post |date=18 Aug 2016}}</ref>  The same month CCA announced that their federal contract had not been renewed. The FBOP removed its last prisoner on October 1; the facility was slated to close with the loss of about 300 local jobs.<ref>{{cite news |title=Prison in Cibola County to close in October |url=http://www.kob.com/new-mexico-news/prison-in-cibola-county-to-close-in-october/4218897/ |accessdate=26 August 2016 |publisher=KOB-4 New Mexico |date=1 August 2016}}</ref> 
+
+By October 27, 2016, ICE had entered into talks with CCA and Cibola County to reopen the prison to hold ICE detainees.<ref>{{Cite news |last=Wessler |first=Seth Freed |date=2016-10-27 |title=ICE Plans to Reopen the Very Same Private Prison the Feds Just Closed |url=https://www.thenation.com/article/archive/ice-plans-to-reopen-the-very-same-private-prison-the-feds-just-closed/ |access-date=2026-08-07 |language=en-US |issn=0027-8378}}</ref> 
+
+== ICE era ==
+
+The facility was repurposed through an [[Immigration and Customs Enforcement]] contract under CCA's new name, [[CoreCivic]].<ref name=":2" /> The contract, called an Intergovernmental Service Agreement, used Cibola County as an intermediary between ICE and CoreCivic.<ref name=":1" />
+
+There are open lawsuits and investigations related to deaths of people who were detained in the facility since October 2016.<ref name=":1">{{Cite web|url=https://www.revealnews.org/article/inside-the-billion-dollar-industry-of-locking-up-immigrants/|title=Inside a private prison's $150M deal to detain immigrants in New Mexico|date=2017-10-26|website=Reveal|language=en|access-date=2019-05-07}}</ref> A 2018 hearing at the New Mexico state capitol documented experiences of abuse and negligence at both Cibola and [[Otero County Prison Facility]].<ref name=":0">{{Cite web|url=https://theworld.org/stories/2018/07/17/former-detainees-tell-new-mexico-legislators-about-abuses-immigration-detention|title=Former detainees tell New Mexico legislators about abuses in immigration detention as county seeks to renew contracts|website=Public Radio International|language=en|access-date=2019-05-07}}</ref> Eight ICE detainees died in 2018, with half of those occurring after detention in facilities operated by CoreCivic.<ref name=":0" /> 
+
+=== Transgender migrant detention ===
+
+Cibola County includes a dedicated section for the detention of [[transgender]] migrant detainees, one of the only such facilities after protests by immigrant groups led to the closure of the dedicated [[U.S. Immigration and Customs Enforcement|ICE]] GBT Pod that had housed gay, bisexual, and transgender detainees in [[Santa Ana, California|Santa Ana]].<ref>{{Cite web|url=https://splinternews.com/how-trans-ice-detainees-ended-up-in-a-men-s-detention-c-1795818417|title=How Trans ICE Detainees Ended Up in a Men's Detention Center in the Middle of New Mexico|last=Rivas|first=Jorge|website=Splinter|language=en-US|access-date=2019-01-04}}</ref> Transgender women detained at the facility face significant challenges, particularly due to the isolation and lack of available representation. The New Mexico Immigrant Law Center has sought emergency funding to provide lawyers with travel fees to provide suitable counsel. In some cases, however, they are more likely to have legal representation than other detainees at Cibola.<ref>{{Cite web|url=https://www.immigrantjustice.org/research-items/report-what-kind-miracle-systematic-violation-immigrants-right-counsel-cibola-county|title=Report {{!}} "What kind of miracle ..." - The Systematic Violation of Immigrants' Right to Counsel at the Cibola County Correctional Center|website=National Immigrant Justice Center|language=en|access-date=2019-05-07}}</ref>
+
+In November 2018, Roxsana Hernandez Rodriguez, a 33 year old [[Transgender women|transgender woman]] seeking asylum from [[Honduras]] died from dehydration and complications from [[HIV/AIDS|HIV infection]] after having been detained at CCCC for a single night. Hernandez had been in ICE custody for 16 days when she died, and been hospitalized for the same conditions a week before arriving at Cibola County. Fellow detainees witnessed her symptoms of severe dehydration and reported a lack of medical treatment or attention. An independent autopsy paid for by the [[Transgender Law Center]], a group that sued ICE on behalf of Hernandez, reported deep hemorrhaging of the soft tissues and muscles over her ribs.<ref>{{Cite news|url=https://www.nytimes.com/2018/11/27/us/trans-woman-roxsana-hernandez-ice-autopsy.html|title=Independent Autopsy of Transgender Asylum Seeker Who Died in ICE Custody Shows Signs of Abuse|last=Garcia|first=Sandra E.|date=2018-11-27|work=The New York Times|access-date=2019-01-04|language=en-US|issn=0362-4331}}</ref>
+
+=== HB9 and the switch to a direct contract ===
+In February 2026, New Mexico governor Michelle Lujan Grisham signed into law HB9, known as the Immigrant Safety Act. The law "bars state and local agencies from detaining people for federal civil immigration violations. It ends agreements that let local law enforcement act as federal immigration agents and prohibits public bodies from selling or leasing land for immigration detention."<ref>{{Cite web |last=Jones |first=Jesse |date=2026-02-05 |title=New NM law sparks ICE showdown: Will this new law change operations at MDC? |url=https://citydesk.org/2026/02/05/new-nm-law-sparks-ice-showdown-will-this-new-law-change-operations-at-mdc/ |access-date=2026-08-07 |website=City Desk ABQ |language=en-US}}</ref>
+
+Ralph Lucero, chair of the Cibola County Commission, called the law "a direct threat to the economic stability of our families, our workforce, and our small rural communities."<ref>{{Cite web |last=Lucero |first=Ralph |date=2026-02-21 |title=Cibola County will pay price for ICE bill |url=https://www.santafenewmexican.com/opinion/my_view/cibola-county-will-pay-price-for-ice-bill/article_ab0c53a0-2be3-417e-9f36-f090611fdb56.html |access-date=2026-08-07 |website=Santa Fe New Mexican |language=en}}</ref> 
+
+In March, ICE announced that it would seek a "sole source" contract with CoreCivic. On March 26, 2026, the Cibola County Commission voted to end their Intergovernmental Service Agreement with ICE, though they noted that they would reverse the decision if HB9 was enjoined.<ref>{{Cite web |last=Lohmann |first=Patrick |date=2026-03-27 |title=Cibola County Commission votes to exit ICE immigrant detention contract • Source New Mexico |url=https://sourcenm.com/2026/03/27/cibola-county-commission-votes-to-exit-ice-immigrant-detention-contract/ |access-date=2026-08-07 |website=Source New Mexico |language=en-US}}</ref> On April 30, 2026, CoreCivic signed a direct contract with ICE to keep detainees at Cibola County Correctional Facility and another New Mexico facility, [[Torrence County Detention Facility]].<ref>{{Cite web |last=cbates@sfnewmexican.com |first=Clara Bates |date=2026-05-06 |title=Cibola and Torrance immigrant lockups to stay open; feds contract with prison company |url=https://www.santafenewmexican.com/news/local_news/cibola-and-torrance-immigrant-lockups-to-stay-open-feds-contract-with-prison-company/article_88d663ee-e266-455a-8faf-7eb97eac551c.html |access-date=2026-08-07 |website=Santa Fe New Mexican |language=en}}</ref>
+
+==References==
+{{Reflist}}
+
+== External links ==
+
+*[http://www.corecivic.com/facilities/cibola-county-correctional-center Cibola County Correctional Center] ''(CoreCivic)''
+*[https://nmilc.org/get-help/cibola-detention-center/ Cibola Detention Center] ''([[New Mexico Immigrant Law Center]])''
+
+{{CoreCivic Facilities}}
+
+{{DEFAULTSORT:Cibola County Correctional Center}}
+[[Category:Prisons in New Mexico]]
+[[Category:CoreCivic]]
+[[Category:Buildings and structures in Cibola County, New Mexico]]
+[[Category:1993 establishments in New Mexico]]

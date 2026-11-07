@@ -1,0 +1,342 @@
+{{Short description|Prison near Marion, Illinois, United States}}
+{{Use American English|date=August 2025}}
+{{Use mdy dates|date=April 2012}}
+{{Infobox Prison
+|name = Federal Correctional Institution, Marion
+|image = [[File:MarionUSPnewpic.jpg|300px]]
+|location = Southern Precinct,<ref name=SouPrecinct/> [[Williamson County, Illinois|Williamson County]],<br>near [[Marion, Illinois]]
+|coordinates = {{Coord|37|39|47|N|88|59|3|W|type:landmark}}
+|status = Operational
+|classification = Medium-security (with minimum-security prison camp)
+|population = 1,298 [1,117 at the USP, 181 in prison camp] (September 2023)
+|opened = 1963
+|closed =
+|managed_by = [[Federal Bureau of Prisons]]
+|warden = Daniel Sproul
+|website = {{official website|https://www.bop.gov/locations/institutions/mar/}}
+}}
+
+The '''Federal Correctional Institution, Marion''' ('''FCI Marion''') is a large [[Prison#Inmate security classifications|medium-security]] United States [[federal prison]] for male inmates in Southern Precinct,<ref name=SouPrecinct>{{cite map |author=Geography Division |url=https://www2.census.gov/geo/maps/DC2020/DC20BLK/st17_il/cousub/cs1719993204_southern/DC20BLK_CS1719993204.pdf |title=2020 CENSUS - CENSUS BLOCK MAP: Southern precinct, IL |date=April 9, 2021 |publisher=[[U.S. Census Bureau]] |access-date=2022-08-13 |quote=United States Penitentiary Marion}}</ref> [[unincorporated area|unincorporated]] [[Williamson County, Illinois]].<ref>{{cite map |author=Geography Division |url=https://www2.census.gov/geo/maps/DC2020/DC20BLK/st17_il/county/c17199_williamson/DC20BLK_C17199.pdf |title=2020 CENSUS - CENSUS BLOCK MAP: Williamson County, IL |publisher=[[U.S. Census Bureau]] |access-date=2022-08-13 |page=12 (PDF p. 13/28) |date=April 14, 2021 |quote=United States Penitentiary Marion}}</ref><ref>{{cite web |url=https://www.bop.gov/locations/institutions/mar/index.jsp |title=USP Marion |publisher=[[Federal Bureau of Prisons]] |access-date=2020-03-30 |quote=4500 PRISON ROAD MARION, IL 62959}}</ref> It is operated by the [[Federal Bureau of Prisons]], a division of the [[United States Department of Justice]]. The facility also has an adjacent satellite prison camp that houses [[minimum security]] male offenders.
+
+FCI Marion in [[Southern Illinois]] is approximately {{convert|9|mi|km}} south of the city of [[Marion, Illinois]], {{convert|300|mi|km}} south of [[Chicago]], and {{convert|120|mi|km}} southeast of [[St. Louis, Missouri]].<ref>{{Cite web |title=FCI Marion |url=https://www.bop.gov/locations/institutions/mar/index.jsp |access-date=2025-10-26 |website=www.bop.gov}}</ref>
+
+==History==
+FCI Marion was built and opened in 1963 as '''United States Penitentiary, Marion''' ('''USP Marion'''), to replace [[Alcatraz Federal Penitentiary|the maximum security federal prison]] on [[Alcatraz Island]] in San Francisco, which closed the same year.<ref>{{cite web |url=http://www-unix.oit.umass.edu/~kastor/ceml_articles/cu_in_us.html |title=Control Unit Prisons |publisher=[[University of Massachusetts]] |access-date=October 23, 2006}}</ref> On [[Tornado outbreak of May 15-16, 2025|May 16, 2025]], a tornado hit the Penitentiary but no injuries were reported on site.<ref name="Marion1">{{cite web |publisher=[[WSIL-TV]] |last1=Mohundro |first1=Mike |access-date=June 19, 2025 |date=May 16, 2025 |title=Reported tornado in Williamson County leaves homes destroyed, injures three |url=https://www.wsiltv.com/news/illinois/reported-tornado-in-williamson-county-leaves-homes-destroyed-injures-three/article_05bc3207-cdce-4f13-8c13-50f51fa5cc09.html}}</ref>
+
+==Influence==
+
+Several prisons in Iran, including two maximum-security prisons in Shiraz and Mashhad, were built in the 1960s, at the time an autocracy under the [[Mohammad Reza Pahlavi|last shah]] and later a [[theocratic]] [[Islamic republic]], from [[blueprint]]s of USP Marion as the US and Iranian systems experimented with confining and controlling "trouble" populations, with new experiments in solitary confinement and "group therapy" sessions. The blueprints were also used for prisons in Israel, New Zealand, and elsewhere.<ref>{{cite book| title=The Incarcerated Modern: Prisons and Public Life in Iran|first=Golnar|last=Nikpour| publisher=Stanford University Press|chapter=Introduction| url=https://www.sup.org/books/middle-east-studies/incarcerated-modern/excerpt/introduction-excerpt |date=February 2024|isbn=9781503636699}}</ref>
+
+==Notable incidents==
+
+===High-profile escape attempts===
+
+The first escape from USP Marion was on July 21, 1971, when Warren George Briggs leapt over two {{convert|15|ft|adj=on}} fences and escaped to Kansas City, Missouri, via Interstate 57. Four days later, Warren turned himself in to the FBI. He reportedly did this so he could draw attention to his invention, a water [[desalination]] process.<ref>{{Cite web |url=https://www.mihp.org/2017/04/briggs-the-first-escape-from-marion-federal-prison/ |title=Briggs, Warren George, the First Escape from Marion Federal Prison |date=April 3, 2017}}</ref><ref>{{Cite news |date=1971-07-25 |title=Escaped Convict Tells Of Desalting Invention |url=https://www.nytimes.com/1971/07/25/archives/escaped-convict-tells-of-desalting-invention.html |access-date=2025-07-01 |work=The New York Times |language=en-US |issn=0362-4331}}</ref>
+
+On October 10, 1975, five inmates used an illegal homemade electronic device to open the front gates of the prison. One of them had been an electrician and was assigned to work on the lock mechanisms of all of the doors in the main corridors. He also converted a radio into a remote control, with which he opened all of the doors. The five escapees were all eventually captured and returned to prison, the last one being apprehended in Canada on October 31, 1975.
+
+Two escape attempts occurred in 1978 involving the same inmate, [[Garrett Brock Trapnell]].  On May 24, 1978, Trapnell's friend, 43-year-old Barbara Ann Oswald, hijacked a St. Louis based charter helicopter and ordered the pilot, Allen Barklage, to fly to USP Marion.  Barklage complied, but he wrestled the gun away from Oswald and fatally shot her while he was landing in the prison yard, thwarting the escape. On December 21, 1978, Oswald's 17-year-old daughter, Robin Oswald, hijacked [[TWA Flight 541]], which was en route from [[Louisville International Airport]] to [[Kansas City International Airport]] and threatened to detonate dynamite strapped to her body if the pilot did not fly to [[Williamson County Regional Airport]], located only miles from USP Marion.  When the pilot landed at the airport in Marion, hundreds of [[Police officer|cops]] showed up,  Robin Oswald surrendered to [[F.B.I.]] negotiators at the Williamson airport without incident about ten hours later.  The dynamite was later found to be fake.<ref>{{cite book |url=https://books.google.com/books?id=X5-ngmwEdeQC&q=%22Robin+Oswald%22&pg=PA193 |title=Prisons and the American Conscience .. |access-date=July 10, 2011 |isbn=9780809320035 |year=1995 |last1=Keve |first1=Paul W. |publisher=SIU Press}}</ref><ref>{{cite news |first=Tim |last=O'Neil |url=http://www.stltoday.com/news/local/metro/article_1aac5de6-6eb4-5245-a126-7adf324d5eb2.html |title='You're not going to believe this': A bizarre hijacking at Lambert in 1972 |work=STLtoday.com |date=June 25, 2011 |access-date=September 12, 2025}}</ref>
+
+The last escape from the maximum-security prison area was on February 14, 1979, when Lawrence Caldwell, Albert Garza and Howard Zumberge climbed both exterior fences in a dense fog; Caldwell was caught before he could clear the first of the two fences.<ref>{{cite web |url=https://law.justia.com/cases/federal/appellate-courts/F2/664/135/198335/ |title=United States of America, Plaintiff-appellee, v. Albert Garza, Defendant-appellant.united States of America, Plaintiff-appellee, v. Howard Zumberge, Defendant-appellant.united States of America, Plaintiff-appellee, v. Lawrence Caldwell, Defendant-appellant, 664 F.2d 135 (7th Cir. 1981)}}</ref>  Both Garza and Zumberge were apprehended three days later near Cypress, hiding in a church basement. During the capture of the escapees, Garza shot Johnson County Sheriff Elry Faulkner in the chest at almost point-blank range; Faulkner, however, was wearing a ballistic vest and only suffered minor bruises.  Garza was shot and wounded, but survived and returned to Marion two months later.<ref>{{cite web |url=http://law.justia.com/cases/federal/appellate-courts/F2/779/390/106252/ |title=Albert Garza, Plaintiff-appellant, v. J.D. Henderson, S.R. Witkowski, George Wilkinson, R.M. Carey, and J.J. Clark, Defendants-appellees, 779 F.2d 390 (7th Cor. 1985) |website=justia.com |access-date=April 17, 2018}}</ref><ref>{{cite web |url=http://thesouthern.com/news/years-at-marion-prison-one-of-region-s-largest-employers/article_ed822ba8-14f5-58c0-a061-25d9ad7104b3.html |title=40 Years at Marion Prison: One of the Region's Largest Employers Has Storied Past |first=Tim |last=Petrowich |date=May 19, 2003 |website=thesouthern.com |access-date=April 17, 2018}}</ref>
+
+===Murders of correction officers Clutts and Hoffmann===
+
+[[File:Merle Clutts.jpg|thumb|right|Correction Officer Merle Clutts]]
+[[File:Robert L. Hoffmann.jpg|thumb|Correction Officer Robert Hoffmann]]
+On October 22, 1983, correctional officers [[Thomas Silverstein#Murder of Correction Officer Clutts|Clutts and Hoffmann]] were killed in separate incidents only hours apart, both at the hands of members of the [[Aryan Brotherhood]], a white-supremacist prison gang. Officer Clutts was stabbed to death by [[Thomas Silverstein]].<ref name=hero-clutts>{{cite web |url=http://www.bop.gov/about/history/hero_clutts.jsp?i=17 |title=Merle E. Clutts, Fallen Hero |publisher=Bop.gov |date=1983-10-22 |access-date=2014-03-15}}</ref><ref name=bbc-most-dangerous>{{cite news |url=http://news.bbc.co.uk/2/hi/americas/1393970.stm |title=America's Most Dangerous Prisoner? |work=BBC News |access-date=October 23, 2006 |date=August 10, 2001}}</ref>  While walking down a hall accompanied by Clutts, Silverstein was able to turn to the side and approach a particular cell. The prisoner in that cell subsequently unlocked Silverstein's handcuffs with a stolen key and provided him with a knife.<ref name="bbc-most-dangerous" />  Later that same morning, Officer Hoffmann was stabbed to death by [[Clayton Fountain]], after Hoffmann had pulled Fountain off another officer who was being attacked.<ref name="hero-hoffman">{{cite web |url=http://www.bop.gov/about/history/hero_hoffmann.jsp?i=18 |title=Robert L. Hoffman, Fallen Hero |publisher=Bop.gov |access-date=2014-03-15}}</ref>
+
+== Permanent lockdown and the birth of the supermax ==
+As a result of the murders of Clutts and Hoffmann, USP Marion went into "permanent lockdown"<!-- new source suggests longer than 23 years --> with all inmates locked in their cells for the majority of the day.<ref>{{cite journal |author=Richards, Stephen C. |url=https://www.ncjrs.gov/App/publications/abstract.aspx?ID=243734 |title=USP Marion: The First Federal Supermax |journal=The Prison Journal |volume=8 |issue=1 |page=6 to 22 |publisher=Ncjrs.gov |date=March 2008 |doi=10.1177/0032885507310529 |s2cid=145402046 |access-date=2014-03-15 |url-access=subscription}}</ref>  USP Marion was effectively transformed into a "control unit" prison, also called [[supermax]], or "super-maximum" security.  This method of prison operation involves the keeping of inmates in [[solitary confinement]] for 23 hours a day, and does not allow communal dining, exercising, or religious services.
+
+Years later, [[Norman Carlson]], director of the Bureau of Prisons at the time of the Marion incident, said that as draconian as the permanent lockdown was, he believed it the only way to deal with "a very small subset of the inmate population who show absolutely no concern for human life."  He pointed out that the two inmates who killed the guards were already serving multiple life sentences, so adding another would have had no effect.  The "control unit" model at Marion was later the basis for [[ADX Florence]], which opened in 1994 as a specifically designed supermax prison.<ref>{{cite news |url=https://www.sfgate.com/news/article/The-Last-Worst-Place-The-isolation-at-2970596.php |title=The Last Worst Place: The isolation at Colorado's ADX prison is brutal. So are the inmates |last=Taylor |first=Michael |date=December 28, 1998 |work=San Francisco Chronicle |access-date=August 13, 2009}}</ref>
+
+==Downgraded to medium-security prison==
+
+In 2006, USP Marion's designation was changed to a medium security prison and major renovations were made.  The renovations increased Marion's inmate population from 383 to 901.<ref>{{cite web |last=Hunsperger |first=Kevin |title=Marion Prison Tours |publisher=WSIL TV |url=http://www.wsiltv.com/p/news_details.php?newsID=1560&type=local |access-date=March 24, 2008 |archive-url=https://web.archive.org/web/20110716095616/http://www.wsiltv.com/p/news_details.php?newsID=1560&type=local |archive-date=July 16, 2011 |url-status=dead |df=mdy-all}}</ref>
+
+In 2024, USP Marion was renamed to FCI Marion.<ref>{{Cite web |date=2024-04-04 |title=Name Changes Approved for Seven FBOP Facilities |url=https://www.bop.gov/resources/news/20240404-name-changes-approved-for-seven-fbop-facilities.jsp |access-date=2025-10-26 |website=www.bop.gov |language=en}}</ref>
+
+==Communication Management Unit==
+Although the facility no longer operates as a "supermax" facility, FCI Marion is now home to one of two "Communication Management Units" in the federal prison system. The other is at the [[Federal Correctional Complex, Terre Haute]], Indiana.  The [[Federal Bureau of Prisons]] created the [[Communication Management Unit]] (CMU) in response to criticism that it had not been adequately monitoring the communications of prisoners.  "By concentrating resources in this fashion, it will greatly enhance the agency's capabilities for language translation, content analysis and intelligence sharing," according to the Bureau's summary of the CMU.<ref>[https://www.washingtonpost.com/wp-dyn/content/article/2007/02/24/AR2007022401231_pf.html Washington Post, February 2007] Facility holding terrorism inmates limits communication</ref><ref>{{cite news |url=https://www.huffpost.com/entry/tales-from-inside-the-us_b_212632 |title=Tales from Inside the US |date=July 9, 2009 |work=HuffPost |first=Daniel |last=McGowan}}</ref> In a ''[[Democracy Now!]]'' interview on June 25, 2009, animal rights activist [[Andrew Stepanian]] talked about being jailed at the CMU. Stepanian is believed to be the first prisoner released from a CMU.<ref>{{cite web |url=http://www.democracynow.org/2009/6/25/exclusive_animal_rights_activist_jailed_at |title=Democracy Now interview |publisher=Democracynow.org |date=2009-06-25 |access-date=2014-03-15}}</ref>
+
+==Significant inmates==
+'''†''' Inmates who were released from custody prior to 1982 are not listed on the Federal Bureau of Prisons website.<br />'''††''' The [[Sentencing Reform Act]] of 1984 eliminated [[parole]] for most federal inmates. Inmates sentenced for offenses committed prior to 1987 are eligible for parole consideration.<ref>{{cite web |title=History of the Federal Parole System |url=https://www.justice.gov/uspc/history.htm |publisher=US Department of Justice |access-date=16 March 2013 |url-status=dead |archive-url=https://web.archive.org/web/20130313150144/http://www.justice.gov/uspc/history.htm |archive-date=March 13, 2013 |df=mdy-all}}</ref>
+
+===Foreign terrorists===
+Foreign citizens who committed or attempted terrorist attacks against United States citizens and interests.
+{|class="wikitable sortable"
+|-
+!width=17%|Inmate Name
+!width=13%|Register Number
+!width=20%|Status
+!width=50%|Details
+|-
+| style="text-align:center;" | Mohammed Saleh
+| style="text-align:center;" | [https://www.bop.gov/inmateloc/34853-054 34853-054]
+| <span style="display:none;">9999-99-99</span>Served a 35-year sentence, released on September 1, 2023.
+| rowspan=2|[[Al-Qaeda]] operatives and followers of [[Sheikh]] [[Omar Abdel Rahman]]; convicted in 1996 of [[seditious conspiracy]] and other charges for their involvement in the foiled [[New York City landmark bomb plot|NYC landmark bomb plot]].<ref>{{cite news |author=Fried, Joseph P. |url=https://www.nytimes.com/1996/01/18/nyregion/sheik-sentenced-to-life-in-prison-in-bombing-plot.html?pagewanted=all&src=pm |title=Sheik Sentenced To Life In Prison In Bombing Plot - New York Times |location=Egypt; Holland Tunnel; Middle East; Israel; United States |work=[[The New York Times]] |date=1996-01-18 |access-date=2014-03-15}}</ref>
+|-
+| style="text-align:center;" | [[Clement Rodney Hampton-El|Clement Hampton-El]]
+| style="text-align:center;" | [https://www.bop.gov/mobile/find_inmate/index.jsp 34854-054]
+| Died in 2014 while serving a 35-year sentence.
+|-
+| style="text-align:center;"| [[Mohammed A. Salameh]]
+| style="text-align:center;"| [http://www.bop.gov/inmateloc 34338-054]
+| Serving an 86-year and 11-month sentence.
+| Palestinian terrorist, convicted perpetrator of the [[1993 World Trade Center bombing]].
+|-
+| style="text-align:center;" | [[Mohamed Rashed Daoud Al-Owhali]]
+| style="text-align:center;" | [https://www.bop.gov/mobile/find_inmate/index.jsp 42371-054]
+| Serving a life sentence. Transferred to [[ADX Florence]].
+| [[Al-Qaeda]] operative; convicted of [[murder]], [[Conspiracy to murder|conspiracy to commit murder]] and conspiracy to use a [[weapon of mass destruction]], in relation to his role in the [[1998 United States embassy bombings]] in [[Nairobi]], [[Kenya]]. Sentenced to life in prison in 2001.<ref>{{cite news |url=http://edition.cnn.com/WORLD/africa/9808/27/kenya.suspect.03/ |archive-url=https://web.archive.org/web/20190426232607/http://edition.cnn.com/WORLD/africa/9808/27/kenya.suspect.03/ |url-status=dead |archive-date=April 26, 2019 |title=Yemeni national charged with 14 counts in Nairobi bombing |location=New York |publisher=CNN |date=1998-08-27 |access-date=2019-07-13}}</ref><ref>{{cite news |author=Ellison, Michael |url=https://www.theguardian.com/world/2001/oct/19/afghanistan.terrorism8 |title=Al-Qaida terrorists get life for embassy bombings |location=New York City |work=The Guardian |date=2001-10-19 |access-date=2019-07-13}}</ref>
+|-
+| style="text-align:center;"| [[Iyman Faris]]
+| style="text-align:center;"| [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=46680-083&x=22&y=15 46680-083] {{Webarchive|url=https://web.archive.org/web/20120920174519/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=46680-083&x=22&y=15 |date=September 20, 2012 }}
+| Served a 20-year sentence; released on August 18, 2020.
+| [[Al-Qaeda]] operative; pleaded guilty in 2003 to terrorism conspiracy for researching potential targets, including the [[Brooklyn Bridge]] in New York City, and obtaining equipment to be used in attacks at the behest of [[Al-Qaeda]] leader [[Osama bin Laden]].<ref>{{cite web |url=https://www.justice.gov/opa/pr/2003/October/03_crm_589.htm |title=#589: 10-28-03 IYMAN FARIS SENTENCED FOR PROVIDING MATERIAL SUPPORT TO AL QAEDA |publisher=Justice.gov |date=2003-10-28 |access-date=2012-08-13}}</ref>
+|-
+| style="text-align:center;"| [[Omar Rezaq]]
+| style="text-align:center;"| [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=20267-016&x=70&y=6 20267-016]
+| Serving a life sentence; eligible for release in 2023.'''††'''
+| Follower of the militant [[Palestinian people|Palestinian]] leader [[Abu Nidal]] and the sole surviving hijacker of [[EgyptAir Flight 648]]; 58 people were killed during the 1985 hijacking; Rezaq was convicted of [[air piracy]] in 1996.<ref>{{cite news |author=Loci, Tony |url=https://www.latimes.com/archives/la-xpm-1996-10-08-mn-51609-story.html |title=Airline Hijacker Gets Life for Incident That Killed 58 |work=Los Angeles Times |date=1996-10-08 |access-date=2014-03-15}}</ref>
+|-
+| align="center" | {{sortname|Abdul|Murad|Abdul Hakim Murad (militant)}}
+| align="center" | [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=37437-054&x=80&y=12 37437-054]{{Dead link|date=August 2025 |bot=InternetArchiveBot |fix-attempted=yes }}
+| Serving a life sentence. Transferred to [[United States Penitentiary, Terre Haute|USP Terre Haute]]
+| [[Al-Qaeda]] operative; convicted in 1996 of [[conspiracy (crime)|conspiracy]] in connection with planning [[Project Bojinka]], a foiled plot conceived by senior [[Al-Qaeda]] member [[Khalid Sheikh Mohammed]] to bomb twelve planes over the Pacific Ocean in a 48-hour period.<ref name="Times2">{{cite news |url=https://www.nytimes.com/1996/09/06/nyregion/us-jury-convicts-3-in-a-conspiracy-to-bomb-airliners.html?ref=abdulhakimmurad |work=The New York Times |access-date=17 March 2013 |first=Christopher S. |last=Wren |title=U.S. Jury Convicts 3 in a Conspiracy to Bomb Airliners |date=September 6, 1996}}</ref><ref>{{cite news |url=https://www.nytimes.com/2006/08/11/world/europe/11manila.html |work=The New York Times |access-date=17 March 2013 |first1=Raymond |last1=Bonner |first2=Benjamin |last2=Weiser |title=Echoes of Early Design to Use Chemicals to Blow Up Airliners |date=August 11, 2006}}</ref>
+|-
+| style="text-align:center;"| [[Dritan Duka]]
+| align="center" | [https://www.bop.gov/mobile/find_inmate/index.jsp 61285-066]
+|Serving life plus 30 years. Transferred to [[Federal Correctional Institution, Terre Haute|FCI Terre Haute]].
+|One of the six men that conspired to attack an Army Base in [[Fort Dix, New Jersey]]. His brothers [[Eljvir Duka]] and [[Shain Duka]] are being held [[United States Penitentiary, Hazelton|USP Hazelton]] and [[ADX Florence]], respectively.
+|}
+
+===Domestic terrorists===
+American citizens who committed or attempted terrorist attacks against United States citizens and interests.
+{|class="wikitable sortable"
+|-
+!width=14%|Inmate Name
+!width=10%|Register Number
+!Photo
+! width="23%" |Status
+!width=53%|Details
+|-
+| style="text-align:center;"| [[Schaeffer Cox|Francis Schaeffer Cox]]
+| style="text-align:center;"| [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=16179-006&x=73&y=19 16179-006]
+|
+| Transferred to RRM Seattle. Serving a 25-year and ten-month sentence; scheduled for release on September 6, 2024.
+| Leader of the Alaska Peacekeepers Militia; convicted in 2012 of murder [[conspiracy (crime)|conspiracy]] for plotting the murders of judges and law enforcement agents; two co-defendants were also sentenced to prison.<ref>{{cite news |last=Rosen |first=Yereth |url=https://www.reuters.com/article/us-usa-militia-alaska-idUSBRE90803H20130109 |title=Alaska militia leader sentenced to nearly 26 years in prison |publisher=Reuters |date=2013-01-09 |access-date=2014-03-15}}</ref><ref>{{cite web |url=https://www.justice.gov/usao/ak/news/2012/June_2012/Francis%20Schaeffer%20Cox.html |title=USDOJ: US Attorney's Office - Alaska |publisher=Justice.gov |date=June 2012 |access-date=2014-03-15 |archive-url=https://web.archive.org/web/20140315130353/http://www.justice.gov/usao/ak/news/2012/June_2012/Francis%20Schaeffer%20Cox.html |archive-date=March 15, 2014 |url-status=dead |df=mdy-all}}</ref><ref>{{cite web |url=http://www.atf.gov/press/releases/2013/01/010913-sea-fairbanks-residents-sentenced-for-conspiracy-to-murder-public-officials-and-weapons-violations.html |title=Fairbanks Residents Sentenced for Conspiracy to Murder Public Officials and Weapons Violations &#124; ATF |publisher=Atf.gov |date=2013-01-09 |access-date=2014-03-15 |archive-url=https://web.archive.org/web/20140315113423/http://www.atf.gov/press/releases/2013/01/010913-sea-fairbanks-residents-sentenced-for-conspiracy-to-murder-public-officials-and-weapons-violations.html |archive-date=March 15, 2014 |url-status=dead |df=mdy-all}}</ref><ref>{{cite news |author=Murphy, Kim |url=https://www.latimes.com/nation/la-xpm-2013-jan-08-la-na-nn-alaska-militia-20130108-story.html |title=Alaska militia leader Schaeffer Cox gets 25-year prison term |work=Los Angeles Times |date=2013-01-08 |access-date=2021-01-26}}</ref>
+|-
+| style="text-align:center;"| [[Michael Finton]]
+| style="text-align:center;"| [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=17031-026&x=74&y=28 17031-026]
+|
+| Transferred to [[FCI Bennettsville]]. Serving a 28-year sentence; scheduled for release on January 11, 2034.
+| Follower of the late militant cleric [[Anwar Al-Awlaki]]; pleaded guilty in 2011 to attempted use of a [[weapon of mass destruction]] for plotting to destroy a federal building in Illinois with a truck bomb in 2009.<ref>{{cite news |url=https://chicago.cbslocal.com/2011/05/09/man-who-sought-to-blow-up-springfield-ill-courthouse-gets-28-years/ |title=Man Who Sought To Blow Up Springfield, Ill. Courthouse Gets 28 Years |publisher=CBS |date=2011-05-09 |access-date=2020-06-15}}</ref><ref>{{cite news |author=Frieden, Terry |url=http://www.cnn.com/2011/CRIME/05/09/illinois.bomb.plot/index.html |title=Man sentenced to 28 years for plotting to bomb federal courthouse |work=CNN |date=2011-05-09 |access-date=2020-06-15 |url-status=live |archive-url=https://web.archive.org/web/20121008115340/http://articles.cnn.com/2011-05-09/justice/illinois.bomb.plot_1_federal-courthouse-sting-operation-michael-finton?_s=PM%3ACRIME |archive-date=October 8, 2012 |df=mdy-all}}</ref>
+|-
+| style="text-align:center;"| [[Operation Arabian Knight|Carlos Almonte]]
+| style="text-align:center;"| [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=61800-050&x=88&y=20 61800-050]
+| {{CSS image crop
+|Image = Carlos Eduardo Almonte and Mohamed Mahmood Alessa.jpg
+|bSize = 160
+|cWidth = 80
+|cHeight = 100
+|oTop = 0
+|oLeft = 0
+}}
+| Transferred to [[FCI Fairton]]. Serving a 20-year sentence; scheduled for release on June 20, 2027.
+| Pleaded guilty to [[conspiracy (crime)|conspiracy]] to murder persons outside the US, and for attempting to join [[Al-Shabaab (militant group)|Al Shabaab]], a terrorist group based in Somalia; co-conspirator Mohamed Alessa was sentenced to 22 years.<ref name="autogenerated1">{{cite web |url=http://www.nj.com/news/jjournal/index.ssf?/base/news-4/1276152059131710.xml&coll=3 |title=Lawyers for terror suspects from North Bergen and Elmwood Park will ask federal judge to allow bail at hearing today in Newark |publisher=NJ.com |access-date=June 10, 2010}}</ref><ref>{{cite web |url=https://www.justice.gov/usao/nj/Press/files/Alessa,%20Mohamed%20et.%20al.%20News%20Release.html |title=USDOJ: US Attorney's Office - District of New Jersey |publisher=Justice.gov |access-date=2014-03-15 |archive-url=https://web.archive.org/web/20130713052618/http://www.justice.gov/usao/nj/Press/files/Alessa,%20Mohamed%20et.%20al.%20News%20Release.html |archive-date=July 13, 2013 |url-status=dead |df=mdy-all}}</ref>
+|-
+| style="text-align:center;" | [[Alexis Candelario Santana]]
+| style="text-align:center;" | 34421-069
+|
+|Transferred to [[MDC Guaynabo]]. Serving a life sentence.
+|Convicted in 2013 for the [[2009 Sabana Seca massacre]]
+|-
+| style="text-align:center;"| [[Richard Scutari]]
+| style="text-align:center;"| [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=34840-080&x=91&y=22 34840-080] {{Webarchive|url=https://archive.today/20121212235409/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=34840-080&x=91&y=22 |date=December 12, 2012 }}
+|
+| Transferred to [[Federal Correctional Institution, Mendota|FCI Mendota]]. Serving a 60-year sentence; scheduled for release on June 26, 2025.
+| Former member of the white supremacist group [[The Order (white supremacist group)|The Order]]. Convicted in 1987 of conspiracy, racketeering, and robbery.
+|-
+| style="text-align:center;"|[[October 2018 United States mail bombing attempts|Cesar Altieri Sayoc]]
+| style="text-align:center;"| [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=34840-080&x=91&y=22 17781-104] {{Webarchive|url=https://archive.today/20121212235409/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=34840-080&x=91&y=22 |date=December 12, 2012 }}
+| [[File:Cesar Sayoc mug shot 2015-08-30.jpg|80px]]
+| Transferred to [[FCI Butner Medium|FCI Butner Medium II]].
+Serving a 20-year sentence, scheduled for release on November 10, 2035.
+|Pleaded guilty to mailing explosive devices to critics of [[US President Donald Trump]]. These included leading [[Democratic Party (United States)|Democratic Party]] politicians such as former U.S. President [[Barack Obama]], former U.S. Vice President [[Joe Biden]], and former U.S. Secretary of State [[Hillary Clinton]]. One package was addressed only to [[CNN]] and sent to its [[CNN Center|world headquarters]].
+|-
+| style="text-align:center;" | [[List of Atomwaffen Division members in the United States who faced criminal charges#"Operation Erste Säule" ("Operation First Pillar")|Kaleb James Cole]]
+| style="text-align:center;" | [https://www.bop.gov/inmateloc/ 13964-579]
+|
+|Serving a seven-year sentence; scheduled for release on June 17, 2025.
+|The FBI had sought an Extreme Risk Protection Order against Cole and seized his cache of weapons which included five assault rifles, a shotgun and pistols in October 2019. According to the FBI Cole had also acquired separate parts needed to manufacture untraceable AR-15s. Seattle City Attorney Pete Holmes told the media they "firmly believe, prevented a massacre". Cole was sentenced for conspiring to threaten Jews, black people and journalists in Washington and two other states.<ref name="Newsweek">{{cite news |url=https://www.newsweek.com/aiden-bruce-umbaugh-neo-nazi-firearms-1472083 |title=Alleged neo-nazi charged with illegal possession of semi-automatic rifles, thousands of rounds of ammunition |date=November 15, 2019 |work=[[Newsweek]]}}</ref><ref>{{cite web |url=https://www.seattletimes.com/seattle-news/law-justice/purported-leader-of-neo-nazi-group-sentenced-to-7-years-for-seattle-area-threats-intimidation/ |title=Purported leader of violent neo-Nazi group sentenced to prison for Seattle-area threats intimidation |work=[[Seattle Times]] |date=January 12, 2022}}</ref>
+|-
+| style="text-align:center;" |[[Zachary Adam Chesser]]
+| style="text-align:center;" |[http://www.bop.gov/inmateloc/ 76715-083]
+| style="text-align:center;" |[[File:Zachary Chesser mug shot.jpg|80px]]
+|Transferred to [[ADX Florence]] and then to [[United States Penitentiary, Hazelton|USP Hazelton]].
+Serving a 25-year sentence; scheduled for release on January 1, 2032.
+|Convicted in 2010 for attempting to provide material support to a designated foreign terrorist organization by aiding [[Al-Shabaab (militant group)|Al-Shabaab]], a militant group with ties to [[Al-Qaeda]]. He was also convicted for desensitizing law enforcement by ordering people to plant fake explosive devices. Chesser was also convicted for sending threats (via [[Revolution Muslim]] website) to [[Trey Parker]] and [[Matt Stone]], creators of ''[[South Park]]'', after they aired [[201 (South Park)|an episode]] of the show with [[depictions of Muhammad]].
+|-
+|}
+
+===Organized crime figures===
+{|class="wikitable sortable"
+|-
+!width=14%|Inmate Name
+!width=8%|Register Number
+!width=5%|Photo
+!width=27%|Status
+!width=51%|Details
+|-
+| style="text-align:center;"| {{sortname|John|Gotti}}†
+| style="text-align:center;"| [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=18261-053&x=88&y=19 18261-053]{{Dead link|date=August 2025 |bot=InternetArchiveBot |fix-attempted=yes }}
+| style="text-align:center;"| [[File:John Gotti FBI booking (cropped) 2(b).jpg|80px]]
+| Deceased. Died in 2002 while serving a life sentence.
+| Boss of the [[Gambino crime family]] in New York City from 1985 to 1992; convicted of murder, [[Conspiracy (crime)|murder conspiracy]], [[loansharking]], [[illegal gambling]], [[obstruction of justice]], [[bribery]], and [[tax evasion]] in 1992.
+|-
+| style="text-align:center;"| {{sortname|William|Daddano, Sr.}}†
+| style="text-align:center;"| Unlisted
+| style="text-align:center;"|
+| Deceased. Died in 1975 while serving a 15-year sentence.
+| Top [[loan shark]] and [[extortion|enforcer]] for the [[Chicago Outfit|Chicago Mafia]]; convicted in 1964 of [[Conspiracy (crime)|conspiracy]] to commit bank robbery.<ref>{{cite web |url=http://americanmafia.com/Feature_Articles_233.html |title=Feature Articles 233 |publisher=AmericanMafia.com |date=1969-08-27 |access-date=2014-03-15}}</ref>
+|-
+| style="text-align:center;" | {{sortname|Thomas|Silverstein}}
+| style="text-align:center;"|[http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=14634-116&x=0&y=0 14634-116] {{Webarchive|url=https://web.archive.org/web/20120919120903/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=14634-116&x=0&y=0 |date=September 19, 2012 }}
+| style="text-align:center;" | [[File:Thomas Silverstein.JPG|80px]]
+| Deceased. Served most of his life sentence at [[ADX Florence]] and died on May 11, 2019, due to complications from heart surgery.
+| [[Aryan Brotherhood]] [[prison gang]] leader (considered one of the most dangerous inmates in the federal prison system); transferred to ADX after murdering Correction Officer Merle Clutts at [[USP Marion]] in 1983 while serving a sentence for bank robbery. The murder of two correctional officers in 1983 was the impetus for creating the "super-max" prison classification.<ref>{{cite web |url=http://solitarywatch.com/2011/05/05/americas-most-isolatd-federal-prisoner-describes-10220-days-in-extreme-solitary-confinement/ |title=America's Most Isolated Federal Prisoner Describes 10,220 Days in Extreme Solitary Confinement |publisher=Solitarywatch.com |date=2011-05-05 |access-date=2013-04-18}}</ref>
+|-
+| style="text-align:center;" | {{sortname|Nicodemo|Scarfo}}
+|align="center" | {{Deprecated archive|url=https://archive.today/20121213032401/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=09813-050&x=104&y=31|title=09813-050}}
+| style="text-align:center;" | [[File:Nicky Scarfo.jpg|80px]]
+| Transferred to the [[Federal Correctional Institution, Butner Medium|FCI Butner Medium]], a medium-security facility; was serving a 55-year sentence; was scheduled for release in 2033 but died at Butner on 17 January 2017 at age 87.<ref>{{cite web |url=https://www.latimes.com/local/obituaries/la-me-nicodemo-scarfo-20170118-story.html |title=Nicodemo 'Little Nicky' Scarfo, the undersized mob boss with a lethal temper, dies in prison at 87 |website=[[Los Angeles Times]] |date=January 18, 2017 |access-date=30 January 2019}}</ref><ref>{{cite web |url=https://www.nytimes.com/2017/01/17/nyregion/nicky-scarfo-mob-boss-who-plundered-atlantic-city-in-the-80s-dies-at-87.html |title=Nicky Scarfo, Mob Boss Who Plundered Atlantic City in the '80s, Dies at 87 |first=Sam |last=Roberts |date=17 January 2017 |access-date=30 January 2019 |website=[[The New York Times]]}}</ref><ref>{{cite web |url=http://www.philly.com/philly/blogs/real-time/Tyrannical-Philly-Mafia-boss-Nicodemo-Little-Nicky-Scarfo-dies-in-prison-hospital.html |title=Tyrannical Philly Mafia boss Nicodemo 'Little Nicky' Scarfo, 87, dies in prison hospital |author=George Anastasia |website=Philly.com |access-date=30 January 2019}}</ref>
+| Former boss of the [[Philadelphia crime family|Bruno crime family]] in Philadelphia;<ref>{{cite web |url=https://www.biography.com/people/nicodemo-scarfo-396826 |title=Nicodemo Scarfo |website=Biography.com |access-date=30 January 2019 |archive-date=September 8, 2018 |archive-url=https://web.archive.org/web/20180908174945/https://www.biography.com/people/nicodemo-scarfo-396826 |url-status=dead}}</ref> he was convicted on multiple counts of murder, attempted murder, distribution of methamphetamine, and [[extortion]].<ref>{{cite web |url=http://www.ipsn.org/scarfo.htm |title=U.S. vs Scarfo |website=Ipsn.org |access-date=July 5, 2023 |archive-date=January 20, 2021 |archive-url=https://web.archive.org/web/20210120133351/http://www.ipsn.org/scarfo.htm |url-status=dead}}</ref>
+|-
+| style="text-align:center;"| {{sortname|Viktor|Bout}}
+| style="text-align:center;"| [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=91641-054&x=87&y=20 91641-054]
+| style="text-align:center;"| [[File:Viktor Bout.jpg|80px]]
+| Served a 25-year sentence; released on December 12, 2022 [[Viktor Bout–Brittney Griner prisoner exchange|in a prisoner exchange]] with [[Russia]] for [[Brittney Griner]].
+| Russian [[arms trafficking|arms dealer]]; convicted in 2011 of conspiring to kill Americans and supplying [[Surface-to-air missile|anti-aircraft missiles]] and other weapons to [[FARC]], a [[Marxist]] group on the [[U.S. State Department list of Foreign Terrorist Organizations]].<ref>{{cite news |url=http://www.cnn.com/2012/04/05/justice/new-york-viktor-bout-case/index.html |work=CNN |title=Russian arms dealer Viktor Bout handed 25-year federal sentence |date=April 6, 2012}}</ref>
+|-
+| style="text-align:center;"| [[Gerard Ouimette]]
+| style="text-align:center;"| 02519-070
+|
+|Served sentence in the mid-20th-century. Died on April 19, 2015.
+|Associate of the [[Patriarca crime family]] from Providence, Rhode Island
+|-
+| style="text-align:center;"| [[Monzer al-Kassar]]
+| align="center" | [https://www.bop.gov/PublicInfo/execute/inmateloc?todo=query&output=json&inmateNum=61111-054&inmateNumType=IRN 61111-054]
+|
+|Transferred to [[USP Florence High]]. Serving a 30-year sentence; scheduled for release on December 28, 2032.
+|In 2009, sentenced to 30 years in prison for conspiring to sell weapons to Colombian rebels.
+|-
+
+| style="text-align:center;"| {{sortname|Carlos|Lehder}}
+| style="text-align:center;"| [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=91641-054&x=87&y=20 91641-054]
+| style="text-align:center;" | [[File:Carlos Lehder.jpg|80px]]
+| Transferred to another prison. Released from prison 16 June 2020, after more than 33 years and 4 months in captivity.
+| Colombian [[druglord]]; convicted in 1987 of conspiring to send cocaine to USA. Life imprisonment plus 135 years; commuted to 55 years in prison after testifying against [[Manuel Noriega]].
+<ref>{{cite web |url=https://cnnespanol.cnn.com/2020/06/17/carlos-lehder-exlider-del-cartel-de-medellin-queda-en-libertad-tras-33-anos-de-prision-en-ee-uu |title=Carlos Lehder, exlíder del cartel de Medellín, queda en libertad tras 33 años de prisión en EE.UU. |date=June 17, 2020}}</ref>
+|}
+
+===Others===
+{|class="wikitable sortable"
+|-
+!width=14%|Inmate Name
+!width=8%|Register Number
+!width=5%|Photo
+!width=28%|Status
+!width=50%|Details
+|-
+| style="text-align:center;"| {{sortname|Pete|Rose}}
+| style="text-align:center;"| [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=01832-061&x=81&y=15 01832-061]
+| style="text-align:center;"| [[File:Pete Rose Caesar's Palace in Las Vegas.jpg|80px]]
+| Released from custody in 1991 after serving five months at the minimum-security camp.
+| Major League Baseball player and record holder for career hits; convicted of [[tax evasion|filing false tax returns]] in 1990.<ref>{{cite news |url=https://www.nytimes.com/1990/07/20/sports/rose-sentenced-to-5-months-for-filing-false-tax-returns.html?pagewanted=all&src=pm |work=The New York Times |first=Claire |last=Smith |title=Rose Sentenced to 5 Months For Filing False Tax Returns |date=July 20, 1990}}</ref>
+|-
+| style="text-align:center;" | [[USP Coleman#Officer Michael Rudkin|Michael Rudkin]]
+| style="text-align:center;"| [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=17133-014&x=105&y=18 17133-014]
+| style="text-align:center;"|
+| Beaten to death while incarcerated at [[United States Penitentiary, Terre Haute|USP Terre Haute]]
+| Former correction officer at [[FCI Danbury]] in [[Connecticut]]; sentenced to prison in 2008 for having sex with an inmate; convicted in 2010 of trying to hire a [[hitman]] to kill the inmate, his ex-wife, his ex-wife's boyfriend and a federal agent while incarcerated at [[USP Coleman]] in Florida.<ref>{{cite news |title=Jury Finds Former Federal Correctional Officer, Now an Inmate, Guilty of Attempts to Kill Federal Agent and Informant |date=April 28, 2010 |url=https://www.fbi.gov/jacksonville/press-releases/2010/ja042810.htm |publisher=FBI Jacksonville Division |access-date=2013-04-18}}</ref><ref>{{Cite news |url=https://www.orlandosentinel.com/2010/07/18/former-federal-corrections-officer-gets-90-years-in-prison-for-trying-to-arrange-murders-behind-bars-2/ |title=Former federal corrections officer gets 90 years in prison for trying to arrange murders behind bars |first=Stephen |last=Hudak |work=[[Orlando Sentinel]] |date=July 18, 2010 |access-date=June 10, 2014}}</ref>
+|-
+| style="text-align:center;" | [[Christopher Cantwell]]
+| style="text-align:center;" | 00991-509
+| [[File:ChrisCantwell-2014.png|80px]]
+|Served a three-year sentence; released on December 19, 2022
+|White Supremacist known as the Crying Nazi, convicted in 2021 for threatening a man if he didn't give him information about a rival group.<ref>{{Cite web |title=Court questioning financial responsibility of transporting Cantwell for rally trial |date=September 20, 2021 |url=https://dailyprogress.com/news/august12/court-questioning-financial-responsibility-of-transporting-cantwell-for-rally-trial/article_6ac338c0-1a58-11ec-b7d5-e7d56be780d4.html}}</ref>
+|-
+|style="text-align:center;"| Scott Schweickert
+|style="text-align:center;"| [https://www.bop.gov/inmateloc/ 42916-018]
+|[[File:Scott Schweickert.jpg|80px]]
+|Serving 40 years' imprisonment.
+| [[Steven Lorenzo]]'s accomplice; Convicted for distributing [[GHB]] to commit violence against Michael Wachholtz. He was also convicted of state murder charges and sentenced to life in prison in Florida for the 2003 murders of Jason Galehouse and Michael Wachholtz.<ref>{{cite news |date=May 1, 2007 |title=Man Gets 40 Years in Rape Case |work=Lakeland Ledger |url=https://www.theledger.com/story/news/2007/05/01/man-gets-40-years-in/25776315007/ }}</ref><ref>{{cite news |date=May 1, 2007 |title=Man sentenced to 40 years in torture-sex case |work=Sarasota Herald-Tribune |url=https://www.heraldtribune.com/story/news/2007/04/30/man-sentenced-to-40-years-in-torture-sex-case/28544708007/://www.theledger.com/story/news/2007/05/01/man-gets-40-years-in/25776315007/ }}</ref><ref>{{cite news |date=June 10, 2016 |title=Man sentenced to life for killing Tampa men he planned to use as sex slaves |work=[[Tampa Bay Times]] |url=https://www.tampabay.com/news/courts/criminal/man-sentenced-to-life-for-killing-tampa-men-he-used-as-sex-slaves/2280970/ }}</ref> 
+|-
+| style="text-align:center;"| [[Stop Huntingdon Animal Cruelty|Andrew Stepanian]]
+| style="text-align:center;"| [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=26399-050&x=101&y=8 26399-050]
+| style="text-align:center;"|
+| Released from custody in 2009 after serving a two-year sentence.
+| Member of [[Stop Huntingdon Animal Cruelty]], which aims to shut down an animal testing laboratory run by [[Huntingdon Life Sciences]]; convicted of using the Internet to [[incitement|incite violence]] against company executives.<ref>{{cite news |url=https://www.nytimes.com/2006/03/03/nyregion/03animals.html?_r=1 |work=The New York Times |first=David |last=Kocieniewski |title=Six Animal Rights Advocates Are Convicted of Terrorism |date=March 3, 2006}}</ref>
+|-
+| style="text-align:center;"| {{sortname|Garrett Brock|Trapnell}}
+| style="text-align:center;"| [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=72021-158&x=91&y=21 72021-158]
+| style="text-align:center;"|
+| Deceased; died of natural causes in 1993 while serving a life sentence.
+| Convicted in 1973 of [[aircraft hijacking|air piracy]] for hijacking TWA Flight 2 and threatening to ram the plane into the terminal of [[JFK Airport]] unless he received a ransom.<ref>{{cite web |url=http://bulk.resource.org/courts.gov/c/F2/495/495.F2d.22.73-2071.74-1018.522.888.html |title=495 F.2d 22 |access-date=2012-05-19 |url-status=dead |archive-url=https://web.archive.org/web/20100514162042/http://bulk.resource.org/courts.gov/c/F2/495/495.F2d.22.73-2071.74-1018.522.888.html |archive-date=May 14, 2010 |df=mdy-all}}</ref><ref>{{cite news |url=https://www.nytimes.com/2005/01/16/magazine/16HIJACKERS.html?pagewanted=all&position= |work=The New York Times |first=Andreas |last=Killen |title=The First Hijackers |date=January 16, 2005}}</ref>
+|-
+|style="text-align:center;"| [[Matthew F. Hale]]
+|style="text-align:center;"| [https://www.bop.gov/inmateloc/ 15177-424]
+|
+|Serving a 40-year sentence; scheduled for release on April 2, 2037.
+|Neo-Nazi leader of the [[World Church of the Creator]]. Convicted in 2005 for soliciting an undercover FBI informant to kill federal judge [[Joan Humphrey Lefkow]] after she ruled against him in a copyright case and ordered the name of his church to be changed. He was transferred into USP Marion from [[ADX Florence]] in July 2020.
+|-
+| style="text-align:center;"| [[Robert Lee Willie]]
+| style="text-align:center;"| 02724-010
+| style="text-align:center;"|
+| Executed in [[Louisiana]] on December 28, 1984.
+| Serial killer; pleaded guilty along with Joseph Jesse Vaccaro in 1980 to kidnapping a young couple in Louisiana, repeatedly raping the female victim. The two were also convicted of an unrelated state murder charge. Willie was executed in 1984 and Vaccaro was sentenced to life in prison.
+
+|-
+| style="text-align:center;"| Walter Bond
+| style="text-align:center;"| [https://www.bop.gov/inmateloc/ 37096-013]
+|
+| Not in BOP custody. Scheduled for release on March 26, 2024.<ref>{{cite web |url=https://archives.fbi.gov/archives/denver/press-releases/2011/dn021111.htm |title=Walter Bond Sentenced to Federal Prison for the Arson at the Sheepskin Factory in Glendale}}</ref>
+| Sentenced to serve 60 months (five years) in federal prison for use of fire to destroy Sheepskin Factory in 2011. After the fire, Bond posted a message on the Internet taking responsibility for the Sheepskin Factory fire. At the end of that message he used the nickname "[[Animal Liberation Front|ALF]] Lone Wolf." In 2011 he was sentenced to another 87 months for additional attacks to be served consecutively.<ref>{{cite web |url=https://www.gawker.com/5976473/arson-cracked-testicles-and-internet-death-threats-how-animal-rights-extremists-are-learning-from-the-people-who-murdered-george-tiller |title=Arson, Cracked Testicles, and Internet Death Threats: How Animal Rights Extremists Are Learning from the People Who Murdered George Tiller}}</ref>
+|-
+|style="text-align:center;"| Daron D. Wint
+|style="text-align:center;"| [https://www.bop.gov/inmateloc/ 64292-007]
+|
+|Serving four life sentences.
+| Perpetrator of the [[2015 Washington, D.C., quadruple murder incident]].
+|-
+| style="text-align:center;"| [[Daniel Hale]]
+| style="text-align:center;"| 26069-075
+| style="text-align:center;"|
+|Released on July 5, 2024
+|Sentenced to 45 months in prison in July 2021 after pleading guilty to retaining and transmitting national defense information after disclosing information about the United States' [[drone warfare]] program and the [[Terrorist Screening Database|terrorist watch list]].<ref>{{Cite news |last=Barnes |first=Julian E. |date=2021-07-27 |title=Ex-Intelligence Analyst Is Sentenced for Leaking to a Reporter |url=https://www.nytimes.com/2021/07/27/us/politics/daniel-hale-leak-sentence.html |access-date=2025-01-05 |work=The New York Times |language=en-US |issn=0362-4331}}</ref> Transferred to the CMU at Marion in October 2021.
+|}
+
+==See also==
+{{Portal|Illinois|United States|Politics}}
+* [[List of U.S. federal prisons]]
+* [[Federal Bureau of Prisons]]
+* [[Incarceration in the United States]]
+
+{{Clear}}
+
+==References==
+{{reflist|colwidth=30em}}
+
+== External links ==
+{{wikiquote}}
+* [http://www.bop.gov/locations/institutions/mar/index.jsp USP Marion]
+{{Federal Bureau of Prisons}}
+
+[[Category:United States Penitentiaries|Marion]]
+[[Category:Prisons in Illinois]]
+[[Category:Marion, Illinois|USP Marion]]
+[[Category:Supermax prisons]]
+[[Category:Buildings and structures in Williamson County, Illinois]]
+[[Category:1963 establishments in Illinois]]
+[[Category:Prisons completed in the 1960s]]

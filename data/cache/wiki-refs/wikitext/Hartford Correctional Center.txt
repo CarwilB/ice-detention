@@ -1,0 +1,62 @@
+{{short description|Correctional center in Connecticut}}
+{{Use American English|date=August 2025}}
+{{Infobox prison
+|name=Hartford Correctional Center
+|image=
+|image_size=
+|alt=
+|caption=
+|image_map=
+|map_size=
+|map_alt=
+|map_caption=
+|pushpin_map=USA Connecticut
+|pushpin_relief=
+|pushpin_map_size=
+|pushpin_alt=
+|pushpin_caption=Location in Connecticut
+|pushpin_label=
+|map_dot_mark=
+|location=[[Hartford, Connecticut]]
+|coordinates={{coord|41.793333|-72.661111|type:_region:|display=inline,title}}
+|status=Operational
+|classification=Level 4 (High)
+|capacity=984
+|population=918
+|population_date=February 1, 2018<ref>{{cite report |title=Average Confined Inmate Population and Legal Status |date=February 1, 2018 |url=http://www.ct.gov/doc/lib/doc/PDF/MonthlyStat/Stat201802.pdf |archive-url=https://web.archive.org/web/20180210180345/http://www.ct.gov/doc/lib/doc/PDF/MonthlyStat/Stat201802.pdf |url-status=dead |archive-date=February 10, 2018 |publisher=[[Connecticut Department of Correction]] |format=pdf}}</ref>
+|opened={{Start date|1977}}
+|closed=
+|former_name=
+|managed_by=[[Connecticut Department of Correction]]
+|director=
+|governor=
+|warden=Ned McCormick
+|website=https://portal.ct.gov/doc/facility/hartford-cc
+|prisoners=[[Ravi Shankar (poet)|Ravi Shankar]], Eyad Alrababah
+|embedded=
+}}
+
+'''Hartford Correctional Center''' is one of 18 [[Prison|correctional facilities]] in [[Connecticut]], [[United States]]. The correctional center is located in [[Hartford, Connecticut]]. The facility was opened in 1977, with its first warden being Richard Wezowicz.
+
+In March 2016, the [[participatory budgeting]] organization Hartford Decide$ set up a voting location at the facility so inmates could vote on how the city's money is spent.<ref>{{Cite news|url=http://fox61.com/2016/03/30/hartford-inmates-get-chance-to-vote-on-improvement-projects-for-city/|title=Hartford inmates get chance to vote on improvement projects for city|last=Schoenfeld|first=Samantha|date=2016-03-30|work=FOX 61|access-date=2018-02-01|archive-url=https://web.archive.org/web/20180201165417/http://fox61.com/2016/03/30/hartford-inmates-get-chance-to-vote-on-improvement-projects-for-city/|archive-date=2018-02-01|url-status=live|language=en-US}}</ref><ref>{{Cite news|url=http://www.courant.com/community/hartford/hc-hartford-decides-year-two-1111-20161110-story.html|title='Hartford Decides' Begins 2nd Year As Residents Pick Community Projects|last=Vella|first=Vinny|date=2016-11-10|work=Hartford Courant|access-date=2018-02-01|archive-url=https://archive.today/20180201165721/http://www.courant.com/community/hartford/hc-hartford-decides-year-two-1111-20161110-story.html|archive-date=2018-02-01|url-status=live|language=en-US}}</ref>
+
+Poet and former professor of English at [[Central Connecticut State University]] [[Ravi Shankar (poet)|Ravi Shankar]] spent time at the facility, writing an op-ed about his experiences for the [[Hartford Courant]].<ref>{{Cite news|url=https://www.courant.com/2014/07/11/the-eight-things-i-learned-in-jail-2/|title=Professor Ravi Shankar: the eight things I learned in jail|last=Shankar|first=Ravi|date=2014-07-11|work=Hartford Courant|access-date=2018-02-01|language=en}}</ref>
+
+In 2017, [[Frontline (U.S. TV series)|Frontline]] and [[The New York Times]] collaborated on a [[PBS]] documentary called ''Life on Parole'', which featured a former inmate of the correctional center, Errol Brantley Jr., and his struggles while on parole.<ref>{{Cite news|url=https://www.pbs.org/wgbh/frontline/article/what-statistics-cant-explain-about-life-on-parole/|title=What Statistics Can’t Explain About Life on Parole|last=Dewan|first=Shaila|date=2017-07-17|work=FRONTLINE|access-date=2018-02-01|language=en-US}}</ref><ref>{{Cite news|url=https://www.nytimes.com/2017/07/16/us/life-on-parole.html|title=She’s His Rock. His Parole Officer Won’t Let Him See Her.|last=Dewan|first=Shaila|date=2017-07-16|work=The New York Times|access-date=2018-02-01|language=en-US|issn=0362-4331}}</ref>
+
+== Controversies ==
+In 1980, the correctional center was sued by a group of pre-trial detainees and inmates for exposure to [[tuberculosis]] and other [[Transmission (medicine)|transmissible pathogens]] and overcrowding.<ref>{{Cite book|title=Partner to the poor: a Paul Farmer reader|last=Farmer|first=Paul|publisher=University of California Press|year=2010|isbn=9780520257115|location=Berkeley|pages=218|chapter=Cruel and unusual: drug-resistant tuberculosis as punishment|oclc=613206365}}</ref><ref name=":0">{{Cite court|litigants=Lareau v. Manson|court=D. Conn.|reporter=F. Supp.|vol=507|opinion=1177|date=1980|url=https://law.justia.com/cases/federal/district-courts/FSupp/507/1177/2251640/}}</ref> In the case, ''Lareau v. Manson'', the [[United States District Court for the District of Connecticut|District Court of Connecticut]] found that the facility's overcrowding violated the inmates and detainees' [[due process]] rights to be free from [[Eighth Amendment to the United States Constitution|cruel and unusual punishment]] and that the lack of screening procedures for contagious diseases violated all the facility's inmate's constitutional rights.<ref name=":0" />
+
+Eyad Alrababah was arrested following the [[September 11 attacks]] and held as a [[material witness]] in the facility after voluntarily contacting the [[Federal Bureau of Investigation|FBI]] to offer information. He was held at the correctional center for about twenty days in solitary confinement, was strip- and cavity-searched multiple times, and was not [[Arraignment|brought before a judge]] until a month later, according to [[Human Rights Watch]].<ref>{{Cite news|url=https://www.hrw.org/news/2011/01/28/us-misuse-material-witness-statute|title=US: Misuse of the Material Witness Statute|date=2011-01-28|work=Human Rights Watch|access-date=2018-02-01|language=en}}</ref>
+
+In 2016, one of the facility's [[Prison officer|correctional officers]] were charged with two counts of [[Sexual assault|sexually assaulting]] inmates.<ref>{{Cite news|url=http://www.nhregister.com/connecticut/article/Connecticut-correctional-officer-due-in-court-in-11335469.php|title=Connecticut correctional officer due in court in prisoner assault case|date=2016-03-13|work=[[New Haven Register]]|access-date=2018-02-01|archive-url=https://web.archive.org/web/20180201184558/http://www.nhregister.com/connecticut/article/Connecticut-correctional-officer-due-in-court-in-11335469.php|archive-date=2018-02-01|url-status=live}}</ref>
+
+== References ==
+<!-- Inline citations added to your article will automatically display here. See https://en.wikipedia.org/wiki/WP:REFB for instructions on how to add citations. -->
+{{reflist}}
+
+{{State prisons in Connecticut}}
+
+[[Category:Prisons in Connecticut]]
+[[Category:Buildings and structures in Hartford, Connecticut]]
+[[Category:1977 establishments in Connecticut]]

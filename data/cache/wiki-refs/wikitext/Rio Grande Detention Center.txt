@@ -1,0 +1,32 @@
+{{short description|Federal detention center in Texas, US}}
+{{Use American English|date=August 2025}}
+{{Infobox Prison
+| name           = Rio Grande Detention Center
+| image          = 
+| location       = 1001 San Rio Blvd <br> [[Laredo, Texas]]
+| coordinates    = 
+| status         = open
+| classification = mixed
+| capacity       = 1900
+| opened         = 2008
+| closed         = 
+| managed_by     = [[GEO Group]]
+| director       = 
+}}
+
+'''Rio Grande Detention Center''' is a privately owned prison for men located in [[Laredo, Texas|Laredo]], [[Webb County, Texas]], operated by [[GEO Group]] under contract with the U.S. government [[Office of the Federal Detention Trustee]].  The prison was originally built in 2007, opened in 2008, and has an official capacity of 1900 federal detainees awaiting trial.<ref>{{cite web|title=Rio Grande Detention Center|url=http://www.geogroup.com/maps/locationdetails/31|website=GEO Group|accessdate=30 July 2016|url-status=dead|archiveurl=https://web.archive.org/web/20160722020305/http://www.geogroup.com/maps/locationdetails/31|archivedate=22 July 2016}}</ref>
+
+The facility stands about 500 feet from the [[Rio Grande]].
+
+As of August 2025 the facility is also called the [https://www.ice.gov/detain/detention-facilities/rio-grande-detention-center "Rio Grande Processing Center"] among the currently active list<ref>{{cite web |title=Detention Facilities |url=https://www.ice.gov/detention-facilities |publisher=U.S. Immigration and Customs Enforcement |access-date=24 August 2025}}</ref> of ICE [[Detention (imprisonment)|detention facilities]].
+
+==References==
+{{reflist}}
+
+{{coord|27.377705|-99.489578|format=dms|display=title|type:landmark}}
+
+[[Category:Prisons in Texas]]
+[[Category:Buildings and structures in Webb County, Texas]]
+[[Category:GEO Group]]
+[[Category:2008 establishments in Texas]]
+[[Category:Immigration detention centers and prisons in the United States]]

@@ -1,0 +1,47 @@
+{{Short description|Correctional facility}}
+{{Use American English|date=August 2025}}
+{{Use mdy dates|date=March 2025}}
+{{Infobox Prison
+| name           = South Louisiana ICE Processing Center
+| image          = 
+| location       = 3843 Stagg Avenue, [[Basile, Louisiana]], United States
+| coordinates    = {{coord|30.4873|-92.5829|type:landmark_region:US-LA|format=dms|display=inline,title}}
+| status         = Operational
+| classification = Mixed Security
+| capacity       = 1,000
+| opened         = 1993
+| closed         = 
+| managed_by     = [[GEO Group]]
+| warden         = N/A
+}}
+
+'''South Louisiana ICE Processing Center''' (also known as the '''Basile Detention Center''', previously '''South Louisiana Correctional Facility''') is a privately owned and operated prison facility operated by the [[GEO Group]] under contract to the federal government. It is located on the eastern edge of [[Basile, Louisiana|Basile]] in [[Evangeline Parish, Louisiana]]. {{As of|2026|February}}, it houses 988 immigration detainees, nearly all of the women, with 13% classified as having a criminal conviction.<ref>{{Cite web |title=SOUTH LOUISIANA ICE PROCESSING CENTER |url=https://detentionreports.com/facility/SOUTH_LOUISIANA_ICE_PROCESSING_CENTER.html |access-date=2026-02-16 |website=detentionreports.com}}</ref><ref>https://www.geogroup.com/facilities/south-louisiana-ice-processing-center/</ref>
+
+==History==
+The facility was opened in 1993 to serve state, federal and local uses by the private prison company [[LCS Corrections Services]].<ref>{{cite web |title=South Louisiana Correctional Center |url=http://www.lcscorrections.com/site20.php |url-status=dead |archive-url=https://web.archive.org/web/20150215093628/http://www.lcscorrections.com/site20.php |archive-date=2015-02-15 |website=LCS Correction Services}}</ref> It was later acquired by Wackenhut Corrections Corporation, renamed as [[The GEO Group, Inc.]] in 2004.<ref>{{cite web |title=Locations {{!}} South Louisiana ICE Processing Center |url=https://www.geogroup.com/FacilityDetail/FacilityID/267 |website=The GEO Group, Inc}}</ref> The facility has a capacity of 1,000.
+
+The facility had initially housed primarily inmates for the state's  [[Louisiana Department of Public Safety and Corrections]]. It housed both male and females at a mix of minimum, medium, and maximum security, with a capacity of 1,048.
+
+It was also used to house some persons detained by [[U.S. Immigration and Customs Enforcement]] (ICE) prior to hearings or deportation. In July and August 2009, a hundred ICE inmates at this facility staged a series of five hunger strikes to protest substandard conditions and lack of appropriate medical care.<ref>{{cite news |url=http://news.newamericamedia.org/news/view_article.html?article_id=150a9ebfd7bbbde4276729d6e934cbb7 |title=Immigrant Detainees Stage Hunger Strikes in Louisiana |website=news.newamericamedia.org |url-status=usurped |archive-url=https://web.archive.org/web/20090810060223/http://news.newamericamedia.org/news/view_article.html?article_id=150a9ebfd7bbbde4276729d6e934cbb7 |archive-date=2009-08-10}}</ref><ref>{{cite web |url=http://www.truth-out.org/archive/item/85525:immigrant-detainees-staging-hunger-strikes-to-protest-deplorable-confinement |title=Immigrant Detainees Staging Hunger Strikes to Protest Deplorable Confinement |website=www.truth-out.org |url-status=dead |archive-url=https://web.archive.org/web/20140320112736/http://www.truth-out.org/archive/item/85525:immigrant-detainees-staging-hunger-strikes-to-protest-deplorable-confinement |archive-date=2014-03-20}}</ref>
+
+Somewhat later, the state relocated many of its inmates to other properties, and the facility became idle. In April 2019, GEO signed a contract modification with ICE to reactivate the facility for exclusively federal use, under an "existing intergovernmental service agreement between [[Evangeline Parish, Louisiana]] and ICE".<ref name="wire">{{cite press release |date=25 April 2024 |title=The GEO Group Announces Signing of Contract Modification with U.S. Immigration and Customs Enforcement for the Reactivation of the Existing 1,000-Bed South Louisiana ICE Processing Center |url=https://immpolicytracking.org/media/documents/ICE_Signs_Contract_with_GEO_to_Reopen_Louisiana_Processing_Center.pdf |archive-url=https://web.archive.org/web/20221127195356/https://immpolicytracking.org/media/documents/ICE_Signs_Contract_with_GEO_to_Reopen_Louisiana_Processing_Center.pdf |archive-date=2022-11-27 |access-date=2024-07-02 |publisher=Business Wire |via=Immigration Policy Tracking Project}}</ref> Beginning intake in third quarter 2019, the facility is now used exclusively to house male and female ICE detainees awaiting immigration court hearings and/or deportation. It is under the supervision of the ICE Field Office in [[New Orleans]].<ref>{{Cite news |last=Lee |first=Morgan |date=2025-03-28 |title=Immigrant students and scholars are being detained at remote facilities in Louisiana over objections |url=https://apnews.com/article/immigration-detention-students-louisiana-bd46789bb7b295fa31b5d564673b9c2d |access-date=2025-03-30 |work=AP News |language=en}}</ref>
+
+==Controversy==
+Since re-opening under ICE, the prison has been the subject of multiple complaints about sexual harassment, forced labor, and denial of medial care, especially in regards to transgender inmates.<ref>{{Cite news |date=2025-09-15 |title=New complaints expose pattern of systemic sexual abuse, harassment, and forced labor at Louisiana ICE facility |url=https://rfkhumanrights.org/press/new-complaints-expose-pattern-systemic-sexual-abuse-harassment-forced-labor/ |access-date=2025-09-29 |work=Robert F. Kennedy Human Rights |language=en}}</ref>
+
+==See also==
+*[[List of immigrant detention sites in the United States]]
+
+==References==
+
+{{reflist}}
+
+==External links==
+*{{cite web|url=https://trac.syr.edu/immigration/ |title=Transactional Records Access Clearinghouse|publisher=Syracuse University}}, data on immigration and people detained by law enforcement agencies
+
+[[Category:Prisons in Louisiana]]
+[[Category:Buildings and structures in Acadia Parish, Louisiana]]
+[[Category:Private prisons in the United States]]
+[[Category:Immigration detention centers and prisons in the United States]]
+[[Category:1993 establishments in Louisiana]]
+[[Category:GEO Group]]

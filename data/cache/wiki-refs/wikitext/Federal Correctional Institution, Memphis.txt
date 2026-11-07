@@ -1,0 +1,46 @@
+{{Short description|Medium-security prison in Tennessee, US}}
+{{Use American English|date=August 2025}}
+{{Infobox prison
+|name           = Federal Correctional Institution, Memphis
+|image          = FCI.MEMPHIS.jpg
+|image_size     = 275
+|location       = [[Memphis, Tennessee]]
+|coordinates    = 
+|status         = Operational
+|classification = Low-security (with minimum-security prison camp)
+|population     = 1,160 (330 in prison camp)
+|opened         = 
+|closed         = 
+|managed_by     = [[Federal Bureau of Prisons]]
+|warden         = F.J. Bowers
+}}
+The '''Federal Correctional Institution, Memphis''' ('''FCI Memphis''') is a low-security United States [[federal prison]] for male inmates located in [[Memphis, Tennessee]]. It is operated by the [[Federal Bureau of Prisons]], a division of the [[United States Department of Justice]]. It also includes a satellite prison camp for minimum-security male offenders.<ref>{{cite web|title=FCI Memphis|url=https://www.justice.gov/oig/press/2012/2012_08_20.pdf|publisher=Federal Bureau of Prisons}}</ref>
+
+==Notable incidents==
+In early 2012, a joint investigation conducted by the FBI, the Bureau of Prisons, and the Department of Justice Inspector General found that several inmates at FCI Memphis, identified as Mark Evans, Vincent West, Tyrone Bryant, David Chambers and Larry Burse, operated a marijuana ring from FCI Memphis that spanned three states - Tennessee, Louisiana, and Texas - between September 2009 and May 2010. Evans received shipments of marijuana through the prison kitchen, brought into the prison by a corrupt food services employee, Debra Thompson. Evans or his fellow inmates would then distribute the marijuana to other prisoners for up to $900 an ounce. Inmates purchasing the marijuana would send money orders to the wife of Evans’ top marijuana wholesaler in Shreveport, Louisiana. The money orders were converted to cash and disbursed to Evans’ family members in Texas and also to two post office boxes in Memphis, Tennessee opened up at the behest of the corrupt food services employee.
+
+This operation generated at least $85,000 during the course of the conspiracy. Evans, the ringleader of the operation, was found guilty of conspiracy to distribute marijuana in August 2012 and faces up to ten years additional years of incarceration. Members of Evans’ family, his fellow inmate co-conspirators and the food services employee all agreed to plead guilty and testify in return for the possibility of reduced sentences.<ref>{{cite web|title=Federal Inmate Found Guilty of Conspiring to Distribute Marijuana|url=https://www.justice.gov/oig/press/2012/2012_08_20.pdf|access-date=15 March 2013|publisher=United States Department of Justice|date=August 20, 2012}}</ref><ref>{{cite news|last=Buser|first=Lawrence|title=Memphis federal inmate convicted of inside-job drug conspiracy|url=http://www.commercialappeal.com/news/2012/aug/20/memphis-federal-inmate-convicted-of-inside-job/?print=1|access-date=15 March 2013|newspaper=Scripps Newspaper Group - Online|date=August 20, 2012}}</ref>
+
+==Notable inmates==
+*Mitchell Johnson and Andrew Golden, perpetrators of the [[1998 Westside Middle School shooting]]<ref>{{Cite web|url=https://www.cbsnews.com/news/arkansas-school-shooter-to-go-free/|title = Arkansas School Shooter to Go Free|website = [[CBS News]]| date=11 August 2005 }}</ref><ref>{{Cite web|url=https://www.kait8.com/story/6565862/andrew-goldens-release/|title = Andrew Golden's Release| date=25 May 2007 }}</ref>
+*Joseph Chase Winkle (Register Number: 17517-028), Former [[Muncie, Indiana]] Police Officer serving 10 years. Plead guilty to eleven civil rights and obstruction offenses for assaulting arrestees and writing false reports.<ref>{{cite web | url=https://www.justice.gov/opa/pr/former-muncie-indiana-police-officer-pleads-guilty-eleven-civil-rights-and-obstruction | title=Office of Public Affairs &#124; Former Muncie, Indiana, Police Officer Pleads Guilty to Eleven Civil Rights and Obstruction Offenses for Assaulting Arrestees and Writing False Reports &#124; United States Department of Justice | date=5 December 2022 }}</ref><ref>{{Cite web | title=Chase Winkle sentenced to 10 years in federal prison | url=https://fox59.com/indiana-news/ex-muncie-officer-sentenced-to-10-years-in-federal-prison-for-excessive-force-obstruction-of-justice/ | archive-url=https://web.archive.org/web/20230831142240/https://fox59.com/indiana-news/ex-muncie-officer-sentenced-to-10-years-in-federal-prison-for-excessive-force-obstruction-of-justice/ | access-date=2026-06-22 | archive-date=2023-08-31}}</ref>
+*Ron Hansen - Former Defense Intelligence Officer who is serving a 10-year sentence for attempting to communicate, deliver, or transmit information involving the national defense of the United States to the People’s Republic of China. Is scheduled for release in September 2026.
+
+==See also==
+*[[List of U.S. federal prisons]]
+*[[Federal Bureau of Prisons]]
+*[[Incarceration in the United States]]
+{{Portal|United States|Politics|Law}}
+{{-}}
+
+==References==
+{{Reflist}}
+
+==External links==
+* [http://www.bop.gov/locations/institutions/mem/index.jsp Federal Correctional Institution, Memphis]-Official
+{{Federal Bureau of Prisons}}
+{{coord|35|09|20|N|89|52|02|W|scale:10000|display=title}}
+
+[[Category:Federal Correctional Institutions in the United States]]
+[[Category:Buildings and structures in Memphis, Tennessee]]
+[[Category:Prisons in Tennessee]]

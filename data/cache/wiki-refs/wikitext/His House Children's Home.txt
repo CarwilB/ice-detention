@@ -1,0 +1,25 @@
+{{Short description|Foster care facility in Florida, U.S.}}
+{{Use American English|date=September 2025}}
+'''His House Children's Home''' is a foster care facility in [[Miami Gardens, Florida]]. The shelter is run by a religious organization and later became a designated shelter to care for unaccompanied minor [[Immigration|immigrants]] at the border.
+
+== About ==
+His House Children's Home was founded by Jean Caceres-Gonzalez.<ref>{{Cite news|url=https://www.newspapers.com/clip/21493873/|title=Reading Program: Therapy for Young and Old|last=Benjamin|first=Jody|date=9 March 1997|work=South Florida Sun Sentinel|access-date=2018-07-02|language=en|via=Newspapers.com}}</ref> The shelter is located in [[Miami Gardens, Florida]], and is made up of a series of buildings which are fenced in.<ref>{{Cite news|url=https://www.newyorker.com/news/news-desk/we-must-not-forget-detained-migrant-children|title=We Must Not Forget Detained Migrant Children|last=Danticat|first=Edwidge|date=26 June 2018|work=The New Yorker|access-date=2018-07-02|language=en-US}}</ref> His House is run by a religious organization and began taking in immigrant children in 2014.<ref>{{Cite news|url=https://www.miamiherald.com/news/local/community/miami-dade/homestead/article213449739.html|title=Nelson, Wasserman Schultz blocked from entering immigrant children shelter in Homestead|last=Smiley|first=David|date=19 June 2018|work=Miami Herald|access-date=2018-07-02|last2=Medina|first2=Brenda|language=en|last3=Daugherty|first3=Alex|last4=Chang|first4=Daniel}}</ref> The shelter has a capacity of 232 beds.<ref name="Swisher 2018">{{Cite news|url=http://www.sun-sentinel.com/news/politics/fl-reg-shelter-employee-questions-20180621-story.html|title=From extortion to sex exploitation, South Florida facilities holding migrant kids have faced problems|last=Swisher|first=Skyler|date=22 June 2018|work=Sun-Sentinel.com|access-date=2018-07-02|language=en-US}}</ref>
+
+After the [[Trump administration family separation policy]] went into effect, the shelter took in babies and toddlers that were separated from their families at the border.<ref>{{Cite news|url=https://www.miamiherald.com/article213729394.html|title=Babies separated from parents are in immigrant shelters near Miami, lawmaker says|last=Vassolo|first=Martin|date=23 June 2018|work=Miami Herald|access-date=2018-07-02|last2=Flechas|first2=Joey|language=en}}</ref>
+
+== Criticism ==
+Government audits, taken after 2015, found that the shelter may have not been properly following policies for 652 children in their care.<ref name="Swisher 2018" /> Other accusations of the shelter include allegations of unappetizing food, an atmosphere of living in a detention center and that "caregivers sometimes have sex with each other while on duty." These allegations are being investigated.<ref>{{Cite news|url=https://www.miamiherald.com/latest-news/article211177094.html|title=Child welfare agents investigate claims abused and neglected kids are being held like prisoners|last=Miller|first=Carol Marbin|date=15 May 2018|work=Miami Herald|access-date=2018-07-02|language=en}}</ref>
+== References ==
+<!--- See http://en.wikipedia.org/wiki/Wikipedia:Footnotes on how to create references using <ref></ref> tags, these references will then appear here automatically -->
+{{Reflist|30em}}
+
+== External links ==
+*[https://www.hhch.org/ Official site]
+
+{{Authority control}}
+{{CBP detention centers for minors}}
+
+<!--- Categories --->
+[[Category:Miami Gardens, Florida]]
+[[Category:Immigration detention centers and prisons in the United States]]
+[[Category:Foster care organizations]]

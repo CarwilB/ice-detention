@@ -1,0 +1,45 @@
+{{Short description|Prison in California, United States}}
+{{More citations needed|date=May 2017}}
+{{Use American English|date=July 2025}}
+{{Infobox Prison
+| name           = Otay Mesa Detention Center
+| image          = 
+| location       = [[Otay Mesa, San Diego]], California
+| coordinates    = {{coord|32.59189|-116.92252|format=dms|display=inline,title|type:landmark}}
+| status         = 
+| classification = Minimum/medium
+| capacity       = 1040
+| opened         = 
+| closed         = 
+| managed_by     = [[CoreCivic]]
+| director       = Fred Lawrence
+}}
+
+'''Otay Mesa Detention Center''' is a minimum/medium security federal prison for women, managed by [[CoreCivic]]<ref>{{Cite news|url=https://www.latimes.com/california/story/2019-12-23/ice-signs-contracts-extending-private-immigrant-detention-centers-ahead-of-california-ban|title=ICE signs contracts extending private immigrant detention centers ahead of California ban|last=Castillo|first=Andrea|date=2019-12-24|newspaper=[[Los Angeles Times]]|language=en-US|archive-url=|archive-date=|access-date=2019-12-24}}</ref> under contract with the [[United States Marshals Service]] and [[U.S. Immigration and Customs Enforcement]] (ICE).<ref>{{Cite web|url=http://cca.com/facilities/san-diego-correctional-facility|archiveurl=https://web.archive.org/web/20131224012323/http://cca.com/facilities/san-diego-correctional-facility|url-status=dead|title=San Diego Correctional Facility|archivedate=December 24, 2013|publisher=CCA, Inc.}}</ref> The facility is situated in the [[San Ysidro Mountains]] foothills of [[Otay Mesa]] overlooking the [[U.S.-Mexico border]].<ref name=":0" /> CoreCivic sold the facility to the [[U.S. Department of Homeland Security]] in 2026.<ref>{{Cite news |last=Duara |first=Wendy Fry, Nigel |date=2026-07-06 |title=Private prison company sells two of California’s immigrant detention centers to the feds |url=https://calmatters.org/justice/2026/07/corecivic-sells-ice-detention-centers/ |work=CalMatters |language=en-US}}</ref>
+
+The Otay Mesa site is shared with other law enforcement–related properties:<ref name=":0">{{cite web|url=http://clui.org/ludb/site/otay-mesa-prison-area|title=Otay Mesa Prison Area, California|publisher=The Center for Land Use Interpretation|accessdate=22 May 2017}}</ref>
+* [[Richard J. Donovan Correctional Facility]], operated by the [[California Department of Corrections and Rehabilitation]].
+* George Bailey Detention Facility (San Diego County)
+* East Mesa Reentry Facility (San Diego County)
+* Facility 8 Detention Facility (San Diego County)
+* East Mesa Juvenile Detention Facility (San Diego County)
+* A multi-jurisdictional law enforcement firearms training complex used by the FBI, the Customs Service, and local police forces
+
+== In popular culture ==
+In the 2025 film ''[[One Battle After Another]]'', a [[Far-left politics|far-left]] revolutionary group breaks immigrants out of the center. The scene was filmed at the center itself, and to do so, the filmmakers received approval from the city of Otay Mesa, the [[San Diego County, California|San Diego County]] government, [[United States Border Patrol|U.S. Border Patrol]], the [[United States Department of Homeland Security|Department of Homeland Security]], [[California Highway Patrol]], and [[Caltrans]].<ref>{{Cite news |date=2025-10-24 |title=We Traveled the Real California That ‘One Battle After Another’ Imagined |url=https://www.nytimes.com/2025/10/24/movies/one-battle-after-another-filming-location-california.html |access-date=2026-02-27 |work=The New York Times |language=en-US |issn=0362-4331}}</ref>
+
+==References==
+{{Reflist}}
+
+==External links==
+* [https://www.theguardian.com/us-news/2025/mar/19/canadian-detained-us-immigration-jasmine-mooney Account by Jasmine Mooney of experience as detainee]
+
+{{Portal|California|Law}}
+{{CoreCivic Facilities}}
+
+[[Category:Prisons in California]]
+[[Category:Buildings and structures in San Diego County, California]]
+[[Category:CoreCivic]]
+[[Category:Private prisons in the United States]]
+[[Category:San Ysidro Mountains]]
+[[Category:United States Immigration and Customs Enforcement]]

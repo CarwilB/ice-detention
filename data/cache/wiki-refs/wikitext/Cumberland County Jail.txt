@@ -1,0 +1,40 @@
+{{Short description|Jail in Portland, Maine, United States}}
+{{Use American English|date=September 2025}}
+{{Infobox Prison
+| name           = Cumberland County Jail
+| location       = 50 County Way, [[Portland, Maine]] 04102
+| coordinates    = {{Coord|43|39|04|N|70|16|54|W|type:city_region:US|display=inline,title}}
+| status         = Operational
+| classification = 
+| capacity       = 600
+| opened         = 1994
+| closed         = N/A
+| managed_by     = [[Cumberland County Sheriff's Office]]
+| director       = Sheriff Kevin J. Joyce
+}}
+The '''Cumberland County Jail''' is located in [[Portland, Maine]], and is the largest jail in the state. The jail, a division of the [[Cumberland County Sheriff's Office]], is a part of [[Cumberland County, Maine|Cumberland County]] government and is wholly operated by the elected Sheriff.<ref>Vergil L. Williams, ''Dictionary of American Penology''. Greenwood Publishing, 1996, p. 148. {{ISBN|0-313-26689-1}}.</ref> In 2002 it became the first jail in the state of Maine to receive national accreditation from the [[American Correctional Association]], at the time putting it among only 4% of adult correctional facilities in the US to have been so accredited.<ref>''Corrections Today'', June 1, 2002.</ref> It has the capacity to accommodate 600 inmates, and employs over 200 staff (including 130 Corrections Officers). Most inmates are serving short sentences or awaiting trial.<ref>{{cite web|url=http://www.wcsh6.com/news/article.aspx?storyid=70377|title=Cumberland County Sheriff Nixes Jail Consolidation|publisher=www.wcsh6.com|accessdate=2008-02-06|last=|first=}} {{Dead link|date=October 2010|bot=H3llBot}}</ref><ref>{{cite web|url=http://pressherald.mainetoday.com/story.php?id=141915&ac=PHnws|title=Lifting the spirits of souls behind bars |publisher=Portland Press Herald|accessdate=2008-02-07|last=|first=}} {{Dead link|date=October 2010|bot=H3llBot}}</ref><ref>{{cite web
+ |url=http://www.cumberlandcounty.org/Sheriff/jail.htm
+ |title=CCJ Homepage
+ |publisher=www.cumberlandcounty.org
+ |accessdate=2008-02-06
+ |archiveurl=https://web.archive.org/web/20080202032834/http://www.cumberlandcounty.org/Sheriff/jail.htm
+ |archivedate=2008-02-02
+ |url-status=dead
+}}</ref><ref>{{cite web|url=http://nl.newsbank.com/nl-search/we/Archives?p_product=FV&p_theme=fv&p_action=search&p_maxdocs=200&p_topdoc=1&p_text_direct-0=0F54F5962C22EF67&p_field_direct-0=document_id&p_perpage=10&p_sort=YMD_date:D&s_trackval=GooglePM|title=Long-Term Inmates Add To County Jail Crowding |publisher=Fayetteville Observer|accessdate=2008-02-06|last=Silberman|first=Todd }}</ref>
+
+[[File:Ccjail.JPG|200px|right|The modern cell blocks of the county jail.]]
+
+==References==
+{{reflist}}
+
+== External links ==
+*[http://www.cumberlandso.org Cumberland County Jail / Cumberland County Sheriff's Office.]
+
+[[Category:Jails in Maine]]
+[[Category:Government buildings in Portland, Maine]]
+[[Category:1994 establishments in Maine]]
+[[Category:Buildings and structures completed in 1994]]
+[[Category:Government of Cumberland County, Maine|Jail]]
+
+{{Maine-struct-stub}}
+{{US-prison-stub}}

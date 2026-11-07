@@ -1,0 +1,132 @@
+{{Short description|U.S. federal prison in Washington state}}
+{{Use American English|date=August 2025}}
+{{Infobox prison
+| name            = Federal Detention Center, SeaTac
+| image           = SeaTac Federal Detention Center (23324410024).jpg
+| caption         = 
+| location        = 2425 South 200th Street<br />[[SeaTac, Washington]] 98198
+| coordinates     = {{Coord|47|25|19|N|122|18|06|W|format=dms|type:landmark_region:US-WA|display=title,inline}}
+| status          = Operational
+| classification  = [[Administrative security|Administrative]]
+| capacity        = 1000<ref name="FDC Seatac, Stromberg Architectural" />
+| population      = 608<ref name="BOP-Weekly-Population-Report">{{cite web|title=Weekly Population Report |url=http://www.bop.gov/locations/weekly_report.jsp|publisher=[[Federal Bureau of Prisons]]|access-date=August 2, 2010 |date=July 29, 2010}}</ref>
+| population_date = March 23, 2015
+| opened          = September 1997<ref name="The-US-Federal-Prison-System" />
+| closed          = 
+| managed_by      = [[Federal Bureau of Prisons]]
+| director        = 
+| governor        = 
+| prisoners       = 
+}}
+
+The '''Federal Detention Center, SeaTac''' ('''FDC SeaTac''') is a federal prison in [[SeaTac, Washington]], near the [[Seattle–Tacoma International Airport]].<ref name="The-US-Federal-Prison-System" /> It is operated by the [[Federal Bureau of Prisons]], a division of the [[United States Department of Justice]]. The facility is also adjacent to the [[Angle Lake station|Angle Lake]] light rail station.<ref>{{cite news |last=Lindblom |first=Mike |date=July 27, 2016 |title=Light rail's Angle Lake Station in SeaTac nears the finish line |url=http://www.seattletimes.com/seattle-news/transportation/angle-lake-station-in-seatac-near-the-finish-line/ |work=The Seattle Times |access-date=August 24, 2016 |url-status=live |archive-url=https://web.archive.org/web/20160822115230/http://www.seattletimes.com/seattle-news/transportation/angle-lake-station-in-seatac-near-the-finish-line/ |archive-date=August 22, 2016 |df=mdy-all }}</ref>
+
+The administrative facility employed 200 staff as of 2002 and housed 608 male and female inmates as of March 23, 2015.<ref name="BOP-Weekly-Population-Report" /><ref name="BOP-FDC-Miami">{{cite web|title=FDC SeaTac|url=http://www.bop.gov/locations/institutions/set/index.jsp|publisher=[[Federal Bureau of Prisons]]|access-date=July 21, 2010}}</ref>
+
+==Background==
+[[Image:Approaching Sea-Tac.jpg|thumb|200px|FDC SeaTac]]
+Opened in September 1997, the detention center was designed for a capacity of 1000 inmates.<ref name="FDC Seatac, Stromberg Architectural">{{cite web|url=http://www.strombergarchitectural.com/projects/fdc-seatac |title=FDC Seatac in Seatac, WA |publisher=Strombergarchitectural.com |access-date=2015-10-09}}</ref> The facility houses sentenced inmates, both male and female, as well as pre-trial, holdover, and immigration detainees.<ref name="The-US-Federal-Prison-System">{{Cite book|title=The U.S. Federal Prison System|author=Mary Bosworth|author-link=Mary Bosworth|url=https://archive.org/details/usfederalprisons0000bosw|url-access=registration|page=[https://archive.org/details/usfederalprisons0000bosw/page/299 299]|publisher=[[SAGE Publications]]|access-date=July 21, 2010|year=2002}}</ref> Many are involved in [[United States federal courts|federal court]] proceedings in the [[United States District Court for the Western District of Washington|Western District of Washington]].
+
+===Procedures===
+Inmates are issued a "standard bed roll" consisting of bedding and towels upon arrival. Once assigned to a unit, inmates are estimated for size, provided clothes, and issued an identification card that must be carried at all times except to and from showers.<ref name="The-US-Federal-Prison-System" />
+
+===Death of Roxanna Brown===
+{{main|Roxanna Brown}}
+[[Roxanna Brown]], the director of the [[Southeast Asian Ceramics Museum]], died in a cell at the detention center on May 14, 2008. She had been arrested on May 9 for alleged [[wire fraud]] upon her arrival in the United States to give a lecture at an Asian art symposium at the [[University of Washington]].<ref name="SeattleTimes-20090707-pays">{{cite news|publisher=The Seattle Times|author=Mike Carter|title=U.S. pays $880,000 in death of detained antiquities expert|url=https://www.seattletimes.com/seattle-news/us-pays-880000-in-death-of-detained-antiquities-expert/|access-date=July 25, 2010|archive-date=2009-07-09|archive-url=https://web.archive.org/web/20090709025424/http://seattletimes.nwsource.com/html/localnews/2009425908_prisondeath07m0.html|url-access=limited|url-status=live|date=July 7, 2009}}</ref> The charge was dropped immediately after her death at the facility.<ref name="LATimes-20080911-target">{{cite news|work=[[Los Angeles Times]]|author=Jason Felch|title=Once an aid in a federal probe, antiquities scholar becomes a key target|url=http://www.latimes.com/news/local/la-me-roxanna13-2008sep13,0,6263832.story|access-date=July 21, 2010|date=September 11, 2008}}</ref>
+
+A [[medical malpractice]] lawsuit was filed by her son Taweesin Jaime Ngerntongdee after it was determined that Brown died of [[peritonitis]] caused by a [[perforated ulcer]].<ref name="SeattleTimes-20090707-pays" /> The suit claimed that she had suffered stomach problems in the detention center and other inmates took her to a shower after a guard did not respond when she vomited something that "smelled like excrement." When Brown called for help after the 10 p.m. [[lockdown]] on May 13, the guard told her that she would have to wait until the morning for medical attention, according to the suit.<ref name="LATimes-20080911-target" /> Detention center officials acknowledged that there was no overnight medical staff on duty and took the case to [[mediation]]. The federal government [[settlement (litigation)|settled]] the case for $880,000 in July 2009. Attorney Tim Ford stated that part of the settlement stipulated that Brown's death would be investigated by the Federal Bureau of Prisons.<ref name="SeattleTimes-20090707-pays" />
+
+===Prosecutor murder plot===
+The Federal Bureau of Prisons filed a request on June 16, 2009, to transfer Clayton Roueche of the [[United Nations (gang)|United Nations gang]] from SeaTac to the [[United States Penitentiary, Marion|U.S. Penitentiary in Marion]], [[Illinois]], after the discovery of an alleged plot with fellow inmate [[Luke Elliott Sommer]] to kill three federal prosecutors and the warden of the detention center. Roueche was eventually transferred to the [[United States Penitentiary, Lee|U.S. Penitentiary in Lee County]], [[Virginia]].<ref name="VancouverSun-20100708-plotted">{{cite news|publisher=[[The Vancouver Sun]]|author=Kim Bolan|title=B.C. gangster Clay Roueche plotted deaths of prosecutors: Documents|url=https://vancouversun.com/news/gangster+Clay+Roueche+plotted+deaths+prosecutors+Documents/3248552/story.html|access-date=July 26, 2010|date=July 8, 2010|archive-date=July 11, 2010|archive-url=https://web.archive.org/web/20100711125658/http://www.vancouversun.com/news/gangster%20Clay%20Roueche%20plotted%20deaths%20prosecutors%20Documents/3248552/story.html|url-status=dead}}</ref>
+
+==Notable inmates (current and former)==
+{|class="wikitable sortable"
+|-
+!width="13%"|Inmate Name
+!width="10%"|Register Number
+!width=5%|Photo
+!width=28%|Status
+!width=49%|Details
+|-
+| style="text-align:center;" | [[Colton Harris-Moore]]
+| style="text-align:center;"| {{Deprecated archive|url=https://archive.today/20130217132606/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=83421-004&x=87&y=14|title=83421-004}}
+| 
+| Released in September 2016
+| American criminal and former fugitive nicknamed the "Barefoot Bandit"; pleaded guilty in 2011 to stealing several small planes and a boat, and bank burglary; also committed over 100 home burglaries.<ref name="Q13FOX-20100721-Seattle">{{cite news|publisher=[[Q13 FOX]] |title=Colton Harris-Moore Lands In Seattle |url=http://www.q13fox.com/news/kcpq-070510-moore,0,1611447.story |access-date=July 21, 2010 |date=July 21, 2010 |url-status=dead |archive-url=https://web.archive.org/web/20110721072027/http://www.q13fox.com/news/kcpq-070510-moore%2C0%2C1611447.story |archive-date=July 21, 2011 }}</ref><ref>{{cite web|url=https://www.fbi.gov/seattle/press-releases/2011/camano-island-man-pleads-guilty-to-multi-state-crime-spree |title=FBI — Camano Island Man Pleads Guilty to Multi-State Crime Spree |publisher=Fbi.gov |access-date=2015-10-09}}</ref>
+|-
+| style="text-align:center;" | [[Jim Bell]]<ref>{{cite web|title=Inmate Locator: James Dalton Bell|url=http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=NameSearch&needingMoreList=false&LastName=Bell&Middle=Dalton&FirstName=James&Race=&Sex=&Age=&x=&y=|publisher=[[Federal Bureau of Prisons]]|access-date=July 21, 2010}}{{Dead link|date=August 2025 |bot=InternetArchiveBot |fix-attempted=yes }}</ref>
+| style="text-align:center;"| 26906-086
+| 
+| Released on March 12, 2012
+| [[Crypto-anarchism|Crypto-anarchist]]
+|-
+| style="text-align:center;" | [[Roxanna Brown]]<ref>{{cite web|title=Inmate Locator: Roxanna Maude Brown|url=http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=NameSearch&needingMoreList=false&LastName=Brown&Middle=Maude&FirstName=Roxanna&Race=&Sex=&Age=&x=&y=|publisher=[[Federal Bureau of Prisons]]|access-date=July 21, 2010|archive-date=June 29, 2011|archive-url=https://web.archive.org/web/20110629171601/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=NameSearch&needingMoreList=false&LastName=Brown&Middle=Maude&FirstName=Roxanna&Race=&Sex=&Age=&x=&y=|url-status=dead}}</ref>
+| style="text-align:center;"| 35939-086
+| 
+| Died in cell on May 14, 2008<ref name="LATimes-20080911-target" />
+| Alleged [[wire fraud]]
+|-
+| style="text-align:center;" | [[Gary Bowser]]
+| style="text-align:center;"| 11017-509
+| 
+| Served 30 months at SeaTac, released on March 28, 2023
+| Arrested on October 1, 2020, for his participation in the hacking of the [[Nintendo Switch]] and sentenced to 40-month term on February 12, 2022. Member of the [[Team Xecuter]] group.
+|-
+| style="text-align:center;" | [[Ethan Nordean]]
+| style="text-align:center;"| 28596-509
+| [[File:Ethan Nordean headshot cropped.png|80px]]
+| Released on March 3, 2021; currently at  [[FCI Coleman]]
+| Member of the [[Proud Boys]] who was arrested for participation in the [[2021 United States Capitol attack]]. Nordean was sentenced to 18 years in prison in 2023.<ref>{{Cite web|url=https://thehill.com/regulation/court-battles/4183699-proud-boy-ethan-nordean-sentenced-to-18-years-in-prison/|title=Proud Boy Ethan Nordean sentenced to 18 years in prison, tying for highest Jan. 6 sentence|website=The Hill|date=September 1, 2023|access-date=August 7, 2024}}</ref>
+|-
+| style="text-align:center;" | [[Marc Emery]]<ref>{{cite web|title=Inmate Locator: Marc Scott Emery|url=http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=NameSearch&needingMoreList=false&LastName=Emery&Middle=Scott&FirstName=Marc&Race=&Sex=&Age=&x=&y=|publisher=[[Federal Bureau of Prisons]]|access-date=July 21, 2010|archive-date=June 29, 2011|archive-url=https://web.archive.org/web/20110629171613/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=NameSearch&needingMoreList=false&LastName=Emery&Middle=Scott&FirstName=Marc&Race=&Sex=&Age=&x=&y=|url-status=dead}}</ref>
+| style="text-align:center;"| 40252-086
+| [[File:Marc Emery 04.jpg|80px]]
+| Released on July 10, 2014
+| [[Cannabis (drug)|Cannabis]] advocate
+|-
+| style="text-align:center;" | [[Anthony Curcio]]
+| style="text-align:center;"| [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=38974-086&x=0&y=0 38974-086]{{Dead link|date=April 2024 |bot=InternetArchiveBot |fix-attempted=yes }}
+| [[File:Anthony Curcio 2014.jpg|80px]]
+| Released in April 2013; completed 6-year sentence at [[USP Coleman]]
+| Former college [[football player]] and real estate investor, convicted in 2009 for masterminding one of the most elaborate [[Armored Car Robbery|armored car heists]] in history.<ref>{{cite web|last1=Doughery|first1=Phil|title=D.B. Tuber|url=http://www.historylink.org/index.cfm?DisplayPage=output.cfm&file_id=8829|publisher=History Link}}</ref><ref>{{cite web|last1=Stangeland|first1=Brooke|title=Out of Prison, Real-Life Thomas Crown Looks Back on Almost-Perfect Heist|url=https://abcnews.go.com/US/prison-real-life-thomas-crown-back-perfect-heist/story?id=19450132|work=ABC news}}</ref><ref>{{cite web|last1=Kushner|first1=David|title=The All-American Bank Heist|url=http://74.220.215.94/~davidkus/index.php?option=com_content&view=article&id=109:..|publisher=GQ Magazine}}{{dead link|date=September 2017 |bot=InternetArchiveBot |fix-attempted=yes }}</ref>
+|-
+| style="text-align:center;" | [[David Sidoo]]
+| style="text-align:center;"| 25452-111
+| 
+| Served a 90-day sentence, released December 17, 2020
+| Charged with connection to the [[2019 college admissions bribery scandal]].
+|-
+| style="text-align:center;" | [[Clayton Roueche]]<ref name="SeattleTimes-20100708-plotted">{{cite news|title=Canadians allegedly plotted prosecutor murders, jailbreak |url=http://seattletimes.nwsource.com/html/localnews/2012312383_plot09m.html |publisher=The Seattle Times |access-date=July 21, 2010 |date=July 8, 2010 |first=Mike |last=Carter |url-status=dead |archive-url=https://web.archive.org/web/20100712062256/http://seattletimes.nwsource.com/html/localnews/2012312383_plot09m.html |archive-date=July 12, 2010 }}</ref>
+| style="text-align:center;" | 36994-177
+| 
+| Transferred to [[Federal Correctional Institution, Edgefield|FCI Edgefield]]
+| [[Drug lord]]; founder of the [[United Nations (gang)|United Nations]] gang
+|-
+| style="text-align:center;" |[[Luke Elliott Sommer]]<ref name="SeattleMet-200909-Heist">{{cite news|publisher=[[Seattle Metropolitan]]|author=James Ross Gardner|title=Heist|url=http://www.seattlemet.com/issues/archives/articles/tacoma-bank-robbery-0909/8/|access-date=July 21, 2010|date=September 2009|url-status=dead|archive-url=https://web.archive.org/web/20110721000729/http://www.seattlemet.com/issues/archives/articles/tacoma-bank-robbery-0909/8/|archive-date=July 21, 2011}}</ref>
+| style="text-align:center;"| 38474-086
+| [[File:Luke Elliott Sommer (U.S. Army uniform) 2005.jpg|80px]]
+| Transferred to [[United States Penitentiary, Coleman|USP Coleman II]], Florida<ref>{{cite web|title=Inmate Locator: Luke Elliot Sommer|url=http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=NameSearch&needingMoreList=false&LastName=Sommer&Middle=Elliot&FirstName=Luke&Race=&Sex=&Age=&x=&y=|publisher=[[Federal Bureau of Prisons]]|access-date=July 21, 2010|archive-date=June 29, 2011|archive-url=https://web.archive.org/web/20110629171631/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=NameSearch&needingMoreList=false&LastName=Sommer&Middle=Elliot&FirstName=Luke&Race=&Sex=&Age=&x=&y=|url-status=dead}}</ref>
+| [[Bank robbery]]
+|}
+
+==See also==
+{{Portal|United States|Politics}}
+*[[Incarceration in the United States]]
+*[[List of U.S. federal prisons]]
+
+==References==
+{{Reflist|colwidth=30em}}
+
+==External links==
+* [http://www.bop.gov/locations/institutions/set/index.jsp FDC SeaTac] at the [[Federal Bureau of Prisons]] (Official site)
+* [https://web.archive.org/web/20100620130312/http://www.insideprison.com/fdc-seatac.asp FDC SeaTac] at InsidePrison.com
+* ''[http://dockets.justia.com/docket/washington/wawdce/2:2009cv00213/157536/ Ngerntongdee v. United States of America]'' at Justia.com
+
+{{SeaTac, Washington}}
+{{Federal Bureau of Prisons}}
+
+[[Category:1997 establishments in Washington (state)]]
+[[Category:Buildings and structures in King County, Washington]]
+[[Category:Federal Bureau of Prisons Administrative Facilities|SeaTac]]
+[[Category:Prisons in Washington (state)]]
+[[Category:SeaTac, Washington]]

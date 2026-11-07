@@ -1,0 +1,406 @@
+{{Short description|Federal detention facility in Brooklyn, New York}}
+{{About||the city jail|Brooklyn Detention Complex|the other federal administrative detention facility in New York City|Metropolitan Correctional Center, New York}}
+{{Use American English|date=August 2025}}
+{{Use mdy dates|date=February 2019}}
+{{Infobox prison
+| name = Metropolitan Detention Center, Brooklyn
+| image = [[File:Fed29jail5bbtjeh.JPG|275px]]
+| location = 80 29th Street<br />[[Brooklyn]], [[New York (state)|NY]] 11232
+| coordinates =
+| status = Operational
+| classification = Administrative facility (all security levels)
+| population = 1,336
+| opened = 
+| closed = 
+| managed_by = [[Federal Bureau of Prisons]]
+| warden =Raul Maldonado Jr.<ref>{{cite web |title=Tacuri Yumbla v. Maldonado, 1:26-cv-00594, (E.D.N.Y Feb 10, 2026) ECF No. 9 |url=https://www.govinfo.gov/content/pkg/USCOURTS-nyed-1_26-cv-00594/pdf/USCOURTS-nyed-1_26-cv-00594-0.pdf |website=[[GovInfo]] |date=February 20, 2026 }}</ref>
+| caption=MDC Brooklyn in 2008
+| website={{Official website|https://www.bop.gov/locations/institutions/bro/}}
+}}
+
+The '''Metropolitan Detention Center, Brooklyn''', also '''MDC Brooklyn''', is a [[List of United States federal prisons#Administrative facilities|United States federal administrative detention facility]] in the [[Sunset Park, Brooklyn|Sunset Park]] neighborhood of [[Brooklyn]], [[New York City]], New York, United States. It holds male and female inmates of all security levels. It is operated by the [[Federal Bureau of Prisons]], a division of the [[United States Department of Justice]]. 
+
+As of February 2026, 1,408 people were held in MDC Brooklyn. Most people held at MDC Brooklyn have pending cases in the [[United States District Court for the Eastern District of New York]]. MDC Brooklyn also holds prisoners serving brief sentences.<ref>{{cite web |title=MDC Brooklyn |url=https://www.bop.gov/locations/institutions/bro/index.jsp |publisher=Federal Bureau of Prisons}}</ref>
+
+==History==
+MDC Brooklyn occupies land that was originally part of Bush Terminal (now [[Industry City]]), a historic [[Intermodal freight transport|intermodal]] shipping, warehousing, and manufacturing complex.<ref>{{cite book|url=https://books.google.com/books?id=EBgzAQAAMAAJ&pg=RA1-PA21|title=Metropolitan Detention Center, Brooklyn: Environmental Impact Statement|author=United States. Bureau of Prisons|year=1991|page=21|language=en|access-date=November 21, 2018}}</ref> The [[Federal Bureau of Prisons]] initially proposed converting two buildings at Industry City into a federal jail in 1988, due to overcrowding at the [[Metropolitan Correctional Center, New York]].<ref>{{cite news|url=https://www.newspapers.com/clip/25826830/feds_need_more_space_to_house_the_bad/|title=Feds need more space to house the bad eggs|last=Farrell|first=Bill|date=March 25, 1988|work=New York Daily News|access-date=November 29, 2018|page=70|via=newspapers.com}} {{open access}}</ref> There was large opposition from members of the local community, who feared that traffic congestion in the area would rise.<ref name=":0">{{cite web|url=https://www.nytimes.com/1991/02/06/nyregion/jail-is-planned-for-brooklyn-and-foes-rise.html|title=Jail Is Planned For Brooklyn, And Foes Rise|last=Prial|first=Frank J.|date=February 6, 1991|website=The New York Times|access-date=November 21, 2018}}</ref> Critics feared that the facility, with its staff, inmates, visitors, and supply deliveries, would overburden neighborhood traffic and water and sewer systems.<ref>{{cite news |last=Lambert |first=Bruce |url=https://www.nytimes.com/1993/12/19/nyregion/neighborhood-report-sunset-park-us-to-open-jail-despite-snags.html |title=Lambert, Bruce, "U.S. to Open Jail, Despite Snags" |date= December 19, 2003 |work=The New York Times}}</ref><ref>{{cite news|url=https://www.newspapers.com/clip/25826976/sunset_park_rains_on_jail/|title=Sunset Park rains on jail|last=McMorris|first=Frances|date=May 22, 1991|work=New York Daily News|access-date=November 29, 2018|page=361|via=newspapers.com}} {{open access}}</ref> To make room for MDC Brooklyn, one of the original Bush Terminal loft buildings—Federal Building No. 1, formerly occupied by the [[United States Coast Guard]]—was demolished in a [[controlled explosion]] in August 1993.<ref>{{cite news|url=https://www.newspapers.com/clip/25880505/wrecking_crew_clears_way_for_detention/|title=Wrecking crew clears way for detention ctr.|last=Allen|first=Michael O.|date=August 16, 1993|work=New York Daily News|access-date=December 1, 2018|page=341|via=newspapers.com}} {{open access}}</ref>
+
+MDC Brooklyn opened in January 1994.<ref name=":1">{{Cite book |url=https://www.oversight.gov/sites/default/files/documents/reports/2019-09/e1904.pdf |title=Review and Inspection of Metropolitan Detention Center Brooklyn Facilities Issues and Related Impacts on Inmates |publisher=Office of the Inspector General, U.S. Department of Justice |year=2019 |pages=2}}</ref> It was built to hold 1,000 inmates awaiting [[arraignment]] or trial at the federal court in the [[Eastern District of New York]].<ref name="plan">{{cite news|url=https://www.nytimes.com/1991/02/06/nyregion/jail-is-planned-for-brooklyn-and-foes-rise.html?pagewanted=1|title=Jail Is Planned For Brooklyn, And Foes Rise|last=Prial|first=Frank J.|date=February 6, 1991|work=The New York Times|access-date=February 26, 2010}}</ref> By 2019, according to ''[[The New York Times]]'', it held 1,600 inmates.<ref name="NYT_Correal_20190202">{{Cite news| first1 = Annie |last1=Correal| first2 = Andy |last2=Newman |first3=Christina |last3=Goldbaum| title = Protesters Try to Storm Brooklyn Jail With Little Heat or Electricity |newspaper= The New York Times| access-date = February 5, 2019| date = February 2, 2019| url = https://www.nytimes.com/2019/02/02/nyregion/brooklyn-federal-jail-heat.html}}</ref>
+
+In November 1999, a second facility was opened next to the original complex<ref name=":1" /> to house inmates who have been sentenced and are awaiting transfer to a permanent facility. This brought the total number of inmates to close to 3,000 and made MDC Brooklyn the largest detention center in the United States.
+
+In June 2015, a lawsuit filed in 2002 against high-ranking officials of [[George W. Bush]]'s presidential administration, including former Attorney General [[John Ashcroft]] and former [[Federal Bureau of Investigation|F.B.I.]] Director [[Robert Mueller|Robert S. Mueller]] III, brought by eight, mostly Muslim immigrant detainees, was allowed to go forward by a three-judge federal panel. It alleged that the plaintiffs were subject to chronic arbitrary abuses including beatings, strip searches and solitary confinement. The Second Circuit Court of Appeals decision included one dissent.<ref>[https://www.nytimes.com/2015/06/18/us/immigrants-suit-over-detention-after-9-11-is-revived.html Immigrants' Lawsuit Over Post 9/11 Detention Is Revived], [[New York Times]], Adam Liptak, June 17, 2015. Retrieved June 20, 2015.</ref>
+
+In 2019, former warden Cameron Lindsay said, "The M.D.C. was one of the most troubled, if not the most troubled facility in the Bureau of Prisons."<ref>{{cite news |last1=Correal |first1=Annie |last2=Goldstein |first2=Joseph |date=9 February 2019 |title='It's Cold as Hell': Inside a Brooklyn Jail's Weeklong Collapse |url=https://www.nytimes.com/2019/02/09/nyregion/brooklyn-jail-no-heat-inmates.html |access-date=10 February 2019 |newspaper=New York Times}}</ref> 
+
+In September 2024, the Federal Bureau of Prisons confirmed that federal defendants entering the prison system after sentencing will no longer be sent to MDC Brooklyn. This decision is possibly related to a previous ruling by a Federal Court judge who threatened to vacate a man's sentence if he was sent to MDC Brooklyn due to the "dangerous, barbaric conditions" of the jail.<ref>{{Cite news |last=Annese |first=John |date=2024-09-15 |title=Fed prison system stops sending newly sentenced inmates to notorious MDC Brooklyn jail |url=https://www.nydailynews.com/2024/09/15/fed-prison-system-stops-sending-newly-sentenced-inmates-to-notorious-mdc-brooklyn-jail/ |access-date=2024-09-16 |work=New York Daily News |archive-url=https://archive.today/20250727084143/https://www.nydailynews.com/2024/09/15/fed-prison-system-stops-sending-newly-sentenced-inmates-to-notorious-mdc-brooklyn-jail/ |archive-date=27 July 2025}}</ref> The same month, rapper and record producer [[Sean "Diddy" Combs]] was incarcerated at the prison's Special Housing Unit.<ref>{{cite news|url=https://www.cnn.com/entertainment/live-news/sean-diddy-combs-arrested-nyc-09-17-2024/index.html|title=Sean ‘Diddy’ Combs denied bail and will remain in federal detention, judge rules|publisher=CNN|date=September 17, 2024|accessdate=September 17, 2024}}</ref>
+
+In early 2026, an investigation by [[Rolling Stone]] revealed the institution imposes extended lockdowns, offers inadequate medical care, and subjects inmates to poor conditions including that some inmates go weeks without seeing the sky.<ref>{{Cite web |last=O’Neil |first=Lorena |date=2026-02-03 |title=Luigi Mangione, Nicolas Maduro, and Diddy Spent Time in This Jail. Here's What It's Like on the Inside |url=https://www.rollingstone.com/culture/culture-features/luigi-mangione-maduro-diddy-jail-mdc-1235507094/ |access-date=2026-04-07 |website=Rolling Stone |language=en-US}}</ref>
+
+One of Ghislaine Maxwell's lawyers said that MDC Brooklyn had mistreated Maxwell during her time there. She was searched 1,400 times, even though no contraband was ever found. Despite Maxwell saying she was not suicidal, she had a flashlight shone when she was supposed to be sleeping every 15 minutes, therefore disrupting her sleep. Furthermore, Maxwell's food was heated in a container that was not for microwave use, causing things like the food blending into the plastic.<ref>{{cite web |last1=Mangan |first1=Dan |title=Alleged Epstein procurer Ghislaine Maxwell ‘withering to a shell of her former self’ because of jail conditions, lawyer says |url=https://www.cnbc.com/2021/02/16/jeffrey-epstein-sex-abuse-case-ghislaine-maxwell-complains-of-jail-treatment.html |website=CNBC |access-date=1 May 2026 |date=16 February 2021}}</ref> 
+
+<gallery caption="Inside MDC Brooklyn's administrative maximum (ADMAX) Special Housing Unit (SHU). Photos dated May 1, 2002." mode=packed heights=200>
+MDC Brooklyn ADMAX SHU cell.jpg|Typical ADMAX SHU cell showing (clockwise from top left) the bunk bed, shower, seating area, and combination toilet and sink fixture.
+MDC Brooklyn ADMAX SHU multipurpose room.jpg|A Multipurpose room equipped for detainee medical examinations.
+MDC Brooklyn ADMAX SHU recreation cells.jpg|Recreation cells as viewed from the last recreation cell.
+MDC Brooklyn ADMAX SHU contact visiting area.jpg|Two views of the contact visiting area.
+MDC Brooklyn ADMAX SHU non-contact visiting area.jpg|Two views of the non-contact visiting area used by September 11 detainees.
+</gallery>
+
+==Immigration detention==
+
+=== 2001–2002 investigative detention ===
+During the sweeping investigation of non-citizens that followed the [[September 11 attacks]], the United States government detained 762 foreign nationals, 60% of them in the New York City metropolitan area. 84 detainees were held at the Metropolitan Detention Center between September 14, 2001, and August 27, 2002.<ref name=":2">{{Cite web |last=U.S. Department of Justice. Office of Inspector General |date=June 2003 |title=The September 11 Detainees: A Review of the Treatment of Aliens Held on Immigration Charges in Connection with the Investigation of the September 11 Attacks |url=https://oig.justice.gov/sites/default/files/archive/special/0306/chapter7.htm |access-date=2026-04-01 |website=oig.justice.gov}}</ref> Those detained in the investigation were placed in the highly isolated Secure Housing Unit, limited to a single outside phone call per month, one call with lawyers per week, and subjected to what the Department of Justice's Office of Inspector General determined was "a pattern of physical and verbal abuse."<ref name=":2" />
+
+=== 2025 – ICE facility ===
+The Metropolitan Detention Center began holding immigrant men detained by the [[United States Immigration and Customs Enforcement|Immigration and Customs Enforcement]] (ICE) in June 2025 under a February 6, 2025, agreement between ICE and the US Bureau of Prisons.<ref>{{Cite news |date=2025-06-25 |title=Federal jails in New York, Hawaii to receive ICE detainees |url=https://www.miamiherald.com/news/local/immigration/article309322275.html |access-date=2026-04-01 |work=Miami Herald}}</ref> The ICE presence in the prison expanded to a second cell block in February 2026.<ref>{{Cite web |date=2026-02-23 |title=ICE Expands Presence in Notorious Brooklyn Jail - NYC Today |url=https://nationaltoday.com/us/ny/new-york/news/2026/02/23/ice-expands-presence-in-notorious-brooklyn-jail/ |access-date=2026-04-01 |website=National Today |language=en-US}}</ref> 
+
+==Notable incidents==
+===Extraordinary rendition===
+In September 2006, Canadian engineer [[Maher Arar]] was arrested at [[John F. Kennedy International Airport]] while flying home from a vacation in Tunisia and held for two weeks in solitary confinement at MDC Brooklyn.<ref name=nyt2009opinion>{{cite news|url=https://www.nytimes.com/2009/02/18/opinion/18wed2.html|title=The Unfinished Case of Maher Arar|newspaper=[[The New York Times]]|date=February 18, 2009|access-date=2025-05-22}}</ref><ref>{{Cite web |date=2005-07-11 |title=His Year In Hell |url=https://www.cbsnews.com/news/his-year-in-hell-11-07-2005/ |access-date=2026-04-01 |website=CBS News |language=en-US}}</ref> The US government suspected him of being a member of [[Al Qaeda]] and deported him, not to Canada, his current home and the passport on which he was travelling, but to Syria.<ref>{{cite magazine|magazine=The New Yorker|url=https://www.newyorker.com/archive/2005/02/14/050214fa_fact6?currentPage=all|title=Outsourcing Justice: The secret history of America's "extraordinary rendition" program.|last=Mayer|first=Jane|author-link=Jane Mayer|date=February 14, 2005|access-date=December 3, 2010}}</ref><ref>{{cite web|url=http://montreal.cbc.ca/template/servlet/View?filename=mtldeport021017|title=Anger grows over Canadian deported to Syria|date=17 October 2002|publisher=CBC Montreal|url-status=dead|archive-url=https://web.archive.org/web/20021030150718/http://montreal.cbc.ca/template/servlet/View?filename=mtldeport021017|archive-date=30 October 2002}}</ref> He was detained in Syria for almost a year, during which time he was tortured by Syrian authorities, according to the findings of a [[Commission of Inquiry into the Actions of Canadian Officials in Relation to Maher Arar|commission of inquiry ordered by the Canadian government]], until his release to Canada. The Syrian government later stated that Arar was "completely innocent."<ref name="Arar Inquiry Press Release Sept. 6, 2007">{{cite web|publisher=Commission of Inquiry into the Actions of Canadian Officials in Relation to Maher Arar|url=https://epe.lac-bac.gc.ca/100/206/301/pco-bcp/commissions/maher_arar/07-09-13/www.ararcommission.ca/eng/PressReleaseFinal_sept-06-2007.pdf|title=Maher Arar will not testify before the Commission of Inquiry|date=2007-09-06}}</ref>
+
+===Inmate assault===
+On June 29, 2009, Ronald Atkinson (62416–054), an inmate at MDC Brooklyn who had been arrested in connection with six bank robberies 12 days earlier, committed an allegedly unprovoked assault on a correctional officer, repeatedly punching him in the head until he was restrained by correctional officers. The officer, whom the Bureau of Prisons did not identify, suffered a broken nose, broken facial bones, a fractured eye socket, a laceration requiring stitches, and two slipped discs in his neck. An 18-year veteran of the Bureau of Prisons, the officer was forced to retire as a result of his injuries.<ref>{{cite web|title=Defendant Sentenced to 151 Months' Imprisonment for Assaulting Correctional Counselor at the Metropolitan Correctional Center|url=https://www.fbi.gov/newyork/press-releases/2013/defendant-sentenced-to-151-months-imprisonment-for-assaulting-correctional-counselor-at-the-metropolitan-correctional-center|publisher=Federal Bureau of Investigation|access-date=September 24, 2013|date=July 19, 2013}}</ref>
+
+Atkinson was sentenced to seven years in federal prison for the bank robberies. On July 19, 2013, he was sentenced to an additional 12 years in prison for the assault. Currently held at USP Coleman I in Sumter County, Florida, Atkinson is scheduled for release in 2032.<ref>{{cite web|title=Inmate Locator - Ronald Atkinson|url=http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=62416-054&x=89&y=20|publisher=Federal Bureau of Prisons|access-date=October 28, 2013}}</ref><ref name="s665">{{cite web | title=BOP: Federal Inmates By Name | website=BOP | date=2021-02-28 | url=https://www.bop.gov/mobile/find_inmate/byname.jsp#inmate_results | access-date=2024-10-16}}</ref>
+
+===Ronell Wilson===
+On February 5, 2013, New York media outlets reported that Nancy Gonzalez, a former federal correction officer, had engaged in a sexual relationship with [[Ronell Wilson]], an inmate at MDC Brooklyn, and that Gonzalez was carrying Wilson's child. Wilson, who was convicted and sentenced to death in 2007 for the 2003 murders of NYPD Detectives Rodney Andrews and James Nemorin, was awaiting a resentencing hearing in Brooklyn federal court after his original death sentence was overturned in 2010, when he began a relationship with Gonzalez. Gonzalez was terminated and arraigned in federal court on charges of sexual abuse of a person in custody, because an inmate cannot legally consent to sex.<ref>{{cite news|last=Secret|first=Mosi|title=Impregnated by Prisoner, Guard Now Faces Charges|url=https://www.nytimes.com/2013/02/06/nyregion/police-killers-jailer-now-pregnant-with-his-child-is-charged.html?ref=ronellwilson&_r=0|access-date=October 28, 2013|newspaper=The New York Times|date=February 5, 2013}}</ref><ref>{{cite news|last=Marzulli|first=John|title=Convicted cop killer Ronell Wilson impregnanted female guard in twisted plan to avoid death penalty|url=http://www.nydailynews.com/news/crime/killer-ronell-wilson-impregnanted-female-guard-avoid-death-penalty-article-1.1255731|access-date=October 28, 2013|newspaper=New York Daily News|date=February 5, 2013}}</ref> Wilson was subsequently transferred to the [[Metropolitan Correctional Center, New York City|Metropolitan Correctional Center in Manhattan]]. Gonzalez pleaded guilty to unlawful sexual abuse of a ward on July 3, 2013.<ref>{{cite news|last=Hays|first=Tom|title=Nancy Gonzalez, New York Jail Guard, Admits To Affair With Convicted Cop Killer Ronell Wilson|url=http://www.huffingtonpost.com/2013/07/04/nancy-gonzalez-jail-guard-affair-ronell-wilson-cop-killer_n_3546155.html|work=Huffington Post|access-date=October 28, 2013|date=July 3, 2013}}</ref> Gonzalez was sentenced to a year and a day by Federal Judge [[Brian Cogan]] on February 9, 2014. Cogan remarked, "[Gonzalez has] severe emotional dysfunction".<ref>{{cite web|last=Marzulli|first=John|title=Ronnell Wilson's baby-mama gets prison time|url=http://www.nydailynews.com/new-york/ronell-wilson-baby-mama-prison-time-article-1.1619996|newspaper=New York Daily News|date=February 9, 2014}}</ref>
+
+Wilson was sentenced to death again on September 10, 2013. During the hearing, US District Court Judge [[Nicholas Garaufis]] called for a formal investigation by the Justice Department's inspector general into the management of MDC Brooklyn, where, he said, Mr. Wilson was "permitted to treat the MDC as his own private fiefdom."<ref>{{cite news|last=Secret|first=Mosi|title=For the Second Time, a Killer of Two Detectives Is Sentenced to Death|url=https://www.nytimes.com/2013/09/11/nyregion/for-second-time-killer-of-two-detectives-is-sentenced-to-death.html?_r=0|access-date=October 5, 2013|newspaper=The New York Times|date=September 10, 2013}}</ref>
+
+=== Winter 2019 heat and power outages ===
+In January and February 2019, over 1,600 inmates were kept with little to no heat and power for a week during the [[January 2019 North American cold wave]]. Numerous inmates reported ill health and were seen banging on windows for help. Activists and some New York officials sought to improve conditions.<ref>{{cite news |last1=Rosenblatt |first1=Kalhan |title=Outrage grows over reports of Brooklyn prison with little heat, electricity during frigid week |url=https://www.nbcnews.com/news/us-news/outrage-grows-over-reports-brooklyn-prison-little-heat-electricity-during-n966186 |access-date=February 3, 2019 |work=NBC News |date=February 2, 2019}}</ref><ref name="NYTimes-NoHeat-2019"/> The incident started on the weekend of January 26–27 with a power outage. A faulty electrical panel was repaired but caught fire the next day.<ref name="NYTimes-NoHeat-2019">{{cite web |last1=Correal |first1=Annie |title=No Heat for Days at a Jail in Brooklyn Where Hundreds of Inmates Are Sick and 'Frantic' |url=https://www.nytimes.com/2019/02/01/nyregion/mdc-brooklyn-jail-heat.html |website=The New York Times |access-date=February 4, 2019 |date=February 1, 2019}}</ref> Power was restored on the evening of February 3,<ref>{{cite web |last1=Nessen |first1=Stephen |title=Power Restored To Brooklyn Jail Where Inmates Went A Week Without Heat |url=https://www.npr.org/2019/02/04/691260314/power-restored-to-brooklyn-jail-where-inmates-went-a-week-without-heat |publisher=NPR |access-date= February 4, 2019 |language=en |date=February 4, 2019}}</ref> and the Department of Justice planned to investigate the incident.<ref>{{cite web |last1=Walker |first1=Julie |title=Justice Department to probe federal jail in NYC |url=https://www.apnews.com/a0e287e2243e4cb0aaa6912ed218bb08 |publisher=AP News |access-date=February 4, 2019 |date=February 3, 2019}}</ref><ref>{{Cite news| issn = 0362-4331| last1 = Weiser| first1 = Benjamin| last2 = Correal| first2 = Annie| title = Brooklyn Jail to Be Visited by Federal Judge After Heat and Power Crisis| work = The New York Times| access-date = February 5, 2019| date = February 5, 2019| url = https://www.nytimes.com/2019/02/04/nyregion/lawsuit-brooklyn-jail.html}}</ref> Inmates, family members, and lawyers have said that those inmates involved in protesting these harsh conditions through non-violent disobedience and hunger strikes faced draconian reprisals from jail staff, including being pepper-sprayed, subjected to solitary confinement, and having toilets shut off. According to a report in ''[[The Intercept]]'':
+
+<blockquote>On all three of those housing units where men collectively refused food, jail staff shut off the valves to the toilets in all of the cells, according to accounts relayed to lawyers. Confined to their cells on lockdown, deprived of light, the men on these units now found themselves shivering on their bunks with their heads inches from toilet bowls nearly overflowing with festering feces.<ref>{{cite news |last1= Whitford|first1=Emma|last2= Pinto|first2=Nick|date=February 16, 2019|title=Locked Inside a Freezing Federal Jail, They United to Protest Their Conditions — Only to Face Reprisals|url=https://theintercept.com/2019/02/16/metropolitan-detention-center-mdc-brooklyn-jail/|work=[[The Intercept]] |access-date=February 17, 2019}}</ref></blockquote>
+
+== Notable current inmates ==
+{|class="wikitable sortable"
+
+!width=14%|Inmate Name
+!width=9%|[https://www.bop.gov/inmateloc/ Register Number]
+!width=5%|Photo
+!width=22%|Status
+!width=55%|Details
+|-
+| style="text-align:center;" | [[El Mayo]]
+| style="text-align:center;" | 27102-511
+| style="text-align:center;" | 
+| Sentenced to life imprisonment on July 20, 2026.
+| Leader of the [[Sinaloa Cartel]]; oversaw trafficking of cocaine and heroin into the United States.
+|-
+| style="text-align:center;" | [[Nicholas Cosmo]]
+| style="text-align:center;" | 49193-053
+| 
+|Serving a 25-year sentence; scheduled for release on November 18, 2030.
+| Pleaded guilty to [[fraud]] for stealing over $365 million from thousands of investors during a 5-year [[Ponzi scheme]]; known as the "Mini-Madoff;" Cosmo's story was featured on the [[CNBC]] television program ''[[American Greed]]''.<ref>{{cite news|url=https://huffingtonpost.com/2011/10/14/nicholas-cosmo-mini-madof_n_1011330.html |title=Nicholas Cosmo, 'Mini Madoff' Sentenced To 25 Years In Prison For Ponzi Scheme |publisher=Huffingtonpost.com |date= 2011-10-14|access-date=2012-11-01 |first=Jillian |last=Berman}}</ref><ref>{{cite web|url=https://www.cnbc.com/id/45555973 |title=American Greed: The $400 Million Rip-Off |publisher=CNBC |date=2009-01-23 |access-date=2012-11-01}}{{dead link|date=November 2024|bot=medic}}{{cbignore|bot=medic}}</ref>
+|-
+| style="text-align:center;"| [[Jam Master Jay|Ronald Washington]]
+| style="text-align:center;"| 68635-053
+|
+|Serving a sentence for drug possession and robbery; brought to New York to stand trial for murder.
+| rowspan="2" |Accused of the murder of [[Run-DMC]] DJ [[Jam Master Jay]] in 2002; charged in 2020.
+|-
+| style="text-align:center;"| [[Jam Master Jay|Karl Jordan Jr.]]
+| style="text-align:center;"| 05124-509
+|
+|Acquitted of murder charges; awaiting trial on related drug charges.<ref>{{cite web |title=Release is on hold for the man cleared of killing Run-DMC's Jam Master Jay |url=https://apnews.com/article/jam-master-jay-run-dmc-murder-case-10f5b346f9b178b45c2e1a4909226d41 |website=AP News |access-date=29 July 2026 |language=en |date=10 April 2026}}</ref>
+|-
+| style="text-align:center;" | [[Luigi Mangione]]
+| style="text-align:center;" | 52503-511
+|
+|Held awaiting trial.
+|Charged with [[stalking]] for the [[killing of Brian Thompson]].
+|-
+|style="text-align:center;" | [[Rafael Caro Quintero]]
+|style="text-align:center;" | 12303-016
+|[[File:Rafael Caro Quintero.jpg|80px]]
+|Held awaiting trial.
+Extradited to MDC Brooklyn from Mexico on February 27, 2025.
+|Former leader of the now defunct [[Guadalajara Cartel]], responsible for the kidnapping of United States Drug Enforcement Administration (DEA) agent Enrique "Kiki" Camarena, Camarena's pilot Alfredo Zavala Avelar, the American writer John Clay Walker, and dentistry student Alberto Radelat in 1985.
+|-
+|style="text-align:center;" | [[Tal and Oren Alexander|Tal Alexander]]
+|style="text-align:center;" | 50978-511
+|
+|rowspan="3"|Held awaiting sentencing,  scheduled for August 6, 2026<ref>{{Cite web |last=Escobar |first=Maria Elisa |date=2026-04-03 |title=UPDATE: Alexander Brothers Found Guilty on All Charges |url=https://cseinstitute.org/update-alexander-brothers-found-guilty-on-all-charges/ |access-date=2026-06-13 |website=The Institute to Address Commercial Sexual Exploitation |language=en-US}}</ref>
+|rowspan="3"|Tal and Oren Alexander are luxury real estate agents. In December 2024, they were charged with sex trafficking alongside their brother Alon.<ref>{{Cite web |last1=Quinn |first1=Liam |title=Alexander Brothers Held on Sex Trafficking Charges in Same N.Y.C. Jail as Diddy and Luigi Mangione |url=https://people.com/alexander-brothers-same-nyc-jail-diddy-luigi-mangione-8779282 |website=[[People (magazine)|People]] |access-date=January 23, 2025 |date=January 23, 2025}}</ref>
+|-
+|style="text-align:center;" | [[Tal and Oren Alexander|Oren Alexander]]
+|style="text-align:center;" | 52667-511
+|
+|-
+|style="text-align:center;" | [[Tal and Oren Alexander|Alon Alexander]]
+|style="text-align:center;" | 52665-511
+|
+|-
+| style="text-align:center;"| [[Nicolás Maduro]]
+| style="text-align:center;"| 00734-506
+| style="text-align:center;"| [[File:Nicolás_Maduro_in_2023_(cropped).jpg|80px]]
+|Held awaiting trial.
+|Maduro served as the [[Presidency of Nicolás Maduro|president of Venezuela]] from 2013 until his capture in January 2026 during [[2026 United States intervention in Venezuela|US intervention in Venezuela]], after which he was transported to MDC to await trial for [[narcoterrorism]] charges.{{efn|His status as president has been unclear since a [[2026 United States strikes in Venezuela|2026 military operation resulting in his capture and removal to the United States of America for trial]]; see [[#Capture|§ Capture]]. He remains the constitutional president, while [[Delcy Rodríguez]] ''de facto'' functioning his presidential powers as acting president.}} 
+|-
+| style="text-align:center;"| [[Cilia Flores]]
+| style="text-align:center;"| 00735-506
+| style="text-align:center;"| [[File:Cilia_Flores_2023.jpg|80px]]
+|Held awaiting trial. 
+|Wife of Nicolás Maduro and former First Lady of Venezuela from 2013 to 2026; charged with drug trafficking.<ref>{{cite web |last1=Cohen |first1=Luc |last2=Queen |first2=Jack |title=US judge sets June 2027 trial date for Venezuela's Maduro |url=https://www.reuters.com/legal/government/venezuelas-maduro-due-back-us-court-drug-trafficking-case-2026-07-22/ |website=Reuters |access-date=29 July 2026}}</ref>
+|}
+
+== Notable former inmates==
+{|class="wikitable sortable"
+
+!width=14%|Inmate Name
+!width=9%|[https://www.bop.gov/inmateloc/ Register Number]
+!width=5%|Photo
+!width=22%|Status
+!width=55%|Details
+|-
+| style="text-align:center;"| [[6ix9ine]]
+| style="text-align:center;"| 86335-054
+| style="text-align:center;"| [[File:6ix9ine June 2018 (cropped).jpg|80px]]
+|Held at MDC Brooklyn November 18-21, 2018 before being transferred to a different facility; released to home confinement on April 2, 2020.<ref>{{cite web |title=Is Tekashi 6ix9ine out of jail? Rapper transferred after reportedly receiving death threats|url=https://www.newsweek.com/tekashi-6ix9ine-new-jail-out-transfer-death-threats-real-name-1229151 |website=NewsWeek.com|date=November 23, 2018 }}</ref><ref>{{Cite web|url=http://www.theguardian.com/world/2020/apr/02/tekashi-6ix9ine-prison-released-coronavirus|title=Tekashi 6ix9ine: rapper released from prison early over coronavirus fears|date=April 3, 2020|website=the Guardian}}</ref>
+Served an additional three-month sentence at MDC Brooklyn for probation violations; released from custody on April 3, 2026.<ref>{{cite web |title=Rapper Tekashi 6ix9ine turns himself in to Brooklyn jail MDC for 3-month sentence {{!}} abc7ny.com |url=https://abc7ny.com/post/rapper-tekashi-6ix9ine-turns-himself-brooklyn-jail-mdc-3-month-sentence/18362953/ |website=ABC7 New York |access-date=7 January 2026}}</ref><ref>{{Cite web |last=Staff |first=T. M. Z. |date=2026-04-03 |title=Tekashi 6ix9ine Gets Out of Federal Prison After 3-Month Stint, on Video |url=https://www.tmz.com/2026/04/03/tekashi-6ix9ine-released-from-prison/ |access-date=2026-04-03 |website=TMZ |language=en}}</ref>
+|Rapper, real name Daniel Hernandez, convicted of racketeering and firearm offenses.<ref>{{cite web |title=Brooklyn rapper 6ix9ine arrested on racketeering charges |url=https://www.apnews.com/2ae2d334712a4f5792420084bc1e39f6 |website=APNews.com|date=November 20, 2018 }}</ref> Hernandez was sentenced in 2019 to two years in prison.<ref>{{cite web |title=Rapper Tekashi 6ix9ine sentenced to 2 years in racketeering case |url=https://fox59.com/news/national-world/rapper-tekashi-6ix9ine-sentenced-to-2-years-in-racketeering-case/ |website=Fox 49 Indianapolis |access-date=30 July 2026}}</ref>
+In December 2025, Hernandez was sentenced to three additional months in prison for violating his probation by possessing drugs and committing assault.<ref>{{cite web |title=Rapper Tekashi 6ix9ine gets 3 months in prison for violating probation in gang case |url=https://apnews.com/article/tekashi-6ix9ine-prison-probation-violation-29f4ba73919def269f165f5ba77c2ad8 |website=AP News |access-date=30 July 2026 |language=en |date=6 December 2025}}</ref>
+|-
+| style="text-align:center;"| [[Juan Orlando Hernández]]
+| style="text-align:center;"| 91441-054
+| style="text-align:center;"| [[File:Juan Orlando Hernández at a conference (cropped).jpg|108x108px]]
+|Transferred to [[United States Penitentiary, Hazelton|USP Hazelton]].
+Sentenced to 45 years; released from custody on December 1, 2025 after being pardoned by President [[Donald Trump]].
+|Former [[President of Honduras]] from 2014 to 2022.<ref>{{cite web |title=Estados Unidos pide en extradición al expresidente Juan Orlando Hernández |url=https://www.laprensa.hn/honduras/estados-unidos-pide-en-extradicion-al-expresidente-juan-orlando-hernandez-YD5775098 |website=www.laprensa.hn |access-date=30 July 2026 |language=es-HN}}</ref> In April 2022, Hernández was extradited to the United States, where he was charged with conspiracy to import cocaine into the US.<ref>{{cite web |last1=Martin |first1=Maria |last2=Griffiths |first2=Robbie |title=Ex-Honduran President Hernández is extradited to the U.S. on drug charges |url=https://www.npr.org/2022/04/21/1093975738/ex-honduran-president-hernandez-will-be-extradited-to-the-u-s-on-drugs-charges |website=NPR |access-date=30 July 2026 |language=en |date=21 April 2022}}</ref> Hernández was accused of accepting millions of dollars in bribes from drug cartels, supplying weapons to protect drug shipments, and selectively extraditing drug traffickers who threatened his power.<ref>{{cite web |last1=Guy |first1=Jack |last2=Santana |first2=Maria |title=Former Honduran president sentenced to 45 years in prison on drug trafficking charges {{!}} CNN |url=https://www.cnn.com/2024/06/26/americas/juan-orlando-hernandez-sentencing-intl |website=CNN |access-date=30 July 2026 |language=en |date=26 June 2024}}</ref> In June 2024, he was sentenced to 45 years in prison.<ref>{{cite web |title=Juan Orlando Hernández, Former President of Honduras, Sentenced to 45 Years in Prison for Conspiring to Distribute More Than 400 Tons of Cocaine and Related Firearms Offenses |url=https://www.justice.gov/archives/opa/pr/juan-orlando-hernandez-former-president-honduras-sentenced-45-years-prison-conspiring |website=www.justice.gov |access-date=30 July 2026}}</ref>
+In December 2025, Hernández was pardoned by President [[Donald Trump]]. He returned to Honduras in July 2026.<ref>{{cite web | title=Honduras's Hernandez returns home after Trump pardon: How it happened |url=https://www.aljazeera.com/news/2026/7/27/hondurass-hernandez-returns-home-after-trump-pardon-how-it-happened |website=Al Jazeera |access-date=30 July 2026 |language=en}}</ref>
+|-
+| style="text-align:center;" | [[Genaro García Luna]]
+| style="text-align:center;" |  59745-177
+|style="text-align:center;" |[[File:Genaro García Luna 2.jpg|80px]]
+|Transferred to [[ADX Florence]]. 
+Serving a 38 year sentence; scheduled for release on December 7, 2051. 
+|Former [[Secretariat of Public Security|Secretary of Public Security]] of Mexico; arrested in [[Dallas]], Texas in December 2019 for taking millions in bribes from the [[Sinaloa Cartel]].<ref>{{cite web |title=US charges ex-Mexican official with taking bribes from cartel |url=https://www.aljazeera.com/news/2019/12/10/us-charges-ex-mexican-official-with-taking-bribes-from-cartel |website=Al Jazeera |access-date=30 July 2026 |language=en}}</ref> In October 2024, García Luna was sentenced to 38 years in prison for engaging in a criminal enterprise, international drug trafficking, and making false statements.<ref>{{cite web |title=Ex-Mexican Secretary of Public Security Genaro Garcia Luna Sentenced to Over 38 Years' Imprisonment |url=https://www.justice.gov/usao-edny/pr/ex-mexican-secretary-public-security-genaro-garcia-luna-sentenced-over-38-years |website=www.justice.gov |access-date=30 July 2026}}</ref>
+|-
+| style="text-align:center;" | [[Ronell Wilson]]
+| style="text-align:center;" | 71460-053
+|style="text-align:center;" |[[File:Ronell Wilson (mugshot).jpg|80px]]
+| Transferred to [[MCFP Springfield]].
+Serving a life sentence. 
+|Gang leader in Staten Island, New York; murdered [[NYPD]] Detectives James Nemorin and Rodney Andrews, who were conducting a [[sting operation]] to buy an illegal gun in 2003. Wilson was initially on death row before having his sentence reduced to life without parole on the grounds of that he was mentally disabled.<ref>{{cite news|url=https://www.nytimes.com/2007/02/06/nyregion/06wilson.html?ref=nyregion|title=Detectives' Killer Breaks Windows in Jail|last=Brick|first=Michael|date=February 6, 2007|work=The New York Times|access-date=May 12, 2010}}</ref><ref>{{cite news|last=Hays|first=Tom|date=July 24, 2013|title=Ronell Wilson, NY Cop Killer, Gets Death Penalty|publisher=Huffington Post|url=http://www.huffingtonpost.com/2013/07/24/ronell-wilson-death-penal_n_3647987.html|url-status=live|access-date=27 November 2013|archive-url=https://web.archive.org/web/20130725095246/http://www.huffingtonpost.com/2013/07/24/ronell-wilson-death-penal_n_3647987.html|archive-date=25 July 2013}}</ref>
+|-
+| style="text-align:center;"| [[2017 New York City truck attack|Sayfullo Saipov]]
+| style="text-align:center;"| 79715-054
+| style="text-align:center;"| [[File:Sayfullo Saipov.png|80px]]
+| Transferred to [[ADX Florence]].
+Serving ten life sentences plus 260 years.
+| Perpetrator of the 2017 New York City truck attack, in which he killed eight people and injured thirteen others.<ref>{{cite web |last1=Katersky |first1=Aaron |last2=Deliso |first2=Meredith |title=NYC truck terror attacker spared death penalty as jury can't come to unanimous decision |url=https://abcnews.com/US/nyc-truck-terror-attacker-spared-death-penalty-jury/story?id=97697305 |website=ABC News |access-date=30 July 2026 |language=en}}</ref> Convicted in 2023 of murder, assault, and attempted murder in support of ISIS as well as providing material support to a foreign terrorist organization.<ref>{{cite web |title=Sayfullo Saipov To Be Sentenced To Life In Prison For 2017 Truck Attack For ISIS |url=https://www.justice.gov/usao-sdny/pr/sayfullo-saipov-be-sentenced-life-prison-2017-truck-attack-isis |website=www.justice.gov |access-date=30 July 2026}}</ref>
+|-
+| style="text-align:center;"|[[2022 New York City Subway attack#Perpetrator|Frank James]]
+| style="text-align:center;"|83999-053
+| style="text-align:center;"|[[File:FrankRJames.jpg|80px]]
+| Transferred to [[ADX Florence]].
+Serving a life sentence.
+| Perpetrator of the [[2022 New York City Subway attack]]; sentenced to ten concurrent life sentences for shooting and injuring ten people in a [[New York City Subway]] car in [[Sunset Park, Brooklyn]].<ref>{{cite web |title=Frank James Sentenced to Life in Prison for Subway Mass Shooting |url=https://www.justice.gov/archives/opa/pr/frank-james-sentenced-life-prison-subway-mass-shooting |website=www.justice.gov |access-date=30 July 2026}}</ref>
+|-
+| style="text-align:center;"|
+[[Sam Bankman-Fried]]
+| style="text-align:center;"|37244-510
+| style="text-align:center;"|[[File:Sam Bankman-Fried at MDC Brooklyn (cropped).jpg|80px]]
+| Transferred to [[Federal Correctional Institution, Lompoc I | FCI Lompoc I]].
+Serving a 25 year sentence; scheduled for release on June 2, 2044.
+| Founder of the cryptocurrency exchange [[FTX]]; convicted of wire fraud, wire fraud conspiracy, securities fraud, securities fraud conspiracy, and money laundering.<ref>{{cite web |title=Samuel Bankman-Fried Sentenced to 25 Years for His Orchestration of Multiple Fraudulent Schemes |url=https://www.justice.gov/archives/opa/pr/samuel-bankman-fried-sentenced-25-years-his-orchestration-multiple-fraudulent-schemes |website=www.justice.gov}}</ref>
+|-
+| style="text-align:center;"| {{sortname|Vincent|Basciano}}
+| style="text-align:center;"| 30694-054
+| style="text-align:center;"| [[File:Vincent Basciano.jpg|80px]]
+| Transferred to [[USP Florence High]].
+Serving two consecutive life sentences.<ref>{{cite news|last1=Marzulli|first1=John|title=EXCLUSIVE: Mobster Vinny Gorgeous rewarded with move from Colorado Supermax|url=http://www.nydailynews.com/new-york/nyc-crime/exclusive-mobster-rewarded-move-colo-supermax-article-1.2335280|access-date=7 October 2015|work=New York Daily News|date=August 24, 2015}}</ref> 
+| Former boss of the [[Bonanno Crime Family]] in 2004 after Boss [[Joseph Massino]] was arrested; convicted in 2006 of murder, [[conspiracy (crime)|conspiracy]] and [[racketeering]]; convicted in 2011 of ordering the 2004 murder of Bonanno associate Randolph Pizzolo.<ref>{{cite news| url=https://www.nytimes.com/2006/05/10/nyregion/10gorgeous.html | work=The New York Times | first=William K. | last=Rashbaum | title=Former Salon Owner Is Convicted of Racketeering, but Not Murder | date=2006-05-10}}</ref><ref>{{cite news| url=https://www.nytimes.com/2011/06/02/nyregion/vincent-basciano-sentenced-to-life-not-death.html | work=The New York Times | first=Anahad | last=O'Connor | title=Vincent Basciano Sentenced to Life, Not Death | date=2011-06-01}}</ref>
+|-
+| style="text-align:center;"| [[Joseph Massino]]
+| style="text-align:center;"| Unlisted
+| style="text-align:center;"| [[File:Joeymassinocrop.jpg|80px]]
+| Released July 10, 2013.
+Sentenced to two life sentences; later commuted to time served and supervised release.
+|Former [[Bonanno crime family]] boss convicted in 2004 of racketeering, extortion, arson, loan sharking, illegal gambling, money laundering, and seven murders, including that of [[Dominick Napolitano]].<ref>{{cite web |last1=DeStefano |first1=Anthony M. |title=Mobster found guilty of seven murders |url=https://www.spokesman.com/stories/2004/aug/01/mobster-found-guilty-of-seven-murders/ |website=Spokesman.com |language=en |date=1 August 2004}}</ref> Facing the death penalty, he became a federal informant and testified against fellow mobster [[Vincent Basciano]] for ordering the murder of Bonnano associate Randolph Pizzolo.<ref>{{cite web |title=Former crime boss wins early release from prison |url=https://www.denverpost.com/2013/07/11/former-crime-boss-wins-early-release-from-prison/ |website=The Denver Post |access-date=30 July 2026 |date=11 July 2013}}</ref><ref>{{cite web |last1=Rashbaum |first1=William K. |title=At a Mob Trial, Testimony Focuses on the Knife and Fork |url=https://www.nytimes.com/2011/04/19/nyregion/at-a-mob-trial-testimony-focuses-on-the-knife-and-fork.html |website=The New York Times |access-date=30 July 2026 |date=19 April 2011}}</ref> After testifying, Massino entered the [[Federal Witness Protection Program]] and died on September 14, 2023.<ref>{{cite web |last1=DeStefano |first1=Anthony M. |title=Joseph Massino, 80, low-key Mafia boss turned fed witness, has died |url=https://www.newsday.com/long-island/obituaries/joseph-massino-mafia-died-80-maspeth-btvng07p |website=Newsday |access-date=30 July 2026 |language=en |date=22 September 2023}}</ref>
+|-
+| style="text-align:center;"| [[Allison Mack]]
+| style="text-align:center;"| 90838-053
+| style="text-align:center;"| [[File:Allison Mack at ComicCon 2009 NN.jpg|80px]]
+| Released after posting $5 million bond on April 24, 2018.
+|Actress; pled guilty in 2019 to [[racketeering]] and racketeering conspiracy as part of [[NXIVM]] cult.<ref>{{cite news | title = Actress Who Recruited Women for Nxivm Sentenced to 3 Years in Prison | url = https://www.nytimes.com/2021/06/30/nyregion/allison-mack-nxivm-sentencing.html | first = Colin | last = Moynihan | work = The New York Times | date = 30 June 2021}}</ref> Sentenced in 2021 to 3 years' imprisonment, served at [[Federal Correctional Institution, Dublin|FCI Dublin]].<ref>{{cite news |last1=Moses |first1=Claire |title='Smallville' Actress Who Recruited Women for Nxivm Is Released From Prison |url=https://www.nytimes.com/2023/07/05/us/allison-mack-released-nxivm.html |access-date=23 July 2023 |work=New York Times |date=5 July 2023}}</ref>
+|-
+|style="text-align:center;"|[[R. Kelly]]
+|style="text-align:center;"|09627-035
+|style="text-align:center;"|[[File:R. Kelly mug shot.jpg|80px]]
+|Transferred to [[FCI Butner]].
+Serving a 31-year sentence; scheduled for release on January 31, 2046.
+|Former R&B singer; convicted of [[racketeering]], violations of the [[Mann Act]], producing child pornography, sex trafficking, and child exploitation.<ref>{{Cite web|last1=Aratani|first1=Lauren|last2=Oladipo|first2=Gloria|date=2021-09-27|title=R Kelly found guilty on racketeering and sex trafficking charges|url=https://www.theguardian.com/music/2021/sep/27/r-kelly-racketeering-sex-trafficking|access-date=2021-09-27|website=The Guardian|language=en}}</ref>
+|-
+|style="text-align:center;"|[[Fetty Wap]]
+|style="text-align:center;"|71943-509
+|[[File:Fetty Wap.jpg|80px]]
+|Transferred to [[FCI Sandstone]].
+Sentenced to 72 months; released early on January 8, 2026.<ref>{{Cite web |date=2026-01-09 |title=Fetty Wap, rapper who 'made it out' of his N.J. hometown, leaves federal prison early |url=https://www.latimes.com/entertainment-arts/story/2026-01-09/fetty-wap-released-federal-prison-early-drug-conspiracy |access-date=2026-01-14 |website=Los Angeles Times |language=en-US}}</ref>
+|Rapper and singer; pleaded guilty in 2022 to conspiracy to possess and distribute controlled substances.<ref>{{cite web |title=Fetty Wap faces five years in prison after pleading guilty to drug charge |url=https://www.nbcnews.com/news/us-news/fetty-wap-faces-five-years-prison-pleading-guilty-drug-charge-rcna44258 |website=NBC News |access-date=30 July 2026 |language=en |date=22 August 2022}}</ref>
+|-
+|style="text-align:center;"|[[Frank Cali]]
+|style="text-align:center;"|75768-053
+|style="text-align:center;"|
+|Served ten months; released from custody on April 6, 2009.
+| Alleged acting boss of the [[Gambino crime family]] at the time of his death in 2019.<ref>{{cite web |last1=Gingras |first1=Brynn |last2=Ellis |first2=Ralph |title=Reputed crime boss’ killing doesn’t appear to be mob-related, source says {{!}} CNN |url=https://www.cnn.com/2019/03/16/us/gambino-crime-family-killing-arrest/index.html |website=CNN |access-date=30 July 2026 |language=en |date=17 March 2019}}</ref> In 2008, then-soldier Cali was arrested for [[extortion]] and sentenced to 16 months in federal prison.<ref>{{cite web |last1=Marzulli |first1=John |title=Feds bust Gambino bigs |url=http://www.nydailynews.com/news/ny_crime/2008/02/08/2008-02-08_feds_bust_gambino_bigs-1.html |website=New York Daily News |access-date=30 July 2026 |archive-url=https://web.archive.org/web/20080302161413/http://www.nydailynews.com/news/ny_crime/2008/02/08/2008-02-08_feds_bust_gambino_bigs-1.html |archive-date=2 March 2008 |date=8 February 2008}}</ref><ref>{{cite web |title=Gambino boss Frank Cali shook hands with killer before shooting, investigators say |url=https://abc7.com/post/sources-gambino-boss-shook-hands-with-killer-before-shooting/5196297/ |website=ABC7 Los Angeles |access-date=30 July 2026 |language=en |date=15 March 2019}}</ref>
+|-
+| style="text-align:center;"| [[Martin Shkreli]]
+| style="text-align:center;"| 87850-053
+| style="text-align:center;"| [[File:Martin Shkreli House Committee on Oversight and Government Reform 2016.jpg|80px]]
+| Transferred to [[FCI Allenwood Low]].
+Released on May 18, 2022 after serving a seven year sentence.
+| Former [[CEO]] of [[Turing Pharmaceuticals]]; convicted in 2017 of [[securities fraud]];<ref>{{Cite web|url=https://money.cnn.com/2017/08/04/news/martin-shkreli-verdict/index.html|archive-url=https://web.archive.org/web/20170804223859/http://money.cnn.com/2017/08/04/news/martin-shkreli-verdict/index.html|url-status=dead|archive-date=August 4, 2017|title=Martin Shkreli convicted of securities fraud, conspiracy|last=Horowitz|first=Aaron Smith and Julia|date=August 4, 2017|website=CNNMoney|access-date=February 3, 2019}}</ref> his bail was revoked after he made a [[Facebook]] post offering his followers $5,000 for [[Hillary Clinton]]'s hair.<ref>{{cite news|author=Merle, Renae|url=https://www.washingtonpost.com/news/business/wp/2017/09/13/martin-shkreli-apologizes-for-facebook-post-about-hillary-clinton/|title=Martin Shkreli jailed after Facebook post about Hillary Clinton|newspaper=[[Washington Post]]|date=2017-09-13|access-date=2017-09-14}}</ref><ref>{{Cite web|url=https://www.cnbc.com/2017/09/14/martin-shkrelis-new-jailhouse-home-is-not-where-you-want-to-be.html|title=Martin Shkreli's new jailhouse home is 'not where you want to be'|last=Mangan|first=Dan|date=September 14, 2017|website=www.cnbc.com|access-date=February 3, 2019}}</ref>
+|-
+| style="text-align:center;"| [[Vincent Asaro]]
+| style="text-align:center;"| 83223-053
+| 
+| Sentenced to eight years; granted [[compassionate release]] on April 20, 2020.<ref>{{cite web |last1=Chavez |first1=Nicole |last2=Simko-Bednarski |first2=Evan |title=Vincent Asaro, reputed mobster, released from prison over coronavirus fears {{!}} CNN |url=https://www.cnn.com/2020/04/18/us/vincent-asaro-released-trnd |website=CNN |access-date=30 July 2026 |language=en |date=18 April 2020}}</ref>
+| Former ''[[caporegime]]'' in the [[Bonanno crime family]]. Asaro was found guilty in a vehicle arson case.<ref>[http://www.nydailynews.com/new-york/queens/vincent-asaro-john-gotti-grandson-plead-guilty-car-arson-case-article-1.3282579 Gangster Vincent Asaro admits he ordered man's vehicle torched, John Gotti’s grandson cops to driving getaway car] - Daily News New York(07/03/2017)</ref>
+|-
+| style="text-align:center;"| [[Keith Raniere]]
+| style="text-align:center;"| 57005-177
+|[[File:US_v._Raniere_GovtExhibit_GX46.JPG|80px]]
+|Transferred to [[FCI Butner]].
+Serving a 120-year sentence; scheduled for release on June 27, 2120.
+|Founder of the [[NXIVM]] sex cult. [[NXIVM Corp. v. Ross Institute|Convicted]] in 2019 for two counts of sex trafficking, racketeering, forced labor conspiracy, attempted sex trafficking, and [[Mail and wire fraud|wire fraud]] conspiracy.<ref>{{Cite news|last1=Hong|first1=Nicole|last2=Piccoli|first2=Sean|date=2020-10-27|title=Keith Raniere, Leader of Nxivm Sex Cult, Is Sentenced to 120 Years in Prison|language=en-US|work=The New York Times|url=https://www.nytimes.com/2020/10/27/nyregion/nxivm-cult-keith-raniere-sentenced.html|access-date=2021-08-22|issn=0362-4331}}</ref><ref>{{Cite news|last=Gavin|first=Robert|date=2019-06-19|title=NXIVM founder Raniere guilty on all counts|url=https://www.timesunion.com/news/article/NXIVM-founder-Raniere-guilty-on-all-counts-14018002.php|access-date=2021-08-22|website=Times Union|language=en-US}}</ref>
+|-
+| style="text-align:center;"| [[Philadelphia basement kidnapping|Linda Weston]]
+| style="text-align:center;"| 68897-066
+|
+| Transferred to [[FMC Carswell]].
+Serving a life sentence.
+| Indicted in 2013 for murder, [[racketeering]], [[hate crimes]] and other charges for leading a group who held mentally disabled individuals against their will between 2001 and 2011 in order to steal their [[Social Security (United States)|Social Security]] benefits, two of whom died as a result of abuse.<ref>{{cite web|title=Philadelphia "Basement of Horrors": 5 charged in hate crime, murder of mentally disabled victims|url=https://www.cbsnews.com/news/philadelphia-basement-of-horrors-5-charged-in-hate-crime-murder-of-mentally-disabled-victims/|publisher=CBS News|access-date=October 28, 2013|date=January 24, 2013}}</ref><ref>{{cite web|title=Federal charges allege captors held adults with disabilities in subhuman conditions to carry out social security fraud|url=https://www.justice.gov/usao/pae/News/2013/Jan/weston_release.htm|publisher=US Department of Justice|access-date=October 28, 2013|date=January 23, 2013}}</ref> She was sentenced to life in prison.
+|-
+| style="text-align:center;"| [[2009 New York City Subway and United Kingdom plot|Abid Naseer]]
+| style="text-align:center;"| 05770-748
+|
+| Transferred to [[MCFP Springfield]].
+Serving a 40-year sentence; scheduled for release January 15, 2035.
+| Alleged [[Al-Qaeda]] operative; extradited from the [[United Kingdom]] in 2012 to face charges that he took part in an international conspiracy to conduct bombings in the United States and Europe; sentenced in 2015 to 40 years; three co-conspirators were convicted in 2010 and 2012.<ref>{{cite news|last=Secret|first=Mosi|title=Pakistani in Terror Case Is Extradited to New York|url=https://www.nytimes.com/2013/01/04/nyregion/abid-naseer-extradited-on-terror-charges-to-new-york-from-britain.html?_r=0|access-date=October 28, 2013|newspaper=The New York Times|date=January 3, 2013}}</ref>
+|-
+| style="text-align:center;"| [[Ja Rule|Jeffrey Atkins]]
+|style="text-align:center;"| 04526-748
+| style="text-align:center;"|[[File:Ja Rule in 2016.jpg|80px]]
+|Served 28 months; released on May 7, 2013.
+|Rapper known as Ja Rule; sentenced in 2008 to two years in prison for attempted criminal possession of a weapon after police found a firearm with a defaced serial number in his car.<ref>{{cite web |title=Rapper Ja Rule to turn himself in for prison sentence Wednesday |url=https://www.cnn.com/2011/SHOWBIZ/Music/06/08/new.york.rapper.prison/index.html?hpt=hp_t2 |website=www.cnn.com |access-date=30 July 2026 |language=en}}</ref> 
+In 2011, Atkins was given a concurrent sentence of 28 months after he was convicted of three counts of failing to file tax returns.<ref>{{cite web |title=Rapper Ja Rule sentenced over US tax evasion charges |url=https://www.bbc.com/news/newsbeat-14199961 |website=BBC News |access-date=30 July 2026 |date=19 July 2011}}</ref>
+|-
+| style="text-align:center;"| [[Casanova (rapper)|Caswell Senior]]
+| style="text-align:center;"| 20180-509
+| [[File:Casanova (August 2016).jpg|80px]]
+|Transferred to [[FCI Victorville]]. 
+Serving a 188 month sentence; scheduled for release on June 30, 2034.
+|Rapper known as Casanova; convicted in 2023 of racketeering, firearm possession, and conspiracy to distribute controlled substances.<ref>{{cite web |title=Recording Artist Casanova Sentenced To 188 Months In Prison For Gang-Related Racketeering And Narcotics Offenses |url=https://www.justice.gov/usao-sdny/pr/recording-artist-casanova-sentenced-188-months-prison-gang-related-racketeering-and |website=www.justice.gov |access-date=30 July 2026}}</ref><ref>{{cite web |title=Rapper Casanova surrenders to NYPD after gang bust in New York |url=https://abc7ny.com/post/casanova-indictment-gorilla-stone-nation-untouchable/8445777/ |website=ABC7 New York |access-date=30 July 2026 |language=en |date=2 December 2020}}</ref>
+|-
+|style="text-align:center;"|[[Gene Borrello]]
+|style="text-align:center;"| 89749-053
+|[[File:Gene Borrello 2024.png|80px]]
+|Served a six-month sentence; released on September 9, 2023.
+|Former associate of the [[Bonanno crime family]]; sentenced for breaching the terms of his supervised release for his previous convictions of leading a home invasion crew in [[Howard Beach, Queens]]. He had become a government witness and testified against other Bonnano members, including [[Vincent Asaro]]. He had broken the terms of his release by appearing on multiple mafia related podcasts and continuing to associate with other former mafia members.{{Citation needed|date=July 2026}}
+|-
+|style="text-align:center;"|[[GypsyCrusader|Paul Nicholas Miller]]
+|style="text-align:center;"| 32607-509
+|style="text-align:center;"| [[File:Paul Miller Mugshot (March 2021).jpg|80px]]
+|Released July 3, 2023.
+Served a 41-month sentence.
+|American [[Far-right politics|far-right]] political commentator and streamer known online as "Gypsy Crusader".<ref>{{cite web |last1=Joung |first1=Nina |title=How this NJ man’s hate-filled rants won him an ‘alt-right’ following |url=https://www.pbs.org/wnet/exploring-hate/2021/08/23/how-this-nj-mans-hate-filled-rants-won-him-an-alt-right-following/ |website=PBS |access-date=30 July 2026 |date=23 August 2021}}</ref> In 2021, he was convicted of possessing a firearm and ammunition as a convicted felon and possessing an unregistered rifle; Miller, a [[white supremacist]], admitted to purchasing rifle parts and ammunition in preparation for a coming [[race war]].<ref>{{Cite web|date=2021-09-28|title=Florida Man Who Called for Race-Based Civil War Sentenced on Multiple Firearms Offenses|url=https://www.justice.gov/usao-sdfl/pr/florida-man-who-called-race-based-civil-war-sentenced-multiple-firearms-offenses|access-date=2021-11-05|website=www.justice.gov|language=en}}</ref><ref>{{cite web |last1=Peiser |first1=Jaclyn |title=He was preparing for ‘a coming civil war,’ feds say. Now he faces up to 30 years in prison. |url=https://www.washingtonpost.com/nation/2021/06/23/paul-miller-gypsy-crusader/ |website=The Washington Post |access-date=30 July 2026 |date=23 June 2021}}</ref>
+|-
+| style="text-align:center;"| [[Al Sharpton]]
+| style="text-align:center;"| 21458-069
+| style="text-align:center;"| [[File:Al Sharpton January 2015.jpg|80px]]
+| Served a 90-day sentence; released on August 17, 2001. 
+| Baptist minister, political activist and current [[MSNBC]] television host; convicted of trespassing on federal property for protesting against the [[United States Navy in Vieques, Puerto Rico|US military presence on the island of Vieques, Puerto Rico]].<ref>{{cite news|last=Feuer |first=Alan |url=https://www.nytimes.com/2001/06/12/nyregion/sleeker-by-14-pounds-sharpton-fights-on.html |title=Sleeker by 14 Pounds, Sharpton Fights On |newspaper=NYTimes.com |date=June 12, 2001 |access-date=April 29, 2010}}</ref>
+|-
+| style="text-align:center;"| [[Megan Rice]]
+| style="text-align:center;"| 88101-020
+| [[File:Megan Rice (cropped).jpg|80px]]
+| Released on April 16, 2015. 
+Served more than two years of a two-year sentence. Initially sentenced to three years, released after conviction for one charge was vacated.
+| Anti-nuclear activist and Roman Catholic nun; convicted in 2013 of [[sabotage]] for unlawfully entering the [[Y-12 National Security Complex]] and vandalizing a facility housing weapons-grade [[uranium]].<ref>{{cite web|title=Three Individuals Convicted of Sabotage at the Y-12 National Security Complex Sentenced|url=https://www.fbi.gov/knoxville/press-releases/2014/three-individuals-convicted-of-sabotage-at-the-y-12-national-security-complex-sentenced|publisher=Federal Bureau of Investigation|access-date=April 27, 2014|date=February 19, 2014}}</ref><ref>{{cite news|agency=Reuters|title=Tennessee: Nun Is Sentenced for Peace Protest|url=https://www.nytimes.com/2014/02/19/us/tennessee-nun-is-sentenced-for-peace-protest.html?_r=0|access-date=April 27, 2014|newspaper=The New York Times|date=February 18, 2014}}</ref>
+|-
+| style="text-align:center;"| [[Michael Cohen (lawyer)|Michael Cohen]]
+| style="text-align:center;"| 86067-054
+| style="text-align:center;"| [[File:Michael Cohen in 2019.png|80px]]
+| Released July 2020.
+Released less than one month after being arrested for violating the conditions of his release from [[FCI Otisville]].<ref>{{Cite web|url=https://www.usatoday.com/story/news/politics/2020/07/09/ex-president-trump-lawyer-michael-cohen-back-federal-custody/5407422002/|title=Former Trump lawyer Michael Cohen back at NY fed prison in dispute over release conditions|first=Kevin|last=Johnson|website=USA TODAY}}</ref>
+| Former [[The Trump Organization|Trump Organization]] lawyer. Pled guilty in 2018 tax evasion, making false statements to a financial institution, willfully causing an unlawful corporate contribution, an excessive campaign contribution, making false statements to a congressional committee.<ref>{{cite news |last1=Sisak |first1=Michael |last2=Mustian |first2=Jim |title=Cohen's prison reality: A bunk bed in barrack-style hall |url=https://apnews.com/0cc2f99ad85240b3a9a626d66b700576 |access-date=May 5, 2019 |work=AP |date=May 3, 2019}}</ref><ref>{{cite web
+|url=https://www.boston.com/news/national-news/2019/05/03/michael-cohen-otisville-prison-life/
+|title=Here's a look at Michael Cohen's upcoming prison life
+|first1=Michael R.
+|last1=Sisak
+|first2=Jim
+|last2=Mustian
+|publisher=Boston.com / AP
+|date=May 3, 2019}}</ref><ref>{{Cite news|url=https://www.bbc.com/news/world-us-canada-46546238|title=Ex-Trump lawyer Cohen jailed for 36 months|date=December 12, 2018|work=BBC News|access-date=December 12, 2018|language=en-GB }}</ref>
+|-
+|style="text-align:center;"| [[Ghislaine Maxwell]]
+|style="text-align:center;"| 02879-509
+|style="text-align:center;"| [[File:Ghislaine Maxwell 2007.jpg|80px]]
+| Transferred to [[Federal Prison Camp, Bryan|FPC Bryan]].
+Serving a 20-year sentence; scheduled for release on July 17, 2037.
+| Close associate to [[Jeffrey Epstein]] convicted in 2021 of [[child sex trafficking]].<ref>{{cite web |title=Ghislaine Maxwell Sentenced To 20 Years In Prison For Conspiring With Jeffrey Epstein To Sexually Abuse Minors |url=https://www.justice.gov/usao-sdny/pr/ghislaine-maxwell-sentenced-20-years-prison-conspiring-jeffrey-epstein-sexually-abuse |website=www.justice.gov |access-date=30 July 2026}}</ref> Maxwell was held in MDC Brooklyn while awaiting trial.<ref>{{cite web |last1=Katersky |first1=Aaron |last2=Barr |first2=Luke |title=Ghislaine Maxwell transitions from lavish lifestyle to troubled lockup |url=https://abcnews.com/US/ghislaine-maxwell-transitions-lavish-lifestyle-troubled-lockup/story?id=71646101 |website=ABC News |access-date=30 July 2026 |language=en}}</ref>
+|-
+|style="text-align:center;"|[[Sean Combs]]
+|style="text-align:center;"|37452-054
+|[[File:Sean Combs Cannes 2012 (cropped).jpg|111x111px]]
+|Transferred to [[FCI Fort Dix]].
+Serving a 50-month sentence; scheduled for release January 24, 2028.
+|Rapper, record producer and record executive, known professionally as Diddy and formerly P. Diddy and Puff Daddy. He was arrested in September 2024 and charged with [[sex trafficking]] and [[racketeering]]. Combs was convicted on 2 counts of transportation to engage in prostitution in 2025.<ref>{{Cite web |date=2025-10-03 |title=What was Sean 'Diddy' Combs convicted of? |url=https://www.bbc.com/news/articles/c0qz32wzeego |access-date=2026-01-09 |website=www.bbc.com |language=en-GB}}</ref>
+|-
+| style="text-align:center;"|
+[[Guo Wengui]]
+| style="text-align:center;"|
+49134-510
+| style="text-align:center;"|
+[[File:Guo Wen-gui in April 2017.jpg|106x106px]]
+|Transferred to [[FCI Danbury]].
+Serving a 30-year sentence; scheduled for release on October 6, 2048.<ref>{{cite news |last=Neumeister |first=Larry |date=July 16, 2024 |title=Self-exiled Chinese billionaire Guo Wengui convicted of defrauding followers after fleeing to US |url=https://apnews.com/article/guo-wengui-chinese-businessman-fraud-9b8329c7ab8012f2dfa7c48c55fc5620 |url-status=live |archive-url=https://web.archive.org/web/20240716205246/https://apnews.com/article/guo-wengui-chinese-businessman-fraud-9b8329c7ab8012f2dfa7c48c55fc5620 |archive-date=July 16, 2024 |accessdate=July 16, 2024 |publisher=Associated Press}}</ref>
+|Former Chinese businessman. convicted on various charges of wire fraud, securities fraud, bank fraud, and money laundering.<ref>{{Cite web |date=2023-03-15 |title=Ho Wan Kwok, A/K/A "Miles Guo," Arrested For Orchestrating Over $1 Billion Dollar Fraud Conspiracy |url=https://www.justice.gov/usao-sdny/pr/ho-wan-kwok-aka-miles-guo-arrested-orchestrating-over-1-billion-dollar-fraud-conspiracy |access-date=2023-04-29 |website=www.justice.gov |language=en}}</ref>
+|-
+| style="text-align:center;"|
+[[Trial of the Nine Trey Gangsters|Anthony "Harv" Ellison]]
+| style="text-align:center;"| 86282-054
+|
+|Transferred to [[USP Canaan]].
+Serving a 24-year sentence; scheduled for release January 12, 2042.
+|Member of the [[Nine Trey Gangsters]]; orchestrated the kidnapping and robbery of rapper [[6ix9ine]] in 2018. 
+|-
+| style="text-align:center;"|[[Austin Wolf]]
+| style="text-align:center;"|22682-511
+|[[File:Southern Decadence 2016 (29461717875).jpg|105x105px]]
+|Transferred to [[FCI Seagoville]].
+Serving a 19-year sentence; scheduled for release on July 2, 2040.<ref>{{cite web |title=Adult Film Actor Justin Heath Smith, A/K/A “Austin Wolf,” Sentenced To 19 Years In Prison For Child Sexual Exploitation |url=https://www.justice.gov/usao-sdny/pr/adult-film-actor-justin-heath-smith-aka-austin-wolf-sentenced-19-years-prison-child |website=www.justice.gov |access-date=29 July 2026}}</ref>
+|Wolf, whose real name is Justin Heath Smith, is a gay adult film star and content creator. He was arrested in June 2024 and charged with possessing and distributing hundreds of videos of child pornography.<ref>{{cite web | url=https://www.newsweek.com/austin-wolf-justin-arrested-child-pornography-1918968 | title=Adult film star Austin Wolf busted: Shocking details of child porn charges | website=[[Newsweek]] | date=June 28, 2024 }}</ref> 
+|}
+
+==See also==
+* [[List of U.S. federal prisons]]
+* [[Federal Bureau of Prisons]]
+* [[Incarceration in the United States]]
+{{Clear}}
+
+== Notes ==
+{{notelist}}
+
+==References==
+{{Reflist}}
+
+==External links==
+* [https://web.archive.org/web/20220620180705/https://www.bop.gov/locations/institutions/bro/BRO_aohandbook.pdf MDC Brooklyn Admission and Orientation Manual]
+* [http://www.bop.gov/locations/institutions/bro/index.jsp Prison Information]
+
+{{Portal bar|New York City|United States|Politics}}
+{{Federal Bureau of Prisons}}
+{{authority control}}
+
+{{Coord|40|39|37|N|74|00|16|W|display=title}}
+
+[[Category:Federal Bureau of Prisons Administrative Facilities|Brooklyn]]
+[[Category:Government buildings in Brooklyn]]
+[[Category:Detention centers]]
+[[Category:Prisons in New York City]]
+[[Category:Sunset Park, Brooklyn]]
+[[Category:1991 establishments in New York City]]

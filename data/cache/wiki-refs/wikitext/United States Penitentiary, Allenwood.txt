@@ -1,0 +1,147 @@
+{{short description|Federal prison in Pennsylvania}}
+{{Use American English|date=August 2025}}
+{{Infobox prison
+| name           = United States Penitentiary, Allenwood
+| image          = USP Allenwood updated.jpg
+| location       = [[Gregg Township, Union County, Pennsylvania|Gregg Township]], [[Union County, Pennsylvania|Union County]], near [[Allenwood, Pennsylvania]]
+| coordinates    = 
+| status         = Operational
+| classification = Maximum security
+| population     = 306 (as of September 2023)
+| opened         = 1993
+| closed         = 
+| managed_by     = Federal Bureau of Prisons
+| warden         = G. Swaney
+| website        = {{URL|https://www.bop.gov/locations/institutions/alp/}}
+}}
+The '''United States Penitentiary, Allenwood''', also known as '''USP Allenwood''', is a [[Incarceration in the United States#Security levels|maximum security]] United States federal prison in [[Pennsylvania]]. It is part of the [[Allenwood Federal Correctional Complex]] (FCC Allenwood) and is operated by the [[Federal Bureau of Prisons]], a division of the [[United States Department of Justice]].
+
+FCC Allenwood is located on [[U.S. Route 15]] in [[Gregg Township, Union County, Pennsylvania|Gregg Township]], [[Union County, Pennsylvania|Union County]],<ref>{{cite web|url=https://www2.census.gov/geo/maps/DC2020/DC20BLK/st42_pa/cousub/cs4211931480_gregg/DC20BLK_CS4211931480.pdf|title=2020 CENSUS - CENSUS BLOCK MAP: Gregg township, PA|publisher=[[U.S. Census Bureau]]|access-date=2022-08-14|quote=Allenwood Federal Correctional Complx}}</ref> near White Deer. It is approximately halfway between the cities of [[Williamsport, Pennsylvania|Williamsport]] and [[Lewisburg, Pennsylvania|Lewisburg]] and approximately {{convert|75|mi|km|round=5|abbr=off|sp=us}} north of [[Harrisburg, Pennsylvania]], the state capital.<ref>{{cite web|title=USP Allenwood|url=http://www.bop.gov/locations/institutions/alp/index.jsp|publisher=Federal Bureau of Prisons}}</ref>
+
+==Facility and programs==
+USP Allenwood has four two-level housing units each of which consists of four 16-cell ranges around a central dayroom where inmates can congregate during the times they are allowed outside their cells. Most cells house two inmates each.  Recreational and counseling facilities are located adjacent to the housing units. The outer perimeter is secured by a double line of fencing with rolled barbed wire on the ground in between the fences. The inner fence is equipped with a perimeter intrusion detection system and a road for patrol vehicles runs along the outer fence. Correction officers man six guard towers at each corner of the security fence and a seventh within the fence.<ref>{{cite book|last=Bosworth|first=Mary|title=The US Federal Prison System|year=2002|publisher=SAGE|location=Thousand Oaks, CA|isbn=9780761923046|pages=[https://archive.org/details/usfederalprisons0000bosw/page/375 375]|url=https://archive.org/details/usfederalprisons0000bosw/page/375}}</ref><ref>{{cite book|last=Spens|first=Iona|title=The Architecture of Incarceration|year=1994|publisher=Academy Editions|location=London|isbn=9781854903587|pages=128}}</ref>
+
+Educational programs include [[GED]], [[ESL]], adult continuing education, vocational training, correspondence classes, and evening college classes. Inmates work in a UNICOR upholstery factory and institutional maintenance jobs such as food service and building repair. Medical, psychological and drug treatment services are also available.<ref>{{cite book|last=Bosworth|first=Mary|title=The US Federal Prison System|year=2002|publisher=SAGE|location=Thousand Oaks, CA|isbn=9780761923046|pages=[https://archive.org/details/usfederalprisons0000bosw/page/375 375]|url=https://archive.org/details/usfederalprisons0000bosw/page/375}}</ref>
+
+==Incidents==
+
+===1996 murder===
+In April 1996, USP Allenwood inmate [[David Paul Hammer]] allegedly strangled fellow inmate Andrew Hunt Marti to death with a piece of homemade cord. Hammer and Marti were cellmates in the Special Housing Unit, where especially violent inmates are held. Writing on a website dedicated to his case in 2001, Hammer could not ‘attribute any motive’ to his actions. Hammer, a career criminal who was serving a 1,200-year sentence for crimes including larceny, shooting with intent to kill, kidnapping and making bomb threats, subsequently pleaded guilty to Marti's murder and was sentenced to death by the electric chair.<ref>{{cite web|title=DAVID PAUL HAMMER, PETITIONER V. JOHN D. ASHCROFT, ET AL.|url=https://www.prisonlegalnews.org/media/litigation/hammer_v._ashcroft_pln_amicus_media_brief.pdf|publisher=US Department of Justice}}</ref>
+
+The death sentence was vacated in 2006 after a federal judge found that prosecutors withheld evidence during the penalty phase that would have bolstered Hammer's claim that he and Marti were having consensual sex.  In July 2014, another federal judge concurred, ruling that a life sentence was appropriate based upon multiple circumstances, including Hammer's acceptance of responsibility and remorsefulness, his extended family history of dysfunction, abuse and mental illness, his mental and emotional impairments and his self-improvement, specifically citing Hammer's writing to at-risk children and counseling them against engaging in criminal conduct.<ref>{{cite web|last1=Beauge|first1=John|title=Admitted murderer of Allenwood cell mate no longer facing execution|url=http://www.pennlive.com/midstate/index.ssf/2014/07/admitted_murderer_of_allenwood_1.html|website=Penn Live|publisher=PA Media Group|access-date=18 October 2015|date=July 17, 2014}}</ref>
+
+===2005 murder===
+On September 28, 2005, USP Allenwood inmates Ritz Williams (47085-008) and Shawn Cooya (48896-008) stabbed a fellow inmate, 50-year-old Alvin Allery, ten times with a homemade knife and repeatedly kicked him in the head and torso, causing Allery's death. Williams and Cooya were already serving lengthy sentences, Williams for murder and Cooya for weapons violations. A subsequent investigation revealed that Williams and Cooya planned the attack in advance. In 2013, Williams and Cooya pleaded guilty to [[first-degree murder]] and were sentenced to life imprisonment without the possibility of parole.<ref>{{cite web|last=Walker|first=R.A.|title=Two indicted for 2005 killing at Allenwood prison complex|url=http://www.sungazette.com/page/content.detail/id/505623/Two-indicted-for-2005-killing-at-Allenwood-prison-complex.html|publisher=Williamsport Sun-Gazette (PA)|access-date=12 October 2013|date=February 15, 2008|archive-url=https://web.archive.org/web/20140303075838/http://www.sungazette.com/page/content.detail/id/505623/Two-indicted-for-2005-killing-at-Allenwood-prison-complex.html|archive-date=March 3, 2014|url-status=dead}}</ref><ref>{{cite web|title=Pennsylvania Inmate Sentenced To Life In Prison For Violent Murder Of Fellow Inmate|url=https://www.justice.gov/usao/pam/news/2013/Williams_05_15_2013.htm|publisher=US Department of Justice|access-date=12 October 2013|date=May 15, 2013}}</ref> As of March 2022, Williams is currently incarcerated at [[United States Penitentiary, Victorville|USP Victorville]] and Cooya is at [[ADX Florence]].
+
+=== 2020 attack ===
+On December 7, 2020, two correctional officers were injured after one was stabbed in the neck and eye by [[Abdulrahman El Bahnasawy|Abdulrahman el Bahnasawy]] (75868-054), a Canadian convicted of terrorism-related offenses in 2016. Both officers were taken via ambulance to [[Geisinger Medical Center]] in [[Danville, Pennsylvania|Danville]] and survived, with one losing an eye.<ref>{{Cite web|date=2021-01-14|title=Injured Allenwood prison guard to observe a belated Christmas with his family|url=https://www.pennlive.com/news/2020/12/injured-allenwood-prison-guard-to-observe-a-belated-christmas-with-his-family.html|language=en-US}}</ref><ref>{{Cite web|last=Farenish|first=Melissa|title=Corrections officer at Allenwood federal prison in critical condition after inmate stabbed him in eye|url=https://www.northcentralpa.com/news/crime/corrections-officer-at-allenwood-federal-prison-in-critical-condition-after-inmate-stabbed-him-in-eye/article_4cd6aeec-395c-11eb-9f12-8f6d2ac82a42.html|access-date=2020-12-10|website=NorthcentralPA.com|date=8 December 2020 |language=en}}</ref><ref>{{Cite web|title=Inmate accused of attacking prison staff in Union County|url=https://www.wnep.com/article/news/local/union-county/prison-inmate-accused-of-attacking-guards-in-union-county/523-bbebcf32-1e46-494c-b2f6-8a214527a0df|access-date=2020-12-10|website=wnep.com|date=8 December 2020 |language=en-US}}</ref><ref>{{Cite web|title=It's 'like an attack on all us,' union official says about stabbing of veteran prison guard, HS coach|date=11 December 2020 |url=https://www.pennlive.com/news/2020/12/its-like-an-attack-on-all-us-union-official-says-about-stabbing-of-veteran-prison-guard-hs-coach.html}}</ref> In April 2021, El Bahnasawy was transferred to [[ADX Florence]].
+
+==Notable inmates==
+{|class="wikitable sortable"
+|-
+!width=12%|Inmate name
+!width=8%|Register number
+!width=28%|Status
+!width=52%|Details
+|-
+| style="text-align:center;"| [[Ahmed Ajaj]]
+| style="text-align:center;"| 40637-053
+| Serving a 114-year sentence; scheduled for release in 2091. Now at [[United States Penitentiary, Coleman|USP Coleman]]{{cn|date=February 2024}}
+| Convicted of participating in the [[1993 World Trade Center bombing]]
+|-
+| style="text-align:center;"| [[List of ships attacked by Somali pirates in 2011#February|Mohamud Salad Ali]]
+| style="text-align:center;"| 77992-083
+| Serving life sentence; currently at [[United States Penitentiary, Atwater|USP Atwater]]{{cn|date=February 2024}}
+|Somali pirate leader who pleaded guilty in 2011 to [[piracy]] in connection with the 2011 [[SY Quest incident|hijacking of the civilian yacht ''Quest'']], during which four U.S. citizens were killed<ref>{{cite web|last=Nasaw|first=Daniel|title=Somali pirates face hard time in US prison|url=https://www.bbc.co.uk/news/magazine-15068088|publisher=BBC News|access-date=October 12, 2013|date=October 3, 2011}}</ref><ref>{{cite web|title=Two More Somalis Plead Guilty To Charges Relating To Piracy Of Quest|url=https://www.justice.gov/usao/vae/news/2011/05/20110525omarnr.html|publisher=US Department of Justice|access-date=October 12, 2013|date=May 25, 2011|archive-url=https://web.archive.org/web/20120115132107/http://www.justice.gov/usao/vae/news/2011/05/20110525omarnr.html|archive-date=January 15, 2012|url-status=dead|df=dmy-all}}</ref> 
+|-
+|style="text-align:center;"| [[Federal Express Flight 705|Auburn Calloway]] 
+|style="text-align:center;"| 14601-076
+| Serving two life sentences without the possibility of parole; currently at [[United States Penitentiary, McCreary|USP McCreary]]{{cn|date=February 2024}}
+| Flight engineer convicted of attempted aircraft piracy, interference with flight crew, and attempted terrorism in the attempted hijacking of a [[FedEx Express|Federal Express]] flight from [[Memphis, Tennessee]] to [[San Jose, California]]
+|-
+|style="text-align:center;"| [[2013 Los Angeles International Airport shooting|Paul Anthony Ciancia]]
+|style="text-align:center;"| 67089-112
+| Serving a life sentence without the possibility of parole plus 60 years. Currently at [[United States Penitentiary, Victorville|USP Victorville]]
+|Pleaded guilty in 2016 for the [[2013 Los Angeles International Airport shooting|2013 LAX Shooting]]<ref>{{Cite web |date=November 7, 2016 |title=LAX Shooter Sentenced To Life In Prison For Murder Of TSA Officer - CBS Los Angeles |url=https://www.cbsnews.com/losangeles/news/paul-ciancia-sentence-prison/ |access-date=January 10, 2024 |website=www.cbsnews.com}}</ref><ref>{{cite web | url=https://www.nbclosangeles.com/news/local/lax-shooter-shooting-tsa-paul-ciancia/2086242/#:~:text=The%20gunman%20who%20killed%20a,in%20prison%2C%20plus%2060%20years. | title=LAX Shooter Paul Ciancia Sentenced to Life in Prison for Killing TSA Officer | date=7 November 2016 }}</ref> 
+|-
+|style="text-align:center;"|[[Louis Daidone]] 
+|style="text-align:center;"|39065-053
+|Serving life sentence; currently at [[United States Penitentiary, Coleman|USP Coleman]]{{cn|date=February 2024}}
+|Former acting boss of the [[Lucchese Crime Family]] in New York City; convicted in 2004 of murder, [[conspiracy (crime)|murder conspiracy]], [[racketeering]], and [[loansharking]]<ref>{{cite news|last=Preston|first=Julia|title=Metro Briefing {{!}} New York: Manhattan: Mob Chief Sentenced|url=https://www.nytimes.com/2004/07/01/nyregion/metro-briefing-new-york-manhattan-mob-chief-sentenced.html|newspaper=The New York Times|date=July 1, 2004}}</ref> 
+|-
+|style="text-align:center;"|[[Charlottesville car attack|James Alex Fields Jr.]]
+|style="text-align:center;"|22239-084
+|Serving a life sentence; transferred to Allenwood from [[United States Penitentiary, Hazelton|USP Hazleton]] in November 2020.<ref>{{Cite web |date=June 28, 2019 |title=James Alex Fields, driver in deadly car attack at Charlottesville rally, sentenced to life in prison |url=https://www.nbcnews.com/news/us-news/james-alex-fields-driver-deadly-car-attack-charlottesville-rally-sentenced-n1024436 |access-date=January 10, 2024 |website=NBC News}}</ref><ref>{{Cite web|url=https://www.npr.org/2019/07/15/741756615/virginia-court-sentences-neo-nazi-james-fields-jr-to-life-in-prison|title=Neo-Nazi James Fields Gets 2nd Life Sentence For Charlottesville Attack|date=July 15, 2019|access-date=September 8, 2024}}</ref>
+|White supremacist who pleaded guilty in 2019 of 29 federal hate crime charges for using his car to harm counter-protestors during the [[Unite the Right rally]] in [[Charlottesville, Virginia]], killing one and injuring up to 19 more.
+|-
+|style="text-align:center;"| Gazi Ibrahim Abu Mezer
+|style="text-align:center;"| 48705-053
+|Serving a life sentence
+|Convicted of being part of the [[1997 Brooklyn bombing plot]] which was a plan to bomb the [[New York City Subway]].<ref>{{Cite web|url=https://www.theguardian.com/world/1999/mar/03/marktran|title=Brooklyn judge jails Palestinian for life for plot to bomb subway|website=The Guardian|date=March 3, 1999|access-date=September 8, 2024}}</ref>
+|-
+|style="text-align:center;"|[[James Holmes (mass murderer)|James Eagan Holmes]]
+|style="text-align:center;"| 02350-122
+|Serving 12 consecutive life sentences plus 3,318 years without parole.
+|[[Mass murderer]] responsible for the [[2012 Aurora, Colorado, shooting]] in which he killed 12 people and injured 70 others<ref>{{Cite web |last= |first= |title=James Holmes Gets Life Without Parole in Aurora Massacre Case, Avoids Death Penalty |url=https://abcnews.go.com/US/james-holmes-trial-jury-reaches-verdict-sentencing-phase/story?id=32953235 |access-date=January 10, 2024 |website=ABC News}}</ref> 
+|-
+|style="text-align:center;"| [[Vyacheslav Ivankov]]
+|style="text-align:center;"|30219-048
+|Released in July 2004 for [[extradition]]
+|Convicted of extortion in January 1997
+|-
+|style="text-align:center;"| [[Christopher Jeburk]]
+|style="text-align:center;"| 09029-021
+| Serving a life sentence
+| Bank robber on [[FBI Ten Most Wanted Fugitives|FBI Ten Most Wanted list]]; kidnapped bank teller and her family, then escaped from prison twice before he could be sentenced for his crimes<ref>{{Cite news |title=A Fugitive's on the Loose |url=http://www.nydailynews.com/archives/news/1996/05/08/1996-05-08_a_fugitive_s_on_the_loose.html |url-status=dead |archive-url=https://archive.today/20110815053833/http://www.nydailynews.com/archives/news/1996/05/08/1996-05-08_a_fugitive_s_on_the_loose.html |archive-date=August 15, 2011 |access-date=June 6, 2020 |newspaper=[[New York Daily News]]}}</ref><ref>{{cite news |title=Jeburk's cohort admits 5 robberies |url=http://chronicle.augusta.com/stories/1996/10/05/met_199841.shtml |url-status=live |archive-url=https://web.archive.org/web/20120905072119/http://chronicle.augusta.com/stories/1996/10/05/met_199841.shtml |newspaper=The Augusta Chronicle |archive-date=September 5, 2012 |access-date=June 6, 2020}}</ref> 
+|-
+|style="text-align:center;"| [[Salvador Magluta]]
+|style="text-align:center;"|26012-037
+|Scheduled release date is 2165
+|Convicted of falsifying documents (1996) and bribery, money laundering (2002); sentenced to 9 years in prison,<ref name="sun-fled">{{cite news |url=https://www.sun-sentinel.com/news/fl-xpm-1997-12-23-9712220363-story.html |title=9 Years for Man Who Fled Court |first1=Larry |last1=Lebowitz |newspaper=South Florida Sun Sentinel |date=December 23, 1997 }}</ref> plus 195 years;<ref>{{cite news |url=https://www.sun-sentinel.com/news/fl-xpm-2003-01-23-0301230203-story.html |title=Reputed Drug Kingpin Gets Life |first1= Madeline |last1= BarM-s Diaz |newspaper= South Florida Sun Sentinel |date=January 23, 2003 }}</ref> His sentence was reduced to 195 years on appeal.<ref>{{cite web | url=https://www.miaminewtimes.com/news/cocaine-cowboy-sal-magluta-wants-out-of-prison-seeks-compassionate-release-12711149 | title=#FreeSalMagluta: Cocaine Cowboy Seeks Compassionate Release from Federal Prison }}</ref> He was transferred to the [[United States Penitentiary, Florence ADX|supermax federal prison facility in Florence, Colorado]].<ref name="AMWMagluta">{{cite web|url=http://www.amw.com/fugitives/case.cfm?id=61019|title=Inside The Cartels Of The Real "Miami Vice"|publisher=America's Most Wanted|access-date=22 February 2010|archive-url=https://web.archive.org/web/20101213012538/http://www.amw.com/fugitives/case.cfm?id=61019|archive-date=December 13, 2010|url-status=dead}}</ref> 
+|-
+|style="text-align:center;"|{{sortname|Howard|Mason}}
+|style="text-align:center;"|24651-053
+|Serving a life sentence
+|Convicted in 1989 of [[racketeering]] charges in connection with his leadership of "The Bebos," a drug cartel in Queens, New York; ordered the 1988 murder of a New York City police officer<ref>{{cite news| url=https://www.nytimes.com/1994/01/09/nyregion/drug-dealer-is-sentenced-to-life-for-ordering-killing-of-officer.html?ref=edwardbyrne | work=The New York Times | first=Joseph P. | last=Fried | title=Drug Dealer Is Sentenced to Life For Ordering Killing of Officer | date=January 9, 1994}}</ref> 
+|-
+|style="text-align:center;"| [[El Sayyid Nosair]]
+|style="text-align:center;"|35074-054
+|Serving a life sentence; transferred to [[United States Penitentiary, Big Sandy|USP Big Sandy]]{{cn|date=February 2024}}
+|Egyptian-born American citizen convicted of involvement in the 1993 [[New York City landmark bomb plot]]; earlier acquitted of the 1990 New York City assassination of [[Meir Kahane]], he later admitted to having committed this assassination. serving a life sentence; transferred to [[United States Penitentiary, Big Sandy|USP Big Sandy]]{{cn|date=February 2024}}
+|-
+|style="text-align:center;"| Esteban Santiago-Ruiz
+|style="text-align:center;"|15500-104
+|Serving five life sentences plus 120 years; transferred to [[United States Penitentiary, Tucson|USP Tucson]]{{cn|date=February 2024}}
+| Mass murderer pleaded guilty to the 2017 [[Fort Lauderdale airport shooting]]
+|-
+|style="text-align:center;"|[[Hosam Maher Husein Smadi|Hosam Smadi]]
+|style="text-align:center;"|39482-177
+|Scheduled release in 2031
+|Pleaded guilty in 2010 to the attempted use of a [[weapon of mass destruction]] for plotting to destroy the 60-story [[Fountain Place]] office building in [[Dallas, Texas]] with a [[truck bomb]] in 2009<ref>{{cite news |agency=Associated Press |date=October 18, 2010 |title=Jordanian Man Faces Sentencing in Plot to Blow Up Dallas Skyscraper |publisher=Fox News |url=https://www.foxnews.com/us/jordanian-man-faces-sentencing-in-plot-to-blow-up-dallas-skyscraper/ |access-date=March 18, 2013}}</ref><ref>{{cite news |date=October 19, 2010 |title=Jordanian man sentenced to 24 years in undercover bomb plot |publisher=CNN |url=http://www.cnn.com/2010/CRIME/10/19/texas.bomb.plot.sentencing/index.html?iref=allsearch |access-date=March 18, 2013}}</ref>
+|-
+| style="text-align:center;"| [[Shotti|Kifano Jordan]]
+| style="text-align:center;"| [https://www.bop.gov/inmatelo 86333-054]{{Dead link|date=August 2025 |bot=InternetArchiveBot |fix-attempted=yes }}
+|  Serving a 15-year sentence; scheduled for release in 2031
+| Better known as Shotti. Former manager of American rapper [[6ix9ine]]. Pleaded guilty to firearms charges. 
+|}
+
+==See also==
+{{Portal|United States|Politics|Law|Pennsylvania}}
+* [[List of U.S. federal prisons]]
+* [[Federal Bureau of Prisons]]
+* [[Incarceration in the United States]]
+{{clear}}
+
+==References==
+{{reflist}}
+
+==External links==
+* [https://web.archive.org/web/20120815192932/http://www.bop.gov/locations/institutions/alx/index.jsp United States Federal Bureau of Prisons FCC Allenwood]
+
+{{coord|41.131|-76.927|region:US-PA_type:landmark|display=title}}
+{{Federal Bureau of Prisons}}
+
+[[Category:Prisons in Pennsylvania|Allenwood]]
+[[Category:Buildings and structures in Union County, Pennsylvania]]
+[[Category:United States Penitentiaries|Allenwood]]
+[[Category:1993 establishments in Pennsylvania]]

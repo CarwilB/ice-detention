@@ -1,0 +1,36 @@
+{{Use mdy dates|date=February 2025}}
+{{Infobox NRHP
+  | name = Washington County Jail
+  | nrhp_type = 
+  | image = Washington County Jail.jpg
+  | caption = Washington County Jail, 2011
+  | location = College Avenue ([[U.S. Route 71B (Northwest Arkansas)|U.S. Route 71B]]) and County Avenue, [[Fayetteville, Arkansas]]
+  | coordinates = {{coord|36|3|42|N|94|9|27|W|display=inline,title}}
+  | pushpin_map = Arkansas#USA
+  | built = 1896
+  | architect = W. B. Reese
+  | architecture = Richardsonian Romanesque, Romanesque,
+  | added = December 1, 1978
+  | area = less than one acre
+  | ref_num = 78000638<ref name="nris">{{NRISref|version=2010a}}</ref>
+}}
+The '''Washington County Jail''' is a historic former civic building at 90 South College Avenue in [[Fayetteville, Arkansas]].  Built in 1896, this building was the fourth to serve as county jail and was in use until 1973, making it the longest tenured in county history.<ref>{{ cite web | title=Brief History of County Buildings |publisher=Washington County, Arkansas |url=http://www.co.washington.ar.us/index.aspx?page=500 |accessdate=2011-08-16 }}</ref>  The Romanesque Revival building was designed by W. B. Reese and is locally unusual and distinctive for its medieval appearance.  It is built out of load-bearing stone, square-cut and laid in irregular courses, with a rough quarry-cut finish.  Most of the building is of darker shades with trim in lighter shades. Nominally two stories in height, the rightmost bay has a square tower with a crenellated parapet.<ref name=NRHP>{{cite web|url=https://www.arkansasheritage.com/docs/default-source/national-registry/WA0393-pdf|title=NRHP nomination for Washington County Jail|publisher=Arkansas Preservation|accessdate=2015-04-06}}</ref>
+
+The building, which is now in private hands, was listed on the [[National Register of Historic Places]] in 1978.<ref name="nris"/>
+
+==See also==
+*[[National Register of Historic Places listings in Washington County, Arkansas]]
+
+==References==
+{{reflist}}
+{{Fayetteville, Arkansas}}
+{{National Register of Historic Places}}
+
+[[Category:Romanesque Revival architecture in Arkansas]]
+[[Category:Government buildings completed in 1896]]
+[[Category:Jails on the National Register of Historic Places in Arkansas]]
+[[Category:National Register of Historic Places in Fayetteville, Arkansas]]
+[[Category:1896 establishments in Arkansas]]
+
+
+{{WashingtonCountyAR-NRHP-stub}}

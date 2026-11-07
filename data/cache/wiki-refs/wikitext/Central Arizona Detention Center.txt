@@ -1,0 +1,31 @@
+{{Short description|Privately owned and operated prison}}
+{{Use American English|date=August 2025}}
+{{Infobox Prison
+| name           = Central Arizona Florence Correctional Complex <ref>{{Cite web|url=https://www.corecivic.com/facilities/central-arizona-florence-correctional-complex|title = Central Arizona Florence Correctional Complex}}</ref>
+| image          = 
+| location       = 1155 North Pinal Parkway     and     1100 Bowling Road [[Florence, Arizona]]
+| status         = open
+| classification = Multi Level Security
+| capacity       = 4,128
+| opened         = 1994
+| closed         = 
+| managed_by     = [[CoreCivic]]
+| warden         = Kris Kline
+}}
+
+The '''Central Arizona Florence Correctional Complex''', formerly Central Arizona Detention Center and Florence Correctional Complex, is a privately owned and operated managed prison for men and women located in [[Florence, Arizona|Florence]], [[Pinal County, Arizona]]. The facility is run by [[Corrections Corporation of America]] and houses prisoners for the [[United States Marshals Service]] (USMS), TransCor America LLC, [[U.S. Immigration and Customs Enforcement]] (ICE), [[Pascua Yaqui Tribe]], [[United States Air Force]], and [[Mesa, Arizona|City of Mesa]].
+
+The 434,000 square foot facility opened in 1994 and is located on 73 acres of land. The facility has approximately 20 housing units. The [[U.S. Marshal Service]] holds the majority of the housing units, [[U.S. Immigration and Customs Enforcement]] holds one housing unit, and The City of Mesa is in a shared housing unit. The average population of inmates and detainees is 3,555.<ref>{{Cite web|url=https://www.documentcloud.org/documents/2828926-2013-Central-Arizona-Detention-Center-Florence-AZ.html|title=2013 ODO Inspection - Central Arizona Detention Center Florence AZ|last=Center)|first=Jennifer Chan (National Immigrant Justice|website=www.documentcloud.org|language=en|access-date=2018-12-14}}</ref><ref>{{Cite web|url=https://www.documentcloud.org/documents/2828925-2012-Central-ArizonaDetentioncenter-Florence-AZ.html|title=2012 ODO Inspection - Central Arizona Detention Center Florence AZ|last=Center)|first=Jennifer Chan (National Immigrant Justice|website=www.documentcloud.org|language=en|access-date=2018-12-14}}</ref>
+==References==
+{{reflist}}
+
+{{coord|33.044147|-111.374894|format=dms|display=title|type:landmark}}
+
+{{DEFAULTSORT:Central Arizona Detention Center}}
+[[Category:Prisons in Arizona]]
+[[Category:Prison riots in the United States]]
+[[Category:Buildings and structures in Pinal County, Arizona]]
+[[Category:CoreCivic]]
+[[Category:Florence, Arizona]]
+[[Category:1994 establishments in Arizona]]
+[[Category:Prisons completed in the 1990s]]

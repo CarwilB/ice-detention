@@ -1,0 +1,112 @@
+{{Short description|Public library system in Erie County, Ohio, US}}
+{{Use mdy dates|date=February 2026}}
+{{Use American English|date=February 2026}}
+{{Infobox library
+| name = Sandusky Library
+| image = Sandusky Carnegie Library, front view on a quiet day.jpg
+| caption = The Carnegie Library in 2025
+| type = Public library
+| established = {{start date and age|1895}}
+| website = {{official url}}
+| service_area = [[Erie County, Ohio]]
+| parent_organization = Public Library Association of Sandusky
+| module =
+}}
+
+The '''Sandusky Library''' is the [[public library]] system serving [[Sandusky, Ohio]] and its surrounding areas in [[Erie County, Ohio|Erie County]]. Its main branch is the '''Sandusky''' '''Carnegie Library''' in downtown Sandusky, which was expanded in the early 2000s to incorporate the adjacent '''Erie County Jail'''. The Carnegie Library and the historic jail are separately listed on the [[National Register of Historic Places]]. The Sandusky Library also operates the historic [[Oran Follett|Follett House Museum]] in Sandusky and a branch library on [[Kelleys Island, Ohio|Kelleys Island]].
+== History ==
+The city of Sandusky was incorporated in 1824, and the Portland Library Association was formed in 1825. It hired F. D. Parish as its librarian, and established a collection of 300 books. The book collection was transferred multiple times throughout the 19th century, operating as a [[subscription library]]. The library had 114 subscribers by 1870,<ref name=":6" /> when a group of 12 women organized a new library association and a new reading room opened in the [[Sandusky High School]].<ref name=":1">{{Cite web |last=Taft |first=Lisa |date=1974-10-29 |title=National Register of Historic Places Inventory-Nomination Form: Carnegie Library, Sandusky, Ohio |url=https://catalog.archives.gov/id/71988134 |access-date=2025-11-02 |via=National Archives}}</ref><ref>{{Cite web |title=Library History |url=https://www.sanduskylib.org/library-history/ |access-date=2025-11-02 |work=Sandusky Library}}</ref> The library was opened to the public for free in 1895 when it began receiving property tax funding from the city of Sandusky, and it moved to the city's Masonic Temple in 1896.<ref name=":4">{{Cite book |url=https://archive.org/details/ohiolisketchesof00ohiorich |title=Sketches of Ohio Libraries |date=1902 |publisher=F. J. Heer |editor-last=Galbreath |editor-first=Charles B. |editor-link=Charles Burleigh Galbreath |location=Columbus |pages=240–245 |chapter= |oclc=1049954613}}</ref>
+
+A Library Building Funding Association was established in 1886 to raise funds for a library building, and it purchased a parcel of land on Adams Street in 1896. The library association continued to be operated by the prominent women of Sandusky, who organized a series of performances and lectures to benefit the building fund. Frances Moss and her husband Jay O. Moss, a prominent banker in Sandusky, secured a donation from [[Andrew Carnegie]] to fund the new building, building on their existing business relationship with Carnegie.<ref name=":4" /><ref>{{Cite web |date= |title=J.O. Moss House |url=https://eriecountyohiohistory.org/j-o-moss-house/ |access-date=2025-11-03 |work=Erie County Historical Society}}</ref> The grant of $50,000 (${{Inflation|index=US-GDP|value=.05|start_year=1899|r=2|fmt=}} million in {{Inflation/year|index=US-GDP}}{{Inflation/fn|US-GDP}}) was received in October 1899,<ref>{{Cite book |last=Bobinski |first=George S. |title=Carnegie Libraries: Their History and Impact on American Public Library Development |date=1969 |publisher=American Library Association |isbn=978-0-8389-0022-2 |location=Chicago |page=235}}</ref> on the condition that the city provide $3,000 per year to maintain the library.<ref name=":1" /> The Carnegie Library opened in July 1901, and has served as the main branch of the library system since.
+
+== Main library ==
+{{Infobox NRHP
+| name = Carnegie Library
+| nrhp_type = 
+| image = Carnegie Library, Sandusky, O., 1905 postcard (cropped).jpg
+| caption = 1905 postcard of the Carnegie Library
+| location = 114 W. Adams Street<br />[[Sandusky, Ohio]]
+| coordinates = 
+| pushpin_map = 
+| mapframe-marker = 
+| mapframe-zoom = 
+| built = 1901
+| architect = [[Albert D'Oench]] and [[Joseph W. Yost]]
+| architecture = [[Jacobethan Revival architecture|Jacobethan Revival]]
+| added = November 12, 1975
+| ref_num = 75001385
+| mapframe-id = Q5043935
+| mapframe = yes
+}}
+
+The main branch of the Sandusky Library is the '''Sandusky Carnegie Library''', a historic [[Carnegie library]] in downtown Sandusky. The Carnegie Library opened in 1901, and was designed by [[Albert D'Oench]]. It the third Carnegie library constructed in Ohio, after [[Carnegie Public Library (East Liverpool, Ohio)|East Liverpool]] and Steubenville.<ref name=":5">{{Cite book |last=McCormick |first=Virginia E. |url=http://archive.org/details/educationalarchi0000mcco |title=Educational Architecture in Ohio |date=2001 |publisher=Kent State University Press |isbn=978-0-87338-666-1 |pages=198–202 |access-date= |url-access=registration}}</ref>
+
+Contracts to build the library were awarded in the summer of 1900, after the receipt of a $50,000 donation from Andrew Carnegie the previous year. The library association engaged [[Columbus, Ohio|Columbus]] architect [[Joseph W. Yost]] to design the building. Yost was in the process of moving his architectural practice to New York City, and he entered into a professional partnership with [[Albert D'Oench]] that year. The Sandusky Carnegie library was the first commission for the new firm of D'Oench and Yost, and was planned as a grand two-story structure that would incorporate a library, a museum, and an auditorium.<ref name=":5" />
+
+The architectural style of the library is variously described as [[Jacobethan|Jacobethan Revival]]<ref name=":1" /> or [[Romanesque Revival architecture|Romanesque Revival]];<ref name=":5" /> a 1902 [[State Library of Ohio|Ohio State Library]] publication described it as "follow[ing] no historical precedents of any definite period."<ref name=":4" />  The exterior features steep triangular gables, rectangular windows divided by stone [[Mullion|mullions]], bay windows, and two towers with curved roofs flanking the main entrance.<ref name=":1" />
+
+The original interior plan featured a reading room in the left wing of the first floor. In the right wing of the first floor, the building included an approximately 400-seat auditorium with a [[Steinway & Sons|Steinway]] piano and a [[pipe organ]]. The second floor served as a museum, with exhibit space, a kitchen, and an art gallery. Historian Virginia E. McCormick argued in 2001 that the design of the Sandusky library was unlike its contemporaries: many contemporaneous libraries were built in the [[Classical revival architecture|Classical revival]] style, and few incorporated as many functions as the Sandusky library did.<ref name=":5" />
+
+The library was dedicated on July 3, 1901, with a gala attended by dignitaries including Governor [[George K. Nash]] and [[Ohio State University]] president [[William Oxley Thompson]].<ref name=":6" /> An addition to the adult services department of the library was constructed in 1968, and the building was listed on the National Register of Historic Places in 1975.<ref name=":1" />
+
+=== Erie County Jail ===
+{{For|the facility in Buffalo, New York|Erie County Holding Center}}
+{{Infobox NRHP
+| name = Erie County Jail
+| nrhp_type = 
+| image = Old jail in Sandusky, Ohio.jpg
+| caption = The jail building in 2012
+| location = 
+| coordinates = 
+| pushpin_map = 
+| built = 1883
+| builder = Philip, Adam & [[George Feick]]
+| architecture = Stick–Eastlake
+| added = October 20, 1982
+| area = 
+| mpsub = {{NRHP url|id=64000649|title=Sandusky MRA}}
+| ref_num = 82001395
+| sigdate_label = 
+| sigdate =
+}}
+
+The 2004 expansion of the main library incorporates the '''Erie County Jail''', a historic [[Stick style|Stick–Eastlake]] style building which formerly served as the [[Prison#United States|county jail]] and the [[Sheriffs in the United States|sheriff]]'s official residence. It was built from 1882 to 1883 by the firm of Adam Feick & Brother, which consisted of Adam, Philip, and [[George Feick]]. It was listed on the [[National Register of Historic Places]] in 1982.<ref name=":2">{{Cite web |last=Damm |first=Ellie |date=1981-03-15 |title=Ohio Historic Inventory: Erie County Jail |url=https://catalog.archives.gov/id/71984792 |access-date=2025-11-02 |publisher=Ohio Historic Preservation Office |via=National Archives}}</ref><ref>{{Cite book |last=Peeke |first=Hewson Lindsley |url=https://catalog.hathitrust.org/Record/008652155 |title=A Standard History of Erie County, Ohio |date=1916 |publisher=[[Lewis Publishing Company]] |volume=1 |location=Chicago |page=45 |access-date= |via=HathiTrust}}</ref>[[File:Erie county jail, by N.H. Hammond.jpg|thumb|[[Stereoscopy|Stereoscopic view]] of the jail by photographer N.H. Hammond |left]]The Erie County Jail building is a three-story building, designed to serve as both the county jail and the residence of the county sheriff and his family.<ref name=":2" /> A 1995 report on [[Sandusky County Jail and Sheriff's House|a similar county jail]] found that 52 such buildings were constructed in the 88 [[List of counties in Ohio|counties of Ohio]], including 19 in [[Northwest Ohio]].<ref>{{Cite web |last=Bristley |first=Patricia R. |date=1996-08-05 |title=National Register of Historic Places Registration Form: Sandusky County Jail and Sheriff's Residence |url=https://catalog.archives.gov/id/71991234 |access-date=2025-11-02}}</ref> The 1883 jail succeeded multiple previous jail buildings, including a one-room stone structure on Jackson Street nicknamed "Fort Mockabee."<ref name=":6">{{Cite book |last=Peeke |first=Hewson Lindsley |url=https://books.google.com/books?id=UlOPmQEACAAJ |title=The Centennial History of Erie County, Ohio |date=1925 |publisher=Penton Press |location=Cleveland |pages=75-76}}</ref> The jail is constructed of local [[limestone]], with [[sandstone]] banding above windows and floor lines.<ref name=":2" />
+
+The jail is located across the street from the [[Erie County Courthouse (Ohio)|County Courthouse]]. It was expanded during the 20th century, with a rear addition constructed in the 1960s.<ref name=":2" /> It served as the sheriff's residence until 1972. By the 1980s, the Erie County Sheriff's Office was interested in a more modern facility, and it moved to a new facility in Perkins Township in 1990.<ref name=":3">{{Cite web |last=Smith |first=Kristina |date=2024-04-17 |title=Behind bars: A look at the historic connection between the Sandusky Library and Erie County Jail |url=https://www.thehelmsandusky.com/features/sanduskylibraryjail.aspx |access-date=2025-11-02 |work=The Helm Sandusky |publisher=Greater Sandusky Partnership}}</ref>
+
+A major construction program in the late 1990s connected the former jail to the adjacent Carnegie Library, and the combined library reopened in 2004. Parts of the former sheriff's residence, including the dining room and living room, serve as breakroom space for library staff. As of 2024, the jail cells remain intact, and are not open to the public.<ref name=":3" />
+
+== Kelleys Island branch ==
+[[File:Kelleys Island Library.jpg|thumb|The Kelleys Island branch in 2019]]The Kelleys Island branch library traces its history to the establishment of a library association in 1864. Its current building, an annex of the [[Kelleys Island School]], opened in 2000. Day-to-day operations of the branch are staffed by volunteers in the Kelleys Island community, supported by the professional staff of the library system.<ref>{{Cite web |last=Jackson |first=Tom |date=2019-08-02 |title=Volunteers keep Kelleys Island branch library going |url=https://sanduskyregister.com/news/4779/volunteers-keep-kelleys-island-branch-library-going/ |access-date=2025-11-03 |work=Sandusky Register}}</ref>
+
+== Sandusky History Museum ==
+[[File:Oran Follett House — Sandusky, Ohio.jpg|thumb|The Follett House Museum in 2021]]
+The Sandusky History Museum is located in the former residence of publisher and politician [[Oran Follett]], a [[sandstone]] mansion in Sandusky built in the 1830s. It served as a stop on the [[Underground Railroad]], and is currently operated by the Sandusky Library as a local history museum. It was listed on the National Register of Historic Places in 1974, as part of a district that also includes the adjacent residences of Augustus H. Moss and his son Jay O. Moss.<ref>{{Cite web |last=Johannesen |first=Eric |date=April 1974 |title=National Register of Historic Places Inventory-Nomination Form: Follett-Moss-Moss Residences |url=https://catalog.archives.gov/id/71988142 |access-date=2025-11-03 |via=National Archives}}</ref>
+
+In 2023, the house was listed as a stop on the Ohio Historical Underground Railroad Trail, a collection of properties across Ohio that contributed to the Underground Railroad.<ref>{{Cite web |last=Jackson |first=Tom |date=2023-09-14 |title=New Ohio Historical Underground Railroad Trail includes Sandusky |url=https://sanduskyregister.com/news/479850/new-ohio-historical-underground-railroad-trail-includes-sandusky/ |access-date=2025-11-03 |work=Sandusky Register}}</ref>
+
+== Services and governance ==
+The Sandusky Library is a member of [[CLEVNET]], a [[library consortium]] founded by the [[Cleveland Public Library]]. CLEVNET provides shared services such as an [[online public access catalog]], [[ebook]] access, and [[Interlibrary loan|interlibrary loans]] for over 40 libraries in northern Ohio. The Sandusky Library has been a member of CLEVNET since 1984.<ref>{{Cite web |title=CLEVNET Members |url=https://www.clevnet.org/member-libraries/ |access-date=2025-11-03 |website=CLEVNET |language=en-US}}</ref>
+
+The Library Association of Sandusky is a [[501(c)(3) organization|501(c)(3) nonprofit organization]], funded by local and state governments.<ref name=":0">{{Cite web |last=Charles E. Harris & Associates Inc. |date=2024 |title=Library Association of Sandusky, Erie County, Ohio, Regular Audit For the Year Ended December 31, 2023 and 2022 |url=https://ohioauditor.gov/AuditSearch/Reports/2024/Library_Association_of_Sandusky_2023_2022_Erie_FINAL.pdf |access-date=2025-11-02 |publisher=[[Ohio State Auditor]]}}</ref>{{Rp|page=6}} Local funding is provided by [[Property tax in the United States|property taxes]] in the city of Sandusky, [[Perkins Township, Erie County, Ohio|Perkins Township]], and the village of [[Kelleys Island, Ohio|Kelleys Island]]. [[Margaretta Township, Erie County, Ohio|Margaretta Township]] is also included in the library's service area.<ref name=":0" />{{Rp|page=16}} Additionally, some library events are funded by the Lange Trust, a trust fund established in the 1970s to support education and culture in Sandusky.<ref>{{Cite web |last=Prout |first=Sarah |date=2021-03-11 |title=Lange Trust's legacy carries on |url=https://sanduskyregister.com/news/308011/lange-trusts-legacy-carries-on/ |access-date=2025-11-02 |website=Sandusky Register |language=en}}</ref> The library makes library cards available to all Ohio residents.<ref>{{Cite web |title=Library Card Info & FAQs |url=https://www.sanduskylib.org/using-the-library/library-card-info-faqs/ |access-date=2025-11-02 |website=Sandusky Library |language=en-US}}</ref>
+
+== References ==
+{{reflist}}
+
+== Further reading ==
+
+* {{Cite thesis |last=Wolcott |first=Merlin D. |title=The History and Development of the Sandusky Library Association, Sandusky, Ohio |date=1953 |degree=Master's |publisher=[[Kent State University]] |oclc=405846}}
+
+== External links ==
+{{Commons category|Sandusky Library}}
+
+* {{Official website}}
+
+{{National Register of Historic Places in Ohio}}
+{{Authority control}}
+
+[[Category:Library buildings completed in 1901]]
+[[Category:Libraries on the National Register of Historic Places in Ohio]]
+[[Category:Buildings and structures in Sandusky, Ohio]]
+[[Category:Carnegie libraries in Ohio]]
+[[Category:National Register of Historic Places in Erie County, Ohio]]

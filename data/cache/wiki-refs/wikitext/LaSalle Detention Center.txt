@@ -1,0 +1,93 @@
+{{Short description|Immigration detention facility in Louisiana, US}}
+{{update|date=May 2025}}
+{{Use American English|date=August 2025}}
+{{Infobox prison
+| name             = Central Louisiana ICE Processing Center
+| image            = 
+| image_size       = 
+| alt              = 
+| caption          = 
+| image_map        = 
+| map_size         = 
+| map_alt          = 
+| map_caption      = 
+| pushpin_map      = 
+| pushpin_relief   = 
+| pushpin_map_size = 
+| pushpin_alt      = 
+| pushpin_caption  = 
+| pushpin_label    = 
+| location         = [[Jena, Louisiana]]
+| coordinates      = {{coord|31.70858|-92.15193|format=dms|display=inline,title|type:landmark}}
+| status           = 
+| classification   = 
+| capacity         = 1,160
+| population       = 
+| population_date  = 
+| opened           = 2007
+| closed           = 
+| former_name      = LaSalle ICE Processing Center
+| managed_by       = [[GEO Group]]
+| director         = 
+| governor         = 
+| warden           = 
+| website          = {{URL|https://www.ice.gov/detain/detention-facilities/central-louisiana-ipc}}
+| prisoners        = 
+| embedded         = 
+}}
+{{refimprove |date=May 2025}}
+'''Central Louisiana ICE Processing Center''' (known as '''CLIPC''' and formerly named '''LaSalle ICE Processing Center''') is an [[Immigration detention in the United States|immigration detention]] facility operated by the [[GEO Group]] and located at 830 Pinehill Road, about two miles northwest of downtown [[Jena, Louisiana|Jena]], [[LaSalle Parish, Louisiana]].<ref>{{cite web | url=https://www.ice.gov/detention-facilities/facilities/jenadla.htm | title=LaSalle ICE Processing Center | date=10 February 2025 }}</ref>
+
+The [[Central Louisiana]] ICE Processing Center has a capacity of 1,160, is constructed on approximately 100 acres, and has a size of 182,890 square feet. CLIPC began intaking immigrant detainees on October 22, 2007.<ref>{{cite web |url=http://www.geogroup.com/Maps/LocationDetails/7 |title=Lasalle Detention Facility - The GEO Group Inc. |website=www.geogroup.com |url-status=dead |archive-url=https://web.archive.org/web/20121110140103/http://geogroup.com/Maps/LocationDetails/7 |archive-date=2012-11-10}}</ref> Prior to being awarded their contract under [[U.S. Immigration and Customs Enforcement]] in 2007, the facility was a [[Youth detention center|juvenile correction facility]].<ref>{{cite web |url=https://www.sec.gov/Archives/edgar/data/923796/000095014407001829/g05716e10vk.htm |title=The GEO Group, Inc.|author=<!--Not stated--> |date=2006-12-31|website= SEC.gov|publisher= U.S. Securities and Exchange Commission|quote=...&nbsp;During 2000, the Company’s management contract at the 276-bed Jena Juvenile Justice Center in Jena, Louisiana, which is included in the U.S. corrections segment, was discontinued by the mutual agreement of the parties....'}}</ref>
+
+It is currently most notable for being [[Detention of Mahmoud Khalil|the detention site of Mahmoud Khalil]], a Pro-Palestinian activist who was detained for protesting over the past 17 months before his arrest and detention.<ref>{{Cite web |last=Rahman |first=Billal |date=Mar 10, 2025 <!-- at 8:19 AM EDT -->  |title=Release Mahmoud Khalil Petition Gets Nearly 800,000 Signatures |url=https://www.newsweek.com/mahmoud-khalil-ice-arrest-palestinian-petition-2042067 |access-date=2025-03-11 |website=Newsweek}}</ref><ref>NPR, March 11, 2025 https://www.npr.org/2025/03/11/nx-s1-5323147/mahmoud-khalil-green-card-rights</ref>
+Since released.
+
+== History ==
+
+===Jena Juvenile Correction Facility===
+CLIPC operated as the Jena Juvenile Correction Facility from 1998 to 2001, until a federal investigation found the facility unfit for use and ordered it closed.<ref>{{cite news |last=Clark |first=Maria |date=2019-10-20 |title=In tiny Jena, immigration debate plays out at largest detention center in the Gulf South|url=https://www.nola.com/archive/in-tiny-jena-immigration-debate-plays-out-at-largest-detention-center-in-the-gulf-south/article_4bc64444-cdc1-5b79-baa1-5d6c95400477.html |work=NOLA.com|ref=none}}</ref> The federal investigation described that mostly white guards used "cruel and humiliating punishments" and "routinely used excessive force" on the mostly black juvenile inmates.<ref>{{cite news |last=Keleher |first=Terry |date=2008-09-04 |title=Another Storm Brewing in Jena, LA|url=https://colorlines.com/article/another-storm-brewing-jena-la/|work=Colorlines|ref=none}}</ref>
+
+===Hurricane Katrina===
+In the wake of [[Hurricane Katrina]], Jena Correctional Facility temporarily reopened to house some 450 inmates evacuated from Jefferson Parish Prison. On October 2, 2005, [[Human Rights Watch]] reported that correctional officers allegedly beat and mistreated these inmates.
+
+Inmates at Jena claimed that officers beat, kicked, and hit them while they wore shackles. In some instances, officers ordered inmates to kneel for several hours and hit them if they fell. Officers also forced inmates to hold their faces against walls which they had covered in chemical spray. Inmates allege that, when they became ill and vomited, officers wiped their faces and hair in the vomit.<ref>{{cite news |author=<!--not stated--> |date=2005-10-02 |title=Louisiana: After Katrina, Inmates Face Prison Abuse|url=https://www.hrw.org/news/2005/10/02/louisiana-after-katrina-inmates-face-prison-abuse|work=Human Rights Watch}}</ref>
+
+===Immigration detention===
+Since 2007, CLIPC has functioned as a detention center for individuals accused of breaking immigration laws. Although the facility's population fluctuates, it often holds a population more than one third the size of [[Jena, Louisiana|Jena]] (about 3,145 people).<ref>{{cite news |last=Clark |first=Maria |date=2019-10-20 |title=In tiny Jena, immigration debate plays out at largest detention center in the Gulf South|url=https://www.nola.com/archive/in-tiny-jena-immigration-debate-plays-out-at-largest-detention-center-in-the-gulf-south/article_4bc64444-cdc1-5b79-baa1-5d6c95400477.html |work=NOLA.com|ref=none}}</ref>
+
+==Abuse and allegations of civil rights violations==
+===Denial of due process===
+In 2016, the [[Southern Poverty Law Center]] found that, alongside [[Stewart Detention Center|Stewart]] and Etowah County Detention Center, detainees at CLIPC had the lowest rates of representation in the country. In 2015, only six percent of immigrants detained at CLIPC were represented by counsel and only five percent of all asylum applications were granted, compared to 37 and 48 percent nationally.<ref>{{cite news |author=<!--not stated--> |date=2016-11-21 |title=Shadow Prisons: Immigrant Detention in the South|url=https://www.splcenter.org/20161121/shadow-prisons-immigrant-detention-south#executive%20summary|work=Southern Poverty Law Center}}</ref> In 2018, SPLC requested a preliminary injunction for CLIPC to increase attorneys' access to their detained clients. SPLC noted that the facility had only one attorney visitation room and required phones calls, which were limited to 20 minutes, to be scheduled a week in advance.<ref>{{cite news |author=<!--not stated--> |date=2018-05-04 |title=SPLC Seeks Judge's Order Requiring ICE to Improve Detainees' Access to Attorneys |url=https://www.splcenter.org/20161121/shadow-prisons-immigrant-detention-south#executive%20summary|work=Southern Poverty Law Center}}</ref>
+
+===Sexual assault===
+In a 2017 report, the Community Initiatives for Visiting Immigrants in Confinement found that CLIPC was among the top five facilities with the most complaints about sexual assaults.<ref>{{cite news |last=Flores |first=Adolfo |date=2017-04-11 |title=Few Complaints Of Sexual Abuse Inside Immigrant Detention Centers Are Investigated, Report Finds|url=https://www.buzzfeednews.com/article/adolfoflores/sexual-assault-complaints-at-detention-centers#|work=BuzzFeed News|ref=none}}</ref>
+
+===Use of pepper spray during COVID-19 presentations===
+On March 25, 2020, CLIPC officials sprayed [[pepper spray]] on 79 female detainees who had been attending a presentation by the GEO group on [[COVID-19]] protocols.<ref>{{cite news |last=Lanard |first=Noah |date=2020-04-22 |title=The Women Asked ICE for Soap. They Got Pepper-Sprayed Instead.|url=https://www.motherjones.com/coronavirus-updates/2020/04/ice-pepper-spray-lasalle/|work=Mother Jones|ref=none}}</ref>
+
+==Detainee deaths==
+===Deaths in 2016===
+In the first half of 2016, three detainees at LaSalle Detention Facility died in custody. The detainees' ages ranged from 36 to 65 and died from heart ailments and, in one instance, liver failure after admission for possible sepsis. Another detainee who failed to receive medical care reportedly died from cancer only months after being released.<ref>{{cite news |author=<!--not stated--> |date=2016-11-21 |title=Shadow Prisons: Immigrant Detention in the South|url=https://www.splcenter.org/20161121/shadow-prisons-immigrant-detention-south#executive%20summary|work=Southern Poverty Law Center}}</ref>
+
+===Roger Rayson===
+On March 13, 2017, Roger Rayson, a 47-year-old [[Jamaica|Jamaican]] national, died in Lafayette General Hospital after being transferred out of CLIPC on February 11.<ref>{{cite news |author=<!--not stated--> |date=2017-03-14 |title=ICE detainee passes away in Louisiana hospital|url=https://www.ice.gov/news/releases/ice-detainee-passes-away-louisiana-hospital-0|work=U.S. Immigration and Customs Enforcement}}</ref> Rayson was the first person to die in immigration detention during the Trump administration.
+
+Rayson was [[HIV]]-positive when he arrived at CLIPC and, according to internal ICE documents, had been diagnosed with [[Burkitt lymphoma|Burkitt's lymphoma]]. Rayson never received chemotherapy during his time at CLIPC, and was placed in [[solitary confinement]] for nine days before being transferred to a hospital. Outside doctors who reviewed the records say his treatment was badly mismanaged, and that the government's failure to treat his cancer directly caused his death.<ref>{{cite news |last=Rose |first=Joel |date=2020-04-29 |title=Internal ICE Reviews Of Two Immigrant Deaths Stoke Fears About COVID-19 Care|url=https://www.npr.org/2020/04/29/847838342/internal-ice-reviews-of-two-immigrant-deaths-stoke-fears-about-covid-19-care|work=NPR|ref=none}}</ref>
+
+===Ernesto Rocha-Cuadra===
+On June 23, 2023, Ernesto Rocha-Cuadra, a 42-year-old [[Nicaragua]]n national, was found unresponsive in CLIPC and taken to a local hospital. Rocha-Cuadra died that afternoon, but ICE officers did not inform his family until June 28.<ref>{{cite news |author=<!--not stated--> |date=2024-08-26|title=Inside the Black Hole: Systemic Human Rights Abuses against Immigrants Detained & Disappeared in Louisiana|url=https://www.aclu.org/documents/inside-the-black-hole|work=American Civil Liberties Union}}</ref>
+
+Rocha-Cuadra was detained by ICE between April 17, 2022 and June 23, 2023. CLIPC officials ignored a recommendation for his release by an ICE panel in November 2022. The [[American Civil Liberties Union]] alleges that CLIPC officials subjected Rocha-Cuadra to medical neglect, physical abuse, and solitary confinement after he assisted fellow detainees with their immigration cases. Rocha-Cuadra's brother claims to have listened in on a phone call where an official beat and choked Rocha-Cuadra after he asked for pain medication.<ref>{{cite news |author=<!--not stated--> |date=2024-08-26|title=Inside the Black Hole: Systemic Human Rights Abuses against Immigrants Detained & Disappeared in Louisiana|url=https://www.aclu.org/documents/inside-the-black-hole|work=American Civil Liberties Union}}</ref> In the months leading to his death, Rocha-Cuadra submitted at least 29 grievances alleging that he was refused medical care, denied access to his personal detention records and was subject to mistreatment and negligence by guards.<ref>{{cite news |last=Bobbi-Jean Misick|first=Verite |date=2023-07-13 |title=Immigrant who died in Louisiana ICE detention center had filed at least 29 grievances|url=https://lailluminator.com/2023/07/13/immigrant-who-died-in-louisiana-ice-detention-center-had-filed-at-least-29-grievances/|work=Louisiana Illuminator|ref=none}}</ref>
+
+ICE's "Detainee Death Report" attributes Rocha-Cuadra's passing to cardiac arrest.<ref>{{cite news |author=<!--not stated--> |title=U.S. Immigration and Customs Enforcement (ICE) Detainee Death Report: ROCHA-Cuadra, Ernesto|url=https://www.ice.gov/doclib/foia/reports/ddrErnestoRochaCuadra.pdf|work=U.S. Immigration and Customs Enforcement}}</ref> Rocha-Cuadra's family claims he did not have a history of health issues and that it "looked like there was a struggle, like he was beaten," when they viewed his body. During their last video call, Rocha-Cuadra was wearing a large cast and would not tell them what had happened. The government has refused to release video footage of the solitary confinement unit at CLIPC to Rocha-Cuadra's family and attorneys.<ref>{{cite news |author=<!--not stated--> |date=2024-08-26|title=Inside the Black Hole: Systemic Human Rights Abuses against Immigrants Detained & Disappeared in Louisiana|url=https://www.aclu.org/documents/inside-the-black-hole|work=American Civil Liberties Union}}</ref>
+
+==References==
+{{reflist}}
+
+[[Category:Prisons in Louisiana]]
+[[Category:GEO Group]]
+[[Category:Buildings and structures in LaSalle Parish, Louisiana]]
+[[Category:Immigration detention centers and prisons in the United States]]
+[[Category:2007 establishments in Louisiana]]
+[[Category:Jena, Louisiana]]

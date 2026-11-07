@@ -1,0 +1,26 @@
+{{Short description|Immigrant detention site in Monroe, Louisiana}}
+{{Infobox prison
+|name=Richwood Correctional Center
+|coordinates={{Coord|32.456874776879204|-92.07822937215464|display=it|format=dms}}
+|capacity=
+|opened=
+|location=[[Monroe, Louisiana]]
+|prisoners=[[Kseniia Petrova]]
+|managed_by=[[LaSalle Corrections]]<ref>{{cite web |title=Justice-Free Zones: U.S. Immigration Detention Under the Trump Administration |url=https://www.aclu.org/publications/justice-free-zones-us-immigration-detention-under-trump-administration |website=[[ACLU]] |date=April 30, 2020}}</ref><ref>{{cite news |last1=Villagran |first1=Lauren |title=ICE says it provides 'proper meals.' Detainees see crystalized jelly, rancid beans and iced bologna |url=https://www.usatoday.com/story/news/nation/2025/10/19/immigrant-detainees-hungry-in-ice-detention/86163312007/ |work=[[USA TODAY]]}}</ref>
+}}
+The '''Richwood Correctional Center''' is an [[List of immigrant detention sites in the United States|immigrant detention site]] in [[Monroe, Louisiana]].
+
+== History ==
+Between 2001 and 2019, the facility was contracted as a [[jail]] for the city of Monroe.<ref>{{cite news|title=Louisiana jury awards more than $40 million to family of man who died in privately-run jail|last=Brook|first=Jack|date=23 October 2025|access-date=5 November 2026|website=KSAT.com|url=https://www.ksat.com/news/national/2025/10/24/louisiana-jury-awards-more-than-40-million-to-family-of-man-who-died-in-privately-run-jail/}}</ref>
+
+In 2015, Erie Moore Sr. died at a hospital after guards slammed him headfirst to the floor at Richwood. A decade later, a jury awarded Moore's family $19.5 million in [[compensatory damages]] and $23.25 million in [[punitive damages]], finding LaSalle had acted with "actual malice or reckless indifference to the rights or safety of others", negligence by its employees was a "substantial factor", and that "guards had used excessive force against Mr. Moore and that the there was a “custom or practice” of punishing inmates at Richwood by using chemical spray or taking them to an area of the detention center known as the Four Way that had no surveillance cameras".<ref>{{cite news |last1=Levenson |first1=Michael |title=Jury Awards $42 Million in Death of Inmate at Private Jail in Louisiana |url=https://www.nytimes.com/2025/10/24/us/louisiana-prison-death-verdict.html |work=[[The New York Times]] |date=October 24, 2025 |archive-url=https://archive.today/20251024215325/https://www.nytimes.com/2025/10/24/us/louisiana-prison-death-verdict.html |archive-date=October 24, 2025 |quote=Jury Awards $42 Million in Death of Inmate at Private Jail in Louisiana}}</ref> 
+
+A report dated February 2023 from the [[Department of Homeland Security Office of Inspector General]] says, "We identified violations that compromised the health, safety, and rights of detainees, including facility
+areas that were not consistently clean or sanitary. Additionally, Richwood did not have a reliable system for detainees to file grievances and did not allow detainees to file medical grievances. (...) Richwood restricted detainees’ access to legal visitation and calls without providing justification"<ref>{{cite web |title=Violations of ICE Detention Standards at Richwood Correctional Center in Monroe, Louisiana |url=https://www.oig.dhs.gov/sites/default/files/assets/2023-03/OIG-23-18-Mar23.pdf |website=oig.dhs.gov}}</ref>
+
+In 2025, Iris Dayana Monterroso-Lemus had a [[stillbirth]] after asking to go the hospital. "she said they dismissed her concerns, telling her the pain was normal because the baby was growing". "The clinical notes state that the pregnancy was “complicated by no PNC,” meaning she had received no [[prenatal care]]."<ref>{{cite news |last1=Crescencio |first1=Araceli |title=Detained immigrant's pregnancy fails while in ICE custody |url=https://nashvillebanner.com/2025/05/27/iris-monterroso-pregnancy-loss/ |work=[[Nashville Banner]] |date=May 27, 2025}}</ref>
+
+== References ==
+{{Reflist}}
+
+[[Category:Immigration detention centers and prisons in the United States]]

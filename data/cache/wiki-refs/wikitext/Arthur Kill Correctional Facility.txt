@@ -1,0 +1,34 @@
+{{Short description|Closed prison in New York City, US}}
+{{Use American English|date=August 2025}}
+'''Arthur Kill Correctional Facility''' was a medium security [[correctional facility]] on [[Arthur Kill Road]] in [[Charleston, Staten Island|Charleston]], [[Staten Island]], [[New York City]]. It operated from 1976 to 2011, run by what was then the [[New York State Department of Correctional Services]]. The prison had a capacity of 931 male inmates. The facility is currently a film set often used for prison scenes.
+
+The prison property bordered [[Arthur Kill]], a waterway that separates Staten Island from [[New Jersey]]. The {{convert|260|acre|km2|adj=on}} [[Clay Pit Ponds State Park Preserve]] is located just south of the prison site. Part of its site contains buried truck trailers and is potentially contaminated; the decision was made to "deal" with the abandoned trailers' contents in this way.
+
+== History ==
+Opened in 1976, the site formerly served as a 650-bed [[drug rehabilitation]] center, with an indoor swimming pool (closed when it became a prison);<ref>{{cite news |title=PRISON IS OPPOSED ON STATEN ISLAND; Plan to Convert Drug Center Criticized at Hearing |newspaper=The New York Times |date=April 21, 1976 |url=https://www.nytimes.com/1976/04/21/archives/prison-is-opposed-on-staten-island-plan-to-convert-drug-center.html |accessdate=2009-08-08}}</ref> the housing of that unit was destroyed by fire. Sixteen housing (dormitory) units, the medical building, and the SHU or [[Solitary confinement|Special Housing Unit]] were built just before or while it was a prison. In the summer of 2006, the Arthur Kill Correctional Facility was used to shoot scenes for the juvenile detention center shown in the film ''[[Tenderness (2009 film)|Tenderness]]''.<ref>{{cite news |last=Benanti |first=Carol Ann |title=Arthur Kill prison to appear in film |newspaper=Staten Island Advance |date=August 2, 2006}}</ref>
+
+Arthur Kill housed a call center of the New York State Department of Motor Vehicles. They answered questions about regulations, but had no access to the Department's databases. When the prison closed it was to be moved to Greene.
+
+The facility was closed in 2011 as part of Governor [[Andrew Cuomo]]'s prison closing program.<ref name=":0">{{cite press release |url=http://www.governor.ny.gov/press/06302011ClosureOfSevenStatePrisonFacilities |title=Governor Cuomo Announces Closure of Seven State Prison Facilities|date=June 30, 2011|access-date=January 23, 2012}}</ref> At the time, the prison had 408 employees, including 315 security employees.<ref>Annese John and Tom Wrobleski. "[http://www.silive.com/westshore/index.ssf/2011/07/cuomo_slams_door_on_arthur_kil.html N.Y. Gov. Cuomo orders Staten Island's Arthur Kill Correctional Facility closed]". ''[[Staten Island Advance]]''. Friday July 1, 2011. Retrieved on September 19, 2012.</ref> Because of dropping prison population, due to revised sentencing guidelines, some prisons were to be closed. Upstate lawmakers were adamant that it should not be just upstate prisons. The other prisons closed in 2011—[[Buffalo Correctional Facility|Buffalo]], Fulton, [[Mid-Orange Correctional Facility|Mid-Orange]], [[Mt. McGregor Correctional Facility|Mt. McGregor]], Oneida, and Summit—were all upstate.<ref name=":0" />
+
+Following the prison's closure, [[Broadway Stages]], which already operated sound stages elsewhere in the city, negotiated with New York State to purchase the prison property for use in films and productions needing "real" prison experiences.<ref name="Geiger_Crain">{{cite news|last1=Geiger|first1=Daniel|title=Old Arthur Kill prison property finally OK'd to become film and TV soundstages |url=http://www.crainsnewyork.com/article/20170809/REAL_ESTATE/170809874/major-new-york-city-studio-broadway-stages-finally-closes-on-old-arthur-kill-correctional-facility-property-in-staten-island |work=Crain's New York Business |date=9 August 2017}}</ref><ref name="La Guerre">{{cite news|last1=LA GUERRE|first1=LIAM|title=Broadway Stages Completes Purchase of Former Staten Island Prison |url=https://commercialobserver.com/2017/08/broadway-stages-completes-purchase-of-former-staten-island-prison/ |work=Commercial Observer |date=8 August 2017}}</ref> In May 2017, Broadway Stages announced it was filming the upcoming ''[[Ocean's 8]]'' project at the facility.<ref name="Bitette_NYDN">{{cite news|last1=Bitette|first1=Nicole|title='Ocean's 8' will film at former Staten Island prison|url=http://www.nydailynews.com/entertainment/movies/ocean-8-film-staten-island-prison-article-1.3140002 |work=Daily News|location=New York |date=5 May 2017|language=en}}</ref> In addition, the 2018 and 2019, the sixth and seventh seasons of ''[[Orange Is the New Black]]'' were filmed at the facility.<ref name="SILive_Broadway">{{cite news|author=<!--Staff writer(s); no by-line.-->|title=No guards, no prisoners: Remains of Arthur Kill prison, in 63 arresting images|url=http://www.silive.com/news/2017/09/no_guards_no_prisoners_remains.html|work=Staten Island Advance|date=8 September 2017}}</ref>
+
+==Notable inmates==
+*[[Paul Bateson]], murderer who appeared in the film ''The Exorcist''<ref name="NYDOCCS Inmate Lookup">Search on "Paul F Bateson", inmate #79A1383, at {{cite web|title=Inmate Information|url=http://nysdoccslookup.doccs.ny.gov/GCA00P00/WIQ3/WINQ130|publisher=[[New York State Department of Corrections and Community Supervision]]|accessdate=February 21, 2019}}</ref>
+==References==
+{{Reflist}}
+
+==External links==
+{{Portal|New York (state)|New York City}}
+
+* [https://web.archive.org/web/20060923163233/http://www.docs.state.ny.us/faclist.html NY prison information]
+
+{{State prisons in New York}}
+{{Authority control}}
+
+{{Coord|40|33|02|N|74|13|43|W|display=title}}
+
+[[Category:Government buildings in Staten Island]]
+[[Category:Defunct prisons in New York City]]
+[[Category:1976 establishments in New York City]]
+[[Category:2011 disestablishments in New York City]]

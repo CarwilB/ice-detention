@@ -1,0 +1,54 @@
+{{Use American English|date=July 2025}}
+{{Infobox Prison
+|name=Port Isabel Service Processing Center
+|image=
+|location=27991 Buena Vista Blvd. Los Fresnos, TX, 78566
+|coordinates={{coord|26|09|21|N|97|20|14|W|scale:10000|display=inline,title}}
+|status=Open 1950 (Addition: 2007)
+|classification=
+|capacity=approx. 1,200
+|opened={{Start date and age|1950}}
+|closed=
+|managed_by=Ahtna Support and Training Services
+|director=
+}}
+{{Infobox settlement
+|official_name = Port Isabel, Texas
+|type          = [[Detention Center]]
+|nickname      = 
+|motto         = 
+<!-- Maps -->
+|image_map     = TXMap-doton-PortIsabel.PNG
+|map_size      = 250px
+|map_caption   = Location of Port Isabel, Texas
+|image_map1    = Cameron County PortIsabel.svg
+|map_size1     = 250px
+|map_caption1  = 
+}}
+The '''Port Isabel Service Processing Center''' near [[Los Fresnos, Texas]] holds detainees of [[United States Immigration and Customs Enforcement]] (ICE), whose immigration status or citizenship has not been officially determined or who are awaiting repatriation. It is operated by [[Ahtna]] Support and Training Services.
+
+== History ==
+Port Isabel was built in 1950 and added a new building in 2007. The facility holds about 1,200 detainees, and intake approximately 9,500 detainees per year.<ref>{{Cite web|url=https://www.documentcloud.org/documents/2063562-port-isabel-detention-center-tx-2012-ero.html|title=2012 ERO Inspection - Port Isabel TX SPC|publisher= US Immigration and Customs Enforcement|via=documentcloud.org|language=en|access-date=2018-12-19}}</ref> Unarmed guards at Port Isabel receive 67 hours of training and Armed guards get an extra eight hours of firearms instruction. Detainees get two hot meals and one cold meal a day, and all outgoing mail is photocopied.<ref name="beast">{{cite web|url=https://www.thedailybeast.com/a-native-american-tribe-has-a-dollar800-million-contract-to-run-ice-detention-centers|title=A Native American Tribe Has a $800 Million Contract to Run ICE Detention Centers|last1=Rohrlich|first1=Justin|date=July 6, 2018|website=[[The Daily Beast]]|last2=Rawnsley|first2=Adam}}</ref>
+
+== Controversies ==
+On April 22, 2009, some detainees began a [[hunger strike]], alleging violations of [[due process]], inadequate access to medical care and legal resources, and various other abuses.
+
+On February 10, 2010, detainees went on a series of staggered hunger strikes in protest of inhumane conditions and advocating for less transfers. Detainees feared violence and being placed in isolation for the hunger strike. It was reported as the third hunger strike in less than a year.<ref>{{cite news |url=https://www.texastribune.org/2010/03/09/detainees-on-a-hunger-strike-in-south-texas/ |work=[[Texas Tribune]] |title=Starving for Reform |first=Julián |last=Aguilar |date=March 9, 2010}}</ref><ref>{{Cite web|url=https://www.texastribune.org/2010/03/09/detainees-on-a-hunger-strike-in-south-texas/|title=Starving for Reform|last=Aguilar|first=Julián|date=2010-03-09|website=The Texas Tribune|language=en|access-date=2018-12-19}}</ref> A Department of Homeland Security 2010 report confirms the need to properly staff the facilities medical care and was not addressing detainees sick requests in a timely manner.<ref>{{Cite web|url=https://www.documentcloud.org/documents/2063672-port-isabel-detention-center-tx-2010-odo.html|title=2010 ODO Inspection - Port Isabel TX SPC|publisher=US Department of Homeland Security|via=documentcloud.org|language=en|access-date=2018-12-19}}</ref>
+
+In July 2010 Tony Hefner, a former guard at Port Isabel, published a memoir about the corruption and human rights abuses he witnessed in the 1980s.<ref>{{cite news |url=https://www.texastribune.org/2010/08/05/detention-center-guard-tells-of-rape-torture/ |work=[[Texas Tribune]] |title=Tony Hefner: The TT Interview |date=August 5, 2010 |first=Kate |last=Ergenbright |quote=The Rev. Tony Hefner has spent years alerting government officials about the abuse and corruption he witnessed while working as a security guard at a Texas detention center for illegal immigrants in the late 1980s. Hefner’s recently published memoir about this experience — Between the Fences: Before Guantanamo, There was the Port Isabel Service Processing Center — details the torture, sexual abuse and drug smuggling he witnessed there and implicates his former co-workers. |archive-url=https://web.archive.org/web/20180705025827/https://www.texastribune.org/2010/08/05/detention-center-guard-tells-of-rape-torture/ |archive-date=July 5, 2018}}</ref><ref name="Hefner2011">{{cite book|first=Tony|last=Hefner|title=Between the Fences: Before Guantanamo, there was the Port Isabel Service Processing Center|url=https://books.google.com/books?id=QnOZZDHyGokC|date=4 January 2011|publisher=Seven Stories Press|isbn=978-1-60980-174-8}}</ref>
+
+In 2015, the [[United States Commission on Civil Rights|U.S. Commission on Civil Rights]] issued a report on the treatment of detainees held in immigration detention centers. The report found Port Isabel to be one of the facilities in the U.S. to be violating the [[Fifth Amendment to the United States Constitution|Fifth Amendment]] rights of immigrants due to the detention conditions being punitive in nature, such as punishing people without the due process protections afforded in criminal proceedings.<ref>{{Cite web|url=https://www.americanprogress.org/issues/immigration/reports/2015/12/18/127769/how-for-profit-companies-are-driving-immigration-detention-policies/|title=How For-Profit Companies Are Driving Immigration Detention Policies|last=Gruberg|first=Sharita|website=Center for American Progress|language=en-US|access-date=2018-12-20}}</ref>
+
+== Family separation ==
+Following the Trump Administration's "zero tolerance" [[Trump administration family separation policy|family separation policy]] in April 2018, the Port Isabel Detention Center was designated ICE's primary family reunification and removal center for adults in their custody.<ref>{{Cite web|url=https://www.hhs.gov/about/news/2018/06/23/zero-tolerance-prosecution-and-family-reunification.html|archive-url=https://web.archive.org/web/20180624055253/https://www.hhs.gov/about/news/2018/06/23/zero-tolerance-prosecution-and-family-reunification.html|url-status=dead|archive-date=June 24, 2018|title=Zero-Tolerance Prosecution and Family Reunification|date=2018-06-23|website=HHS.gov|language=en|access-date=2018-12-20}}</ref> Even though the facility is designated a reunification center, children of detainees are housed at "off-site" locations, making it hard to know how many families have been reunified through ICE.<ref name="beast" /><ref>{{Cite web|url=https://www.sandiegouniontribune.com/news/nation-world/la-na-family-separation-20180625-story.html|title=Border Patrol stops handing over most immigrant parents for prosecution, but won't say when families will be reunified|first1=Molly|last1=Hennessy-Fiske|first2=Jazmine|last2=Ulloa|website=sandiegouniontribune.com|date=26 June 2018 |language=en-US|access-date=2018-12-20}}</ref> Several members of Congress toured the facility in June and met with 10 women who had been separated from their children. Some of them did not know where their children had been transferred to and none had been able to speak with a lawyer. One women said that she was told that her child would be put up for adoption. Rhode Island Representative [[David Cicilline]] said the women were uncontrollably sobbing.<ref name="Carpenter">{{Cite news|url=https://www.thenation.com/article/like-inside-mcallen-border-patrol-facility/|title=What It's Like Inside a Border Patrol Facility Where Families Are Being Separated|last=Carpenter|first=Zoë|date=June 18, 2018|work=The Nation|access-date=June 18, 2018}}</ref>
+
+The [[National Congress of American Indians]] (NCAI) decried the family separation policy calling it "simply immoral and harkens back to a dark period for many Native American families."<ref>{{Cite web|url=http://www.ncai.org/news/articles/2018/06/19/official-statement-of-ncai-president-jefferson-keel-on-the-forced-separation-of-immigrant-families|title=Official Statement of NCAI President Jefferson Keel on the Forced Separation of Immigrant Families|publisher=NCAI|access-date=2018-12-20}}</ref>
+
+== References ==
+{{Reflist}}
+
+{{DEFAULTSORT:Port Isabel Detention Center}}
+[[Category:Buildings and structures in Cameron County, Texas]]
+[[Category:Prisons in Texas]]
+[[Category:Immigration detention centers and prisons in the United States]]
+[[Category:United States Immigration and Customs Enforcement]]

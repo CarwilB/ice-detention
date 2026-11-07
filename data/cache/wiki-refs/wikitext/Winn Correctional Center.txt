@@ -1,0 +1,57 @@
+{{Short description|American men's state prison in Louisiana}}
+{{Use American English|date=August 2025}}
+{{Infobox Prison
+| name           = Winn Correctional Center
+| image          = 
+| location       = 180 CCA Boulevard, [[Winnfield, Louisiana]]
+| coordinates    = 
+| status         = 
+| classification = medium security
+| capacity       = 1538
+| opened         = 1990
+| managed_by     = LaSalle Corrections
+| director       = Keith Deville, Warden
+}}
+
+[[File:Results of an Unannounced Inspection of Winn Correctional Center in Winnfield, Louisiana OIG-26-08-Jun26.pdf|thumb|right|200px|page=11|'Results of an Unannounced Inspection of Winn Correctional Center in Winnfield, Louisiana' - published by [[Office of Inspector General]] June 2, 2026. Multiple violations including food spoilage were found at the facility<ref>{{Cite news |last=Aleaziz |first=Hamed |last2=Washington |first2=Nicholas NehamasReporting from |date=2026-06-03 |title=Louisiana ICE Facility Mistreated Immigrants, Federal Investigators Say |url=https://www.nytimes.com/2026/06/03/us/politics/louisiana-ice-facility-mistreated-immigrants.html |access-date=2026-06-11 |work=The New York Times |language=en-US |issn=0362-4331}}</ref>.]]
+'''Winn Correctional Center''' ('''WCC''') is a [[Incarceration in the United States#Prison systems|state prison]] [[Incarceration in the United States#Gender|for men]], part of the [[Louisiana Department of Corrections]] prison system, located about {{convert|13|mi|km}}<ref name=Bauer1>[[Shane Bauer|Bauer, Shane]]. "[https://www.motherjones.com/politics/2016/06/cca-private-prisons-corrections-corporation-inmates-investigation-bauer My four months as a private prison guard.]" ''[[Mother Jones (magazine)|Mother Jones]]''. July/August 2016. Retrieved on June 27, 2016. "[...]I pull into Winnfield, a hardscrabble town[...]Thirteen miles away, Winn Correctional Center[...]"</ref> southwest of [[Winnfield, Louisiana|Winnfield]] in [[unincorporated area|unincorporated]] [[Winn Parish, Louisiana]].<ref>{{cite web|url=https://www2.census.gov/geo/maps/DC2020/DC20BLK/st22_la/county/c22127_winn/DC20BLK_C22127.pdf|title=2020 CENSUS - CENSUS BLOCK MAP: Winn Parish, LA|publisher=[[U.S. Census Bureau]]|accessdate=2022-08-12|page=20 (PDF p. 21/30)}}</ref> It is within the [[Kisatchie National Forest]].<ref name=Bauer1/>
+
+As of February 2014, Winn is one of several privately operated prisons in the state. The facility is medium-security and currently has the capacity to house 1,538 inmates.<ref>"[https://web.archive.org/web/20150309005926/http://cca.com/facilities/winn-correctional-center Winn Correctional Center]." [[Corrections Corporation of America]]. March 9, 2015. Retrieved on October 10, 2018.</ref><ref name="la">{{cite web|url=http://doc.louisiana.gov/contact/correctional-facilities/winn-correctional-center|title=Louisiana Department of Corrections » Winn Correctional Center|publisher=doc.la.gov|accessdate=2014-02-11|archive-date=2016-06-26|archive-url=https://web.archive.org/web/20160626122841/http://doc.louisiana.gov/contact/correctional-facilities/winn-correctional-center|url-status=dead}}</ref>  Opened in 1990, it was expanded in 1992.<ref name="louisiana">{{cite web|url=http://www.doa.louisiana.gov/opb/pub/fy99/08-corr/08-corr.20.html|title=08-407 Corrections Services - Winn Correctional Center|publisher=doa.louisiana.gov|accessdate=2014-02-11|archive-date=2010-05-28|archive-url=https://web.archive.org/web/20100528083916/http://www.doa.louisiana.gov/opb/pub/fy99/08-corr/08-corr.20.html|url-status=dead}}</ref>
+
+Winn opened as the first privately managed medium-security prison in the United States.<ref name="cca">{{cite web|url=http://cca.com/insidecca/facility-spotlight|title=CCA - Facility Spotlight|publisher=cca.com|accessdate=2014-02-11|archive-date=2014-03-21|archive-url=https://web.archive.org/web/20140321102307/http://cca.com/insidecca/facility-spotlight|url-status=dead}}</ref>  Management of the state-owned facility passed from [[Corrections Corporation of America]] to LaSalle Corrections in mid-2015.<ref>{{Cite web|url=http://www.winnparishenterprise.com/articles/2015/09/23/lasalle-corrections-take-over-winn-correctional-center-welcomed-rotary|title=LaSalle Corrections to take over Winn Correctional Center, welcomed by Rotary {{pipe}} Winn Parish Enterprise}}</ref>
+
+==Aged==
+
+* Adult 18+
+
+==Demographics==
+{{Asof|2016}} 75% of the inmates are black, and 25% of the prisoners are white or of other ethnic groups. Like in other Louisiana prisons, prison gangs are not common and inmates of various races socialize with one another. About 20% of the prisoners at Winn had committed crimes related to recreational drugs.<ref name=Bauer1/>
+
+{{Asof|2016}} women, including some [[single mothers]], make up more than 50% of the prison guards. African-Americans make up the majority of the prison guards<!--From the article: "Like the prisoners, the majority of the COs at Winn are African American. More than half are women, many of them single moms."-->.<ref name=Bauer1/>
+
+==Composition==
+The prison has five units: Ash, Birch, Cypress, Dogwood, and Elm. More difficult to manage prisoners are located in the Ash and Elm units, nicknamed by prisoners as "the projects". Dogwood houses trustees and better behaved prisoners, Cypress serves as the segregation unit, and Birch houses mentally ill, elderly, and physically handicapped prisoners.<ref name=Bauer1/>
+
+==Notable employees==
+* [[Shane Bauer]], ''[[Mother Jones (magazine)|Mother Jones]]'' reporter and former detainee in [[Iran]].<ref>"[http://www.winnparishenterprise.com/articles/2015/03/18/cca-employee-was-undercover-reporter CCA employee was undercover reporter]." ''[[Winn Parish Reporter]]''. Wednesday March 18, 2015. Retrieved on June 27, 2016.</ref> His article for ''Mother Jones'', titled "My Four Months as a Private Prison Guard," exposes conditions at the facility that include violence among inmates, poor medical and mental healthcare for inmates, mismanagement and lack of training for CCA employees.<ref>[http://www.democracynow.org/2016/6/27/my_four_months_as_a_private "My Four Months as a Private Prison Guard": Shane Bauer Goes Undercover to Expose Conditions]. ''[[Democracy Now!]]'' June 27, 2016.</ref> His memoir ''[[American Prison]]'' chronicled these experiences.<ref name=Blakeslee>{{cite news|author=Blakeslee, Nate|url=https://www.nytimes.com/2018/10/01/books/review/shane-bauer-american-prison.html|title=The Dickensian Conditions of Life in a For-Profit Lockup|newspaper=[[The New York Times]]|date=2018-10-01|accessdate=2018-10-10}}</ref>
+
+==References==
+{{Reflist}}
+
+==External links==
+* [https://assets.documentcloud.org/documents/2866449/Mother-Jones-Winn-Information.pdf Letters from CCA and the Government of Louisiana related to the status of the prison]
+
+{{State prisons in Louisiana}}
+{{Authority control}}
+
+{{Coord|31.85049|-92.78100|format=dms|display=title|type:landmark}}
+
+[[Category:Prisons in Louisiana]]
+[[Category:Buildings and structures in Winn Parish, Louisiana]]
+[[Category:Private prisons in the United States]]
+[[Category:CoreCivic]]
+[[Category:Men's prisons]]
+[[Category:1990 establishments in Louisiana]]
+[[Category:Immigration detention centers and prisons in the United States]]
+
+{{US-prison-stub}}

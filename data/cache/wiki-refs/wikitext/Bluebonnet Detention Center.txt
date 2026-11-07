@@ -1,0 +1,48 @@
+{{Short description|Prison in Texas, US}}
+{{Use American English|date=August 2025}}
+{{Infobox prison
+| name            = Bluebonnet Detention Center
+| image           = Bluebonnet Detention Center - aerial 2.jpg
+| alt             = Aerial view of the Bluebonnet Detention Center
+| location        = [[Anson, Texas]]
+| coordinates     = {{coord|32.76765|-99.88808|type:landmark|display=inline,title}}
+| pushpin_map     = USA Texas
+| pushpin_caption = Location in Texas
+| status          = Operational
+| classification  = Dedicated Migrant Detention Center
+| population      = 1044<ref name="ice-detention-fy26">{{Cite web | publisher = U.S. Department of Homeland Security | last = U.S. Immigration and Customs Enforcement | title = ICE Detention Statistics FY 2026 | date = 2026-02-02 | url = https://www.ice.gov/doclib/detention/FY26_detentionStats02022026.xlsx }}</ref>
+| population_date = FY 2026 (YTD)
+| opened          = FY 2020<ref name="ice-detention-fy20">{{Cite web | publisher = U.S. Department of Homeland Security | last = U.S. Immigration and Customs Enforcement | title = ICE Detention Statistics FY 2020 | date = 2020-09-30 | url = https://www.ice.gov/doclib/detention/FY20-detentionstats.xlsx }}</ref>
+}}
+The '''Bluebonnet Detention Center''' is a prison in [[Anson, Texas]], operated by the [[Management and Training Corporation]] (MTC) under contract for [[U.S. Immigration and Customs Enforcement]] (ICE).<ref>{{Cite web |title=Exclusive: Trump administration moved Venezuelan to Texas for possible deportation despite judge's order |author=Luc Cohen |work=Reuters |date=24 April 2025 |access-date=26 April 2025 |url= https://www.reuters.com/world/us/trump-administration-moved-venezuelan-texas-possible-deportation-despite-judges-2025-04-24/ |quote=Bluebonnet Detention Center in Anson, Texas }}</ref>
+
+The 1100-bed {{convert|122,000|sqft}} facility was built in 2010 (as the Texas Midwest/Jones County Detention Center) to house [[Texas Department of Criminal Justice]] prisoners. Immediately after the prison was constructed, the state rescinded the contract, leaving $35 million in bonds unresolved. [[GEO Group]] was in discussions to buy the facility in 2017 to house ICE prisoners, but the deal fell through.<ref>{{cite web|title=Jones County finally has a use for Anson prison as ICE agrees to house men|work=Abilene Reporter-News|author=Timothy Chipp|url=https://www.reporternews.com/story/news/local/big-country/2019/08/28/jones-county-has-use-anson-prison-ice-agrees-house-men/2140663001/|date=28 August 2019|access-date=26 April 2025|quote=Originally, the Texas Department of Criminal Justice was going to use the facility, but the 1,100-bed prison was scrapped from the state's plans just days after construction started.}}</ref><ref name="ts">{{Cite web |title=A Long-Empty Prison Will Soon House Detained Immigrants |author=Heather Claborn |work=Texas Standard |date=2 September 2019 |access-date=26 April 2025 |url= https://www.texasstandard.org/stories/a-long-empty-prison-will-soon-house-detained-immigrants/}}</ref><ref>{{cite web|title=Possible sale of jail facility in Jones County still ongoing|author=Brian Bethel|access-date=26 April 2025|work=Abilene Reporter-News|date=23 May 2017|url=https://www.reporternews.com/story/news/2017/05/23/possible-sale-jail-facility-jones-county-still-ongoing/102075288/|quote=Jones County had planned to house prisoners for the Texas Department of Corrections, but 10 days after the jail facility was built, the state told the county it wasn’t going to need the beds.}}</ref>
+
+A five-year contract for $145 million was signed in 2019 to house ICE detainees by MTC. The contract pays $106 per day per detainee.<ref name="ts" /><ref>{{cite web|title=Obscure ICE facility near Abilene at center of national deportation controversy|work=Abilene Reporter-News|author=Ronald W. Erdrich|date=24 April 2025|access-date=26 April 2025|url=https://www.reporternews.com/story/news/politics/2025/04/24/ansons-bluebonnet-detention-center-had-uncertain-history-before-ice-abilene-texas/83229671007/}}</ref><ref>{{Cite web |title=Empty For A Decade, Bluebonnet Will Detain Immigrants For ICE |author=Heather Claborn |work=KACU 89.5 {{!}} Abilene Public Radio in West Texas |date=2 September 2019 |access-date=26 April 2025 |url= https://www.kacu.org/local-news/2019-09-02/empty-for-a-decade-bluebonnet-will-detain-immigrants-for-ice}}</ref>
+
+==Detained population==
+{{Bar chart
+| title      = Average daily population at Bluebonnet Detention Center<ref name="ice-detention-fy20-fy26">{{Cite web | publisher = U.S. Department of Homeland Security | last = U.S. Immigration and Customs Enforcement | title = ICE Detention Statistics FY 2020 | date = 2020-09-30 | url = https://www.ice.gov/doclib/detention/FY20-detentionstats.xlsx }} Additional fiscal year data: [https://www.ice.gov/doclib/detention/FY21-detentionstats.xlsx FY21], [https://www.ice.gov/doclib/detention/FY22-detentionStats.xlsx FY22], [https://www.ice.gov/doclib/detention/FY23_detentionStats.xlsx FY23], [https://www.ice.gov/doclib/detention/FY24_detentionStats.xlsx FY24], [https://www.ice.gov/doclib/detention/FY25_detentionStats09242025.xlsx FY25], [https://www.ice.gov/doclib/detention/FY26_detentionStats02022026.xlsx FY26].</ref>
+| bar_width  = 35
+| data_max   = 1,097
+| label_type = Fiscal year
+| data_type  = ADP
+| label1     = FY 2020 | data1 = 258
+| label2     = FY 2021 | data2 = 393
+| label3     = FY 2022 | data3 = 389
+| label4     = FY 2023 | data4 = 544
+| label5     = FY 2024 | data5 = 656
+| label6     = FY 2025 | data6 = 972
+| label7     = FY 2026 | data7 = 1,044
+}}
+
+==See also==
+* [[W.M.M. v. Trump]]
+
+==References==
+{{reflist}}
+
+[[Category:Private prisons in the United States]]
+[[Category:Prisons in Texas]]
+[[Category:Immigration detention centers and prisons in the United States]]
+[[Category:Management and Training Corporation]]

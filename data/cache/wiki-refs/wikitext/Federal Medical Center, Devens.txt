@@ -1,0 +1,224 @@
+{{Short description|United States federal prison in Massachusetts}}
+{{Use American English|date=August 2025}}
+{{Infobox prison
+| name           = Federal Medical Center, Devens
+| image          = FMC Devens.jpg
+| image_size     = 275
+| location       = [[Devens, Massachusetts|Devens]], [[Harvard, Massachusetts|Town of Harvard]],<br />[[Worcester County, Massachusetts]]
+| coordinates    = 
+| status         = Operational
+| classification = Administrative facility (with minimum-security prison camp)
+| population     = 1,167 (114 in prison camp)
+| opened         = January 1999
+| closed         = 
+| managed_by     = [[Federal Bureau of Prisons]]
+| warden         = F. J. Bowers
+| website        = https://www.bop.gov/locations/institutions/dev/
+}}
+The '''Federal Medical Center, Devens''' ('''FMC Devens''') is a United States [[federal prison]] in Massachusetts for male inmates requiring specialized or long-term medical or mental health care. It is designated as an administrative facility, which means it has inmates from different security classifications, from white-collar criminals to mobsters and sex offenders.<ref name="bloomberg1">{{cite web|last=Van |first=Bob |url=https://www.bloomberg.com/news/2011-11-03/rajaratnam-said-to-be-assigned-to-massachusetts-medical-prison.html |title=Rajaratnam Said to Be Assigned to Massachusetts Medical Prison |publisher=Bloomberg |date=2011-11-03 |access-date=2013-05-21}}</ref> It is operated by the [[Federal Bureau of Prisons]], a division of the [[United States Department of Justice]]. FMC Devens also has a satellite camp housing minimum-security male inmates.
+
+FMC Devens is located in north-central Massachusetts, approximately {{convert|39|mi|km}} west of Boston, on the grounds of [[Fort Devens]], which occupied the land before it was scaled back in size.<ref>{{cite web|url=http://www.bop.gov/locations/institutions/dev/index.jsp |title=BOP: FMC Devens |publisher=Bop.gov |access-date=2013-05-21}}</ref>
+
+==Facility and services==
+Upon entering FMC Devens, new inmates undergo a month-long admission and orientation program to meet prison staff, acquaint themselves with the facility, and learn the facility's rules and regulations. They are introduced to the prison's inmate count system: prisoners are checked on five times a day. New inmates also receive a physical exam and educational, vocational, and psychological tests. Inmates at Devens are subject to random, unannounced urine and breathalyzer tests, as well as searches for contraband.
+
+FMC Devens has regular onsite specialists in [[cardiology]], [[nephrology]], [[endocrinology]], [[surgery]], [[neurology]] and [[pulmonology]]. Inmates often leave the facility, under supervision by officers of Jet Security, to see outside specialists and for tests and medical procedures not available in the medical center, according to Sandra Howard, the clinical director at FMC Devens.<ref name="bloomberg1"/> There are typically three to six inmates at a time in off-site medical care across civilian hospitals in Massachusetts and southern New Hampshire.<ref>{{Cite web |title=FMC Devens |url=https://www.bop.gov/locations/institutions/dev/ |access-date=2026-02-18 |website=www.bop.gov}}</ref>
+
+Inmates are allowed six visits a month. Physical contact is allowed so long as it is not deemed excessive. An in-house psychology department offers inmates counseling for depression and suicidal ideation, as well as sex-offender and drug-addiction programs. A chaplain offers religious services and counseling, and volunteers in a prisoner visitation service pay visits to inmates who do not receive many visitors. There are adult continuing-education classes and an electronic library where they can read up on new case law and sentencing guidelines. The prison has a recreation area for floor hockey, basketball, and soccer, a hobby craft room, and a music-practice room.<ref>{{cite web|last=Shapiro|first=Eliza|title=Inside Devens Prison: New Home for Dzhokhar Tsarnaev|url=http://www.thedailybeast.com/articles/2013/04/26/inside-devens-prison-new-home-for-dzhokhar-tsarnaev.html|website=[[The Daily Beast]]|publisher=[[Newsweek Media Group]]|location=New York City|access-date=13 May 2013|date=April 26, 2013}}</ref>
+
+==Notable inmates==
+===Current===
+{|class="wikitable sortable"
+!width=13%|Inmate Name
+!width=10%|[https://www.bop.gov/inmateloc/ Register Number]
+!width=5%|Photo
+!width=25%|Status
+!width=52%|Details
+|-
+| style="text-align:center;"| Danny Heinrich
+| style="text-align:center;"| 18854-041
+|
+|Serving a 20-year sentence; scheduled for release on December 6, 2032.
+| Kidnapper, child molester, and murderer. Confessed in 2016 to kidnapping and murdering [[Murder of Jacob Wetterling|Jacob Wetterling]] in Minnesota in 1989, but never charged as part of a deal with the police to lead them to Wetterling's body. Sentenced to 20 years in prison for possession of child pornography.<ref>{{cite web |last1=Lentz |first1=Melissa |title=Danny Heinrich Receives His Sentencing |url=https://www.fox21online.com/news/danny-heinrich-receives-his-sentencing/article_11017a6f-5fd9-5e2b-8047-843e6e329d0c.html |website=Fox21Online |access-date=29 July 2026 |language=en |date=21 November 2016}}</ref>
+|-
+| style="text-align:center;"| [[Victor Orena|Vittorio "Little Vic" Orena]]
+| style="text-align:center;"| 07540-085
+| 
+| Serving a life sentence.
+| Former [[New York City]] mobster who became the acting [[crime boss|boss]] of the [[Colombo crime family]]. Orena is famously known for being the leader of the Orena faction during the Third Colombo War.
+|-
+| style="text-align:center;"| Kent Igleheart
+| style="text-align:center;"| 71250-019
+| 
+| Serving a 20-year sentence;<ref>{{Cite news|url=https://www.ajc.com/news/local/roswell-councilman-gets-years-for-grievous-child-porn-offenses/tBauIy9Djf0rdn61j4IKnO/|title=Ex-Roswell councilman gets 20 years for 'grievous' child porn offenses|work=ajc|access-date=2018-09-15}}</ref> scheduled for release on October 29, 2034.
+| Former [[Roswell, Georgia|Roswell, Georgia]] city councilman. Pleaded guilty to four counts of producing child pornography, one count of receiving child pornography, and one count of possessing child pornography.<ref>{{Cite news|url=https://www.mdjonline.com/neighbor_newspapers/north_fulton/news/former-roswell-city-councilman-kent-igleheart-convicted-of-producing-child/article_0ccd1ab4-f4b5-11e7-b183-8fa178242a73.html|title=Former Roswell City Councilman Kent Igleheart convicted of producing child pornography|last=Staff|first=Neighbor|work=MDJOnline.com|access-date=2018-09-15|language=en}}</ref>
+|-
+| style="text-align:center;" | [[Ed Mangano]]
+| style="text-align:center;"| 89707-053
+| [[File:Ed Mangano.jpg|80px]]
+| Serving a 12-year sentence; scheduled for release on December 4, 2031.
+| Former [[Nassau County Executive]]; sentenced in 2019 for conspiracy to commit federal program bribery, federal program bribery, conspiracy to commit honest services wire fraud, honest services wire fraud and conspiracy to obstruct justice. Reported to prison in September 2022.<ref>{{cite web |url=https://www.newsday.com/long-island/crime/edward-mangano-corruption-prison-surrender-hfdtoz5p |title=Edward Mangano starts 12-year prison sentence for corruption conviction, Federal Bureau of Prisons says |access-date=15 September 2022|work=Newsday|date=September 15, 2022}}</ref>
+|-
+| style="text-align:center;"| [[James Ida]]
+| style="text-align:center;"| 43064-054
+| [[File:James Ida (surveillance photo).jpg|80px]]
+| Serving a life sentence.
+| Former New York mobster and [[consigliere]] for [[Genovese Crime Family]] boss [[Liborio Bellomo]]; convicted in 1997 of murdering Antonio Dilorenzo and Ralph DeSimone and defrauding charities involved in the [[Feast of San Gennaro]].<ref>{{cite news |last1=Hoffman |first1=Jan |date=April 24, 1997 |title=Genovese Family Counselor Is Convicted of Racketeering |work=The New York Times |url=https://www.nytimes.com/1997/04/24/nyregion/genovese-family-counselor-is-convicted-of-racketeering.html |access-date=27 February 2017}}</ref> His application for compassionate release was denied.<ref>{{Cite news |title=United States of America, Appellee, v. Liborio Bellomo, Also Known As Barney, James Ida, Also Knownas Jimmy, Also Known As Little Jimmy, Also Known As Thelittle Guy, and Nicholas Frustaci, Also Known As Nicky Theblond, Defendants-appellants,thomas Cestaro, Also Known As Gigali, Also Known Asgigalese, Thomas Barrett, John Schenone, Also Known As Bigjohn, Anthony Pisapia, Also Known As Tony Waterguns, Alsoknown As Fat Tony, Louis Zacchia, Also Known As Louis Zack,anthony Coiro, Michael Autuori, Leonard Cerami, Louisruggiero, Sr., Colombo Saggese, Also Known As Edward, Josephpisacano, James Pisacano, Albert Setford, Also Known Asspike, Vincent Batista, Also Known As Skippy, Vincentromano, and Michael Generoso, Also Known As Mickey Dimino, Defendants, 176 F.3d 580 (2d Cir. 1999) |url=https://law.justia.com/cases/federal/appellate-courts/F3/176/580/596920/ |archive-url=https://web.archive.org/web/20260102231123/https://law.justia.com/cases/federal/appellate-courts/F3/176/580/596920/ |archive-date=2026-01-02 |access-date=2026-02-18 |work=Justia Law |language=en}}</ref>
+|-
+| style="text-align:center;"| [[David Thai]]
+| style="text-align:center;"| 38263-053
+| 
+| Serving two consecutive life sentences plus concurrent terms of 10 and 20 years.<ref>{{cite web |last1=Russell |first1=Josh |title=Second Circuit denies early release for 1990s NYC Chinatown gang leader 'near death' |url=https://www.courthousenews.com/second-circuit-denies-early-release-for-1990s-nyc-chinatown-gang-leader-near-death/ |website=Courthouse News Service |language=en-us |date=14 January 2026}}</ref>
+| Born Thái Thọ Hoàng; former [[New York City]] crime boss who led the Vietnamese-American gang [[Born to Kill (gang)|Born to Kill]] between 1988 and 1991. In 1992 he and several other Born to Kill members were convicted of racketeering. Thai was also convicted of fourteen other charges: one count of conspiracy to commit murder in aid of racketeering, one count of conspiracy to commit assault with a dangerous weapon in aid of racketeering, eight counts of conspiracy to obstruct commerce by robbery or extortion, two counts of possession of an unregistered firearm and two counts of possession of a firearm without serial numbers.
+|}
+
+=== Former ===
+
+{|class="wikitable sortable"
+|-
+!width=13%|Inmate Name
+!width=10%|[https://www.bop.gov/inmateloc/ Register Number]
+!width=5%|Photo
+!width=25%|Status
+!width=52%|Details
+|-
+| style="text-align:center;"| [[Harold T. Martin III]]
+| style="text-align:center;"| 62332-037
+| 
+| Released from custody on May 24, 2024 after serving 7 years.
+| Former contractor for the National Security Agency; convicted of one count of willful retention of national defense information.<ref>{{cite web |last1=Shane |first1=Scott |title=N.S.A. Contractor Who Hoarded Secrets at Home Is Sentenced to Nine Years in Prison |url=https://www.nytimes.com/2019/07/19/us/politics/hal-martin-nsa-sentence.html?smtyp=cur&smid=tw-nytimesatwar |website=The New York Times |date=19 July 2019}}</ref>
+|-
+| style="text-align:center;"| {{sortname|Richard|Goldberg}}
+| style="text-align:center;"| 14321-052
+| 
+| Released from custody on May 24, 2024 after serving 20 years. Currently awaiting trial for child molestation in [[Long Beach, California]].<ref>{{cite web |last1=Percy |first1=Nathaniel |title=Onetime FBI’s ’10 most wanted’ suspect arrested by Long Beach police on child molestation charges |url=https://www.presstelegram.com/2024/05/31/onetime-fbis-10-most-wanted-suspect-arrested-by-long-beach-police-on-child-molestation-charges/ |website=Press Telegram |access-date=29 July 2026 |date=31 May 2024}}</ref>
+| Serial [[child molester]] and [[FBI Ten Most Wanted Fugitive]] until his capture in 2007; pleaded guilty in 2007 to producing [[child pornography]], including images of himself engaging in sexual acts with underage girls.<ref>{{cite web|title=Tip snares alleged child molester on FBI top 10 list|url=http://www.cnn.com/2007/LAW/05/13/fugitive.arrest/|website=CNN|publisher=Cable News Network, LLC|access-date=1 August 2015|date=May 13, 2007}}</ref><ref>{{cite news|last1=Glover|first1=Scott|title=Ex-fugitive gets 20 years in molestation|url=https://www.latimes.com/archives/la-xpm-2007-dec-11-me-molester11-story.html|access-date=1 August 2015|work=Los Angeles Times|date=December 11, 2007}}</ref>
+|-
+| style="text-align:center;"| {{sortname|John|Franzese}}
+| style="text-align:center;"| 70022-158
+| [[File:John Franzese mug shot (cropped).jpg|80px]]
+| Released from custody on June 23, 2017, after serving 8 years.
+| Former [[Underboss]] of the [[Colombo crime family]] in New York City; convicted of [[racketeering]] [[conspiracy (crime)|conspiracy]] in 2011 for extorting Manhattan strip clubs; suspected in numerous Mafia-related murders.<ref>{{cite web|url=https://huffingtonpost.com/2013/01/16/john-sonny-franzeses-sentence-upheld-court-95-year-old-colombo-_n_2488996.html |title=John 'Sonny' Franzese's Sentence Upheld By Court; 95-Year-Old Colombo Family Underboss To Serve 8 Years |publisher=Huffingtonpost.com |date=2013-01-16 |last=Mathias |first=Christopher |access-date=2013-05-21}}</ref><ref>{{cite web|url=http://www.nydailynews.com/news/crime/colombo-mob-underboss-john-franzese-convicted-shaking-hustler-penthouse-strip-joints-article-1.465091 |title=Colombo mob underboss John Franzese convicted of shaking down Hustler and Penthouse strip joints |publisher=NY Daily News |last=Marzulli |first=John |date=2010-07-07 |access-date=2013-05-21}}</ref> He was the oldest federal inmate in the United States and the only centenarian in federal custody at the time of his release on June 23, 2017.<ref>{{Cite news|date=June 23, 2017|title=‘Sonny’ Franzese, oldest federal prisoner, is freed at 100|work=[[Associated Press]]|url=https://apnews.com/article/f1a075a87c4d4a6d89952518538a14bd|url-status=live|access-date=March 20, 2021|archive-date=March 20, 2021|archive-url=https://web.archive.org/web/20210320004829/https://apnews.com/article/f1a075a87c4d4a6d89952518538a14bd}}</ref><ref name="newsday1">{{cite web |url=https://www.newsday.com/long-island/crime/sonny-franzese-released-from-prison-o41657 |title=Newsday.com |publisher=Newsday.com |date=June 23, 2017 |access-date=June 27, 2017 |archive-url=https://web.archive.org/web/20170808210646/http://www.newsday.com/long-island/crime/sonny-franzese-released-from-prison-1.13756776?view=print |archive-date=August 8, 2017 |url-status=live }}</ref><ref>{{cite web |last=Marzulli |first=John |url=http://www.nydailynews.com/news/crime/98-year-old-inmate-prison-funds-targeted-feds-article-1.2464243 |title=98-year-old inmate's prison funds targeted by feds |publisher=NY Daily News |date=December 13, 2015 |access-date=June 27, 2017 |archive-url=https://web.archive.org/web/20170623230451/http://www.nydailynews.com/news/crime/98-year-old-inmate-prison-funds-targeted-feds-article-1.2464243 |archive-date=June 23, 2017 |url-status=live }}</ref><ref name="nydailynews1">{{cite web |last=Marzulli |first=John |url=http://www.nydailynews.com/new-york/colombo-mobster-john-franzese-99-denied-compassionate-release-article-1.2697126 |title=Colombo mobster John Franzese, 99, denied compassionate release |publisher=NY Daily News |date=July 2, 2016 |access-date=June 27, 2017 |archive-url=https://web.archive.org/web/20170627214531/http://www.nydailynews.com/new-york/colombo-mobster-john-franzese-99-denied-compassionate-release-article-1.2697126 |archive-date=June 27, 2017 |url-status=live}}</ref>
+|-
+| style="text-align:center;"| [[Dzhokhar Tsarnaev]]
+| style="text-align:center;"| 95079-038
+| [[File:DzhokharATsarnaev.jpg|80px]]
+| Transferred to [[ADX Florence]].
+Sentenced to death on June 24, 2015.<ref>{{cite web|url=http://www.cbsnews.com/news/boston-marathon-bomber-dzhokhar-tsarnaev-transferred-to-colorado-prison/ |title=Boston Marathon bomber Dzhokhar Tsarnaev moved to Colorado prison |publisher=CBS|access-date=25 Jun 2015|date=June 25, 2015}}</ref>
+| U.S. citizen originally from [[Kyrgyzstan]]; convicted of committing the [[Boston Marathon bombing]] with his brother [[Tamerlan Tsarnaev]] in 2013, which killed 3 people and injured over 200; Tamerlan was subsequently killed in a shootout with police.<ref>{{cite news|last=Brumfield|first=Ben|title=Boston bombing suspect moves to federal prison hospital|url=http://www.cnn.com/2013/04/26/us/boston-attack/index.html?hpt=hp_t2|publisher=CNN|access-date=26 April 2013|date=April 26, 2013}}</ref>
+|-
+| style="text-align:center;"| {{sortname|John|Riggi|Giovanni Riggi}}
+| style="text-align:center;"| 12317-016
+| 
+| Released from custody in November 2012 after serving 22 years.
+| Former [[crime boss|Boss]] of the [[DeCavalcante crime family]] in New Jersey; convicted of [[racketeering]] in 1990; pleaded guilty to [[extortion]] in 1992, and to [[conspiracy (crime)|conspiracy]] in 2006 in connection with the 1992 murder of acting Boss [[John D'Amato]].<ref>{{cite web|url=https://apnews.com/e7b55183b37e917334bb7991a5192291 |title=Union Boss Sentenced to 12 Years |publisher=Apnewsarchive.com |date=1992-07-11 |access-date=2013-05-21}}</ref><ref>{{cite web|url=https://cosa-nostra-news.blogspot.com/2012/05/why-decavalcantes-hit-acting-boss.html |title=Why Decavalcantes Hit Acting Boss 'Johnny Boy' |publisher=Cosa Nostra News |date=2012-05-22 |access-date=2013-05-21}}</ref>
+|-
+| style="text-align:center;"| {{sortname|Roger|Stockham|Dearborn mosque bombing plot}}
+| style="text-align:center;"| 75098-012
+| 
+| Released from custody in November 2012 after serving 1 year.
+| Pleaded [[insanity defense|guilty but mentally ill]] in 2012 for plotting to bomb the [[Islamic Center of America]] in Dearborn, Michigan, the largest [[mosque]] in North America, in 2011.<ref>{{cite web|url=http://detroit.cbslocal.com/2012/04/28/man-accused-of-mosque-threat-takes-plea-deal/ |title=Man Accused Of Mosque Threat Takes Plea Deal |publisher=CBS Detroit |date=2012-04-28 |access-date=2013-05-21}}</ref>
+|-
+| style="text-align:center;"| {{sortname|Daniel|Van Pelt}}
+| style="text-align:center;"| 39125-050
+| 
+| Released from custody in December 2013 after serving 41 months.
+| Member of the [[New Jersey State Assembly]] from 2008 to 2009; arrested during [[Operation Bid Rig]] in 2009; convicted of [[bribery]] in 2010 for accepting $10,000 to provide environmental permits for a development project.<ref>{{cite web|url=http://newyork.cbslocal.com/2010/11/19/van-pelt-sentenced-in-new-jersey-corruption-case/ |title=Daniel Van Pelt Sentenced For bribery and attempted extortion In New Jersey Corruption Case |work=CBS News |date=2010-11-19 |access-date=2013-05-21}}</ref>
+|-
+| style="text-align:center;"| Andrey C. Hicks
+| style="text-align:center;"| 21236-055
+| 
+| Released from custody in September 2014.
+| Found guilty of wire fraud totaling $2,375,204.06; victims include NBA star [[Kris Humphries]].<ref>{{cite web|url=http://www.businessinsider.com/andrey-hicks-sentenced-to-prison-2013-3/ |title=The Fake Hedge Fund Manager Who Bilked Kris Humphries Got Sentenced To 3 Years In Prison |publisher=Business Insider |date=2013-03-20}}</ref><ref>{{cite web|url=https://www.sec.gov/litigation/litreleases/2011/lr22141.htm |title=Securities and Exchange Commission v. Andrey C. Hicks}}</ref>
+|-
+| style="text-align:center;"| [[Rajat Gupta]]
+| style="text-align:center;"| 65892-054
+| [[File:Rajat Kumar Gupta - World Economic Forum Annual Meeting Davos 2010 crop.jpg|80px]]
+| Released from custody in March 2016 after serving 2 years.
+| Former director of [[Goldman Sachs]]; convicted in 2012 of insider trading for sharing inside financial information with hedge fund manager Raj Rajaratnam.<ref>{{cite web|url=https://www.reuters.com/article/us-usa-insidertrading-gupta-idUSKBN0ES1WE20140617|title=Ex-Goldman director goes to prison, still owes $13.9 million fine|last=Ax|first=Joseph|author2=Jonathan Stempel |date=17 June 2014|work=Reuters|access-date=18 June 2014}}</ref>
+|-
+| style="text-align:center;"| Damion 'D-Roc' Butler
+| style="text-align:center;"| 52178-054
+| 
+| Released from custody on September 16, 2008.
+| Former manager to [[The Notorious B.I.G.|Biggie Smalls]] and [[Lil' Kim]].<ref>{{cite web |last1=Ali |first1=Rasha |title=Biggie's longtime friend D-Roc on why he 'trusted' Netflix doc's filmmaker with unseen footage |url=https://www.usatoday.com/story/entertainment/music/2021/03/01/netflix-biggie-doc-why-d-roc-trusted-director-emmett-malloy-unseen-footage/6850388002/ |website=USA TODAY |access-date=29 July 2026}}</ref> Plead guilty to firing a handgun in a 2001 radio station shootout between Lil' Kim's entourage and rap rivals [[Capone-N-Noreaga]].<ref>{{cite web |title=A year and a day for Lil' Kim |url=https://www.cnn.com/2005/LAW/07/07/ctv.lilkim/ |website=www.cnn.com |access-date=29 July 2026 |language=en}}</ref>
+|-
+| style="text-align:center;"| [[Lee Mroszak]]
+| style="text-align:center;"| 71424-053
+| [[File:Lee Mroszak (Crazy Cabbie).jpg|80px]]
+| Released from custody on July 27, 2006.
+| Lee "Crazy Cabbie" Mroszak was a DJ and former regular guest on ''[[The Howard Stern Show]]''. Mroszak was sentenced to one year in prison for tax evasion after "gloating" about not paying his taxes on television.<ref>{{cite web |title=DJ sentenced to one year in prison |url=https://www.latimes.com/archives/la-xpm-2005-may-17-et-quick17.3-story.html |website=Los Angeles Times |access-date=29 July 2026 |date=17 May 2005}}</ref>
+|-
+| style="text-align:center;"| {{sortname|Raj|Rajaratnam}}
+| style="text-align:center;"| 62785-054
+| 
+|Served an 11-year sentence; released in 2021 to home confinement.
+|Former manager of the now-defunct [[Galleon Group]]; convicted in 2011 of [[conspiracy (crime)|conspiracy]] and [[fraud]] for masterminding a $64 million [[insider trading]] scheme from 2007 to 2009; the story was featured on the [[CNBC]] television program ''[[American Greed]]''.<ref>{{cite web|last=Smith|first=Aaron|date=2011-10-13|title=Raj Rajaratnam sentenced to 11 years for insider trading|url=https://money.cnn.com/2011/10/13/news/companies/insider_trading_raj_rajaratnam/index.htm|archive-url=https://web.archive.org/web/20111014054810/http://money.cnn.com/2011/10/13/news/companies/insider_trading_raj_rajaratnam/index.htm|url-status=dead|archive-date=October 14, 2011|access-date=2013-05-21|publisher=Money.cnn.com}}</ref><ref>{{cite web|title=Prosecutors: Gupta wasn't Rajaratnam's only insider|url=http://www.crainsnewyork.com/article/20120208/FINANCE/120209892|access-date=2013-05-21|publisher=Crainsnewyork.com}}</ref>
+|-
+| style="text-align:center;"| [[John Gambino]]
+| style="text-align:center;"| 48742-079
+| [[File:Giovanni „John“ Gambino (Mugshot).png|80px]]
+| Released from custody in September 2006.<ref>{{cite web |title=Ex-governor King in intensive care - The Boston Globe |url=http://www.boston.com/news/local/massachusetts/articles/2006/09/12/ex_governor_king_in_intensive_care/ |website=www.boston.com |access-date=29 July 2026 |language=en}}</ref>
+| [[John Gambino|Giovanni "John" Gambino]] was arrested after completing a prison term to be extradited to face drug charges in Italy. He was freed when a federal judge overruled the decision. The judge ruled that Gambino already served a 15-year sentence in the US for drug trafficking and murder and can't be tried again for the same charges in Italy.
+|-
+| style="text-align:center;"| [[Participants in the Madoff investment scandal#Peter B. Madoff|Peter Madoff]]
+| style="text-align:center;"| 67118-054
+| 
+|Served a ten-year sentence; released on August 13, 2020.<ref>{{cite web |title=Ponzi-scheme collaborator Peter Madoff released from federal custody |url=https://www.jns.org/news/ponzi-scheme-collaborator-peter-madoff-released-from-federal-custody |website=Jerusalem News Syndicate |access-date=29 July 2026 |date=14 August 2020}}</ref>
+|Brother of Ponzi scheme mastermind Bernard Madoff; pleaded guilty in 2012 to conspiracy to commit securities fraud and falsifying investment records for covering up and distributing funds acquired from the $65 billion scheme.
+|-
+| style="text-align:center;"| [[Anthony Weiner]]
+| style="text-align:center;"| 79112-054
+| [[File:Anthonyweiner.jpg|80px]]
+| Served 15 months of a 21-month sentence.<ref>{{cite web | url=https://www.washingtonpost.com/national/anthony-weiner-set-for-prison-stint-for-sexting-conviction/2017/11/06/b63ab546-c2b2-11e7-9922-4151f5ca6168_story.html | archive-url=https://web.archive.org/web/20171106093722/https://www.washingtonpost.com/national/anthony-weiner-set-for-prison-stint-for-sexting-conviction/2017/11/06/b63ab546-c2b2-11e7-9922-4151f5ca6168_story.html | url-status=dead | archive-date=November 6, 2017 |title=Anthony Weiner set for prison stint for sexting conviction | work = The Washington Post | access-date=6 November 2017 | date=November 6, 2017}}</ref> Released from custody on May 14, 2019.
+| Former American congressman from New York. Sentenced to 21 months in prison for [[Anthony Weiner sexting scandals|exchanging sexually explicit text messages]] with a 15-year-old girl.<ref>{{cite web |title=Anthony Weiner jailed for 21 months for sexting underage girl |url=https://www.bbc.com/news/world-us-canada-41391640 |website=www.bbc.com |access-date=29 July 2026 |date=25 September 2017}}</ref> Released to a New York Residential Reentry Management facility on February 17, 2019.
+|-
+| style="text-align:center;"| [[Kristian Saucier]]
+| style="text-align:center;"| 21868-052
+| [[File:Kristian Saucier.jpg|80px]]
+|Served a 12-month sentence; released from custody on October 10, 2017.
+|Former [[United States Navy|Navy]] sailor charged with unlawful retention of national defense information and [[obstruction of justice]] after photographing classified areas inside a nuclear submarine. Pardoned by President [[Donald Trump]] in 2018.<ref>{{cite web |last1=Lucas |first1=Ryan |title=Trump Pardons Ex-Navy Sailor Sentenced For Photos Of Submarine |url=https://www.npr.org/2018/03/09/592440282/trump-pardons-ex-navy-sailor-sentenced-for-photos-of-submarine |website=NPR |access-date=29 July 2026 |language=en |date=9 March 2018}}</ref>
+|-
+| style="text-align:center;"| [[Steven Hoffenberg]]
+| style="text-align:center;"| 35601-054
+| [[File:Steven Hoffenberg 1962.jpg|80px]]
+|Served 18 years of a 20-year sentence; released from custody on October 11, 2013.
+|Former associate of [[Jeffrey Epstein]] convicted in 1997 for investment fraud.<ref>{{cite web |title=Jeffrey Epstein's mentor — who once ran a Ponzi scheme — was found dead. He was 77 |url=https://www.npr.org/2022/08/26/1119746511/jeffrey-epstein-mentor-steven-hoffenberg-dead |website=NPR |access-date=29 July 2026 |language=en |date=26 August 2022}}</ref>
+|-
+| style="text-align:center;"| {{sortname|Frank|LoCascio|Frank LoCascio}}
+| style="text-align:center;"| 36746-053
+| [[File:Frank Locascio.jpg|80px]]
+| Died on October 1, 2021 while serving a life sentence.<ref>[https://www.nydailynews.com/new-york/ny-gambino-underboss-frank-locascio-john-gotti-dead-20211005-2fddomao3fdfhnv2xsskbudb6m-story.html Former Gambino underboss Frank LoCascio dead in prison at 89] ''[[New York Daily News]]'' (October 6, 2021)</ref>
+| Former acting [[Underboss]] of the [[Gambino crime family]] in New York City under Boss [[John Gotti]]; convicted of [[racketeering]] in 1992 for ordering one murder, and directing criminal activities including illegal gambling, [[obstruction of justice]] and [[tax fraud]].<ref>{{cite web |author=Arnold H. Lubasch |url=https://www.nytimes.com/1992/06/24/nyregion/gotti-sentenced-to-life-in-prison-without-the-possibility-of-parole.html |title=Gotti Sentenced to Life in Prison Without the Possibility of Parole |work=New York Times |date=1992-06-24 |access-date=2013-05-21}}</ref>
+|-
+| style="text-align:center;" | [[Nicholas Cosmo]]
+| style="text-align:center;"| 49193-053
+| 
+|Transferred to [[MDC Brooklyn]].
+Serving a 25-year sentence; scheduled for release on November 18, 2030.
+| Pleaded guilty to [[fraud]] for stealing over $365 million from thousands of investors during a 5-year [[Ponzi scheme]]; known as the "Mini-Madoff;" Cosmo's story was featured on the [[CNBC]] television program ''[[American Greed]]''.<ref>{{cite news|url=https://huffingtonpost.com/2011/10/14/nicholas-cosmo-mini-madof_n_1011330.html |title=Nicholas Cosmo, 'Mini Madoff' Sentenced To 25 Years In Prison For Ponzi Scheme |publisher=Huffingtonpost.com |date= 2011-10-14|access-date=2012-11-01 |first=Jillian |last=Berman}}</ref><ref>{{cite web|url=https://www.cnbc.com/id/45555973 |title=American Greed: The $400 Million Rip-Off |publisher=CNBC |date=2009-01-23 |access-date=2012-11-01}}{{dead link|date=November 2024|bot=medic}}{{cbignore|bot=medic}}</ref>
+|}
+
+==See also==
+* [[List of United States federal prisons]]
+* [[Federal Bureau of Prisons]]
+* [[Incarceration in the United States]]
+{{Portal bar|United States|Politics}}
+
+==References==
+{{Reflist}}
+
+==External links==
+* [https://www.bop.gov/locations/institutions/dev/ FMC Devens] - official website
+
+{{Hospitals in Massachusetts}}
+{{Federal Bureau of Prisons}}
+{{Coord|42|31|32|N|71|37|16|W|region:US-MA_type:landmark|display=title}}
+
+[[Category:1999 establishments in Massachusetts]]
+[[Category:Buildings and structures in Harvard, Massachusetts]]
+[[Category:Buildings of the United States government in Massachusetts]]
+[[Category:Federal Bureau of Prisons Administrative Facilities|Devens]]
+[[Category:Prisons in Massachusetts|Devens]]
+[[Category:Prison hospitals]]
+[[Category:Prisons completed in the 1990s]]

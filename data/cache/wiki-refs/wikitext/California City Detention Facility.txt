@@ -1,0 +1,52 @@
+{{Short description|Secure facility in the United States}}
+{{Use American English|date=August 2025}}
+{{Use mdy dates|date=December 2022}}
+{{Infobox Prison
+| name            = California City Immigration Processing Center
+
+| image           = File:California City Correctional Center (14192903524).jpg
+| caption         = California City Correctional Facility, May 2014
+| location        = 22844 Virginia Blvd <br> [[California City, California]]
+| coordinates     = 
+| status          = Operational
+| classification  = [[Immigration detention in the United States|Immigration detention center]]
+| capacity        = 2,560
+| population      = 
+| population_date = 
+| opened          = Built in 1998, an Immigration Detention Facility since 2025.
+| closed          = 
+| managed_by      = [[CoreCivic]] under contract of the Federal Government
+| director        = 
+}}
+
+The '''California City Detention Facility''', also known as the '''California City Immigration Processing Center''', is an [[United States Immigration and Customs Enforcement|ICE]] detention center located in the Mojave Desert.<ref>{{cite web |title=California City Detention Facility {{!}} ICE |url=https://www.ice.gov/detain/detention-facilities/california-city-detention-facility |website=www.ice.gov |access-date=4 April 2026 |language=en}}</ref> The private prison corporation [[CoreCivic]] initially built the '''California City Correctional Facility''' at the site and has been under contract with the federal government since 2025 to detain both immigrant women and men. The facility was also formerly staffed and operated by the [[California Department of Corrections and Rehabilitation]] as a men's  level II (low-medium) security prison.
+
+== Location ==
+It is located in the [[Mojave Desert]] of [[California]] about 100 miles (160km) north-east of [[Los Angeles]] and 75 miles (120km) east of [[Bakersfield]].
+
+== History ==
+The California City Correctional Facility, California's first, large-scale private prison, was built on speculation, without any customer contract to fill it. Construction was completed in 1998 for a cost of $100 million.<ref>[https://www.csmonitor.com/1998/0721/072198.us.us.1.html "Private Prisons, Public Doubts"], ''[[The Christian Science Monitor]]'', Daniel B. Wood, July 21, 1998. Retrieved September 25, 2019.</ref> Beginning in 2006, it housed federal inmates for the [[U.S. Marshals Service]] and [[U.S. Immigration and Customs Enforcement]]. Until 2013, the federal contract included  daily transportation to the [[San Diego County Superior Court]] and [[Southern Nevada Correctional Center]], and as-needed to [[Justice Prisoner and Alien Transportation System|JPATS]]-[[Victorville]] ("Con Air").<ref name="bedell">{{cite news|last1=Bedell|first1=Christine|title=Cal City prison to house state inmates|url=http://www.bakersfield.com/news/2013/10/26/cal-city-prison-to-house-state-inmates.html|accessdate=21 August 2016|publisher=Bakersfield.com|date=25 October 2013}}</ref><ref name="doj2">{{Cite web |title=doj_mod_2 |author= |publisher=cdn.muckrock.com |date=2011 |access-date=7 August 2020 |url= https://cdn.muckrock.com/foia_files/2015/10/14/DOJ_Modification_No._2.pdf}}</ref><ref name="odt10">{{Cite web |title=Detention Services - Operational Contract - California City |author= |publisher=cdn.muckrock.com |date=2010 |access-date=7 August 2020 |url= https://cdn.muckrock.com/foia_files/2015/10/14/DOJ_Agreement_No._ODT-10-0002.pdf}}</ref>
+
+In response to a federal order to reduce overcrowding at the state's prison facilities, the California Department of Corrections and Rehabilitation started leasing the facility in 2013 for $28.5 million yearly.<ref name="bedell"/><ref>{{cite web|publisher=California Department of Corrections and Rehabilitation |title=California City Correctional Facility (CAC) |url=https://www.cdcr.ca.gov/facility-locator/cac/ |accessdate=2 May 2020}}</ref> Former guards, previously privately contracted, transferred to become state correctional officers after eight weeks of training.<ref name="bedell"/> CAC was the only CDCR state prison under a lease arrangement. All inmates were moved out by November 2023.<ref>{{Cite news |last=Elliott |first=Claudia |date=2023-11-19 |title=State removes all inmates from Cal City prison, remaining staff working to close facility |url=https://www.bakersfield.com/news/state-removes-all-inmates-from-cal-city-prison-remaining-staff-working-to-close-facility/article_df159a52-8670-11ee-b1f7-db87ce7a3737.html |access-date=2023-11-21 |work=The Bakersfield Californian |language=en}}</ref> The state terminated its lease in March 2024.<ref>{{Cite news |last=Schlepp |first=Travis |date=2022-12-08 |title=California to close Riverside County prison, deactivate other facilities |url=https://ktla.com/news/local-news/california-to-close-riverside-county-prison-deactivate-other-facilities/ |access-date=2022-12-08 |work=KTLA |language=en-US}}</ref>
+
+=== Immigration Detention Facility ===
+In 2025, it was opened as California's largest immigrant detention facility. Marquette Hawkins, [[California City]] mayor, said the city was exploring options to address violations, including possible fines, because CoreCivic did not have the proper permits or business license to operate the facility upon its opening.<ref>{{cite news |last1=Uranga |first1=Rachel |date=29 September 2025 |title=Immigrants decry conditions at former prison, ICE's largest detention center in California |url=https://www.latimes.com/california/story/2025-09-29/detainees-protest-at-californias-largest-and-newest-immigration-detention-center |archive-url=https://archive.today/20250930112254/https://www.latimes.com/california/story/2025-09-29/detainees-protest-at-californias-largest-and-newest-immigration-detention-center |archive-date=30 September 2025 |newspaper=[[Los Angeles Times]]}}</ref><ref>{{cite news |last1=Levin |first1=Sam |date=27 September 2025 |title=‘Hell on earth’: immigrants held in new California detention facility beg for help |url=https://www.theguardian.com/us-news/2025/sep/27/immigrants-california-detention-facility |work=[[The Guardian]]}}</ref>
+
+According to California Attorney General [[Rob Bonta]], the inspection by the California Department of Justice in November 2025 confirmed serious problems with conditions at the facility and a lack of adequate medical care. In December 2025, he wrote to Homeland Security about the facility's dangerous and inadequate living conditions. In January 2026, U.S. Senators [[Alex Padilla]] and [[Adam Schiff]] also decried poor conditions and the inadequacy of medical care.<ref>{{cite news |last1=Mejia |first1=Brittny |last2=Vives |first2=Ruben  |date=20 January 2026 |title=U.S. senators tour California City ICE facility, decry conditions and inadequate medical care |url=https://www.latimes.com/california/story/2026-01-20/u-s-senators-tour-california-city-detention-center-decry-conditions-inadequate-medical-care|newspaper=[[Los Angeles Times]]}}</ref> 
+
+Immigrants at the site launched a boycott in June 2026, alleging commissary [[price gouging]], as an 8-ounce jar of instant coffee costs $18 and a box of 40 tampons costs nearly $21. Volunteers are paid US$1 per day for cooking and cleaning.<ref>{{cite news |last1=Castillo |first1=Andrea|date=1 July 2026 |title=Inside the California ICE detention boycott over $18 coffee grounds, $21 tampon boxes |url=https://www.latimes.com/politics/story/2026-07-01/california-immigrant-detainees-boycott-over-high-commissary-prices|newspaper=[[Los Angeles Times]]}}</ref> CoreCivic sold the facility to the [[U.S. Department of Homeland Security]] in 2026.<ref>{{Cite news |last=Duara |first=Wendy Fry, Nigel |date=2026-07-06 |title=Private prison company sells two of California’s immigrant detention centers to the feds |url=https://calmatters.org/justice/2026/07/corecivic-sells-ice-detention-centers/ |work=CalMatters |language=en-US}}</ref>
+
+==References==
+{{reflist}}
+
+{{coord|35.152846|-117.859225|format=dms|display=title|type:landmark}}
+
+{{CoreCivic Facilities}}
+
+{{DEFAULTSORT:California City Correctional Facility}}
+[[Category:Buildings and structures in Kern County, California]]
+[[Category:CoreCivic]]
+[[Category:2006 establishments in California]]
+[[Category:California City, California]]
+[[Category:Prisons completed in the 2000s]]
+[[Category:Immigration detention centers and prisons in the United States]]

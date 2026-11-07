@@ -1,0 +1,35 @@
+{{Short description|Men's prison in Raymondville, Texas}}
+{{Use American English|date=August 2025}}
+{{Infobox Prison
+| name           = Willacy County Regional Detention Center
+| image          = 
+| location       = 1371 Industrial Drive <br> [[Raymondville, Texas]]
+| coordinates    = 
+| status         = open
+| classification = 
+| capacity       = 586
+| opened         = 2003
+| closed         = 
+| managed_by     = 
+| director       = 
+}}
+The '''Willacy County Regional Detention Center''' aka the '''Willacy Detention Center''' is a prison for men located in [[Raymondville, Texas|Raymondville]], [[Willacy County, Texas]], formerly operated by [[Management and Training Corporation]] (MTC) under contract with the [[U.S. Marshal Service]].
+
+The prison was originally built in 2003 and has an official capacity of 586 federal detainees.<ref>{{cite web|title=Willacy County Regional Detention Center|url=http://www.mtctrains.com/sites/default/files/Willacy1_Fact_Sheet.pdf|website=Management and Training Corporation|accessdate=30 July 2016}}</ref>
+
+The federal contract with MTC ended in April 2022 due to [[Executive Order 14006]], leading to a temporary closure of the facility. The country considered operating the facility by itself, which would have been permitted under federal restrictions.<ref>[https://www.kurv.com/willacy-county-scrambling-to-save-federal-prison/ Willacy County Scrambling To Save Federal Prison], ''[[KURV]]'', July 30, 2021. Retrieved July 30, 2021.</ref> In October 2022, it was announced that neighboring [[Hidalgo_County,_Texas|Hidalgo County]] would rent the facility in a 50-year agreement, due to overcrowding issues in Hidalgo County jail.<ref>{{cite news|title=
+Leasing agreement signed for Hidalgo County to rent out Willacy County Detention Center|url=https://www.krgv.com/news/leasing-agreement-signed-for-hidalgo-county-to-rent-out-willacy-county-detention-center/|accessdate=29 April 2023|publisher=KRGV|date=1 November 2022}}</ref>
+
+Hidalgo County assumed an annual rental cost of $3 million and contracted LaSalle Corrections to run the facility for $13.9 million per year, a number set to increase annually over the eight-year contract.<ref name=":0">{{Cite web |last=Arévalo |first=Dina |date=2024-08-23 |title=Projected jail costs remain high as Hidalgo County mulls budget |url=https://myrgv.com/local-news/2024/08/23/projected-jail-costs-remain-high-as-hidalgo-county-mulls-budget/ |access-date=2026-05-23 |work=MyRGV.com}}</ref> LaSalle was paid for operations in 2023, even though the facility was empty.<ref name=":0" /> Transfers of Hidalgo County inmates did not begin until July 26, 2024.<ref name=":0" />
+
+This facility is adjacent to two other private prison sites:  the [[Willacy County Correctional Center]], formerly operated by the [[Management and Training Corporation]] for the federal government and closed in 2015, and the [[Willacy County State Jail]], operated by the [[Corrections Corporation of America]] through August 2017, under contract with the state of Texas, and subsequently by the LaSalle Corrections corporation.<ref>{{cite news|last1=Tyx|first1=Daniel Blue|title=Goodbye to Tent City|url=https://www.texasobserver.org/south-texas-prison-riot-willacy-county-economic-future/|accessdate=30 July 2016|publisher=Texas Observer|date=26 March 2015}}</ref>
+==References==
+{{reflist}}
+
+{{coord|26.470818|-97.758837|format=dms|display=title|type:landmark}}
+
+[[Category:Prisons in Texas]]
+[[Category:Private prisons in the United States]]
+[[Category:Buildings and structures in Willacy County, Texas]]
+[[Category:Management and Training Corporation]]
+[[Category:2003 establishments in Texas]]

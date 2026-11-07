@@ -1,0 +1,28 @@
+{{Short description|Jail in California, United States}}
+{{pp-semi-indef}}
+{{Use American English|date=August 2025}}
+[[Image:Sacramento County Jail.jpg|thumb|right|240px|Sacramento County Jail]]
+[[File:1984 photo of the Sacramento County Sheriff's Jail (demolished in 1989).jpg|thumb|1984 photograph of the Sacramento County Sheriff's Jail, which was demolished in 1989]]
+The '''Sacramento County Jail''' is one of the [[county jail]]s for the [[Sacramento County, California|Sacramento County]] area of the US State of [[California]], serviced by the [[Sacramento County Sheriff's Department]]. It is located on 651 I Street, approximately 100 meters from [[Downtown Commons]]. Completed in 1989,<ref>{{cite web |url=https://www.sacsheriff.com/documents/Strategies%20for%20Success%20web.pdf |title=Strategies for Success web.pdf |date=2013 |website=Sacramento County Sheriff's Department |accessdate=December 29, 2022}}</ref> the jail complex includes the '''Lorenzo Patiño Hall of Justice''' of the [[Sacramento County Superior Court]].<ref>{{cite web |url=https://www.saccourt.ca.gov/locations/jail.aspx |title=Lorenzo Patiño Hall of Justice: Sacramento Superior Court |website=Superior Court of California - County of Sacramento |accessdate=December 29, 2022}}</ref> The jail replaces the '''Sacramento County Sheriff's Jail''', formerly located at 620 I Street, which was demolished after the completion of this complex in 1989.<ref>{{cite web |url=https://www.sacbee.com/news/local/history/article255625571.html |title=Historic photos show inside of Sacramento CA Main Jail |date=November 10, 2021 |website=The Sacramento Bee |first1=Nathaniel |last1=Levine |accessdate=December 29, 2022}}</ref>
+
+The jail has been operating under a federal [[consent decree]] since 1993.{{cn|date=December 2022}}
+
+== Famous inmates ==
+*[[Theodore Kaczynski]], Unabomber
+*[[Eric McDavid]], environmental activist and anarchist
+*[[Dorothea Puente]], American serial killer
+*[[Nikolay Soltys]], Ukrainian-American spree killer
+
+==References==
+<references />
+
+{{coord|38|34|59|N|121|29|51|W|scale:1000|display=title}}
+
+[[Category:Jails in California]]
+[[Category:Buildings and structures in Sacramento, California]]
+
+{{California-struct-stub}}
+{{US-prison-stub}}
+{{SacramentoCA-stub}}
+
+[[sv:Sacramento County Jail]]

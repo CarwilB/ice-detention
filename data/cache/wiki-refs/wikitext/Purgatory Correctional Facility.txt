@@ -1,0 +1,32 @@
+{{Short description|County jail in Utah, United States}}
+{{Use American English|date=August 2025}}
+'''Purgatory Correctional Facility''' is the county jail of [[Washington County, Utah|Washington County]], [[Utah]]. Also known as the '''Washington County Jail''', it is located near [[St. George, Utah]], at Purgatory Flats, hence its unusual name.<ref>Peter Lattman, [https://blogs.wsj.com/law/2007/09/14/law-blog-prison-of-the-day-purgatory-correctional-facility/ Law Blog Prison of the Day: Purgatory Correctional Facility], ''Wall Street Journal'', September 14, 2007</ref>
+
+Technically lying within the borders of [[Hurricane, Utah|Hurricane]], [[Utah]], the facility is about halfway between downtown St. George and downtown Hurricane at Harrisburg Junction (the junction of [[Interstate 15 in Utah|I-15]] and [[SR-9 (UT)|SR-9]]). It has a semi-rural setting in the shadow of a steep ridge, part of the Virgin Rivers  [[anticline]].<ref>Bruce Railsback, [http://www.gly.uga.edu/railsback/VFT/VFTVirginAnticline.html "A Virtual Field Trip to the Virgin Anticline"] Department of Geology, University of Georgia</ref><ref>Robert F. Biek, [http://geology.utah.gov/maps/geomap/7_5/pdf/m-191.pdf "Geologic Map of the Harrisburg Junction quadrangle, Washington County, Utah"], 2003 Utah Geological Survey</ref> The [[Virgin River]] flows north of the ridge.
+
+Purgatory Correctional Facility has a typical occupancy of 400 to 500 inmates, with 150 employees and a full-time medical clinic.<ref>Dixie State College, [http://www.dixie.edu/pr/news.htm#stories040810 "Tuesday's DSC Dixie Forum Features Stories and Experiences in Law Enforcement"], April 8, 2010</ref><ref>Ryan Larkin, [https://news.washeriff.net/2011/03/25/the-role-of-nurses-at-purgatory-correctional-facility/ "The Role of Nurses at Purgatory Correctional Facility"] {{webarchive|url=https://web.archive.org/web/20120322184440/https://news.washeriff.net/2011/03/25/the-role-of-nurses-at-purgatory-correctional-facility/ |date=2012-03-22 }}, Washington County Sheriff's Office, March 25, 2011</ref> The estimated cost of the facility, completed in 1998, was $11,570,000.<ref>Integrated Construction Services: [http://www.ics-homes.com/AboutScottSmith.html Estimates]</ref> It was designed by the architectural firm of Gillies, Stransky, Brems & Smith of [[Salt Lake City]].<ref>Alan Dean Gardner, [https://web.archive.org/web/20121023013758/http://www.deseretnews.com/article/582138/The-facts-on-selection-of-jail-architect.html "The facts on selection of jail architect"], ''[[Deseret News]]'', September 10, 1997</ref> The Correctional Facility is located within a business park area.
+
+The facility has both male and female inmates.
+
+In 2005, the facility had a recidivism rate of 75 percent.<ref>Five County Association of Governments, [http://www.fcaog.state.ut.us/info/report/reports/annualreport2006.pdf 2006 annual Report],{{dead link |date=February 2026}} p. 54.</ref>
+
+The Purgatory jail made headlines in 2006 when it was used for the incarceration for the cult leader and child sex offender [[Warren Jeffs]], following his flight from justice.<ref>Howard Berkes, [https://www.npr.org/templates/story/story.php?storyId=5773897 "Polygamist Held in Purgatory"], ''[[National Public Radio]]'', September 6, 2006</ref> He was kept there for twelve months before his trial and conviction for two first degree felony counts of rape,<ref>Rachel Bell, [http://www.trutv.com/library/crime/criminal_mind/sexual_assault/warren_jeffs/11.html "False Prophet: Warren Jeffs"], "Chapter 12: Warren Jeffs' Trial"</ref> at which time he was transferred to [[Utah State Prison]].
+
+In 2008, the Sheriff's Office began charging inmates money to be incarcerated at the jail{{snd}} a practice known as "[[Pay-to-stay (imprisonment)|pay to stay]]".<ref name=PaytoStay>{{cite news |first1=Ben |last1=Winslow |url=https://www.deseret.com/2008/6/28/20260912/pay-to-stay-at-the-purgatory-jail |title='Pay to stay' at the Purgatory Jail |newspaper=[[Deseret News]] |date=June 28, 2008}}</ref> The Washington County Sheriff's Chief Deputy said the purpose of the fees was to cut operating costs and reduce [[recidivism]].<ref name=PaytoStay/> Inmates were charged $45 per day and were given a 10% discount for good behavior and a 10% discount for enrolling in education programs.<ref name=PaytoStay/> There was also a substantial discount for providing full payment.<ref name=PaytoStay/> The discounts could be combined, to result in up to a 70% discount.<ref name=PaytoStay/> However, the ''[[Deseret News]]'' reported that one problem that was worrying the officials was whether they would actually be able to collect the money, since the inmates are often rather poor people.<ref name=PaytoStay/>
+
+In fact, this was not the first time that a pay-to-stay fee system was established at the jail, which also had a similar fee system in place as early as 1999, the year after the facility was opened.<ref name=Oct99>{{cite news |first=Amy Joi |last=Bryson |work=[[Deseret News]] |date=October 27, 1999 |url=https://www.deseret.com/1999/10/27/19472411/prisoners-pay-for-their-stay-at-utah-jail/ |title=Prisoners pay for their stay at Utah jail}}</ref> It is not clear what happened to that earlier plan.
+
+==References==
+{{Reflist}}
+
+==Further reading==
+* Robert Levi Christensen, ''[http://www.americastarbooks.net/no-sunshine-in-dixie-purgatory-correctional-facility_moreinfo.html No Sunshine in Dixie: Purgatory Correctional Facility]'', PublishAmerica (now America Star Books), 2010
+
+==External links==
+* [http://www.humanflowerproject.com/index.php/weblog/comments/flowers_in_purgatory/ Human Flower Project: Flowers in Purgatory]
+
+{{Coord|37|09|30|N|113|24|44|W|format=dms|display=title|type:landmark_region:US-UT}}
+
+[[Category:Prisons in Utah]]
+[[Category:Buildings and structures in Washington County, Utah]]
+[[Category:1998 establishments in Utah]]
