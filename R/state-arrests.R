@@ -139,6 +139,93 @@ mn_landmark_patterns <- tibble::tribble(
   "US MARSHALS, MN",                                   NA,          "report"
 )
 
+# ── TN general-area apprehension codes ────────────────────────────────────────
+# Three-letter arresting-office codes that appear in Tennessee arrests as
+# "XXX GENERAL AREA, NON-SPECIFIC". Only codes whose modal toa_current_duty_site
+# (from the 20260330 arrests release, the last with that column) sits in
+# Tennessee are mapped to counties — when the office sits outside TN,
+# apprehension_state = "TENNESSEE" conflicts with the office's actual state,
+# so assigning that state's county would fabricate geography (same rule as
+# mn_general_area_codes). Office locations are confirmed by the duty-site
+# strings themselves, which name the city.
+tn_general_area_codes <- tibble::tribble(
+  ~code, ~location,                           ~county,         ~state,
+  "NSV", "Nashville ERO Sub-Office",          "Davidson",      "TN",
+  "KNX", "Knoxville ERO Sub-Office",          "Knox",          "TN",
+  "XKI", "Knoxville ERO Sub-Office",          "Knox",          "TN",
+  "MEM", "Memphis ERO Sub-Office",            "Shelby",        "TN",
+  "XME", "Memphis ERO / HSI RAC",             "Shelby",        "TN",
+  "CNG", "Chattanooga ERO Sub-Office",        "Hamilton",      "TN",
+  # Out-of-state offices (kept for documentation, as in the MN table; the
+  # county choropleth filters to the report state so these never plot).
+  # Modal share from toa_current_duty_site (20260330 arrests release):
+  # OAK/XOX combine alias strings (see notes below); all >= 0.60.
+  "MTG", "Montgomery County, TX Sub Office",  "Montgomery",    "TX",
+  "SNA", "San Antonio ERO",                   "Bexar",         "TX",
+  "AUS", "Austin, TX Sub Office",             "Travis",        "TX",
+  "DLR", "Del Rio, TX Sub Office",            "Val Verde",     "TX",
+  "SBD", "San Bernardino, CA Sub Office",     "San Bernardino", "CA",
+  "CIP", "Central Islip, NY Sub Office",      "Suffolk",       "NY",
+  "PHI", "Philadelphia, PA Docket Control",   "Philadelphia",  "PA",
+  "RDU", "Raleigh/Durham, NC Sub-Office",     "Wake",          "NC",
+  "ETW", "Etowah, AL Sub Office",             "Etowah",        "AL",
+  "BIL", "Billings, MT Sub Office",           "Yellowstone",   "MT",
+  "NOL", "New Orleans, LA Docket Control",    "Orleans Parish", "LA",
+  # Duty string says "Gulfport, LA" but Gulfport sits in Harrison County, MS;
+  # ICE's Gulfport sub-office is a Mississippi office under the New Orleans
+  # (LA) field office, hence the string's state tag.
+  "GUL", "Gulfport Sub-Office",               "Harrison",      "MS",
+  "JNA", "Jena, LA Sub Office",               "La Salle Parish", "LA",
+  "WNF", "Winnfield, LA Sub-Office",          "Winn Parish",   "LA",
+  "OAK", "Oakdale, LA Sub-Office / Oakdale Processing Center (87.9% combined; NOT Oakland)", "Allen Parish", "LA",
+  "XOX", "Ventura, CA Sub Office / HSI RAC Ventura (83.3% combined; NOT Oxnard)", "Ventura", "CA",
+  "GRN", "Greensboro, NC Sub Office",         "Guilford",      "NC",
+  "BSC", "Big Spring, TX IRP Sub-Office",     "Howard",        "TX",
+  "MID", "Midland, TX Sub-Office",            "Midland",       "TX",
+  "PCS", "Pecos, TX IHP Sub-Office",          "Reeves",        "TX",
+  "WCT", "Waco, TX Sub Office",               "McLennan",      "TX",
+  "PKE", "Pike County, PA Sub Office",        "Pike",          "PA",
+  "XWK", "HSI RAC Wichita, KS",               "Sedgwick",      "KS",
+  "TOD", "Newark, NJ Docket Control Office",  "Essex",         "NJ"
+)
+
+# ── TN OTHER apprehension-site landmarks ──────────────────────────────────────
+# Exact-match lookup for loc_type == "OTHER" landmarks in Tennessee arrests:
+# CAP program sites (police departments, probation offices, BOP/county
+# facilities). All are in the Memphis area except the two state prisons.
+tn_other_landmarks <- tibble::tribble(
+  ~landmark,                                                  ~county,    ~state,
+  "ARLINGTON POLICE DEPARTMENT",                              "Shelby",   "TN",
+  "CAP - BARTLETT POLICE DEPARTMENT TN STATE",                "Shelby",   "TN",
+  "CAP - BOP FCI MEMPHIS TN STATE",                           "Shelby",   "TN",
+  "CAP - COLLIERVILLE POLICE DEPARTMENT TN STATE",            "Shelby",   "TN",
+  "CAP - GERMANTOWN POLICE DEPARTMENT TN STATE",              "Shelby",   "TN",
+  "CAP - JAIL EAST TN STATE",                                 "Shelby",   "TN",
+  "CAP - MEMPHIS POLICE DEPARTMENT TN STATE",                 "Shelby",   "TN",
+  "CAP - NORTHWEST CORRECTIONAL COMPLEX TN STATE",            "Lake",     "TN",
+  "CAP - PROBATION OFFICE MEMPHIS CRUMP BLVD TN STATE",       "Shelby",   "TN",
+  "CAP - PROBATION OFFICE MEMPHIS OVERTON TN STATE",          "Shelby",   "TN",
+  "CAP - SHELBY CO CORRECTION CENTER (PENAL FARM) TN STATE",  "Shelby",   "TN",
+  "CAP - WEST TENNESSEE STATE PENITENTIARY TN STATE",         "Shelby",   "TN",
+  "CAP - WHITEVILLE CORRECTIONAL FACILITY TN STATE",          "Hardeman", "TN"
+)
+
+# Per-state lookup tables for .parse_landmark_county_state(). Add an entry
+# here when a new state's landmarks need county/state attribution.
+state_landmark_tables <- function(state_upper) {
+  if (state_upper == "TENNESSEE") {
+    list(patterns = tibble::tibble(pattern = character(),
+                                   county  = character(),
+                                   state   = character()),
+         ga    = tn_general_area_codes,
+         other = tn_other_landmarks)
+  } else {
+    list(patterns = mn_landmark_patterns,
+         ga    = mn_general_area_codes,
+         other = mn_other_landmarks)
+  }
+}
+
 # ── Airport landmark locations ────────────────────────────────────────────────
 # Exact-match lookup for named airports appearing in apprehension_site_landmark
 # (airport arrests can happen in any state's report, so this table is
@@ -188,6 +275,35 @@ airport_landmarks <- tibble::tribble(
   arrests
 }
 
+# ── County name extraction from landmark text ────────────────────────────────
+# Shared text-extraction step used by .parse_landmark_county_state() and
+# .parse_county_landmark(). Landmarks often carry a leading arresting-office
+# code ("CAP - GIBSON COUNTY JAIL TN STATE"), sometimes with interior
+# segments ("CAP - JUVENILE - MARICOPA COUNTY ...", "A - WI DOC - BROWN
+# COUNTY ..."), or a narrative phrase ("FUGITIVE OPERATIONS ON STREET DEWITT
+# COUNTY, ILLINOIS", "FRU - ALL AREAS INSIDE KARNES COUNTY"). Peel those
+# prefixes so the capture is the county name alone. The extraction is
+# non-greedy so it stops at the FIRST "COUNTY" (landmarks can name a county
+# twice, e.g. "VOLUSIA COUNTY JAIL ... COUNTY FACILITY").
+.county_text_extraction <- function(landmark) {
+  u <- stringr::str_to_upper(landmark)
+  # Peel leading segments until none of the patterns match
+  repeat {
+    before <- u
+    u <- stringr::str_remove(u, "^[A-Z0-9]{1,4} - ")
+    u <- stringr::str_remove(u, "^[A-Z]{1,4} DOC - ")
+    u <- stringr::str_remove(u, "^CAP ")
+    u <- stringr::str_remove(u, "^FUGITIVE OPERATIONS ON STREET ")
+    u <- stringr::str_remove(u, "^ALL AREAS IN[SI]{1,2}DE ")  # INSIDE / INISDE typo
+    if (identical(u, before)) break
+  }
+  ext <- stringr::str_remove(
+    stringr::str_extract(u, "^([A-Z .'-]+?) COUNTY"),
+    " COUNTY$")
+  # Leftover interior " - " segments ("JUVENILE - MARICOPA") — keep the last
+  stringr::str_to_title(stringr::str_remove(ext, ".* - "))
+}
+
 # ── County name parsing ───────────────────────────────────────────────────────
 
 #' Parse county AND state from apprehension_site_landmark values.
@@ -203,18 +319,17 @@ airport_landmarks <- tibble::tribble(
 #' state; NA if neither is available). The default lookup tables are MN-report
 #' specific; other states should pass their own tables.
 .parse_landmark_county_state <- function(landmark, state_upper,
-                                         landmark_patterns = mn_landmark_patterns,
-                                         ga_codes          = mn_general_area_codes,
-                                         other_landmarks   = mn_other_landmarks,
+                                         landmark_patterns = NULL,
+                                         ga_codes          = NULL,
+                                         other_landmarks   = NULL,
                                          airports          = airport_landmarks) {
+  tables <- state_landmark_tables(state_upper)
+  if (is.null(landmark_patterns)) landmark_patterns <- tables$patterns
+  if (is.null(ga_codes))          ga_codes          <- tables$ga
+  if (is.null(other_landmarks))   other_landmarks   <- tables$other
+
   abbr <- toupper(unname(STATE_ABBREVS[state_upper]))
-  general <- stringr::str_to_title(
-    stringr::str_remove(
-      stringr::str_extract(stringr::str_to_upper(landmark),
-                           "^([A-Z .'-]+) COUNTY"),
-      " COUNTY$"
-    )
-  )
+  general <- .county_text_extraction(landmark)
   suffix <- sub(", ", "", stringr::str_to_upper(
     stringr::str_extract(stringr::str_to_upper(landmark), ", [A-Z]{2}$")
   ))
@@ -293,12 +408,16 @@ airport_landmarks <- tibble::tribble(
     )
   )
 
-  if (!is.null(state_upper) && state_upper == "MINNESOTA") {
-    geo <- .parse_landmark_county_state(landmark, state_upper)
-    dplyr::if_else(geo$state == "MN", geo$county, NA_character_)
-  } else {
-    general
+  if (!is.null(state_upper)) {
+    abbr <- toupper(unname(STATE_ABBREVS[state_upper]))
+    if (!is.na(abbr)) {
+      geo <- .parse_landmark_county_state(landmark, state_upper)
+      # Keep only in-state attributions; out-of-state office counties are
+      # documented in the lookup tables but never plotted on the report map.
+      return(dplyr::if_else(geo$state == abbr, geo$county, NA_character_))
+    }
   }
+  general
 }
 
 # ── County choropleth (leaflet) ───────────────────────────────────────────────

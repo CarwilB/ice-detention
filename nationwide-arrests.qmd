@@ -237,11 +237,7 @@ county_counts <- arr |>
          !is.na(apprehension_state)) |>
   mutate(
     state_lower = str_to_lower(apprehension_state),
-    county_raw  = str_remove(
-      str_extract(str_to_upper(apprehension_site_landmark),
-                  "^([A-Z .'-]+) COUNTY"),
-      " COUNTY$"
-    ),
+    county_raw  = .county_text_extraction(apprehension_site_landmark),
     county_lower = str_to_lower(county_raw),
     map_id = paste0(state_lower, ",", county_lower)
   ) |>
