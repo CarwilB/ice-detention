@@ -121,28 +121,52 @@ list(
     description = "Merged FY10-FY26 (minus FY18); combines facilities_keyed (FY19-26) with facilities_annual_sums (FY10-17); adds adp column to FY19-26"
   ),
 
-  # ── Facility presence / trajectory ─────────────────────────────────────────
-  # For each facility, which years was it present in the data? When did it open/close?
+  # ── FY26 snapshot resolution ────────────────────────────────────────────────
+  # Two panel variants from the keyed lists (which include both FY26 snapshots):
+  # facilities_panel_interim keeps Feb 12 (FY26b) rows for facilities dropped
+  # from the July file — used for the registry, roster, presence, and canonical
+  # list. facilities_panel keeps July entries only — used for the "reported by
+  # ICE" side of the DDP comparison analyses.
   tar_target(
-    facility_presence,
-    build_facility_presence(facilities_all_keyed),
-    description = "One row per canonical facility with FY10-FY26 boolean presence columns and trajectory label (continuous, persistent_gaps, closed, new, transient)"
+    facilities_all_keyed_interim,
+    resolve_fy26_snapshots(facilities_all_keyed, interim = TRUE),
+    description = "Keyed lists FY10-FY26 with the three FY26 snapshots resolved in a cascade (July wins, then Feb 12, then Feb 2 rows fill in for facilities dropped from the newer files)"
   ),
 
-  # ── Panel dataset ──────────────────────────────────────────────────────────
+  # ── Facility presence / trajectory ─────────────────────────────────────────
+  # For each facility, which years was it present in the data? When did it open/close?
+  # Built from the interim lists so mid-year drops don't erase facilities.
+  tar_target(
+    facility_presence,
+    build_facility_presence(facilities_all_keyed_interim),
+    description = "One row per canonical facility with FY10-FY26 boolean presence columns and trajectory label (continuous, persistent_gaps, closed, new, transient); FY26 presence = either snapshot"
+  ),
+
+  # ── Panel datasets ─────────────────────────────────────────────────────────
+  # facilities_panel: July FY26 entries only (what ICE currently reports).
+  # facilities_panel_interim: adds Feb 12 rows for facilities dropped from the
+  # July file. Both carry fy26_snapshot (b/c, NA before FY26) right after
+  # fiscal_year.
   tar_target(
     facilities_panel,
-    build_panel(facilities_all_keyed),
-    description = "Long-format panel: one row per facility per year (FY10-FY26, minus FY18); all measurement variables plus canonical IDs and DETLOCs"
+    build_panel(resolve_fy26_snapshots(facilities_all_keyed, interim = FALSE)),
+    description = "Long-format panel: one row per facility per year (FY10-FY26, minus FY18); FY26 = July 20 snapshot only; all measurement variables plus canonical IDs and DETLOCs"
+  ),
+  tar_target(
+    facilities_panel_interim,
+    build_panel(facilities_all_keyed_interim),
+    description = "Long-format panel like facilities_panel, but FY26 includes Feb 12 rows for facilities dropped from the July file; fy26_snapshot column marks the source"
   ),
 
   # ── Canonical facility list ────────────────────────────────────────────────
   # One row per canonical facility with most recent address columns.
   # This is the authoritative input for geocoding and infobox generation.
+  # Built from the interim panel so facilities dropped from the July FY26
+  # file keep their roster rows.
   tar_target(
     panel_facilities,
-    build_panel_facilities(facilities_panel),
-    description = "One row per panel facility (IDs 1-1000) with most recent address, city, state, ZIP, and DETLOC; input for geocoding and wiki matching"
+    build_panel_facilities(facilities_panel_interim),
+    description = "One row per panel facility (IDs 1-1000) with most recent address, city, state, ZIP, and DETLOC; built from the interim panel; input for geocoding and wiki matching"
   ),
 
   # ── Geocode facilities ─────────────────────────────────────────────────────
@@ -211,10 +235,79 @@ list(
   tar_target(
     wiki_detention_table_current,
     scrape_wiki_detention_table(
-      url = "https://en.wikipedia.org/w/index.php?title=List_of_immigrant_detention_sites_in_the_United_States&oldid=1341823085"
+      url = "https://en.wikipedia.org/w/index.php?title=List_of_immigrant_detention_sites_in_the_United_States&oldid=1372812418"
     ),
     description = "Current live revision of the Wikipedia table; update oldid after article edits",
     cue = tar_cue(mode = "never")
+  ),
+
+  # ── Wikipedia article change tracking ───────────────────────────────────────
+  # Records what other editors changed on the live article since our last
+  # upload (cell edits, refs, link fixes, new rows) and flags article rows
+  # absent from our generated data, so uploads stay non-destructive.
+  tar_target(
+    wiki_last_upload_oldid,
+    1356058855L,
+    description = "Revision ID of our last upload of the Wikipedia list article (diff base for recording editor changes)"
+  ),
+  tar_target(
+    wiki_article_current_oldid,
+    1372812418L,
+    description = "Pinned current revision ID of the Wikipedia list article; update when re-scraping"
+  ),
+  tar_target(
+    wiki_last_upload_wikitext,
+    fetch_wiki_wikitext(wiki_last_upload_oldid),
+    description = "Wikitext of our last uploaded revision of the article",
+    cue = tar_cue(mode = "never")
+  ),
+  tar_target(
+    wiki_article_current_wikitext,
+    fetch_wiki_wikitext(wiki_article_current_oldid),
+    description = "Wikitext of the current pinned revision of the article",
+    cue = tar_cue(mode = "never")
+  ),
+  tar_target(
+    wiki_editor_changes,
+    build_wiki_revision_diff(
+      wiki_last_upload_wikitext, wiki_article_current_wikitext,
+      current_facilities = unique(c(
+        facilities_fy25_26_wiki$facility_name,
+        build_wiki_list_table(facilities_fy25_26_wiki, year_name = "FY26",
+                              facility_presence = facility_presence,
+                              validate_slugs = FALSE)$facility_name_wiki
+      ))
+    ),
+    description = "Cell-level record of editor changes to the article table since our last upload, plus article rows absent from our FY25-FY26 data (at risk on re-upload)"
+  ),
+  tar_target(
+    wiki_editor_changes_file,
+    {
+      path <- here::here("data/wiki-editor-changes.csv")
+      readr::write_csv(wiki_editor_changes, path)
+      path
+    },
+    description = "Writes data/wiki-editor-changes.csv (record of editor changes since last upload)",
+    format = "file"
+  ),
+
+  # Existence/redirect status of every article linked from the list tables.
+  # Re-run via tar_invalidate(wiki_list_extant_articles).
+  tar_target(
+    wiki_list_extant_articles,
+    build_wiki_list_extant_articles(wiki_detention_table, wiki_detention_table_current),
+    description = "Existence, redirect, and disambiguation status of every Wikipedia article linked from the list-article facility tables (pinned and current scrapes)",
+    cue = tar_cue(mode = "never")
+  ),
+
+  # Zotero reference harvest (see zotero-harvest-workflow.R, run on demand):
+  # map linked articles to facility collections. The heavy wikitext
+  # extraction is deliberately NOT a pipeline target — it rate-limits and
+  # runs only via the workflow script.
+  tar_target(
+    wiki_article_collection_map,
+    build_wiki_article_collection_map(wiki_list_extant_articles, canonical_wiki_match),
+    description = "Maps each extant article linked from the list-article tables to a Zotero collection name (canonical facility name where matched, article title otherwise)"
   ),
 
   # City/state alias matches between ICE names and Wikipedia names
@@ -278,6 +371,270 @@ list(
     description = "MediaWiki table markup for closed facilities in the Wikipedia list article"
   ),
 
+  # ── FY25–FY26 union table ───────────────────────────────────────────────────
+  # Covers every facility listed in the FY25 spreadsheet or any FY26 snapshot
+  # (Feb 2 / Feb 12 / July 20): the union behind the FY25–FY26 Wikipedia list
+  # table. FY26 values win (July over Feb 12 over Feb 2); FY25-only facilities
+  # fall back to their FY25 rows.
+  tar_target(
+    facilities_fy25_26_union,
+    build_fy25_26_union(facilities_all_keyed_interim),
+    description = "Union of the FY25 and FY26 ICE spreadsheets (all three FY26 snapshots; July values win, then Feb 12, then Feb 2, then FY25 rows); one row per listed facility"
+  ),
+
+  tar_target(
+    wiki_match_table_fy25_26,
+    build_wiki_match_table(facilities_fy25_26_union, wiki_detention_table),
+    description = "City/state alias matches between FY25-FY26 union facility names and Wikipedia table names"
+  ),
+
+  # Wikipedia API search for union names not already covered by the FY26
+  # search target (FY25-only, Feb-12-only, and renamed facilities).
+  # Re-run via tar_invalidate(facilities_fy25_26_new_search)
+  tar_target(
+    facilities_fy25_26_new_search,
+    add_wikipedia_matches(
+      facilities_fy25_26_union |>
+        dplyr::anti_join(facilities_fy26_wiki_search, by = "facility_name"),
+      name_col = "facility_name"
+    ),
+    description = "Wikipedia API search results for FY25-FY26 union facility names not covered by the FY26 search",
+    cue = tar_cue(mode = "never")
+  ),
+
+  # Union facilities with wiki_match, wiki_slug, and management columns;
+  # same enrichment chain as facilities_fy26_wiki.
+  tar_target(
+    facilities_fy25_26_wiki,
+    add_wiki_columns(facilities_fy25_26_union, wiki_detention_table,
+                     wiki_match_table_fy25_26,
+                     dplyr::bind_rows(facilities_fy26_wiki_search,
+                                      facilities_fy25_26_new_search)) |>
+      backfill_wiki_slugs(wiki_detention_table_current) |>
+      apply_wiki_slug_overrides() |>
+      apply_contractors_patch(contractors_patch_file) |>
+      apply_fl17_management(faclist17_keyed) |>
+      standardize_management(),
+    description = "FY25-FY26 union facilities with wiki_match, wiki_slug, and management columns; applies slug overrides, contractors patch, fl17 management backfill, and standardization"
+  ),
+
+  tar_target(
+    fy25_26_wikitable,
+    generate_fy25_26_wikitable(facilities_fy25_26_wiki,
+                               facility_presence = facility_presence),
+    description = "MediaWiki table markup for all facilities listed in the FY25 or FY26 ICE spreadsheets (both snapshots); active per the presence matrix, FY25-only facilities labeled Closed"
+  ),
+
+  # Scan the City wikilinks in the FY25-FY26 table against the live API:
+  # flags links that are redirects, disambiguation pages, or non-existent.
+  # Review before each upload; fixes go into .city_link_overrides().
+  tar_target(
+    fy25_26_city_link_check,
+    check_wiki_city_links(
+      build_wiki_list_table(facilities_fy25_26_wiki, year_name = "FY26",
+                            facility_presence = facility_presence,
+                            validate_slugs = FALSE)
+    ),
+    description = "City-link scan for the FY25-FY26 wikitable: one row per distinct City wikilink target with exists/redirect/disambiguation status; problem rows sorted first"
+  ),
+
+  # ── Historical era tables (Wikipedia list article) ──────────────────────
+  # Sections covering FY21–FY24, FY17–FY20, and FY10–FY16. Same union →
+  # enrich → generate chain as the FY25–FY26 table. Era unions reuse the
+  # pooled Wikipedia API searches (each new search only queries names not
+  # covered by earlier search targets). Status labels are capped at the
+  # era's final year; facilities listed again after the window are not
+  # labeled "Closed". FY17 ADP is partial-year (~9.5 months, from the 2017
+  # DMCP listing); FY10–FY16 ADP comes from the DMCP listings, with capacity
+  # backfilled from fl17's facility_capacity.
+
+  # FY21–FY24
+  tar_target(
+    facilities_fy21_24_union,
+    build_fy_range_union(facilities_all_keyed_interim,
+                         c("FY21", "FY22", "FY23", "FY24")),
+    description = "Union of FY21-FY24 ICE annual-stats rows; one row per listed facility, latest year's values win"
+  ),
+  tar_target(
+    wiki_match_table_fy21_24,
+    build_wiki_match_table(facilities_fy21_24_union, wiki_detention_table),
+    description = "City/state alias matches between FY21-FY24 union facility names and Wikipedia table names"
+  ),
+  tar_target(
+    facilities_fy21_24_new_search,
+    add_wikipedia_matches(
+      facilities_fy21_24_union |>
+        dplyr::anti_join(facilities_fy26_wiki_search, by = "facility_name") |>
+        dplyr::anti_join(facilities_fy25_26_new_search, by = "facility_name"),
+      name_col = "facility_name"
+    ),
+    description = "Wikipedia API search results for FY21-FY24 union names not covered by earlier searches",
+    cue = tar_cue(mode = "never")
+  ),
+  tar_target(
+    facilities_fy21_24_wiki,
+    add_wiki_columns(facilities_fy21_24_union, wiki_detention_table,
+                     wiki_match_table_fy21_24,
+                     dplyr::bind_rows(facilities_fy26_wiki_search,
+                                      facilities_fy25_26_new_search,
+                                      facilities_fy21_24_new_search)) |>
+      backfill_wiki_slugs(wiki_detention_table_current) |>
+      apply_wiki_slug_overrides() |>
+      apply_contractors_patch(contractors_patch_file) |>
+      apply_fl17_management(faclist17_keyed) |>
+      backfill_fl17_capacity(faclist17_keyed) |>
+      standardize_management(),
+    description = "FY21-FY24 union facilities with wiki_match, wiki_slug, and management columns; same enrichment chain as facilities_fy25_26_wiki plus fl17 capacity backfill"
+  ),
+  tar_target(
+    fy21_24_wikitable,
+    generate_era_wikitable(facilities_fy21_24_wiki, year_name = "FY24",
+                           facility_presence = facility_presence,
+                           heading = "==Centers active in Fiscal Years 2021 through 2024==",
+                           caption = "ICE Detention Facilities in FY21\u2013FY24",
+                           source_note = fy21_24_source_note()),
+    description = "MediaWiki markup for the FY21-FY24 section: heading, wikitable (status capped at FY24), and source note"
+  ),
+  tar_target(
+    fy21_24_city_link_check,
+    check_wiki_city_links(
+      build_wiki_list_table(facilities_fy21_24_wiki, year_name = "FY24",
+                            facility_presence = facility_presence,
+                            status_window = "FY24",
+                            editor_extra_rows = NULL,
+                            editor_row_id_anchors = FALSE,
+                            validate_slugs = FALSE)
+    ),
+    description = "City-link scan for the FY21-FY24 wikitable"
+  ),
+
+  # FY17–FY20 (FY18 has no data source; skipped by the union builder)
+  tar_target(
+    facilities_fy17_20_union,
+    build_fy_range_union(facilities_all_keyed_interim,
+                         c("FY17", "FY19", "FY20")),
+    description = "Union of FY17, FY19, and FY20 ICE rows (FY18 unavailable); one row per listed facility, latest year's values win"
+  ),
+  tar_target(
+    wiki_match_table_fy17_20,
+    build_wiki_match_table(facilities_fy17_20_union, wiki_detention_table),
+    description = "City/state alias matches between FY17-FY20 union facility names and Wikipedia table names"
+  ),
+  tar_target(
+    facilities_fy17_20_new_search,
+    add_wikipedia_matches(
+      facilities_fy17_20_union |>
+        dplyr::anti_join(facilities_fy26_wiki_search, by = "facility_name") |>
+        dplyr::anti_join(facilities_fy25_26_new_search, by = "facility_name") |>
+        dplyr::anti_join(facilities_fy21_24_new_search, by = "facility_name"),
+      name_col = "facility_name"
+    ),
+    description = "Wikipedia API search results for FY17-FY20 union names not covered by earlier searches",
+    cue = tar_cue(mode = "never")
+  ),
+  tar_target(
+    facilities_fy17_20_wiki,
+    add_wiki_columns(facilities_fy17_20_union, wiki_detention_table,
+                     wiki_match_table_fy17_20,
+                     dplyr::bind_rows(facilities_fy26_wiki_search,
+                                      facilities_fy25_26_new_search,
+                                      facilities_fy21_24_new_search,
+                                      facilities_fy17_20_new_search)) |>
+      backfill_wiki_slugs(wiki_detention_table_current) |>
+      apply_wiki_slug_overrides() |>
+      apply_contractors_patch(contractors_patch_file) |>
+      apply_fl17_management(faclist17_keyed) |>
+      backfill_fl17_capacity(faclist17_keyed) |>
+      standardize_management(),
+    description = "FY17-FY20 union facilities with wiki_match, wiki_slug, and management columns; same enrichment chain as facilities_fy25_26_wiki plus fl17 capacity backfill"
+  ),
+  tar_target(
+    fy17_20_wikitable,
+    generate_era_wikitable(facilities_fy17_20_wiki, year_name = "FY20",
+                           facility_presence = facility_presence,
+                           heading = "==Centers active in Fiscal Years 2017 through 2020==",
+                           caption = "ICE Detention Facilities in FY17\u2013FY20",
+                           source_note = fy17_20_source_note()),
+    description = "MediaWiki markup for the FY17-FY20 section: heading, wikitable (status capped at FY20), and source note"
+  ),
+  tar_target(
+    fy17_20_city_link_check,
+    check_wiki_city_links(
+      build_wiki_list_table(facilities_fy17_20_wiki, year_name = "FY20",
+                            facility_presence = facility_presence,
+                            status_window = "FY20",
+                            editor_extra_rows = NULL,
+                            editor_row_id_anchors = FALSE,
+                            validate_slugs = FALSE)
+    ),
+    description = "City-link scan for the FY17-FY20 wikitable"
+  ),
+
+  # FY10–FY16 (all data from the DMCP facility listings via annual_sums;
+  # FY09 and earlier are unavailable)
+  tar_target(
+    facilities_fy10_16_union,
+    build_fy_range_union(facilities_all_keyed_interim,
+                         c("FY10", "FY11", "FY12", "FY13", "FY14", "FY15", "FY16")),
+    description = "Union of FY10-FY16 DMCP-derived rows; one row per listed facility, latest year's values win"
+  ),
+  tar_target(
+    wiki_match_table_fy10_16,
+    build_wiki_match_table(facilities_fy10_16_union, wiki_detention_table),
+    description = "City/state alias matches between FY10-FY16 union facility names and Wikipedia table names"
+  ),
+  tar_target(
+    facilities_fy10_16_new_search,
+    add_wikipedia_matches(
+      facilities_fy10_16_union |>
+        dplyr::anti_join(facilities_fy26_wiki_search, by = "facility_name") |>
+        dplyr::anti_join(facilities_fy25_26_new_search, by = "facility_name") |>
+        dplyr::anti_join(facilities_fy21_24_new_search, by = "facility_name") |>
+        dplyr::anti_join(facilities_fy17_20_new_search, by = "facility_name"),
+      name_col = "facility_name"
+    ),
+    description = "Wikipedia API search results for FY10-FY16 union names not covered by earlier searches",
+    cue = tar_cue(mode = "never")
+  ),
+  tar_target(
+    facilities_fy10_16_wiki,
+    add_wiki_columns(facilities_fy10_16_union, wiki_detention_table,
+                     wiki_match_table_fy10_16,
+                     dplyr::bind_rows(facilities_fy26_wiki_search,
+                                      facilities_fy25_26_new_search,
+                                      facilities_fy21_24_new_search,
+                                      facilities_fy17_20_new_search,
+                                      facilities_fy10_16_new_search)) |>
+      backfill_wiki_slugs(wiki_detention_table_current) |>
+      apply_wiki_slug_overrides() |>
+      apply_contractors_patch(contractors_patch_file) |>
+      apply_fl17_management(faclist17_keyed) |>
+      backfill_fl17_capacity(faclist17_keyed) |>
+      standardize_management(),
+    description = "FY10-FY16 union facilities with wiki_match, wiki_slug, and management columns; same enrichment chain as facilities_fy25_26_wiki plus fl17 capacity backfill"
+  ),
+  tar_target(
+    fy10_16_wikitable,
+    generate_era_wikitable(facilities_fy10_16_wiki, year_name = "FY16",
+                           facility_presence = facility_presence,
+                           heading = "==Centers active in Fiscal Years 2010 through 2016==",
+                           caption = "ICE Detention Facilities in FY10\u2013FY16",
+                           source_note = fy10_16_source_note()),
+    description = "MediaWiki markup for the FY10-FY16 section: heading, wikitable (status capped at FY16), and source note"
+  ),
+  tar_target(
+    fy10_16_city_link_check,
+    check_wiki_city_links(
+      build_wiki_list_table(facilities_fy10_16_wiki, year_name = "FY16",
+                            facility_presence = facility_presence,
+                            status_window = "FY16",
+                            editor_extra_rows = NULL,
+                            editor_row_id_anchors = FALSE,
+                            validate_slugs = FALSE)
+    ),
+    description = "City-link scan for the FY10-FY16 wikitable"
+  ),
+
   # ── Full facility roster ────────────────────────────────────────────────────
   # One row per canonical facility across all ID ranges with best-available
   # address, type, and DETLOC. Geocoding is joined downstream via
@@ -309,8 +666,8 @@ list(
   tar_target(
     saved_files,
     save_outputs(facility_crosswalk, facility_presence, facilities_panel,
-                 source_presence, facility_roster),
-    description = "Exported RDS + CSV files written to data/ (crosswalk, presence, panel, source_presence, roster)",
+                 facilities_panel_interim, source_presence, facility_roster),
+    description = "Exported RDS + CSV files written to data/ (crosswalk, presence, panel, interim panel, source_presence, roster)",
     format = "file"
   ),
 
@@ -445,7 +802,7 @@ list(
   # Pass 2 (ddp_codes_new): hold/CBP → 2181+; other jails → 1210+; medical → 3227+.
   tar_target(
     ddp_facility_canonical,
-    build_ddp_facility_canonical(ddp_codes, detloc_lookup_full, vera_facilities,
+    build_ddp_facility_canonical(ddp_codes, detloc_lookup_full, vera_facilities, id_registry, facility_crosswalk,
                                   ddp_codes_new),
     description = "Canonical IDs for all unmapped DDP facilities: ddp_raw-derived (1054+, 3001+) plus ddp_new-only codes (hold/CBP 2181+, jails 1210+, medical 3227+)"
   ),
@@ -482,7 +839,7 @@ list(
   # rows; ICE-specific columns (inspections, threat levels) are NA for ddp_only.
   tar_target(
     expanded_map_panel,
-    build_expanded_map_panel(facilities_panel, ddp_annual_panel, threshold = 0.25),
+    build_expanded_map_panel(facilities_panel_interim, ddp_annual_panel, threshold = 0.25),
     description = "Combined ICE + DDP panel: one row per (canonical_id x fiscal_year), data_source flag, ice_adp vs ddp_adp comparison"
   ),
 
@@ -507,7 +864,9 @@ list(
   ),
 
   # ── Expanded map export ───────────────────────────────────────────────────
-  # cue = "never": run tar_make(expanded_map_export) explicitly to deploy.
+  # cue = "always": tar_make(expanded_map_export) always re-exports (a bare
+  # "never" cue would skip the target forever once its metadata exists —
+  # mode "never" only runs on first build or after an error).
   # Writes expanded_panel.rds, expanded_presence.rds, expanded_geocoded.rds
   # to data/expanded-map-export/; then run copy-data.sh in the post directory.
   tar_target(
@@ -515,14 +874,14 @@ list(
     export_expanded_map_data(expanded_map_panel, expanded_map_presence,
                               expanded_map_geocoded),
     format = "file",
-    cue   = tar_cue(mode = "never"),
+    cue   = tar_cue(mode = "always"),
     description = "Exports expanded_panel.rds, expanded_presence.rds, expanded_geocoded.rds to data/expanded-map-export/ for deployment"
   ),
 
   # ── Facility directory export ─────────────────────────────────────────────
-  # cue = "never": run tar_make(facility_directory_export) explicitly to deploy.
-  # Writes facility_tbl.rds to data/facility-directory-export/;
-  # then run copy-data.sh in posts/facility-directory/.
+  # cue = "always": the export re-runs on every build; publishing is the
+  # manual step (copy-data.sh in posts/facility-directory/).
+  # Writes facility_tbl.rds to data/facility-directory-export/.
   tar_target(
     facility_directory_export,
     export_facility_directory_data(
@@ -530,7 +889,9 @@ list(
       ddp_raw, detloc_lookup_complete, ddp_new
     ),
     format = "file",
-    cue    = tar_cue(mode = "never"),
+    # cue = "always": re-export on every build; publishing is the manual
+    # copy-data.sh step in the post directory.
+    cue    = tar_cue(mode = "always"),
     description = "Exports facility_tbl.rds to data/facility-directory-export/ for the facility directory post"
   ),
 
@@ -725,8 +1086,8 @@ list(
 
   tar_target(
     fy26b,
-    build_fy26b(data_file_info, clean_names_list, facility_crosswalk, detloc_lookup),
-    description = "Feb 12 2026 ICE spreadsheet: 220 facilities cleaned, aggregated, and keyed; 3 known IDs patched; 4 genuinely new"
+    build_fy26b(facilities_keyed),
+    description = "Feb 12 2026 ICE snapshot (FY26b element of the main import chain) with the known-ID patches applied"
   ),
 
   tar_target(
@@ -743,13 +1104,13 @@ list(
 
   tar_target(
     unmatched_fy26,
-    build_unmatched_fy26(ddp_fy26_keyed, facility_roster),
-    description = "DDP FY26 facilities not in ICE FY26 annual statistics, with type and address from facility_roster"
+    build_unmatched_fy26(ddp_fy26_keyed, facility_roster, detloc_lookup_complete),
+    description = "DDP FY26 facilities not in ICE FY26 annual statistics; codes bridged to canonical IDs via detloc_lookup_complete, type and address from facility_roster"
   ),
 
   tar_target(
     peak_fy26,
-    build_peak_fy26(facilities_daily_population, unmatched_fy26, facility_roster, facilities_geocoding_lookup),
+    build_peak_fy26(facilities_daily_population, unmatched_fy26, facility_roster, facilities_geocoding_lookup, detloc_lookup_complete),
     description = "Peak population summary for FY26 unmatched facilities with geocoding; sparklines added separately at export time"
   ),
 
@@ -807,12 +1168,12 @@ list(
   ),
   tar_target(
     unmatched_fy26_20260330,
-    build_unmatched_fy26(ddp_fy26_keyed_20260330, facility_roster),
+    build_unmatched_fy26(ddp_fy26_keyed_20260330, facility_roster, detloc_lookup_complete),
     description = "Archived through-March unmatched DDP FY26 facilities (frozen 20260330 data)"
   ),
   tar_target(
     peak_fy26_20260330,
-    build_peak_fy26(ddp_new, unmatched_fy26_20260330, facility_roster, facilities_geocoding_lookup),
+    build_peak_fy26(ddp_new, unmatched_fy26_20260330, facility_roster, facilities_geocoding_lookup, detloc_lookup_complete),
     description = "Archived through-March peak population summary for unmatched facilities (frozen 20260330 data)"
   ),
   tar_target(
@@ -891,10 +1252,11 @@ list(
     description = "Rendered nationwide-arrests.qmd: state + county choropleths of post-2025-01-20 ICE arrests"
   ),
 
-  # ── State arrests web export (cue = "never") ───────────────────────────────
+  # ── State arrests web export ───────────────────────────────────────────────
   # Pre-computes nationwide.rds + one {abbr}.rds per state for the
-  # ice-arrests-by-state Quarto website. Run tar_make(state_arrests_export)
-  # explicitly, then run copy-data.sh in the website directory.
+  # ice-arrests-by-state Quarto website. cue = "always": tar_make() always
+  # re-exports; publishing is the manual step (copy-data.sh in the website
+  # directory).
   tar_target(
     state_arrests_export,
     export_state_arrests(
@@ -910,9 +1272,9 @@ list(
       data_end     = as.Date("2026-03-31"),
       export_dir   = here::here("data/state-arrests-export")
     ),
-    cue    = tar_cue("never"),
+    cue    = tar_cue("always"),
     format = "file",
-    description = "Exports nationwide.rds + 51 per-state RDS files for ice-arrests-by-state website (cue=never)"
+    description = "Exports nationwide.rds + 51 per-state RDS files for ice-arrests-by-state website"
   ),
 
   # ── Detention stints data (DDP individual-level) ───────────────────────────
@@ -943,7 +1305,7 @@ list(
     build_facility_profiles_data(
       stints          = stints_raw,
       ddp_pop         = ddp_new,
-      facilities_panel = facilities_panel,
+      facilities_panel = facilities_panel_interim,
       detloc_lookup   = detloc_lookup_complete
     ),
     description = "Before/after 2025-01-20 facility profiles for IWAHOLD, SPMHOLD, PINEPLA, DILLEY, NWDC"

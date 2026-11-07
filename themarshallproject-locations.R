@@ -207,7 +207,21 @@ hold_stub_address_patches <- function(missing_hold_addresses = NULL) {
 
     "ALBHOLD", "manual", " 11 Old Stonebreak Road",
     "Malta",      "12020", "Saratoga",
-    NA_real_, NA_real_, NA_character_, as.Date("2022-11-15"),  as.Date(NA)
+    NA_real_, NA_real_, NA_character_, as.Date("2022-11-15"),  as.Date(NA),
+
+    # Arizona State Prison – Yuma (ASPC Yuma, San Luis campus): Vera has no
+    # address and a wrong Phoenix coordinate; lat/lon left NA so the corrected
+    # address is geocoded fresh (confirmed 2026-10).
+    "AZSVCPC", "manual", "7125 E. Cesar Chavez Blvd",
+    "San Luis",    "85349", "Yuma",
+    NA_real_, NA_real_, NA_character_, as.Date(NA), as.Date(NA),
+
+    # Marshall record concatenates the P.O. Box with the street address
+    # ("P.O. BOX 1188 2887 N POINT CIRCLE") and its coordinate is 14 km off;
+    # keep the street part, drop the coordinate (confirmed 2026-10).
+    "FAYHOLD", "manual", "2887 N Point Circle",
+    "Fayetteville", "72701", "Washington",
+    NA_real_, NA_real_, NA_character_, as.Date(NA), as.Date(NA)
   )
 
   if (is.null(missing_hold_addresses)) {

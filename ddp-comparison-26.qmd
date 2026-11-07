@@ -39,7 +39,7 @@ This analysis previously used DDP's 20260330 daily-population release (data thro
 
 In FY 2026, it is Hold Rooms and other Staging facilities that account for the vast majority of the unreported population. For comparison, hold facilties in FY 2025 had an average daily population of about 1,163 detainees, with an average of 1,986 in the final 60 days.
 
-This analysis is partial in that a small handful of "Unclassified" facilities may have ICE matches which are still being added manually, but you can see if Figure 4 that this is a negligible part of the total.
+Three facilities that appear in the February 12 ICE roster — Lewisburg US Penitentiary, the Guantánamo Migrant Operations Center, and Lafayette Parish Correctional Center — were originally unlinked to their DDP codes because ICE lists them under different names. Manual matches connect them here (canonical IDs 403, 404, and 402), so they do not appear in the unmatched analysis below. For the opposite problem — facilities that ICE itself removed from the FY26 roster after February — see the roster-churn table below.
 
 ```{r}
 #| label: load-packages
@@ -136,6 +136,27 @@ type_colors_vera <- c(
 )
 ```
 
+```{r}
+#| label: plot-theme
+# Shared plot aesthetics: white background, solid black axis lines,
+# y-axis flush to zero with a little headroom for annotations.
+theme_ice <- function(...) {
+  theme_classic(...) +
+    theme(
+      panel.background = element_blank(),
+      axis.line        = element_line(color = "black", linewidth = 0.5)
+    )
+}
+
+scale_y_pop <- function(...) {
+  scale_y_continuous(
+    labels = comma,
+    expand = expansion(mult = c(0, 0.05)),
+    ...
+  )
+}
+```
+
 ## Aggregate comparison
 
 The ICE FY 2026 spreadsheet covers **October 1, 2025 through February 5, 2026** — 128 days. To compare with the DDP data we compute average daily population (ADP) over that same window.
@@ -173,12 +194,9 @@ ggplot(daily_totals_fy26, aes(x = date, y = total_pop)) +
   geom_text(data = fy_labels,
             aes(x = x, y = max(daily_totals_fy26$total_pop) * 1.03, label = label),
             inherit.aes = FALSE, size = 2.8, lineheight = 0.9) +
-scale_y_continuous(
-  labels = comma, 
-  limits = c(0, NA), # Force start at 0, allow NA to automatically set the max
-  expand = expansion(mult = c(0, 0.05)) # Removes the bottom gap, keeps 5% padding at top
-) + 
+  scale_y_pop(limits = c(0, NA)) +
   scale_x_date(date_labels = "%b %Y", date_breaks = "3 month") +
+  theme_ice() +
   labs(x = NULL, y = "Total detained population")
 ```
 
@@ -244,6 +262,7 @@ ggplot(both_nonzero, aes(x = ice_adp, y = ddp_adp)) +
   geom_point(alpha = 0.6) +
   scale_x_log10(labels = comma) +
   scale_y_log10(labels = comma) +
+  theme_ice() +
   labs(x = "ICE FY26 ADP (annual stats)", y = "DDP mean daily population (same period)")
 ```
 
@@ -315,8 +334,9 @@ ggplot(daily_unmatched, aes(x = date, y = total_pop)) +
   annotate("text", x = as.Date("2026-01-22"),
            y = max(daily_unmatched$total_pop) * 0.95,
            label = "Inauguration", hjust = 0, size = 2.8) +
-  scale_y_continuous(labels = comma) +
-  scale_x_date(date_labels = "%b %Y", date_breaks = "1 month") +
+  scale_y_pop() +
+  scale_x_date(date_labels = "%b %Y", date_breaks = "2 months") +
+  theme_ice() +
   labs(x = NULL, y = "Detained population (unmatched facilities)")
 ```
 
@@ -330,9 +350,177 @@ monthly_by_type <- monthly_unmatched |>
 
 ggplot(monthly_by_type, aes(x = month, y = daily_avg, fill = type_grouped)) +
   geom_col() +
-  scale_y_continuous(labels = comma) +
-  scale_x_date(date_labels = "%b %Y", date_breaks = "1 month") +
+  scale_y_pop() +
+  scale_x_date(date_labels = "%b '%y", date_breaks = "1 month") +
   scale_fill_manual(values = type_colors_vera, na.value = "#999999") +
+  theme_ice() +
+  labs(x = NULL, y = "Average daily population", fill = "Facility type")
+```
+
+### Facilities dropped from the ICE roster
+
+ICE revises the FY26 facility roster with each spreadsheet release. The July 2026 release — now the pipeline's FY26 source — removed facilities that were still listed in the February 12 roster on which this comparison is based. DDP daily counts show that detention continued at these sites after their removal from the published roster.
+
+```{r}
+#| label: tbl-roster-drops
+#| tbl-cap: "Facilities in the Feb 12, 2026 ICE roster absent from the July 2026 roster"
+fy26_july <- tar_read(facilities_keyed)[["FY26"]]
+july_ids  <- unique(na.omit(fy26_july$canonical_id))
+
+facility_roster          <- tar_read(facility_roster)
+detloc_lookup_complete   <- tar_read(detloc_lookup_complete)
+facilities_geocoding_lookup <- tar_read(facilities_geocoding_lookup)
+
+roster_drops <- fy26b |>
+  filter(!is.na(canonical_id), !(canonical_id %in% july_ids)) |>
+  group_by(canonical_id) |>
+  summarise(
+    facility_name  = dplyr::first(coalesce(canonical_name, facility_name)),
+    facility_city  = dplyr::first(facility_city),
+    facility_state = dplyr::first(facility_state),
+    ice_adp        = sum(sum_classification_levels, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  left_join(
+    ddp_fy26_keyed |>
+      filter(!is.na(canonical_id)) |>
+      group_by(canonical_id) |>
+      summarise(ddp_adp = sum(ddp_adp), .groups = "drop"),
+    by = "canonical_id"
+  ) |>
+  arrange(desc(ice_adp))
+
+# All DDP codes mapped to the dropped canonicals: the full DETLOC lookup plus
+# the keyed comparison table (which carries force-patched codes such as DILLSAF
+# that the lookup does not contain)
+dropped_codes <- bind_rows(
+  .ddp_code_to_canonical(detloc_lookup_complete, facility_roster),
+  ddp_fy26_keyed |>
+    filter(!is.na(canonical_id)) |>
+    distinct(detention_facility_code, canonical_id) |>
+    rename(detloc = detention_facility_code)
+) |>
+  distinct(detloc, canonical_id) |>
+  filter(canonical_id %in% roster_drops$canonical_id)
+
+# Last day each code appeared with more than one detainee in the DDP data
+ddp_end <- max(ddp_pop$date)
+last_active <- ddp_pop |>
+  filter(detention_facility_code %in% dropped_codes$detloc,
+         n_detained > 1) |>
+  group_by(detention_facility_code) |>
+  summarise(last_day = max(date), .groups = "drop")
+
+roster_drops <- roster_drops |>
+  left_join(
+    dropped_codes |>
+      left_join(last_active, by = c("detloc" = "detention_facility_code")) |>
+      group_by(canonical_id) |>
+      summarise(
+        last_day = if (all(is.na(last_day))) as.Date(NA) else max(last_day, na.rm = TRUE),
+        .groups = "drop"
+      ),
+    by = "canonical_id"
+  )
+
+roster_drops |>
+  transmute(
+    Facility = facility_name,
+    City     = facility_city,
+    State    = facility_state,
+    `ICE ADP (Oct-Feb)` = round(ice_adp, 1),
+    `DDP ADP (same window)` = round(ddp_adp, 1),
+    `Last DDP day > 1` = case_when(
+      is.na(last_day)     ~ "never > 1",
+      last_day == ddp_end ~ paste0(format(last_day, "%b %e, %Y"), "\u2020"),
+      .default = format(last_day, "%b %e, %Y")
+    )
+  ) |>
+  kable()
+```
+
+† Detention above one detainee continued through August 5, 2026, the final day of the DDP dataset. Dona Ana County never held more than one detainee on a single day.
+
+The most consequential removal is the Guantánamo Bay Migrant Operations Center (DDP code GTMODCU), which ICE listed in February with an average daily population of about 6 detainees but dropped entirely by July. A small number of jails — mostly facilities with intermittent ICE holds — were also removed.
+
+The daily-count records show that most of these sites continued detaining after their removal: five were still holding more than one detainee on the final day of the DDP dataset.
+
+```{r}
+#| label: dropped-data
+# Summary data for the dropped facilities, built on the same footing as the
+# unmatched facilities (peak, type, geocoding, sparklines)
+peak_dropped <- build_peak_fy26(
+  ddp_pop,
+  tibble::tibble(detention_facility_code = unique(dropped_codes$detloc)),
+  facility_roster, facilities_geocoding_lookup, detloc_lookup_complete
+)
+peak_dropped <- build_peak_fy26_w_sparklines(ddp_pop, peak_dropped, fy_end = "2026-08-05") |>
+  mutate(dropped = TRUE)
+
+daily_dropped <- ddp_pop |>
+  filter(detention_facility_code %in% dropped_codes$detloc,
+         date >= as.Date(fy_start), date <= as.Date(fy_end)) |>
+  group_by(date) |>
+  summarise(total_pop = sum(n_detained, na.rm = TRUE), .groups = "drop")
+
+# Unmatched + dropped: everything absent from the most recent (July) ICE roster
+daily_unmatched_plus <- daily_unmatched |>
+  full_join(daily_dropped, by = "date", suffix = c("_unmatched", "_dropped")) |>
+  mutate(
+    across(starts_with("total_pop"), ~ coalesce(.x, 0)),
+    total_pop = total_pop_unmatched + total_pop_dropped
+  )
+
+monthly_dropped <- ddp_pop |>
+  filter(detention_facility_code %in% dropped_codes$detloc,
+         date >= as.Date(fy_start), date <= as.Date(fy_end)) |>
+  left_join(dropped_codes, by = c("detention_facility_code" = "detloc")) |>
+  left_join(
+    facility_roster |>
+      distinct(canonical_id, type_grouped = type_grouped_corrected),
+    by = "canonical_id"
+  ) |>
+  mutate(
+    type_grouped = if_else(is.na(type_grouped), "Unclassified", type_grouped),
+    month        = as.Date(format(date, "%Y-%m-01"))
+  )
+```
+
+### Daily population including dropped facilities
+
+```{r}
+#| label: fig-daily-unmatched-plus-drops
+#| fig-cap: "Daily detained population in facilities not in the most recent ICE FY26 annual statistics. Blue: all facilities absent from the July 2026 roster, including the dropped facilities of Table @tbl-roster-drops. Light grey: the February-roster unmatched facilities of Figure @fig-daily-unmatched for comparison."
+#| fig-height: 4
+ggplot() +
+  geom_line(data = daily_unmatched_plus, aes(x = date, y = total_pop),
+            color = "#1f77b4", linewidth = 0.5) +
+  geom_line(data = daily_unmatched, aes(x = date, y = total_pop),
+            color = "grey65", linewidth = 0.4) +
+  geom_vline(xintercept = as.Date("2026-01-20"), linetype = "dashed", alpha = 0.4) +
+  annotate("text", x = as.Date("2026-01-22"),
+           y = max(daily_unmatched_plus$total_pop) * 0.95,
+           label = "Inauguration", hjust = 0, size = 2.8) +
+  scale_y_pop() +
+  scale_x_date(date_labels = "%b %Y", date_breaks = "2 months") +
+  theme_ice() +
+  labs(x = NULL, y = "Detained population (unmatched facilities)")
+```
+
+```{r}
+#| label: fig-monthly-dropped
+#| fig-cap: "Average daily population in no-longer-reported facilities, by month and type"
+#| fig-height: 5
+monthly_dropped_by_type <- monthly_dropped |>
+  group_by(month, type_grouped) |>
+  summarise(daily_avg = sum(n_detained) / n_distinct(date), .groups = "drop")
+
+ggplot(monthly_dropped_by_type, aes(x = month, y = daily_avg, fill = type_grouped)) +
+  geom_col() +
+  scale_y_pop() +
+  scale_x_date(date_labels = "%b '%y", date_breaks = "1 month") +
+  scale_fill_manual(values = type_colors_vera, na.value = "#999999") +
+  theme_ice() +
   labs(x = NULL, y = "Average daily population", fill = "Facility type")
 ```
 
@@ -358,8 +546,10 @@ peak_fy26 |>
 peak_fy26 |>
   filter(peak_pop > 0) |>
   ggplot(aes(x = peak_pop)) +
-  geom_histogram(bins = 40) +
+  geom_histogram(bins = 40, fill = "steelblue") +
   scale_x_log10(labels = comma) +
+  scale_y_pop() +
+  theme_ice() +
   labs(x = "Peak detained population", y = "Facilities")
 ```
 
@@ -368,9 +558,11 @@ peak_fy26 |>
 ::: column-screen-inset-right
 ```{r}
 #| label: fig-map
-#| fig-cap: "DDP facilities not in ICE FY26 annual statistics, sized by peak population (Oct 2025 – Feb 5 2026)"
+#| fig-cap: "DDP facilities not in the most recent (July 2026) ICE FY26 annual statistics, sized by peak population (Oct 2025 – Feb 5 2026). Blue-outlined circles mark facilities dropped from the July roster after appearing in the February roster."
 #| fig-height: 7
 map_data <- peak_fy26 |>
+  mutate(dropped = FALSE) |>
+  bind_rows(peak_dropped) |>
   filter(peak_pop > 0, !is.na(latitude), !is.na(longitude))
 
 map_sf <- st_as_sf(map_data, coords = c("longitude", "latitude"), crs = 4326)
@@ -390,6 +582,8 @@ build_popup <- function(row) {
   )
   spark <- if (!is.na(row$sparkline_svg) && nchar(row$sparkline_svg) > 0)
     paste0("<br>", row$sparkline_svg) else ""
+  drop_note <- if (isTRUE(row$dropped))
+    "<br><span style='color:#1f77b4;'><b>Dropped from July 2026 ICE roster</b></span>" else ""
 
   paste0(
     '<div style="min-width:240px; font-family:sans-serif; font-size:14px;">',
@@ -399,6 +593,7 @@ build_popup <- function(row) {
     '<span style="color:#666;">Type: ', htmlEscape(row$type_grouped %||% "Unknown"), '</span><br>',
     '<b>Peak during FY26: ', format(row$peak_pop, big.mark = ","), '</b> (', row$peak_date, ')',
     '&nbsp;&nbsp;<br><b>Mean:</b> ', round(row$mean_pop), '/day',
+    drop_note,
     spark,
     '</div>'
   )
@@ -419,7 +614,9 @@ leaflet(map_sf) |>
   addCircleMarkers(
     data        = subset(map_sf, peak_class == "Peak < 2"),
     radius      = 3,
-    stroke      = FALSE,
+    stroke      = ~dropped,
+    color       = "#1f77b4",
+    weight      = 2,
     fillColor   = ~pal(type_grouped),
     fillOpacity = 1,
     label       = ~paste0(detention_facility, " (", facility_state, ": peak ", peak_pop, ")"),
@@ -430,8 +627,8 @@ leaflet(map_sf) |>
   addCircleMarkers(
     data        = subset(map_sf, peak_class == "Peak \u2265 2"),
     radius      = radii[map_sf$peak_class == "Peak \u2265 2"],
-    color       = "black",
-    weight      = 1,
+    color       = ~ifelse(dropped, "#1f77b4", "black"),
+    weight      = ~ifelse(dropped, 2, 1),
     fillColor   = ~pal(type_grouped),
     fillOpacity = 0.7,
     label       = ~paste0(detention_facility, " (", facility_state, ": peak ", peak_pop, ")"),

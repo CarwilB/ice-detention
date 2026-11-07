@@ -12,7 +12,7 @@
       "ddp_processing_doc": "https://deportationdata.org/docs/ice/processing.html#detention-facility-populations",
       "ddp_github_repo": "https://github.com/deportationdata/ice"
     },
-    "computed": "2026-10-03T15:51:56Z",
+    "computed": "2026-10-26T14:58:43Z",
     "note": "Each RDS object also carries this metadata as a `provenance` attribute; inspect with attributes(obj)$provenance."
   },
   "files": {
@@ -28,7 +28,7 @@
       "dates_covered": "2025-10-01 to 2026-02-05",
       "underlying_data_coverage": "2022-10-01 to 2026-08-05",
       "comparison_window": "2025-10-01 to 2026-02-05",
-      "computed": "2026-10-03T15:51:56Z",
+      "computed": "2026-10-26T14:58:43Z",
       "pipeline_target": "ddp_fy26_comparison_export"
     },
     "ddp_fy26": {
@@ -46,7 +46,7 @@
       "dates_covered": "2025-10-01 to 2026-02-05",
       "underlying_data_coverage": "2022-10-01 to 2026-08-05",
       "comparison_window": "2025-10-01 to 2026-02-05",
-      "computed": "2026-10-03T15:51:56Z",
+      "computed": "2026-10-26T14:58:43Z",
       "pipeline_target": "ddp_fy26_comparison_export"
     },
     "ddp_fy26_keyed": {
@@ -64,7 +64,7 @@
       "dates_covered": "2025-10-01 to 2026-02-05",
       "underlying_data_coverage": "2022-10-01 to 2026-08-05",
       "comparison_window": "2025-10-01 to 2026-02-05",
-      "computed": "2026-10-03T15:51:56Z",
+      "computed": "2026-10-26T14:58:43Z",
       "pipeline_target": "ddp_fy26_comparison_export"
     },
     "daily_totals_fy26": {
@@ -82,7 +82,7 @@
       "dates_covered": "2025-01-01 to 2026-08-05",
       "underlying_data_coverage": "2022-10-01 to 2026-08-05",
       "comparison_window": "2025-10-01 to 2026-02-05",
-      "computed": "2026-10-03T15:51:56Z",
+      "computed": "2026-10-26T14:58:43Z",
       "pipeline_target": "ddp_fy26_comparison_export"
     },
     "unmatched_fy26": {
@@ -100,7 +100,7 @@
       "dates_covered": "2025-10-01 to 2026-02-05",
       "underlying_data_coverage": "2022-10-01 to 2026-08-05",
       "comparison_window": "2025-10-01 to 2026-02-05",
-      "computed": "2026-10-03T15:51:56Z",
+      "computed": "2026-10-26T14:58:43Z",
       "pipeline_target": "ddp_fy26_comparison_export"
     },
     "daily_unmatched_fy26": {
@@ -118,7 +118,7 @@
       "dates_covered": "2025-10-01 to 2026-02-05",
       "underlying_data_coverage": "2022-10-01 to 2026-08-05",
       "comparison_window": "2025-10-01 to 2026-02-05",
-      "computed": "2026-10-03T15:51:56Z",
+      "computed": "2026-10-26T14:58:43Z",
       "pipeline_target": "ddp_fy26_comparison_export"
     },
     "monthly_unmatched_fy26": {
@@ -136,7 +136,7 @@
       "dates_covered": "2025-10-01 to 2026-02-05",
       "underlying_data_coverage": "2022-10-01 to 2026-08-05",
       "comparison_window": "2025-10-01 to 2026-02-05",
-      "computed": "2026-10-03T15:51:56Z",
+      "computed": "2026-10-26T14:58:43Z",
       "pipeline_target": "ddp_fy26_comparison_export"
     },
     "peak_fy26_w_sparklines": {
@@ -154,7 +154,7 @@
       "dates_covered": "2025-06-01 to 2026-08-05",
       "underlying_data_coverage": "2022-10-01 to 2026-08-05",
       "comparison_window": "2025-10-01 to 2026-02-05",
-      "computed": "2026-10-03T15:51:56Z",
+      "computed": "2026-10-26T14:58:43Z",
       "pipeline_target": "ddp_fy26_comparison_export"
     }
   }

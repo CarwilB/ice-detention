@@ -1,406 +1,850 @@
-canonical_id,canonical_name,canonical_city,canonical_state
-1,Abraxas Academy Detention Center,Morgantown,PA
-3,Adams County Detention Center (Mississippi),Natchez,MS
-5,Alamance County Detention Facility,Graham,NC
-6,Albany County Jail,Albany,NY
-7,Alexandria Staging Facility,Alexandria,LA
-8,Allegany County Jail,Belmont,NY
-9,Allen County Jail,Ft. Wayne,IN
-10,Allen Parish Public Safety Complex,Oberlin,LA
-11,Anchorage Correctional Complex,Anchorage,AK
-12,Anne Arundel County Ordnance Road Correctional Center,Glen Burnie,MD
-14,Baker Correctional Institution,Sanderson,FL
-16,Baker County Sheriff's Office,Macclenny,FL
-17,Baldwin County Correctional Center,Bay Minette,AL
-18,Beaver County Jail,Aliquippa,PA
-19,Bedford Municipal Detention Center,Bedford,TX
-20,Bergen County Jail,Hackensack,NJ
-22,Berks County Residential Center1,Leesport,PA
-23,Berlin Federal Correctional Institution,Berlin,NH
-24,Best Western-Casa De Estrella,El Paso,TX
-25,Bluebonnet Detention Center,Anson,TX
-26,Boone County Jail,Burlington,KY
-27,Bossier Parish Cor. Center,Plain Dealing,LA
-28,Bourbon County Detention Center,Paris,KY
-29,Bradford County Jail,Starke,FL
-30,Bristol County Detention Center,North Dartmouth,MA
-31,Brooklyn MDC,Brooklyn,NY
-32,Brooks County Detention Center,Falfurrias,TX
-34,Broome County Jail,Binghamton,NY
-35,Broward County Jail,Fort Lauderdale,FL
-36,Broward Transitional Center,Pompano Beach,FL
-38,Buffalo (Batavia) Service Processing Center,Batavia,NY
-39,Burleigh County Detention Center,Bismarck,ND
-40,Burnet County Jail,Burnet,TX
-41,Butler County Jail,El Dorado,KS
-42,Butler County Jail,Hamilton,OH
-43,Cabarrus County Jail,Concord,NC
-44,Cache County Jail,Logan,UT
-45,Caldwell County Detention Center,Kingston,MO
-46,Calhoun County Correctional Center,Battle Creek,MI
-48,California City Immigration Processing Center,California City,CA
-50,Cambria County Prison,Ebensburg,PA
-52,Campbell County Detention Center,Newport,KY
-53,Caroline Detention Facility,Bowling Green,VA
-54,Carver County Jail,Chaska,MN
-56,"Cascade County Jail, Montana",Great Falls,MT
-57,Cass County Jail,Plattsmouth,NE
-58,Catahoula Correctional Center,Harrisonburg,LA
-59,CBP Chula Vista BPS,San Diego,CA
-60,CBP San Ysidro POE,San Ysidro,CA
-61,Central Arizona Florence Correctional Complex,Florence,AZ
-63,Central Texas Detention Facility,San Antonio,TX
-64,Charleston County Detention Center,North Charleston,SC
-66,Chase County Jail,Cottonwood Falls,KS
-67,Chautauqua County Jail,Mayville,NY
-68,Chavez Detention Center,Roswell,NM
-70,Chippewa County SSM,Sault Ste. Marie,MI
-71,Chittenden Regional Correctional Facility,South Burlington,VT
-72,Christian County Jail,Hopkinsville,KY
-73,Christian County Jail,Ozark,MO
-74,Cibola County Correctional Center,Milan,NM
-75,Cibola County Detention Center,Grants,NM
-76,Cimmarron Correctional Facility,Cushing,OK
-77,Clark County Jail (Indiana),Jeffersonville,IN
-79,Clay County Justice Center,Brazil,IN
-80,Clinton County Correctional Facility,McElhattan,PA
-82,Clinton County Jail,Frankfort,IN
-83,Clinton County Jail,Plattsburgh,NY
-84,Coastal Bend Detention Facility,Robstown,TX
-85,Cobb County Jail,Marietta,GA
-86,Collier County Naples Jail Center,Naples,FL
-87,Comfort Suites-Casa Consuelo,El Paso,TX
-88,Correctional. Center of Northwest Ohio,Stryker,OH
-89,Cowlitz County Juvenile,Longview,WA
-90,Crow Wing County Jail,Brainerd,MN
-91,Cumberland County Jail,Portland,ME
-92,Dakota County Jail,Dakota City,NE
-93,Dallas County Jail - Lew Sterrett Justice Center,Dallas,TX
-94,Davidson County Sheriff,Nashville,TN
-95,Daviess County Detention,Martinsburg,WV
-96,Daviess County Detention,Owensboro,KY
-97,Davis County,Farmington,UT
-98,Dekalb County Detention Center,Fort Payne,AL
-100,Delaware County Jail (George W. Hill),Thornton,PA
-101,Denver Contract Detention Facility,Aurora,CO
-102,Denver Contract Detention Facility (CDF) II,Aurora,CO
-103,Department of Corrections Hagatna,Hagatna,GU
-105,Adelanto ICE Processing Center,Adelanto,CA
-106,Diamondback Correctional Facility,Watonga,OK
-108,Camp East Montana,El Paso,TX
-109,Dodge County Jail,Juneau,WI
-110,Dona Ana County Detention Center,Las Cruces,NM
-111,Dorchester County Detention Center,Cambridge,MD
-112,Dorchester County Detention Center,Summerville,SC
-113,Douglas County,Superior,WI
-114,Douglas County Department of Corrections,Omaha,NE
-115,East Hidalgo Detention Center,La Villa,TX
-116,East Mesa Detention Facility,San Diego,CA
-117,Eden Detention Center,Eden,TX
-118,El Paso County Detention Facility,El Paso,TX
-119,El Paso Service Processing Center,El Paso,TX
-120,El Valle Detention Facility,Raymondville,TX
-121,Elizabeth Detention Center,Elizabeth,NJ
-122,Elmore County Jail,Mountain Home,ID
-123,Eloy Detention Center,Eloy,AZ
-124,Erie County Jail,Erie,PA
-125,Delaney Hall Detention Facility,Newark,NJ
-127,Etowah County Jail,Gadsden,AL
-128,Euless City Jail,Euless,TX
-129,FCI Atlanta,Atlanta,GA
-130,FDC Philadelphia,Philadelphia,PA
-132,Fayette County Detention Center,Lexington,KY
-133,Finney County Jail,Garden City,KS
-134,Florence Service Processing Center,Florence,AZ
-135,Florence Staging Facility,Florence,AZ
-136,Florida Soft-Sided Facility,Ochopee,FL
-137,Floyd County Jail,Rome,GA
-138,Folkston Annex IPC,Folkston,GA
-139,Folkston ICE Processing Center,Folkston,GA
-141,Forsyth County Jail,Winston-Salem,NC
-142,Franklin County House of Correction,Greenfield,MA
-143,Franklin County Jail,Chambersburg,PA
-144,Frederick County Detention Center,Frederick,MD
-145,Freeborn County Adult Detention Center,Albert Lea,MN
-146,Fulton County Jail Indiana,Rochester,IN
-147,Garvin County Detention Center,Pauls Valley,OK
-148,Gaston County Jail,Gastonia,NC
-149,Geauga County Jail,Chardon,OH
-150,Glades County Detention Center,Moore Haven,FL
-151,Golden State Annex,McFarland,CA
-152,Grand Forks County Correctional Facility,Grand Forks,ND
-153,Grayson County Jail,Leitchfield,KY
-154,Greene County Jail,Springfield,MO
-155,Guaynabo MDC (San Juan),San Juan,PR
-156,Hall County Department of Corrections,Grand Island,NE
-158,Hancock County Public Safety Complex,Bay St. Louis,MS
-159,Hardin County Jail,Eldora,IA
-160,Henderson County Jail,Athens,TX
-162,Henderson Detention,Henderson,NV
-163,Hillsborough County Jail,Tampa,FL
-164,Holiday Inn Exp San Antonio,San Antonio,TX
-165,Holiday Inn Express-Casa De La Luz,Phoenix,AZ
-166,Honolulu Federal Detention Center,Honolulu,HI
-167,Hopkins County Jail,Madisonville,KY
-168,Houston Processing Center,Houston,TX
-169,Howard County Detention Center,Jessup,MD
-170,Hudson County Correctional Center,Kearny,NJ
-171,IAH Secure Adult Detention Facility (Polk),Livingston,TX
-174,Imperial Regional Detention Facility,Calexico,CA
-175,Irwin County Detention Center,Ocilla,GA
-176,JTF Camp Six,Guantanamo Bay,Cuba
-177,Jack Harwell Detention Center,Waco,TX
-178,Jackson Parish Correctional Center,Jonesboro,LA
-179,James A. Musick Facility,Irvine,CA
-180,Jefferson County Jail,Rigby,ID
-182,Joe Corley Processing Center,Conroe,TX
-183,Johnson County Corrections Center,Cleburne,TX
-184,Kandiyohi County Jail,Willmar,MN
-185,Kankakee County Jail (Jerome Combs Detention Center),Kankakee,IL
-186,Kansas City Holdroom,Kansas City,MO
-188,Karnes County Correctional Center,Karnes City,TX
-190,Karnes County Residential Center,Karnes City,TX
-191,Karnes County Immigration Processing Center,Karnes City,TX
-192,Kay County Justice Facility,Newkirk,OK
-193,Kenosha County Detention Center,Kenosha,WI
-194,Kenton County Jail,Covington,KY
-195,Kittitas County Jail,Ellensburg,WA
-196,Knox County Detention Facility,Knoxville,TN
-197,Krome North Service Processing Center,Miami,FL
-199,La Palma Correctional Center,Eloy,AZ
-200,La Paz County Adult Detention Facility,Parker,AZ
-201,La Quinta Inn By Wyndham Sna,San Antonio,TX
-202,La Quinta-Wyndham-Casa De Paz,Pearsall,TX
-203,La Salle County Regional Detention Center,Encinal,TX
-204,Lake County Jail,Tavares,FL
-205,Laramie County Jail,Cheyenne,WY
-206,Laredo Processing Center,Laredo,TX
-207,Lasalle Correctional Center Olla,Olla,LA
-208,Central Louisiana ICE Processing Center (CLIPC),Jena,LA
-209,Laurel County Correctional Center,London,KY
-210,Lawrence County,Deadwood,SD
-211,Leavenworth US Penitentiary,Leavenworth,KS
-212,Lehigh County Jail (Pennsylvania),Allentown,PA
-213,Levy County Jail,Bronson,FL
-214,Lexington County Jail,Lexington,SC
-215,Limestone County Detention Center,Groesbeck,TX
-216,Lincoln County Detention Center,Troy,MO
-217,Lincoln County Jail,North Platte,NE
-218,Linn County Jail,Cedar Rapids,IA
-219,Logan County Jail,Guthrie,OK
-220,Lonoke Police Department,Lonoke,AR
-221,Louisiana ICE Processing,Angola,LA
-222,Lubbock County Detention Center,Lubbock,TX
-223,Madison County Jail,Canton,MS
-224,Mahoning County Jail,Youngstown,OH
-225,Folkston Main IPC,Folkston,GA
-226,Marion County Jail,Indianapolis,IN
-227,Marshall County Jail,Marshalltown,IA
-228,Martin County Jail,Stuart,FL
-229,Mccook Detention Center,McCook,NE
-230,Mchenry County Correctional Facility,Woodstock,IL
-231,Mesa Verde ICE Processing Center,Bakersfield,CA
-232,Miami Correctional Center,Bunker Hill,IN
-233,Miami Federal Detention,Miami,FL
-234,Miami Staging Facility,Miami,FL
-235,Midland County Detention Center,Midland,TX
-236,Miller County Jail,Texarkana,AR
-237,Minicassia Detention Center,Burley,ID
-238,Minnehaha County Jail,Sioux Falls,SD
-239,Monroe County Detention Center,Key West,FL
-240,Monroe County Detention-Dorm,Monroe,MI
-241,Montgomery City Jail,Montgomery,AL
-242,Montgomery County Jail,Fonda,NY
-243,Montgomery County Jail,Montgomery City,MO
-244,Montgomery ICE Processing Center,Conroe,TX
-245,Morgan County Adult Detention Center,Versailles,MO
-246,Morrow County Correctional Facility,Mount Gilead,OH
-248,Moshannon Valley Processing Center,Philipsburg,PA
-249,Muscatine County Jail,Muscatine,IA
-250,Nassau County Correctional Center,East Meadow,NY
-251,Natchitoches Parish Detention. Center,Natchitoches,LA
-252,Natrona County Jail,Casper,WY
-253,Nelson Coleman Correction,Killona,LA
-254,Nevada Southern Detention Center,Pahrump,NV
-255,New Hanover County Jail,Castle Hayne,NC
-256,Niagara County Jail,Lockport,NY
-257,Nobles County Jail,Worthington,MN
-258,North Central Regional Jail,Greenwood,WV
-260,North Lake Correctional Facility,Baldwin,MI
-262,Northeast Ohio Correctional Center,Youngstown,OH
-263,Northern Oregon Correctional Facility,The Dalles,OR
-264,Northern Oregon Juvenile Detention,The Dalles,OR
-265,Northern Regional Jail,Moundsville,WV
-268,Northwest Regional Corrections Center,Crookston,MN
-269,Northwest State Correctional Center,Swanton,VT
-271,Nye County Detention Center (Nevada),Pahrump,NV
-272,Ogle County Jail,Oregon,IL
-273,Okmulgee County Jail,Okmulgee,OK
-274,Oldham County Detention Center,La Grange,KY
-278,Orange County Jail (Florida),Orlando,FL
-279,Orange County Jail (New York),Goshen,NY
-281,Otay Mesa Detention Center,San Diego,CA
-282,Otero County Detention,Alamogordo,NM
-283,Otero County Processing Center,Chaparral,NM
-284,Ozark County Sheriff's Office,Gainesville,MO
-285,Pennington County Jail (South Dakota),Rapid City,SD
-287,Phelps County Jail (Missouri),Rolla,MO
-288,Phelps County Jail (Nebraska),Holdrege,NE
-289,Pickens County Detention Center,Carrollton,AL
-291,Pike County Jail,Lords Valley,PA
-292,Pine Prairie ICE Processing Center,Pine Prairie,LA
-293,Pinellas County Jail,Clearwater,FL
-294,Platte County Detention Center,Platte City,MO
-295,Platte County Jail,Wheatland,WY
-296,Plymouth County Correctional Facility,Plymouth,MA
-297,Polk County Jail,Des Moines,IA
-300,Pottawattamie County Jail,Council Bluffs,IA
-302,Prairieland Detention Center,Alvarado,TX
-303,Farmville Detention Center,Farmville,VA
-304,Pulaski County Jail,Ullin,IL
-305,Putnam County Sheriff,Cookeville,TN
-306,Randall County Jail,Amarillo,TX
-307,Red Roof Inn,Seatac,WA
-308,Rensselaer County Correctional Facility,Troy,NY
-310,Richwood Correctional Center,Monroe,LA
-311,Rio Grande County Jail,Del Norte,CO
-312,Rio Grande Detention Center,Laredo,TX
-313,Port Isabel Detention Center,Los Fresnos,TX
-314,River Correctional Center,Ferriday,LA
-315,Riverside County Sheriff,Riverside,CA
-316,Riverside Regional Jail,Hopewell,VA
-317,Roanoke City Jail,Roanoke,VA
-318,Robert A. Deyton Detention Center,Lovejoy,GA
-320,Rockingham County Jail,Harrisonburg,VA
-321,Rolling Plains Detention Center,Haskell,TX
-323,Saint Tammany Parish Jail,Covington,LA
-324,Saipan Department of Corrections (Susupe),Saipan,MP
-325,Saline County Jail,Wilber,NE
-326,Salt Lake County Metro Jail,Salt Lake City,UT
-327,San Diego District Staging,San Diego,CA
-328,San Juan Staging,Guaynabo,PR
-329,San Luis Regional Detention Center,San Luis,AZ
-330,Sarpy County Jail,Papillion,NE
-331,Sauk County Sheriff,Baraboo,WI
-332,Sebastian County Detention Center,Fort Smith,AR
-333,Seneca County Jail,Tiffin,OH
-334,Shawnee County Department of Corrections,Topeka,KS
-335,Sherburne County Jail,Elk River,MN
-336,Sioux County Jail,Orange City,IA
-337,South Central Regional Jail,Charleston,WV
-339,South Louisiana ICE Processing Center,Basile,LA
-341,South Texas Family Residential Center,Dilley,TX
-343,South Texas ICE Processing Center,Pearsall,TX
-344,Southern Regional,Beaver,WV
-345,Southwestern Regional Jail,Holden,WV
-346,St. Clair County Jail,Port Huron,MI
-347,Ste. Genevieve County Sheriff/Jail,Ste. Genevieve,MO
-348,Stewart Detention Center,Lumpkin,GA
-349,Story County Jail,Nevada,IA
-350,Strafford County Corrections,Dover,NH
-351,Suffolk County House of Corrections,Boston,MA
-352,Suites On Scottsdale-Casa De Alegría,Scottsdale,AZ
-353,Sunny Glen CLD Home NDR Center,Raymondville,TX
-354,Sweetwater County Jail,Rock Springs,WY
-356,T. Don Hutto Detention Center,Taylor,TX
-357,Northwest ICE Processing Center,Tacoma,WA
-358,Tallahatchie County Correctional Facility,Tutwiler,MS
-359,Teller County Jail,Divide,CO
-360,Texas Health Huguley Hospital,Burleson,TX
-361,Theo Lacy Facility,Orange,CA
-362,Tooele County Jail,Tooele,UT
-363,Tornillo-Guadalupe POE,Tornillo,TX
-364,Torrance County Detention Facility,Estancia,NM
-365,Trusted Adult Karnes Fsc,San Antonio,TX
-366,Dilley Immigration Processing Center,Dilley,TX
-367,Tulsa County Jail (David L. Moss Justice Center),Tulsa,OK
-368,Turner Guilford Knight (TGK) Jail,Miami,FL
-369,Two Bridges Regional Jail,Wiscasset,ME
-370,Uinta County Jail,Evanston,WY
-371,Val Verde Correctional Facility,Del Rio,TX
-372,Victoria County Jail,Victoria,TX
-373,Virginia Peninsula Regional Jail,Williamsburg,VA
-374,Wake County Sheriff Department,Raleigh,NC
-375,Wakulla County Jail,Crawfordville,FL
-376,Walton County Jail,Defuniak Springs,FL
-377,Ward County Jail,Minot,ND
-378,Washington County Detention Center,Fayetteville,AR
-380,Washington County Jail (Purgatory Correctional Facility),Hurricane,UT
-381,Washoe County Jail,Reno,NV
-382,Waukesha County Jail,Waukesha,WI
-383,Webb County Detention Center (CCA),Laredo,TX
-384,Weber County Jail,Ogden,UT
-385,West Texas Detention Facility,Sierra Blanca,TX
-386,Western Regional Jail And Correctional Facility,Barboursville,WV
-387,Western Tennessee Detention Facility,Mason,TN
-388,Western Virginia Regional Jail,Salem,VA
-389,Whitfield County Jail,Dalton,GA
-390,Wingate-Wyndham Casa Esperanza,Yuma,AZ
-391,Winn Correctional Center,Winnfield,LA
-392,Woodbury County Jail,Sioux City,IA
-393,Worcester County Jail,Snow Hill,MD
-394,Wyatt Detention Center,Central Falls,RI
-395,Yakima County Department of Corrections,Yakima,WA
-396,Yankton County Jail,Yankton,SD
-397,York County Prison,York,PA
-398,Yuba County Jail,Marysville,CA
-399,Essex County Correctional Facility,Newark,NJ
-400,Desert View Annex,Adelanto,CA
-401,Dilley Processing Single Adult Female,Dilley,TX
-402,Lafayette Parish Correctional Center,Lafayette,LA
-403,Lewisburg US Penitentiary,Lewisburg,PA
-404,Migrant Ops Center Main A,Fpo,FL
-1001,Atlanta City Detention Center,Atlanta,GA
-1002,Folkston ICE Processing Center (D. Ray James),Folkston,GA
-1003,Contra Costa County Jail West,Richmond,CA
-1004,Rio Cosumnes Correctional. Center,Elk Grove,CA
-1005,Otero County Prison Facility,Chaparral,NM
-1006,York County Detention Center,York,SC
-1007,Willacy County Regional Detention Facility,Raymondville,TX
-1008,Ramsey County Adult Detention Center,St. Paul,MN
-1009,Dearborn Police Department,Dearborn,MI
-1010,Wayne County Jail,Lyons,NY
-1011,Hall County Jail,Gainesville,GA
-1012,Mecklenburg County Detention Center North,Charlotte,NC
-1013,Alexandria City Jail,Alexandria,VA
-1014,Josephine County Jail,Grants Pass,OR
-1015,Rock Island County Correctional Center,Rock Island,IL
-1016,El Paso County Criminal Justice Center,Colorado Springs,CO
-1017,Elgin Police Department,Elgin,IL
-1018,Moffat County Jail,Craig,CO
-1019,Orange County Intake Release Facility,Santa Ana,CA
-1020,Kent County Jail,Grand Rapids,MI
-1021,Glendale Police Department,Glendale,CA
-1022,Tom Green County Jail,San Angelo,TX
-1023,Yavapai County Detention Center,Camp Verde,AZ
-1024,Dale G. Haile Detention Center,Caldwell,ID
-1025,Sangamon County Jail,Springfield,IL
-1026,Prince William County Correctional Facility,Manassas,VA
-1027,Fairfax County Adult Detention Center,Fairfax,VA
-1028,Norfolk County Jail,Dedham,MA
-1029,Santa Cruz County Jail,Nogales,AZ
-1030,Taylor County Adult Detention Facility,Abilene,TX
-1031,Titus County Jail,Mt. Pleasant,TX
-1032,Alhambra City Jail,Alhambra,CA
-1033,Allegheny County Jail,Pittsburgh,PA
-1034,Apache County Jail,St Johns,AZ
-1035,Bedford Heights City Jail,Bedford Hts,OH
-1036,Coconino County Detention Facility,Flagstaff,AZ
-1037,Eastern Regional Jail,Martinsburg,WV
-1038,La Plata County Jail,Durango,CO
-1039,Mecklenburg County Jail Central,Charlotte,NC
-1040,Mississippi County Detention Center,Charleston,MO
-1041,Montgomery County Correctional Facility,Norristown,PA
-1042,Montgomery County Mac Sim Butler Detention Facilit,Montgomery,AL
-1043,Navajo County Sheriff,Holbrook,AZ
-1044,Ontario County Jail,Canandaigua,NY
-1045,Orange County Central Women's Jail,Santa Ana,CA
-1046,Pomona City Jail,Pomona,CA
-1047,Pueblo County Jail,Pueblo,CO
-1048,Rice County Detention Center,Lyons,KS
-1049,Salem County Correctional Facility,Woodstown,NJ
-1050,San Bernardino County Jail,San Bernardino,CA
-1051,Santa Ana City Jail,Santa Ana,CA
-1052,Tensas Parish Detention Center,Waterproof,LA
-1053,Utah County Jail,Spanish Fork,UT
-1210,CCA Central Arizona Detention Center,Florence,AZ
+canonical_id,canonical_name,canonical_city,canonical_state,detloc
+1,Abraxas Academy Detention Center,Morgantown,PA,NA
+3,Adams County Detention Center (Mississippi),Natchez,MS,NA
+5,Alamance County Detention Facility,Graham,NC,NA
+6,Albany County Jail,Albany,NY,NA
+7,Alexandria Staging Facility,Alexandria,LA,NA
+8,Allegany County Jail,Belmont,NY,NA
+9,Allen County Jail,Ft. Wayne,IN,NA
+10,Allen Parish Public Safety Complex,Oberlin,LA,NA
+11,Anchorage Correctional Complex,Anchorage,AK,NA
+12,Anne Arundel County Ordnance Road Correctional Center,Glen Burnie,MD,NA
+14,Baker Correctional Institution,Sanderson,FL,NA
+16,Baker County Sheriff's Office,Macclenny,FL,NA
+17,Baldwin County Correctional Center,Bay Minette,AL,NA
+18,Beaver County Jail,Aliquippa,PA,NA
+19,Bedford Municipal Detention Center,Bedford,TX,NA
+20,Bergen County Jail,Hackensack,NJ,NA
+22,Berks County Residential Center1,Leesport,PA,NA
+23,Berlin Federal Correctional Institution,Berlin,NH,NA
+24,Best Western-Casa De Estrella,El Paso,TX,NA
+25,Bluebonnet Detention Center,Anson,TX,NA
+26,Boone County Jail,Burlington,KY,NA
+27,Bossier Parish Cor. Center,Plain Dealing,LA,NA
+28,Bourbon County Detention Center,Paris,KY,NA
+29,Bradford County Jail,Starke,FL,NA
+30,Bristol County Detention Center,North Dartmouth,MA,NA
+31,Brooklyn MDC,Brooklyn,NY,NA
+32,Brooks County Detention Center,Falfurrias,TX,NA
+34,Broome County Jail,Binghamton,NY,NA
+35,Broward County Jail,Fort Lauderdale,FL,NA
+36,Broward Transitional Center,Pompano Beach,FL,NA
+38,Buffalo (Batavia) Service Processing Center,Batavia,NY,NA
+39,Burleigh County Detention Center,Bismarck,ND,NA
+40,Burnet County Jail,Burnet,TX,NA
+41,Butler County Jail,El Dorado,KS,NA
+42,Butler County Jail,Hamilton,OH,NA
+43,Cabarrus County Jail,Concord,NC,NA
+44,Cache County Jail,Logan,UT,NA
+45,Caldwell County Detention Center,Kingston,MO,NA
+46,Calhoun County Correctional Center,Battle Creek,MI,NA
+48,California City Immigration Processing Center,California City,CA,NA
+50,Cambria County Prison,Ebensburg,PA,NA
+52,Campbell County Detention Center,Newport,KY,NA
+53,Caroline Detention Facility,Bowling Green,VA,NA
+54,Carver County Jail,Chaska,MN,NA
+56,"Cascade County Jail, Montana",Great Falls,MT,NA
+57,Cass County Jail,Plattsmouth,NE,NA
+58,Catahoula Correctional Center,Harrisonburg,LA,NA
+59,CBP Chula Vista BPS,San Diego,CA,NA
+60,CBP San Ysidro POE,San Ysidro,CA,NA
+61,Central Arizona Florence Correctional Complex,Florence,AZ,NA
+63,Central Texas Detention Facility,San Antonio,TX,NA
+64,Charleston County Detention Center,North Charleston,SC,NA
+66,Chase County Jail,Cottonwood Falls,KS,NA
+67,Chautauqua County Jail,Mayville,NY,NA
+68,Chavez Detention Center,Roswell,NM,NA
+70,Chippewa County SSM,Sault Ste. Marie,MI,NA
+71,Chittenden Regional Correctional Facility,South Burlington,VT,NA
+72,Christian County Jail,Hopkinsville,KY,NA
+73,Christian County Jail,Ozark,MO,NA
+74,Cibola County Correctional Center,Milan,NM,NA
+75,Cibola County Detention Center,Grants,NM,NA
+76,Cimmarron Correctional Facility,Cushing,OK,NA
+77,Clark County Jail (Indiana),Jeffersonville,IN,NA
+79,Clay County Justice Center,Brazil,IN,NA
+80,Clinton County Correctional Facility,McElhattan,PA,NA
+82,Clinton County Jail,Frankfort,IN,NA
+83,Clinton County Jail,Plattsburgh,NY,NA
+84,Coastal Bend Detention Facility,Robstown,TX,NA
+85,Cobb County Jail,Marietta,GA,NA
+86,Collier County Naples Jail Center,Naples,FL,NA
+87,Comfort Suites-Casa Consuelo,El Paso,TX,NA
+88,Correctional. Center of Northwest Ohio,Stryker,OH,NA
+89,Cowlitz County Juvenile,Longview,WA,NA
+90,Crow Wing County Jail,Brainerd,MN,NA
+91,Cumberland County Jail,Portland,ME,NA
+92,Dakota County Jail,Dakota City,NE,NA
+93,Dallas County Jail - Lew Sterrett Justice Center,Dallas,TX,NA
+94,Davidson County Sheriff,Nashville,TN,NA
+95,Daviess County Detention,Martinsburg,WV,NA
+96,Daviess County Detention,Owensboro,KY,NA
+97,Davis County,Farmington,UT,NA
+98,Dekalb County Detention Center,Fort Payne,AL,NA
+100,Delaware County Jail (George W. Hill),Thornton,PA,NA
+101,Denver Contract Detention Facility,Aurora,CO,NA
+102,Denver Contract Detention Facility (CDF) II,Aurora,CO,NA
+103,Department of Corrections Hagatna,Hagatna,GU,NA
+105,Adelanto ICE Processing Center,Adelanto,CA,NA
+106,Diamondback Correctional Facility,Watonga,OK,NA
+108,Camp East Montana,El Paso,TX,NA
+109,Dodge County Jail,Juneau,WI,NA
+110,Dona Ana County Detention Center,Las Cruces,NM,NA
+111,Dorchester County Detention Center,Cambridge,MD,NA
+112,Dorchester County Detention Center,Summerville,SC,NA
+113,Douglas County,Superior,WI,NA
+114,Douglas County Department of Corrections,Omaha,NE,NA
+115,East Hidalgo Detention Center,La Villa,TX,NA
+116,East Mesa Detention Facility,San Diego,CA,NA
+117,Eden Detention Center,Eden,TX,NA
+118,El Paso County Detention Facility,El Paso,TX,NA
+119,El Paso Service Processing Center,El Paso,TX,NA
+120,El Valle Detention Facility,Raymondville,TX,NA
+121,Elizabeth Detention Center,Elizabeth,NJ,NA
+122,Elmore County Jail,Mountain Home,ID,NA
+123,Eloy Detention Center,Eloy,AZ,NA
+124,Erie County Jail,Erie,PA,NA
+125,Delaney Hall Detention Facility,Newark,NJ,NA
+127,Etowah County Jail,Gadsden,AL,NA
+128,Euless City Jail,Euless,TX,NA
+129,FCI Atlanta,Atlanta,GA,NA
+130,FDC Philadelphia,Philadelphia,PA,NA
+132,Fayette County Detention Center,Lexington,KY,NA
+133,Finney County Jail,Garden City,KS,FINNEKS
+134,Florence Service Processing Center,Florence,AZ,NA
+135,Florence Staging Facility,Florence,AZ,NA
+136,Florida Soft-Sided Facility,Ochopee,FL,NA
+137,Floyd County Jail,Rome,GA,NA
+138,Folkston Annex IPC,Folkston,GA,NA
+139,Folkston ICE Processing Center,Folkston,GA,NA
+141,Forsyth County Jail,Winston-Salem,NC,NA
+142,Franklin County House of Correction,Greenfield,MA,NA
+143,Franklin County Jail,Chambersburg,PA,NA
+144,Frederick County Detention Center,Frederick,MD,NA
+145,Freeborn County Adult Detention Center,Albert Lea,MN,NA
+146,Fulton County Jail Indiana,Rochester,IN,NA
+147,Garvin County Detention Center,Pauls Valley,OK,NA
+148,Gaston County Jail,Gastonia,NC,NA
+149,Geauga County Jail,Chardon,OH,NA
+150,Glades County Detention Center,Moore Haven,FL,NA
+151,Golden State Annex,McFarland,CA,NA
+152,Grand Forks County Correctional Facility,Grand Forks,ND,NA
+153,Grayson County Jail,Leitchfield,KY,NA
+154,Greene County Jail,Springfield,MO,NA
+155,Guaynabo MDC (San Juan),San Juan,PR,NA
+156,Hall County Department of Corrections,Grand Island,NE,NA
+158,Hancock County Public Safety Complex,Bay St. Louis,MS,NA
+159,Hardin County Jail,Eldora,IA,NA
+160,Henderson County Jail,Athens,TX,NA
+162,Henderson Detention,Henderson,NV,NA
+163,Hillsborough County Jail,Tampa,FL,NA
+164,Holiday Inn Exp San Antonio,San Antonio,TX,NA
+165,Holiday Inn Express-Casa De La Luz,Phoenix,AZ,NA
+166,Honolulu Federal Detention Center,Honolulu,HI,NA
+167,Hopkins County Jail,Madisonville,KY,NA
+168,Houston Processing Center,Houston,TX,NA
+169,Howard County Detention Center,Jessup,MD,NA
+170,Hudson County Correctional Center,Kearny,NJ,NA
+171,IAH Secure Adult Detention Facility (Polk),Livingston,TX,NA
+174,Imperial Regional Detention Facility,Calexico,CA,NA
+175,Irwin County Detention Center,Ocilla,GA,NA
+176,JTF Camp Six,Guantanamo Bay,Cuba,NA
+177,Jack Harwell Detention Center,Waco,TX,NA
+178,Jackson Parish Correctional Center,Jonesboro,LA,NA
+179,James A. Musick Facility,Irvine,CA,NA
+180,Jefferson County Jail,Rigby,ID,NA
+182,Joe Corley Processing Center,Conroe,TX,NA
+183,Johnson County Corrections Center,Cleburne,TX,NA
+184,Kandiyohi County Jail,Willmar,MN,NA
+185,Kankakee County Jail (Jerome Combs Detention Center),Kankakee,IL,NA
+186,Kansas City Holdroom,Kansas City,MO,KANHOLD
+188,Karnes County Correctional Center,Karnes City,TX,NA
+190,Karnes County Residential Center,Karnes City,TX,NA
+191,Karnes County Immigration Processing Center,Karnes City,TX,NA
+192,Kay County Justice Facility,Newkirk,OK,NA
+193,Kenosha County Detention Center,Kenosha,WI,NA
+194,Kenton County Jail,Covington,KY,NA
+195,Kittitas County Jail,Ellensburg,WA,NA
+196,Knox County Detention Facility,Knoxville,TN,NA
+197,Krome North Service Processing Center,Miami,FL,NA
+199,La Palma Correctional Center,Eloy,AZ,NA
+200,La Paz County Adult Detention Facility,Parker,AZ,NA
+201,La Quinta Inn By Wyndham Sna,San Antonio,TX,NA
+202,La Quinta-Wyndham-Casa De Paz,Pearsall,TX,NA
+203,La Salle County Regional Detention Center,Encinal,TX,NA
+204,Lake County Jail,Tavares,FL,NA
+205,Laramie County Jail,Cheyenne,WY,NA
+206,Laredo Processing Center,Laredo,TX,NA
+207,Lasalle Correctional Center Olla,Olla,LA,NA
+208,Central Louisiana ICE Processing Center (CLIPC),Jena,LA,NA
+209,Laurel County Correctional Center,London,KY,NA
+210,Lawrence County,Deadwood,SD,NA
+211,Leavenworth US Penitentiary,Leavenworth,KS,NA
+212,Lehigh County Jail (Pennsylvania),Allentown,PA,NA
+213,Levy County Jail,Bronson,FL,NA
+214,Lexington County Jail,Lexington,SC,NA
+215,Limestone County Detention Center,Groesbeck,TX,NA
+216,Lincoln County Detention Center,Troy,MO,NA
+217,Lincoln County Jail,North Platte,NE,NA
+218,Linn County Jail,Cedar Rapids,IA,NA
+219,Logan County Jail,Guthrie,OK,NA
+220,Lonoke Police Department,Lonoke,AR,NA
+221,Louisiana ICE Processing,Angola,LA,NA
+222,Lubbock County Detention Center,Lubbock,TX,NA
+223,Madison County Jail,Canton,MS,NA
+224,Mahoning County Jail,Youngstown,OH,NA
+225,Folkston Main IPC,Folkston,GA,NA
+226,Marion County Jail,Indianapolis,IN,NA
+227,Marshall County Jail,Marshalltown,IA,NA
+228,Martin County Jail,Stuart,FL,NA
+229,Mccook Detention Center,McCook,NE,NA
+230,Mchenry County Correctional Facility,Woodstock,IL,NA
+231,Mesa Verde ICE Processing Center,Bakersfield,CA,NA
+232,Miami Correctional Center,Bunker Hill,IN,NA
+233,Miami Federal Detention,Miami,FL,NA
+234,Miami Staging Facility,Miami,FL,NA
+235,Midland County Detention Center,Midland,TX,NA
+236,Miller County Jail,Texarkana,AR,NA
+237,Minicassia Detention Center,Burley,ID,NA
+238,Minnehaha County Jail,Sioux Falls,SD,NA
+239,Monroe County Detention Center,Key West,FL,NA
+240,Monroe County Detention-Dorm,Monroe,MI,NA
+241,Montgomery City Jail,Montgomery,AL,NA
+242,Montgomery County Jail,Fonda,NY,NA
+243,Montgomery County Jail,Montgomery City,MO,NA
+244,Montgomery ICE Processing Center,Conroe,TX,NA
+245,Morgan County Adult Detention Center,Versailles,MO,NA
+246,Morrow County Correctional Facility,Mount Gilead,OH,NA
+248,Moshannon Valley Processing Center,Philipsburg,PA,NA
+249,Muscatine County Jail,Muscatine,IA,NA
+250,Nassau County Correctional Center,East Meadow,NY,NA
+251,Natchitoches Parish Detention. Center,Natchitoches,LA,NA
+252,Natrona County Jail,Casper,WY,NA
+253,Nelson Coleman Correction,Killona,LA,NA
+254,Nevada Southern Detention Center,Pahrump,NV,NA
+255,New Hanover County Jail,Castle Hayne,NC,NA
+256,Niagara County Jail,Lockport,NY,NA
+257,Nobles County Jail,Worthington,MN,NA
+258,North Central Regional Jail,Greenwood,WV,NA
+260,North Lake Correctional Facility,Baldwin,MI,NA
+262,Northeast Ohio Correctional Center,Youngstown,OH,NA
+263,Northern Oregon Correctional Facility,The Dalles,OR,NA
+264,Northern Oregon Juvenile Detention,The Dalles,OR,NA
+265,Northern Regional Jail,Moundsville,WV,NA
+268,Northwest Regional Corrections Center,Crookston,MN,NA
+269,Northwest State Correctional Center,Swanton,VT,NA
+271,Nye County Detention Center (Nevada),Pahrump,NV,NA
+272,Ogle County Jail,Oregon,IL,NA
+273,Okmulgee County Jail,Okmulgee,OK,NA
+274,Oldham County Detention Center,La Grange,KY,NA
+278,Orange County Jail (Florida),Orlando,FL,NA
+279,Orange County Jail (New York),Goshen,NY,NA
+281,Otay Mesa Detention Center,San Diego,CA,NA
+282,Otero County Detention,Alamogordo,NM,NA
+283,Otero County Processing Center,Chaparral,NM,NA
+284,Ozark County Sheriff's Office,Gainesville,MO,NA
+285,Pennington County Jail (South Dakota),Rapid City,SD,NA
+287,Phelps County Jail (Missouri),Rolla,MO,NA
+288,Phelps County Jail (Nebraska),Holdrege,NE,NA
+289,Pickens County Detention Center,Carrollton,AL,NA
+291,Pike County Jail,Lords Valley,PA,NA
+292,Pine Prairie ICE Processing Center,Pine Prairie,LA,NA
+293,Pinellas County Jail,Clearwater,FL,NA
+294,Platte County Detention Center,Platte City,MO,NA
+295,Platte County Jail,Wheatland,WY,NA
+296,Plymouth County Correctional Facility,Plymouth,MA,NA
+297,Polk County Jail,Des Moines,IA,NA
+300,Pottawattamie County Jail,Council Bluffs,IA,NA
+302,Prairieland Detention Center,Alvarado,TX,NA
+303,Farmville Detention Center,Farmville,VA,NA
+304,Pulaski County Jail,Ullin,IL,NA
+305,Putnam County Sheriff,Cookeville,TN,NA
+306,Randall County Jail,Amarillo,TX,NA
+307,Red Roof Inn,Seatac,WA,NA
+308,Rensselaer County Correctional Facility,Troy,NY,NA
+310,Richwood Correctional Center,Monroe,LA,NA
+311,Rio Grande County Jail,Del Norte,CO,NA
+312,Rio Grande Detention Center,Laredo,TX,NA
+313,Port Isabel Detention Center,Los Fresnos,TX,NA
+314,River Correctional Center,Ferriday,LA,NA
+315,Riverside County Sheriff,Riverside,CA,NA
+316,Riverside Regional Jail,Hopewell,VA,NA
+317,Roanoke City Jail,Roanoke,VA,NA
+318,Robert A. Deyton Detention Center,Lovejoy,GA,NA
+320,Rockingham County Jail,Harrisonburg,VA,NA
+321,Rolling Plains Detention Center,Haskell,TX,NA
+323,Saint Tammany Parish Jail,Covington,LA,NA
+324,Saipan Department of Corrections (Susupe),Saipan,MP,NA
+325,Saline County Jail,Wilber,NE,NA
+326,Salt Lake County Metro Jail,Salt Lake City,UT,NA
+327,San Diego District Staging,San Diego,CA,NA
+328,San Juan Staging,Guaynabo,PR,NA
+329,San Luis Regional Detention Center,San Luis,AZ,NA
+330,Sarpy County Jail,Papillion,NE,NA
+331,Sauk County Sheriff,Baraboo,WI,NA
+332,Sebastian County Detention Center,Fort Smith,AR,NA
+333,Seneca County Jail,Tiffin,OH,NA
+334,Shawnee County Department of Corrections,Topeka,KS,NA
+335,Sherburne County Jail,Elk River,MN,NA
+336,Sioux County Jail,Orange City,IA,NA
+337,South Central Regional Jail,Charleston,WV,NA
+339,South Louisiana ICE Processing Center,Basile,LA,NA
+341,South Texas Family Residential Center,Dilley,TX,NA
+343,South Texas ICE Processing Center,Pearsall,TX,NA
+344,Southern Regional,Beaver,WV,WVSOUTH
+345,Southwestern Regional Jail,Holden,WV,NA
+346,St. Clair County Jail,Port Huron,MI,NA
+347,Ste. Genevieve County Sheriff/Jail,Ste. Genevieve,MO,NA
+348,Stewart Detention Center,Lumpkin,GA,NA
+349,Story County Jail,Nevada,IA,NA
+350,Strafford County Corrections,Dover,NH,NA
+351,Suffolk County House of Corrections,Boston,MA,NA
+352,Suites On Scottsdale-Casa De Alegría,Scottsdale,AZ,NA
+353,Sunny Glen CLD Home NDR Center,Raymondville,TX,NA
+354,Sweetwater County Jail,Rock Springs,WY,NA
+356,T. Don Hutto Detention Center,Taylor,TX,NA
+357,Northwest ICE Processing Center,Tacoma,WA,NA
+358,Tallahatchie County Correctional Facility,Tutwiler,MS,NA
+359,Teller County Jail,Divide,CO,NA
+360,Texas Health Huguley Hospital,Burleson,TX,NA
+361,Theo Lacy Facility,Orange,CA,NA
+362,Tooele County Jail,Tooele,UT,NA
+363,Tornillo-Guadalupe POE,Tornillo,TX,NA
+364,Torrance County Detention Facility,Estancia,NM,NA
+365,Trusted Adult Karnes Fsc,San Antonio,TX,NA
+366,Dilley Immigration Processing Center,Dilley,TX,NA
+367,Tulsa County Jail (David L. Moss Justice Center),Tulsa,OK,NA
+368,Turner Guilford Knight (TGK) Jail,Miami,FL,NA
+369,Two Bridges Regional Jail,Wiscasset,ME,NA
+370,Uinta County Jail,Evanston,WY,NA
+371,Val Verde Correctional Facility,Del Rio,TX,NA
+372,Victoria County Jail,Victoria,TX,NA
+373,Virginia Peninsula Regional Jail,Williamsburg,VA,NA
+374,Wake County Sheriff Department,Raleigh,NC,NA
+375,Wakulla County Jail,Crawfordville,FL,NA
+376,Walton County Jail,Defuniak Springs,FL,NA
+377,Ward County Jail,Minot,ND,NA
+378,Washington County Detention Center,Fayetteville,AR,NA
+380,Washington County Jail (Purgatory Correctional Facility),Hurricane,UT,NA
+381,Washoe County Jail,Reno,NV,NA
+382,Waukesha County Jail,Waukesha,WI,NA
+383,Webb County Detention Center (CCA),Laredo,TX,NA
+384,Weber County Jail,Ogden,UT,NA
+385,West Texas Detention Facility,Sierra Blanca,TX,NA
+386,Western Regional Jail And Correctional Facility,Barboursville,WV,NA
+387,Western Tennessee Detention Facility,Mason,TN,NA
+388,Western Virginia Regional Jail,Salem,VA,NA
+389,Whitfield County Jail,Dalton,GA,NA
+390,Wingate-Wyndham Casa Esperanza,Yuma,AZ,NA
+391,Winn Correctional Center,Winnfield,LA,NA
+392,Woodbury County Jail,Sioux City,IA,NA
+393,Worcester County Jail,Snow Hill,MD,NA
+394,Wyatt Detention Center,Central Falls,RI,NA
+395,Yakima County Department of Corrections,Yakima,WA,NA
+396,Yankton County Jail,Yankton,SD,NA
+397,York County Prison,York,PA,NA
+398,Yuba County Jail,Marysville,CA,NA
+399,Essex County Correctional Facility,Newark,NJ,NA
+400,Desert View Annex,Adelanto,CA,NA
+401,Dilley Processing Single Adult Female,Dilley,TX,NA
+402,Lafayette Parish Correctional Center,Lafayette,LA,NA
+403,Lewisburg US Penitentiary,Lewisburg,PA,NA
+404,Migrant Ops Center Main A,Fpo,FL,NA
+405,Midwest Regional Reception Center,Leavenworth,KS,NA
+1001,Atlanta City Detention Center,Atlanta,GA,NA
+1002,Folkston ICE Processing Center (D. Ray James),Folkston,GA,NA
+1003,Contra Costa County Jail West,Richmond,CA,NA
+1004,Rio Cosumnes Correctional. Center,Elk Grove,CA,NA
+1005,Otero County Prison Facility,Chaparral,NM,NA
+1006,York County Detention Center,York,SC,NA
+1007,Willacy County Regional Detention Facility,Raymondville,TX,NA
+1008,Ramsey County Adult Detention Center,St. Paul,MN,NA
+1009,Dearborn Police Department,Dearborn,MI,NA
+1010,Wayne County Jail,Lyons,NY,NA
+1011,Hall County Jail,Gainesville,GA,NA
+1012,Mecklenburg County Detention Center North,Charlotte,NC,NA
+1013,Alexandria City Jail,Alexandria,VA,NA
+1014,Josephine County Jail,Grants Pass,OR,NA
+1015,Rock Island County Correctional Center,Rock Island,IL,NA
+1016,El Paso County Criminal Justice Center,Colorado Springs,CO,NA
+1017,Elgin Police Department,Elgin,IL,NA
+1018,Moffat County Jail,Craig,CO,NA
+1019,Orange County Intake Release Facility,Santa Ana,CA,NA
+1020,Kent County Jail,Grand Rapids,MI,NA
+1021,Glendale Police Department,Glendale,CA,NA
+1022,Tom Green County Jail,San Angelo,TX,NA
+1023,Yavapai County Detention Center,Camp Verde,AZ,NA
+1024,Dale G. Haile Detention Center,Caldwell,ID,NA
+1025,Sangamon County Jail,Springfield,IL,NA
+1026,Prince William County Correctional Facility,Manassas,VA,NA
+1027,Fairfax County Adult Detention Center,Fairfax,VA,NA
+1028,Norfolk County Jail,Dedham,MA,NA
+1029,Santa Cruz County Jail,Nogales,AZ,NA
+1030,Taylor County Adult Detention Facility,Abilene,TX,NA
+1031,Titus County Jail,Mt. Pleasant,TX,NA
+1032,Alhambra City Jail,Alhambra,CA,NA
+1033,Allegheny County Jail,Pittsburgh,PA,NA
+1034,Apache County Jail,St Johns,AZ,NA
+1035,Bedford Heights City Jail,Bedford Hts,OH,NA
+1036,Coconino County Detention Facility,Flagstaff,AZ,NA
+1037,Eastern Regional Jail,Martinsburg,WV,NA
+1038,La Plata County Jail,Durango,CO,NA
+1039,Mecklenburg County Jail Central,Charlotte,NC,NA
+1040,Mississippi County Detention Center,Charleston,MO,NA
+1041,Montgomery County Correctional Facility,Norristown,PA,NA
+1042,Montgomery County Mac Sim Butler Detention Facilit,Montgomery,AL,NA
+1043,Navajo County Sheriff,Holbrook,AZ,NA
+1044,Ontario County Jail,Canandaigua,NY,NA
+1045,Orange County Central Women's Jail,Santa Ana,CA,NA
+1046,Pomona City Jail,Pomona,CA,NA
+1047,Pueblo County Jail,Pueblo,CO,NA
+1048,Rice County Detention Center,Lyons,KS,NA
+1049,Salem County Correctional Facility,Woodstown,NJ,NA
+1050,San Bernardino County Jail,San Bernardino,CA,NA
+1051,Santa Ana City Jail,Santa Ana,CA,NA
+1052,Tensas Parish Detention Center,Waterproof,LA,NA
+1053,Utah County Jail,Spanish Fork,UT,NA
+1054,"Cook Inlet Pretrial, Anch",Anchorage,AK,AKCOOKI
+1055,Fairbanks Corr Ctr,Fairbanks,AK,AKFAIRB
+1056,Goose Creek Correctional Center,Wasilla,AK,AKGSCCC
+1057,Highland Mtn Cor Ctr,Eagle River,AK,AKHIGHL
+1058,Ketchikan Regional CC,Ketchikan,AK,AKKETCH
+1059,"Lemon Creek, Juneau,AK",Juneau,AK,AKLEMON
+1060,"Matsu Pretrial, Palmer AK",Palmer,AK,AKMATSU
+1061,Kodiak City Jail,Kodiak,AK,KODIAAK
+1062,Phoenix Fed.Corr.Inst.,Phoenix,AZ,BOPPHX
+1063,Tucson Fed.Corr.Inst.,Tucson,AZ,BOPTCN
+1064,La Palma Corr Ctr APSO,Eloy,AZ,LPAPSAZ
+1065,Pima County Jail,Tucson,AZ,PIMAJAZ
+1066,Pinal County Jail,Florence,AZ,PINALAZ
+1067,Lompoc FCI,Lompoc,CA,BOPLOF
+1068,Lompoc USP,Lompoc,CA,BOPLOM
+1069,Los Angeles Met.Det.Ctr.,Los Angeles,CA,BOPLOS
+1070,FCI Victorville,Victorville,CA,BOPVIM
+1071,"Calif. Men Colony, West",San Luis Obispo,CA,CAMENCW
+1072,Csp-Sacramento,Represa,CA,CASPSAC
+1073,Central Valley Annex,McFarland,CA,CVANXCA
+1074,Kern County Jail (Lerdo),Bakersfield,CA,KERCOCA
+1075,Los Angeles County Jail-Twin Tower,Los Angeles,CA,LOSCJCA
+1076,Los Angeles Police PD 77th Div.,Los Angeles,CA,LPD77CA
+1077,San Diego County Jail,San Diego,CA,SNDCOCA
+1078,South Bay Detent Facility,Chula Vista,CA,SOBAYCA
+1079,Ventura County Jail,Ventura,CA,VENTUCA
+1080,Arapahoe County Jail,Littleton,CO,ARAPACO
+1081,Aurora City Jail,Aurora,CO,AURORCO
+1082,"BI Incororated, GEO Group Company",Aurora,CO,BIINCCO
+1083,Colo Dept Of Corrections,Canon City,CO,CODCCSP
+1084,Denver County Jail,Denver,CO,DENVECO
+1085,Douglas County Detention Center,Castle Rock,CO,DOUGLCO
+1086,LIRS - LFSRM Fort Collins LTFC CO,Fort Collins,CO,LIRSFCO
+1087,Mesa County Jail,Grand Junction,CO,MESJACO
+1088,Hartford Corr Center,Hartford,CT,HARFOCT
+1089,Bay County,Panama City,FL,BAYCOFL
+1090,Brevard County Jail Complex,Cocoa,FL,BREVDFL
+1091,Citrus County Jail,Lecanto,FL,CITRUFL
+1092,Charlotte County Jail,Punta Gorda,FL,CHRLTFL
+1093,"Charlotte CI, Punta Gorda",Punta Gorda,FL,FLCHACI
+1094,Dade Correctional Inst,Florida City,FL,FLDADCI
+1095,Hendry County Jail,Labelle,FL,HENDRFL
+1096,Manatee County Detention-Annex,Palmetto,FL,MANATFL
+1097,Flagler County Jail,Bunnell,FL,FLGLRFL
+1098,Metro Dade Jail,Miami,FL,METROFL
+1099,Nassau County Jail,Yulee,FL,NASSAFL
+1100,Osceola County Jail,Kissimmee,FL,OSCEOFL
+1101,Palm Beach County Jail,West Palm Beach,FL,PALMBFL
+1102,Polk County Jail,Bartow,FL,POLKJFL
+1103,Putman County Jail,Palatka,FL,PUTMAFL
+1104,Sarasota County Jail,Sarasota,FL,SARASFL
+1105,Seminole County Jail,Sanford,FL,SMNOLFL
+1106,Santa Rosa County Jail,Milton,FL,SROSAFL
+1107,St. John's County Jail,St. Augustine,FL,STJONFL
+1108,Sumter County Jail,Bushnell,FL,SUMTEFL
+1109,Suwannee County Jail,Live Oak,FL,SUWANFL
+1110,Walton County D.O.C.,Defuniak Springs,FL,WALTNFL
+1111,St. Lucie County Jail,Fort Pierce,FL,STLUCFL
+1112,"McRae Correctional Facility, CCA",Mcrae,GA,BOPRAE
+1113,D. Ray James Prison,Folkston,GA,GADRYJM
+1114,Gooding County Jail,Gooding,ID,GOODCID
+1115,Twin Falls County Jail,Twin Falls,ID,TFALLID
+1116,Jefferson County Jail,Mount Vernon,IL,JEFFEIL
+1117,Garden City Processing @ Finney Co,Garden City,KS,GCPFCKS
+1118,Scott County Detention. Facility,Davenport,IA,SCOTTIA
+1119,Woodford County Sheriff/Jail,Versailles,KY,WOODFKY
+1120,Oakdale Fed.Det.Center,Oakdale,LA,BOPOAD
+1121,St Charles Parish Jail,Killona,LA,STCHRLA
+1122,"US Marshals, W.D. LA.",Shreveport,LA,USMWDLA
+1123,Devens FMC,Ayer,MA,BOPDEV
+1124,Boston SPC,Boston,MA,BPC
+1125,Peabody PD,Peabody,MA,PBDPDMA
+1126,St. Mary's Co Det Cntr,Leonardtown,MD,SMARYMD
+1127,Washington Co. Detention,Hagerstown,MD,WASHIMD
+1128,Maine Youth Center - Long Creek,South Portland,ME,MEYTHCT
+1129,Monroe County Sheriff/Jail-Main,Monroe,MI,MNROEMI
+1130,Washington County Jail,Stillwater,MN,WAJAIMN
+1131,Springfield Fed.Med.Cntr,Springfield,MO,BOPSPG
+1132,Harrison Detention Center,Gulfport,MS,HARRIMS
+1133,Gallatin County Jail,Bozeman,MT,GALLAMT
+1134,Toole County Jail,Shelby,MT,TOOLEMT
+1135,Yellowstone County Jail,Billings,MT,YELLOMT
+1136,Henderson County Det. Fac.,Hendersonville,NC,HENDENC
+1137,Grand Forks Co. Juvenile,Grand Forks,ND,GFJUVND
+1138,Pierce County Jail,Rugby,ND,PIERCND
+1139,Scotts Bluff Co Jail,Gering,NE,SCOTTNE
+1140,Monmouth County Jail,Freehold,NJ,MONMONJ
+1141,Bernalillo County Det Ctr,Albuquerque,NM,BERNANM
+1142,Curry County Det Fac,Clovis,NM,CURRYNM
+1143,Courthouse USM Cntl Islip,Central Islip,NY,CHMCINY
+1144,JFK International Ap - T7,Jamaica,NY,JFKTSNY
+1145,Nassau County ICE Trailer,East Meadow,NY,NASTRNY
+1146,Fishkill C.F. Beacon Ny,Beacon,NY,NYFISHC
+1147,Great Meadow C.F.,Comstock,NY,NYGREAC
+1148,Groveland C.F. Sonyea,Sonyea,NY,NYGROVC
+1149,Marcy Correctional,Marcy,NY,NYMARCC
+1150,Washington Correctional,Comstock,NY,NYWASHC
+1151,Suffolk Co.Correc Fac,Riverhead,NY,SUFFONY
+1152,Marion Co Jail,Salem,OR,MARICOR
+1153,USP Canaan,Waymart,PA,BOPCAA
+1154,"Lackawana Cnty Jail, PA",Scranton,PA,LACKAPA
+1155,Anderson County Det Center,Anderson,SC,ANDERSC
+1156,Union County Jail,Elk Point,SD,UNIONSD
+1157,Nashville Comm. Corr.,Nashville,TN,BOPCNV
+1158,Hamilton Co. Jail (Tenn),Chattanooga,TN,HAMILTN
+1159,Jackson County Sheriff,Gainesboro,TN,JACKSTN
+1160,Alamo Police Dept.,Alamo,TX,ALAMOTX
+1161,Bell County Jail,Belton,TX,BELCOTX
+1162,Cameron County Jail,Brownsville,TX,CAMERTX
+1163,Edinburg Police Dept.,Edinburg,TX,EDNBGTX
+1164,El Paso County Jail (TX),El Paso,TX,ELPCOTX
+1165,Hidalgo County Jail,Edinburg,TX,HIDALTX
+1166,Harlingen Police Dept.,Harlingen,TX,HRLGNTX
+1167,Kinney County Jail,Brackettville,TX,KINNETX
+1168,Lasalle County Jail,Cotulla,TX,LASALTX
+1169,Maverick County Jail,Eagle Pass,TX,MAVERTX
+1170,Mclennan County Jail,Waco,TX,MCCLETX
+1171,Potter County Jail,Amarillo,TX,POTTRTX
+1172,Ursula Centralized Processing Cntr,Mcallen,TX,URSLATX
+1173,Uvalde County Jail,Uvalde,TX,UVALDTX
+1174,Webb County Jail,Laredo,TX,WEBCOTX
+1175,Wilson County Jail,Floresville,TX,WILSOTX
+1176,Zavala County Jail,Crystal City,TX,ZAVCOTX
+1177,Summit County Jail,Park City,UT,SUMMIUT
+1178,B.R.R.J. Abingdon,Lynchburg,VA,ABIRJVA
+1179,Petersburg Fed.Corr.Inst.,Hopewell,VA,BOPPET
+1180,Chesterfield Co. Jail,Chesterfield,VA,CHFLDVA
+1181,Chesapeake City Jail,Chesapeake,VA,CHSPKVA
+1183,Culpeper Co. Adult Det. Center,Culpeper,VA,CULPEVA
+1184,Central VA Regional Jail,Orange,VA,CVREGVA
+1185,Henrico County Jail,Barhamsville,VA,HENRIVA
+1186,B.R.R.J. Halifax,Halifax,VA,HLFRJVA
+1187,Loudoun County,Leesburg,VA,LOUCOVA
+1188,Middle River Regional Jail,Staunton,VA,MRREGVA
+1189,Northern Neck Reg. Jail,Warsaw,VA,NNREGVA
+1190,Norfolk City Jail,Norfolk,VA,NORFOVA
+1191,NW Reg Juv Det Ctr,Winchester,VA,NRJDCVA
+1192,Northwest Reg. Adult Det.,Winchester,VA,NWREGVA
+1193,Piedmont Reg Jail,Farmville,VA,PMREGVA
+1194,Rappahannock Regional Jail,Stafford,VA,RAPPSVA
+1195,Virginia Beach,Virginia Beach,VA,VIRBEVA
+1196,Addison County Jail,Middlebury,VT,ADDCOVT
+1197,VT. Dept. Of Corrections,Waterbury,VT,VTDCORR
+1198,Seatac Fed.Det.Center,Seatac,WA,BOPSET
+1199,Brown County Jail,Green Bay,WI,BROWNWI
+1200,Fond Du Lac County Sheriff/Jail,Fond Du Lac,WI,FNDDUWI
+1201,Morgantown Fed.Corr.Inst.,Morgantown,WV,BOPMRG
+1202,Potomac Highlands Regional Jail,Augusta,WV,WVPTMAC
+1203,Campbell County Jail,Gillette,WY,CAMCOWY
+1204,CBP Movement Coordination Area,NA,CA,UCBPMCA
+1205,Perryville State Prison,Goodyear,AZ,AZSPPER
+1206,El Centro SPC,El Centro,CA,ECC
+1207,Imperial County Jail,El Centro,CA,IMPCOCA
+1208,Miami FCI (Former MCC),Miami,FL,BOPMIA
+1209,Hardee County Jail,Wauchula,FL,HARDEFL
+1210,CCA Central Arizona Detention Center,Florence,AZ,CCADCAZ
+1211,Dekalb County Jail,Decatur,GA,DEKABGA
+1212,Department Of Corrections,Mangilao,GU,DEPCOGU
+1213,Indianapolis Metropolitan PD,Indianapolis,IN,INDMPIN
+1214,Lexinton Fed.Med Center,Lexington,KY,BOPLEX
+1215,Mccreary USP,Pine Knot,KY,BOPMCR
+1216,Pollock USP,Pollock,LA,BOPPOL
+1217,Oakdale Fed. Det. Center,Oakdale,LA,OAK
+1218,"Essex Co. Jail, Middleton",Middleton,MA,ESSEXMA
+1219,Carroll County Detention Center,Westminster,MD,CARROMD
+1220,Cass County Jail,Fargo,ND,CASSCND
+1221,Artesia Family Residential Center,Artesia,NM,AFRC
+1222,Artesia City Jail,Artesia,NM,ARTESNM
+1223,Hidalgo County Detention Center,Lordsburg,NM,HIDALNM
+1224,Madison County Jail,Wampsville,NY,MADISNY
+1225,Livingston Correctional,Sonyea,NY,NYLIVIC
+1226,Midstate Correctional,Marcy,NY,NYMDSTC
+1227,Belmont County Jail,St Clairsville,OH,BELMOOH
+1228,Grady County Law Enforcement Ctr,Chickasha,OK,GCLECOK
+1229,Sheridan Fed.Corr.Inst.,Sheridan,OR,BOPSHE
+1230,Allenwood (Med) FCI,White Deer,PA,BOPALM
+1231,Westmoreland County Jail,Greensburg,PA,WMLNDPA
+1232,Dalby Correctional Institute,Post,TX,BOPDAL
+1233,Brownsville Police Dept.,Brownsville,TX,BRWNSTX
+1234,Crystal City Corr. Center,Crystal City,TX,CRYCCTX
+1235,Culberson County Sheriff's,Van Horn,TX,CULBETX
+1236,Ector County L.E.C.,Odessa,TX,ECLECTX
+1237,Freestone County Jail,Fairfield,TX,FREESTX
+1238,Hamilton County Jail (TX),Hamilton,TX,HAMILTX
+1239,Limestone County Jail,Groesbeck,TX,LIMCJTX
+1240,Mercedes Police Dept.,Mercedes,TX,MRCDSTX
+1241,Somervell County Sheriff's Dept.,Glen Rose,TX,SMRVLTX
+1242,St T Criminal Just Complx,Charlotte Amalie,VI,STTCJVI
+1243,"Anvil Mountain Cc, Nome,",Nome,AK,AKANVIL
+1244,Alleghany County Jail,Covington,VA,ALLEGVA
+1245,Amherst County Jail,Madison Heights,VA,AMHERVA
+1246,Blount County Juvenile Detention Cntr,Maryville,TN,BLOJVTN
+1247,La Tuna FCI,Anthony,TX,BOPLAT
+1248,Bryan County Jail,Pembroke,GA,BRYANGA
+1249,Chatham County Jail,Savannah,GA,CHTHMGA
+1250,Drt Cpc Holding,NA,TX,DRCPCTX
+1251,Franklin County Detention Center,Louisburg,NC,FRANKNC
+1252,Kaufman County Detention Center,Kaufman,TX,KFMANTX
+1253,Liberty County Jail,Bristol,FL,LBRTYFL
+1254,Leon County Jail,Tallahassee,FL,LEONCFL
+1255,B.r.r.j. Lynchburg,Lynchburg,VA,LYNRJVA
+1256,Natrona County. Juv. Detention. Center,Casper,WY,NATJVWY
+1257,Onslow County Jail,Jacksonville,NC,ONSLONC
+1258,Facility 8 Detention Facility,San Diego,CA,FCLT8CA
+1259,Columbia County Jail,Lake City,FL,COLUMFL
+1260,Marion County Jail,Ocala,FL,MARIOFL
+1261,Bartow Co Jail,Cartersville,GA,BARTOGA
+1262,Lexington Processing @ Fayette Co,Lexington,KY,LEXFCKY
+1263,Hernando County Jail,Brooksville,FL,HERNAFL
+2181,Montgomery Hold Room,Montgomery,AL,MGAHOLD
+2182,Berks Hold Room,Leesport,PA,BRKHOLD
+2183,Eden Det Ctr Hold Room,Eden,TX,EDNHOLD
+2184,El Paso SPC Juvenile,El Paso,TX,EPCJUVI
+2185,George Bush Intercontinental,Houston,TX,IAHSFTX
+2186,Bellingham BPS ERO Holdroom,Ferndale,WA,BLHHOLD
+2187,CBP O'hare Airport Trm 5 B.c. Ext,Chicago,IL,CBPORIL
+2188,ERO Charleston Wv Hold Room,Poca,WV,CHSHOLD
+2189,Savannah Hold Room,Savannah,GA,SAVHOLD
+3001,Bartlett Regional Hospital,Juneau,AK,BRLHOAK
+3002,Banner University Medical Phoenix,Phoenix,AZ,BANHOAZ
+3003,Banner Ironwood Med Ctr,Queen Creek,AZ,BIMDCAZ
+3004,Banner Medical Ctr Tucson,Tucson,AZ,BNMCTAZ
+3005,Casa Grande Reg. Med. Center,Casa Grande,AZ,CGRMCAZ
+3006,Chandler Reg Med Ctr,Chandler,AZ,CHANRAZ
+3007,Florence Hospital,Florence,AZ,FLORHAZ
+3008,Promise Hospital,Mesa,AZ,KPCHOAZ
+3009,La Paz Regional Hospital,Parker,AZ,LPZRHAZ
+3010,Maricopa Medical Center,Phoenix,AZ,MCMEDAZ
+3011,Mountain Vista Med Ctr,Mesa,AZ,MVMCMAZ
+3012,St. Joseph's Hospital & Med. Cen.,Phoenix,AZ,STJOSAZ
+3013,St Mary's Hospital,Tucson,AZ,STMARAZ
+3014,Valleywise Health Med Ctr,Phoenix,AZ,VWHMCAZ
+3015,Yuma Regional Med Ctr,Yuma,AZ,YRMDCAZ
+3016,Adventist Health Bakersfield,Bakersfield,CA,ADVHBCA
+3017,Adventist Health Delano,Delano,CA,ADVHDCA
+3018,Anaheim Global Medical Center,Anaheim,CA,AGMDCCA
+3019,Alvarado Parkway Institute,La Mesa,CA,APIBHCA
+3020,Arrowhead Regional Med Center,Colton,CA,ARRMCCA
+3021,Contra Costa Reg Med Ctr,Martinez,CA,CCRMCCA
+3022,Community Reg Med Center,Fresno,CA,CRMCFCA
+3023,Desert Valley Hospital,Victorville,CA,DSRTVCA
+3024,El Centro Regional Med Ctr,El Centro,CA,ECRMCCA
+3025,Enloe Medical Center,Chico,CA,ENLMCCA
+3026,Kern Medical Hospital,Bakersfield,CA,KERNHCA
+3027,Loma Linda University Med Center,Loma Linda,CA,LLUMCCA
+3028,Mercy Hosp Downtown Bakersfield,Bakersfield,CA,MEHOSCA
+3029,Mercy Medical Ctr Redding,Redding,CA,MEMCRCA
+3030,Memorial Hospital Bakersfield,Bakersfield,CA,MEMHOCA
+3031,Marian Regional Medical Center,Santa Maria,CA,MRMCSCA
+3032,Orange Co Global Medical Center,Santa Ana,CA,OGCMCCA
+3033,Palmdale Regional Medical Center,Palmdale,CA,PLRMCCA
+3034,Paradise Valley Hospital,National City,CA,PVLYHCA
+3035,Sharp Chula Vista Medical Center,Chula Vista,CA,SCVMCCA
+3036,St John's Hospital Camarillo,Camarillo,CA,STJHCCA
+3037,St Mary Medical Center,Apple Valley,CA,STMARCA
+3038,Sutter Med Ctr Sacramento,Sacramento,CA,SUTMCCA
+3039,Unv California San Diego Hospital,San Diego,CA,UCSDHCA
+3040,UC San Diego Medical Center,San Diego,CA,UCSDMCA
+3041,Victor Valley Global Med Center,Victorville,CA,VVGMCCA
+3042,White Memorial Hospital,Los Angeles,CA,WMHOSCA
+3043,Denver Health Medical Center,Denver,CO,DNHMCCO
+3044,Highlands Behavioral Health,Littleton,CO,HGHBECO
+3045,Saint Joseph Hospital,Denver,CO,STJOSCO
+3046,Uchealth Unv Hosp Of Co,Aurora,CO,UCHUHCO
+3047,Atlantic Shores Hospital,Fort Lauderdale,FL,ASHRSFL
+3048,Broward General Medical Center,Ft. Lauderdale,FL,BRGMCFL
+3049,Columbia Kendal Hospital,Miami,FL,CKHOSFL
+3050,Ed Fraser Memorial Hospital,Macclenny,FL,EFMHMFL
+3051,Ft Lauderdale Behavor Hlth Ctr,Oakland Park,FL,FLBHCFL
+3052,Fort Lauderdale Hospital,Fort Lauderdale,FL,FLHOSFL
+3053,HCA Florida Memorial Hospital,Jacksonville,FL,HCAFMFL
+3054,Jackson Memorial Hospital,Miami,FL,JMHOSFL
+3055,Lakeside Medical Center,Belle Glade,FL,LAKMCFL
+3056,Larkin Behavioral Health Svcs,Hollywood,FL,LRKBHFL
+3057,Larkin Hospital,South Miami,FL,LRKNHFL
+3058,Memorial Regional Hosp.,Hollywood,FL,MEMRHFL
+3059,Mercy Hospital,Miami,FL,MERCYFL
+3060,North Broward Medical Center,Pompano Beach,FL,NBRMCFL
+3061,Palms West Hospital,Loxahatchee,FL,PWHOSFL
+3062,University Of Miami Hospital,Miami,FL,UMIAHFL
+3063,West Kendall Baptist Hosp,Miami,FL,WKBHMFL
+3064,West Miami Dade Bapt Health Emerg,Miami,FL,WMDBHFL
+3065,Grady Memorial Hospital,Atlanta,GA,GMHATGA
+3066,Piedmount Columbus Reg Midtown MC,Columbus,GA,PCRMMGA
+3067,Phoebe Sumter Med Ctr,Americus,GA,PHOSMGA
+3068,Phoebe Putney Memorial Hosp,Albany,GA,PHPMHGA
+3069,St Francis Hospital,Columbus,GA,STFRHGA
+3070,Guam Memorial Hospital,Tamuning,GU,GUAMHGU
+3071,Adventist Health Castle,Kailua,HI,ADVHCHI
+3072,Queen's Medical Center,Honolulu,HI,QUEMCHI
+3073,Chi Health Mercy Council Bluffs,Council Bluffs,IA,CHIHMIA
+3074,Mercy Med Ctr Cedar Rapid,Cedar Rapids,IA,MMCCRIA
+3075,Unity Point Hlth St Lukes Hosp,Cedar Rapids,IA,UPSLHIA
+3076,Unitypoint Hlth St Lukes Hosp SXC,Sioux City,IA,UPSLSIA
+3077,Centegra Hospital,Woodstock,IL,CNTGRIL
+3078,Loyola Center For Health,Maywood,IL,LYOLAIL
+3079,Uchicago Medicine Hospital Chicago,Chicago,IL,UCCHIIL
+3080,Uchicago Medicine Ingalls Memorial,Harvey,IL,UCHRVIL
+3081,Eskenazi Health,Indianapolis,IN,ESKHLIN
+3082,Parkview Regional Medical Center,Fort Wayne,IN,PKMEDIN
+3083,Parkview Hospital Randallia,Fort Wayne,IN,PVHOSIN
+3084,Union Hospital,Terre Haute,IN,UHOSPIN
+3085,Providence Medical Group,Kansas City,KS,PRVMDKS
+3086,Beth Israel Deaconess Hosp,Boston,MA,BIDHPMA
+3087,Lahey Hospital & Med Ctr,Burlington,MA,LHMCBMA
+3088,Lemuel Shattuck Hospital,Jamaica Plain,MA,LSHOSMA
+3089,South Shore Hospital,South Weymouth,MA,SSHSWMA
+3090,UMass Memorial Medical Center,Worcester,MA,UMASSMA
+3091,Univ of Maryland Medical Center,Baltimore,MD,UNMEDMD
+3092,Bronson Battle Creek Hosp,Battle Creek,MI,BBCHPMI
+3093,Bronson Methodist Hospital,Kalamazoo,MI,BROHOMI
+3094,Corewell Hlth Gr Hosp-Butterworth,Grand Rapids,MI,BTSHOMI
+3095,Henry Ford Hospital,Detroit,MI,HNYHOMI
+3096,Munson Healthcare Cadillac Hosp,Cadillac,MI,MHCHSMI
+3097,McLaren Port Huron Hosp,Port Huron,MI,MLPHHMI
+3098,Mymichigan Medical Center Sault,Sault Ste. Marie,MI,MMMCSMI
+3099,Promedica Monroe Reg Hosp,Monroe,MI,PMMRHMI
+3100,Centracare Rice Memorial Hosp,Willmar,MN,CCRMHMN
+3101,Hennepin County Med Ctr,Minneapolis,MN,HCMCMMN
+3102,Mayo Clinic Health Sys Albert Lea,Albert Lea,MN,MCHALMN
+3103,M Health Fairview Southdale Hosp,Edina,MN,MHFSHMN
+3104,Mercy Hospital,Coon Rapids,MN,MRYHPMN
+3105,Mayo Clinic Health Sys - Mankato,Mankato,MN,MYOMKMN
+3106,Coxhealth Medical Center South,Springfield,MO,COXMEMO
+3107,Mercy Hospital South,Saint Louis,MO,MRYHOMO
+3108,Phelps Health Hospital,Rolla,MO,PHELSMO
+3109,Commonwealth Healthcare Corp,Saipan,MP,CWHCCMP
+3110,Altru Hospital Grand Forks,Grand Forks,ND,AHGRFND
+3111,Chi Health Midlands Hospital,Papillion,NE,MDLNDNE
+3112,Nebraska Med Ctr Omaha,Omaha,NE,NMCOMNE
+3113,Wentworth Douglas Hospital,Dover,NH,WWDHDNH
+3114,Plaza Healthcare Rehab Center,Elizabeth,NJ,PHRCENJ
+3115,Trinitas Regional Med Ctr,Elizabeth,NJ,TRRMCNJ
+3116,University Hospital,Newark,NJ,UNIVHNJ
+3117,Cibola General Hospital,Grants,NM,CIBOGNM
+3118,Presbyterian Hosp Abq,Albuquerque,NM,PRSHANM
+3119,University of New Mexico Hospital,Albuquerque,NM,UNMHANM
+3120,Desert View Hospital,Pahrump,NV,DVHSPNV
+3121,Henderson Hospital,Henderson,NV,HDHSPNV
+3122,Northern Nevada Med Ctr,Sparks,NV,NNVMCNV
+3123,Summerlin Hospital Medical Center,Las Vegas,NV,SHMCHNV
+3124,University Medical Center,Las Vegas,NV,UMCLVNV
+3125,"Bellevue Hospital, Manhat",New York,NY,BEHOSNY
+3126,Buffalo General Hospital,Buffalo,NY,BFLHPNY
+3127,Erie County Medical Center,Buffalo,NY,ECMCBNY
+3128,Jamaica Hospital Med Ctr,Richmond Hill,NY,JHMCJNY
+3129,Kenmore Mercy Hospital,Kenmore,NY,KENMHNY
+3130,Lockport Memorial Hospital,Lockport,NY,LOCMHNY
+3131,Nassau Univ Med Ctr,East Meadow,NY,NUMCENY
+3132,Orange Regional Med Ctr,Middletown,NY,OGRMCNY
+3133,New York Presbyterian Hospital,NA,NY,PRESBNY
+3134,Rochester General Hospital,Rochester,NY,ROCGHNY
+3135,Sunrise Hospital,NA,NY,SNTRHNY
+3136,Spring Valley Hospital,NA,NY,SPRHONY
+3137,Southside Hosp Northwell Hlth,Bay Shore,NY,SSHNHNY
+3138,Strong Memorial Hospital,Rochester,NY,STRMONY
+3139,Uhs Wilson Medical Center,Johnson City,NY,UHSHONY
+3140,United Memorial Med Ctr,Batavia,NY,UMEMCNY
+3141,Unity Hospital,Rochester,NY,UNIHONY
+3142,Mercy Health - Tiffin Hospital,Tiffin,OH,MHTFHOH
+3143,St Elizabeth Youngstown Hospital,Youngstown,OH,STELHOH
+3144,Univ Hosp Geauga Med Ctr,Chardon,OH,UHGMCOH
+3145,Blackwell Regional Hospital,Blackwell,OK,BLKREOK
+3146,Integris Health Baptist Medical,Oklahoma City,OK,INTEGOK
+3147,Integris Health Ponca City Hospita,Ponca City,OK,INTPOOK
+3148,Geisinger Medical Center,Danville,PA,GSMCDPA
+3149,Milton S. Hershey Medical Center,Hershey,PA,MHRHOPA
+3150,Mount Nittany Medical Center,State College,PA,MTNITPA
+3151,Penn Highlands Clearfield,Clearfield,PA,MVPNHPA
+3152,READING HOSPITAL,West Reading,PA,RDHOSPA
+3153,UPMC Altoona,Altoona,PA,UPMCAPA
+3154,UPMC Presbyterian Hospital,Pittsburgh,PA,UPMCPPA
+3155,Bayamon Hospital,Bayamon,PR,BAYAMPR
+3156,Kent Hospital,Warwick,RI,KENTHRI
+3157,Miriam Hospital,Providence,RI,MIRHPRI
+3158,Rhode Island Hospital,Providence,RI,RIHPRRI
+3159,Columbia Care Center,Columbia,SC,COLCASC
+3160,Anson General Hospital,Anson,TX,ANSGHTX
+3161,Baptist Medical Center,San Antonio,TX,BMCSATX
+3162,Baylor Scott White Md Ctr,Dallas,TX,BSTAYTX
+3163,Baylor Scott White Med RR,Round Rock,TX,BSWRRTX
+3164,Cross Creek Hospital,Austin,TX,CCHAUTX
+3165,Cedar Crest Hosp Treat,Belton,TX,CCHRTTX
+3166,Chi St Luke's Health Mem,Lufkin,TX,CHISLTX
+3167,Christus Santa Rosa Hospital - Med,Irving,TX,CHSRHTX
+3168,Connally Memorial Medical Center,Floresville,TX,CONHOTX
+3169,Chi St Luke's H M Lufkin,Lufkin,TX,CSLLFTX
+3170,DSMC - Del Sol Medical Center,El Paso,TX,DSMCNTX
+3171,El Paso Behavioral Health System,El Paso,TX,EPBHSTX
+3172,El Paso LTAC Hospital,El Paso,TX,EPLTATX
+3173,Frio Regional Hospital,Pearsall,TX,FRIRHTX
+3174,Georgetown Behavioral Hospital,Georgetown,TX,GRGBVTX
+3175,HCA Houston Hc Conroe,Conroe,TX,HCAHCTX
+3176,Harris County Psychiatric Center,Houston,TX,HCPSYTX
+3177,Harris Health Ben Taub Hospital,Houston,TX,HHBTHTX
+3178,Houston Healthcare Hosp,Houston,TX,HHCHKTX
+3179,Harlingen Medical Center,Harlingen,TX,HMCHOTX
+3180,Hendrick Medical Center,Abilene,TX,HNDMCTX
+3181,John Peter Smith Hospital,Fort Worth,TX,JOPSHTX
+3182,Knox County Hospital,Knox City,TX,KNXCHTX
+3183,Harris Health LBJ Hospital,Houston,TX,LBJHSTX
+3184,Limeston Medical Center,Groesbeck,TX,LIMMCTX
+3185,Laredo Medical Center,Laredo,TX,LRDMCTX
+3186,Methodist Hospital,San Antonio,TX,METHOTX
+3187,Methodist Hospital Metropolitan,San Antonio,TX,MHMSATX
+3188,Memorial Hermann NW Hosp,Houston,TX,MHNHHTX
+3189,Methodist Hospital Northeast,Live Oak,TX,MHNSATX
+3190,Methodist Hospital Stone Oak,San Antonio,TX,MHSOSTX
+3191,Methodist Hospital Texsan,San Antonio,TX,MHTSATX
+3192,Midland Memorial Hospital,Midland,TX,MIDMHTX
+3193,Methodist Specialty Transplant Hos,San Antonio,TX,MSTHSTX
+3194,Methodist Hospital South,Jourdanton,TX,MTHOSTX
+3195,Northeast Baptist Hospital,San Antonio,TX,NEBHSTX
+3196,Otto Kaiser Memorial Hospital,Kenedy,TX,OKMHKTX
+3197,Pam Health Specialty Hospital 1,NA,TX,PAMSATX
+3198,Parkland Hospital,Dallas,TX,PKLDHTX
+3199,Palms Behavioral Health,Harlingen,TX,PLMBHTX
+3200,Red River Hospital,Wichita Falls,TX,RDRVHTX
+3201,Rio Grande St.Hospital,Harlingen,TX,RGHOSTX
+3202,Rio Vista Behv Hlth Hsp,El Paso,TX,RVBHHTX
+3203,St Luke's Health - The Woodlands,The Woodlands,TX,SLHTWTX
+3204,TX Health Meth Hosp Heb,Bedford,TX,THHEBTX
+3205,TX Hlth Harris Meth Hosp,Fort Worth,TX,THHMHTX
+3206,THOP Memorial Campus ELP,El Paso,TX,THPMCTX
+3207,THOP Sierra Campus Elp,El Paso,TX,THPSCTX
+3208,Texas Vista Medical Center,San Antonio,TX,TVMSATX
+3209,University Med Center of El Paso,El Paso,TX,UMCEPTX
+3210,University Hospital,San Antonio,TX,UVHSATX
+3211,Valley Baptist Hospital,Harlingen,TX,VBHOSTX
+3212,Centra Health,Lynchburg,VA,CENTRVA
+3213,Chippenham Hospital - Richmond,Richmond,VA,CHPHOVA
+3214,Centra Southside Comm Hosp,Farmville,VA,CSSCHVA
+3215,Johnston Memorial Hospital,Abingdon,VA,JMTHOVA
+3216,Mary Washington Hospital,Fredericksburg,VA,MWASHVA
+3217,Spotsylvania Reg Med Ctr,Fredericksburg,VA,SPOTSVA
+3218,Sentara Careplex Hospital,Hampton,VA,STCHOVA
+3219,UVA Univ Hospital Center,Charlottesville,VA,UVACVVA
+3220,VCU Health Tappahannock Hospital,Tappahannock,VA,VCUHOVA
+3221,Central Washington Hospital,Wenatchee,WA,CNTRHWA
+3222,Harborview Medical Center,Seattle,WA,HAVMCWA
+3223,St Joseph Medical Center,Tacoma,WA,STJMCWA
+3224,Tacoma General Hospital,Tacoma,WA,TACGHWA
+3225,Watertown Regional Medical Center,Watertown,WI,WRMEDWI
+3226,WVU Medicine Berkeley Medical Cntr,Martinsburg,WV,UBRKHWV

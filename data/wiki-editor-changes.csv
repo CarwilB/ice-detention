@@ -1,0 +1,59 @@
+change_type,facility,column,old_value,new_value
+added_row,Berlin Federal Correctional Institution,row,NA,Berlin Federal Correctional Institution
+added_row,California City Detention Facility,row,NA,[[California City Detention Facility]]
+added_row,Correctional Center of Northwest Ohio,row,NA,Correctional Center of Northwest Ohio
+added_row,Denver Contract Detention Facility (aka Aurora ICE Processing Center),row,NA,[[Denver Contract Detention Facility]] <small>(aka  Aurora ICE Processing Center)</small>
+added_row,"McCook Detention Center (""Cornhusker Clink"")",row,NA,"[[Cornhusker Clink|McCook Detention Center]] (""[[Cornhusker Clink]]"")"
+added_row,"Miami Correctional Facility (""Speedway Slammer"")",row,NA,"[[Miami Correctional Facility]] (""[[Speedway Slammer]]"")"
+article_row_not_in_data,Cimmarron Correctional Facility,row,NA,Cimmarron Correctional Facility
+cell_change,Adelanto ICE processing center,type,Private Migrant Detention Center,Private migrant detention center
+cell_change,Alexandria Staging Facility,city,"[[Alexandria, LA]]","[[Alexandria International Airport (Louisiana)|Alexandria International Airport]], [[Alexandria, LA]]"
+cell_change,Alexandria Staging Facility,type,ICE Short-Term Migrant Detention Center,ICE short-term migrant detention center
+cell_change,Arizona Removal Operations Coordination Center,city,"[[Mesa Gateway Airport]], [[Mesa, Arizona]]","[[Mesa Gateway Airport]], [[Mesa, AZ]]"
+cell_change,Arizona Removal Operations Coordination Center,type,ICE Short-Term Migrant Detention Center,ICE short-term migrant detention center
+cell_change,Baker Correctional Institution,type,State Migrant Detention Center,State migrant detention center
+cell_change,Broward Transitional Center,type,Private Migrant Detention Center,Private migrant detention center
+cell_change,Buffalo Service Processing Center,type,ICE Migrant Detention Center,ICE migrant detention center
+cell_change,Camp East Montana,capacity,,"5000<ref>{{Cite news |last=MacMillan |first=Douglas |date=2026-06-09 |title=ICE detention camp endangered migrants and wasted millions, watchdog finds |url=https://www.washingtonpost.com/business/2026/06/09/ice-detention-camp-wasted-millions-endangered-migrants-gao-finds/ |access-date=2026-06-11 |work=The Washington Post |language=en-US |issn=0190-8286}}</ref>"
+cell_change,Camp East Montana,management,Acquisition Logistics LLC,[[Amentum Holdings|Amentum Services]]
+cell_change,Camp East Montana,type,Private Migrant Detention Center,"Privately operated, government-owned [[U.S. Immigration and Customs Enforcement|ICE]] migrant detention center<ref>[https://kfoxtv.com/news/local/ice-el-pasos-camp-east-montana-stays-open-changing-contractors-will-improve-conditions-texas-tx-county-fort-bliss-immigration-migrant-kristi-noem-acquisition-logistics-llc ""ICE: El Paso's Camp East Montana stays open; promises to improve conditions""] [[KFOX14]], March 11, 2026. Retrieved June 11, 2026.</ref>"
+cell_change,Central Arizona Florence Correctional Complex,type,Private Migrant Detention Center,Private migrant detention center
+cell_change,Delaney Hall Detention Facility,type,Private Migrant Detention Center,Private migrant detention center
+cell_change,Desert View Annex,type,Private Migrant Detention Center,Private migrant detention center
+cell_change,Dilley Immigration Processing Center,type,Family Detention Center,Family migrant detention center
+cell_change,El Paso Service Processing Center,type,ICE Migrant Detention Center,ICE migrant detention center
+cell_change,Elizabeth Detention Center,type,Private Migrant Detention Center,Private migrant detention center
+cell_change,FCI Atlanta,type,Federal Prison,Federal prison
+cell_change,FDC Philadelphia,type,Federal Prison,Federal prison
+cell_change,Florence Service Processing Center,type,ICE Migrant Detention Center,ICE migrant detention center
+cell_change,Florence Staging Facility,type,ICE Short-Term Migrant Detention Center,ICE short-term migrant detention center
+cell_change,Florida Soft-Sided Facility,type,State Migrant Detention Center,State migrant detention center
+cell_change,Golden State Annex,type,Private Migrant Detention Center,Private migrant detention center
+cell_change,Honolulu Federal Detention Center,type,Federal Prison,Federal prison
+cell_change,Houston Processing Center,type,Private Migrant Detention Center,Private migrant detention center
+cell_change,Imperial Regional Detention Facility,type,Private Migrant Detention Center,Private migrant detention center
+cell_change,JTF Camp Six,type,Military Detention Center,Military detention center
+cell_change,Kansas City Holdroom,type,Private Migrant Detention Center,Private migrant detention center
+cell_change,Krome North Service Processing Center,management,Ahtna Global Services,"Akima (division of [[NANA Regional Corporation#Akima|NANA Regional Corporation]])<ref>[https://alaskapublic.org/news/politics/2025-10-23/lucrative-ice-detention-centers-bring-money-and-anger-to-an-alaska-native-community ""Lucrative ICE detention centers bring money — and anger — to an Alaska Native community""] [[Bloomberg Business]] via [[Alaska Public Media]], October 23, 2025. Retrieved June 9, 2026.</ref>"
+cell_change,Krome North Service Processing Center,type,ICE Migrant Detention Center,ICE migrant detention center
+cell_change,Limestone County Detention Center,management,Community Education Centers Inc.,[[Community Education Centers]] ([[GEO Group]] subsidiary)
+cell_change,Mesa Verde ICE Processing Center,type,Private Migrant Detention Center,Private migrant detention center
+cell_change,Miami Federal Detention,type,Federal Prison,Federal prison
+cell_change,Miami Staging Facility,type,ICE Short-Term Migrant Detention Center,ICE short-term migrant detention center
+cell_change,Montgomery ICE Processing Center,type,Private Migrant Detention Center,Private migrant detention center
+cell_change,Nevada Southern Detention Center,type,Private Migrant Detention Center,Private migrant detention center
+cell_change,North Lake Correctional Facility,type,Private Migrant Detention Center,Private migrant detention center
+cell_change,Northwest ICE Processing Center,type,Private Migrant Detention Center,Private migrant detention center
+cell_change,Otay Mesa Detention Center,type,Private Migrant Detention Center,ICE migrant detention center
+cell_change,Port Isabel Detention Center,type,ICE Migrant Detention Center,ICE migrant detention center
+cell_change,Rio Grande Detention Center,type,Private Migrant Detention Center,Private migrant detention center
+cell_change,San Diego District Staging,type,ICE Short-Term Migrant Detention Center,ICE short-term migrant detention center
+cell_change,San Juan Staging,type,ICE Short-Term Migrant Detention Center,ICE short-term migrant detention center
+cell_change,South Texas ICE Processing Center,type,Private Migrant Detention Center,Private migrant detention center
+cell_change,T. Don Hutto Detention Center,type,Private Migrant Detention Center,Private migrant detention center
+removed_row,Berlin Federal. Correctional. Institution.,row,Berlin Federal. Correctional. Institution.,NA
+removed_row,California City Immigration Processing Center,row,California City Immigration Processing Center,NA
+removed_row,Correctional. Center of Northwest Ohio,row,Correctional. Center of Northwest Ohio,NA
+removed_row,Denver Contract Detention Facility,row,[[Denver Contract Detention Facility]],NA
+removed_row,Mccook Detention Center,row,Mccook Detention Center,NA
+removed_row,Miami Correctional Center,row,Miami Correctional Center,NA

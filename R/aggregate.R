@@ -56,6 +56,10 @@ classify_vera_category <- function(facility_type_detailed) {
 # classify_facility_type_combined(). Covers DDP-sourced facilities (IDs
 # 1054–1209) and hold-range outliers (2187–2189) that fall through to "Other".
 canonical_type_overrides <- function() {
+  # Verified against the current DDP canonical assignments (2026-10). The
+  # earlier version of this table was written against a shifted ID map and
+  # mislabeled several facilities; rows for IDs that no longer exist
+  # (1258, 1260-1263) were removed.
   tibble::tribble(
     ~canonical_id, ~facility_type_wiki,
     # ICE panel facilities classified "Other" by ICE code; corrected by name
@@ -65,34 +69,81 @@ canonical_type_overrides <- function() {
      363L, "CBP Hold Facility",
     # State prisons (Alaska state correctional facilities)
     1056L, "State Prison",
-    1248L, "State Prison",
+    1243L, "State Prison",      # Anvil Mountain CC, Nome (AK DOC)
     # County / regional jails
     1122L, "Jail/Prison",
-    1249L, "Jail/Prison",
-    1250L, "Jail/Prison",
-    1253L, "Jail/Prison",
-    1254L, "Jail/Prison",
-    1256L, "Jail/Prison",
-    1257L, "Jail/Prison",
-    1258L, "Jail/Prison",
-    1259L, "Jail/Prison",
-    1260L, "Jail/Prison",
-    1261L, "Jail/Prison",
-    1263L, "Jail/Prison",
+    1244L, "Jail/Prison",       # Alleghany County Jail (VA)
+    1245L, "Jail/Prison",       # Amherst County Jail (VA)
+    1248L, "Jail/Prison",       # Bryan County Jail (OK)
+    1249L, "Jail/Prison",       # Chatham County Jail (GA)
+    1251L, "Jail/Prison",       # Franklin County Detention Center (NC)
+    1252L, "Jail/Prison",       # Kaufman County Detention Center (TX)
+    1253L, "Jail/Prison",       # Liberty County Jail (FL)
+    1254L, "Jail/Prison",       # Leon County Jail (FL)
+    1255L, "Jail/Prison",       # Blue Ridge Regional Jail, Lynchburg (VA)
+    1257L, "Jail/Prison",       # Onslow County Jail (NC)
     # Juvenile detention
-    1251L, "Juvenile Detention Center",
-    1262L, "Juvenile Detention Center",
+    1246L, "Juvenile Detention Center",  # Blount County Juvenile (TN)
+    1256L, "Juvenile Detention Center",  # Natrona County Juvenile (WY)
     # Federal prison
-    1252L, "Federal Prison",
-    # ICE hold rooms
+    1247L, "Federal Prison",    # La Tuna FCI (TX)
+    # ICE / CBP hold rooms and CPC holding
     1148L, "ICE Hold Room",
-    1255L, "ICE Hold Room",
+    1250L, "ICE Hold Room",     # DRT CPC Holding (TX)
+    2127L, "ICE Hold Room",     # El Paso CPC holding
     2188L, "ICE Hold Room",
     2189L, "ICE Hold Room",
     # Medical
     1211L, "Medical Facility",
     # CBP hold
     2187L, "CBP Hold Facility"
+  )
+}
+
+# Canonical-ID-based corrections for type_detailed_corrected and
+# type_grouped_corrected, applied in build_facility_roster() BEFORE
+# classify_facility_type_combined(). Covers facilities absent from Vera (DDP-only
+# jails, hold rooms, and the WV regional jails dropped from the July FY26 file)
+# whose Vera join leaves NA — the NA is what surfaces as "Unclassified" in the
+# DDP comparison analyses.
+#
+# Vocabulary: type_detailed_corrected uses ICE codes (uppercase) when known,
+# internal project codes (lowercase) otherwise; type_grouped_corrected uses
+# Vera's 8-category vocabulary.
+canonical_vera_type_overrides <- function() {
+  tibble::tribble(
+    ~canonical_id, ~type_detailed_corrected, ~type_grouped_corrected,
+    # DDP-only county / regional jails (IDs 1243+, not in Vera)
+    1244L, "county_jail", "Non-Dedicated",
+    1245L, "county_jail", "Non-Dedicated",
+    1248L, "county_jail", "Non-Dedicated",
+    1249L, "county_jail", "Non-Dedicated",
+    1251L, "county_jail", "Non-Dedicated",
+    1252L, "county_jail", "Non-Dedicated",
+    1253L, "county_jail", "Non-Dedicated",
+    1254L, "county_jail", "Non-Dedicated",
+    1255L, "county_jail", "Non-Dedicated",
+    1257L, "county_jail", "Non-Dedicated",
+    # Alaska state prisons
+    1243L, "STATE",       "Dedicated",
+    # Federal prison
+    1247L, "BOP",         "Federal",
+    # Juvenile detention
+    1246L, "Juvenile",    "Family/Youth",
+    1256L, "Juvenile",    "Family/Youth",
+    # Dilley SAF line item (FY26 DIGSA contract at the Dilley site; not in Vera)
+    401L,  "DIGSA",       "Dedicated",
+    # Hold rooms / CPC holding
+    1250L, "hold_room",   "Hold/Staging",
+    2127L, "hold_room",   "Hold/Staging",
+    2187L, "hold_room",   "Hold/Staging",
+    2188L, "hold_room",   "Hold/Staging",
+    2189L, "hold_room",   "Hold/Staging",
+    # WV regional jails (FY26b-only panel facilities; not in Vera)
+     258L, "county_jail", "Non-Dedicated",
+     344L, "county_jail", "Non-Dedicated",
+     345L, "county_jail", "Non-Dedicated",
+     386L, "county_jail", "Non-Dedicated"
   )
 }
 

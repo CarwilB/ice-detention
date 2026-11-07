@@ -10,8 +10,12 @@
 #   $crosswalk  — maps every (name, city, state) variant to canonical_id/name
 #   $presence   — one row per canonical facility; TRUE/FALSE for each fiscal year
 
+# FY26 snapshot ranks: FY26a (Feb 2) < FY26b (Feb 12) < FY26 (July 20) so that
+# the most-recent-year canonical naming prefers July values, then Feb 12, then
+# Feb 2, where a facility appears in more than one snapshot.
 year_order <- c("FY10", "FY11", "FY12", "FY13", "FY14", "FY15", "FY16", "FY17",
-                "FY19", "FY20", "FY21", "FY22", "FY23", "FY24", "FY25", "FY26")
+                "FY19", "FY20", "FY21", "FY22", "FY23", "FY24", "FY25",
+                "FY26a", "FY26b", "FY26")
 
 # ── Do-not-merge pairs ──────────────────────────────────────────────────────
 # Genuinely distinct facilities that share a ZIP and similar addresses.
@@ -33,8 +37,15 @@ do_not_merge_pairs <- function() {
     "Desert View",                         "Adelanto ICE Processing Center",
     "Desert View Annex",                   "Adelanto ICE Processing Center",
     # Dilley TX: single-adult-female program (DIGSA, FY26+) is a distinct
-    # facility from the family/immigration processing center at the same address
-    "Dilley Immigration Processing Center", "Dilley Processing Single Adult Female"
+    # facility from the family/immigration processing center at the same address.
+    # The SAF row shares 300 El Rancho Way with every South Texas variant, so
+    # all of them must be blocked or the merge returns transitively (the SAF
+    # row reaches the Dilley IPC cluster through the FY22/FY23 name variants).
+    "Dilley Immigration Processing Center",   "Dilley Processing Single Adult Female",
+    "South Texas Family Residential Center",  "Dilley Processing Single Adult Female",
+    "South Texas Family Residential Center3", "Dilley Processing Single Adult Female",
+    "South Texas Fam Residential Center",     "Dilley Processing Single Adult Female",
+    "Trusted Adult South Tex Dilley FSC",     "Dilley Processing Single Adult Female"
   )
 }
 
@@ -236,34 +247,135 @@ build_facility_crosswalk <- function(facilities_data_list, id_registry) {
     dplyr::rows_update(overrides, by = "canonical_id", unmatched = "ignore")
 
   # ── Freeze canonical IDs from registry ──────────────────────────────────────
-  # Match computed canonical identities against the frozen registry by
-  # (canonical_name, canonical_city, canonical_state). Uses normalized join
-  # keys (case-insensitive, accent-stripped) so that capitalization changes in
+  # Match computed canonical identities against the frozen registry using
+  # normalized join keys (case-insensitive, accent-stripped), in tiers:
+  #
+  #   Tier 0: canonical (most-recent-year) name + city + state, exact
+  #   Tier 1: any (name, city, state) variant within the cluster, exact —
+  #           most recent matching variant wins
+  #   Tier 2: canonical name + state, when exactly one registry entry matches
+  #           (recovers facilities whose city was respelled)
+  #   Tier 3: fuzzy name (OSA >= 0.85) + city + state, unique on both sides
+  #           (recovers minor name respellings)
+  #
+  # Tiers 1-3 keep established facilities stable when ICE respells a name or
+  # city in the most recent file, or when a file leaves the panel and an
+  # older spelling becomes the canonical label. Ambiguous tier 2-3 matches
+  # are skipped — a fresh canonical ID is preferable to a wrong merge — and
+  # every non-exact match is reported for audit.
 
-  # clean.R do not break matches against the frozen registry.
-
-  canonical_names_frozen <- canonical_names |>
+  registry_keys <- id_registry |>
     dplyr::mutate(
       .join_name  = normalize_join_key(canonical_name),
       .join_city  = normalize_join_key(canonical_city),
       .join_state = normalize_join_key(canonical_state)
     ) |>
+    dplyr::select(frozen_id = canonical_id, .join_name, .join_city, .join_state)
+
+  canonical_ids_norm <- canonical_names |>
+    dplyr::mutate(
+      .join_name  = normalize_join_key(canonical_name),
+      .join_city  = normalize_join_key(canonical_city),
+      .join_state = normalize_join_key(canonical_state)
+    )
+
+  # Tier 0: canonical identity, exact
+  frozen_tier0 <- canonical_ids_norm |>
+    dplyr::inner_join(registry_keys,
+                      by = c(".join_name", ".join_city", ".join_state")) |>
+    dplyr::select(canonical_id, frozen_id) |>
+    dplyr::mutate(.tier = 0L)
+
+  # Tier 1: any cluster variant, exact
+  frozen_tier1 <- all_facilities_keyed |>
+    dplyr::mutate(
+      .join_name  = normalize_join_key(facility_name),
+      .join_city  = normalize_join_key(facility_city),
+      .join_state = normalize_join_key(facility_state),
+      .year_rank  = match(year, year_order)
+    ) |>
+    dplyr::inner_join(registry_keys,
+                      by = c(".join_name", ".join_city", ".join_state")) |>
+    dplyr::group_by(canonical_id) |>
+    dplyr::slice_max(.year_rank, n = 1, with_ties = FALSE) |>
+    dplyr::ungroup() |>
+    dplyr::select(canonical_id, frozen_id) |>
+    dplyr::mutate(.tier = 1L) |>
+    dplyr::anti_join(frozen_tier0, by = "canonical_id") |>
+    dplyr::anti_join(frozen_tier0, by = "frozen_id")
+
+  matched_ids <- dplyr::bind_rows(frozen_tier0, frozen_tier1)
+  unmatched   <- canonical_ids_norm |>
+    dplyr::anti_join(matched_ids, by = "canonical_id")
+
+  # Tier 2: canonical name + state, unique on both sides
+  frozen_tier2 <- unmatched |>
+    dplyr::inner_join(registry_keys, by = c(".join_name", ".join_state")) |>
+    dplyr::anti_join(matched_ids, by = "frozen_id") |>
+    dplyr::add_count(canonical_id, name = ".n_cluster") |>
+    dplyr::add_count(frozen_id, name = ".n_registry") |>
+    dplyr::filter(.n_cluster == 1, .n_registry == 1) |>
+    dplyr::select(canonical_id, frozen_id) |>
+    dplyr::mutate(.tier = 2L)
+
+  matched_ids <- dplyr::bind_rows(matched_ids, frozen_tier2)
+  unmatched2  <- canonical_ids_norm |>
+    dplyr::anti_join(matched_ids, by = "canonical_id")
+
+  # Tier 3: fuzzy name + city + state, unique on both sides
+  frozen_tier3 <- unmatched2 |>
+    dplyr::inner_join(registry_keys, by = c(".join_city", ".join_state")) |>
+    dplyr::anti_join(matched_ids, by = "frozen_id") |>
+    dplyr::mutate(
+      .sim = 1 - stringdist::stringdist(.join_name.x, .join_name.y,
+                                        method = "osa") /
+        pmax(nchar(.join_name.x), nchar(.join_name.y), 1)
+    ) |>
+    dplyr::filter(.sim >= 0.85) |>
+    dplyr::group_by(canonical_id) |>
+    dplyr::slice_max(.sim, n = 1, with_ties = FALSE) |>
+    dplyr::ungroup() |>
+    dplyr::add_count(frozen_id, name = ".n_registry") |>
+    dplyr::filter(.n_registry == 1) |>
+    dplyr::select(canonical_id, frozen_id) |>
+    dplyr::mutate(.tier = 3L)
+
+  frozen_all <- dplyr::bind_rows(frozen_tier0, frozen_tier1,
+                                 frozen_tier2, frozen_tier3)
+
+  # Audit trail for every non-exact match
+  fuzzy <- frozen_all |>
+    dplyr::filter(.tier > 0) |>
+    dplyr::left_join(canonical_names, by = "canonical_id") |>
+    dplyr::arrange(.tier, canonical_id)
+  if (nrow(fuzzy) > 0) {
+    detail <- fuzzy |>
+      dplyr::mutate(lbl = glue::glue(
+        "  tier {.tier}: {canonical_name} ({canonical_city}, ",
+        "{canonical_state}) -> {frozen_id}"
+      )) |>
+      dplyr::pull(lbl) |>
+      paste(collapse = "\n")
+    message(glue::glue(
+      "Registry freeze: {nrow(fuzzy)} canonical match{ifelse(nrow(fuzzy) == 1L, '', 'es')} ",
+      "recovered by variant/fuzzy matching:\n{detail}"
+    ))
+  }
+
+  canonical_names_frozen <- canonical_ids_norm |>
     dplyr::left_join(
-      id_registry |>
-        dplyr::mutate(
-          .join_name  = normalize_join_key(canonical_name),
-          .join_city  = normalize_join_key(canonical_city),
-          .join_state = normalize_join_key(canonical_state)
-        ) |>
-        dplyr::select(frozen_id = canonical_id,
-                       .join_name, .join_city, .join_state),
-      by = c(".join_name", ".join_city", ".join_state")
+      frozen_all |> dplyr::select(canonical_id, frozen_id),
+      by = "canonical_id"
     ) |>
     dplyr::select(-starts_with(".join_"))
 
   n_new <- sum(is.na(canonical_names_frozen$frozen_id))
   if (n_new > 0) {
-    new_start <- max(id_registry$canonical_id) + 1L
+    # New panel canonicals continue the 40x block: next ID after the highest
+    # panel-range (< 1000) registry entry. Do NOT use max(registry) + 1 — the
+    # registry also holds DDP/faclist-range IDs, and DDP's pass-2 "ddp_other"
+    # block continues upward from 1210, so a global max+1 would collide with it.
+    new_start <- max(id_registry$canonical_id[id_registry$canonical_id < 1000]) + 1L
     is_new    <- is.na(canonical_names_frozen$frozen_id)
     canonical_names_frozen$frozen_id[is_new] <-
       seq.int(new_start, new_start + n_new - 1L)
@@ -301,24 +413,10 @@ build_facility_crosswalk <- function(facilities_data_list, id_registry) {
     " {nrow(strong_addr_matches)} address-based merges)"
   ))
 
-  # Warn if any panel facilities received IDs outside the frozen <400 block.
-  # This usually means the registry name doesn't match the cleaned name
-  # (e.g. abbreviation expansion in clean_facility_names()).
-  max_panel_id <- max(id_registry$canonical_id[id_registry$canonical_id < 410])
-  leaked <- facility_crosswalk |>
-    dplyr::filter(canonical_id > max_panel_id) |>
-    dplyr::distinct(canonical_id, canonical_name, canonical_city, canonical_state)
-  if (nrow(leaked) > 0) {
-    warning(
-      "Panel facilities mapped outside the frozen <410 ID block!\n",
-      "These facilities failed to match the registry (likely a name mismatch):\n",
-      paste0("  ID ", leaked$canonical_id, ": ", leaked$canonical_name,
-             " (", leaked$canonical_city, ", ", leaked$canonical_state, ")",
-             collapse = "\n"),
-      "\nUpdate data/canonical_id_registry.csv to fix.",
-      call. = FALSE
-    )
-  }
+  # NOTE: the former "panel IDs outside the frozen <410 block" warning was
+  # removed once panel facilities began legitimately unifying with DDP-range
+  # canonicals (IDs 1000+). Unfrozen new IDs are already reported by the
+  # "new canonical facilities" message above, which asks for registry appends.
 
   facility_crosswalk
 }
@@ -437,10 +535,99 @@ merge_keyed_lists <- function(facilities_keyed, facilities_annual_sums) {
   })
   # Add facility_type_wiki to DMCP-era tables using same classification
   sums_with_type <- purrr::map(facilities_annual_sums, \(df) {
-    df |> dplyr::mutate(facility_type_wiki = classify_facility_type(facility_type_detailed))
+    df |> dplyr::mutate(facility_type_wiki = classify_facility_type(facility_type_detailed),
+                        fy26_snapshot = NA_character_)
   })
   combined <- c(sums_with_type, keyed_with_adp)
   combined[intersect(year_order, names(combined))]
+}
+
+# ── Resolve the three FY26 snapshots into a single FY26 year ─────────────────
+#
+# FY26 has three imported snapshots: FY26a (Feb 2), FY26b (Feb 12), and FY26
+# (July 20). Two panel variants are built from the keyed lists:
+#
+#   interim = TRUE  (facilities_panel_interim): a cascade in priority order
+#       July → Feb 12 → Feb 2. Facilities dropped from the July file keep
+#       their Feb 12 rows; facilities dropped from both keep their Feb 2
+#       rows. Used for the registry, roster, presence matrix, canonical
+#       facility list, and the FY25–FY26 union wikitable.
+#   interim = FALSE (facilities_panel): July entries only — what ICE reports
+#       as of the July snapshot. Used for the "reported by ICE" side of the
+#       DDP comparison analyses.
+#
+# In both variants every facility has at most one FY26 row: where a facility
+# appears in several snapshots the higher-priority values win. The
+# fy26_snapshot column (a/b/c) records which snapshot each FY26 row came from.
+resolve_fy26_snapshots <- function(facilities_all_keyed, interim = TRUE) {
+  # Priority order: element name, highest first
+  snapshots <- c("FY26", "FY26b", "FY26a")
+  have <- snapshots[
+    purrr::map_lgl(snapshots, ~ !is.null(facilities_all_keyed[[.x]]))
+  ]
+  if (length(have) == 0) return(facilities_all_keyed)
+
+  out <- facilities_all_keyed
+  if (interim) {
+    seen_ids <- numeric(0)
+    fill <- list()
+    for (s in have) {
+      newly <- facilities_all_keyed[[s]] |>
+        dplyr::filter(!canonical_id %in% seen_ids)
+      seen_ids <- c(seen_ids, newly$canonical_id)
+      fill[[length(fill) + 1]] <- newly
+    }
+    out[["FY26"]] <- dplyr::bind_rows(fill)
+  }
+  out[setdiff(snapshots, "FY26")] <- NULL
+  out
+}
+
+# ── Fiscal-year range union (Wikipedia era list tables) ──────────────────────
+#
+# One row per canonical facility listed in ANY of the given fiscal years,
+# with values from the latest year in the range where the facility appears
+# (later years win; earlier years fill in). FY26 must already be
+# snapshot-resolved (pass facilities_all_keyed_interim). Missing years
+# (e.g. FY18) are skipped with a message.
+build_fy_range_union <- function(facilities_all_keyed, years) {
+  years <- years[order(as.integer(sub("FY", "", years)), decreasing = TRUE)]
+  missing <- years[purrr::map_lgl(years, ~ is.null(facilities_all_keyed[[.x]]))]
+  if (length(missing) > 0) {
+    message("build_fy_range_union: no keyed data for ",
+            paste(missing, collapse = ", "), " — skipping")
+    years <- setdiff(years, missing)
+  }
+
+  seen <- numeric(0)
+  parts <- lapply(years, function(y) {
+    yr <- facilities_all_keyed[[y]]
+    newly <- yr |>
+      dplyr::filter(!canonical_id %in% seen) |>
+      # A canonical can appear twice within one year's spreadsheet under
+      # different name variants (e.g. a facility plus its staging line
+      # item); keep the first row, which is the main facility entry
+      dplyr::filter(!duplicated(canonical_id))
+    n_dupes <- sum(duplicated(yr$canonical_id))
+    if (n_dupes > 0) {
+      message(glue::glue("build_fy_range_union: {y} — dropped {n_dupes} ",
+                         "within-year duplicate row(s) (kept first row)"))
+    }
+    seen <<- c(seen, newly$canonical_id)
+    newly
+  })
+  dplyr::bind_rows(parts)
+}
+
+# ── FY25 + FY26 union (Wikipedia list table) ─────────────────────────────────
+#
+# One row per canonical facility listed in the FY25 spreadsheet or either
+# FY26 snapshot (Feb 12 / July 20). FY26 rows come from the interim
+# resolution (July values win; facilities dropped from the July file keep
+# their Feb 12 rows); facilities that appear only in FY25 fall back to their
+# FY25 rows. Input for the facilities_fy25_26_wiki chain.
+build_fy25_26_union <- function(facilities_all_keyed_interim) {
+  build_fy_range_union(facilities_all_keyed_interim, c("FY25", "FY26"))
 }
 
 # ── Build panel dataset ──────────────────────────────────────────────────────
@@ -448,7 +635,7 @@ merge_keyed_lists <- function(facilities_keyed, facilities_annual_sums) {
 build_panel <- function(facilities_keyed) {
   facilities_keyed |>
     purrr::imap_dfr(\(df, yr) df |> dplyr::mutate(fiscal_year = yr)) |>
-    dplyr::relocate(fiscal_year, canonical_id, canonical_name,
+    dplyr::relocate(fiscal_year, fy26_snapshot, canonical_id, canonical_name,
                     facility_name, facility_city, facility_state)
 }
 
@@ -496,6 +683,21 @@ build_panel_facilities <- function(facilities_panel) {
     id >= 3001 & id <= 4000 ~ "medical",
     id >= 4001              ~ "hotel",
     TRUE                    ~ NA_character_
+  )
+}
+
+# Manual address patches for roster facilities whose source data carries no
+# address (e.g. DDP-revived panel canonicals that have no keyed row in any
+# annual-stats or DMCP source). Keyed by canonical_id and applied via
+# rows_update() in build_facility_roster(), so they fill missing fields and
+# overwrite stale ones alike. For ICE/DMCP-sourced rows prefer
+# address_patches() in clean.R (keyed by facility_name, applied upstream).
+roster_address_patches <- function() {
+  dplyr::tribble(
+    ~canonical_id, ~facility_address,    ~facility_city, ~facility_state, ~facility_zip,
+    # Southern Regional Jail and Correctional Facility (WV Regional Jail
+    # Authority; confirmed against the facility's published address 2026-10)
+    344L,          "1200 Airport Road",  "Beaver",       "WV",            "25813"
   )
 }
 
@@ -563,6 +765,8 @@ build_facility_roster <- function(panel_facilities,
   # ── Combine ──
   roster <- dplyr::bind_rows(panel, dmcp, ero, hold, ddp_new) |>
     dplyr::distinct(canonical_id, .keep_all = TRUE) |>
+    dplyr::rows_update(roster_address_patches(), by = "canonical_id",
+                       unmatched = "ignore") |>
     dplyr::mutate(id_range = .id_range_label(canonical_id))
 
   # Fill in DETLOCs from detloc_lookup where missing
@@ -599,7 +803,6 @@ build_facility_roster <- function(panel_facilities,
     106L, "OKDBACK",       # Diamondback Correctional Facility (OK)
     146L, "FULCJIN",       # Fulton County Jail Indiana
     229L, "NEMCCOI",       # Mccook Detention Center (NE)
-    231L, "DVCSDKY",       # Daviess County Detention Center (KY)
     # WV regional jails from fy26b (DDP-discovered Oct 2025–Feb 2026)
     258L, "WVNCENT",       # North Central Regional Jail (WV)
     344L, "WVSOUTH",       # Southern Regional Jail (WV)
@@ -642,6 +845,17 @@ build_facility_roster <- function(panel_facilities,
         type_grouped_corrected  = NA_character_
       )
   }
+
+  # Facilities absent from Vera (DDP-only jails, hold rooms, and facilities
+  # whose roster rows were restored from the FY26b snapshot): canonical-ID
+  # corrections applied before classification so the corrected columns are
+  # non-NA downstream.
+  roster <- roster |>
+    dplyr::rows_update(
+      canonical_vera_type_overrides(),
+      by = "canonical_id",
+      unmatched = "ignore"
+    )
 
   # Unified facility_type_wiki using combined classification
   roster <- roster |>
@@ -785,8 +999,8 @@ build_source_presence <- function(facility_presence, faclist15_keyed,
 # ── Save outputs to data/ ───────────────────────────────────────────────────
 
 save_outputs <- function(facility_crosswalk, facility_presence,
-                         facilities_panel, source_presence,
-                         facility_roster) {
+                         facilities_panel, facilities_panel_interim,
+                         source_presence, facility_roster) {
   paths <- c(
     "data/facility_crosswalk.rds",
     "data/facility_crosswalk.csv",
@@ -794,6 +1008,8 @@ save_outputs <- function(facility_crosswalk, facility_presence,
     "data/facility_presence.csv",
     "data/facilities_panel.rds",
     "data/facilities_panel.csv",
+    "data/facilities_panel_interim.rds",
+    "data/facilities_panel_interim.csv",
     "data/source_presence.rds",
     "data/source_presence.csv",
     "data/facility_roster.rds",
@@ -805,10 +1021,12 @@ save_outputs <- function(facility_crosswalk, facility_presence,
   write.csv(facility_presence, paths[4], row.names = FALSE)
   saveRDS(facilities_panel, paths[5])
   write.csv(facilities_panel, paths[6], row.names = FALSE)
-  saveRDS(source_presence, paths[7])
-  write.csv(source_presence, paths[8], row.names = FALSE)
-  saveRDS(facility_roster, paths[9])
-  write.csv(facility_roster, paths[10], row.names = FALSE)
+  saveRDS(facilities_panel_interim, paths[7])
+  write.csv(facilities_panel_interim, paths[8], row.names = FALSE)
+  saveRDS(source_presence, paths[9])
+  write.csv(source_presence, paths[10], row.names = FALSE)
+  saveRDS(facility_roster, paths[11])
+  write.csv(facility_roster, paths[12], row.names = FALSE)
   message("Saved: ", paste(basename(paths), collapse = ", "))
   paths
 }

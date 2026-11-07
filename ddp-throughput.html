@@ -2,18 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.21">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-10-03">
+<meta name="dcterms.date" content="2026-10-21">
 
 <title>Detention throughput: daily population, removals, and re-detention</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -62,15 +68,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="ddp-throughput_files/libs/clipboard/clipboard.min.js"></script>
 <script src="ddp-throughput_files/libs/quarto-html/quarto.js" type="module"></script>
 <script src="ddp-throughput_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="ddp-throughput_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="ddp-throughput_files/libs/quarto-html/popper.min.js"></script>
 <script src="ddp-throughput_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="ddp-throughput_files/libs/quarto-html/anchor.min.js"></script>
 <link href="ddp-throughput_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="ddp-throughput_files/libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="ddp-throughput_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="ddp-throughput_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="ddp-throughput_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="ddp-throughput_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="ddp-throughput_files/libs/bootstrap/bootstrap-917079515d91bccb85b543faf8aa8bb6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -109,7 +114,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 3, 2026</p>
+      <p class="date">October 21, 2026</p>
     </div>
   </div>
   
@@ -707,13 +712,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
