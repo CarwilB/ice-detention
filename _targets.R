@@ -1225,6 +1225,29 @@ list(
     description = "Raw DDP arrests (20260806 release: 896k rows x 34 cols, Oct 2022 - Aug 2026; one row per arrest event), schema-normalized to the 20260330 column names (apprehension_state <- apprehension_state_filled_in, apprehension_site_landmark <- event_landmark; apprehension_type restored as NA)"
   ),
 
+  # ── Census place-county crosswalk (city -> county for arrests) ─────────────
+  # Census 2023 cartographic boundary files, downloaded once by hand into
+  # data/census/ (from https://www.census.gov/... GENZ2023 shp). One place
+  # file per covered state (17=IL, 27=MN, 47=TN); the county file is national.
+  tar_target(
+    census_place_files,
+    list.files(here::here("data/census"),
+               pattern = "^cb_2023_[0-9]{2}_place_500k\\.zip$", full.names = TRUE),
+    format = "file",
+    description = "Census 2023 place boundary zips (one per state: IL, MN, TN)"
+  ),
+  tar_target(
+    census_county_file,
+    here::here("data/census/cb_2023_us_county_500k.zip"),
+    format = "file",
+    description = "Census 2023 county boundary zip (national)"
+  ),
+  tar_target(
+    place_county,
+    build_place_county(census_place_files, census_county_file),
+    description = "Place -> primary county crosswalk with multi-county flag, for states with a place file (IL, MN, TN)"
+  ),
+
   # ── Minnesota post-inauguration arrest analysis ────────────────────────────
   tar_target(
     mn_arrests_data,
@@ -1239,12 +1262,20 @@ list(
     ),
     description = "Pre-computed tables for mn-arrests.qmd: MN post-2025-01-20 arrest itineraries, county choropleth, Sankey, minors"
   ),
-  # tar_quarto(
-  #   state_arrests_report,
-  #   "state-arrests.qmd",
-  #   execute_params = list(state = "MINNESOTA", cutoff = "2025-01-20"),
-  #   description = "Rendered state-arrests.qmd for Minnesota post-2025-01-20 (parameterized; render for other states with quarto render state-arrests.qmd -P state:TEXAS)"
-  # ),
+  tar_quarto(
+    tn_arrests_report,
+    "state-arrests.qmd",
+    output_file = "state-arrests-tn.html",
+    execute_params = list(state = "TENNESSEE", cutoff = "2025-01-20"),
+    description = "Rendered state-arrests.qmd for Tennessee post-2025-01-20 (city-first county attribution; render other states with quarto render state-arrests.qmd -P state:TEXAS)"
+  ),
+  tar_quarto(
+    il_arrests_report,
+    "state-arrests.qmd",
+    output_file = "state-arrests-il.html",
+    execute_params = list(state = "ILLINOIS", cutoff = "2025-01-20"),
+    description = "Rendered state-arrests.qmd for Illinois post-2025-01-20 (city-first county attribution)"
+  ),
   tar_quarto(
     nationwide_arrests_report,
     "nationwide-arrests.qmd",

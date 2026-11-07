@@ -87,7 +87,17 @@ data:
       (201,073 NAs). Many values now embed the state, e.g. "JACKSONVILLE
       FL ERO"; content is not identical to the old field on matched rows.
     apprehension_city_original / apprehension_city_common_case: >
-      Raw arrest city and a case-normalized variant (~111k NAs).
+      Raw arrest city and a case-normalized variant (~111k NAs). New in the
+      20260806 release — no prior release carries arrest geography below
+      state/landmark level. DDP: "the most specific ICE arrest location
+      information that we have received to date"; hand-entered, ~4% missing
+      since 2025, sometimes inconsistent with apprehension_state.
+      apprehension_city_common_case was added in the 2026-09-08 update
+      (https://deportationdata.org/news/2026-09-08-detainers-release.html),
+      standardizing case and most punctuation (18,513 -> 11,263 values).
+      Caveat: for at-large arrests the city can record the ICE processing
+      point rather than the arrest location (e.g. Broadview IL: 63% at-large;
+      Fort Snelling MN for SPM general-area rows).
 
   arrest_fields:
     apprehension_date: "Date of arrest (Date; no NAs)."

@@ -576,3 +576,22 @@ For future data sources that are supplemental to the main annual stats pipeline 
 2.  **YAML sidecar** (`data/<source-name>.yml`): Same as above.
 
 3.  **Frictionless Data package descriptor** (`data/datapackage.json`): Same as above. New resources are appended to the existing `datapackage.json`.
+
+
+## State arrests: location attribution (2026-11-06)
+
+Integration of the `state-data-cleaning` branch's Illinois work into `aug26-update`, extending city-first county attribution to TN, MN, and IL. See GitHub issue 13 for the original Tennessee county-assignment table (largely subsumed by the machinery below).
+
+**Bug fixed first:** landmarks with a no-space `CAP-` prefix (e.g. `CAP-YORK COUNTY PRISON PA STATE`) used to parse as county "Cap-York" and were attributed to the report state. Fix in `R/state-arrests.R`: prefix-peel regexes accept optional spaces, and suffix-state detection now covers four forms — `, XX`, `XX STATE`/`XX STATE DOC` (inline), bare trailing `XX`, and `, FULL STATE NAME` (title-case matched against `state.name`; note `STATE_ABBREVS` keys are uppercase, so map via `full_abbrs[match(...)]`, not direct indexing).
+
+**Architecture (single file `R/state-arrests.R`, merged from both lines of work):**
+
+- **Landmark engine** (this repo's structure, kept): per-state tribble tables (`mn_*`, `tn_*`, `il_landmark_patterns`) → `.county_text_extraction()` prefix-peeling → `.parse_landmark_county_state()` resolution chain (patterns → airport exact → generic airport → general-area code → OTHER exact → generic "X COUNTY").
+- **County validation** (branch idea): every generic "X COUNTY" parse is validated against the attributed state's real county list (`.state_county_names()` from `maps::county.fips`, `.county_key()` letters-only key, `.county_typos()` = DEWIITT/GALATIN/PUTNAME). Typos and cross-state name collisions return NA instead of fabricating geography.
+- **City-first layer** (branch idea): `assign_arrest_location()` attributes county from the Aug-2026-release `apprehension_city_common_case` field first (via `build_place_county()` Census place-county crosswalk, `.city_key()`, `clean_arrest_city()` + `.city_fixes()`/`.city_aliases()` — Illinois-reviewed only so far), falling back to `.county_from_landmark()` (audit overrides `.landmark_county_overrides()` → landmark engine, in-state rows only). Records `county_source` ("City"/"Landmark") and `unassigned_reason`.
+- `classify_landmark_type()`, `.arrest_type_col()`/`.count_arrest_type()` (output column stays `apprehension_type` for website compatibility) ported from the branch.
+- `state_landmark_tables()` no longer gives non-TN states the MN tables; IL has its own pattern table. Landmarks with inline `XX DOC` state-corrections markers (`A - WI DOC - BROWN COUNTY JAIL` → Brown, WI; 541 in the 20260806 release) are pinned to the marker state via `.landmark_state_markers()`, the shared suffix detector (`, XX` comma form handled by callers; then `XX STATE`/`XX STATE DOC`, `XX DOC`, bare trailing `XX`, `, FULL STATE NAME`). Residual limitation: a landmark with no state marker naming a same-named county in another state still validates in-state.
+
+**Coverage on the 20260806 release (arrests_raw, post-cutoff):** TN 96.2%, MN 95.6%, IL 99.0% of arrests mapped to a county (city 83–99%, landmark remainder).
+
+**Targets:** `census_place_files` (`data/census/cb_2023_{17,27,47}_place_500k.zip` = IL/MN/TN), `census_county_file`, `place_county`. Add a state's place zip to extend coverage. `build_state_arrests_data()` gained a `place_county = NULL` argument. Reports: `tn_arrests_report` and `il_arrests_report` render `state-arrests.qmd` (distinct `output_file`s `state-arrests-tn.html` / `state-arrests-il.html`); the qmd gained a county-attribution/unassigned panel and city-based wording. The branch's `_aug` arrest/stay targets are redundant on this branch (arrests_raw already reads the 20260806 release).
