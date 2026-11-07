@@ -48,8 +48,10 @@ flowchart TD
     C --> I
     D --> I
     E --> I
-    F --> IKnown limitation: a landmark with **no state marker at all** that names a same-named county in another state still validates in-state (`GREENE COUNTY JAIL` in a report for any state with a Greene County). Landmarks carrying state markers are safe, though: inline `XX DOC` state-corrections markers (`A - WI DOC - BROWN COUNTY JAIL` → Brown, **WI**) and all other suffix forms (`XX STATE`, bare trailing `XX`, `, FULL STATE NAME`) are detected by `.landmark_state_markers()` and take priority over the county search; 541 such landmarks exist in the 20260806 release (FL 342, WI 153, VA, WV, AZ, IN, PA).
+    F --> I
 ```
+
+Known limitation: a landmark with **no state marker at all** that names a same-named county in another state still validates in-state (`GREENE COUNTY JAIL` in a report for any state with a Greene County). Landmarks carrying state markers are safe, though: inline `XX DOC` state-corrections markers (`A - WI DOC - BROWN COUNTY JAIL` → Brown, **WI**) and all other suffix forms (`XX STATE`, bare trailing `XX`, `, FULL STATE NAME`) are detected by `.landmark_state_markers()` and take priority over the county search; 541 such landmarks exist in the 20260806 release (FL 342, WI 153, VA, WV, AZ, IN, PA).
 
 ## The two layers in detail
 
