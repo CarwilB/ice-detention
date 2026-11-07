@@ -33,6 +33,16 @@ facility_group_config <- function() {
 
 # ── Data preparation ──────────────────────────────────────────────────────────
 
+# Unify DDP's duplicate-flag columns into a single logical `likely_duplicate`.
+# DDP renamed `likely_duplicate` to `duplicate_likely` in the 20260806 stints
+# release; both names (and `duplicate_drop_row`) are accepted.
+normalize_duplicate_flags <- function(stints) {
+  dup_flags <- intersect(c("likely_duplicate", "duplicate_likely", "duplicate_drop_row"),
+                         names(stints))
+  stints |>
+    dplyr::mutate(likely_duplicate = dplyr::coalesce(!!!rlang::syms(dup_flags), FALSE))
+}
+
 #' Filter stints to target facilities, add group/period labels and derived columns.
 #' @param stints  Raw stints data frame (detention-stints-latest.parquet).
 #' @param groups  Output of facility_group_config().
@@ -51,10 +61,8 @@ prepare_stints <- function(stints, groups,
     )
   )
 
-dup_flags <- intersect(c("likely_duplicate", "duplicate_likely", "duplicate_drop_row"),
-                      names(stints))
 stints |>
-  dplyr::mutate(likely_duplicate = dplyr::coalesce(!!!rlang::syms(dup_flags), FALSE)) |>
+  normalize_duplicate_flags() |>
   dplyr::filter(
     detention_facility_code %in% code_to_group$detention_facility_code,
     likely_duplicate == FALSE | is.na(likely_duplicate)
@@ -188,6 +196,7 @@ profile_adp_and_totals <- function(stints, facility_groups,
   })
 
   s <- stints |>
+    normalize_duplicate_flags() |>
     dplyr::filter(
       detention_facility_code %in% code_to_group$detention_facility_code,
       likely_duplicate == FALSE | is.na(likely_duplicate)
@@ -444,12 +453,24 @@ build_facility_profiles_data <- function(stints,
     overview       = profile_overview(base),
     nationalities  = profile_nationalities(base, n = 12),
     criminality    = profile_counts(base, "book_in_criminality"),
-    classification = profile_counts(base, "detainee_classification"),
+    # DDP renamed `detainee_classification` to `case_category` in the 20260806
+    # stints release; accept either name.
+    classification = profile_counts(
+      base, if ("case_category" %in% names(base)) "case_category" else "detainee_classification"
+    ),
     threat_level   = profile_counts(base, "threat_level_clean"),
     release_reason = profile_counts(base, "detention_release_reason"),
     entry_status   = profile_counts(base, "entry_status"),
     final_order    = profile_counts(base, "final_order_yes_no"),
-    ina_236c       = profile_counts(base, "case_ina_236c_yes_no"),
+    ina_236c       = if ("case_ina_236c_yes_no" %in% names(base)) {
+      profile_counts(base, "case_ina_236c_yes_no")
+    } else {
+      # DDP dropped `case_ina_236c_yes_no` in the 20260806 stints release;
+      # emit an empty table so downstream renders still work.
+      base[0, ] |>
+        dplyr::mutate(value = NA_character_, n = 0L, pct = 0) |>
+        dplyr::select(facility_group, facility_label, period, value, n, pct)
+    },
     age_bands      = profile_age_bands(base)
   )
 }

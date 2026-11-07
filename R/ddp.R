@@ -132,8 +132,9 @@ ddp_manual_strong_matches <- function() {
     344L, "WVSOUTH", "SOUTHERN REGIONAL JAIL",               NA,
     345L, "WVSWEST", "SOUTHWESTERN REGIONAL JAIL",           NA,
     386L, "WVWESTR", "WESTERN REGIONAL JAIL",                NA,
-    # Daviess County Detention Center (KY)
-    231L, "DVCSDKY", "DAVIESS COUNTY DETENTION CENTER",      NA,
+    # Daviess County Detention Center (KY): DVCSDKY fuzzy-matches canonical 96;
+    # the earlier manual entry pointing DVCSDKY at 231 was stale (231 is Mesa
+    # Verde ICE Processing Center, Bakersfield CA) and was removed 2026-10.
     # Diamondback Correctional Facility (OK): fuzzy match fails (score < 0.85)
     106L, "OKDBACK", "DIAMONDBACK CORR FACILITY",             NA,
     # Lewisburg US Penitentiary (PA): new in Feb 12 FY26 ICE spreadsheet
@@ -143,7 +144,18 @@ ddp_manual_strong_matches <- function() {
     401L, "DILLSAF", "DILLEY PROCESSING SINGLE FEMALE",      NA,
     # Migrant Ops Center Main A (FPO FL): new Guantánamo facility in Feb 12;
     # GTMODCU is its primary DDP code; GTMOBCU (East) stays as component of 176.
-    404L, "GTMODCU", "MIGRANT OPS CENTER MAIN AV622",        NA
+    404L, "GTMODCU", "MIGRANT OPS CENTER MAIN AV622",        NA,
+    # Lafayette Parish: DDP's LAFAYLA names the parish jail annex at
+    # 916 Lafayette St — the same address ICE lists for canonical 402
+    # (Lafayette Parish Correctional Center). DDP's auto-assigned 1258 is
+    # superseded by this match.
+    402L, "LAFAYLA", "LAFAYETTE PARISH SO JAIL ANNEX",       NA,
+    # Midwest Regional Reception Center (Leavenworth KS): new facility from the
+    # federal buyout of the old CCA Leavenworth Detention Center at 100 Highway
+    # Terrace. DDP code CCALEKS has a continuous daily record since Oct 2022
+    # (DDP relabels the whole history with the new name), so it maps to the new
+    # panel canonical rather than getting its own DDP-range ID.
+    405L, "CCALEKS", "MIDWEST REGIONAL RECEPTION CENTER",    NA,
     # NOTE: EPSSFTX ("El Paso Soft Sided Facility") was previously mapped here
     # to canonical 108 (Camp East Montana). Removed: these are distinct facilities.
     # EPSSFTX is a tent camp at 12501 Gateway Blvd S; canonical 108 is the
@@ -194,8 +206,12 @@ build_ddp_canonical_map <- function(id_registry, dmcp_canonical_map,
   # in the targets pipeline: detloc_lookup → ddp_canonical_map → here,
   # while panel_facilities depends on facilities_keyed which needs detloc_lookup.
   dmcp_matched_ids <- unique(dmcp_canonical_map$canonical_id)
+  # Canonicals with a detloc pin are DDP-assigned IDs handled by
+  # build_ddp_facility_canonical(); they are matched explicitly (below) rather
+  # than fuzzy-searched, which would fire spurious cross-matches across the
+  # whole pinned block.
   canonical_no_dmcp <- id_registry |>
-    dplyr::filter(!(canonical_id %in% dmcp_matched_ids)) |>
+    dplyr::filter(!(canonical_id %in% dmcp_matched_ids), is.na(detloc)) |>
     dplyr::rename(facility_state = canonical_state)
 
   ddp_unique <- ddp_codes |>
@@ -330,8 +346,20 @@ build_ddp_canonical_map <- function(id_registry, dmcp_canonical_map,
   keyword_all <- dplyr::bind_rows(keyword_matches) |>
     dplyr::mutate(match_type = "partial_keyword")
 
+  # Pinned canonicals: their own DDP code is a known 1:1 match (from the
+  # registry's detloc column); no fuzzy search needed.
+  pinned_all <- id_registry |>
+    dplyr::filter(!is.na(detloc), !(canonical_id %in% dmcp_matched_ids)) |>
+    dplyr::left_join(ddp_unique, by = c("detloc" = "detention_facility_code")) |>
+    dplyr::transmute(canonical_id, detloc,
+                     ddp_name = detention_facility,
+                     match_type = "pinned",
+                     # ddp_role "sole" so the row flows through
+                     # build_detloc_lookup()'s 1:1 filter like other DDP rows
+                     ddp_role = "sole")
+
   # ── Combine ──────────────────────────────────────────────────────────────
-  ddp_map <- dplyr::bind_rows(exact_all, county_all, keyword_all) |>
+  ddp_map <- dplyr::bind_rows(exact_all, county_all, keyword_all, pinned_all) |>
     dplyr::mutate(ddp_role = dplyr::coalesce(ddp_role, "sole")) |>
     dplyr::select(canonical_id, detloc, ddp_name, match_type, ddp_role)
 
@@ -340,7 +368,8 @@ build_ddp_canonical_map <- function(id_registry, dmcp_canonical_map,
     "DDP canonical map: {nrow(ddp_map)} rows, {n_fac} unique facilities \u2014 ",
     "{sum(ddp_map$match_type == 'exact')} exact, ",
     "{sum(ddp_map$match_type == 'partial_county')} county, ",
-    "{sum(ddp_map$match_type == 'partial_keyword')} keyword."
+    "{sum(ddp_map$match_type == 'partial_keyword')} keyword, ",
+    "{sum(ddp_map$match_type == 'pinned')} pinned."
   ))
 
   ddp_map
@@ -503,15 +532,21 @@ build_ddp_fy_summary <- function(ddp_raw, fy_start, fy_end) {
 #   4001+  Hotels (reserved, currently empty)
 
 build_ddp_facility_canonical <- function(ddp_codes, detloc_lookup_full,
-                                         vera_facilities,
+                                         vera_facilities, id_registry,
+                                         crosswalk,
                                          ddp_codes_new = NULL) {
   # Args:
   #   ddp_codes:        codes from ddp_raw (feather); existing IDs are stable.
   #   detloc_lookup_full: existing DETLOC → canonical_id mapping.
   #   vera_facilities:  Vera metadata for name/address/type lookup.
+  #   id_registry:      frozen canonical ID registry. Rows with a non-NA
+  #                     `detloc` pin a DDP code to its canonical ID: assigned
+  #                     IDs are never renumbered, even when the set of mapped
+  #                     codes shifts. New assignments are appended to the
+  #                     registry CSV so they persist.
   #   ddp_codes_new:    optional codes from ddp_new only (parquet-only codes).
-  #                     Processed separately to preserve existing ID stability.
-  #                     Hold/CBP → 2181+; medical → 3227+; other jails → 1210+.
+  #                     Classified into hold/CBP (2181+), medical (3227+), and
+  #                     other (after the highest assigned ddp_other ID).
 
   vera_meta <- vera_facilities |>
     dplyr::select(detloc, facility_name, facility_address, facility_city,
@@ -530,9 +565,57 @@ build_ddp_facility_canonical <- function(ddp_codes, detloc_lookup_full,
       )
   }
 
-  # ── Pass 1: ddp_raw-derived codes (stable IDs 1054–1209, 3001–3226) ─────────
+  pins <- id_registry |>
+    dplyr::filter(!is.na(detloc)) |>
+    dplyr::select(detloc, pinned_id = canonical_id)
+
+  # Assign IDs to one block of codes: pinned codes keep their registry ID;
+  # unpinned codes append above `block_max`, the highest ID occupied in the
+  # block by ANY pin (feather- or parquet-era) or earlier assignment — not
+  # just the pins present in this particular pool.
+  .assign_block <- function(df, block_max) {
+    df$canonical_id <- rep(NA_integer_, nrow(df))
+    df$pinned_id <- pins$pinned_id[match(df$detention_facility_code, pins$detloc)]
+    unpinned <- which(is.na(df$pinned_id))
+    if (length(unpinned) > 0) {
+      df$canonical_id[unpinned] <- seq.int(block_max + 1L,
+                                           length.out = length(unpinned))
+    }
+    df$canonical_id[!is.na(df$pinned_id)] <- df$pinned_id[!is.na(df$pinned_id)]
+    df$pinned_id <- NULL
+    df
+  }
+
+  # ── Pass 1: ddp_raw-derived codes (stable IDs 1054+, 3001+) ─────────────────
   mapped_detlocs <- unique(detloc_lookup_full$detloc)
-  unmapped <- .process_unmapped(ddp_codes, mapped_detlocs)
+
+  # Warn if a registry pin disagrees with the mapped canonical for its code
+  pin_conflicts <- detloc_lookup_full |>
+    dplyr::inner_join(pins, by = "detloc") |>
+    dplyr::filter(canonical_id != pinned_id)
+  if (nrow(pin_conflicts) > 0) {
+    cli::cli_warn(c(
+      "!" = "{nrow(pin_conflicts)} registry detloc pin(s) disagree with the mapped canonical:",
+      paste0("  ", pin_conflicts$detloc, ": pinned ", pin_conflicts$pinned_id,
+             " vs mapped ", pin_conflicts$canonical_id)
+    ))
+  }
+
+  # A code is handled OUTSIDE this function (its canonical is rostered
+  # elsewhere) when either:
+  #   - the DDP canonical map matched it to a searchable (panel/DMCP-era)
+  #     canonical, or
+  #   - it is pinned to a canonical that the crosswalk rosters (the panel row
+  #     wins). If that cluster later dies, the pin returns the code to this
+  #     pool with its ID intact.
+  xwalk_ids   <- unique(crosswalk$canonical_id)
+  nonpin_map  <- detloc_lookup_full |>
+    dplyr::filter(!detloc %in% pins$detloc) |>
+    dplyr::pull(detloc)
+  excluded_detlocs <- unique(c(nonpin_map,
+                               pins$detloc[pins$pinned_id %in% xwalk_ids]))
+
+  unmapped <- .process_unmapped(ddp_codes, excluded_detlocs)
 
   if (nrow(unmapped) == 0) {
     cli::cli_warn("No unmapped DDP facility codes found in ddp_codes.")
@@ -548,11 +631,15 @@ build_ddp_facility_canonical <- function(ddp_codes, detloc_lookup_full,
     dplyr::arrange(facility_state, detention_facility_code)
 
   if (nrow(remaining) > 0) {
-    ids <- setdiff(seq(1054L, 1054L + nrow(remaining)), c(1182L))
-    remaining$canonical_id <- ids[seq_len(nrow(remaining))]
+    block_max <- suppressWarnings(max(c(1053L,
+      dplyr::filter(pins, pinned_id >= 1054L, pinned_id < 2000L)$pinned_id),
+      na.rm = TRUE))
+    remaining <- .assign_block(remaining, block_max = block_max)
   }
   if (nrow(medical) > 0) {
-    medical$canonical_id <- seq(3001L, length.out = nrow(medical))
+    block_max <- suppressWarnings(max(c(3000L,
+      dplyr::filter(pins, pinned_id >= 3001L)$pinned_id), na.rm = TRUE))
+    medical <- .assign_block(medical, block_max = block_max)
   }
 
   result <- dplyr::bind_rows(remaining, medical) |>
@@ -574,7 +661,7 @@ build_ddp_facility_canonical <- function(ddp_codes, detloc_lookup_full,
 
   # ── Pass 2: ddp_new-only codes (new IDs appended after existing ranges) ──────
   if (!is.null(ddp_codes_new) && nrow(ddp_codes_new) > 0) {
-    all_assigned <- c(mapped_detlocs, result$detloc)
+    all_assigned <- c(excluded_detlocs, result$detloc)
     new_unmapped <- .process_unmapped(ddp_codes_new, all_assigned)
 
     if (nrow(new_unmapped) > 0) {
@@ -583,7 +670,7 @@ build_ddp_facility_canonical <- function(ddp_codes, detloc_lookup_full,
       # rather than propagating as NA through base-R logical indexing.
       #   hold/CBP  → 2181+ (extending the hold range 2026–2180)
       #   medical   → 3227+ (extending medical range 3001–3226)
-      #   other     → 1210+ (extending ddp_other range 1054–1209)
+      #   other     → after the highest assigned ddp_other ID
       new_hold_cbp <- new_unmapped |>
         dplyr::filter(
           dplyr::coalesce(type_grouped_corrected == "Hold/Staging", FALSE) |
@@ -592,28 +679,38 @@ build_ddp_facility_canonical <- function(ddp_codes, detloc_lookup_full,
                               stringr::regex("HOLD ?ROOM|HOLD ?RM", ignore_case = TRUE)) |
           stringr::str_starts(detention_facility_code, "CBP")
         ) |>
-        dplyr::arrange(facility_state, detention_facility_code) |>
-        dplyr::mutate(canonical_id = seq(2181L, length.out = dplyr::n()),
-                      id_range = "hold")
+        dplyr::arrange(facility_state, detention_facility_code)
+      max_hold    <- max(c(2180L, result$canonical_id[result$id_range == "hold"],
+                           dplyr::filter(pins, pinned_id >= 2181L,
+                                         pinned_id < 3000L)$pinned_id),
+                         na.rm = TRUE)
+      max_medical <- max(c(3226L, result$canonical_id[result$id_range == "medical"],
+                           dplyr::filter(pins, pinned_id >= 3001L)$pinned_id),
+                         na.rm = TRUE)
+
+      new_hold_cbp <- .assign_block(new_hold_cbp, block_max = max_hold) |>
+        dplyr::mutate(id_range = "hold")
 
       new_medical <- new_unmapped |>
         dplyr::filter(
           dplyr::coalesce(type_grouped_corrected == "Medical", FALSE),
           !detention_facility_code %in% new_hold_cbp$detention_facility_code
         ) |>
-        dplyr::arrange(facility_state, detention_facility_code) |>
-        dplyr::mutate(canonical_id = seq(3227L, length.out = dplyr::n()),
-                      id_range = "medical")
+        dplyr::arrange(facility_state, detention_facility_code)
+      new_medical <- .assign_block(new_medical, block_max = max_medical) |>
+        dplyr::mutate(id_range = "medical")
 
       classified <- c(new_hold_cbp$detention_facility_code,
                       new_medical$detention_facility_code)
-      max_ddp_other <- max(result$canonical_id[result$id_range == "ddp_other"],
+      max_ddp_other <- max(c(result$canonical_id[result$id_range == "ddp_other"],
+                             dplyr::filter(pins, pinned_id >= 1054L,
+                                           pinned_id < 2000L)$pinned_id),
                            na.rm = TRUE)
       new_other <- new_unmapped |>
         dplyr::filter(!detention_facility_code %in% classified) |>
-        dplyr::arrange(facility_state, detention_facility_code) |>
-        dplyr::mutate(canonical_id = seq(max_ddp_other + 1L, length.out = dplyr::n()),
-                      id_range = "ddp_other")
+        dplyr::arrange(facility_state, detention_facility_code)
+      new_other <- .assign_block(new_other, block_max = max_ddp_other) |>
+        dplyr::mutate(id_range = "ddp_other")
 
       new_rows <- dplyr::bind_rows(new_hold_cbp, new_medical, new_other) |>
         dplyr::select(
@@ -636,6 +733,24 @@ build_ddp_facility_canonical <- function(ddp_codes, detloc_lookup_full,
       result <- dplyr::bind_rows(result, new_rows) |>
         dplyr::arrange(canonical_id)
     }
+  }
+
+  # Write newly assigned (previously unpinned) IDs back to the registry so
+  # they are frozen against renumbering, mirroring build_dmcp_canonical_map().
+  new_pins <- result |>
+    dplyr::filter(!detloc %in% pins$detloc) |>
+    dplyr::transmute(canonical_id, canonical_name,
+                     canonical_city = facility_city,
+                     canonical_state = facility_state, detloc)
+  if (nrow(new_pins) > 0) {
+    registry_path <- here::here("data/canonical_id_registry.csv")
+    updated_registry <- dplyr::bind_rows(id_registry, new_pins) |>
+      dplyr::distinct(canonical_id, .keep_all = TRUE) |>
+      dplyr::arrange(canonical_id)
+    readr::write_csv(updated_registry, registry_path)
+    cli::cli_inform(
+      "Registry written to {registry_path} ({nrow(updated_registry)} rows); {nrow(new_pins)} new DDP assignment{ifelse(nrow(new_pins) == 1L, '', 's')} pinned."
+    )
   }
 
   # Apply name/address patches
@@ -692,6 +807,19 @@ build_ddp_facility_canonical <- function(ddp_codes, detloc_lookup_full,
     # Additional ddp_other facilities
     "AKANVIL",  "Anvil Mountain Cc, Nome,",                     "1810 Center Creek Rd",               "Nome",            "AK",            "99762",
     "BOPLAT",   "La Tuna FCI",                                  "8500 Doniphan Rd",                   "Anthony",         "TX",            "79821",
+    # Miami FCI (Former MCC): the "1350 NW 41 Street" address inherited from
+    # Marshall/Vera is wrong (it geocodes 9 km away, next to TGK Jail); the
+    # BOP facility address is 15801 SW 137th Ave (confirmed 2026-10).
+    "BOPMIA",   "Miami FCI (Former MCC)",                       "15801 SW 137th Ave",                 "Miami",           "FL",            "33177",
+    # Devens FMC: Vera's "Ayer, MA 01432" locality geocodes ~7 km east of the
+    # FMC campus; the facility's town/ZIP is Devens, MA 01434 (confirmed 2026-10).
+    "BOPDEV",   "Devens FMC",                                   "42 Patton Road",                     "Devens",          "MA",            "01434",
+
+    # Medical facilities — Vera address errors
+    # Casa Grande Regional Medical Center: Vera cross-wired Banner Tucson's
+    # street (1625 N Campbell Ave) into this row; the hospital's address is
+    # 1800 E Florence Blvd (Banner's own listing, confirmed 2026-10).
+    "CGRMCAZ",  "Casa Grande Reg. Med. Center",                 "1800 E Florence Blvd",               "Casa Grande",     "AZ",            "85122",
 
     # Hold facilities from ddp_codes_new (IDs 2181+) — NOT in build_hold_canonical()
     "CBPORIL",  "CBP O'hare Airport Trm 5 B.c. Ext",           "10000 W. Bessie Coleman Drive, Terminal 5", "Chicago",  "IL",            "60666",
@@ -990,42 +1118,29 @@ make_daily_sparkline <- function(dates, values,
 # Three facilities whose canonical IDs are known but not in the crosswalk are
 # patched in by name after the join.
 
-build_fy26b <- function(data_file_info, clean_names_list,
-                        facility_crosswalk, detloc_lookup) {
-  LETTERS_PLUS <- c(LETTERS, paste0("A", LETTERS), paste0("B", LETTERS))
-
-  fy26b_info <- tibble::tibble(
-    year_name         = "FY26b",
-    year              = 2026L,
-    url               = NA_character_,
-    local_file        = here::here("data/ice/FY26_detentionStats_02122026.xlsx"),
-    sheet_name        = "Facilities FY26",
-    first_header_row  = 9L,
-    second_header_row = 10L,
-    first_data_row    = 11L,
-    right_column      = "AA",
-    right_column_num  = which(LETTERS_PLUS == "AA")
-  )
-
-  # Structure is identical to the existing FY26 file — reuse its column names.
-  col_names <- list(FY26b = clean_names_list[["FY26"]])
-
-  raw    <- read_facilities_data(fy26b_info, col_names)
-  clean  <- clean_all_years(list(FY26b = raw))
-  agg    <- aggregate_all_years(clean)
-  keyed  <- attach_canonical_ids(agg, facility_crosswalk, detloc_lookup)
-  result <- keyed[["FY26b"]]
+build_fy26b <- function(facilities_keyed) {
+  # FY26b is a first-class year in the main import chain (see
+  # build_data_file_info()), so reuse the keyed element to guarantee identical
+  # canonical IDs between the comparison report and the panels.
+  result <- facilities_keyed[["FY26b"]]
 
   # Patches for facilities whose canonical IDs are known but whose names differ
   # slightly from the FY19–FY26 crosswalk variants (new entries in this release).
   # fill_only: only applied when canonical_id is NA (crosswalk missed them).
   fill_only_patches <- tibble::tribble(
     ~facility_name,                      ~patch_id,
-    "Sarasota County Jail",              1107L,
+    "Sarasota County Jail",              1104L,
     "Scott County Detention. Facility",  1118L,
     "Tom Green County Jail",             1022L,
     "Mccook Detention Center",           229L,
-    "Fulton County Jail Indiana",        146L
+    "Fulton County Jail Indiana",        146L,
+    # Feb 12 release additions absent from the FY19-FY25 crosswalk variants.
+    # Lewisburg/GTMO get the DDP-era canonicals 403/404; Lafayette Parish CC
+    # is an existing panel facility (402) — DDP's auto-assigned 1258 for
+    # LAFAYLA is superseded by the manual match in ddp_manual_strong_matches().
+    "Lewisburg US Penitentiary",         403L,
+    "Migrant Ops Center Main A",         404L,
+    "Lafayette Parish Correctional Center", 402L
   )
   for (i in seq_len(nrow(fill_only_patches))) {
     idx <- which(tolower(result$facility_name) == tolower(fill_only_patches$facility_name[i]))
@@ -1093,18 +1208,30 @@ build_daily_totals_fy26 <- function(ddp_new, to = "2026-03-10") {
     dplyr::summarise(total_pop = sum(n_detained, na.rm = TRUE), .groups = "drop")
 }
 
-build_unmatched_fy26 <- function(ddp_fy26_keyed, facility_roster) {
-  roster_by_detloc <- facility_roster |>
-    dplyr::filter(!is.na(detloc)) |>
-    dplyr::select(detloc, facility_type_wiki,
+build_unmatched_fy26 <- function(ddp_fy26_keyed, facility_roster,
+                                 detloc_lookup_complete) {
+  # Bridge DDP codes to canonical IDs via the complete DETLOC lookup, then
+  # join the roster by canonical_id. A direct detloc join to the roster misses
+  # facilities whose roster detloc is a different code (facilities can carry
+  # multiple DETLOCs; the roster keeps one).
+  code_map <- .ddp_code_to_canonical(detloc_lookup_complete, facility_roster)
+
+  roster_by_canonical <- facility_roster |>
+    dplyr::select(canonical_id, facility_type_wiki,
                   type_grouped  = type_grouped_corrected,
                   type_detailed = type_detailed_corrected,
                   facility_address, facility_city, facility_state)
 
   ddp_fy26_keyed |>
     dplyr::filter(!in_ice_fy26) |>
-    dplyr::left_join(roster_by_detloc,
-                     by = c("detention_facility_code" = "detloc")) |>
+    # Drop roster-derived columns if present (ddp_fy26_keyed carries
+    # canonical_id from the partial detloc_lookup); re-derive via code_map.
+    dplyr::select(-dplyr::any_of(c("canonical_id", "facility_type_wiki",
+                                   "type_grouped", "type_detailed",
+                                   "facility_address", "facility_city",
+                                   "facility_state"))) |>
+    dplyr::left_join(code_map, by = c("detention_facility_code" = "detloc")) |>
+    dplyr::left_join(roster_by_canonical, by = "canonical_id") |>
     dplyr::mutate(
       type_grouped = dplyr::if_else(is.na(type_grouped), "Unclassified", type_grouped),
       adp_class    = dplyr::if_else(ddp_adp >= 2, "ADP \u2265 2", "ADP < 2"),
@@ -1112,15 +1239,41 @@ build_unmatched_fy26 <- function(ddp_fy26_keyed, facility_roster) {
     )
 }
 
+# Shared helper: DDP facility code -> canonical_id, restricted to canonicals on
+# the roster. Codes mapping to several canonicals keep the lowest ID (with a
+# warning); codes with no roster canonical map to NA (stays Unclassified).
+.ddp_code_to_canonical <- function(detloc_lookup_complete, facility_roster) {
+  roster_ids <- facility_roster |> dplyr::distinct(canonical_id)
+  full_map   <- detloc_lookup_complete |> dplyr::distinct(detloc, canonical_id)
+
+  multi <- full_map |>
+    dplyr::inner_join(roster_ids, by = "canonical_id") |>
+    dplyr::count(detloc) |>
+    dplyr::filter(n > 1)
+  if (nrow(multi) > 0) {
+    cli::cli_warn(c(
+      "!" = "{nrow(multi)} DDP code(s) map to multiple roster canonicals; ",
+      "keeping the lowest ID: {.val {multi$detloc}}"
+    ))
+  }
+
+  full_map |>
+    dplyr::inner_join(roster_ids, by = "canonical_id") |>
+    dplyr::arrange(detloc, canonical_id) |>
+    dplyr::group_by(detloc) |>
+    dplyr::slice_head(n = 1) |>
+    dplyr::ungroup()
+}
+
 build_peak_fy26 <- function(ddp_new, unmatched_fy26, facility_roster,
-                            facilities_geocoding_lookup) {
+                            facilities_geocoding_lookup, detloc_lookup_complete) {
   fy_start        <- "2025-10-01"
   fy_end          <- "2026-02-05"
   unmatched_codes <- unmatched_fy26$detention_facility_code
 
-  roster_by_detloc <- facility_roster |>
-    dplyr::filter(!is.na(detloc)) |>
-    dplyr::select(detloc, canonical_id, facility_type_wiki,
+  code_map <- .ddp_code_to_canonical(detloc_lookup_complete, facility_roster)
+  roster_by_canonical <- facility_roster |>
+    dplyr::select(canonical_id, facility_type_wiki,
                   type_grouped  = type_grouped_corrected,
                   type_detailed = type_detailed_corrected,
                   facility_address, facility_city, facility_state)
@@ -1134,7 +1287,7 @@ build_peak_fy26 <- function(ddp_new, unmatched_fy26, facility_roster,
   geo_addr_check <- facilities_geocoding_lookup |>
     dplyr::select(canonical_id, geo_city = facility_city, geo_state = facility_state)
 
-  roster_addr_check <- roster_by_detloc |>
+  roster_addr_check <- roster_by_canonical |>
     dplyr::select(canonical_id, roster_city = facility_city, roster_state = facility_state) |>
     dplyr::distinct()
 
@@ -1156,8 +1309,8 @@ build_peak_fy26 <- function(ddp_new, unmatched_fy26, facility_roster,
       adp_class  = dplyr::if_else(mean_pop >= 2, "ADP \u2265 2", "ADP < 2"),
       peak_class = dplyr::if_else(peak_pop >= 2, "Peak \u2265 2", "Peak < 2")
     ) |>
-    dplyr::left_join(roster_by_detloc,
-                     by = c("detention_facility_code" = "detloc")) |>
+    dplyr::left_join(code_map, by = c("detention_facility_code" = "detloc")) |>
+    dplyr::left_join(roster_by_canonical, by = "canonical_id") |>
     dplyr::left_join(
       geo_cols |> dplyr::select(canonical_id, facility_zip, latitude, longitude),
       by = "canonical_id"
