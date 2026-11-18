@@ -34,12 +34,16 @@ build_state_outcomes <- function(arr_post, stays, cutoff) {
     ) |>
     dplyr::count(apprehension_state, outcome) |>
     tidyr::pivot_wider(names_from = outcome, values_from = n, values_fill = 0L) |>
-    dplyr::mutate(
-      # Ensure all three columns exist even if a state has no entries for a category
-      removed  = if (exists("removed",  inherits = FALSE)) removed  else 0L,
-      released = if (exists("released", inherits = FALSE)) released else 0L,
-      pending  = if (exists("pending",  inherits = FALSE)) pending  else 0L
-    ) |>
+    (function(wide) {
+      # Ensure all three columns exist even if a state has no entries for a
+      # category. (The old `if (exists(col)) col else 0L` mutate trick always
+      # took the else branch: exists() cannot see dplyr's data mask, so every
+      # state came out zeroed.)
+      for (col in c("removed", "released", "pending")) {
+        if (!col %in% names(wide)) wide[[col]] <- 0L
+      }
+      wide
+    })() |>
     dplyr::mutate(
       n_stays_outcomes = removed + released + pending,
       pct_removed      = round(removed  / n_stays_outcomes * 100, 1),

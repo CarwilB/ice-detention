@@ -304,7 +304,190 @@ airport_landmarks <- tibble::tribble(
   arrests
 }
 
-# ── County name parsing ───────────────────────────────────────────────────────
+#' Project-level state fill for arrests the DDP fill left blank. Three
+#' sources, tried in order:
+#' 1. "AOR appears in one state": an AOR whose known-state rows name a single
+#'    state at >= 99% share (mirrors the DDP rule; only 9 unambiguous AORs,
+#'    most AORs span several states).
+#' 2. "Landmark appears in one state (relaxed)": a landmark whose known-state
+#'    rows name a single state at >= 95% share with at least 5 known rows.
+#'    Catches sites just under the DDP 99% bar (e.g. DAL COUNTY JAIL is
+#'    98.4% TEXAS; NSV = Nashville is 98.6% TENNESSEE).
+#' 3. A ", XX" state suffix on the landmark ("DENVER, CO"), which DDP's own
+#'    abbreviation rule missed.
+#' Fills apprehension_state (and apprehension_state_filled_in) in place and
+#' records the provenance in apprehension_state_fill_source with a
+#' "(project)" suffix, keeping DDP's sources distinguishable from ours.
+fill_arrest_states_aor <- function(arrests, aor_share = 0.99, lm_share = 0.95,
+                                    lm_min = 5) {
+  aor_map <- arrests |>
+    dplyr::filter(!is.na(.data$apprehension_aor), .data$apprehension_aor != "",
+                  !is.na(.data$apprehension_state)) |>
+    dplyr::count(.data$apprehension_aor, .data$apprehension_state) |>
+    dplyr::group_by(.data$apprehension_aor) |>
+    dplyr::mutate(share = .data$n / sum(.data$n)) |>
+    dplyr::slice_max(.data$n, n = 1, with_ties = FALSE) |>
+    dplyr::ungroup() |>
+    dplyr::filter(.data$share >= aor_share) |>
+    dplyr::select(apprehension_aor, state = apprehension_state)
+
+  lm_map <- arrests |>
+    dplyr::filter(!is.na(.data$apprehension_site_landmark),
+                  !is.na(.data$apprehension_state)) |>
+    dplyr::count(.data$apprehension_site_landmark, .data$apprehension_state) |>
+    dplyr::group_by(.data$apprehension_site_landmark) |>
+    dplyr::mutate(share = .data$n / sum(.data$n), n_known = sum(.data$n)) |>
+    dplyr::slice_max(.data$n, n = 1, with_ties = FALSE) |>
+    dplyr::ungroup() |>
+    dplyr::filter(.data$share >= lm_share, .data$n_known >= lm_min) |>
+    dplyr::select(apprehension_site_landmark, state = apprehension_state)
+
+  need  <- which(is.na(arrests$apprehension_state))
+  if (!length(need)) return(arrests)
+
+  aor_st <- aor_map$state[match(arrests$apprehension_aor[need], aor_map$apprehension_aor)]
+  lm_st  <- lm_map$state[match(arrests$apprehension_site_landmark[need],
+                               lm_map$apprehension_site_landmark)]
+  suff    <- .landmark_suffix_state(arrests$apprehension_site_landmark[need])
+  suff_st <- stringr::str_to_upper(
+    datasets::state.name[match(suff, datasets::state.abb)])
+
+  new_state <- dplyr::coalesce(aor_st, lm_st, suff_st)
+  src <- dplyr::case_when(
+    !is.na(aor_st)  ~ "AOR appears in one state (project)",
+    !is.na(lm_st)   ~ "Landmark appears in one state (project, relaxed)",
+    !is.na(suff_st) ~ ", XX suffix in landmark (project)"
+  )
+  hit <- !is.na(new_state)
+  idx <- need[hit]
+
+  arrests$apprehension_state[idx]             <- new_state[hit]
+  arrests$apprehension_state_filled_in[idx]   <- new_state[hit]
+  arrests$apprehension_state_fill_source[idx] <- src[hit]
+  arrests
+}
+
+#' Landmark → state assignments for the nationwide report. Sites the DDP
+#' fill and fill_arrest_states_aor() leave blank, resolved by hand:
+#' >25 total arrests for the landmark and >70% of known-state rows agreeing
+#' on one state (or the site is unambiguous by name). Evidence per row in
+#' the comments; the rejects and the case list are documented in
+#' nationwide-arrests.qmd's Data notes.
+nationwide_landmark_states <- function() {
+  tibble::tribble(
+    ~landmark,                                          ~state,
+    "FRD GENERAL AREA, NON-SPECIFIC",                   "COLORADO",            # 894/955 known = 94% CO; Denver AOR 87%
+    "SFD GENERAL AREA, NON-SPECIFIC",                   "SOUTH DAKOTA",        # 289/321 = 90% SD; St. Paul AOR 98%
+    "STL GENERAL NON-SPECIFIC",                         "MISSOURI",            # 1322/1481 = 89% MO; Chicago AOR 100%
+    "CHI GENERAL AREA, NON-SPECIFIC",                   "ILLINOIS",            # 4967/5411 = 92% IL; Chicago AOR 98%
+    "EPC GENERAL AREA, NON-SPECIFIC",                   "TEXAS",               # 1966/2437 = 81% TX; El Paso AOR 82%
+    "ELP GENERAL AREA, NON-SPECIFIC",                   "TEXAS",               # 524/579 = 91% TX; El Paso AOR 95%
+    "WAS GENERAL AREA, NON-SPECIFIC",                   "VIRGINIA",            # 5612/7434 = 76% VA; Washington AOR 99%
+    "ABQ GENERAL AREA, NON-SPECIFIC",                   "NEW MEXICO",          # 289/314 = 92% NM; El Paso AOR 91%
+    "Spokane CAP",                                      "WASHINGTON",          # 433/458 = 95% WA; Seattle AOR 100%
+    "CAP - FCI HERLONG CALIFORNIA",                     "CALIFORNIA",          # 220/240 = 92% CA; state in the name
+    "CSP SOLANO",                                       "CALIFORNIA",          # 35/37 = 95% CA; California State Prison Solano
+    "PIT GENERAL AREA, NON-SPECIFIC",                   "PENNSYLVANIA",        # 1206/1355 = 89% PA; Philadelphia AOR 100%
+    "BOISE ICE OFFICE",                                 "IDAHO",               # 30/32 = 94% ID; Salt Lake City AOR 97%
+    "CRI GENERAL AREA, NON-SPECIFIC",                   "IOWA",                # 240/253 = 95% IA; St. Paul AOR 99%
+    "POO CAP NON-CUSTODIAL ARREST",                     "OREGON",              # 94/125 = 75% OR; Seattle AOR 97%
+    "GRF GENERAL AREA, NON-SPECIFIC",                   "NORTH DAKOTA",        # 185/238 = 78% ND (Grand Forks); St. Paul AOR 100%
+    "REN GENERAL AREA, NON-SPECIFIC",                   "NEVADA",              # 445/517 = 86% NV (Reno); Salt Lake City AOR 97%
+    "CITY OF CASPER",                                   "WYOMING",             # 409/438 = 93% WY; Denver AOR 95%
+    "OAK GENERAL AREA, NON-SPECIFIC",                   "LOUISIANA",           # 271/302 = 90% LA (Oakdale); New Orleans AOR 87%
+    "JNA GENERAL AREA, NON-SPECIFIC",                   "LOUISIANA",           # 402/449 = 90% LA (Jennings); New Orleans AOR 93%
+    "SHERIDAN FCI",                                     "OREGON",              # 48/54 = 89% OR; Seattle AOR 100% (FCI Sheridan, OR)
+    "PORTLAND FUGITIVE OPERATIONS STREET ARREST",       "OREGON",              # 1026/1156 = 89% OR; Seattle AOR 100%; cities Portland/Beaverton/Hillsboro
+    "HAR GENERAL AREA, NON-SPECIFIC",                   "CONNECTICUT",         # 504/680 = 74% CT (Hartford); Boston AOR 95%
+    "LOU GENERAL AREA, NON-SPECIFIC",                   "KENTUCKY",            # 453/480 = 94% KY (Louisville); Chicago AOR 96%
+    "FOK GENERAL AREA, NON-SPECIFIC",                   "GEORGIA",             # 364/433 = 84% GA (Folkston); Atlanta AOR 80%
+    "MEM GENERAL AREA, NON-SPECIFIC",                   "TENNESSEE",           # 1118/1404 = 80% TN (Memphis); New Orleans AOR 99%
+    "RII GENERAL AREA, NON-SPECIFIC",                   "ILLINOIS",            # 85/95 = 90% IL (Rock Island); Chicago AOR 99%
+    "SMITH COUNTY SHERIFFS OFFICE",                     "TEXAS",               # 16/17 = 94% TX; Dallas AOR 100%
+    "LIV GENERAL AREA, NON-SPECIFIC",                   "TEXAS",               # 11/13 = 85% TX (Livingston CDF)
+    "KANSAS CITY DETENTION AND REMOVAL OPERATIONS",     "TEXAS",               # 437/465 = 94% TX, San Antonio AOR 86% — see qmd note
+    "USMS DC SUPERIOR COURT",                           "DISTRICT OF COLUMBIA" # DC Superior Court is in DC by name; known rows DC 23, VA 10
+  )
+}
+
+#' Build the nationwide located-arrests table for nationwide-arrests.qmd:
+#' fills missing states (fill_arrest_states_aor() plus the curated
+#' nationwide_landmark_states() table), then runs the
+#' assign_arrest_location() engine per state so every report shares the
+#' same county rules. Rows with no state (no landmark, no AOR, no suffix)
+#' keep NA location columns.
+#'
+#' Two nationwide safeguards the per-state reports don't need:
+#' 1. Attributed counties are re-validated against the attributed state's
+#'    real county list — the landmark engine's general-area path trusts the
+#'    report state, so a code like SPM (St. Paul) can fabricate "Ramsey"
+#'    for Wisconsin-tagged rows.
+#' 2. `map_id` is normalized to maps::map("county") IDs (no periods, no
+#'    "county"/"parish" suffix: "St. Tammany Parish" → "louisiana,st tammany").
+#'
+#' @param arrests      Arrests tibble (arrests_raw target).
+#' @param place_county Place-county crosswalk (place_county target) or NULL.
+#' @return Arrests with landmark_type, city, county_landmark, county,
+#'   county_source, unassigned_reason, map_id appended.
+build_nationwide_locations <- function(arrests, place_county = NULL) {
+  arrests <- fill_arrest_states_aor(arrests)
+
+  lm  <- nationwide_landmark_states()
+  new <- lm$state[match(arrests$apprehension_site_landmark, lm$landmark)]
+  fill <- is.na(arrests$apprehension_state) & !is.na(new)
+  arrests$apprehension_state[fill]           <- new[fill]
+  arrests$apprehension_state_filled_in[fill] <- new[fill]
+
+  states <- arrests |>
+    dplyr::filter(!is.na(apprehension_state)) |>
+    dplyr::distinct(apprehension_state) |>
+    dplyr::pull(apprehension_state)
+
+  located <- states |>
+    purrr::map(function(st) {
+      assign_arrest_location(
+        arrests |> dplyr::filter(apprehension_state == st), st, place_county)
+    }) |>
+    purrr::list_rbind()
+
+  # Rows with no state never entered the per-state loop; add them back with
+  # NA location columns so the table stays one row per arrest
+  if (any(is.na(arrests$apprehension_state))) {
+    na_cols <- setdiff(names(located), names(arrests))
+    na_part <- arrests |> dplyr::filter(is.na(apprehension_state))
+    n_na <- nrow(na_part)
+    na_like <- function(x, n) {
+      if (is.list(x)) {
+        purrr::map(seq_len(n), ~ NA_character_)
+      } else if (is.numeric(x)) {
+        rep(NA_real_, n)
+      } else if (is.logical(x)) {
+        rep(NA, n)
+      } else {
+        rep(NA_character_, n)
+      }
+    }
+    for (col in na_cols) na_part[[col]] <- na_like(located[[col]], n_na)
+    located <- dplyr::bind_rows(located, na_part)
+  }
+
+  located |>
+    dplyr::mutate(
+      state_abbr = unname(datasets::state.abb[match(
+        stringr::str_to_title(apprehension_state), datasets::state.name)]),
+      county = dplyr::if_else(is.na(state_abbr), county,
+                              purrr::map2_chr(county, state_abbr, .validate_county)),
+      map_id = dplyr::if_else(
+        is.na(county),
+        NA_character_,
+        paste0(stringr::str_to_lower(apprehension_state), ",",
+               stringr::str_remove(
+                 stringr::str_to_lower(stringr::str_remove_all(county, "\\.")),
+                 " (county|parish)$"))
+      )
+    ) |>
+    dplyr::select(-state_abbr)
+}
 
 #' Letters-only uppercase key for matching county names ("St. Clair" == "ST CLAIR",
 #' "Du Page" == "DUPAGE").

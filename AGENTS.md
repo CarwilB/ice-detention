@@ -595,3 +595,27 @@ Integration of the `state-data-cleaning` branch's Illinois work into `aug26-upda
 **Coverage on the 20260806 release (arrests_raw, post-cutoff):** TN 96.2%, MN 95.6%, IL 99.0% of arrests mapped to a county (city 83–99%, landmark remainder).
 
 **Targets:** `census_place_files` (`data/census/cb_2023_{17,27,47}_place_500k.zip` = IL/MN/TN), `census_county_file`, `place_county`. Add a state's place zip to extend coverage. `build_state_arrests_data()` gained a `place_county = NULL` argument. Reports: `tn_arrests_report` and `il_arrests_report` render `state-arrests.qmd` (distinct `output_file`s `state-arrests-tn.html` / `state-arrests-il.html`); the qmd gained a county-attribution/unassigned panel and city-based wording. The branch's `_aug` arrest/stay targets are redundant on this branch (arrests_raw already reads the 20260806 release).
+
+### Publishing the GitHub copy of state-arrests-locations.md (2026-11-07)
+
+The GitHub version of `state-arrests-locations.md` is **not a file in the repo** — it is the body of [Discussion #15](https://github.com/CarwilB/ice-detention/discussions/15) ("State-arrests location attribution: how counties are assigned"), discussion node ID `D_kwDOR7IG-s4Aq6bX`. Updating the local file does not touch it. To update:
+
+1. Fetch the current body (optional, for diffing): `gh_gql('query { repository(owner: "CarwilB", name: "ice-detention") { discussion(number: 15) { id body } } }')`.
+2. Read the local file and post the replacement with the `updateDiscussion` mutation, JSON-encoding the body so newlines/quotes survive:
+
+```r
+library(gh)
+body <- paste(readLines(here::here("state-arrests-locations.md")), collapse = "\n")
+m <- sprintf('mutation {
+  updateDiscussion(input: {discussionId: "D_kwDOR7IG-s4Aq6bX", body: %s}) {
+    discussion { number updatedAt }
+  }
+}', jsonlite::toJSON(body, auto_unbox = TRUE))
+gh_gql(m)
+```
+
+3. Verify: re-fetch and check a string unique to the new content (e.g. a table value). Requires the `ZOTERO`-style GH token already used by `gh` (repo-scoped, works for discussions).
+
+### Nationwide arrests precomputation (2026-11-07)
+
+`nationwide-arrests.qmd` no longer computes location at render time. Targets (added after `place_county`): `nationwide_arrests_located` (fill_arrest_states_aor + `nationwide_landmark_states()` curated table + per-state `assign_arrest_location()` loop + county re-validation + maps-normalized `map_id`; ~4 min build), `nationwide_state_outcomes`, `nationwide_removal_grid`. The report's two maps (state bubbles, county choropleth) each have switchable layers: post-inauguration (default) and all data, with per-layer color scales; AK/HI/PR appear on the bubble map via fixed centroids. `data_end` in the report is 2026-07-31. Known pre-existing bug fixed 2026-11-07: `build_state_outcomes()` in `R/state-arrests-export.R` zeroed all outcomes because `exists()` cannot see dplyr's data mask — affects the `state_arrests_export` website data too.

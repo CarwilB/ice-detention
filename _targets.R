@@ -1221,7 +1221,8 @@ list(
   ),
   tar_target(
     arrests_raw,
-    .normalize_arrests_schema(arrow::read_parquet(arrests_file)),
+    .normalize_arrests_schema(arrow::read_parquet(arrests_file)) |>
+      fill_arrest_states_aor(),
     description = "Raw DDP arrests (20260806 release: 896k rows x 34 cols, Oct 2022 - Aug 2026; one row per arrest event), schema-normalized to the 20260330 column names (apprehension_state <- apprehension_state_filled_in, apprehension_site_landmark <- event_landmark; apprehension_type restored as NA)"
   ),
 
@@ -1234,7 +1235,7 @@ list(
     list.files(here::here("data/census"),
                pattern = "^cb_2023_[0-9]{2}_place_500k\\.zip$", full.names = TRUE),
     format = "file",
-    description = "Census 2023 place boundary zips (one per state: IL, MN, TN)"
+    description = "Census 2023 place boundary zips (all 50 states + DC + PR, downloaded from GENZ2023)"
   ),
   tar_target(
     census_county_file,
@@ -1245,7 +1246,36 @@ list(
   tar_target(
     place_county,
     build_place_county(census_place_files, census_county_file),
-    description = "Place -> primary county crosswalk with multi-county flag, for states with a place file (IL, MN, TN)"
+    description = "Place -> primary county crosswalk with multi-county flag for all 50 states, DC, and Puerto Rico (city layer of assign_arrest_location())"
+  ),
+
+  # ── Nationwide arrest location and summary precomputation ──────────────────
+  # Pre-computes the expensive per-state location attribution and stays-based
+  # summaries so nationwide-arrests.qmd renders in seconds (see
+  # nationwide_arrests_report below).
+  tar_target(
+    nationwide_arrests_located,
+    build_nationwide_locations(arrests_raw, place_county),
+    description = "Nationwide arrests with states filled (AOR/landmark-suffix rules + curated nationwide_landmark_states() table) and county attribution from assign_arrest_location() run per state; counties re-validated against the attributed state and map_id normalized to maps county IDs"
+  ),
+  tar_target(
+    nationwide_state_outcomes,
+    build_state_outcomes(
+      nationwide_arrests_located |>
+        dplyr::filter(apprehension_date >= as.Date("2025-01-20"),
+                      duplicate_likely == FALSE | is.na(duplicate_likely)),
+      stays_raw,
+      as.Date("2025-01-20")
+    ),
+    description = "Per-state removal outcomes (removed/released/pending shares) for post-2025-01-20 arrests, single pass over stays, for nationwide-arrests.qmd"
+  ),
+  tar_target(
+    nationwide_removal_grid,
+    build_removal_grid(
+      stays_raw |> dplyr::filter(as.Date(stay_book_in_date_time) >= as.Date("2025-01-20")),
+      "Nationwide", min_n = 500
+    ),
+    description = "Nationality x departure-country removal grid for post-2025-01-20 stays (cells with >= 500 removals), for nationwide-arrests.qmd"
   ),
 
   # ── Minnesota post-inauguration arrest analysis ────────────────────────────

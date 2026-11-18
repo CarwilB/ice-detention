@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>&lt;strong&gt;?meta:title&lt;/strong&gt; | ICE Dashboard – ICE Dashboard</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-2c353fb1ee9795f3e46801e7bd733d82.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#assigning-counties-to-arrest-data-for-visualization" id="toc-assigning-counties-to-arrest-data-for-visualization" class="nav-link active" data-scroll-target="#assigning-counties-to-arrest-data-for-visualization">Assigning counties to arrest data for visualization</a>
+  <ul class="collapse">
+  <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data">The data</a></li>
+  <li><a href="#resolution-order" id="toc-resolution-order" class="nav-link" data-scroll-target="#resolution-order">Resolution order</a></li>
+  <li><a href="#the-two-layers-in-detail" id="toc-the-two-layers-in-detail" class="nav-link" data-scroll-target="#the-two-layers-in-detail">The two layers in detail</a>
+  <ul class="collapse">
+  <li><a href="#city-layer-aug-2026-release" id="toc-city-layer-aug-2026-release" class="nav-link" data-scroll-target="#city-layer-aug-2026-release">City layer (Aug 2026 release)</a></li>
+  <li><a href="#landmark-layer" id="toc-landmark-layer" class="nav-link" data-scroll-target="#landmark-layer">Landmark layer</a></li>
+  <li><a href="#coverage-20260806-release-post-2025-01-20-arrests" id="toc-coverage-20260806-release-post-2025-01-20-arrests" class="nav-link" data-scroll-target="#coverage-20260806-release-post-2025-01-20-arrests">Coverage (20260806 release, post-2025-01-20 arrests)</a></li>
+  </ul></li>
+  <li><a href="#where-to-add-new-entries" id="toc-where-to-add-new-entries" class="nav-link" data-scroll-target="#where-to-add-new-entries">Where to add new entries</a>
+  <ul class="collapse">
+  <li><a href="#new-general-area-office-code-xxx-general-area-non-specific-unassigned" id="toc-new-general-area-office-code-xxx-general-area-non-specific-unassigned" class="nav-link" data-scroll-target="#new-general-area-office-code-xxx-general-area-non-specific-unassigned">New general-area office code (“XXX GENERAL AREA, NON-SPECIFIC” unassigned)</a></li>
+  <li><a href="#new-named-facility-with-no-county-in-its-name" id="toc-new-named-facility-with-no-county-in-its-name" class="nav-link" data-scroll-target="#new-named-facility-with-no-county-in-its-name">New named facility with no county in its name</a></li>
+  <li><a href="#a-landmark-that-the-engine-gets-wrong" id="toc-a-landmark-that-the-engine-gets-wrong" class="nav-link" data-scroll-target="#a-landmark-that-the-engine-gets-wrong">A landmark that the engine gets wrong</a></li>
+  <li><a href="#a-misspelled-arrest-city-city-layer" id="toc-a-misspelled-arrest-city-city-layer" class="nav-link" data-scroll-target="#a-misspelled-arrest-city-city-layer">A misspelled arrest city (city layer)</a></li>
+  <li><a href="#a-county-name-typo-in-landmarks" id="toc-a-county-name-typo-in-landmarks" class="nav-link" data-scroll-target="#a-county-name-typo-in-landmarks">A county-name typo in landmarks</a></li>
+  <li><a href="#a-new-state" id="toc-a-new-state" class="nav-link" data-scroll-target="#a-new-state">A new state</a></li>
+  <li><a href="#extending-the-pipeline-after-a-new-ddp-release" id="toc-extending-the-pipeline-after-a-new-ddp-release" class="nav-link" data-scroll-target="#extending-the-pipeline-after-a-new-ddp-release">Extending the pipeline after a new DDP release</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="assigning-counties-to-arrest-data-for-visualization" class="level1">
+<h1>Assigning counties to arrest data for visualization</h1>
+<p>This document walks through the county-attribution machinery for ICE arrests, developed across the <code>aug26-update</code> (Tennessee, Minnesota) and <code>state-data-cleaning</code> (Illinois) lines of work and merged on 2026-11-06. All code lives in a single file, <code>R/state-arrests.R</code>. See also <a href="https://github.com/CarwilB/ice-detention/issues/13">GitHub issue 13</a> for the original Tennessee landmark audit.</p>
+<section id="the-data" class="level2">
+<h2 class="anchored" data-anchor-id="the-data">The data</h2>
+<p>Arrests come from the <a href="https://deportationdata.org">Deportation Data Project</a> (FOIA 2026-ICLI-00005). The two fields that carry geography are:</p>
+<ul>
+<li><code>apprehension_site_landmark</code> — free text naming the arrest site (jail, ERO office, airport, street arrest, CAP-program site…). Present in every release, messy: arresting-office codes, state markers, typos.</li>
+<li><code>apprehension_city_common_case</code> — the arrest city (Aug 2026 release only). Filled for ~99% of arrests and, when it matches a Census place, the most precise attribution available.</li>
+</ul>
+</section>
+<section id="resolution-order" class="level2">
+<h2 class="anchored" data-anchor-id="resolution-order">Resolution order</h2>
+<p>Counties are attributed <strong>city-first, landmark-second</strong>. Everything is in <code>assign_arrest_location()</code>, which every consumer (the parameterized <code>state-arrests.qmd</code> report and any exploration script) calls so all analyses share one set of rules.</p>
+<pre class="mermaid"><code>flowchart TD
+    A[Arrest row: apprehension_site_landmark,&lt;br&gt;apprehension_city_common_case] --&gt; B{Release has city field&lt;br&gt;AND place-county crosswalk&lt;br&gt;covers this state?}
+    B -- yes --&gt; C[clean_arrest_city&lt;br&gt;squish, UNKNOWN → NA,&lt;br&gt;typo fixes, aliases]
+    C --&gt; D{city matches a&lt;br&gt;Census place?}
+    D -- yes --&gt; E[county = place's primary county&lt;br&gt;county_source = City]
+    D -- no --&gt; F[county_landmark]
+    B -- no --&gt; F
+    F --&gt; G{manual audit override&lt;br&gt;.landmark_county_overrides?}
+    G -- yes --&gt; H[county = override&lt;br&gt;county_source = Landmark]
+    G -- no --&gt; I[.parse_landmark_county_state&lt;br&gt;landmark engine, below]
+    I --&gt; J{engine returns an&lt;br&gt;in-state county?}
+    J -- yes --&gt; H
+    J -- no --&gt; K[county = NA,&lt;br&gt;unassigned_reason recorded]
+    E --&gt; L[county counts,&lt;br&gt;choropleth]
+    H --&gt; L
+    K --&gt; M[unassigned panel:&lt;br&gt;reasons + landmarks]</code></pre>
+<p>The landmark engine itself (<code>.parse_landmark_county_state()</code>) resolves in this order, first match wins:</p>
+<pre class="mermaid"><code>flowchart TD
+    A[landmark text] --&gt; B[.county_text_extraction&lt;br&gt;peel CAP - / CAP- / XX DOC - prefixes,&lt;br&gt;program phrases, interior segments]
+    A --&gt; C[named pattern tables&lt;br&gt;state-specific regex rules,&lt;br&gt;first match wins]
+    A --&gt; D[airport exact-match table&lt;br&gt;airport_landmarks]
+    A --&gt; E[general-area code&lt;br&gt;XXX GENERAL AREA, NON-SPECIFIC&lt;br&gt;→ office county if in state]
+    A --&gt; F[OTHER exact-match table&lt;br&gt;state-specific landmark lists]
+    A --&gt; G[generic X COUNTY parse]
+    G --&gt; H[.validate_county&lt;br&gt;must be a real county of the&lt;br&gt;suffix state or report state]
+    H -- valid --&gt; I[county, state]
+    H -- invalid --&gt; J[NA — no fabricated geography]
+    C --&gt; I
+    D --&gt; I
+    E --&gt; I
+    F --&gt; I</code></pre>
+</section>
+<section id="the-two-layers-in-detail" class="level2">
+<h2 class="anchored" data-anchor-id="the-two-layers-in-detail">The two layers in detail</h2>
+<section id="city-layer-aug-2026-release" class="level3">
+<h3 class="anchored" data-anchor-id="city-layer-aug-2026-release">City layer (Aug 2026 release)</h3>
+<p>The city field is entirely new in the 20260806 release: no prior DDP release carries arrest geography below the state/landmark level, and DDP describes the raw “Apprehension city” as <a href="https://deportationdata.org/news/2026-08-24-ICE-release.html">“the most specific ICE arrest location information that we have received to date”</a>. It is hand-entered — spelling and punctuation vary, it is sometimes missing (~4% of observations since 2025, more before), and it does not always agree with the arrest state. The processed variant <code>apprehension_city_common_case</code>, added in DDP’s <a href="https://deportationdata.org/news/2026-09-08-detainers-release.html">2026-09-08 update</a>, standardizes case and most punctuation (18,513 distinct values reduced to 11,263) but otherwise leaves spelling variations in place; we therefore match on a letters-only key and a reviewed typo table rather than exact strings.</p>
+<ol type="1">
+<li><strong><code>build_place_county()</code></strong> overlays each state’s Census cartographic-boundary places on counties (EPSG:5070), keeps the county holding the largest share of each place’s area, flags places where a second county holds ≥ 10% (<code>multi_county</code>), and keeps the incorporated place when two places share a name. Inputs are the zips in <code>data/census/</code>.</li>
+<li><strong><code>clean_arrest_city()</code></strong> squishes whitespace, maps UNKNOWN variants to NA, and applies reviewed spelling fixes (<code>.city_fixes()</code> — ~90 Illinois typos, e.g.&nbsp;“Chcago” → “Chicago”) and neighbourhood/abbreviation aliases (<code>.city_aliases()</code> — “Little Village” → Chicago).</li>
+<li><strong><code>.county_from_city()</code></strong> looks the cleaned city up by a letters-only key (<code>.city_key()</code>: “Mt. Prospect” == “Mount Prospect”) in the crosswalk.</li>
+</ol>
+<p>The city key is state-scoped, so a Texas city on a Tennessee report row never resolves to a Tennessee county — it simply fails and falls back to the landmark.</p>
+<p><strong>Caveat: at-large arrests may locate the processing site, not the arrest.</strong> Validation against the landmark field shows the city is genuine municipality-level arrest geography for the bulk of rows: within each “GENERAL AREA, NON-SPECIFIC” office code the reported cities number 34–297, the office’s own city accounts for only 21–88%, and the remainder spreads plausibly across the office’s area of operations; for landmarks naming a specific county jail, the modal city is that jail’s town at ~100%. But for <strong>at-large arrests the city can record the ICE processing point instead</strong>: Broadview, IL — a village of ~8,000 hosting an ICE processing center — accounts for 4.9% of all Chicago-area general-area rows, and 63% of its rows are at-large; <strong>Fort Snelling, MN</strong> (a Census CDP at the MSP airport) is the top reported “city” for St.&nbsp;Paul general-area arrests (28%). County-level conclusions dominated by such sites should be read with that ambiguity in mind.</p>
+</section>
+<section id="landmark-layer" class="level3">
+<h3 class="anchored" data-anchor-id="landmark-layer">Landmark layer</h3>
+<ul>
+<li><strong>Per-state lookup tables</strong> (<code>state_landmark_tables()</code>): general-area office codes (<code>mn_general_area_codes</code>, <code>tn_general_area_codes</code>), exact OTHER landmarks (<code>mn_other_landmarks</code>, <code>tn_other_landmarks</code>), and regex pattern tables (<code>mn_landmark_patterns</code>, <code>il_landmark_patterns</code>). Only codes/landmarks whose office actually sits in the report state get a county; out-of-state entries are kept for documentation and never plotted.</li>
+<li><strong><code>il_landmark_patterns</code></strong> maps named facilities: THOMSON → Carroll, ILLINOIS RIVER CORRECTIONAL → Fulton, CHICAGO FIELD OFFICE/MCC/O’HARE → Cook. <code>CHI GENERAL AREA, NON-SPECIFIC</code> is deliberately <strong>not</strong> mapped to Cook: the city field shows those arrests are only ~52% Chicago.</li>
+<li><strong>Suffix-state detection</strong> reads four forms — <code>, XX</code>, inline <code>XX STATE</code>/<code>XX STATE DOC</code>, a bare trailing <code>XX</code>, and a trailing full state name (<code>...MADISON COUNTY, MISSOURI</code>) — so out-of-state CAP-program jails never leak into the report state.</li>
+<li><strong>Validation</strong> (<code>.validate_county()</code>): every generic “X COUNTY” parse must be a real county of the state it would be attributed to, with a small typo map (<code>.county_typos</code>: DEWIITT, GALATIN, PUTNAME). This is what fixed the “Cap-York” bug and stops IA/PA county jails from appearing on an Illinois map.</li>
+</ul>
+</section>
+<section id="coverage-20260806-release-post-2025-01-20-arrests" class="level3">
+<h3 class="anchored" data-anchor-id="coverage-20260806-release-post-2025-01-20-arrests">Coverage (20260806 release, post-2025-01-20 arrests)</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>State</th>
+<th>City</th>
+<th>Landmark</th>
+<th>Total mapped</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tennessee</td>
+<td>83%</td>
+<td>13%</td>
+<td>96.2%</td>
+</tr>
+<tr class="even">
+<td>Minnesota</td>
+<td>87%</td>
+<td>9%</td>
+<td>95.6%</td>
+</tr>
+<tr class="odd">
+<td>Illinois</td>
+<td>99%</td>
+<td>0.1%</td>
+<td>99.0%</td>
+</tr>
+</tbody>
+</table>
+<p>Known blind spot (both lines of work): a suffix-less landmark naming a same-named county in another state still validates in-state (<code>A - WI DOC - BROWN COUNTY JAIL</code> → Brown, IL).</p>
+</section>
+</section>
+<section id="where-to-add-new-entries" class="level2">
+<h2 class="anchored" data-anchor-id="where-to-add-new-entries">Where to add new entries</h2>
+<section id="new-general-area-office-code-xxx-general-area-non-specific-unassigned" class="level3">
+<h3 class="anchored" data-anchor-id="new-general-area-office-code-xxx-general-area-non-specific-unassigned">New general-area office code (“XXX GENERAL AREA, NON-SPECIFIC” unassigned)</h3>
+<p>Add a row to the state’s tribble in <code>R/state-arrests.R</code> (<code>tn_general_area_codes</code>, <code>mn_general_area_codes</code>). Only add the county if the office physically sits in the report state; otherwise record the office with its actual state so the row is documented but never mapped.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="st">"FNV"</span>, <span class="st">"Farmington, NM Sub Office"</span>, <span class="st">"San Juan"</span>, <span class="st">"NM"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="new-named-facility-with-no-county-in-its-name" class="level3">
+<h3 class="anchored" data-anchor-id="new-named-facility-with-no-county-in-its-name">New named facility with no county in its name</h3>
+<p>Add a row to the state’s OTHER exact-match table (<code>tn_other_landmarks</code>, <code>mn_other_landmarks</code>) — full landmark string, uppercase, exactly as it appears in the data — or, if it generalizes (e.g.&nbsp;all CAP sites in a city), a regex row in the state’s pattern table (<code>mn_landmark_patterns</code>, <code>il_landmark_patterns</code>). Pattern rows are first-match-wins in table order, so put more specific patterns (e.g.&nbsp;MSP airport before the generic “ST. PAUL” rule) first.</p>
+</section>
+<section id="a-landmark-that-the-engine-gets-wrong" class="level3">
+<h3 class="anchored" data-anchor-id="a-landmark-that-the-engine-gets-wrong">A landmark that the engine gets wrong</h3>
+<p>Add an entry to <code>.landmark_county_overrides()</code> — a manual audit table checked before everything else, keyed by <code>(state, landmark, county)</code>. County spelling is normalized, so “St Clair”, “St.&nbsp;Clair” and “Dupage” all work.</p>
+</section>
+<section id="a-misspelled-arrest-city-city-layer" class="level3">
+<h3 class="anchored" data-anchor-id="a-misspelled-arrest-city-city-layer">A misspelled arrest city (city layer)</h3>
+<p>First check whether it’s a Saint/Mount/Fort variant — <code>.city_key()</code> already handles those. Otherwise add <code>variant -&gt; city</code> to <code>.city_fixes()</code> with the state column, and <code>.city_aliases()</code> if the name isn’t a Census place at all.</p>
+</section>
+<section id="a-county-name-typo-in-landmarks" class="level3">
+<h3 class="anchored" data-anchor-id="a-county-name-typo-in-landmarks">A county-name typo in landmarks</h3>
+<p>Add it to <code>.county_typos</code> (letters-only key → correct letters-only key), e.g.&nbsp;<code>PUTNAME = "PUTNAM"</code>.</p>
+</section>
+<section id="a-new-state" class="level3">
+<h3 class="anchored" data-anchor-id="a-new-state">A new state</h3>
+<ol type="1">
+<li>Download the state’s Census place zip <code>cb_2023_SS_place_500k.zip</code> (from the <a href="https://www.census.gov/cgi-bin/geo/shapefiles/index.php">GENZ2023 shapefiles</a>) into <code>data/census/</code> — <code>census_place_files</code> picks it up automatically.</li>
+<li>Review that state’s city typos with the stringdist approach in the branch’s <code>il-location-exploration.R</code> and add them to <code>.city_fixes()</code>.</li>
+<li>Audit the state’s top landmarks (the branch’s audit workflow writes <code>data/il-landmark-audit/</code>-style tables) and add general-area codes, OTHER landmarks, or a pattern table under <code>state_landmark_tables()</code>.</li>
+<li>Render: <code>quarto render state-arrests.qmd -P state:STATENAME</code>, or add a <code>tar_quarto</code> target with a distinct <code>output_file</code>.</li>
+</ol>
+</section>
+<section id="extending-the-pipeline-after-a-new-ddp-release" class="level3">
+<h3 class="anchored" data-anchor-id="extending-the-pipeline-after-a-new-ddp-release">Extending the pipeline after a new DDP release</h3>
+<p>Arrests and stays must come from the same release (<code>unique_identifier</code> is hashed per release). Repoint <code>arrests_file</code>/<code>stays_file</code> in <code>_targets.R</code> to the pinned parquet; <code>place_county</code> and the reports rebuild automatically.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

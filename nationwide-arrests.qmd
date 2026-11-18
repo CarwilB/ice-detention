@@ -17,12 +17,11 @@ execute:
 ---
 
 Notes for next improvements: 
-1. Include Alaska and Hawaii on the national maps.
-2. The county-level data excludes a lot of towns, Louisiana's parishes, 
+1. The county-level data excludes a lot of towns, Louisiana's parishes, 
 and many metropolitan areas that don't follow the "NAME COUNTY" pattern.
 (We should examine the share of arrests in each state that make 
 each of the patterns.)
-3. We could create an interactive line graph with all of the state arrest
+2. We could create an interactive line graph with all of the state arrest
 rates.
 
 ```{r setup}
@@ -35,20 +34,24 @@ library(leaflet)
 library(sf)
 library(maps)
 library(knitr)
+library(purrr)
 
 cutoff     <- as.Date(params$cutoff)
 cutoff_str <- format(cutoff, "%B %e, %Y")
-data_end   <- as.Date("2026-03-31")   # last full month of DDP data; 2026-09 is a data error
+data_end   <- as.Date("2026-07-31")   # last full month of DDP data (release of 2026-08-06)
 
-arrests_raw <- tar_read(arrests_raw)
-stays_raw   <- tar_read(stays_raw)
-source(here::here("R/state-arrests.R"))        # provides STATE_ABBREVS
-source(here::here("R/state-arrests-export.R")) # provides build_state_outcomes()
-source(here::here("R/removal-grid.R"))         # provides build_removal_grid(), plot_removal_grid()
-source(here::here("R/add-carto-tiles.R"))      # provides addCartoTiles()
+# State fills and county attribution are precomputed in the pipeline:
+# nationwide_arrests_located runs fill_arrest_states_aor(), the curated
+# nationwide_landmark_states() table, and the per-state
+# assign_arrest_location() loop. See R/state-arrests.R and the Data notes.
+arrests_located <- tar_read(nationwide_arrests_located)
+stays_raw       <- tar_read(stays_raw)
+source(here::here("R/state-arrests.R"))   # provides STATE_ABBREVS
+source(here::here("R/removal-grid.R"))    # provides plot_removal_grid()
+source(here::here("R/add-carto-tiles.R")) # provides addCartoTiles()
 
 # Full deduplicated dataset — used for the time-series trend chart
-arr_all <- arrests_raw |>
+arr_all <- arrests_located |>
   filter(duplicate_likely == FALSE | is.na(duplicate_likely))
 
 # Post-cutoff only — used for maps, tables, and counts
@@ -59,10 +62,11 @@ n_total      <- nrow(arr)
 n_with_state <- sum(!is.na(arr$apprehension_state))
 ```
 
-Maps and tables below cover arrests on or after **`r cutoff_str`**.
+Counts and tables below cover arrests on or after **`r cutoff_str`**.
 **`r format(n_total, big.mark=",")`** arrests ·
 **`r round(n_with_state/n_total*100,1)`%** have a state recorded.
-The monthly trend chart shows the full dataset for context.
+Both maps offer switchable layers: the post-inauguration period (default)
+and all data. The monthly trend chart shows the full dataset for context.
 
 ---
 
@@ -72,6 +76,8 @@ Circle **area** is proportional to the number of arrests.
 Circle **color** shows arrests per 1,000 estimated undocumented immigrants
 (Pew 2023 estimates), a rough intensity measure independent of state size.
 Popups include Census 2025 total population and per-capita rates.
+The layer control (top right) switches between post-inauguration arrests
+(default) and all data; each layer has its own color scale and legend.
 
 ```{r state-counts}
 state_counts <- arr |>
@@ -106,22 +112,32 @@ pew_undoc <- readxl::read_xlsx(
   ) |>
   select(state_lower, undoc_pop, undoc_pct_pop)
 
-# Join arrests + Census + Pew
-state_data <- state_counts |>
-  rename(n_arrests = n) |>
-  left_join(census_pops, by = "state_lower") |>
-  left_join(pew_undoc,   by = "state_lower") |>
-  mutate(
-    state_title          = str_to_title(state_lower),
-    arrests_per_1k_undoc = if_else(
-      !is.na(undoc_pop) & undoc_pop > 0,
-      round(n_arrests / undoc_pop * 1000, 2), NA_real_
-    ),
-    arrests_per_100k_pop = if_else(
-      !is.na(pop_2025) & pop_2025 > 0,
-      round(n_arrests / pop_2025 * 1e5, 1), NA_real_
+# Join arrests + Census + Pew — for both post-cutoff and all-data layers
+make_state_data <- function(counts) {
+  counts |>
+    rename(n_arrests = n) |>
+    left_join(census_pops, by = "state_lower") |>
+    left_join(pew_undoc,   by = "state_lower") |>
+    mutate(
+      state_title          = str_to_title(state_lower),
+      arrests_per_1k_undoc = if_else(
+        !is.na(undoc_pop) & undoc_pop > 0,
+        round(n_arrests / undoc_pop * 1000, 2), NA_real_
+      ),
+      arrests_per_100k_pop = if_else(
+        !is.na(pop_2025) & pop_2025 > 0,
+        round(n_arrests / pop_2025 * 1e5, 1), NA_real_
+      )
     )
-  )
+}
+
+state_data     <- make_state_data(state_counts)
+state_data_all <- make_state_data(
+  arr_all |>
+    filter(!is.na(apprehension_state)) |>
+    mutate(state_lower = str_to_lower(apprehension_state)) |>
+    count(state_lower, sort = TRUE)
+)
 ```
 
 ```{r state-map}
@@ -139,68 +155,96 @@ centroids  <- cent_sf |>
   mutate(lon = cent_coords[, 1], lat = cent_coords[, 2])
 sf::sf_use_s2(TRUE)
 
-bubble_data <- centroids |>
-  left_join(state_data, by = "state_lower") |>
-  filter(!is.na(n_arrests), n_arrests > 0)
-
-# Color: arrests per 1k undoc
-pal_bubble <- colorNumeric(
-  palette  = c("#fff5f0", "#fc8d59", "#a50f15"),
-  domain   = bubble_data$arrests_per_1k_undoc,
-  na.color = "#bbbbbb"
+# Alaska, Hawaii, and Puerto Rico are absent from the maps package; add
+# fixed approximate centroids so they appear on the bubble map
+centroids <- bind_rows(
+  centroids,
+  tibble::tribble(
+    ~state_lower,    ~lon,    ~lat,
+    "alaska",       -152.5,   64.0,
+    "hawaii",       -157.5,   20.7,
+    "puerto rico",  -66.45,   18.2
+  )
 )
 
 # Radius: log10-scaled, in pixels
 rad_state <- function(n) pmax(5, sqrt(n + 1) / 5)
 
-# Rich popups
-bubble_data <- bubble_data |>
-  mutate(
-    state_abbr = unname(STATE_ABBREVS[str_to_upper(state_lower)]),
-    popup = paste0(
-      "<b style='font-size:1.1em'>", state_title, "</b>",
-      if_else(!is.na(state_abbr),
-        paste0(" <a href='arrests-by-state/", state_abbr, ".html'",
-               " style='font-size:0.85em'>details →</a>"), ""),
-      "<hr style='margin:3px 0'>",
-      "Post-inauguration arrests: <b>", format(n_arrests, big.mark = ","), "</b><br>",
-      if_else(!is.na(arrests_per_1k_undoc),
-        paste0("Arrests / 1,000 undocumented: <b>",
-               arrests_per_1k_undoc, "</b><br>"), ""),
-      if_else(!is.na(undoc_pop),
-        paste0("Est. undocumented pop. (Pew 2023): ",
-               format(undoc_pop, big.mark = ","),
-               " (", round(undoc_pct_pop * 100, 1), "% of state)<br>"), ""),
-      if_else(!is.na(pop_2025),
-        paste0("State population (Census 2025): ",
-               format(round(pop_2025), big.mark = ","), "<br>"), ""),
-      if_else(!is.na(arrests_per_100k_pop),
-        paste0("Arrests / 100k total population: ", arrests_per_100k_pop), "")
+# Rich popups; the arrest-count line names the period
+make_bubble_data <- function(state_data, period_label) {
+  centroids |>
+    left_join(state_data, by = "state_lower") |>
+    filter(!is.na(n_arrests), n_arrests > 0) |>
+    mutate(
+      state_abbr = unname(STATE_ABBREVS[str_to_upper(state_lower)]),
+      popup = paste0(
+        "<b style='font-size:1.1em'>", state_title, "</b>",
+        if_else(!is.na(state_abbr),
+          paste0(" <a href='arrests-by-state/", state_abbr, ".html'",
+                 " style='font-size:0.85em'>details →</a>"), ""),
+        "<hr style='margin:3px 0'>",
+        period_label, ": <b>", format(n_arrests, big.mark = ","), "</b><br>",
+        if_else(!is.na(arrests_per_1k_undoc),
+          paste0("Arrests / 1,000 undocumented: <b>",
+                 arrests_per_1k_undoc, "</b><br>"), ""),
+        if_else(!is.na(undoc_pop),
+          paste0("Est. undocumented pop. (Pew 2023): ",
+                 format(undoc_pop, big.mark = ","),
+                 " (", round(undoc_pct_pop * 100, 1), "% of state)<br>"), ""),
+        if_else(!is.na(pop_2025),
+          paste0("State population (Census 2025): ",
+                 format(round(pop_2025), big.mark = ","), "<br>"), ""),
+        if_else(!is.na(arrests_per_100k_pop),
+          paste0("Arrests / 100k total population: ", arrests_per_100k_pop), "")
+      )
     )
-  )
+}
 
-leaflet(bubble_data) |>
-  addProviderTiles(providers$CartoDB.Positron) |>
+group_all  <- "All data (Oct 2022 – Aug 2026)"
+group_post <- paste0("Since inauguration (", format(cutoff, "%B %e, %Y"), ")")
+
+bubble_all  <- make_bubble_data(state_data_all, "Arrests, all data")
+bubble_post <- make_bubble_data(state_data,     "Post-inauguration arrests")
+
+# Color: arrests per 1k undoc — one scale per layer
+pal_all  <- colorNumeric(c("#fff5f0", "#fc8d59", "#a50f15"),
+                         bubble_all$arrests_per_1k_undoc,  na.color = "#bbbbbb")
+pal_post <- colorNumeric(c("#fff5f0", "#fc8d59", "#a50f15"),
+                         bubble_post$arrests_per_1k_undoc, na.color = "#bbbbbb")
+
+add_bubbles <- function(map, data, pal, group) {
   addCircleMarkers(
-    lng         = ~lon, lat = ~lat,
+    map, data = data,
+    lng = ~lon, lat = ~lat,
     radius      = ~rad_state(n_arrests),
-    fillColor   = ~pal_bubble(arrests_per_1k_undoc),
+    fillColor   = ~pal(arrests_per_1k_undoc),
     fillOpacity = 0.75,
     color       = "#444",
     weight      = 0.7,
     popup       = ~popup,
     label       = ~paste0(state_title, ": ",
                            format(n_arrests, big.mark = ","), " arrests; ",
-                           arrests_per_1k_undoc, "/1k undoc.")
+                           arrests_per_1k_undoc, "/1k undoc."),
+    group = group
+  )
+}
+
+leaflet() |>
+  addCartoTiles(providers$CartoDB.Positron) |>
+  add_bubbles(bubble_all,  pal_all,  group_all) |>
+  add_bubbles(bubble_post, pal_post, group_post) |>
+  addLayersControl(
+    overlayGroups = c(group_post, group_all),
+    options = layersControlOptions(collapsed = FALSE)
   ) |>
-  addLegend(
-    pal      = pal_bubble,
-    values   = ~arrests_per_1k_undoc,
-    title    = "Arrests per<br>1,000 undoc.",
-    position = "bottomright",
-    labFormat = labelFormat(suffix = "")
-  ) |>
-  setView(lng = -96, lat = 38, zoom = 4)
+  hideGroup(group_all) |>
+  addLegend(pal = pal_post, values = bubble_post$arrests_per_1k_undoc,
+            title = "Since inauguration:<br>arrests per 1,000 undoc.",
+            position = "bottomright", labFormat = labelFormat(suffix = "")) |>
+  addLegend(pal = pal_all, values = bubble_all$arrests_per_1k_undoc,
+            title = "All data:<br>arrests per 1,000 undoc.",
+            position = "bottomleft", labFormat = labelFormat(suffix = "")) |>
+  setView(lng = -96, lat = 38, zoom = 3)
 ```
 
 **Top 20 states by arrests:**
@@ -228,26 +272,30 @@ state_data |>
 
 ## County-Level Choropleth
 
-County names are extracted from `apprehension_site_landmark` using a
-"[NAME] COUNTY" pattern.
+Counties are attributed with the same `assign_arrest_location()` engine the
+state reports use: from the arrest city where a Census place–county crosswalk
+exists (IL, MN, TN), otherwise from `apprehension_site_landmark` (explicit
+"NAME COUNTY" patterns, airports, general-area codes). Generic county parses
+are validated against the state's real county list, so typos and
+cross-state name collisions are dropped rather than misplotted.
 
 ```{r county-counts}
+# map_id comes from the pipeline (assign_arrest_location() per state,
+# counties re-validated against the attributed state, maps-normalized)
 county_counts <- arr |>
-  filter(!is.na(apprehension_site_landmark),
-         !is.na(apprehension_state)) |>
-  mutate(
-    state_lower = str_to_lower(apprehension_state),
-    county_raw  = .county_text_extraction(apprehension_site_landmark),
-    county_lower = str_to_lower(county_raw),
-    map_id = paste0(state_lower, ",", county_lower)
-  ) |>
-  filter(!is.na(county_lower)) |>
+  filter(!is.na(county)) |>
   count(map_id, sort = TRUE)
 
-county_pct <- round(sum(county_counts$n) / n_total * 100, 1)
+county_counts_all <- arr_all |>
+  filter(!is.na(county)) |>
+  count(map_id, sort = TRUE)
+
+county_pct     <- round(sum(county_counts$n)     / n_total * 100, 1)
+county_pct_all <- round(sum(county_counts_all$n) / nrow(arr_all) * 100, 1)
 ```
 
-> **Coverage:** `r county_pct`% of post-`r cutoff_str` arrests mapped to a county.
+> **Coverage:** `r county_pct`% of post-`r cutoff_str` arrests and
+> `r county_pct_all`% of all-data arrests mapped to a county.
 
 ```{r county-map}
 us_counties_sf <- sf::st_as_sf(
@@ -255,37 +303,62 @@ us_counties_sf <- sf::st_as_sf(
 ) |>
   rename(map_id = ID)
 
-county_sf <- us_counties_sf |>
-  left_join(county_counts, by = "map_id") |>
-  replace_na(list(n = 0)) |>
-  mutate(
-    county_title = str_to_title(str_extract(map_id, "(?<=,).*")),
-    state_title  = str_to_title(str_extract(map_id, "^[^,]+")),
-    # NA for 0-1 arrests → rendered transparent
-    n_map = if_else(n <= 1, NA_real_, as.double(n)),
-    label = paste0("<b>", county_title, " County, ", state_title,
-                   "</b><br>Arrests: ", format(n, big.mark=","))
-  )
+make_county_sf <- function(counts) {
+  us_counties_sf |>
+    left_join(counts, by = "map_id") |>
+    replace_na(list(n = 0)) |>
+    mutate(
+      county_title = str_to_title(str_extract(map_id, "(?<=,).*")),
+      state_title  = str_to_title(str_extract(map_id, "^[^,]+")),
+      # NA for 0-1 arrests → rendered transparent
+      n_map = if_else(n <= 1, NA_real_, as.double(n)),
+      label = paste0("<b>", county_title, " County, ", state_title,
+                     "</b><br>Arrests: ", format(n, big.mark=","))
+    )
+}
 
-bins_c <- c(1, 5, 20, 100, 500, max(county_sf$n, na.rm = TRUE) + 1)
-pal_c  <- colorBin("YlOrRd", county_sf$n_map, bins = bins_c, na.color = "transparent")
+county_sf     <- make_county_sf(county_counts)
+county_sf_all <- make_county_sf(county_counts_all)
 
-leaflet(county_sf) |>
-  addCartoTiles("CartoDB.Positron") |> # custom function to send API key
+# One color scale per layer
+pal_c      <- colorBin("YlOrRd", county_sf$n_map,
+                       bins = c(1, 5, 20, 100, 500, max(county_sf$n, na.rm = TRUE) + 1),
+                       na.color = "transparent")
+pal_c_all  <- colorBin("YlOrRd", county_sf_all$n_map,
+                       bins = c(1, 5, 20, 100, 500, max(county_sf_all$n, na.rm = TRUE) + 1),
+                       na.color = "transparent")
+
+add_counties <- function(map, data, pal, group) {
   addPolygons(
-    fillColor   = ~pal_c(n_map), fillOpacity = 0.7,
+    map, data = data,
+    fillColor   = ~pal(n_map), fillOpacity = 0.7,
     color = "#ccc", weight = 0.15,
     popup = ~label,
-    label = ~if_else(n > 0, paste0(county_title, ", ", state_title, ": ", n), NA_character_)
+    label = ~if_else(n > 0, paste0(county_title, ", ", state_title, ": ", n), NA_character_),
+    group = group
+  )
+}
+
+leaflet() |>
+  addCartoTiles("CartoDB.Positron") |> # custom function to send API key
+  add_counties(county_sf_all, pal_c_all, group_all) |>
+  add_counties(county_sf,     pal_c,     group_post) |>
+  addLayersControl(
+    overlayGroups = c(group_post, group_all),
+    options = layersControlOptions(collapsed = FALSE)
   ) |>
-  addLegend(pal = pal_c, values = ~n_map, title = "Arrests",
+  hideGroup(group_all) |>
+  addLegend(pal = pal_c, values = county_sf$n_map, title = "Since inauguration",
             position = "bottomright") |>
+  addLegend(pal = pal_c_all, values = county_sf_all$n_map, title = "All data",
+            position = "bottomleft") |>
   setView(lng = -96, lat = 38, zoom = 4)
 ```
 
 > **Note:** Counties with zero arrests shown in light grey may have arrests recorded
-> under non-specific landmarks. Alaska and Hawaii are excluded from the `maps` package
-> continental US boundary data.
+> under non-specific landmarks. Alaska, Hawaii, and Puerto Rico appear on the
+> bubble map (fixed centroids) but are excluded from this choropleth — the
+> `maps` package has no county boundary data for them.
 
 **Top 30 counties by arrests:**
 ```{r county-table}
@@ -370,8 +443,8 @@ state_ratio <- arr_all |>
 ```
 
 ```{r state-outcomes}
-# Removal outcomes per state (single-pass over stays)
-state_outcomes_tbl <- build_state_outcomes(arr, stays_raw, cutoff)
+# Removal outcomes per state (precomputed in the pipeline)
+state_outcomes_tbl <- tar_read(nationwide_state_outcomes)
 ```
 
 **All states and DC — arrest rate change and removal outcomes:**
@@ -475,10 +548,7 @@ trend_base |>
 ## Removal Destinations
 
 ```{r nationwide-removal-grid-data}
-stays_post <- stays_raw |>
-  dplyr::filter(as.Date(stay_book_in_date_time) >= cutoff)
-
-nationwide_rg <- build_removal_grid(stays_post, "Nationwide", min_n = 500)
+nationwide_rg <- tar_read(nationwide_removal_grid)
 ```
 
 `departure_country` records where each person was actually sent.
@@ -497,17 +567,56 @@ plot_removal_grid(nationwide_rg)
 ## Data notes
 
 - Source: [Deportation Data Project](https://deportationdata.org), FOIA 2026-ICLI-00005.
-- Maps and tables filtered to arrests on or after **`r cutoff_str`**
-  (`r format(n_total, big.mark=",")` arrests). Trend chart shows the full dataset
+- Counts and tables filtered to arrests on or after **`r cutoff_str`**
+  (`r format(n_total, big.mark=",")` arrests). Both maps also carry an
+  "all data" layer (Oct 2022 – Aug 2026), off by default; each layer has its
+  own color scale. Trend chart shows the full dataset
   from `r format(min(arr_all$apprehension_date), "%B %Y")` –
   `r format(max(arr_all$apprehension_date), "%B %Y")`.
 - `apprehension_state` is missing for `r format(sum(is.na(arr$apprehension_state)), big.mark=",")`
   post-cutoff rows (`r round(mean(is.na(arr$apprehension_state))*100,1)`%); excluded
   from state and county counts.
-- County extraction uses the regex `^([A-Z .'-]+) COUNTY` on the
-  `apprehension_site_landmark` field. Multi-word county names (e.g., "Crow Wing")
-  are captured; names embedded mid-string are not.
-- Alaska and Hawaii are not shown in the continental US maps.
+- County attribution uses the project's `assign_arrest_location()` engine:
+  city → county via the Census place crosswalk (IL, MN, TN), otherwise the
+  landmark engine (explicit county names, airports, general-area codes),
+  with generic county parses validated against each state's real county list.
+- Alaska, Hawaii, and Puerto Rico appear on the bubble map via fixed
+  approximate centroids (the `maps` package has no state/county boundary
+  data for them) and are absent from the county choropleth. Pew has no
+  Puerto Rico estimate, so its bubble renders grey.
+- **Landmark-to-state assignments:** rows left without a state by the DDP
+  fill and `fill_arrest_states_aor()` were assigned to a state when the
+  landmark had more than 25 arrests and more than 70% of its known-state
+  rows agreed (or the site is unambiguous by name). The table lives in the
+  pipeline as `nationwide_landmark_states()` (R/state-arrests.R), applied
+  inside the `nationwide_arrests_located` target. `r sum(is.na(arr$apprehension_state))` post-cutoff rows remain
+  unassigned. The cases, grouped by state with the agreeing share of
+  known-state rows in parentheses:
+
+  - **Colorado:** FRD GENERAL AREA (94%). **South Dakota:** SFD (90%).
+    **Missouri:** STL (89%). **Illinois:** CHI (92%), RII (90%).
+    **Texas:** EPC (81%), ELP (91%), SMITH COUNTY SHERIFFS OFFICE (94%),
+    LIV (85%), and KANSAS CITY DETENTION AND REMOVAL OPERATIONS (94% — note:
+    despite the name, its rows are 94% Texas with an 86% San Antonio AOR).
+    **Virginia:** WAS (76%). **New Mexico:** ABQ (92%).
+    **Washington:** Spokane CAP (95%). **California:** CAP - FCI HERLONG
+    CALIFORNIA (92%), CSP SOLANO (95%). **Pennsylvania:** PIT (89%).
+    **Idaho:** BOISE ICE OFFICE (94%). **Iowa:** CRI (95%).
+    **Oregon:** POO CAP NON-CUSTODIAL ARREST (75%), SHERIDAN FCI (89% — FCI
+    Sheridan, Oregon; Seattle AOR 100%), PORTLAND FUGITIVE OPERATIONS STREET
+    ARREST (89% — Seattle AOR, with arrest cities Portland, Beaverton, and
+    Hillsboro: this is Portland, Oregon, not Maine).
+    **North Dakota:** GRF (78%; Grand Forks). **Nevada:** REN (86%; Reno).
+    **Wyoming:** CITY OF CASPER (93%). **Louisiana:** OAK (90%; Oakdale),
+    JNA (90%; Jennings). **Connecticut:** HAR (74%; Hartford).
+    **Kentucky:** LOU (94%; Louisville). **Georgia:** FOK (84%; Folkston).
+    **Tennessee:** MEM (80%; Memphis). **District of Columbia:** USMS DC
+    SUPERIOR COURT (named for the DC Superior Court; known rows are 23 DC
+    vs. 10 Virginia).
+  - Rejected under the rule: KAN GENERAL AREA (Missouri 52% vs. Kansas 48%),
+    JOHNSON COUNTY JAIL (Texas 56% vs. Arkansas 44%), ALTERNATIVES TO
+    DETENTION (52%), WSM, TOD, OOP, WNF, TXA, BOS, FUGITIVE OPERATION,
+    SC INTEROPERABILITY LAFO (all below 70% agreement).
 - **Census population** from U.S. Census Bureau, "Annual Estimates of the Resident
   Population for the United States, Regions, States, District of Columbia and Puerto Rico"
   (NST-EST2025-POP.xlsx), July 1 2025 estimates.

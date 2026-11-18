@@ -84,6 +84,79 @@ The city key is state-scoped, so a Texas city on a Tennessee report row never re
 
 Known blind spot (both lines of work): a suffix-less landmark naming a same-named county in another state still validates in-state (`A - WI DOC - BROWN COUNTY JAIL` → Brown, IL).
 
+## Field coverage by state
+
+Share of arrests in each state (all rows in the 20260806 release, Oct 2022 – Aug 2026) with a non-missing `apprehension_site_landmark`, `apprehension_city_common_case`, and an assigned county from `assign_arrest_location()` (city-first where a place crosswalk exists, otherwise the landmark engine). The state fill chain (`apprehension_state_filled_in`, plus the project-level AOR/landmark-suffix fills of 2026-11) leaves 25,988 rows (2.9% of the dataset) with no state; they appear as NA and cannot be mapped — see the note below the table.
+
+| State                          | Arrests | Landmark |  City | County |
+|--------------------------------|--------:|---------:|------:|-------:|
+| TEXAS                          | 226,307 |    80.3% | 87.5% |  33.2% |
+| FLORIDA                        |  82,013 |    82.9% | 92.3% |  27.3% |
+| CALIFORNIA                     |  75,975 |    66.9% | 86.1% |   2.5% |
+| NEW YORK                       |  36,682 |    80.5% | 98.4% |    14% |
+| NEW JERSEY                     |  33,941 |    92.5% | 90.4% |  16.1% |
+| ARIZONA                        |  30,002 |    49.7% | 78.7% |  22.2% |
+| GEORGIA                        |  28,262 |    66.7% | 94.7% |  23.3% |
+| NA                             |  25,988 |    10.4% |  0.6% |     0% |
+| TENNESSEE                      |  22,304 |    91.1% | 94.5% |  95.4% |
+| VIRGINIA                       |  20,780 |    77.8% | 93.4% |   7.6% |
+| MASSACHUSETTS                  |  18,270 |    74.5% | 91.9% |   2.9% |
+| PENNSYLVANIA                   |  17,865 |    84.7% | 91.5% |  17.3% |
+| ALABAMA                        |  15,582 |    89.7% | 92.3% |  22.4% |
+| LOUISIANA                      |  15,520 |    86.9% | 96.3% |     0% |
+| COLORADO                       |  15,354 |    78.2% | 73.6% |  37.1% |
+| NORTH CAROLINA                 |  14,512 |    90.1% | 96.4% |    54% |
+| OKLAHOMA                       |  14,463 |    80.8% | 93.5% |  18.6% |
+| ILLINOIS                       |  13,081 |    71.9% | 94.9% |  94.9% |
+| INDIANA                        |  12,903 |    95.6% | 88.8% |  52.2% |
+| MARYLAND                       |  12,879 |    85.5% | 97.8% |    28% |
+| SOUTH CAROLINA                 |  11,670 |    85.1% | 95.8% |  56.3% |
+| UTAH                           |  11,335 |    80.1% | 89.1% |  28.4% |
+| WASHINGTON                     |  11,143 |    76.1% | 90.5% |   0.1% |
+| OHIO                           |  10,689 |    81.3% | 93.3% |  10.8% |
+| MINNESOTA                      |   9,950 |    80.7% | 91.4% |  95.9% |
+| ARKANSAS                       |   9,303 |    91.4% | 93.9% |  51.2% |
+| MICHIGAN                       |   8,969 |    86.8% | 98.7% |  20.6% |
+| KENTUCKY                       |   8,478 |    82.8% | 95.6% |  45.3% |
+| MISSISSIPPI                    |   8,388 |    95.6% | 98.5% |  47.4% |
+| MISSOURI                       |   8,027 |      81% | 91.8% |  31.7% |
+| NEVADA                         |   6,940 |    89.8% | 88.1% |  42.3% |
+| NEW MEXICO                     |   6,931 |    31.4% | 94.7% |     9% |
+| KANSAS                         |   5,387 |    88.7% | 97.9% |  29.5% |
+| WISCONSIN                      |   5,130 |    93.5% | 98.9% |  29.4% |
+| NEBRASKA                       |   5,091 |    91.1% | 95.3% |  26.6% |
+| IOWA                           |   4,362 |    95.3% | 86.8% |  59.2% |
+| IDAHO                          |   4,292 |    87.2% | 58.8% |  26.7% |
+| WEST VIRGINIA                  |   3,568 |      86% | 98.3% |  25.1% |
+| OREGON                         |   3,453 |    68.1% | 82.6% |   0.9% |
+| WYOMING                        |   2,276 |    87.3% |   93% |  34.8% |
+| PUERTO RICO                    |   2,144 |    81.6% | 96.5% |     0% |
+| CONNECTICUT                    |   2,137 |    75.6% |   87% |     0% |
+| SOUTH DAKOTA                   |   2,059 |    96.6% | 53.5% |  55.4% |
+| DISTRICT OF COLUMBIA           |   2,051 |    72.7% | 94.1% |     0% |
+| MAINE                          |   1,913 |    89.3% | 98.8% |   7.3% |
+| DELAWARE                       |   1,650 |    88.8% | 98.4% |   0.2% |
+| RHODE ISLAND                   |   1,629 |    81.4% |   98% |   1.7% |
+| NEW HAMPSHIRE                  |   1,221 |    86.9% | 93.5% |    43% |
+| NORTH DAKOTA                     |   856 |    84.9% | 81.5% |  72.9% |
+| MONTANA                         |   627 |      88% | 70.7% |  44.8% |
+| HAWAII                          |   589 |      72% | 90.2% |     0% |
+| VIRGIN ISLANDS                  |   367 |      67% | 90.7% |     0% |
+| ALASKA                          |   283 |    82.3% | 98.2% |     0% |
+| VERMONT                         |   243 |      58% | 99.2% |     0% |
+| NORTHERN MARIANA ISLANDS        |   217 |    71.4% | 99.1% |     0% |
+| ARMED FORCES - THE AMERICAS     |   168 |    75.6% | 99.4% |     0% |
+| GUAM                            |   135 |    88.9% |   77% |     0% |
+| FEDERATED STATES OF MICRONESIA  |    23 |    91.3% | 91.3% |     0% |
+| ARMED SERVICES - PACIFIC        |     5 |      60% |  100% |     0% |
+| ARMED FORCES - EUROPE           |     4 |      75% |  100% |     0% |
+| OTHER                           |     3 |     100% |  100% |     0% |
+| CHIAPAS                         |     2 |      50% |  100% |     0% |
+| MEXICO                          |     1 |     100% |  100% |     0% |
+| TAMAULIPAS                      |     1 |     100% |  100% |     0% |
+
+The no-state block thins sharply over time and has almost no city data (0.6% filled). The project-level state fill (2026-11) recovered 12,470 of the original 43,431 NA rows — mostly landmark-conditional fills (DAL COUNTY JAIL → Texas, NSV = Nashville → Tennessee, DENVER, CO → Colorado), AOR-based fills for the nine unambiguous AORs, and a ", XX" suffix rule. The remaining 25,988 rows are mostly rows with no landmark at all (23,285) or generic office-area codes whose known-state rows never reach 95% dominance; 31 more are assigned by the curated `nationwide_landmark_states()` table for the nationwide report only.
+
 ## Where to add new entries
 
 ### New general-area office code ("XXX GENERAL AREA, NON-SPECIFIC" unassigned)

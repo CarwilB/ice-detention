@@ -4,7 +4,7 @@ title: "Pipeline Targets Catalog"
 
 # Pipeline Targets Catalog
 
-*Auto-generated on 2026-11-06. Descriptions are hand-maintained in `R/catalog.R`.*
+*Auto-generated on 2026-11-07. Descriptions are hand-maintained in `R/catalog.R`.*
 
 All targets can be loaded with `tar_load(target_name)` or `tar_read(target_name)`.
 Run the pipeline with `tar_make()`. Visualize dependencies with `tar_visnetwork()`.
@@ -132,12 +132,15 @@ Run the pipeline with `tar_make()`. Visualize dependencies with `tar_visnetwork(
 | Target | Size | Description |
 |--------|------|-------------|
 | `arrests_file` | char (1) | Tracks the DDP arrests parquet (`data/ddp/arrests-latest_20260806.parquet`) for changes. This value is hard-coded and needs to be updated when new releases are published and downloaded. |
-| `arrests_raw` | 896393 × 37 | Raw DDP arrests (20260806 release: ~896k rows, Oct 2022--Aug 2026; one row per arrest event), schema-normalized back to the pre-20260806 column names (`apprehension_state`, `apprehension_site_landmark`; `apprehension_type` restored as all-NA). |
+| `arrests_raw` | 896393 × 41 | Raw DDP arrests (20260806 release: ~896k rows, Oct 2022--Aug 2026; one row per arrest event), schema-normalized back to the pre-20260806 column names (`apprehension_state`, `apprehension_site_landmark`; `apprehension_type` restored as all-NA). |
 | `stays_file` | char (1) | Tracks the DDP detention stays parquet (`data/ddp/detention-stays-latest_20260806.parquet`) for changes. Wired 2026-10-21; the 20260514 release remains on disk as a frozen archive. |
 | `stays_raw` | 1264756 × 77 | Raw DDP detention stays (20260806 release: ~1.26M rows x 77 cols; one row per stay with the `detention_facility_codes_all` chain). Source for mn-arrests, state-arrests, nationwide-arrests, and the per-state website export. |
 | `stints_file` | char (1) | Tracks the DDP detention stints parquet (`data/ddp/detention-stints-latest_20260806.parquet`) for changes. |
 | `stints_raw` | 3202317 × 59 | Raw DDP detention stints (20260806 release: ~3.2M rows; one row per facility stint, book-ins Oct 2021--Aug 2026). Source for the recreated daily-population file, throughput report, and facility profiles. |
 | `mn_arrests_data` | list (17) | Pre-computed tables for `mn-arrests.qmd`: Minnesota post-2025-01-20 arrest itineraries, county choropleth, facility map, Sankey, removal grid, and minors sub-analysis. |
+| `nationwide_arrests_located` | 896393 × 53 | Nationwide arrests with states filled (`fill_arrest_states_aor()` + the curated `nationwide_landmark_states()` table) and county attribution from `assign_arrest_location()` run per state; counties re-validated against the attributed state and `map_id` normalized to maps county IDs. Feeds `nationwide-arrests.qmd`. |
+| `nationwide_state_outcomes` | 63 × 8 | Per-state removal outcomes (removed/released/pending shares) for post-2025-01-20 arrests, single pass over stays, for `nationwide-arrests.qmd`. |
+| `nationwide_removal_grid` | list (4) | Nationality x departure-country removal grid for post-2025-01-20 stays (cells with >= 500 removals), for `nationwide-arrests.qmd`. |
 | `nationwide_arrests_report` | char (4) | Rendered `nationwide-arrests.qmd`: state and county choropleths of post-2025-01-20 ICE arrests. |
 | `state_arrests_export` | char (52) | Exports `nationwide.rds` + 51 per-state RDS files to `data/state-arrests-export/` for the ice-arrests-by-state website. **cue = "never"**. |
 | `ddp_throughput_report` | char (3) | Rendered `ddp-throughput.qmd`: person-level detention throughput from stints (daily population/removals/book-ins, cumulative distinct individuals, re-detention, presidential comparison windows). |

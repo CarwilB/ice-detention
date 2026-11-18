@@ -162,6 +162,15 @@ target_descriptions <- function() {
     "mn_arrests_data", "DDP arrests and stints",
     "Pre-computed tables for `mn-arrests.qmd`: Minnesota post-2025-01-20 arrest itineraries, county choropleth, facility map, Sankey, removal grid, and minors sub-analysis.",
 
+    "nationwide_arrests_located", "DDP arrests and stints",
+    "Nationwide arrests with states filled (`fill_arrest_states_aor()` + the curated `nationwide_landmark_states()` table) and county attribution from `assign_arrest_location()` run per state with the nationwide place-county crosswalk (all states + DC + PR since 2026-11-07); counties re-validated against the attributed state and `map_id` normalized to maps county IDs. Feeds `nationwide-arrests.qmd`.",
+
+    "nationwide_state_outcomes", "DDP arrests and stints",
+    "Per-state removal outcomes (removed/released/pending shares) for post-2025-01-20 arrests, single pass over stays, for `nationwide-arrests.qmd`.",
+
+    "nationwide_removal_grid", "DDP arrests and stints",
+    "Nationality x departure-country removal grid for post-2025-01-20 stays (cells with >= 500 removals), for `nationwide-arrests.qmd`.",
+
     "nationwide_arrests_report", "DDP arrests and stints",
     "Rendered `nationwide-arrests.qmd`: state and county choropleths of post-2025-01-20 ICE arrests.",
 
