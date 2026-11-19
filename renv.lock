@@ -849,7 +849,7 @@
       "RoxygenNote": "7.2.3",
       "NeedsCompilation": "no",
       "Author": "Øystein Olav Skaar [aut, cre, cph] (<https://orcid.org/0000-0001-5605-3492>)",
-      "Repository": "CRAN"
+      "Repository": "https://packagemanager.posit.co/cran/latest"
     },
     "cachem": {
       "Package": "cachem",
@@ -2699,7 +2699,8 @@
       "Maintainer": "Paul Murrell <paul@stat.auckland.ac.nz>",
       "License": "GPL",
       "NeedsCompilation": "no",
-      "Repository": "CRAN"
+      "Repository": "https://packagemanager.posit.co/cran/latest",
+      "Encoding": "UTF-8"
     },
     "gridExtra": {
       "Package": "gridExtra",
@@ -3885,7 +3886,7 @@
       "RoxygenNote": "7.1.1",
       "NeedsCompilation": "no",
       "Author": "Tim Appelhans [cre, aut], Florian Detsch [aut]",
-      "Repository": "CRAN"
+      "Repository": "https://packagemanager.posit.co/cran/latest"
     },
     "libr": {
       "Package": "libr",
@@ -5213,7 +5214,8 @@
       "SystemRequirements": "Java JDK 1.2 or higher (for JRI/REngine JDK 1.4 or higher), GNU make",
       "BugReports": "https://github.com/s-u/rJava/issues",
       "NeedsCompilation": "yes",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "ragg": {
       "Package": "ragg",
@@ -7327,7 +7329,7 @@
       "Encoding": "UTF-8",
       "NeedsCompilation": "no",
       "Author": "Martijn Tennekes [aut, cre], Peter Ellis [ctb]",
-      "Repository": "CRAN"
+      "Repository": "https://packagemanager.posit.co/cran/latest"
     },
     "treemapify": {
       "Package": "treemapify",

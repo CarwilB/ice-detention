@@ -39,6 +39,7 @@ arrests_raw   <- tar_read(arrests_raw)
 stays_raw     <- tar_read(stays_raw)
 detloc_lkp    <- tar_read(detloc_lookup_complete)
 place_county  <- tar_read(place_county)
+landmark_audit <- tryCatch(tar_read(landmark_audit), error = function(e) NULL)
 geo_all       <- readr::read_csv(here::here("data/facilities-geocoded-all.csv"),
                                   show_col_types = FALSE)
 
@@ -49,7 +50,8 @@ d <- build_state_arrests_data(
   geo_all      = geo_all,
   state        = params$state,
   cutoff       = as.Date(params$cutoff),
-  place_county = place_county
+  place_county = place_county,
+  audit        = landmark_audit
 )
 
 state_full  <- str_to_title(str_to_lower(d$state))
@@ -147,22 +149,26 @@ state_map_sf <- tryCatch({
   sf::st_as_sf(
     maps::map("county", state_lower, fill = TRUE, plot = FALSE)
   ) |>
-    mutate(county = str_to_title(str_remove(ID, paste0(state_lower, ","))))
+    mutate(
+      county     = str_to_title(str_remove(ID, paste0(state_lower, ","))),
+      county_key = .norm_county_key(county)
+    )
 }, error = function(e) NULL)
 
 if (!is.null(state_map_sf) && nrow(d$county_counts) > 0 && county_coverage >= 0.20) {
-  county_extra <- d$county_counts |>
-    group_by(county) |>
+  # Join on a normalized key: the pipeline's county list carries Census
+  # spellings ("DeWitt") where the maps polygons read "De Witt"
+  county_tbl <- d$county_counts |>
+    group_by(county_key = .norm_county_key(county)) |>
     summarise(
+      n        = sum(n),
       at_large = sum(n[at_large]),
       multi    = sum(n[from_multi_county_city]),
-      .groups = "drop"
+      .groups  = "drop"
     )
   county_sf <- state_map_sf |>
-    left_join(county_extra, by = "county") |>
-    left_join(d$county_counts |> group_by(county) |> summarise(n = sum(n)),
-              by = "county") |>
-    replace_na(list(n = 0)) |>
+    left_join(county_tbl, by = "county_key") |>
+    replace_na(list(n = 0, at_large = 0, multi = 0)) |>
     mutate(
       n_map = if_else(n <= 1, NA_real_, as.double(n)),
       label = paste0(

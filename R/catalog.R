@@ -163,7 +163,13 @@ target_descriptions <- function() {
     "Pre-computed tables for `mn-arrests.qmd`: Minnesota post-2025-01-20 arrest itineraries, county choropleth, facility map, Sankey, removal grid, and minors sub-analysis.",
 
     "nationwide_arrests_located", "DDP arrests and stints",
-    "Nationwide arrests with states filled (`fill_arrest_states_aor()` + the curated `nationwide_landmark_states()` table) and county attribution from `assign_arrest_location()` run per state with the nationwide place-county crosswalk (all states + DC + PR since 2026-11-07); counties re-validated against the attributed state and `map_id` normalized to maps county IDs. Feeds `nationwide-arrests.qmd`.",
+    "Nationwide arrests with states filled (`fill_arrest_states_aor()` + the curated `nationwide_landmark_states()` table) and county attribution from `assign_arrest_location()` run per state with the nationwide place-county crosswalk (all states + DC + PR since 2026-11-07); counties carry their attributed state in `county_state` (2026-11-18 refactor), are re-validated against it, and `map_id` is keyed on it. Feeds `nationwide-arrests.qmd`.",
+
+    "landmark_audit_file", "DDP arrests and stints",
+    "Tracks `data/state-arrests/landmark-audit.csv` — the RA-verified landmark→county audit ledger (128 seeded proposals 2026-11-18, issue 16). Edit the CSV to add `status = \"verified\"` rows; downstream targets rebuild automatically.",
+
+    "landmark_audit", "DDP arrests and stints",
+    "Verified entries from the landmark-audit CSV (`read_landmark_audit()`): `exact` rows join the override path, `ga_code` rows append to the state's general-area code table, `pattern` rows append to the state's pattern table. `proposed`/`rejected` rows are ignored.",
 
     "nationwide_state_outcomes", "DDP arrests and stints",
     "Per-state removal outcomes (removed/released/pending shares) for post-2025-01-20 arrests, single pass over stays, for `nationwide-arrests.qmd`.",

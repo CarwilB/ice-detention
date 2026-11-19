@@ -226,9 +226,11 @@ tn_other_landmarks <- tibble::tribble(
 )
 
 # Per-state lookup tables for .parse_landmark_county_state(). Add an entry
-# here when a new state's landmarks need county/state attribution.
-state_landmark_tables <- function(state_upper) {
-  if (state_upper == "TENNESSEE") {
+# here when a new state's landmarks need county/state attribution. The
+# optional `audit` argument appends RA-verified entries from
+# data/state-arrests/landmark-audit.csv (see read_landmark_audit()).
+state_landmark_tables <- function(state_upper, audit = NULL) {
+  base <- if (state_upper == "TENNESSEE") {
     list(patterns = tibble::tibble(pattern = character(),
                                    county  = character(),
                                    state   = character()),
@@ -248,6 +250,27 @@ state_landmark_tables <- function(state_upper) {
          ga    = mn_general_area_codes,
          other = mn_other_landmarks)
   }
+  if (!is.null(audit) && nrow(audit) > 0) {
+    mine <- audit |> dplyr::filter(state == state_upper)
+    ga_rows <- mine |>
+      dplyr::filter(record_type == "ga_code") |>
+      dplyr::transmute(
+        # Accept either the code alone ("MTG") or the full landmark string —
+        # the engine joins by the landmark's first word
+        code     = stringr::str_to_upper(stringr::word(stringr::str_trim(landmark), 1)),
+        location = dplyr::coalesce(notes, ""),
+        county,
+        state    = attributed_state
+      )
+    pat_rows <- mine |>
+      dplyr::filter(record_type == "pattern", !is.na(pattern)) |>
+      dplyr::transmute(pattern, county, state = attributed_state)
+    # Audit rows append AFTER the hand-maintained tables: first-match-wins
+    # order keeps curated rules ahead of CSV additions
+    base$ga       <- dplyr::bind_rows(base$ga, ga_rows)
+    base$patterns <- dplyr::bind_rows(base$patterns, pat_rows)
+  }
+  base
 }
 
 # ── Airport landmark locations ────────────────────────────────────────────────
@@ -419,17 +442,25 @@ nationwide_landmark_states <- function() {
 #'
 #' Two nationwide safeguards the per-state reports don't need:
 #' 1. Attributed counties are re-validated against the attributed state's
-#'    real county list — the landmark engine's general-area path trusts the
-#'    report state, so a code like SPM (St. Paul) can fabricate "Ramsey"
-#'    for Wisconsin-tagged rows.
+#'    (`county_state`) real county list — the landmark engine's general-area
+#'    path trusts the report state, so a code like SPM (St. Paul) can
+#'    fabricate "Ramsey" for Wisconsin-tagged rows.
 #' 2. `map_id` is normalized to maps::map("county") IDs (no periods, no
-#'    "county"/"parish" suffix: "St. Tammany Parish" → "louisiana,st tammany").
+#'    spaces, no "county"/"parish" suffix: "St. Tammany Parish" →
+#'    "louisiana,sttammany"; maps spells it "De Witt" where the Census county
+#'    list behind validation says "DeWitt", so spaces must go on both sides)
+#'    and keyed on `county_state`, so out-of-frame attributions join to the
+#'    correct state's polygons on the nationwide map.
 #'
 #' @param arrests      Arrests tibble (arrests_raw target).
 #' @param place_county Place-county crosswalk (place_county target) or NULL.
-#' @return Arrests with landmark_type, city, county_landmark, county,
-#'   county_source, unassigned_reason, map_id appended.
-build_nationwide_locations <- function(arrests, place_county = NULL) {
+#' @param audit        Verified landmark-audit entries (read_landmark_audit())
+#'   or NULL, passed to assign_arrest_location() for every state.
+#' @return Arrests with landmark_type, city, county_landmark,
+#'   county_landmark_state, county, county_state, county_source,
+#'   unassigned_reason, map_id appended.
+build_nationwide_locations <- function(arrests, place_county = NULL,
+                                       audit = NULL) {
   arrests <- fill_arrest_states_aor(arrests)
 
   lm  <- nationwide_landmark_states()
@@ -446,7 +477,8 @@ build_nationwide_locations <- function(arrests, place_county = NULL) {
   located <- states |>
     purrr::map(function(st) {
       assign_arrest_location(
-        arrests |> dplyr::filter(apprehension_state == st), st, place_county)
+        arrests |> dplyr::filter(apprehension_state == st), st, place_county,
+        audit = audit)
     }) |>
     purrr::list_rbind()
 
@@ -473,20 +505,26 @@ build_nationwide_locations <- function(arrests, place_county = NULL) {
 
   located |>
     dplyr::mutate(
-      state_abbr = unname(datasets::state.abb[match(
-        stringr::str_to_title(apprehension_state), datasets::state.name)]),
-      county = dplyr::if_else(is.na(state_abbr), county,
-                              purrr::map2_chr(county, state_abbr, .validate_county)),
+      # Counties may sit in another state than the report (landmark state
+      # markers); validate against the attributed state and key map_id on it.
+      county_abbr = dplyr::case_when(
+        is.na(county_state) ~ NA_character_,
+        county_state == "DISTRICT OF COLUMBIA" ~ "DC",
+        TRUE ~ datasets::state.abb[match(county_state, datasets::state.name)]
+      ),
+      county = dplyr::if_else(is.na(county_abbr), county,
+                              purrr::map2_chr(county, county_abbr, .validate_county)),
+      county_state = dplyr::if_else(is.na(county), NA_character_, county_state),
       map_id = dplyr::if_else(
         is.na(county),
         NA_character_,
-        paste0(stringr::str_to_lower(apprehension_state), ",",
+        paste0(stringr::str_to_lower(county_state), ",",
                stringr::str_remove(
-                 stringr::str_to_lower(stringr::str_remove_all(county, "\\.")),
+                 stringr::str_to_lower(stringr::str_remove_all(county, "[. ]")),
                  " (county|parish)$"))
       )
     ) |>
-    dplyr::select(-state_abbr)
+    dplyr::select(-county_abbr)
 }
 
 #' Letters-only uppercase key for matching county names ("St. Clair" == "ST CLAIR",
@@ -502,20 +540,57 @@ build_nationwide_locations <- function(arrests, place_county = NULL) {
 #  landmark audit; DEWITT/DeWitt spelling variants.
 .county_typos <- c(DEWIITT = "DEWITT", GALATIN = "GALLATIN", PUTNAME = "PUTNAM")
 
-#' Counties of a state, as named by maps::county.fips (title case, e.g.
-#' "Du Page", "De Witt"), keyed by .county_key(). Used to validate generic
-#' "X COUNTY" parses so typos and cross-state name collisions return NA
-#' instead of fabricating geography.
+#' County-name abbreviations seen in landmarks ("DAL COUNTY JAIL" = Dallas
+#' County), keyed by .county_key(). .validate_county() expands a failed key
+#' through this map and retries, so abbreviated county names validate like
+#' full names. Add entries as the landmark audits surface them.
+.county_abbrevs <- c(DAL = "DALLAS", YRK = "YORK")
+
+.county_names_cache <- new.env(parent = emptyenv())
+
+#' Full county table from the Census cartographic-boundary county file
+#' (data/census/cb_2023_us_county_500k.zip, staged by the census_county_file
+#' target). Read once per session; one row per county equivalent.
+.all_census_counties <- function() {
+  if (!is.null(.county_names_cache$all)) return(.county_names_cache$all)
+  zip <- here::here("data", "census", "cb_2023_us_county_500k.zip")
+  if (!file.exists(zip)) {
+    stop("Census county file not found at ", zip,
+         " — build the census_county_file target first (see _targets.R).")
+  }
+  shp <- sf::st_read(paste0("/vsizip/", zip), quiet = TRUE)
+  tbl <- sf::st_drop_geometry(shp) |>
+    dplyr::transmute(state = as.character(STATE_NAME), county = as.character(NAME)) |>
+    dplyr::filter(!is.na(state), !is.na(county))
+  .county_names_cache$all <- tbl
+  tbl
+}
+
+#' Counties of a state, as named by the Census cartographic-boundary county
+#' file (Census spelling, e.g. "DeWitt", "DeKalb"), keyed by .county_key().
+#' Replaces maps::county.fips, which lacks AK/HI/PR and carries pre-2022
+#' Connecticut counties. State may be passed in any case (report states are
+#' uppercase; .validate_county() passes state.name title case). Used to
+#' validate generic "X COUNTY" parses and normalize county spellings so typos
+#' and cross-state name collisions return NA instead of fabricating geography.
+#' NOTE: downstream joins that match county names against maps-package polygon
+#' IDs must normalize both sides (.norm_county_key() or the map_id
+#' dot-and-space stripping), since Census spellings drop the spaces maps
+#' inserts ("De Witt" IL is Census "DeWitt"; "Du Page" is "DuPage").
 .state_county_names <- function(state_upper) {
-  poly <- maps::county.fips$polyname
-  poly <- poly[startsWith(poly, paste0(stringr::str_to_lower(state_upper), ","))]
-  nm <- unique(stringr::str_remove(stringr::str_remove(poly, "^[^,]+,"), ":.*$"))
-  stats::setNames(stringr::str_to_title(nm), .county_key(nm))
+  key <- stringr::str_to_upper(state_upper)
+  cached <- .county_names_cache[[key]]
+  if (!is.null(cached)) return(cached)
+  tbl <- .all_census_counties()
+  nm <- unique(tbl$county[stringr::str_to_upper(tbl$state) == key])
+  out <- stats::setNames(nm, .county_key(nm))
+  .county_names_cache[[key]] <- out
+  out
 }
 
 #' Validate a generically parsed county name against the real county list of
-#' the state it would be attributed to. Returns the maps-package spelling
-#' ("Du Page", "De Witt") on a hit, NA otherwise — typos and counties that
+#' the state it would be attributed to. Returns the Census spelling
+#' ("DeWitt", "DeKalb") on a hit, NA otherwise — typos and counties that
 #' exist only in other states (IA jails leaking into an IL report, "Cap-"
 #' debris, "Galatin") return NA instead of fabricating geography.
 .validate_county <- function(county, state_abbr) {
@@ -524,6 +599,11 @@ build_nationwide_locations <- function(arrests, place_county = NULL) {
     if (is.na(cty) || is.na(st)) return(NA_character_)
     valid <- .state_county_names(st)
     key <- dplyr::coalesce(unname(.county_typos[.county_key(cty)]), .county_key(cty))
+    # County abbreviations ("DAL" for Dallas): expand and retry once
+    if (!key %in% names(valid)) {
+      exp <- .county_abbrevs[key]
+      if (!is.na(exp)) key <- .county_key(exp)
+    }
     if (key %in% names(valid)) unname(valid[key]) else NA_character_
   })
 }
@@ -536,8 +616,9 @@ build_nationwide_locations <- function(arrests, place_county = NULL) {
 # COUNTY ..."), or a narrative phrase ("FUGITIVE OPERATIONS ON STREET DEWITT
 # COUNTY, ILLINOIS", "FRU - ALL AREAS INSIDE KARNES COUNTY"). Peel those
 # prefixes so the capture is the county name alone. The extraction is
-# non-greedy so it stops at the FIRST "COUNTY" (landmarks can name a county
-# twice, e.g. "VOLUSIA COUNTY JAIL ... COUNTY FACILITY").
+# non-greedy so it stops at the FIRST "COUNTY" or "PARISH" (Louisiana
+# landmarks name parishes; landmarks can name a county twice, e.g. "VOLUSIA
+# COUNTY JAIL ... COUNTY FACILITY").
 .county_text_extraction <- function(landmark) {
   u <- stringr::str_to_upper(landmark)
   # Peel leading segments until none of the patterns match
@@ -551,8 +632,8 @@ build_nationwide_locations <- function(arrests, place_county = NULL) {
     if (identical(u, before)) break
   }
   ext <- stringr::str_remove(
-    stringr::str_extract(u, "^([A-Z0-9 .()'-]+?) COUNTY"),
-    " COUNTY$")
+    stringr::str_extract(u, "^([A-Z0-9 .()'-]+?) (COUNTY|PARISH)"),
+    " (COUNTY|PARISH)$")
   # Leftover interior " - " segments ("JUVENILE - MARICOPA") — keep the last
   ext <- stringr::str_remove(ext, ".* - ")
   # Leading arrest-program codes with parentheses ("287(G)-KNOX") — drop the
@@ -573,13 +654,15 @@ build_nationwide_locations <- function(arrests, place_county = NULL) {
 #' landmarks), OTHER landmark exact-match lookup, then the general "X COUNTY"
 #' regex attributed to the ", XX" state suffix (falling back to the report
 #' state; NA if neither is available). The default lookup tables are MN-report
-#' specific; other states should pass their own tables.
+#' specific; other states should pass their own tables. The optional `audit`
+#' argument appends RA-verified entries from the landmark-audit CSV.
 .parse_landmark_county_state <- function(landmark, state_upper,
                                          landmark_patterns = NULL,
                                          ga_codes          = NULL,
                                          other_landmarks   = NULL,
-                                         airports          = airport_landmarks) {
-  tables <- state_landmark_tables(state_upper)
+                                         airports          = airport_landmarks,
+                                         audit             = NULL) {
+  tables <- state_landmark_tables(state_upper, audit)
   if (is.null(landmark_patterns)) landmark_patterns <- tables$patterns
   if (is.null(ga_codes))          ga_codes          <- tables$ga
   if (is.null(other_landmarks))   other_landmarks   <- tables$other
@@ -590,10 +673,23 @@ build_nationwide_locations <- function(arrests, place_county = NULL) {
   # "XX STATE", "XX DOC", a bare trailing "XX", a trailing full state name)
   # names the arrest's actual state even without matching the report state, so
   # out-of-state counties are never attributed to the report state.
-  suffix <- dplyr::coalesce(
-    stringr::str_remove(
-      stringr::str_extract(stringr::str_to_upper(landmark), ", [A-Z]{2}$"), ", "),
-    .landmark_state_markers(stringr::str_to_upper(landmark))$state)
+  comma_suffix <- stringr::str_remove(
+    stringr::str_extract(stringr::str_to_upper(landmark), ", [A-Z]{2}$"), ", ")
+  # "X CO" county abbreviations are resolved BEFORE state-marker detection: a
+  # trailing/inline "CO" preceded by a county of the report state is a county
+  # ("TEXAS DEPT OF CRIMINAL JUSTICE, WALKER CO" = Walker County, TX), not a
+  # Colorado marker. The ", CO" comma form never matches the county regex, so
+  # genuine Colorado suffixes are untouched.
+  co_county <- .co_county_token(landmark, abbr, comma_suffix)
+  markers_state <- .landmark_state_markers(stringr::str_to_upper(landmark))$state
+  suffix <- dplyr::coalesce(comma_suffix, markers_state)
+  # Suppress only a BARE trailing-CO marker that is really a county
+  # abbreviation; "CO STATE"/"XX DOC" style markers are kept
+  suffix <- dplyr::if_else(
+    !is.na(co_county) & is.na(comma_suffix) &
+      !is.na(markers_state) & markers_state == "CO",
+    NA_character_, suffix)
+  co_state <- dplyr::coalesce(suffix, abbr)
 
   # First matching pattern row (in table order) supplies county/state;
   # state == "report" defers to the report's state.
@@ -641,8 +737,14 @@ build_nationwide_locations <- function(arrests, place_county = NULL) {
         !is.na(airport_county)                                           ~ airport_county,
         # Unrecognized airports: state via ", XX" suffix, county unknown
         stringr::str_detect(landmark, "AIRPORT")                         ~ NA_character_,
-        stringr::str_detect(landmark, "GENERAL AREA")                    ~ ga_county,
+        # General-area code rows fire only when the state's ga table matched;
+        # otherwise "{name} COUNTY GENERAL AREA" falls through to the
+        # validated generic parse below (the old code short-circuited here
+        # with ga_county = NA and never reached `general`)
+        stringr::str_detect(landmark, "GENERAL AREA") & !is.na(ga_county) ~ ga_county,
         !is.na(other_county)                                             ~ other_county,
+        # "X CO" county abbreviations ("WALKER CO", "BECKHAM CO")
+        !is.na(co_county)                                                ~ co_county,
         !is.na(general)                                                  ~ general,
         TRUE                                                             ~ NA_character_
       ),
@@ -650,8 +752,9 @@ build_nationwide_locations <- function(arrests, place_county = NULL) {
         !is.na(pattern_state)                                            ~ pattern_state,
         !is.na(airport_state)                                            ~ airport_state,
         stringr::str_detect(landmark, "AIRPORT")                         ~ dplyr::coalesce(suffix, abbr),
-        stringr::str_detect(landmark, "GENERAL AREA")                    ~ ga_state,
+        stringr::str_detect(landmark, "GENERAL AREA") & !is.na(ga_county) ~ ga_state,
         !is.na(other_state)                                              ~ other_state,
+        !is.na(co_county)                                                ~ co_state,
         !is.na(general)                                                  ~ general_state,
         # State marker with no county ("WV DOC- Salem Correctional Center"):
         # still record the marker state so out-of-state rows are labeled
@@ -1076,32 +1179,125 @@ clean_arrest_city <- function(city, state) {
 
 # ── Location assignment (city-first, landmark fallback) ──────────────────────
 
-#' Manually reviewed landmark -> county assignments from landmark audits
-#' (data/il-landmark-audit/, GitHub issues). Checked before the pattern-table
-#' engine in .parse_county_landmark(). County spelling is normalized via
-#' .state_county_names(), so "St. Clair", "St Clair" and "DuPage" all work.
-.landmark_county_overrides <- function() {
-  tibble::tribble(
+#' RA-verified landmark matches, read from data/state-arrests/landmark-audit.csv.
+#'
+#' Research assistants verify proposed landmark -> county matches (see issue 16)
+#' and record them in the audit CSV; this loader is the only way audit entries
+#' enter the pipeline. Only rows with `status == "verified"` are used.
+#'
+#' CSV columns:
+#' - `state` — report state, uppercase full name ("TENNESSEE").
+#' - `landmark` — for `record_type == "exact"`: the full landmark string exactly
+#'   as it appears in the data (matched case-insensitively); for
+#'   `"ga_code"`: the office code alone ("MTG"); ignored for `"pattern"`.
+#' - `record_type` — "exact" (checked before the engine, via the override
+#'   path), "ga_code" (appended to the state's general-area code table), or
+#'   "pattern" (regex appended to the state's pattern table; regex goes in
+#'   `pattern`).
+#' - `county` — county name, Census spelling preferred ("St. Louis");
+#'   normalized for the override path.
+#' - `pattern` — regex for `record_type == "pattern"` rows.
+#' - `attributed_state` — 2-letter abbr of the state the county belongs to;
+#'   blank = the report state.
+#' - `status` — "proposed" | "verified" | "rejected". Only "verified" rows
+#'   load.
+#' - `verified_by`, `verified_date`, `notes` — provenance.
+#'
+#' @param path CSV path (a `format = "file"` target so edits rebuild downstream
+#'   targets).
+#' @param status Which status to load; "verified" in the pipeline.
+#' @return Tibble of verified entries, or NULL when the file is missing or has
+#'   no rows of the requested status.
+landmark_audit_path <- function() {
+  here::here("data", "state-arrests", "landmark-audit.csv")
+}
+
+read_landmark_audit <- function(path = landmark_audit_path(), status = "verified") {
+  if (!file.exists(path)) return(NULL)
+  raw <- readr::read_csv(path, show_col_types = FALSE,
+                         col_types = readr::cols(.default = readr::col_character()))
+  out <- raw |>
+    dplyr::filter(status == .env$status,
+                  !is.na(landmark), !is.na(county)) |>
+    dplyr::mutate(
+      # Uppercase full state name -> 2-letter abbr; blank means report state
+      attributed_state = dplyr::if_else(
+        is.na(attributed_state) | attributed_state == "",
+        .state_name_to_abbr(state),
+        stringr::str_to_upper(attributed_state)
+      )
+    )
+  if (nrow(out) == 0) NULL else out
+}
+
+#' Uppercase full state name -> 2-letter abbreviation (the inverse of
+#' .abbr_to_state_name()). Unknown names (territories) return NA.
+.state_name_to_abbr <- function(name) {
+  dplyr::if_else(
+    stringr::str_to_upper(name) == "DISTRICT OF COLUMBIA", "DC",
+    datasets::state.abb[match(stringr::str_to_upper(name),
+                              stringr::str_to_upper(datasets::state.name))]
+  )
+}
+
+#' Manually reviewed landmark -> county assignments: hand-maintained entries
+#' below, plus RA-verified "exact" rows from the audit CSV (read_landmark_audit()).
+#' Checked before the pattern-table engine in .county_from_landmark(). County
+#' spelling is normalized via .state_county_names(), so "St. Clair", "St
+#' Clair" and "DuPage" all work.
+.landmark_county_overrides <- function(audit = NULL) {
+  base <- tibble::tribble(
     ~state, ~landmark, ~county
-  ) |>
+  )
+  if (!is.null(audit) && nrow(audit) > 0) {
+    base <- dplyr::bind_rows(
+      base,
+      audit |>
+        dplyr::filter(record_type == "exact") |>
+        dplyr::transmute(state, landmark, county)
+    )
+  }
+  base |>
     dplyr::mutate(dplyr::across(dplyr::everything(), as.character))
 }
 
-#' County from landmark for a report state: manual audit overrides first, then
-#' the full pattern-table engine (.parse_landmark_county_state), keeping only
-#' in-state attributions (out-of-state offices are documented in the lookup
-#' tables but never plotted).
-.county_from_landmark <- function(landmark, state) {
-  ov <- .landmark_county_overrides()
+#' County AND attributed state from apprehension_site_landmark: manual audit
+#' overrides first, then the full pattern-table engine
+#' (.parse_landmark_county_state). Out-of-state landmark hits are NOT
+#' discarded: they keep their resolved county and state (e.g.
+#' "A - WI DOC - BROWN COUNTY JAIL" on an Illinois report row -> Brown, WI).
+#' The report state supplies suffix-less generic parses and manual overrides.
+#' Consumers decide what to plot by comparing `state` with the report state.
+#' Returns a tibble with `county` (Census spelling) and `state` (2-letter abbr),
+#' one row per landmark.
+.county_from_landmark <- function(landmark, state, audit = NULL) {
+  ov <- .landmark_county_overrides(audit)
   ov <- ov[ov$state == state, ]
   manual <- ov$county[match(stringr::str_to_upper(landmark),
                             stringr::str_to_upper(ov$landmark))]
   valid <- .state_county_names(state)
   manual <- unname(valid[.county_key(manual)])
-  geo <- .parse_landmark_county_state(landmark, state)
-  engine <- dplyr::if_else(geo$state == toupper(STATE_ABBREVS[state]),
-                           geo$county, NA_character_)
-  dplyr::coalesce(manual, engine)
+  geo <- .parse_landmark_county_state(landmark, state, audit = audit)
+  report_abbr <- toupper(unname(STATE_ABBREVS[state]))
+  tibble::tibble(
+    county = dplyr::coalesce(manual, geo$county),
+    state  = dplyr::if_else(!is.na(manual), report_abbr, geo$state)
+  )
+}
+
+#' Uppercase full state name ("TEXAS", "DISTRICT OF COLUMBIA") from a 2-letter
+#' abbreviation. Unknown abbreviations (territories: PR, GU, ...) pass through
+#' uppercased; NA stays NA. Matches the apprehension_state vocabulary.
+.abbr_to_state_name <- function(abbr) {
+  dplyr::if_else(
+    abbr == "DC", "DISTRICT OF COLUMBIA",
+    dplyr::if_else(
+      abbr %in% datasets::state.abb,
+      stringr::str_to_upper(
+        datasets::state.name[match(abbr, datasets::state.abb)]),
+      stringr::str_to_upper(abbr)
+    )
+  )
 }
 
 #' Broad landmark category (from the state-data-cleaning branch).
@@ -1122,6 +1318,43 @@ classify_landmark_type <- function(landmark) {
     stringr::str_detect(lm, "COUNTY|JAIL|SHERIFF|DETENTION")      ~ "County jail / sheriff",
     TRUE                                                          ~ "Other"
   )
+}
+
+#' County named by a trailing/inline "X CO" abbreviation ("TEXAS DEPT OF
+#' CRIMINAL JUSTICE, WALKER CO", "W DIST OK ... BECKHAM CO NON CRIM"), or NA.
+#' The token before the word-boundary "CO" is tried as a two-word then
+#' one-word county name (with .county_typos/.county_abbrevs expansion) against
+#' the report state, then against an explicit comma-suffix state if the
+#' landmark carries one ("HUNTSVILLE POLICE DEPT, WALKER CO, TX" on any
+#' report). The comma-suffix form ", CO" itself never matches (the regex
+#' requires the county name directly before "CO"), so a genuine Colorado
+#' suffix is never swallowed. When this returns a county, a bare trailing
+#' "CO" must NOT be read as a Colorado state marker.
+#'
+#' @return The validated county name (maps spelling), or NA. Vectorized: one
+#'   value per landmark.
+.co_county_token <- function(landmark, report_abbr, comma_suffix = NULL) {
+  if (length(landmark) == 0) return(character(0))
+  u <- stringr::str_to_upper(landmark)
+  # "CO STATE" / "CO DOC" are state-corrections markers, never counties
+  m2 <- stringr::str_match(u, "\\b([A-Z]{2,}) ([A-Z]{2,}) CO\\b(?!( STATE| DOC))")
+  m1 <- stringr::str_match(u, "\\b([A-Z]{2,}) CO\\b(?!( STATE| DOC))")
+  two <- dplyr::if_else(is.na(m2[, 2]) | is.na(m2[, 3]), NA_character_,
+                        paste(m2[, 2], m2[, 3]))
+  cand <- purrr::pmap(list(two, m1[, 2]), function(a, b)
+    unique(na.omit(c(a, b))))
+  if (is.null(comma_suffix)) comma_suffix <- rep(NA_character_, length(landmark))
+  purrr::pmap_chr(list(cand, report_abbr, comma_suffix), function(cc, rabbr, csuff) {
+    states <- unique(c(rabbr, csuff))
+    states <- states[!is.na(states)]
+    for (cd in cc) {
+      for (st in states) {
+        hit <- .validate_county(stringr::str_to_title(cd), st)
+        if (!is.na(hit)) return(hit)
+      }
+    }
+    NA_character_
+  })
 }
 
 #' State named by a landmark's state markers — the shared implementation used
@@ -1153,12 +1386,22 @@ classify_landmark_type <- function(landmark) {
 
 #' State named by a landmark's state markers ("..., XX", "XX STATE", "XX DOC",
 #' "..., MISSOURI"), as a 2-letter abbr, or NA if none. Used to label arrests
-#' that document an out-of-state location.
-.landmark_suffix_state <- function(landmark) {
+#' that document an out-of-state location. When `report_state` is supplied, a
+#' bare trailing "CO" that is really a county abbreviation of the report state
+#' ("WALKER CO" on a Texas report) is suppressed — it is a county, not a
+#' Colorado marker.
+.landmark_suffix_state <- function(landmark, report_state = NULL) {
   u <- stringr::str_to_upper(landmark)
-  dplyr::coalesce(
-    stringr::str_remove(stringr::str_extract(u, ", [A-Z]{2}$"), ", "),
-    .landmark_state_markers(u)$state)
+  comma <- stringr::str_remove(stringr::str_extract(u, ", [A-Z]{2}$"), ", ")
+  markers <- .landmark_state_markers(u)$state
+  out <- dplyr::coalesce(comma, markers)
+  if (!is.null(report_state)) {
+    abbr <- toupper(unname(STATE_ABBREVS[report_state]))
+    suppress_co <- !is.na(.co_county_token(landmark, abbr))
+    out <- dplyr::if_else(suppress_co & is.na(comma) & !is.na(markers) & markers == "CO",
+                          NA_character_, out)
+  }
+  out
 }
 
 #' Add location columns to arrests for one state. Used by
@@ -1173,24 +1416,36 @@ classify_landmark_type <- function(landmark) {
 #' @param arrests      Arrests for `state` (standardized column names).
 #' @param state        Uppercase state name, e.g. "ILLINOIS".
 #' @param place_county Place-county crosswalk (place_county target) or NULL.
+#' @param audit        Verified landmark-audit entries (read_landmark_audit())
+#'   or NULL.
 #' @return `arrests` with landmark_type, city, place, place_geoid,
-#'   county_city, multi_county, city_counties, county_landmark, county,
-#'   county_source, unassigned_reason.
-assign_arrest_location <- function(arrests, state, place_county = NULL) {
+#'   county_city, multi_county, city_counties, county_landmark,
+#'   county_landmark_state, county, county_state, county_source,
+#'   unassigned_reason. `county` is filled whenever either layer resolves it,
+#'   including landmark attributions in another state; `county_state` names
+#'   the state the county belongs to (the report state for city matches and
+#'   suffix-less landmark parses). Consumers filter `county_state == state`
+#'   for per-state maps; the nationwide map keeps every row.
+assign_arrest_location <- function(arrests, state, place_county = NULL,
+                                   audit = NULL) {
   has_city <- "apprehension_city_common_case" %in% names(arrests) &&
     !is.null(place_county) && state %in% place_county$state
 
+  lm_geo <- .county_from_landmark(arrests$apprehension_site_landmark, state,
+                                  audit = audit)
   out <- arrests |>
     dplyr::mutate(
       landmark_type   = classify_landmark_type(apprehension_site_landmark),
       city            = if (has_city) clean_arrest_city(apprehension_city_common_case, state)
                         else NA_character_,
-      county_landmark = .county_from_landmark(apprehension_site_landmark, state)
+      county_landmark = lm_geo$county,
+      county_landmark_state = .abbr_to_state_name(lm_geo$state)
     )
 
   if (has_city) {
     out <- dplyr::bind_cols(out, .county_from_city(out$city, state, place_county))
-    # Census names ("DuPage", "McHenry") -> maps names ("Du Page", "Mchenry")
+    # Normalize spellings against the state's Census county list
+    # ("st clair" -> "St. Clair")
     valid <- .state_county_names(state)
     out$county_city <- unname(valid[.county_key(out$county_city)])
   } else {
@@ -1200,10 +1455,15 @@ assign_arrest_location <- function(arrests, state, place_county = NULL) {
   }
 
   lm_upper <- stringr::str_to_upper(out$apprehension_site_landmark)
-  suffix_state <- .landmark_suffix_state(out$apprehension_site_landmark)
+  suffix_state <- .landmark_suffix_state(out$apprehension_site_landmark, state)
   out |>
     dplyr::mutate(
       county = dplyr::coalesce(county_city, county_landmark),
+      county_state = dplyr::case_when(
+        !is.na(county_city)     ~ state,
+        !is.na(county_landmark) ~ county_landmark_state,
+        TRUE                    ~ NA_character_
+      ),
       county_source = dplyr::case_when(
         !is.na(county_city)     ~ "City",
         !is.na(county_landmark) ~ "Landmark",
@@ -1216,7 +1476,7 @@ assign_arrest_location <- function(arrests, state, place_county = NULL) {
         is.na(lm_upper)                                      ~ "Missing landmark",
         stringr::str_detect(lm_upper, "GENERAL (AREA|NON-SPECIFIC)") ~ "Field office area, non-specific",
         stringr::str_detect(lm_upper, "FUGITIVE OP")         ~ "Fugitive operations, no county",
-        !is.na(suffix_state) & suffix_state != state         ~ "Located in another state",
+        !is.na(suffix_state) & suffix_state != state         ~ "Out-of-state landmark, county unresolved",
         TRUE                                                 ~ "Other / unresolved"
       )
     )
@@ -1384,7 +1644,8 @@ build_flow_arrows <- function(stays_df, geo_lkp, min_n = 5) {
 build_state_arrests_data <- function(arrests, stays, detloc_lookup, geo_all,
                                       state        = "MINNESOTA",
                                       cutoff       = as.Date("2025-01-20"),
-                                      place_county = NULL) {
+                                      place_county = NULL,
+                                      audit        = NULL) {
   cutoff <- as.Date(cutoff)
 
   state_arr <- arrests |>
@@ -1395,7 +1656,8 @@ build_state_arrests_data <- function(arrests, stays, detloc_lookup, geo_all,
     )
 
   # City-first county attribution (falls back to the landmark engine)
-  locations <- assign_arrest_location(state_arr, state, place_county)
+  locations <- assign_arrest_location(state_arr, state, place_county,
+                                      audit = audit)
 
   state_ids <- state_arr |>
     dplyr::filter(!is.na(unique_identifier)) |>
@@ -1409,12 +1671,15 @@ build_state_arrests_data <- function(arrests, stays, detloc_lookup, geo_all,
   geo_lkp <- .build_geo_lookup_sa(detloc_lookup, geo_all)
 
   # County counts for choropleth (city-attributed where possible), with the
-  # branch's at-large / multi-county-city detail columns
+  # branch's at-large / multi-county-city detail columns. Out-of-frame
+  # attributions (county in another state, via landmark state markers) are
+  # excluded so per-state coverage denominators are unchanged; they are
+  # reported separately as `out_of_frame`.
   county_counts <- locations |>
+    dplyr::filter(county_state == state, !is.na(county)) |>
     dplyr::count(county,
                  at_large = (.data[[.arrest_type_col(locations)]] == "At-Large Arrest"),
                  from_multi_county_city = multi_county) |>
-    dplyr::filter(!is.na(county)) |>
     dplyr::arrange(dplyr::desc(n))
 
   # Facility transfer flow arrows
@@ -1489,6 +1754,9 @@ build_state_arrests_data <- function(arrests, stays, detloc_lookup, geo_all,
       dplyr::count(apprehension_criminality, sort = TRUE) |>
       dplyr::mutate(pct = round(n / sum(n) * 100, 1)),
     county_counts      = county_counts,
+    out_of_frame       = locations |>
+      dplyr::filter(!is.na(county_state), county_state != state) |>
+      dplyr::count(county_state, sort = TRUE),
     city_counts        = locations |>
       dplyr::filter(!is.na(city)) |>
       dplyr::count(city, sort = TRUE) |>

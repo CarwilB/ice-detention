@@ -301,7 +301,12 @@ county_pct_all <- round(sum(county_counts_all$n) / nrow(arr_all) * 100, 1)
 us_counties_sf <- sf::st_as_sf(
   maps::map("county", fill = TRUE, plot = FALSE)
 ) |>
-  rename(map_id = ID)
+  rename(map_id = ID) |>
+  # Normalize the county part of polygon IDs to match pipeline map_id:
+  # maps spells "De Witt" where the Census county list behind validation
+  # says "DeWitt". The state part (spaces kept) already matches.
+  mutate(map_id = paste0(str_extract(map_id, "^[^,]+"), ",",
+                         str_remove_all(str_remove(map_id, "^[^,]+,"), "[. ]")))
 
 make_county_sf <- function(counts) {
   us_counties_sf |>

@@ -4,7 +4,7 @@ title: "Pipeline Targets Catalog"
 
 # Pipeline Targets Catalog
 
-*Auto-generated on 2026-11-07. Descriptions are hand-maintained in `R/catalog.R`.*
+*Auto-generated on 2026-11-18. Descriptions are hand-maintained in `R/catalog.R`.*
 
 All targets can be loaded with `tar_load(target_name)` or `tar_read(target_name)`.
 Run the pipeline with `tar_make()`. Visualize dependencies with `tar_visnetwork()`.
@@ -138,7 +138,9 @@ Run the pipeline with `tar_make()`. Visualize dependencies with `tar_visnetwork(
 | `stints_file` | char (1) | Tracks the DDP detention stints parquet (`data/ddp/detention-stints-latest_20260806.parquet`) for changes. |
 | `stints_raw` | 3202317 × 59 | Raw DDP detention stints (20260806 release: ~3.2M rows; one row per facility stint, book-ins Oct 2021--Aug 2026). Source for the recreated daily-population file, throughput report, and facility profiles. |
 | `mn_arrests_data` | list (17) | Pre-computed tables for `mn-arrests.qmd`: Minnesota post-2025-01-20 arrest itineraries, county choropleth, facility map, Sankey, removal grid, and minors sub-analysis. |
-| `nationwide_arrests_located` | 896393 × 53 | Nationwide arrests with states filled (`fill_arrest_states_aor()` + the curated `nationwide_landmark_states()` table) and county attribution from `assign_arrest_location()` run per state; counties re-validated against the attributed state and `map_id` normalized to maps county IDs. Feeds `nationwide-arrests.qmd`. |
+| `nationwide_arrests_located` | 896393 × 55 | Nationwide arrests with states filled (`fill_arrest_states_aor()` + the curated `nationwide_landmark_states()` table) and county attribution from `assign_arrest_location()` run per state with the nationwide place-county crosswalk (all states + DC + PR since 2026-11-07); counties carry their attributed state in `county_state` (2026-11-18 refactor), are re-validated against it, and `map_id` is keyed on it. Feeds `nationwide-arrests.qmd`. |
+| `landmark_audit_file` |  | Tracks `data/state-arrests/landmark-audit.csv` — the RA-verified landmark→county audit ledger (128 seeded proposals 2026-11-18, issue 16). Edit the CSV to add `status = "verified"` rows; downstream targets rebuild automatically. |
+| `landmark_audit` |  | Verified entries from the landmark-audit CSV (`read_landmark_audit()`): `exact` rows join the override path, `ga_code` rows append to the state's general-area code table, `pattern` rows append to the state's pattern table. `proposed`/`rejected` rows are ignored. |
 | `nationwide_state_outcomes` | 63 × 8 | Per-state removal outcomes (removed/released/pending shares) for post-2025-01-20 arrests, single pass over stays, for `nationwide-arrests.qmd`. |
 | `nationwide_removal_grid` | list (4) | Nationality x departure-country removal grid for post-2025-01-20 stays (cells with >= 500 removals), for `nationwide-arrests.qmd`. |
 | `nationwide_arrests_report` | char (4) | Rendered `nationwide-arrests.qmd`: state and county choropleths of post-2025-01-20 ICE arrests. |

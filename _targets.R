@@ -1254,9 +1254,20 @@ list(
   # summaries so nationwide-arrests.qmd renders in seconds (see
   # nationwide_arrests_report below).
   tar_target(
+    landmark_audit_file,
+    "data/state-arrests/landmark-audit.csv",
+    format = "file",
+    description = "RA-verified landmark->county audit CSV (data/state-arrests/landmark-audit.csv); edit it to add verified matches — tracked by content hash so downstream targets rebuild"
+  ),
+  tar_target(
+    landmark_audit,
+    read_landmark_audit(landmark_audit_file),
+    description = "Verified entries from the landmark-audit CSV, merged into the landmark engine's per-state tables and override path by assign_arrest_location()"
+  ),
+  tar_target(
     nationwide_arrests_located,
-    build_nationwide_locations(arrests_raw, place_county),
-    description = "Nationwide arrests with states filled (AOR/landmark-suffix rules + curated nationwide_landmark_states() table) and county attribution from assign_arrest_location() run per state; counties re-validated against the attributed state and map_id normalized to maps county IDs"
+    build_nationwide_locations(arrests_raw, place_county, landmark_audit),
+    description = "Nationwide arrests with states filled (AOR/landmark-suffix rules + curated nationwide_landmark_states() table) and county attribution from assign_arrest_location() run per state; counties re-validated against the attributed state (county_state) and map_id normalized to maps county IDs"
   ),
   tar_target(
     nationwide_state_outcomes,
