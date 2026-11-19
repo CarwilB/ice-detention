@@ -252,20 +252,26 @@ build_wiki_revision_diff <- function(wikitext_old, wikitext_new,
 
   added_keys <- setdiff(new_tbl$key, old_tbl$key)
   removed_keys <- setdiff(old_tbl$key, new_tbl$key)
-  added_rows <- tibble::tibble(
-    change_type = "added_row",
-    facility    = clean_wiki_cell(new_tbl$facility[match(added_keys, new_tbl$key)]),
-    column      = "row",
-    old_value   = NA_character_,
-    new_value   = new_tbl$facility[match(added_keys, new_tbl$key)]
-  )
-  removed_rows <- tibble::tibble(
-    change_type = "removed_row",
-    facility    = clean_wiki_cell(old_tbl$facility[match(removed_keys, old_tbl$key)]),
-    column      = "row",
-    old_value   = old_tbl$facility[match(removed_keys, old_tbl$key)],
-    new_value   = NA_character_
-  )
+  # Row-change tibble builder. Returns a typed zero-row tibble when `keys` is
+  # empty so an ordinary comparison with no row churn always binds cleanly.
+  .row_changes <- function(type, keys, tbl, old_new) {
+    if (!length(keys)) {
+      return(tibble::tibble(
+        change_type = character(0), facility = character(0),
+        column = character(0), old_value = character(0),
+        new_value = character(0)))
+    }
+    vals <- tbl$facility[match(keys, tbl$key)]
+    tibble::tibble(
+      change_type = type,
+      facility    = clean_wiki_cell(vals),
+      column      = "row",
+      old_value   = if (old_new == "old") vals else NA_character_,
+      new_value   = if (old_new == "new") vals else NA_character_
+    )
+  }
+  added_rows   <- .row_changes("added_row", added_keys, new_tbl, "new")
+  removed_rows <- .row_changes("removed_row", removed_keys, old_tbl, "old")
 
   at_risk <- NULL
   if (!is.null(current_facilities)) {
@@ -279,13 +285,7 @@ build_wiki_revision_diff <- function(wikitext_old, wikitext_new,
            pmin(nchar(cur_keys), nchar(k)) >= 8 &
            (startsWith(cur_keys, k) | startsWith(k, cur_keys)))
     })
-    at_risk <- tibble::tibble(
-      change_type = "article_row_not_in_data",
-      facility    = clean_wiki_cell(new_tbl$facility[match(risk, new_tbl$key)]),
-      column      = "row",
-      old_value   = NA_character_,
-      new_value   = new_tbl$facility[match(risk, new_tbl$key)]
-    )
+    at_risk <- .row_changes("article_row_not_in_data", risk, new_tbl, "new")
   }
 
   dplyr::bind_rows(cell_changes, added_rows, removed_rows, at_risk) |>

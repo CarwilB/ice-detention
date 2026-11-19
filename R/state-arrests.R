@@ -25,6 +25,13 @@ STATE_ABBREVS <- c(
   "WISCONSIN" = "wi", "WYOMING" = "wy"
 )
 
+# datasets::state.abb / state.name exclude DC (and territories). Amplified
+# fixed-value vectors with District of Columbia appended; every
+# name<->abbreviation conversion and county validation in this file uses
+# these, so DC counties survive validation instead of being erased.
+.FULL_STATE_NAMES <- c(datasets::state.name, "District of Columbia")
+.FULL_STATE_ABBRS <- c(datasets::state.abb, "DC")
+
 # ── MN general-area apprehension codes ────────────────────────────────────────
 # Three-letter arresting-office codes that appear in apprehension_site_landmark
 # as "XXX GENERAL AREA, NON-SPECIFIC". Locations inferred from each code's modal
@@ -373,7 +380,7 @@ fill_arrest_states_aor <- function(arrests, aor_share = 0.99, lm_share = 0.95,
                                lm_map$apprehension_site_landmark)]
   suff    <- .landmark_suffix_state(arrests$apprehension_site_landmark[need])
   suff_st <- stringr::str_to_upper(
-    datasets::state.name[match(suff, datasets::state.abb)])
+    .FULL_STATE_NAMES[match(suff, .FULL_STATE_ABBRS)])
 
   new_state <- dplyr::coalesce(aor_st, lm_st, suff_st)
   src <- dplyr::case_when(
@@ -507,11 +514,10 @@ build_nationwide_locations <- function(arrests, place_county = NULL,
     dplyr::mutate(
       # Counties may sit in another state than the report (landmark state
       # markers); validate against the attributed state and key map_id on it.
-      county_abbr = dplyr::case_when(
-        is.na(county_state) ~ NA_character_,
-        county_state == "DISTRICT OF COLUMBIA" ~ "DC",
-        TRUE ~ datasets::state.abb[match(county_state, datasets::state.name)]
-      ),
+      # county_state is an uppercase full state name, so match case-insensitively
+      # against the amplified vectors (state.name itself is title case).
+      county_abbr = unname(.FULL_STATE_ABBRS[match(
+        stringr::str_to_upper(county_state), toupper(.FULL_STATE_NAMES))]),
       county = dplyr::if_else(is.na(county_abbr), county,
                               purrr::map2_chr(county, county_abbr, .validate_county)),
       county_state = dplyr::if_else(is.na(county), NA_character_, county_state),
@@ -594,7 +600,7 @@ build_nationwide_locations <- function(arrests, place_county = NULL,
 #' exist only in other states (IA jails leaking into an IL report, "Cap-"
 #' debris, "Galatin") return NA instead of fabricating geography.
 .validate_county <- function(county, state_abbr) {
-  st_name <- datasets::state.name[match(toupper(state_abbr), datasets::state.abb)]
+  st_name <- .FULL_STATE_NAMES[match(toupper(state_abbr), .FULL_STATE_ABBRS)]
   purrr::pmap_chr(list(county, st_name), function(cty, st) {
     if (is.na(cty) || is.na(st)) return(NA_character_)
     valid <- .state_county_names(st)
@@ -1217,8 +1223,13 @@ read_landmark_audit <- function(path = landmark_audit_path(), status = "verified
   raw <- readr::read_csv(path, show_col_types = FALSE,
                          col_types = readr::cols(.default = readr::col_character()))
   out <- raw |>
-    dplyr::filter(status == .env$status,
-                  !is.na(landmark), !is.na(county)) |>
+    dplyr::filter(
+      status == .env$status,
+      !is.na(county),
+      # "pattern" rows carry their regex in `pattern`, not a landmark string
+      dplyr::if_else(record_type %in% "pattern",
+                     !is.na(pattern), !is.na(landmark))
+    ) |>
     dplyr::mutate(
       # Uppercase full state name -> 2-letter abbr; blank means report state
       attributed_state = dplyr::if_else(
@@ -1233,11 +1244,8 @@ read_landmark_audit <- function(path = landmark_audit_path(), status = "verified
 #' Uppercase full state name -> 2-letter abbreviation (the inverse of
 #' .abbr_to_state_name()). Unknown names (territories) return NA.
 .state_name_to_abbr <- function(name) {
-  dplyr::if_else(
-    stringr::str_to_upper(name) == "DISTRICT OF COLUMBIA", "DC",
-    datasets::state.abb[match(stringr::str_to_upper(name),
-                              stringr::str_to_upper(datasets::state.name))]
-  )
+  unname(.FULL_STATE_ABBRS[match(stringr::str_to_upper(name),
+                                 toupper(.FULL_STATE_NAMES))])
 }
 
 #' Manually reviewed landmark -> county assignments: hand-maintained entries
@@ -1290,13 +1298,11 @@ read_landmark_audit <- function(path = landmark_audit_path(), status = "verified
 #' uppercased; NA stays NA. Matches the apprehension_state vocabulary.
 .abbr_to_state_name <- function(abbr) {
   dplyr::if_else(
-    abbr == "DC", "DISTRICT OF COLUMBIA",
-    dplyr::if_else(
-      abbr %in% datasets::state.abb,
-      stringr::str_to_upper(
-        datasets::state.name[match(abbr, datasets::state.abb)]),
-      stringr::str_to_upper(abbr)
-    )
+    abbr %in% .FULL_STATE_ABBRS,
+    stringr::str_to_upper(
+      .FULL_STATE_NAMES[match(abbr, .FULL_STATE_ABBRS)]),
+    # Unknown abbreviations (territories) pass through uppercased; NA stays NA
+    stringr::str_to_upper(abbr)
   )
 }
 
@@ -1368,8 +1374,8 @@ classify_landmark_type <- function(landmark) {
 #' a trailing full state name ("...MADISON COUNTY, MISSOURI"). Returns
 #' 2-letter abbreviations (uppercase) or NA.
 .landmark_state_markers <- function(u) {
-  full_names <- c(datasets::state.name, "District of Columbia")
-  full_abbrs <- c(datasets::state.abb, "DC")
+  full_names <- .FULL_STATE_NAMES
+  full_abbrs <- .FULL_STATE_ABBRS
 
   st <- stringr::str_match(u, "\\b([A-Z]{2}) STATE(?: DOC)?\\b")[, 2]
   doc <- stringr::str_match(u, "\\b([A-Z]{2}) DOC\\b")[, 2]

@@ -264,7 +264,8 @@ zotero_ensure_collection <- function(name, parent_key = FALSE,
 
 # Deduplicate refs against a pre-fetched library (same DOI → ISBN →
 # title+year cascade as check_library_for_refs, but the library is fetched
-# once per harvest run rather than once per article).
+# once per harvest run rather than once per article, and extended in memory
+# as items are posted — see .library_rows_from_refs()).
 .check_refs_against_library <- function(refs, library_items) {
   refs$existing_key  <- NA_character_
   refs$import_action <- "create_new"
@@ -305,6 +306,35 @@ zotero_ensure_collection <- function(name, parent_key = FALSE,
     }
   }
   refs
+}
+
+# Library-shaped rows for items posted during this run, so the in-memory
+# library snapshot stays current: a later article citing a reference posted
+# for an earlier article attaches to the existing item instead of re-posting
+# a duplicate. Mirrors the normalization in .fetch_zotero_items(); only the
+# duplicate-check columns matter, so provenance fields stay NA.
+.library_rows_from_refs <- function(refs, keys) {
+  norm <- function(x) {
+    x <- tolower(dplyr::coalesce(as.character(x), ""))
+    x <- stringi::stri_trans_general(x, "Latin-ASCII")
+    stringr::str_replace_all(x, "[^a-z0-9]", "")
+  }
+  tibble::tibble(
+    key          = as.character(keys),
+    title        = dplyr::coalesce(as.character(refs$title), NA_character_),
+    DOI          = dplyr::coalesce(as.character(refs$DOI), NA_character_),
+    ISBN         = dplyr::coalesce(as.character(refs$ISBN), NA_character_),
+    date         = NA_character_,
+    publisher    = NA_character_,
+    first_author = NA_character_
+  ) |>
+    dplyr::mutate(
+      doi_norm   = norm(DOI),
+      isbn_norm  = norm(ISBN),
+      title_norm = norm(title),
+      year_norm  = dplyr::coalesce(stringr::str_extract(
+        dplyr::coalesce(as.character(refs$year), ""), "\\d{4}"), "")
+    )
 }
 
 
@@ -512,7 +542,8 @@ harvest_wiki_refs_to_zotero <- function(article_map, refs_list = NULL,
         return(tibble::tibble(
           article_title, collection_name, collection_key = NA_character_,
           n_refs = 0L, n_new = 0L, n_existing = 0L,
-          status = if (article_title %in% extraction_errors)
+          # extraction_errors is keyed by article title
+          status = if (article_title %in% names(extraction_errors))
             "extraction_failed" else "no_refs"))
       }
 
@@ -550,8 +581,12 @@ harvest_wiki_refs_to_zotero <- function(article_map, refs_list = NULL,
 
       new_refs <- dplyr::filter(refs, import_action == "create_new")
       if (nrow(new_refs) > 0) {
-        .zotero_post_items(refs_to_zotero_items(new_refs), collection_key,
-                           group_id, api_key)
+        new_keys <- .zotero_post_items(refs_to_zotero_items(new_refs),
+                                       collection_key, group_id, api_key)
+        # Register the posted items in the in-memory library snapshot so later
+        # articles citing the same reference attach to them, not re-post.
+        library_items <<- dplyr::bind_rows(
+          library_items, .library_rows_from_refs(new_refs, new_keys))
       }
 
       existing_keys <- refs |>
