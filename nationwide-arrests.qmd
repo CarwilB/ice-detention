@@ -17,11 +17,7 @@ execute:
 ---
 
 Notes for next improvements: 
-1. The county-level data excludes a lot of towns, Louisiana's parishes, 
-and many metropolitan areas that don't follow the "NAME COUNTY" pattern.
-(We should examine the share of arrests in each state that make 
-each of the patterns.)
-2. We could create an interactive line graph with all of the state arrest
+1. We could create an interactive line graph with all of the state arrest
 rates.
 
 ```{r setup}
