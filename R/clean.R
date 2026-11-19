@@ -137,8 +137,9 @@ clean_addresses <- function(x) {
 
 # ── Address patches ───────────────────────────────────────────────────────────
 # Hand-maintained corrections for facility addresses that are missing, wrong,
-# or contain non-address text in the ICE spreadsheets. Matched by facility_name
-# via rows_update() in clean_facilities_data().
+# or contain non-address text in the ICE spreadsheets (annual stats and DMCP
+# listings). Matched by facility_name via rows_update() in
+# clean_facilities_data() and clean_dmcp_data().
 
 address_patches <- function() {
   dplyr::tribble(
@@ -149,7 +150,21 @@ address_patches <- function() {
     "Lincoln County Jail",          "302 N Jeffers",           "North Platte",    "NE",            "69101",
     "Otero County Detention",       "1958 Dr M.L.K. Jr. Dr",  "Alamogordo",      "NM",            "88310",
     "Winn Correctional Center",     "180 Cca Blvd",            "Winnfield",       "LA",            "71483",
-    "East Hidalgo Detention Center", "1300 TX-107",             "La Villa",        "TX",            "78562"
+    "East Hidalgo Detention Center", "1300 TX-107",             "La Villa",        "TX",            "78562",
+    # DMCP 2015 listing fuses the building/unit into the street number
+    # ("1675-3A YORK HWY"); the jail's address is 1675 York Hwy (confirmed
+    # against Google Maps 2026-10).
+    "York County Detention Center", "1675 York Hwy",           "York",            "SC",            "29745",
+    # ICE spreadsheets truncate "Juvenile Center Rd" to "Juvenile Rd"
+    # (confirmed against Google Maps 2026-10).
+    "New Hanover County Jail",      "3950 Juvenile Center Rd", "Castle Hayne",    "NC",            "28429",
+    # ICE spreadsheets put the salutation "Jail Administrator" in the address
+    # field; the jail is at 900 County Ln (Marshall Project + Google Maps,
+    # confirmed 2026-10).
+    "Burnet County Jail",           "900 County Ln",           "Burnet",          "TX",            "78611",
+    # ICE spreadsheets carry only the BOP mailing P.O. Box; the physical
+    # address is 2400 Robert F Miller Dr (confirmed 2026-10).
+    "Lewisburg US Penitentiary",    "2400 Robert F Miller Dr", "Lewisburg",       "PA",            "17837"
   )
 }
 
@@ -384,6 +399,8 @@ clean_dmcp_data <- function(df) {
       dplyr::across(where(is.character), stringr::str_squish)
     ) |>
     dplyr::filter(!is.na(facility_city), !is.na(facility_state)) |>
+    # Address patches — see address_patches() in clean_facilities_data().
+    dplyr::rows_update(address_patches(), by = "facility_name", unmatched = "ignore") |>
     # Enforce canonical column order (any_of() silently drops absent cols,
     # so this works for both the 38-column FY15 and 40-column FY17 sources).
     dplyr::select(dplyr::any_of(.dmcp_col_order))

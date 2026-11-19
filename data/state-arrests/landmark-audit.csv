@@ -1,0 +1,134 @@
+state,landmark,record_type,county,pattern,attributed_state,notes,status,verified_by,verified_date
+TEXAS,"MTG GENERAL AREA, NON-SPECIFIC",ga_code,Montgomery,NA,NA,Conroe sub-office; city evidence: Conroe 20% of TX unmapped city rows,proposed,NA,NA
+TEXAS,DALLAS COUNTY GENERAL AREA,exact,Dallas,NA,NA,stopgap exact row; prefer engine fix #1 ({NAME} COUNTY GENERAL AREA),proposed,NA,NA
+TEXAS,"LRD GENERAL AREA, NON-SPECIFIC",ga_code,Webb,NA,NA,Laredo office; city evidence: Laredo 12.7%,proposed,NA,NA
+TEXAS,"DLR GENERAL AREA, NON-SPECIFIC",ga_code,Val Verde,NA,NA,Del Rio office; city evidence: Del Rio 4.6%,proposed,NA,NA
+TEXAS,DUTY WINDOW 126 NORTHPOINT,exact,Harris,NA,NA,"Houston FO, 126 Northpoint Dr (ero-field-offices-canonical.csv); Houston 11.2%",proposed,NA,NA
+TEXAS,WALKINS AT SAN ANTONIO,exact,Bexar,NA,NA,San Antonio FO; San Antonio 5.8%,proposed,NA,NA
+TEXAS,"TEXAS DEPT OF CRIMINAL JUSTICE, WALKER CO",exact,Walker,NA,NA,county named in landmark,proposed,NA,NA
+TEXAS,Coastal Bend Detention Center,exact,Nueces,NA,NA,"Robstown, Nueces County; Robstown 2.5%",proposed,NA,NA
+TEXAS,"HDF GENERAL AREA, NON-SPECIFIC",ga_code,NA,NA,NA,RESEARCH: which office is HDF?,proposed,NA,NA
+TEXAS,"Eden Detention Center-Eden, Texas",exact,NA,NA,NA,VERIFY: Eden is in Concho County?,proposed,NA,NA
+TEXAS,Big Spring BOP,exact,Howard,NA,NA,"Big Spring FCI/BOP, Howard County",proposed,NA,NA
+TEXAS,"SEGOVIA STATE JAIL- PRE-RELEASE, TX",exact,NA,NA,NA,RESEARCH: locate this facility,proposed,NA,NA
+CALIFORNIA,"LOS ANGELES COUNTY GENERAL AREA, NON-SPECIFIC",exact,Los Angeles,NA,NA,stopgap exact row; prefer engine fix #1,proposed,NA,NA
+CALIFORNIA,"SBD GENERAL AREA, NON-SPECIFIC",ga_code,San Bernardino,NA,NA,city evidence: San Bernardino 4.2%,proposed,NA,NA
+CALIFORNIA,"San Diego, CA",exact,San Diego,NA,NA,", CA suffix already detected; city evidence: San Diego 24%",proposed,NA,NA
+CALIFORNIA,"SAA GENERAL AREA, NON-SPECIFIC",ga_code,Orange,NA,NA,Santa Ana office; Santa Ana 4.7%,proposed,NA,NA
+CALIFORNIA,"FRE GENERAL AREA, NON-SPECIFIC",ga_code,Fresno,NA,NA,Fresno office,proposed,NA,NA
+CALIFORNIA,"FUG OPS - LOS ANGELES, CA STATE",exact,Los Angeles,NA,NA,fug-ops convention: city-named -> office county,proposed,NA,NA
+CALIFORNIA,"SFR GENERAL AREA, NON-SPECIFIC",ga_code,San Francisco,NA,NA,SF FO (SFRHOLD),proposed,NA,NA
+CALIFORNIA,"IMP GENERAL AREA, NON-SPECIFIC",ga_code,Imperial,NA,NA,El Centro sub-office; El Centro 4.4%,proposed,NA,NA
+CALIFORNIA,"VEN GENERAL AREA, NON-SPECIFIC",ga_code,Ventura,NA,NA,Ventura office (LA FO AOR),proposed,NA,NA
+CALIFORNIA,Federal Prison Lompoc FCI II,exact,Santa Barbara,NA,NA,Lompoc FCI; Lompoc 5.9%,proposed,NA,NA
+CALIFORNIA,"BKI GENERAL AREA, NON-SPECIFIC",ga_code,Kern,NA,NA,Bakersfield sub-office,proposed,NA,NA
+CALIFORNIA,"DVA GENERAL AREA, NON-SPECIFIC",ga_code,NA,NA,NA,RESEARCH: which office is DVA?,proposed,NA,NA
+CALIFORNIA,"LOM GENERAL AREA, NON-SPECIFIC",ga_code,Santa Barbara,NA,NA,Lompoc office,proposed,NA,NA
+NEW YORK,"NDD - 26 FEDERAL PLAZA NY, NY",exact,New York,NA,NA,NYC FO at 26 Federal Plaza (Manhattan); city evidence ~100%,proposed,NA,NA
+NEW YORK,"CIP GENERAL AREA, NON-SPECIFIC",ga_code,Suffolk,NA,NA,Central Islip sub-office; Central Islip ~99%,proposed,NA,NA
+NEW YORK,"NBG GENERAL AREA, NON-SPECIFIC",ga_code,Rockland,NA,NA,Nanuet/Spring Valley sub-office; Spring Valley,proposed,NA,NA
+NEW YORK,CHAMPLAIN POE,exact,Clinton,NA,NA,Champlain port of entry,proposed,NA,NA
+NEW YORK,WENDE CORRECTIONAL FACILITY,exact,Erie,NA,NA,"Alden, Erie County; Alden 88%",proposed,NA,NA
+NEW YORK,FEDERAL CORRECTIONAL INSTITUTE RAY BROOK,exact,Franklin,NA,NA,Ray Brook,proposed,NA,NA
+NEW YORK,CAP - BOP BROOKLYN NY STATE,exact,Kings,NA,NA,suffix NY STATE detected,proposed,NA,NA
+NEW YORK,"HAR GENERAL AREA, NON-SPECIFIC",ga_code,NA,NA,NA,"RESEARCH: which office is HAR? (city evidence: Jamaica, Queens?)",proposed,NA,NA
+NEW YORK,CAP - OTISVILLE FEDERAL CORRECTIONAL FACILITY NY STATE,exact,Orange,NA,NA,Otisville FCI,proposed,NA,NA
+NEW YORK,"CHM GENERAL AREA, NON-SPECIFIC",ga_code,Clinton,NA,NA,Champlain sub-office,proposed,NA,NA
+NEW YORK,"SYR GENERAL AREA, NON-SPECIFIC",ga_code,Onondaga,NA,NA,Syracuse sub-office,proposed,NA,NA
+NEW YORK,BUFFALO GENERAL - Do Not Use,exact,Erie,NA,NA,VERIFY: labeled Do Not Use — confirm rows are genuine arrests,proposed,NA,NA
+NEW JERSEY,ICE ERO NEWARK,exact,Essex,NA,NA,"Newark FO, 970 Broad St; Newark 91%",proposed,NA,NA
+NEW JERSEY,ICE ERO MOUNT LAUREL,exact,Burlington,NA,NA,Mount Laurel 39%,proposed,NA,NA
+NEW JERSEY,NEWARK PD,exact,Essex,NA,NA,Newark 92%,proposed,NA,NA
+NEW JERSEY,"NEW GENERAL AREA, NON-SPECIFIC",ga_code,Essex,NA,NA,Newark office code; Newark 35%,proposed,NA,NA
+NEW JERSEY,"FORT DIX EAST, NEW JERSEY",exact,Burlington,NA,NA,Joint Base MDL,proposed,NA,NA
+NEW JERSEY,ELIZABETH PD,exact,Union,NA,NA,Elizabeth 84%,proposed,NA,NA
+NEW JERSEY,"MLN GENERAL AREA, NON-SPECIFIC",ga_code,Burlington,NA,NA,Mount Laurel code; Mount Laurel 27%,proposed,NA,NA
+NEW JERSEY,PLAINFIELD PD,exact,Union,NA,NA,Plainfield 91%,proposed,NA,NA
+NEW JERSEY,"FORT DIX WEST, NEW JERSEY",exact,Burlington,NA,NA,Joint Base MDL,proposed,NA,NA
+NEW JERSEY,NORTH BERGEN PD,exact,Hudson,NA,NA,North Bergen 88%,proposed,NA,NA
+NEW JERSEY,FAIRVIEW PD,exact,Bergen,NA,NA,VERIFY: Fairview NJ is Bergen County,proposed,NA,NA
+NEW JERSEY,"S.C.I SOUTHWOODS, NEW JERSEY",exact,Cumberland,NA,NA,"Southwoods prison, Bridgeton; Bridgeton 57%",proposed,NA,NA
+NEW JERSEY,TRENTON CITY POLICE DEPARTMENT,exact,Mercer,NA,NA,Trenton 93%,proposed,NA,NA
+NEW JERSEY,PASSAIC PD,exact,Passaic,NA,NA,Passaic 91%,proposed,NA,NA
+NEW JERSEY,PALISADES PARK PD,exact,Bergen,NA,NA,Palisades Park 88%,proposed,NA,NA
+GEORGIA,"ATLANTA, GA",exact,Fulton,NA,NA,city landmark; Atlanta 58%,proposed,NA,NA
+GEORGIA,"STG GENERAL AREA, NON-SPECIFIC",ga_code,Stewart,NA,NA,"Stewart Detention Center, Lumpkin; Lumpkin 46%",proposed,NA,NA
+GEORGIA,"DTN GENERAL AREA, NON-SPECIFIC",ga_code,Whitfield,NA,NA,Dalton 97%,proposed,NA,NA
+GEORGIA,"SAV GENERAL AREA, NON-SPECIFIC",ga_code,Chatham,NA,NA,Savannah office; Savannah 50%,proposed,NA,NA
+GEORGIA,"GNS GENERAL AREA, NON-SPECIFIC",ga_code,Hall,NA,NA,Gainesville 97%,proposed,NA,NA
+GEORGIA,"FOK GENERAL AREA, NON-SPECIFIC",ga_code,NA,NA,NA,VERIFY: Folkston office (Charlton) vs Ellabell (Bryan); city split 38%/25%,proposed,NA,NA
+GEORGIA,"USP ATLANTA, ATLANTA, GA",exact,Fulton,NA,NA,Atlanta 93%,proposed,NA,NA
+GEORGIA,"FCI JESUP, GA",exact,Wayne,NA,NA,Jesup 97%,proposed,NA,NA
+GEORGIA,"GDC GENERAL AREA, NON-SPECIFIC",ga_code,NA,NA,NA,VERIFY: Jackson = Butts County (38%),proposed,NA,NA
+GEORGIA,"FCS GENERAL AREA, NON-SPECIFIC",ga_code,Floyd,NA,NA,Rome 94%,proposed,NA,NA
+LOUISIANA,"NOL GENERAL AREA, NON-SPECIFIC",ga_code,NA,NA,NA,"DECISION: New Orleans FO sits in St. Rose, St. Charles Parish; 54% of rows report New Orleans. Which convention?",proposed,NA,NA
+LOUISIANA,"ASF GENERAL AREA, NON-SPECIFIC",ga_code,Rapides,NA,NA,Alexandria sub-office; Alexandria 31%,proposed,NA,NA
+LOUISIANA,"JEFFERSON PARISH, LA",exact,Jefferson,NA,NA,stopgap exact row; prefer engine fix #3 (parish parse); Gretna 68%,proposed,NA,NA
+LOUISIANA,FEDERAL CORRECTIONAL INSTITUTE - OAKDALE,exact,Allen,NA,NA,Oakdale 96%,proposed,NA,NA
+LOUISIANA,"BTN GENERAL AREA, NON-SPECIFIC",ga_code,East Baton Rouge,NA,NA,Baton Rouge 51%,proposed,NA,NA
+LOUISIANA,"KENNER, LA",exact,Jefferson,NA,NA,Kenner 96%,proposed,NA,NA
+LOUISIANA,"LAF GENERAL AREA, NON-SPECIFIC",ga_code,Lafayette,NA,NA,Lafayette 49%,proposed,NA,NA
+LOUISIANA,FCI Pollock,exact,Grant,NA,NA,Pollock 94%,proposed,NA,NA
+LOUISIANA,"ST. CHARLES PARISH, LA",exact,St. Charles,NA,NA,stopgap exact row; prefer engine fix #3; Saint Rose 56%,proposed,NA,NA
+LOUISIANA,"VVS GENERAL AREA, NON-SPECIFIC",ga_code,Bossier,NA,NA,Bossier City 50%,proposed,NA,NA
+LOUISIANA,"JNA GENERAL AREA, NON-SPECIFIC",ga_code,LaSalle,NA,NA,Jena sub-office; Jena 24%,proposed,NA,NA
+LOUISIANA,"ORLEANS PARISH, LA",exact,Orleans,NA,NA,stopgap exact row; prefer engine fix #3; New Orleans 92%,proposed,NA,NA
+LOUISIANA,"ST. TAMMANY PARISH, LA",exact,St. Tammany,NA,NA,stopgap exact row; prefer engine fix #3; Covington 69%,proposed,NA,NA
+LOUISIANA,"OAK GENERAL AREA, NON-SPECIFIC",ga_code,Allen,NA,NA,Oakdale 58%,proposed,NA,NA
+LOUISIANA,FEDERAL DETENTION CENTER - OAKDALE,exact,Allen,NA,NA,Oakdale 88%,proposed,NA,NA
+WASHINGTON,SEATTLE NON-DETAINED DOCKET,exact,King,NA,NA,"Seattle FO in Tukwila, King County; Tukwila 44%",proposed,NA,NA
+WASHINGTON,SEATTLE FUG OPS,exact,King,NA,NA,fug-ops convention: city-named -> office county; Seattle/Kent spread,proposed,NA,NA
+WASHINGTON,YAKIMA NON DETAINED DOCKET,exact,Yakima,NA,NA,Yakima 83%,proposed,NA,NA
+WASHINGTON,Spokane CAP,exact,Spokane,NA,NA,Spokane 59%,proposed,NA,NA
+WASHINGTON,FEDERAL DETENTION CENTER (FDC),exact,King,NA,NA,VERIFY: SEA FDC at SeaTac; Seatac 70%,proposed,NA,NA
+WASHINGTON,"TAC GENERAL AREA, NON-SPECIFIC",ga_code,Pierce,NA,NA,Tacoma sub-office; Tacoma 60%,proposed,NA,NA
+WASHINGTON,YAKIMA Fug Ops,exact,Yakima,NA,NA,Yakima 69%,proposed,NA,NA
+WASHINGTON,"FDL GENERAL AREA, NON-SPECIFIC",ga_code,NA,NA,NA,VERIFY: Ferndale/Bellingham sub-office (Whatcom)?; Bellingham 24%,proposed,NA,NA
+WASHINGTON,SEA CAP,exact,King,NA,NA,Seattle/SeaTac,proposed,NA,NA
+WASHINGTON,PORTLAND FUGITIVE OPERATIONS STREET ARREST,exact,NA,NA,NA,"DECISION: landmark says Portland OR, report state WA, city Vancouver 60% (Clark). Attribute Clark, leave NA, or exclude?",proposed,NA,NA
+WASHINGTON,Richland CAP,exact,Benton,NA,NA,Richland 52%,proposed,NA,NA
+WASHINGTON,WASHINGTON CORRECTIONS CENTER (Shelton),exact,Mason,NA,NA,Shelton 41%,proposed,NA,NA
+WASHINGTON,COYOTE RIDGE CORRECTIONS,exact,Franklin,NA,NA,Connell 57%,proposed,NA,NA
+WASHINGTON,Wenatchee CAP,exact,Chelan,NA,NA,Wenatchee 99%,proposed,NA,NA
+WASHINGTON,"SEA GENERAL AREA, NON-SPECIFIC",ga_code,King,NA,NA,Tukwila 29%,proposed,NA,NA
+MASSACHUSETTS,US DISTRICT COURT,exact,Suffolk,NA,NA,VERIFY convention: federal court -> Suffolk; Boston 81%,proposed,NA,NA
+MASSACHUSETTS,"MDM GENERAL AREA, NON-SPECIFIC",ga_code,NA,NA,NA,VERIFY: Shirley sub-office (Middlesex)?,proposed,NA,NA
+MASSACHUSETTS,FEDERAL MEDICAL CENTER-DEVENS,exact,NA,NA,NA,DECISION: Devens spans Middlesex/Worcester — pick primary county,proposed,NA,NA
+MASSACHUSETTS,"BOS GENERAL AREA, NON-SPECIFIC",ga_code,NA,NA,NA,"VERIFY: BOS = Boston FO (Burlington, Middlesex); odd city evidence (Plymouth)",proposed,NA,NA
+MASSACHUSETTS,FRAMINGHAM DISTRICT COURT,exact,Middlesex,NA,NA,Framingham 98%,proposed,NA,NA
+MASSACHUSETTS,MALDEN DISTRICT COURT,exact,Middlesex,NA,NA,court sits in Malden,proposed,NA,NA
+MASSACHUSETTS,LYNN DISTRICT COURT,exact,Essex,NA,NA,Lynn 98%,proposed,NA,NA
+MASSACHUSETTS,LOWELL DISTRICT COURT,exact,Middlesex,NA,NA,Lowell 97%,proposed,NA,NA
+MASSACHUSETTS,LAWRENCE DISTRICT COURT,exact,Essex,NA,NA,Lawrence,proposed,NA,NA
+MASSACHUSETTS,WALTHAM DISTRICT COURT,exact,Middlesex,NA,NA,Waltham,proposed,NA,NA
+MASSACHUSETTS,CHELSEA DISTRICT COURT,exact,Suffolk,NA,NA,Chelsea 94%,proposed,NA,NA
+MASSACHUSETTS,"BOSTON PD DOWNTOWN,CHINA TOWN, CHARLESTOWN,E.BOS.",exact,Suffolk,NA,NA,Boston police districts; VERIFY,proposed,NA,NA
+ALABAMA,"ETW GENERAL AREA, NON-SPECIFIC",ga_code,NA,NA,NA,RESEARCH: which office is ETW? (spread city evidence),proposed,NA,NA
+ALABAMA,"Mobile, AL General Non-specific AOR",exact,Mobile,NA,NA,VERIFY convention; Mobile 14% spread,proposed,NA,NA
+ALABAMA,"BHM GENERAL AREA, NON-SPECIFIC",ga_code,Jefferson,NA,NA,Birmingham 47%,proposed,NA,NA
+ALABAMA,"MGA GENERAL AREA, NON-SPECIFIC",ga_code,Montgomery,NA,NA,Montgomery 19%,proposed,NA,NA
+ALABAMA,"FOLEY PD, AL",exact,Baldwin,NA,NA,Foley 64%,proposed,NA,NA
+ALABAMA,Aliceville FCI,exact,Pickens,NA,NA,Aliceville 88%,proposed,NA,NA
+ALABAMA,"MOBILE METRO JAIL, AL",exact,Mobile,NA,NA,Mobile 75%,proposed,NA,NA
+ALABAMA,"CAP - ALBERTVILLE CITY JAIL, AL STATE",exact,Marshall,NA,NA,Albertville 92%,proposed,NA,NA
+ALABAMA,"CAP - MONTGOMERY CITY JAIL, AL STATE",exact,Montgomery,NA,NA,Montgomery 84%,proposed,NA,NA
+PENNSYLVANIA,"PHI GENERAL AREA, NON-SPECIFIC",ga_code,Philadelphia,NA,NA,Philadelphia 60%,proposed,NA,NA
+PENNSYLVANIA,"CAP-YRK GENERAL AREA, NON-SPECIFIC PA STATE",ga_code,York,NA,NA,York 70%,proposed,NA,NA
+PENNSYLVANIA,"PIT GENERAL AREA, NON-SPECIFIC",ga_code,Allegheny,NA,NA,Pittsburgh office; Pittsburgh 23%,proposed,NA,NA
+PENNSYLVANIA,PHI AOR FUGITIVE OPERATIONS,exact,NA,NA,NA,"VERIFY: AOR-wide fug ops -> NA, or Philadelphia-only?",proposed,NA,NA
+PENNSYLVANIA,"FUG / AT-LARGE IN PHILADELPHIA, PA",exact,Philadelphia,NA,NA,city-named fug ops; Philadelphia 79%,proposed,NA,NA
+PENNSYLVANIA,"WPO GENERAL AREA, NON-SPECIFIC",ga_code,Lycoming,NA,NA,Williamsport sub-office; Williamsport 12%,proposed,NA,NA
+PENNSYLVANIA,PITTSBURGH STREET ARREST,exact,Allegheny,NA,NA,Pittsburgh 39%,proposed,NA,NA
+PENNSYLVANIA,"PKE GENERAL AREA, NON-SPECIFIC",ga_code,NA,NA,NA,RESEARCH: which office is PKE? (Scranton 18%?),proposed,NA,NA
+PENNSYLVANIA,Allenwood Low,exact,Union,NA,NA,"FCI Allenwood, Union County; Allenwood 42%",proposed,NA,NA
+PENNSYLVANIA,PKE AOR FUGITIVE OPERATIONS,exact,NA,NA,NA,RESEARCH: which office is PKE?,proposed,NA,NA
+OKLAHOMA,"TLS GENERAL AREA, NON-SPECIFIC",ga_code,Tulsa,NA,NA,Tulsa office; Tulsa 73%,proposed,NA,NA
+OKLAHOMA,OKLAHOMA CITY ICE ERO SUB-OFFICE,exact,Oklahoma,NA,NA,Oklahoma City 88%,proposed,NA,NA
+OKLAHOMA,OKLAHOMA CITY METRO AREA (FUGOPS),exact,Oklahoma,NA,NA,VERIFY fug-ops convention; Oklahoma City 94%,proposed,NA,NA
+OKLAHOMA,FTC CI (Federal Transfer Center),exact,Oklahoma,NA,NA,Will Rogers Airport FTC,proposed,NA,NA
+OKLAHOMA,DO NOT USE,exact,NA,NA,NA,VERIFY: labeled Do Not Use; city evidence Tulsa 99%,proposed,NA,NA
+CONNECTICUT,"HAR GENERAL AREA, NON-SPECIFIC",ga_code,Hartford,NA,NA,"Hartford office; national check 2026-11-18: CT rows report Hartford/Danbury/Bridgeport/Waterbury (554 rows)",proposed,NA,NA
+TEXAS,"HAR GENERAL AREA, NON-SPECIFIC",ga_code,Cameron,NA,NA,"Harlingen office (Rio Grande Valley); city evidence Harlingen 7/Brownsville 2 (11 rows)",proposed,NA,NA
+NEW YORK,"HAR GENERAL AREA, NON-SPECIFIC",ga_code,NA,NA,NA,"RESEARCH: NY HAR rows report Jamaica/Queens ~95% — which office is this? NOT Hartford",proposed,NA,NA
+MASSACHUSETTS,"HAR GENERAL AREA, NON-SPECIFIC",ga_code,NA,NA,NA,"RESEARCH: MA HAR rows spread East Boston/Boston/Springfield/Milford — ambiguous",proposed,NA,NA
+PENNSYLVANIA,CAP-YRK,ga_code,York,NA,NA,"PROPOSED 2026-11-18: CAP-YRK = York County Prison (YRK = YORK county abbrev, per .county_abbrevs); 1422 rows read 'CAP-YRK GENERAL AREA, NON-SPECIFIC PA STATE'; verify York County Prison is the referenced facility",proposed,NA,NA

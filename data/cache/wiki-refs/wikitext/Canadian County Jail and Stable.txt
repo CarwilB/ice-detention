@@ -1,0 +1,63 @@
+{{Use American English|date=August 2025}}
+{{Use mdy dates|date=February 2025}}
+{{Infobox NRHP
+| name        = Canadian County Jail
+| nrhp_type   = 
+| image       = ElRenoStables.jpg
+| caption     = Canadian County Stables, El Reno, Oklahoma  2014
+| location    = 301 N. Choctaw, [[El Reno, Oklahoma|El Reno]], [[Oklahoma]]
+| coordinates = {{coord|35|32|7|N|97|57|19|W|display=inline,title}}
+| pushpin_map = Oklahoma#USA
+| built       = 1907
+| architect   = Solomon A. Layton <br />A.C. Kreipke
+| added       = November 14, 1985<br /> December 14, 1995
+| area        = less than one acre
+| ref_num     = 85002790<ref name="nris">{{NRISref |refnum=85002790|version=2010a}}</ref><ref name=OKSHPO/>
+}}
+
+The '''Canadian County Jail and Stable''' comprises two buildings constructed at different times.  The jail is a building located at 318 North Evans in [[El Reno, Oklahoma|El Reno]], [[Oklahoma]].<ref name="AdValorem">[https://www.ok.gov/tax/documents/avfSept16.pdf  "National Register Of Historic Places Canadian County." Oklahoma Ad Valorem Forum. Vol. 25, Issue 9, September, 2016.] Accessed January 17, 2017.</ref> It is the abandoned site of the [[county jail]] of [[Canadian County, Oklahoma|Canadian County]], and sits west of the current county jail on the same block.
+
+The stable, located at 261 W. Rogers was listed in 1995.<ref name="OKSHPO">{{cite web| title = Canadian County Jail| work = National Register Properties in Oklahoma| publisher = [[Oklahoma Historical Society]]| url = http://www.ocgi.okstate.edu/shpo/shpopic.asp?id=85002790| access-date = September 11, 2013| archive-url = https://web.archive.org/web/20100620174001/http://www.ocgi.okstate.edu/shpo/shpopic.asp?id=85002790#| archive-date = 2010-06-20| url-status = dead}}</ref> The stable was built sometime between 1908 and 1913. It was listed on the [[National Register of Historic Places]] (NRHP) in 1985.
+
+The jail and stable are the oldest remaining county government structures in Canadian County.<ref name="nrhp-CCjailnom">[https://npgallery.nps.gov/nrhp/GetAsset?assetID=124bb2cc-0f7a-42a5-8756-fb475897ef5c "Canadian County Jail." National Register of Historic Places Inventory-Nomination Form. November 14, 1985.] Accessed January 18, 2017.</ref>
+
+==Jail Building==
+Designed by noted Oklahoma architect [[Solomon Andrew Layton]], in partnership with W. J. Riley, and built by A.C. Kreipke, the jail was designed and built between 1904 and 1907,<ref name="nrhp-CCjailnom"/> while the stable was built between 1908 and 1913. The jail is an example of Layton's early Oklahoma work, and features unusual Italian [[Renaissance Revival|Renaissance]] characteristics for a utilitarian building like a county incarceration facility. It is the only public building that Layton designed in El Reno which is still standing; it is also the oldest intact county government building in Canadian County.<ref name="nrhp-CCjailnom"/>{{efn|Solomon Andrew Layton (1864 - 1943), was a native of Iowa who began his architectural career in [[Denver, Colorado]] in 1877. He moved to El Reno, in what was then Oklahoma Territory, where he partnered with W. J. Riley and first designed the [[Canadian County Courthouse]] in 1903. After completing the county courthouse design, they began designing the new county jail. The jail building was considered quite modern for its time. It had cells to hold 24 prisoners (all male), a women's ward, a separate detention room for boys, and offices for the sheriff's department.<ref name="nrhp-CCjailnom"/>}}
+
+===Jail description - exterior===
+The jail is a two-story, masonry building that has a symmetrical, T-shaped floor plan, about {{convert|47|feet|m}} by {{convert|58|feet|m}}. The exterior walls have alternating horizontal bands of rustic faces and smooth wide surfaces. These are interrupted by the vertical openings of windows and doors. The banded walls appear to rest on a base of smooth stone that terminates about {{convert|4|feet|m}} above grade with a [[water table (architecture)|water table]]. The west elevation is the front of the building. The main entrance has two doors, with a Doric column at each side, topped with a pediment and entablature. The other major wall openings contain tall, wood-framed windows. Except for the windows flanking the main entrance, the windows are covered with iron bars and red-painted screens. The upper windows contain diagonal [[muntins]].<ref name="nrhp-CCjailnom"/>
+
+A single brick chimney penetrates the roof, which is covered with composition shingles. Inspection of the chimney about the time of the NRHP application showed that it needed unspecified repairs.<ref name="nrhp-CCjailnom"/>
+
+Several alterations have been made during the building's history. For example, air-conditioning units project from three of the windows. A structure 
+added during the 1970s connected the jail with an existing building described as a carriage house (''sic'').{{efn|The "carriage house" was almost certainly the building now known as the Stable - Ed.}} The additional structure was removed in 1991, and the door that connected it to the jail was filled with concrete blocks. Another exterior addition, providing more office space, was constructed along the east  wall between 1954 and 1960. It connected the jail to the stable. This addition was also removed in 1991.<ref name="nrhp-CCjailnom"/>
+
+<!---
+The jail served as a territorial prison from its completion in October, 1902 until statehood in 1907, when it became the Canadian County jail. The building is three stories high and had 12 cells on each of the top two floors. Actually, one floor is a full basement, which held a coal fired stove and a coal storage area. The basement also had escape tunnel, through which the jailer could escape in case of a jail riot.
+
+The size of each cell was {{convert|6.5|feet|m}} by {{convert|7.5|feet|m}}, and each was intended to hold 4 prisoners.<ref name="Farley">[http://newsok.com/article/2212879 Farley, Tim. "El Reno Jail an Antique." NewsOK. January 20, 1988.]</ref> {{efn|Jail officials have said that in recent years the average count has been 40 or 50 prisoners, but there had been occasions when it held as many as 70.<ref name="Farley"/>}}
+-->
+
+==Jail closure==
+The Oklahoma State Health Department ordered Canadian County officials to close the upper floor jail cells in October, 1982, because the building did not have a fire escape. The first floor of the building was allowed to remain open until a new jail facility could be finished. Part of the old jail was used for county offices until October 1986, and was then used to store guns, alcohol and drugs confiscated by county deputies.<ref name="Farley">[http://newsok.com/article/2212879 Farley, Tim. "El Reno Jail an Antique." NewsOK. January 20, 1988.]</ref>
+
+==See also==
+* [[Layton & Forsyth]]
+* [[Solomon Andrew Layton]]
+
+==Notes==
+{{notelist}}
+
+==References==
+{{reflist}}
+
+==External links==
+*[https://npgallery.nps.gov/nrhp/GetAsset?assetID=124bb2cc-0f7a-42a5-8756-fb475897ef5c "Canadian County Jail."NRHP Registration Form. Prepared September 30, 1985; received by NPS October 16, 1995; Entered November 14 1995. ]
+*[https://npgallery.nps.gov/nrhp/GetAsset?assetID=124bb2cc-0f7a-42a5-8756-fb475897ef5c "Canadian County Jail and Stable (supplemental information)." NRHP Registration Form. Prepared March 1995; received by NPS October 1995; Approved by NPS December 1995.]
+
+{{NRHP in Canadian County, Oklahoma}}
+
+[[Category:Buildings and structures in Canadian County, Oklahoma]]
+[[Category:Renaissance Revival architecture in Oklahoma]]
+[[Category:Buildings and structures completed in 1907]]
+[[Category:Jails on the National Register of Historic Places in Oklahoma]]

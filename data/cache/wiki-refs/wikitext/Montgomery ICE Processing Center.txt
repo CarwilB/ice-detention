@@ -1,0 +1,31 @@
+{{short description|Immigration detention center in Texas, US}}
+{{Infobox prison
+| name            = Montgomery ICE Processing Center
+| location        = [[Conroe, Texas]]
+| coordinates     = {{coord|30.33608|-95.44251|type:landmark|display=inline,title}}
+| pushpin_map     = USA Texas
+| pushpin_caption = Location in Texas
+| status          = Operational
+| classification  = Private Migrant Detention Center
+| capacity        = 1314
+| population      = 1227<ref name="ice-detention-fy26">{{Cite web | publisher = U.S. Department of Homeland Security | last = U.S. Immigration and Customs Enforcement | title = ICE Detention Statistics FY 2026 | date = 2026-02-02 | url = https://www.ice.gov/doclib/detention/FY26_detentionStats02022026.xlsx}}</ref>
+| population_date = FY 2026 (YTD)
+| opened          = FY 2019<ref name="ice-detention-fy19">{{Cite web | publisher = U.S. Department of Homeland Security | last = U.S. Immigration and Customs Enforcement | title = ICE Detention Statistics FY 2019 | date = 2019-09-30 | url = https://www.ice.gov/doclib/detention/FY19-detentionstats.xlsx}}</ref>
+| managed_by      = GEO Group
+}}
+
+The '''Montgomery Processing Center''' is a private [[immigration detention center]] located in [[Conroe, Texas]]. It is operated by the GEO Group, a private prison corporation, under contract from the United States [[United States Immigration and Customs Enforcement|Immigration and Customs Enforcement]].
+
+The facility was expanded from a capacity of 1,000 to 1,314 detainees in 2019.<ref>{{Cite web |date=2019-06-05 |title=The GEO Group Announces 314-Bed Contract Capacity Expansion at Montgomery Processing Center in Texas |url=https://investors.geogroup.com/news-releases/news-release-details/geo-group-announces-314-bed-contract-capacity-expansion/ |access-date=2026-03-27 |website=GEO Group}}</ref>
+
+The Montgomery ICE Processing Center has a significant number of detainees in [[solitary confinement]]: 109 detainees in 2022 and 210 in 2023.<ref>{{Cite web |last=Brigida |first=Anna-Catherine |date=2024-02-19 |title=Solitary confinement on the rise for immigrants in Houston |url=https://houstonlanding-newspack.newspackstaging.com/solitary-confinement-cases-are-on-the-rise-for-detained-immigrants-in-houston/ |access-date=2026-03-27 |website=Houston Landing |language=en-US}}</ref> A 2014 investigation by Houston Landing found that at least five detainees had been held for longer than the 15-day period in solitary considered [[torture]] by the [[United Nations]].<ref>{{Cite web |last=Brigida |first=Anna-Catherine |date=2024-08-12 |title=Solitary confinement common at Houston ICE detention center |url=https://houstonlanding-newspack.newspackstaging.com/worst-nightmare-of-my-life-solitary-confinement-rises-at-houston-area-ice-detention-center/ |access-date=2026-03-27 |website=Houston Landing |language=en-US}}</ref> In 2026, the [[The Texas Observer|Texas Observer]] reported overcrownding at the facility with 60 people held in cell blocks intended for 45, and unsanitary conditions at the facility.<ref>{{Cite web |last=Buch |first=Jason |date=2026-02-09 |title=How Trump's ICE Is Locking Up Longtime Texans with Paths to Legal Status |url=https://www.texasobserver.org/trump-ice-detention-bond-prosecutorial-discretion/ |access-date=2026-03-27 |website=The Texas Observer |language=en-US}}</ref>
+
+== Detainees ==
+{{Bar chart|title=Average daily population at Montgomery ICE Processing Center<ref name="ice-detention-fy19-fy26">{{Cite web | publisher = U.S. Department of Homeland Security | last = U.S. Immigration and Customs Enforcement | title = ICE Detention Statistics FY 2019 | date = 2019-09-30 | url = https://www.ice.gov/doclib/detention/FY19-detentionstats.xlsx}} Additional fiscal year data: [https://www.ice.gov/doclib/detention/FY20-detentionstats.xlsx FY20], [https://www.ice.gov/doclib/detention/FY21-detentionstats.xlsx FY21], [https://www.ice.gov/doclib/detention/FY22-detentionStats.xlsx FY22], [https://www.ice.gov/doclib/detention/FY23_detentionStats.xlsx FY23], [https://www.ice.gov/doclib/detention/FY24_detentionStats.xlsx FY24], [https://www.ice.gov/doclib/detention/FY25_detentionStats09242025.xlsx FY25], [https://www.ice.gov/doclib/detention/FY26_detentionStats02022026.xlsx FY26].</ref>|bar_width=35|data_max=1,289|label_type=Fiscal year|data_type=ADP|label1=FY 2019|data1=951|label2=FY 2020|data2=626|label3=FY 2021|data3=387|label4=FY 2022|data4=653|label5=FY 2023|data5=976|label6=FY 2024|data6=1,170|label7=FY 2025|data7=1,217|label8=FY 2026|data8=1,227}}
+
+== References ==
+<references />
+
+{{DEFAULTSORT:Montgomery ICE Processing Center}}
+[[Category:United States Immigration and Customs Enforcement]]
+[[Category:Immigration detention centers and prisons in the United States]]

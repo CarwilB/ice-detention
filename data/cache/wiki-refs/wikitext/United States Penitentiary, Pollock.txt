@@ -1,0 +1,118 @@
+{{Short description|High-security United States prison in Louisiana}}
+{{Use American English|date=August 2025}}
+{{Infobox Prison
+| name           = United States Penitentiary, Pollock
+| image          = FCC Pollock.jpg
+| location       = [[Grant Parish, Louisiana|Grant Parish]]<br />near [[Pollock, Louisiana]]
+| coordinates    = 
+| status         = Operational
+| classification = High-security (with minimum-security prison camp)
+| capacity       = 1,218 [1,067 at the USP, 151 in prison camp] (September 2023)
+| opened         = 2000
+| closed         = 
+| managed_by     = [[Federal Bureau of Prisons]]
+| warden         = 
+}}
+The '''United States Penitentiary, Pollock (USP Pollock)''' is a high-security United States [[federal prison]] for male inmates in [[unincorporated area|unincorporated]] [[Grant Parish, Louisiana]].<ref>{{cite web|url=https://www2.census.gov/geo/maps/DC2020/DC20BLK/st22_la/county/c22043_grant/DC20BLK_C22043.pdf|title=2020 CENSUS - CENSUS BLOCK MAP: Grant Parish, LA|publisher=[[U.S. Census Bureau]]|accessdate=2022-08-15|page=18 (PDF p. 19/30)|quote=United States Penitentiary Pollock}}</ref> It is part of the [[Federal Correctional Complex, Pollock|Pollock Federal Correctional Complex]] (FCC Pollock) and operated by the [[Federal Bureau of Prisons]], a division of the [[United States Department of Justice]]. The facility also has an adjacent satellite prison camp for minimum-security male offenders.
+
+FCC Pollock is located in central Louisiana, approximately 15 miles north of Alexandria.<ref>{{cite web|url=http://www.bop.gov/locations/institutions/pol/index.jsp |title=BOP: USP Pollock |publisher=Bop.gov |date= |accessdate=2013-10-30}}</ref>
+
+==Notable incidents==
+
+=== 2001 murder ===
+On December 14, 2001, USP Pollock had its first homicide when 71-year-old John MacLeod was found unresponsive in a cell in the Special Housing Unit (SHU). MacLeod was serving a 235-month sentence for kidnapping and child phonography charges. MacLeod's cause of death was determined to be asphyxiation due to a ligature around his neck and severe facial trauma. MacLeod's cellmate, Ishmael Petty was then indicted for the murder. Petty was serving a lengthy sentence for bank robbery issued in 1998. In 2002, he would be sentenced to life in prison for the murder of MacLeod. In 2025, Petty would be charged with the murder of another inmate, this time at the [[ADX Florence|federal supermax prison]] in [[Florence, Colorado]].<ref>{{Cite web |title=ADX Inmate Convicted of Three Counts of Assault, Resisting and Impeding a Federal Employee — FBI |url=https://www.fbi.gov/contact-us/field-offices/denver/news/press-releases/adx-inmate-convicted-of-three-counts-of-assault-resisting-and-impeding-a-federal-employee |access-date=2025-12-03 |website=www.fbi.gov |language=en}}</ref><ref>{{Cite web |date=2025-04-10 |title=Office of Public Affairs {{!}} Government Seeks Death Penalty for Federal Inmate Charged with First Degree Murder {{!}} United States Department of Justice |url=https://www.justice.gov/opa/pr/government-seeks-death-penalty-federal-inmate-charged-first-degree-murder |access-date=2025-12-03 |website=www.justice.gov |language=en}}</ref>  
+
+===2006 escape===
+On April 5, 2006, convicted murderer [[Richard Lee McNair]] escaped from USP Pollock.<ref name="crime.about.com">{{cite web |url=http://crime.about.com/od/wanted/p/richardmcnair.htm |title=Escaped Murderer Richard Lee McNair |publisher=Crime.about.com |date=2007-10-25 |accessdate=2013-10-30 |archive-date=2006-06-27 |archive-url=https://web.archive.org/web/20060627033201/http://crime.about.com/od/wanted/p/richardmcnair.htm |url-status=dead }}</ref> McNair's duties in prison included work in a manufacturing area, where he repaired old, torn mailbags. He held this position for several months, during which he plotted his escape. McNair escaped by constructing an "escape pod," which included a breathing tube, and burying it under a pile of outgoing mailbags. At approximately 9:45 AM, prison staff placed the mailbags on a [[pallet]], transported it to a nearby warehouse outside the prison's perimeter fence, and went for lunch. McNair then cut himself out of the pod and escaped at 11:00 AM. Having observed prison operations and the times when prisoner counts were conducted, McNair knew that his absence would not be discovered until 4:00 PM. After an over yearlong [[Manhunt (law enforcement)|manhunt]], McNair was captured in New Brunswick, Canada by the [[Royal Canadian Mounted Police]] on Oct. 25, 2007 after being featured on the television program ''[[America's Most Wanted]]''.<ref name="crime.about.com"/><ref name="LLL2">Christopher, Byron. [http://www.lastlinkontheleft.com/e1987mcnair.html "Richard Lee McNair Breaks His Silence"] {{Webarchive|url=https://web.archive.org/web/20111007092347/http://www.lastlinkontheleft.com/e1987mcnair.html |date=2011-10-07 }}. ''Last Link on the Left''.  May 14, 2009.  Retrieved September 22, 2011.</ref><ref>{{cite web |url=http://www.amw.com/fugitives/case.cfm?id=38335 |title=America's Most Wanted with John Walsh |publisher=AMW |date=2013-09-20 |accessdate=2013-10-30 |archive-url=https://web.archive.org/web/20121025052921/http://www.amw.com/fugitives/case.cfm?id=38335 |archive-date=2012-10-25 |url-status=dead }}</ref> Since McNair had previously escaped from a county jail and a state prison in North Dakota in 1987 and 1992, he was classified as a high-escape risk and transferred to the [[ADX Florence|United States Penitentiary, Florence ADX]], the federal [[supermax prison]] in Colorado which holds inmates requiring the tightest controls.<ref>{{cite web|url=http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=NameSearch&needingMoreList=false&FirstName=richard&Middle=lee&LastName=mcnair&Race=U&Sex=U&Age=&x=0&y=0 |title=Federal Bureau of Prisons |publisher=Bop.gov |date= |accessdate=2013-10-30}}</ref>
+
+===2007 inmate murder===
+In November 2007, inmate William Anthony Bullock was stabbed to death with a [[shiv (weapon)|shank]] during an altercation with another inmate, identified as Shaun Wayne Williams. Williams had crafted the shank from a part of a cell locker. Williams, who was serving a 98-month sentence for being a [[felony|felon]] in possession of a firearm, was convicted of [[voluntary manslaughter]] in 2009 and sentenced to an additional 15 years in prison.<ref>{{cite web|url=http://www.justice.gov/usao/law/news/wdl20090819a.pdf |title=U.S. Penintentiary Inmate Convicted of Voluntary Manslaughter of Another Inmate |publisher=Justice.gov |accessdate=2013-10-30}}</ref><ref>{{cite web|url=https://www.fbi.gov/neworleans/press-releases/2009/no120109.htm |title=FBI — Pollock Inmate Sentenced for Voluntary Manslaughter |publisher=Fbi.gov |date=2009-12-01 |accessdate=2013-10-30}}</ref> Williams (40542-050) was then incarcerated at [[USP Big Sandy]] and was released October 27, 2023
+
+Inmate Steven Prater, who was serving a 51-month sentence for being a felon in possession of a firearm, was fatally injured during a fight with another inmate on June 24, 2010.<ref>{{cite web|author=|url=http://www.corspecops.com/inmate-dies-following-attack-pollock-prison/ |title=Inmate dies following attack at Pollock prison &#124; Corrections Special Operations - The Official Gateway To The Corrections Special Operations Community |publisher=Corspecops.com |date=2010-06-25 |accessdate=2013-10-30}}</ref><ref>{{cite web|url=http://www.wbrz.com/news/inmate-dies-after-fight-at-pollock-prison/ |title=Inmate dies after fight at Pollock prison &#124; WBRZ News 2 Louisiana : Baton Rouge, LA &#124; |publisher=Wbrz.com |date=2010-06-25 |accessdate=2013-10-30}}</ref> On January 18, 2010, inmate Carlton Coltrane was stabbed to death by another inmate. Coltrane's mother told [[The Washington Post]] that her son, who was serving a sentence for [[bank robbery]], told her several days before that there were running disputes between gangs of inmates from Louisiana and the Washington, DC area.<ref>{{cite news|url=https://www.washingtonpost.com/wp-dyn/content/article/2010/01/19/AR2010011904339.html |title=Local Digest |work=Washingtonpost.com |date= 2010-01-20|accessdate=2013-10-30}}</ref> The murders of Prater and Coltrane remain under investigation.{{citation needed|date=September 2019}}
+
+==Notable Inmates==
+===Current===
+{| class="wikitable sortable"
+! width="12%" |Inmate Name
+! width="8%" |Register Number
+! width="25%" |Status
+! width="55%" |Details
+|-
+| style="text-align:center;" |Khalid Ali-M Aldawsari
+| style="text-align:center;" |42771-177
+|Serving a life sentence
+|Serving a life sentence for a foiled bomb plot targeting former president [[George W. Bush]] and his [[Dallas, Texas]] residence.<ref>{{Cite web |date=2012-11-13 |title=Saudi Student Sentenced to Life in Prison for Attempted Use of Weapon of Mass Destruction |url=https://www.justice.gov/opa/pr/saudi-student-sentenced-life-prison-attempted-use-weapon-mass-destruction |access-date=2022-02-14 |website=www.justice.gov |language=en}}</ref>
+|-
+| style="text-align:center;" |Ricky Mungia
+| style="text-align:center;" |26372-077
+|Serving a life sentence
+|Sentenced in 1996 for a racially charged attack and carrying unregistered guns<ref>{{Cite news |last=Ap |date=1996-04-08 |title=Life Sentences for 3 Men in Racial Attacks |language=en-US |work=The New York Times |url=https://www.nytimes.com/1996/04/08/us/life-sentences-for-3-men-in-racial-attacks.html |access-date=2022-11-30 |issn=0362-4331}}</ref>
+|-
+| style="text-align:center;" |Dawayne Brown
+| style="text-align:center;" |[https://www.bop.gov/mobile/find_inmate/byname.jsp#inmate_results/ 32909-016]
+|Now at [[United States Penitentiary, Atwater|USP Atwater]].
+Scheduled for release on December 2, 2025.
+|Attempted assault with a deadly weapon.
+|-
+| style="text-align:center;" |[[Mohammed Khalifa]]
+| style="text-align:center;" |67830-509
+|Serving a life sentence
+|Pleaded guilty to conspiracy to support [[Islamic State]]
+|-
+| style="text-align:center;" |James Edward Rose
+| style="text-align:center;" |[https://www.bop.gov/inmateloc/ 10820-007]
+|Serving a life sentence.
+|Found guilty of attempted murder after stabbing correctional officers at [[USP McCreary]] during a routine cell check.
+|-
+| style="text-align:center;" | [[James Rosemond]]
+| style="text-align:center;" | 17903-054
+|Serving a life sentence.
+|Convicted for hiring a hitman on Lodi Mack as payback for him and [[Tony Yayo]] assaulting his son.
+|-
+| style="text-align:center;" | [[Félix Verdejo]]
+| style="text-align:center;" | 51145-069
+|Serving a life sentence.
+|Convicted for the kidnapping and murder of his pregnant mistress
+|}
+
+===Former===
+{| class="wikitable sortable"
+! width="12%" |Inmate Name
+! width="8%" |Register Number
+! width="25%" |Status
+! width="55%" |Details
+|-
+| style="text-align:center;" |Chimene Hamilton Onyeri
+| style="text-align:center;" |79217-380
+|Transferred to [[United States Penitentiary, Florence High|USP Florence High]]. Serving a life sentence.
+|Serving life for attempted assassination of Texas judge [[Julie Kocurek]] after she sentenced him for running a tax refund scam.
+|-
+| style="text-align:center;" |[[Richard Lee McNair]]
+| style="text-align:center;" |13829-045
+|Transferred to [[ADX Florence]] and then to [[United States Penitentiary, Florence High|USP Florence High]].
+Serving two consecutive life sentences on a state murder charge from [[North Dakota]] in 1987. 
+|Murderer from North Dakota sentenced to 2 life sentences, escaped in 2006.
+|}
+
+==See also==
+{{Portalbar|United States<!--Federal government-->|Louisiana|Politics|Law}}
+*[[List of U.S. federal prisons]]
+*[[Federal Bureau of Prisons]]
+*[[Incarceration in the United States]]
+{{Clear}}
+
+==References==
+{{Reflist}}
+
+==External links==
+* [http://www.bop.gov/locations/institutions/pol/index.jsp Bureau of Prisons website]
+* [http://wikimapia.org/4876362/United-States-Federal-Penitentiary Satellite image of USP, Pollock]
+
+{{coord|31|28|00|N|92|26|30|W|scale:10000|display=title}}
+{{Federal Bureau of Prisons}}
+
+[[Category:United States Penitentiaries|Pollock]]
+[[Category:Buildings and structures in Grant Parish, Louisiana]]
+[[Category:Prisons in Louisiana]]
+[[Category:2000 establishments in Louisiana]]
+[[Category:Government buildings completed in 2000]]

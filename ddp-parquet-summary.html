@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-04-11">
+<meta name="dcterms.date" content="2026-10-03">
 
 <title>DDP Daily Population Data — Parquet Summary &amp; Integration</title>
 <style>
@@ -94,7 +94,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 11, 2026</p>
+      <p class="date">October 3, 2026</p>
     </div>
   </div>
   
@@ -108,8 +108,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This document summarizes the Deportation Data Project (DDP) daily detention population dataset in parquet format (<code>data/ddp/facilities-daily-population-latest.parquet</code>). The parquet file is the current data source for FY26 and FY24 comparison analyses against ICE’s published annual detention statistics.</p>
-<p>The dataset spans October 2022 through March 2026. The first and last dates on which any facility recorded nonzero detention are <strong>2022-10-01</strong> and <strong>2026-03-10</strong>.</p>
+<p>This document summarizes the Deportation Data Project (DDP) daily detention population dataset in parquet format. Two versions are documented:</p>
+<ul>
+<li>The archived <strong>20260330 release</strong> (<code>data/ddp/facilities-daily-population-latest_20260330.parquet</code>), DDP’s last published version, spanning October 2022 through March 2026. The first and last dates on which any facility recorded nonzero detention are <strong>2022-10-01</strong> and <strong>2026-03-10</strong>. It remains the pipeline’s frozen <code>ddp_new</code> input and feeds the archived through-March FY26 comparison.</li>
+<li>The current <strong>20260806 version</strong> (<code>data/ddp/facilities-daily-population-latest_20260806.parquet</code>), recreated from the 20260806 detention stints because DDP no longer publishes the file — see <a href="#sec-20260806">The 20260806 release</a>.</li>
+</ul>
+<p>Sections below describe the 20260330 release unless noted.</p>
 <section id="dataset-basics" class="level3">
 <h3 class="anchored" data-anchor-id="dataset-basics">Dataset Basics</h3>
 <table class="caption-top table">
@@ -401,17 +405,203 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
+<section id="sec-20260806" class="level2">
+<h2 class="anchored" data-anchor-id="sec-20260806">The 20260806 release</h2>
+<p>DDP’s 20260806 update no longer ships a facilities-daily-population file, and the generating script (<code>code/facilities-daily-population-latest.R</code>) was removed from DDP’s repository in July 2026 (commit <code>bfc8b3fa76</code>). This project recreates the file from the 20260806 detention stints with <code>build_ddp_daily_population()</code> in <a href="R/ddp-daily-population.R">R/ddp-daily-population.R</a>, following DDP’s published methodology; the last version of DDP’s original script is preserved for provenance at <a href="data/ddp/facilities-daily-population-latest.R">data/ddp/facilities-daily-population-latest.R</a>.</p>
+<p><strong>Validation:</strong> rebuilding the 20260330 published file from the 20260515 stints reproduced all 888,699 rows, all six count columns, and all facility names exactly — cell for cell. Differences between the versions below therefore reflect DDP’s retroactive data revisions, not method differences.</p>
+<section id="dataset-basics-20260806" class="level3">
+<h3 class="anchored" data-anchor-id="dataset-basics-20260806">Dataset basics (20260806)</h3>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Metric</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Date range</td>
+<td style="text-align: left;">2022-10-01 - 2026-08-05</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total observations</td>
+<td style="text-align: left;">1,039,700</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Unique facility codes</td>
+<td style="text-align: left;">740</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Variables</td>
+<td style="text-align: left;">9</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="population-by-fiscal-year-20260806" class="level3">
+<h3 class="anchored" data-anchor-id="population-by-fiscal-year-20260806">Population by fiscal year (20260806)</h3>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Fiscal Year</th>
+<th style="text-align: right;">Days</th>
+<th style="text-align: right;">Mean Daily</th>
+<th style="text-align: right;">Max Daily</th>
+<th style="text-align: right;">Total Person-Days</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2,023</td>
+<td style="text-align: right;">365</td>
+<td style="text-align: right;">39.0</td>
+<td style="text-align: right;">1,775</td>
+<td style="text-align: right;">10,541,791</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2,024</td>
+<td style="text-align: right;">366</td>
+<td style="text-align: right;">52.1</td>
+<td style="text-align: right;">2,201</td>
+<td style="text-align: right;">14,113,028</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2,025</td>
+<td style="text-align: right;">365</td>
+<td style="text-align: right;">67.7</td>
+<td style="text-align: right;">2,926</td>
+<td style="text-align: right;">18,285,360</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2,026</td>
+<td style="text-align: right;">309</td>
+<td style="text-align: right;">89.6</td>
+<td style="text-align: right;">4,098</td>
+<td style="text-align: right;">20,487,246</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>As before, “Mean Daily” is the mean across facility-days, and the median facility-day is zero.</p>
+</section>
+<section id="overlap-revisions-vs-the-20260330-release" class="level3">
+<h3 class="anchored" data-anchor-id="overlap-revisions-vs-the-20260330-release">Overlap revisions vs the 20260330 release</h3>
+<p>In the shared window (2022-10-01 – 2026-03-10, 707 shared facility codes), the two versions differ because DDP retroactively revised stints records between releases:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 8%">
+<col style="width: 7%">
+<col style="width: 14%">
+<col style="width: 13%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">metric</th>
+<th style="text-align: right;">cells</th>
+<th style="text-align: right;">exact</th>
+<th style="text-align: right;">mean_abs_diff</th>
+<th style="text-align: right;">max_abs_diff</th>
+<th style="text-align: right;">total_new</th>
+<th style="text-align: right;">total_old</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">n_detained</td>
+<td style="text-align: right;">886,185</td>
+<td style="text-align: right;">0.9064</td>
+<td style="text-align: right;">0.3044</td>
+<td style="text-align: right;">1,472</td>
+<td style="text-align: right;">54,075,152</td>
+<td style="text-align: right;">54,180,143</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">n_detained_at_midnight</td>
+<td style="text-align: right;">886,185</td>
+<td style="text-align: right;">0.9086</td>
+<td style="text-align: right;">0.2950</td>
+<td style="text-align: right;">1,456</td>
+<td style="text-align: right;">51,617,050</td>
+<td style="text-align: right;">51,722,982</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">n_detained_male</td>
+<td style="text-align: right;">886,185</td>
+<td style="text-align: right;">0.9120</td>
+<td style="text-align: right;">0.2718</td>
+<td style="text-align: right;">1,472</td>
+<td style="text-align: right;">46,728,312</td>
+<td style="text-align: right;">46,805,024</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">n_detained_female</td>
+<td style="text-align: right;">886,185</td>
+<td style="text-align: right;">0.9758</td>
+<td style="text-align: right;">0.0406</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">7,332,481</td>
+<td style="text-align: right;">7,358,082</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">n_detained_convicted_criminal</td>
+<td style="text-align: right;">886,185</td>
+<td style="text-align: right;">0.9248</td>
+<td style="text-align: right;">0.1996</td>
+<td style="text-align: right;">449</td>
+<td style="text-align: right;">14,989,938</td>
+<td style="text-align: right;">14,990,484</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">n_detained_possibly_under_18</td>
+<td style="text-align: right;">886,185</td>
+<td style="text-align: right;">0.9993</td>
+<td style="text-align: right;">0.0015</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">116,032</td>
+<td style="text-align: right;">115,314</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>About 90–91% of facility-day cells are exactly equal; 20260806 totals are roughly 0.2% <em>lower</em> than the 20260330 totals over the same window, and individual facility-days can differ substantially where records were revised. These are DDP-side revisions — the same recreation method applied to the 20260515 stints reproduces the published 20260330 file exactly.</p>
+<p>35 facility codes appear only in the 20260806 version (CCALEKS, COOKETX, LINCOWY, IRONCUT, OTROPNM, WALWOWI, WICHTTX, MACONTN, ROANOVA, PAMREVA, WASHCID, GALVETX, TAZRJVA, DELAWPA, SBNTOTX, RICHMVA, SEVIETN, BARRECA, OTEROCO, LYNNCTX, WNBGOWI, BEECOTX, SNDCOCA, MCJJVFL, FXADCVA, CHRISMO, CALCALA, BASCOTX, TETONWY, CBPCAL, NATCHLA, SCNORCA, KERCOTX, TAYLOFL, SMITHTX), and 2 codes from the 20260330 version are absent (ECC, YORCOPA).</p>
+<hr>
+</section>
+</section>
 <section id="data-integration-summary" class="level2">
 <h2 class="anchored" data-anchor-id="data-integration-summary">Data Integration Summary</h2>
 <section id="pipeline-targets" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-targets">Pipeline Targets</h3>
-<p>The feather file remains the source for <code>ddp_raw</code> and all existing FY25-era pipeline targets. The parquet file is loaded as a separate <code>ddp_new</code> target for FY26 (and future FY24) comparisons:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_target</span>(ddp_parquet_file,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/ddp/facilities-daily-population-latest.parquet"</span>),</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">format =</span> <span class="st">"file"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_target</span>(ddp_new, arrow<span class="sc">::</span><span class="fu">read_parquet</span>(ddp_parquet_file))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The <code>ddp_facility_summary()</code> function handles both sources; the <code>state</code> column it previously required is treated as optional.</p>
+<p>The feather file remains the source for <code>ddp_raw</code> and all existing FY25-era pipeline targets. The 20260330 parquet is loaded as a frozen <code>ddp_new</code> target (it feeds <code>ddp_codes_new</code>, <code>ddp_annual_panel</code> and the expanded map, facility profiles/directory, and the archived through-March FY26 comparison). The current 20260806 version is rebuilt from the stints and feeds the current FY26 comparison chain:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Frozen 20260330 release (DDP-published, renamed)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_target</span>(ddp_parquet_file,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/ddp/facilities-daily-population-latest_20260330.parquet"</span>),</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">format =</span> <span class="st">"file"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_target</span>(ddp_new, arrow<span class="sc">::</span><span class="fu">read_parquet</span>(ddp_parquet_file))</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Current: recreated from the 20260806 stints (DDP no longer publishes the file)</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_target</span>(facilities_daily_population_file, {</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  fdp <span class="ot">&lt;-</span> <span class="fu">build_ddp_daily_population</span>(stints_raw, <span class="at">end_date =</span> <span class="fu">as.Date</span>(<span class="st">"2026-08-05"</span>))</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  out <span class="ot">&lt;-</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/ddp/facilities-daily-population-latest_20260806.parquet"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  arrow<span class="sc">::</span><span class="fu">write_parquet</span>(fdp, out, <span class="at">compression =</span> <span class="st">"zstd"</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  out</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>}, <span class="at">format =</span> <span class="st">"file"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_target</span>(facilities_daily_population,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  arrow<span class="sc">::</span><span class="fu">read_parquet</span>(facilities_daily_population_file))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The <code>ddp_facility_summary()</code> function handles both versions; the <code>state</code> column it previously required is treated as optional.</p>
 </section>
 <section id="canonical-id-matching" class="level3">
 <h3 class="anchored" data-anchor-id="canonical-id-matching">Canonical ID Matching</h3>
@@ -465,7 +655,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="fy26-comparison-export" class="level2">
 <h2 class="anchored" data-anchor-id="fy26-comparison-export">FY26 Comparison Export</h2>
-<p>The <code>ddp_fy26_comparison_export</code> target exports 8 pre-computed RDS files to <code>data/ddp-comparison-export-fy26/</code> covering <strong>October 1, 2025 – February 5, 2026</strong> (the ICE data cutoff in the Feb 12 release):</p>
+<p>The <code>ddp_fy26_comparison_export</code> target exports 8 pre-computed RDS files to <code>data/ddp-comparison-export-fy26/</code> covering <strong>October 1, 2025 – February 5, 2026</strong> (the ICE data cutoff in the Feb 12 release). The export now uses the current 20260806 daily-population data; the table below reflects the archived through-March (20260330) data state. The archived through-March analysis is preserved separately as <code>ddp-comparison-26-20260330.qmd</code>, whose export target (<code>ddp_fy26_comparison_export_20260330</code>) writes to <code>data/ddp-comparison-export-fy26-20260330/</code>:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 38%">
@@ -518,7 +708,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="related-files">Related Files</h2>
 <ul>
 <li><code>R/ddp.R</code> — <code>ddp_facility_summary()</code>, <code>build_fy26b()</code>, <code>export_ddp_fy26_comparison_data()</code></li>
-<li><code>data/ddp-comparison-export-fy26/</code> — pre-computed RDS files</li>
+<li><code>R/ddp-daily-population.R</code> — <code>build_ddp_daily_population()</code>, the validated recreation of the daily-population file from stints</li>
+<li><code>data/ddp-daily-population.yml</code> — provenance and versioning for both daily-population parquet files</li>
+<li><code>data/ddp-comparison-export-fy26/</code> — pre-computed RDS files (current, 20260806 data)</li>
+<li><code>data/ddp-comparison-export-fy26-20260330/</code> — archived through-March export (frozen 20260330 data)</li>
+<li><code>ddp-comparison-26-20260330.qmd</code> — archived through-March FY26 comparison report</li>
 <li><code>facility_roster.csv</code> — canonical facility addresses, types, DETLOCs</li>
 <li><code>ddp-integration-summary.md</code> — original feather integration notes</li>
 </ul>

@@ -1,0 +1,254 @@
+{{about||other similarly named airports|Alexandria Airport (disambiguation)|the military use of this facility before 1992|England Air Force Base}}
+{{Use American English|date=March 2025}}
+{{Use mdy dates|date=November 2025}}
+{{Infobox airport
+| name                   = Alexandria International Airport
+| image                  = Alexandria International Airport terminal, Alexandria, Louisiana.jpg
+| caption                = AEX Upgraded Passenger Terminal, 2007
+| IATA                   = AEX
+| ICAO                   = KAEX
+| FAA                    = AEX
+| type                   = Public
+| owner                  = England Authority
+| operator               = 
+| area_served            = [[Alexandria, Louisiana]]
+| location               = 
+| elevation_f            = 88
+| elevation_m            = 
+| website                = {{URL|englandairpark.org}}
+| coordinates            = {{coord|31|19|39|N|92|32|55|W|region:US-LA_scale:40000|display=inline,title}}
+| pushpin_map            = USA Louisiana#USA
+| pushpin_relief         = yes
+| pushpin_caption        = Location of airport in Louisiana
+| pushpin_label          = '''AEX'''
+| pushpin_label_position = left
+| r1_number              = 14/32
+| r1_length_f            = 9,352
+| r1_length_m            = 2,850
+| r1_surface             = Concrete
+| r2_number              = 18/36
+| r2_length_f            = 7,001
+| r2_length_m            = 2,134
+| r2_surface             = Asphalt/concrete
+| stat_year              = 2022
+| stat1_header           = Aircraft operations
+| stat1_data             = 30,130
+| stat2_header           = Based aircraft
+| stat2_data             = 55
+| footnotes              = Source: [[Federal Aviation Administration]]<ref name="FAA">{{FAA-airport|ID=AEX|access-date=July 13, 2023}}</ref>
+}}
+
+'''Alexandria International Airport''' {{airport codes|AEX<ref>{{cite web | url = http://www.iata.org/publications/Pages/code-search.aspx | title = IATA Airport Code Search (AEX: Alexandria International) | publisher = [[International Air Transport Association]] | accessdate = July 27, 2013}}</ref>|KAEX|AEX}} is a public use airport in [[unincorporated area|unincorporated]] [[Rapides Parish, Louisiana]], United States,<ref>{{cite map|author=Geography Division|url=https://www2.census.gov/geo/maps/DC2020/DC20BLK/st22_la/county/c22079_rapides/DC20BLK_C22079.pdf|title=2020 Census - Census Block Map: Rapides Parish, LA|publisher=[[U.S. Census Bureau]]|place=Suitland, Maryland|date=April 13, 2021|page=22 (PDF p. 23/76)|quote=Alexandria International Arprt|access-date=2026-07-21}}</ref> located {{convert|4|nmi|mi km}} west of the central business district of [[Alexandria, Louisiana|Alexandria]].<ref name="FAA" /> The airport is operated by the England Authority, also known as the England Economic and Industrial Development District, an independent political subdivision of the State of [[Louisiana]]. Although international commercial flight operations are not conducted, charter flights for the U.S. military to international destinations are routinely conducted from the airfield with this activity including the transportation of U.S. troops to overseas locations.
+
+This airport is included in the [[National Plan of Integrated Airport Systems]] for 2011–2015, which [[FAA airport categories|categorized]] it as a ''primary commercial service'' airport.<ref>
+ {{cite web
+ |url=http://www.faa.gov/airports/planning_capacity/npias/reports/media/2011/npias_2011_appA.pdf
+ |title=2011–2015 NPIAS Report, Appendix A
+ |format=[[PDF]], 2.03 MB
+ |work=National Plan of Integrated Airport Systems
+ |publisher=Federal Aviation Administration
+ |date=October 4, 2010
+ |url-status=dead
+ |archiveurl=https://web.archive.org/web/20120927084535/http://www.faa.gov/airports/planning_capacity/npias/reports/media/2011/npias_2011_appA.pdf
+ |archivedate=September 27, 2012
+}}
+</ref> As per [[Federal Aviation Administration]] records, the airport had 142,223 passenger boardings (enplanements) in [[calendar year]] 2008,<ref>
+ {{cite web
+ | url = http://www.faa.gov/airports/planning_capacity/passenger_allcargo_stats/passenger/media/cy08_all_enplanements.pdf
+ | title = Enplanements for CY 2008 | format = PDF, 1.0 MB
+ | work = CY 2008 Passenger Boarding and All-Cargo Data
+ | publisher = Federal Aviation Administration | date = December 18, 2009
+ }}
+</ref> 154,736 enplanements in 2009, and 179,129 in 2010.<ref>
+ {{cite web
+ | url = http://www.faa.gov/airports/planning_capacity/passenger_allcargo_stats/passenger/media/cy10_all_enplanements.pdf
+ | title = Enplanements for CY 2010 | format = PDF, 189 KB
+ | work = CY 2010 Passenger Boarding and All-Cargo Data
+ | publisher = Federal Aviation Administration | date = October 4, 2011
+ }}
+</ref>
+
+Prior to 1992, the facility was known as '''[[England Air Force Base]]''', which was a front-line [[United States Air Force]] base which was opened during [[World War II]] and was used during the [[Cold War]].
+
+== History ==
+Alexandria International Airport (AEX) traces its beginnings back to 1939 when it served as an emergency airstrip for [[Esler Airfield]], which was about 10 miles northeast of what would become Alexandria International. However, on the eve of World War II, the air strip was taken over by the Department of Defense and named Alexandria Army Air Base. The airbase was used for training pilots and aircrews of fighter and bomber airplanes of the Army Air Force. After World War II ended, the base was placed on standby status in early 1946 and was eventually turned over to the city of Alexandria for use as a municipal airport. With the outbreak of hostilities in Korea, the base was reactivated as Alexandria Air Force Base in 1950.
+
+On June 23, 1955, Alexandria Army Air Base was renamed England Air Force Base in honor of Lieutenant Colonel John Brooke England, who died on November 17, 1954. John England was the commander of the 389th Bomber Squadron stationed at the base. England died while attempting to land in dense fog in France. During his approach, he ran out of fuel and sacrificed himself by steering away from a barracks and into a nearby field, where he crashed and was killed.
+
+At the end of the Cold War, the United States Department of Defense wanted to close many of its military bases including England Air Force Base. The city of Alexandria feared that the economic impact of the airfield closing would devastate the economy, so the city of Alexandria created the England Economic and Industrial Development District (England Authority) to take over the base for the purpose of creating a major air transport resource for the region and the state.
+
+After the application by the England Authority and the recommendation from the FAA, the Department of Defense granted all airside and landside areas to the England Authority. In August 1993, Alexandria International Airport opened for service. And in August 1996, Alexandria International began to receive commercial airline passenger service with flights to and from Atlanta (ATL), Dallas/Ft. Worth (DFW), Houston (IAH) and Memphis (MEM), although service to Memphis was subsequently discontinued. Alexandria had previously been served by commercial airline flights operated from [[Esler Airfield]] (ESF) located near Pineville, Louisiana.
+
+Since the September 11 terrorist attacks, Alexandria International Airport has played an important role in moving thousands of military personnel and millions of pounds of cargo in support of the wars in Iraq and Afghanistan. The United States military, under a commercial lease with the England Authority, invested nearly $60 million in airfield facilities including the hazardous cargo loading/unloading aprons, a military passenger processing facility, Military Air Cargo Apron and resurfacing Runway 18.
+
+Alexandria International Airport also played an important role in storm recovery efforts following hurricanes [[Hurricane Katrina|Katrina]] and [[Hurricane Rita|Rita]]. The airport was designated by the Louisiana Department of Transportation as a disaster relief staging and support area, and also served as a command center location for the coordination of aircraft and supplies as well as acting as a staging location for troops and workers who were involved in the recovery effort.
+
+In February 2004, [[Air Force One]] landed at the airport with President [[George W. Bush]] on board. This [[Boeing 747-200B]] ([[U.S. Air Force]] aircraft designation [[VC-25A]]) is one of the largest aircraft to have ever visited AEX. President [[Bill Clinton]] also landed at the airfield on board Air Force One during his presidency. However, the largest aircraft ever to have landed at the airport appears to be the [[Lockheed C-5 Galaxy]] military jet transport operated by the [[U.S. Air Force]].
+
+On November 4, 2010, the ''Memphis Business Journal'' reported that [[Delta Connection]], which operates passenger feeder services via a codesharing agreement with [[Delta Air Lines]] with regional jets, had ceased service on the Alexandria-Memphis route due to poor performance. This route had previously been flown by [[Northwest Airlink]] when [[Northwest Airlines]] was operating a connecting hub in Memphis. Delta acquired the Memphis hub when its merger with Northwest was completed and has since consolidated many of the former Memphis routes to its larger Atlanta hub. Alexandria continues to be served on a nonstop basis to and from Atlanta by the Delta Connection.
+
+In July 2025, Alexandria International Airport was identified by ''[[The New York Times]]'' as the "busiest deportation hub" of the [[United States Immigration and Customs Enforcement]] (ICE) agency, with 80 more deportation flights than the second-busiest airport at press time. A detention facility with 400 beds and spanning 70,000 square feet, known as the 'Alexandria Staging Facility' run by [[The GEO Group]] is located on the airport's tarmac. An investigation into the facility found "a pattern of alleged due process violations, previously unreported accounts of neglect and abuse, documented health emergencies and long stays, despite the center’s intended use as a short-term detention facility"<ref>{{Cite news |last1=McDonald |first1=Brent |last2=Robertson |first2=Campbell |last3=Levitt |first3=Zach |last4=Sun |first4=Albert |last5=Agnew |first5=Singeli |last6=Laffin |first6=Ben |date=July 31, 2025 |title=How Louisiana Built Trump's Busiest ICE Deportation Hub |url=https://www.nytimes.com/interactive/2025/07/31/us/ice-deportation-hub-alexandria-louisiana.html |access-date=July 31, 2025 |work=The New York Times |language=en-US |issn=0362-4331}}</ref><ref>{{cite news |last1=Laughland |first1=Oliver |last2=Craft |first2=Will |last3=Amjad |first3=Raima |title=Trump's deportation hub: inside the 'black hole' where immigrants disappear |url=https://www.theguardian.com/us-news/ng-interactive/2025/sep/12/ice-detention-alexandria-staging-facility |work=[[The Guardian]] |date=September 12, 2025}}</ref>
+
+== Facilities and aircraft ==
+Alexandria International Airport covers an area of 3,212 acres (1,300 [[hectare|ha]]) at an elevation of 89 feet (27 m) above [[mean sea level]]. It has two [[runway]]s: 14/32 is 9,352 by 150 feet (2,850 x 46 m) with a concrete surface; 18/36 is 7,001 by 150 feet (2,134 x 46 m) with an [[Asphalt concrete|asphalt]] and concrete surface.<ref name="FAA" />
+
+For the 12-month period ending December 31, 2022, the airport had 30,130 aircraft operations, an average of 82 per day: 51% [[general aviation]], 25% [[military aviation|military]], 13% [[air taxi]], and 11% [[airline|scheduled commercial]]. 55 aircraft were then based at this airport: 31 single-[[aircraft engine|engine]], 7 multi-engine, 13 [[jet aircraft|jet]], and 4 [[helicopter]].<ref name="FAA" />
+
+The James L. Meyer Terminal is named for the first chairman of the England Airpark Authority. James Meyer, a Rapides Parish native who died in 1998, was a partner in the Alexandria-based civil engineering firm, Meyer, Meyer, LaCroix, and Hixson, and worked to establish the new airport. The terminal was dedicated in 2011, with Meyer's widow, Joy Sumner Meyer (1933–2013), speaking at the ceremony.<ref>{{cite web | url=http://www.legacy.com/obituaries/thetowntalk/obituary.aspx?n=joy-sumner-meyer&pid=163095390#fbLoggedOut | title=Obituary: Joy Sumner Meyer | work=Alexandria Daily Town Talk | accessdate=February 17, 2013}}</ref>
+
+==Airlines and destinations==
+===Passenger===
+<!-- Please use only independent sources. The airport and airlines itself are not independent sources. -->
+{{Airport destination list
+| [[American Eagle (airline brand)|American Eagle]] | [[Dallas/Fort Worth International Airport|Dallas/Fort Worth]]<ref>{{cite news |title=New gates at DFW, changes to AEX flights |url=https://www.kalb.com/content/news/New-gates-at-DFW-changes-to-AEX-flights-509434321.html |access-date=12 January 2026 |work=KALB |date=3 May 2019 |language=en}}</ref>
+| [[Delta Connection]] | [[Hartsfield–Jackson Atlanta International Airport|Atlanta]]<ref>{{cite web |last1=Miklells |first1=Bruce |title=Atlanta Airport Reveals Major Changes for Louisiana Travelers |url=https://973thedawg.com/louisiana-travelers-heads-up-big-changes-at-atlanta-airport/ |website=97.3 The Dawg |access-date=12 January 2026 |language=en |date=4 May 2025}}</ref>
+| [[United Express]] | [[George Bush Intercontinental Airport|Houston–Intercontinental]]<ref>{{cite web |last=Vedros |first=Colin |title=AEX announces the return of United flights |url=https://www.kalb.com/2025/10/31/aex-announces-return-united-airlines/ |work=KALB |date=October 31, 2025 |access-date=November 3, 2025}}</ref>
+}}
+
+===Destinations map===
+{| class="collapsible collapsed" style="border:1px #aaa solid; width:50em; margin:0.2em auto"
+|-
+! Destinations map
+|-
+|{{Location map+ |United_States |width=1000 |float=center
+|caption=Domestic destinations from Alexandria International Airport <br /> {{font color | red | Red}} = Year-round destination <br /> {{font color | blue | Blue }} = Future destination <br /> {{font color | pink | Pink }} = Destination being terminated
+|places=
+{{Location map~ |United_States |lat=31.3274|long=-92.5452|position=top|label='''<small>Alexandria</small>'''|caption=|mark=Airplane_silhouette.svg|marksize=15 }}
+{{Location map~ |United_States |lat=33.63666 |long=-84.428056 |position=right |label='''<small>[[Atlanta Airport|Atlanta]]</small>'''|label_size=90 |marksize=7 }}
+{{Location map~ |United_States |lat=32.899741|long=-97.040424|position=left |label='''<small>[[Dallas/Fort Worth International Airport|Dallas/Fort Worth]]</small>'''|label_size=90 |marksize=7 }}
+{{Location map~ |United_States |lat=29.984444|long=-95.341389|position=left |label='''<small>[[George Bush Intercontinental Airport|Houston–Intercontinental]]</small>'''|label_size=90|marksize=7 }}
+}}
+|}
+Delta Connection and American Eagle operate Canadair Regional Jet -700 and -900 aircraft while United Express operates CRJ-200 aircraft to Alexandria. In addition to scheduled passenger airline services, the airport has also handled numerous charters performed by large, widebody passenger aircraft (with an example being the [[McDonnell Douglas MD-11]] jetliner) that were supporting military personnel transportation requirements.
+
+===Statistics===
+{{Bar graph
+| title       = '''Carrier shares (August 2025 – July 2026)'''<ref name="transtats.bts.gov"/>
+| bar_width   = 32
+| width_units = em
+| label_type  = Carrier
+| data_type   = Passengers (arriving and departing)
+| data_max    = 113000
+| label1      = [[Endeavor Air]]
+| data1       = 113,000
+| comment1    = 51.94%
+| label2      = [[Envoy Air]]
+| data2       = 74,940
+| comment2    = 34.40%
+| label3      = [[SkyWest Airlines]]
+| data3       = 29,750
+| comment3    = 13.66%
+}}
+
+{| class="wikitable sortable"
+|+ '''Top domestic destinations (August 2025 – July 2026)'''<ref name="transtats.bts.gov">
+  {{cite web
+  | url = https://www.transtats.bts.gov/airports.asp?pn=1
+  | title = Alexandria, LA: Alexandria International (AEX)
+  | publisher = [[Bureau of Transportation Statistics]]
+  | date = July 2015 | accessdate = October 23, 2026
+  }}
+</ref><!--NOTE: source does not list airlines associated with destinations at the time-->
+! Rank
+! Airport
+! Passengers
+! Airline
+|-
+| 1
+| [[Hartsfield-Jackson Atlanta International Airport|Hartsfield-Jackson Atlanta International (ATL)]]
+| 55,760
+| Delta
+|-
+| 2
+| [[Dallas/Fort Worth International Airport|Dallas/Fort Worth International (DFW)]]
+| 49,460
+| American
+|-
+| 3
+| [[George Bush Intercontinental Airport|Houston–Intercontinental (IAH)]]
+| 4,440
+| United
+|}
+
+== Governance ==
+Alexandria International Airport is owned by the England Economic and Industrial Development District (England Authority). Sandra McQuain is the executive director of the England Authority and Scott Gammel is the Airport Manager.
+
+The England Authority has ten members of the Board of Commissioners. William Barron is the chairman of the board of Commissioners. Brady Baudin is the vice-chairman and Bart Jones is the Secretary/Treasurer. The other members of the Board include Richard Bushnell, Dennis Frazier, Curman Gains, Scott Linzay, Joe McPherson, and Charlie Weems.
+
+== Noise mitigation program ==
+Alexandria International Airport and the England Authority are implementing a Neighborhood Noise Mitigation Program, with funding from the Federal Aviation Administration's Airport Improvement Program and the Louisiana Department of Transportation. The Neighborhood Noise Mitigation Program includes residential and other noise sensitive buildings in areas surrounding the Airport. The program was approved by the FAA on August 14, 2007, as part of AEX's Airport Noise Compatibility Program. The Noise Compatibility Program determined that eligible buildings should be prioritized to family residences, institutions, and community facilities.
+
+As of November 2010, the England Authority has received $21 million from the FAA for their Noise Mitigation Program. The funding has been used for land acquisitions, relocation programs, and acoustical treatment programs.
+
+The Neighborhood Noise Mitigation Program is divided into two areas. The primary area includes the areas that are located where they are subjected to 70 DNL or greater. The secondary area includes areas that are located in areas that are subjected to 65 to 70 DNL. The areas affected were designated from the 2010 Part 150 Noise Study.
+
+Three options were approved for the primary areas. The first is the Property Acquisition and Relocation Assistance Program. The program was designed by the FAA to provide homeowners on a voluntary basis the opportunity to sell their property and move away from areas impacted by aircraft noise.
+
+The second option is the Aviation Easement Acquisition Program. The program gives interested homeowners a single cash payment in exchange for providing the England Authority with a signed Aviation Easement document.
+
+The third option is an Acoustical Treatment Program. This provides a range of acoustic modifications to participating homes. The program may include window and door modifications, wall and attic insulation, and ventilation modifications. All modifications done to the home through the program are free to the homeowner.
+
+Properties in the Secondary Area are eligible only for the Aviation Easement Acquisition and the Acoustical Treatment Programs.
+
+==England AFB Heritage Park==
+A sign at the heritage park, also known as England Airpark, and Flying Tiger Heritage Park, reads: "A symbol of all airmen past, present, and future, the England Air Force Base Heritage Park is a proud reminder of the Air Force’s role in our nation’s military history. Each of the five aircraft displayed here valiantly contributed to the defense of our country. They are suspended in simulated flight as a permanent reminder of the courage, dedication, and sacrifice of the men and women who have served their country as members of the finest Air Force in the world."
+
+In 2026, the aircraft heritage park, on the same site as the largest United States hub for deportation flights, is a site for construction of a family and children detention facility.<ref name="veritenews/alexandria-detention">{{cite news |title=Church leaders join fight against Alexandria immigrant detention center |url=https://veritenews.org/2026/08/25/alexandria-immigration-detention-families-children/ |access-date=1 September 2026 |work=veritenews.org |date=25 August 2026}}</ref><ref name="apnews/ice-deportation-louisiana-children">{{cite news |title=A new ICE facility could speed up deportations for families and kids |url=https://apnews.com/article/ice-new-deportation-facility-louisiana-children-families-02ce99eb592b4e392b5685b11368ca58 |access-date=1 September 2026 |work=[[AP News]] |date=6 July 2026 |language=en}}</ref>
+
+The aircraft at the heritage park are described below, as seen at the park, from left to right (west to east, clockwise).
+
+{| class="wikitable"
+! width="6%" |Identity (S/N or BuNo)
+! width="12%" |Aircraft
+! History
+! width="9%" |Photo
+|-
+|52-4931
+|[[North American F-86 Sabre|North American F-86F Sabre]]
+|Built as a North American F-86F-30-NA Sabre (MSN 191–627). The National Museum of the US Air Force ‘aircraft on loan’ list, lists this aircraft as a F-86E.<ref name="museum1">{{cite web|title=National Museum of the US Air Force Aircraft on Loan list (by location-updated Apr 2016)|url=https://www.nationalmuseum.af.mil/Portals/7/documents/other/aircraft_on_loan_by_location.pdf|access-date=May 7, 2018}}</ref> The sign at the aircraft says this plane has been painted to duplicate the aircraft flown by Lt Col John England, for whom England AFB is named. This plane is actually a Canadian built CL-13A Mk 5, serial number 23226.<ref>{{cite web|title=USAF Serial Number Search (52-4931)|url=http://cgibin.rcn.com/jeremy.k/cgi-bin/gzUsafSearch.pl?target=52-4931&content=|access-date=February 23, 2018}}</ref>
+|<small>[[File: England AFB Park F-86.jpg|frameless|100x100px]]</small>
+|-
+|152660 (Navy BuNo)
+|[[LTV A-7 Corsair II|Ling-Temco-Vought A-7A Corsair II]]
+|Built as a Ling-Temco-Vought A-7A-3a-CV Corsair II. The sign at the aircraft says it is painted to duplicate a past [[23d Wing|23 TFW]] commander's aircraft.<ref>{{cite web|title=USN Bureau Number Search (152660)|url=http://cgibin.rcn.com/jeremy.k/cgi-bin/gzNavySearch.pl?target=152660&series=3|access-date=February 23, 2018}}</ref>
+|<small>[[File: England AFB Park A-7.jpg|frameless|100x100px]]</small>
+|-
+|73-1667
+|[[Fairchild Republic A-10 Thunderbolt II|Fairchild Republic A-10A Thunderbolt II]]
+|Built as a Fairchild Republic A-10A Thunderbolt II. The National Museum of the US Air Force ‘aircraft on loan’ list, lists this aircraft as an A-10A(GY).<ref name="museum1"/><ref>{{cite web|title=USAF Serial Number Search (73-1667)|url=http://cgibin.rcn.com/jeremy.k/cgi-bin/gzUsafSearch.pl?target=73-1667&content=|access-date=February 23, 2018}}</ref>
+|<small>[[File: England AFB Park A-10.jpg|frameless|100x100px]]</small>
+|-
+|63-8296
+|[[Republic F-105 Thunderchief|Republic F-105G Thunderchief]]
+|Built as a Republic F-105F-1-RE Thunderchief (MSN F73) and later converted to F-105G. To [[309th Aerospace Maintenance and Regeneration Group|MASDC]] July 14, 1980, then to display at England AFB Heritage Park.<ref>{{cite web|title=USAF Serial Number Search (63-8296)|url=http://cgibin.rcn.com/jeremy.k/cgi-bin/gzUsafSearch.pl?target=63-8296&content=|access-date=February 23, 2018}}</ref>
+|<small>[[File: England AFB Park F-105.jpg|frameless|100x100px]]</small>
+|-
+|52-7080
+|[[Republic F-84F Thunderstreak]]
+|Built as a Republic F-84F-40-RE Thunderstreak.  On April 23, 1963, this aircraft crashed at the end of runway 22 at [[MacDill Air Force Base]]; the pilot was uninjured.  According to the sign in front of the aircraft, this plane was previously at Bringhurst Park in [[Alexandria, Louisiana|Alexandria]], and was unveiled at its current location on April 25, 1992, during a [[391st Fighter Squadron|391st FBS]] homecoming.<ref>{{cite web|title=USAF Serial Number Search (52-7080)|url= http://cgibin.rcn.com/jeremy.k/cgi-bin/gzUsafSearch.pl?target=52-7080&content=|access-date=February 23, 2018}}</ref>
+|<small>[[File: England AFB Park F-84.jpg|frameless|100x100px]]</small>
+|}
+
+==Accidents at or near AEX==
+On September 6, 1955, a [[USAF]] Kaiser-Frazer [[Fairchild C-119 Flying Boxcar]] crashed after takeoff due to engine failure 3.1 miles north of then Alexandria-England AFB. Four of the six crew on board were killed.<ref>{{ASN accident|id=19550906-1| accessdate=October 30, 2020| title=51-8142}}</ref>
+
+On April 20, 2018, A [[McDonnell Douglas MD-83]] (registration N807WA) operated by [[World Atlantic Airlines]] suffered a right-hand main [[landing gear]] collapse during landing rollout. Due to the gear failure, the right wing dragged on the runway, creating a friction fire which was quickly put out by the airport rescue and firefighting personnel. The aircraft operated on a flight on behalf of the [[U.S. Immigration and Customs Enforcement]] and originated from [[Chicago-O'Hare International Airport]]. None of the 101 passengers on board were injured, but the aircraft suffered significant damage and was later written off as irreparable. As of April 5, 2024, it still occupies the South Ramp.
+
+==See also==
+* [[List of airports in Louisiana]]
+
+== References ==
+<references />
+
+==External links==
+* [http://www.englandairpark.org/ Alexandria International Airport]
+* [http://msrmaps.com/map.aspx?t=1&s=12&lat=31.3284&lon=-92.5466&w=1000&h=900&lp=---+None+--- Aerial image as of January 1998] from [[USGS]] ''[[The National Map]]''
+* {{FAA-diagram|00013|AEX}}
+* {{FAA-procedures|AEX}}
+* {{US-airport|AEX}}
+{{Alexandria, Louisiana}}
+
+[[Category:Airports in Louisiana]]
+[[Category:Buildings and structures in Rapides Parish, Louisiana]]
+[[Category:Airports established in 1939]]
+[[Category:1939 establishments in Louisiana]]

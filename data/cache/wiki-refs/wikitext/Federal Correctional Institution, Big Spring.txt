@@ -1,0 +1,110 @@
+{{Short description|Low-security prison in Texas, US}}
+{{About|the federally-owned prison|the privately-owned prison|Big Spring Correctional Center}}
+{{Use American English|date=August 2025}}
+{{Infobox prison
+| name           = Federal Correctional Institution, Big Spring
+| image          = FCI Big Spring.jpg
+| image_size     = 275
+| location       = [[Big Spring, Texas|Big Spring]], [[Howard County, Texas]]
+| coordinates    = 
+| status         = Operational
+| classification = Low-security (with minimum-security prison camp)
+| population     = 1,018 plus (114 plus in prison camp)
+| opened         = 1979
+| closed         = 
+| managed_by     = [[Federal Bureau of Prisons]]
+| warden         = Chad Humphrey
+}}
+
+The '''Federal Correctional Institution, Big Spring''' ('''FCI Big Spring''') is a low-security United States [[federal prison]] for male inmates in [[Texas]]. It is operated by the [[Federal Bureau of Prisons]], a division of the [[United States Department of Justice]]. The facility also has a satellite prison camp which houses minimum-security male offenders.
+
+FCI Big Spring is located in the city of [[Big Spring, Texas]], midway between [[Dallas]] and [[El Paso, Texas|El Paso]].<ref>{{cite web|title=FCI Big Spring|url=https://www.bop.gov/locations/institutions/big/index.jsp|publisher=Federal Bureau of Prisons}}</ref>  The town is also the location of the privately owned and operated [[Big Spring Correctional Center]], which contracts with the FBOP to house federal detainees at four locations.  Both FCI Big Spring and the BSCC occupy buildings and facilities repurposed from the closed [[Webb Air Force Base]].
+
+==Notable inmates (current and former)==
+{|class="wikitable sortable"
+|-
+!width=13%|Inmate Name
+!width=9%|Register Number
+!width=5%|Photo
+!width=24%|Status
+!width=54%|Details
+|-
+| style="text-align:center;"| [[Robert Courtney (fraudster)|Robert Courtney]] 
+| style="text-align:center;"| [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=14536-045&x=107&y=19 14536-045]{{Dead link|date=August 2025 |bot=InternetArchiveBot |fix-attempted=yes }}
+| 
+| Now at [[Federal Correctional Institution, Englewood|FCI Englewood]]; scheduled for release in 2026.
+| Former [[pharmacist]]; pleaded guilty in 2002 to deliberately diluting the [[chemotherapy]] drugs of an estimated 4,200 cancer patients for profit; known as "The Toxic Pharmacist;" the story was featured on the CNBC television show ''[[American Greed]]''.<ref>{{cite magazine|last1=Draper|first1=Robert|title=The Toxic Pharmacist|url=https://www.nytimes.com/2003/06/08/magazine/the-toxic-pharmacist.html?ref=topics|access-date=3 October 2015|magazine=The New York Times Magazine|date=June 8, 2003}}</ref>
+|-
+| align="center" |[[Boston Marathon bombing#Dzhokhar Tsarnaev's roommates|Dias Kadyrbayev]]
+| align="center" |[https://www.bop.gov/inmateloc/ 95091-038]
+| align="center" |
+| Released in 2018 and deported to Kazakhstan.<ref>{{Cite magazine|url=https://time.com/5443092/dias-muratovich-kadyrbayev-deported-boston-bombings/|title=Friend Who Helped Boston Bomber Get Rid of Evidence Deported to Kazakhstan|last=Law|first=Tara|date=2 November 2018|magazine=Time|access-date=4 February 2020}}</ref>
+| Friend of [[Dzhokhar Tsarnaev]], perpetrator of the 2013 [[Boston Marathon bombing]]; pleaded guilty in 2015 to [[conspiracy (crime)|conspiring]] to [[obstruction of justice|obstructing justice]] for retrieving and disposing of evidence in order to impede the bombing investigation.<ref>{{cite news|last1=Valencia|first1=Milton J.|title=Dzhokhar Tsarnaev's friend gets six-year prison term|url=https://www.bostonglobe.com/metro/2015/06/02/tsarnaev-friend-scheduled-for-sentencing-tuesday/88F7NNXtQAflE8lOMI4NwI/story.html|work=Boston Globe|access-date=14 August 2015|date=June 2, 2015}}</ref><ref>{{cite web|title=Dias Kadyrbayev Sentenced to Six Years for Impeding the Boston Marathon Bombing Investigation|url=https://www.fbi.gov/boston/press-releases/2015/dias-kadyrbayev-sentenced-to-six-years-for-impeding-the-boston-marathon-bombing-investigation|website=Federal Bureau of Investigation|publisher=US Department of Justice|access-date=14 August 2015|date=June 2, 2015}}</ref>
+|-
+| align="center" |[[Juan Carlos de la Cruz Reyna]]
+| align="center" |[http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=98832-179 98832-179]{{Dead link|date=August 2025 |bot=InternetArchiveBot |fix-attempted=yes }}
+| align="center" |
+| Serving a 135-month (11.25 year) sentence;<ref name="Id9DEf"/> released into Mexican custody 19 October 2021.<ref name="dVDzS">{{Cite web|url=https://www.bop.gov/inmateloc/|title=Juan Carlos de la Cruz Reyna – Register Number: 98832-179|publisher=[[Federal Bureau of Prisons]]|archive-url=https://web.archive.org/web/20170618072724/https://www.bop.gov/inmateloc/|archive-date=18 June 2017|url-status=live|access-date=26 January 2019}}</ref><ref>{{cite web | url=https://www.elsoldetampico.com.mx/policiaca/entrega-estados-unidos-a-presunto-lider-criminal-de-tamaulipas-7362166.html | title=Entrega Estados Unidos a presunto líder criminal de Tamaulipas }}</ref>
+| [[Gulf Cartel]] leader who [[1999 Matamoros standoff|assaulted two U.S. federal agents]] in Mexico in 1999. He was convicted of assault in 2009. In 2012, he was convicted of bribery for attempting to pay off a U.S. undercover agent to arrange his release to members of his criminal group.<ref name="Id9DEf">{{Cite web|url=https://archives.fbi.gov/archives/sanantonio/press-releases/2012/gulf-cartel-figure-and-five-others-sentenced-to-prison-in-bribery-scheme|title=Gulf Cartel Figure and Five Others Sentenced to Prison in Bribery Scheme|date=10 October 2012|publisher=[[Federal Bureau of Investigation]]|location=Brownsville, Texas|archive-url=https://web.archive.org/web/20170710162348/https://archives.fbi.gov/archives/sanantonio/press-releases/2012/gulf-cartel-figure-and-five-others-sentenced-to-prison-in-bribery-scheme|archive-date=10 July 2017|url-status=live}}</ref>
+|-
+| align="center" |[[Anthony Pellicano]]
+| align="center" |[http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=21568-112&x=70&y=15 21568-112]{{Dead link|date=August 2025 |bot=InternetArchiveBot |fix-attempted=yes }}
+| align="center" |
+| Released in 2019 after serving a fifteen-year sentence.<ref>{{Cite web|url=https://www.nytimes.com/2019/03/22/arts/anthony-pellicano-prison-release.html|title=Anthony Pellicano, Notorious Detective to the Stars, Walks Free From Prison|last=Harris|first=Elizabeth A.|date=22 March 2019|website=New York Times|access-date=4 February 2020}}</ref>
+| Former [[private investigator]] for celebrities including [[Michael Jackson]], [[Tom Cruise]] and [[Steven Seagal]]; convicted in 2008 of illegal [[telephone tapping|wiretapping]], [[racketeering]] and [[wire fraud]]. Later transferred to [[Federal Correctional Institution, Terminal Island|FCI Terminal Island]].<ref>{{cite news|last=Barnes|first=Brooks|title=Pellicano Sentenced to 15 Years in Prison|url=https://www.nytimes.com/2008/12/16/business/media/16pellicano.html?ref=anthonypellicano&_r=2&|newspaper=The New York Times|date=December 15, 2008}}</ref><ref>{{cite magazine|last=Burrough, Bryan|first=Connolly, John|title=Talk of the Town|url=https://www.vanityfair.com/culture/features/2006/06/pellicano200606|magazine=Vanity Fair}}</ref> before being released in 2019.
+|-
+| align="center" |[[David Duke]]
+| align="center" |28213-034
+| [[File:Rsz davidduke (cropped).jpg|80px]]
+|Released in 2004
+|Politician and white nationalist convicted of tax fraud.<ref>{{cite web |title=David Duke Gets 15-Month Sentence for Fraud |url=https://www.foxnews.com/story/david-duke-gets-15-month-sentence-for-fraud |website=Associated Press |access-date=21 August 2019 |date=25 March 2015}}</ref>
+|-
+| align="center" |[[Leland Yee]]
+| align="center" | 19629-111
+| align="center" | [[File:Leland Yee.jpg|80px]]
+| Served a 5-year sentence; released on June 26, 2020.
+| Former [[California Senate|California state senator]] charged with public corruption and gun trafficking. Pled guilty to a felony racketeering charge in relation to money laundering, public corruption and bribery in a [[Chinatown, San Francisco|San Francisco Chinatown]] organized crime case.
+|-
+| align="center" |Islam Said
+| align="center" | 06597-509
+| align="center" |
+| Serving a 10-year sentence, scheduled for release in 2028.
+| Son of [[Yaser Abdel Said]]. Pled guilty to harboring a fugitive, conspiring to harbor a fugitive, and one count of [[Obstruction of justice|conspiracy to obstruct justice]].
+|-
+| align="center" |[[Derek Chauvin]]
+| align="center" |47849-509
+| align="center" | 
+| Serving a 22 1/2 year sentence, scheduled for release in 2037.
+| Pleaded guilty to the [[murder of George Floyd]] on June 25, 2021.
+|-
+| align="center" |[[Don Black (white supremacist)|Don Black]]
+| align="center" |16692-034
+| align="center" |
+|Served a 2-year sentence; released November 15, 1984
+|Violation of the [[Neutrality Act of 1794|Neutrality Act]].<ref>{{Cite web |date=October 4, 1983 |title=Klan leader asks ACLU to join legal fight - UPI Archives |url=https://www.upi.com/Archives/1983/10/04/Klan-leader-asks-ACLU-to-join-legal-fight/6335434088000/ |access-date=2025-01-01 |website=UPI |language=en}}</ref>
+|-
+| align="center" | [[Miguel Rodríguez Orejuela]]
+|[https://www.bop.gov/inmateloc/ 14022-059]
+| style="text-align:center;"| [[File:Traqueticomiguelrodriguez.png|80px]]
+| Serving a 30-year sentence; scheduled for release in 2028.
+| Co-founder of the now-[[wikt:Defunct|defunct]] [[Cali Cartel]], which was responsible for as much as 80% of the cocaine brought into the US in the 1970s and 1980s; co-founder [[Gilberto Rodríguez Orejuela]] was also serving a 30-year sentence.<ref>{{cite web|title=Cali Cartel Leaders Plead Guilty to Drug and Money Laundering Conspiracy Charges|url=https://www.justice.gov/opa/pr/2006/September/06_crm_646.html|publisher=US Department of Justice|access-date=26 October 2013|date=September 26, 2006}}</ref>
+|}
+
+==See also==
+{{Portal|United States|Politics|Texas}}
+*[[List of U.S. federal prisons]]
+*[[Federal Bureau of Prisons]]
+*[[Incarceration in the United States]]
+{{Clear}}
+
+==References==
+{{Reflist}}
+{{Federal Bureau of Prisons}}
+{{coord|32.22851|-101.50559|display=title}}
+
+[[Category:Buildings of the United States government in Texas]]
+[[Category:Prisons in Texas]]
+[[Category:Buildings and structures in Howard County, Texas]]
+[[Category:Federal Correctional Institutions in the United States|Big Spring]]
+[[Category:1979 establishments in Texas]]
+[[Category:Big Spring, Texas]]

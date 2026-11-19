@@ -1,0 +1,186 @@
+{{Short description|Federal prison in Maryland, United States}}
+{{update|date=April 2025}}
+{{Use American English|date=July 2025}}
+{{Infobox prison
+|name = Federal Correctional Institution, Cumberland
+|image = FCI.CUMBERLAND.jpg
+|image_size = 300
+|location = [[Allegany County, Maryland|Allegany County]],<br />near [[Cumberland, Maryland]]
+|coordinates =
+|status = Operational
+|classification = Medium-security (with minimum-security prison camp)
+|population = 1,179 (304 in prison camp)
+|opened = 1994
+|closed = 
+|managed_by = [[Federal Bureau of Prisons]]
+|director =
+}}
+The '''Federal Correctional Institution, Cumberland''' ('''FCI Cumberland''') is a medium-security United States [[federal prison]] for male inmates in Maryland. It is operated by the [[Federal Bureau of Prisons]], a division of the [[United States Department of Justice]]. The facility also has a satellite prison camp for minimum-security male offenders.<ref>{{cite web|title=FCI Cumberland|url=http://www.bop.gov/locations/institutions/cum/index.jsp|publisher=Federal Bureau of Prisons}}</ref>
+
+FCI Cumberland is located in [[unincorporated area|unincorporated]] [[Allegany County, Maryland|Allegany County]],<ref>{{cite web|url=https://www2.census.gov/geo/maps/DC2020/DC20BLK/st24_md/county/c24001_allegany/DC20BLK_C24001.pdf|title=2020 CENSUS - CENSUS BLOCK MAP: Allegany County, MD|publisher=[[U.S. Census Bureau]]|access-date=2024-08-05|page=23 (PDF p. 24/42)|quote=Federal Correctional Institution Cumberland}}</ref> western [[Maryland]], {{convert|130|mi|km}} northwest of [[Washington, D.C.]]
+
+FCI Cumberland also has a [[vehicle registration plate|license plate]] manufacturing center, where inmates produce license plates used on federal government vehicles.
+
+==Notable inmates==
+
+===Current===
+{|class="wikitable sortable"
+|-
+!width=13%|Inmate Name
+!width=10%|Register Number
+!width=5%|Photo
+!width=23%|Status
+!width=54%|Details
+|-
+| style="text-align:center;" |[[Matthew F. Hale]]
+| style="text-align:center;" |[http://www.bop.gov/inmateloc/ 15177-424]
+| style="text-align:center;" |
+|Serving a 40-year sentence; scheduled for release in 2036. Previously at [[ADX Florence]].
+|
+|-
+| align="center" | [[Jeffrey MacDonald]]
+| align="center" | [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=00131-177&x=84&y=12 00131-177] {{Webarchive|url=https://web.archive.org/web/20131029195111/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=00131-177&x=84&y=12 |date=2013-10-29 }}
+| [[File:Jeffrey MacDonald.webp|80px]]
+| Serving a life sentence.<ref>{{cite web|title=Jeffrey MacDonald: A Time For Truth|url=https://www.cbsnews.com/news/jeffrey-macdonald-a-time-for-truth/|work=CBS News|access-date=5 October 2015|date=March 16, 2007}}</ref>
+| Former [[US Army]] doctor; convicted in 1979 of the 1970 murders of his wife and two children in their home at [[Fort Bragg]] Army Base in North Carolina; the case was the subject of author [[Joe McGinniss]]'s book and [[NBC]]'s miniseries  ''[[Fatal_Vision_(miniseries)|Fatal Vision]]''.<ref>{{cite web|last=Moran|first=Terry|title=Jeffrey MacDonald Seeks New Trial in Triple Murder|url=https://abcnews.go.com/Nightline/TheLaw/jeffrey-mcdonald-seeks-trial-triple-murder/story?id=10648617|work=ABC News}}</ref>
+|-
+| align="center" | [[Ed and Elaine Brown|Ed Brown]]
+| align="center" | [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=03923-049&x=92&y=21 03923-049] {{Webarchive|url=https://web.archive.org/web/20131110221319/http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=03923-049&x=92&y=21 |date=2013-11-10 }}
+| 
+| Serving a 37-year sentence; scheduled for release in 2034.<ref>{{cite web|last1=Eyre|first1=Pete|title=Ed Brown, Caged For Questioning Ransom, Shares Thoughts|url=http://www.copblock.org/84767/ed-brown-caged-for-questioning-ransom-shares-thoughts/|website=copblock.org|access-date=5 October 2015|date=November 12, 2014}}</ref> Currently at [[Federal Correctional Institution, Gilmer|FCI Gilmer]].
+| [[Sovereign citizen movement]] member; convicted in 2009 of [[conspiracy (crime)|conspiracy]] for stockpiling bombs and firearms during an 8-month standoff with authorities attempting to apprehend him and his wife, Elaine Brown, for a 2007 [[tax evasion]] conviction.<ref>{{cite web|last=Feyerick|first=Deb|title=N.H. tax evaders taken into custody after standoff|url=http://www.cnn.com/2007/US/10/04/tax.standoff/index.html|publisher=CNN|access-date=21 October 2013|date=October 5, 2007}}</ref><ref>{{cite web|title=EDWARD BROWN SENTENCED TO 37 YEARS|url=https://www.justice.gov/usao/nh/press/january10/AH_TO_Brown.html|publisher=US Department of Justice|access-date=21 October 2013|date=January 11, 2010|archive-url=https://web.archive.org/web/20131014175154/http://www.justice.gov/usao/nh/press/january10/AH_TO_Brown.html|archive-date=14 October 2013|url-status=dead}}</ref><ref>{{cite web|last=Associated Press|title=Buyer beware? Feds to warn of land mines, booby traps on tax militants' auctioned NH land|url=https://www.foxnews.com/us/buyer-beware-feds-to-warn-of-land-mines-booby-traps-on-tax-militants-auctioned-nh-land/|publisher=Fox News|access-date=21 October 2013|date=July 20, 2013}}</ref>   
+|-
+| align="center" | Javaid Perwaiz
+| align="center" | 26867–083
+| 
+|Serving a 59-year sentence; scheduled for release in 2069.
+| Former OBGYN in Virginia who performed unnecessary surgeries, including hysterectomies and sterilizations, on women.<ref>{{cite web|url= https://www.justice.gov/usao-edva/pr/former-chesapeake-obgyn-sentenced-59-years-prison|title= Former Chesapeake OB/GYN Sentenced to 59 Years in Prison|access-date=October 9, 2021|date=October 9, 2021}}</ref>
+|-
+| align="center" | [[Clayton Waagner]]
+| align="center" | 17258–039
+| 
+|Scheduled for release in 2042.
+| Convicted bank robber and [[Anti-abortion violence|anti-abortion terrorist]] who was on one of the [[FBI Ten Most Wanted Fugitives]] and [[United States Marshals Service]] Top 15 Fugitives list.<ref>{{cite web | url=https://www.nbcnews.com/id/wbna12391379 | title=Anthrax hoaxer admits carjacking, robbery | website=[[NBC News]] | date=19 April 2006 }}</ref>
+|-
+| align="center" | Bobby Paul Edwards
+| align="center" | 32836–171
+| 
+| Serving a 10-year sentence; scheduled for release on November 6, 2026. Currently at [[Federal Correctional Institution, Jesup|FCI Jesup]].
+| Restaurant owner who forced mentally disabled employee to work at his restaurant. The case was high-profile over allegations that the crime was racially motivated (Edwards is white and the victim was black).<ref>{{Cite web |date=2019-11-06 |title=South Carolina Man Sentenced to 10 Years in Prison for Forcing Man with Intellectual Disability to Work at Restaurant |url=https://www.justice.gov/opa/pr/south-carolina-man-sentenced-10-years-prison-forcing-man-intellectual-disability-work |access-date=2022-04-01 |website=www.justice.gov |language=en}}</ref>
+|-
+| align="center" | [[Abduwali Muse]]
+| align="center" | 70636-054
+| 
+| Sentenced to 33 years and 9 months imprisonment, to be released June 20, 2038.
+| Convicted of hijacking, kidnapping and hosting-taking in connection to the [[Maersk Alabama hijacking]] in 2009.
+|-
+| align="center" | [[Takeshi Ebisawa]]
+| align="center" | 94582-509
+| 
+| Sentenced to 20 years imprisonment, to be released April 19, 2039.
+| 
+|-
+| align="center" | [[Ryan Salame]]
+| align="center" | 76655–510
+| 
+| Serving an 7.5-year sentence.<ref>{{cite web | url=https://fortune.com/crypto/2024/10/11/ftx-ryan-salame-sam-bankman-fried-linkedin-prison | title=Social media loving FTX exec Ryan Salame heads to prison—and his GOP wife may soon follow| date=11 Oct 2024}}</ref>
+| Convicted of conspiring to make unlawful political contributions, defrauding the [[Federal Election Commission]] and conspiring to operate an unlicensed money transmitting business, and was sentenced on May 28, 2024.<ref>{{cite web | url=https://www.justice.gov/usao-sdny/pr/former-ftx-executive-ryan-salame-sentenced-90-months-prison | title=Former FTX Executive Ryan Salame Sentenced To 90 Months In Prison| date=28 May 2024}}</ref>
+|-
+| align="center" | Marc Laruelle
+|73028-509
+|
+|Serving a 4-year sentence <ref>{{Cite web |date=2022-10-19 |title=Southern District of New York {{!}} Yonkers Doctor Pleads Guilty To Illegal Distribution Of More Than 100,000 Oxycodone Pills {{!}} United States Department of Justice |url=https://www.justice.gov/usao-sdny/pr/yonkers-doctor-pleads-guilty-illegal-distribution-more-100000-oxycodone-pills |access-date=2024-10-21 |website=www.justice.gov |language=en}}</ref>
+|Yonkers, NY psychiatrist and former [https://medicine.yale.edu/psychiatry/profile/ml23/ Yale] and [https://psychcrime.org/news/index.php?vd=3489&t=Columbia+University+Psychiatrist+Marc+Laruelle+Arrested+on+Federal+Controlled+Substance+Charges Columbia University] Professor and renowned schizophrenia researcher, who pled guilty to distributing 100,000 doses of a highly potent and addictive opioid without a legitimate medical purpose while acting outside the usual course of professional practice.   Laruelle charged patients as much as $800 per prescription, with the understanding that the drugs would be resold on the black market.<ref>{{Cite web |last=Kendall |first=Joshua C. |date=2023-08-14 |title=When Doctors Need Doctors: Lowering the Barriers to Seeking Help |url=https://undark.org/2023/08/14/when-doctors-need-doctors-lowering-the-barriers-to-seeking-help/ |access-date=2024-10-21 |website=Undark Magazine |language=en-US}}</ref>  
+|}
+
+===Former===
+{|class="wikitable sortable
+|-
+!width=13%|Inmate Name
+!width=10%|Register Number
+!width=5%|Photo
+!width=23%|Status
+!width=54%|Details
+|-
+| align="center" | [[Joe Watts|Joseph Watts]]
+| align="center" | 42320–053
+| 
+| Released from custody on January 14, 2022; served 11 years.
+| High ranking associate of the [[Gambino crime family]]. Was found guilty in 2011 for his part in a 1989 murder conspiracy on orders of [[John Gotti]].
+|-
+| align="center" | [[Bernard Kerik]]
+| align="center" | [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=84888-054&x=97&y=8 84888-054]{{Dead link|date=August 2025 |bot=InternetArchiveBot |fix-attempted=yes }}
+| [[File:BernardKerik.JPG|80px]]
+| Released from custody in 2013; served 3 years.<ref>{{cite news|agency=Reuters|title=Kerik Released From Prison After 3 Years|url=https://www.nytimes.com/2013/05/29/nyregion/kerik-released-from-prison-after-3-years.html|access-date=11 October 2013|newspaper=The New York Times|date=May 28, 2013}}</ref>
+| Former [[NYPD]] Commissioner and [[Secretary of Homeland Security|Homeland Security Secretary]] nominee under President [[George W. Bush]]; pleaded guilty in 2009 to [[tax evasion]] for accepting services from a company in return for his assistance in obtaining a city construction permit.<ref>{{cite news|last=Dolnick|first=Sam|title=Kerik Confesses to Cheating I.R.S. and Telling Lies|url=https://www.nytimes.com/2009/11/06/nyregion/06kerik.html|newspaper=The New York Times|date=November 5, 2009}}</ref> 
+|-
+| align="center" | [[Jack Abramoff]]
+| align="center" | [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=27593-112&x=95&y=8 27593-112]{{Dead link|date=August 2025 |bot=InternetArchiveBot |fix-attempted=yes }}
+| [[File:Jack Abramoff at "In the Dock" 2011.jpg|80px]]
+| Released from custody in 2010; served 42 months.<ref>{{cite web|last=Associated Press|title=Jack Abramoff Released from Prison|url=https://www.cbsnews.com/news/jack-abramoff-released-from-prison/|work=CBS News|access-date=25 October 2013|date=June 9, 2010}}</ref>
+| Former [[Washington, D.C.]]-based [[lobbyist]] at the center of the [[Jack Abramoff controversies|largest lobbying scandal in American political history]]; pleaded guilty in 2006 to [[fraud]], [[tax evasion]], and conspiracy to bribe public officials.<ref>{{cite news|last=Schmitt|first=Richard B.|title=Ex-GOP lobbyist Abramoff sentenced to 4 years in prison|url=https://www.latimes.com/archives/la-xpm-2008-sep-05-na-abramoff5-story.html|newspaper=Los Angeles Times|date=September 5, 2008}}</ref>
+|-
+| align="center" | [[Cameron Douglas]] 
+| align="center" | [http://www.bop.gov/inmateloc/ 70707-054]
+| [[File:Cameron Douglas at the SBIFF 2019.jpg|80px]]
+|Released on August 1, 2016; served 7 years.<ref>{{Cite web|title = Michael Douglas' Son Cameron To Be Released From Jail EarlIer Than Expected — News Comes On Eve Of Star's 70th Birthday|url = http://radaronline.com/exclusives/2014/09/michael-douglas-son-cameron-douglas-jail-released-birthday/|website = Radar Online|date = 10 September 2014|access-date = 2015-11-30}}</ref>
+|On July 28, 2009, Douglas was arrested by the Drug Enforcement Administration for possession of 0.5 pounds (0.23&nbsp;kg) of methamphetamine. Due to the large amount of the drug seized, Douglas was charged with intent to distribute. The charge carries a minimum prison sentence of 10 years and a maximum of life.
+|-
+| align="center" | Gordon Ernst
+| align="center" | 64601–037
+| 
+| Serving a 30-month sentence; scheduled for release in 2024.
+| Former [[Georgetown University]] men and women's tennis coach, pled guilty to conspiracy to commit federal programs bribery, three counts of federal programs bribery and filing false tax returns for failing to report many of the bribery payments as part of the [[2019 college admissions bribery scandal|Varsity Blues scandal]].<ref>{{cite web | url=https://www.bop.gov/mobile/find_inmate/byname.jsp#inmate_results | title=BOP: Federal Inmates by Name }}</ref>
+|-
+| align="center" | [[Stewart Rhodes]]
+| align="center" | 81981–509
+| [[File:Stewart Rhodes 2011.jpg|80px]]
+| Released after sentence was [[Commutation (law)#United States|commuted]] by [[Donald Trump|President Donald J. Trump]] on January 20, 2025.<ref>{{Cite web |title=Proud Boys and Oath Keepers leaders, jailed over January 6, are freed by President Trump |url=https://news.sky.com/story/proud-boys-and-oath-keepers-among-january-6-defendants-pardoned-by-president-trump-13293523 |access-date=2025-01-24 |website=Sky News |language=en}}</ref><ref>{{Cite web |date=2025-01-21 |title=Granting Pardons And Commutation Of Sentences For Certain Offenses Relating To The Events At Or Near The United States Capitol On January 6, 2021 |url=https://www.whitehouse.gov/presidential-actions/2025/01/granting-pardons-and-commutation-of-sentences-for-certain-offenses-relating-to-the-events-at-or-near-the-united-states-capitol-on-january-6-2021/ |access-date=2025-01-24 |website=The White House |language=en-US}}</ref>
+| Convicted of Seditious Conspiracy, Obstructing an Official Proceeding, and other crimes surrounding the Protest at the [[United States Capitol]] on [[January 6, 2021]] and sentenced to 18 years.<ref>{{Cite news |date=2023-05-25 |title=Oath Keepers leader Stewart Rhodes sentenced to 18 years for Capitol riot |url=https://www.bbc.com/news/world-us-canada-65651998 |access-date=2025-01-24 |language=en-GB}}</ref>
+|-
+| align="center" | [[Solomon Dwek]]
+| align="center" | [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=27925-050&x=82&y=26 27925-050]{{Dead link|date=August 2025 |bot=InternetArchiveBot |fix-attempted=yes }}
+| 
+| Released from custody in 2015; served 29 months.<ref>{{Cite news|url = http://www.nj.com/news/index.ssf/2015/03/solomon_dwek_at_center_of_federal_corruption_sting.html|title = Solomon Dwek, at center of big corruption sting, released early from prison|last = Sherman|first = Ted|date = March 20, 2015|work = NJ.com|access-date = June 27, 2015}}</ref>
+|Former real estate investor and key [[informant]] for [[Operation Bid Rig]], one of the largest corruption stings in US history resulting in the convictions of dozens of public officials in New Jersey; arrested in 2006 for masterminding a $50 million [[bank fraud]].<ref>{{cite news|title=-Year Sentence for Informer in Corruption Case|newspaper=The New York Times|date=October 18, 2012}}</ref><ref>{{cite news|last=Sherman|first=Ted|title=2 years later, legacy of Operation Bid Rig corruption sting lives on|url=http://www.nj.com/news/index.ssf/2011/07/as_nj_corruption_cases_wind_do.html|newspaper=The Star-Ledger of New Jersey|date=July 22, 2011}}</ref>
+|-
+| align="center" | [[Webster Hubbell]]
+| align="center" | [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=20219-009&x=82&y=26 20219-009]{{Dead link|date=August 2025 |bot=InternetArchiveBot |fix-attempted=yes }}
+| 
+| Released from custody in 1997; served two years.<ref>{{Cite web|url=https://archive.nytimes.com/www.nytimes.com/library/politics/050198hubbell-profile.html|title=Fees from Friends Bring Fresh Woes for Hubbell}}</ref>
+|A key figure in the [[Whitewater controversy]]; convicted of [[wire fraud]] and [[tax fraud]] for [[overbilling]] legal clients. See also: [[United States v. Hubbell]], a 2000 [[SCOTUS|Supreme Court]] case.<ref>{{cite news| url = https://www.washingtonpost.com/wp-srv/politics/special/clinton/stories/indict043098.htm| title = Washingtonpost.com Special Report: Clinton Accused| newspaper = [[The Washington Post]]}}</ref>
+|-
+| align="center" | [[Virginia jihad network|Masoud Khan]]
+| align="center" | [http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=46810-083&x=91&y=2 46810-083]{{Dead link|date=August 2025 |bot=InternetArchiveBot |fix-attempted=yes }}
+| 
+| Released in 2018 
+| Leader of the [[Virginia jihad network]]; convicted in 2004 of [[seditious conspiracy]] and other charges for attending a [[terrorist training camp]] run by the terrorist group [[Lashkar-e-Taiba]] and purchasing weapons in preparation to undertake violent jihad; several co-conspirators were also sentenced to prison.<ref>{{cite web|title='Paintball Terrorists' Convicted of Conspiracy|url=https://www.foxnews.com/story/paintball-terrorists-convicted-of-conspiracy/|publisher=FoxNews.com|access-date=12 October 2013|date=March 4, 2004}}</ref><ref>{{cite web |last= |date=June 15, 2004 |title=Sentences lengthy for 'Virginia jihad' |url=http://usatoday30.usatoday.com/news/nation/2004-06-15-virginia-jihad-sentence_x.htm |access-date=12 October 2013 |website=usatoday30.usatoday.com |publisher=USA Today}}</ref> Released in 2018 after judge [[Leonie Brinkema]] determined that the sentences of the men involved in the plot were "draconian" and vacated their sentences. As of 2020, all members of the network have been released from prison.
+|-
+| align="center" |[[Aldrich Ames]]
+| align="center" |40087-083
+|[[File:Aldrich Ames mugshot.jpg|frameless|102x102px]]
+|Died while serving a sentence of life without parole on January 5, 2026
+|American [[CIA]] [[counterintelligence]] officer; convicted of [[espionage]] on behalf of the [[Soviet Union]] and Russia in 1994; responsible for the arrest and eventual execution of numerous Soviet and Russian officials secretly working on behalf of the U.S. intelligence community
+|}
+
+==See also==
+{{Portal|United States|Politics|Law}}
+* [[List of U.S. federal prisons]]
+* [[Federal Bureau of Prisons]]
+* [[Incarceration in the United States]]
+
+== References ==
+<references />
+
+==External links==
+* [http://www.bop.gov/locations/institutions/cum/index.jsp Federal Correctional Institution Cumberland]
+
+{{Coord|39|35|44|N|78|45|45|W|type:landmark_region:US-MD|display=title}}
+
+{{Federal Bureau of Prisons}}
+{{Authority control}}
+
+[[Category:1994 establishments in Maryland]]
+[[Category:Buildings and structures in Allegany County, Maryland]]
+[[Category:Federal Correctional Institutions in the United States|Cumberland]]
+[[Category:Prisons in Maryland|Cumberland]]

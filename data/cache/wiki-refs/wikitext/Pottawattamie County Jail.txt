@@ -1,0 +1,56 @@
+{{Short description|Historic jail in Council Bluffs, Iowa, US}}
+{{Use American English|date=July 2025}}
+{{Use mdy dates|date=March 2025}}
+{{Infobox NRHP
+| name         = Squirrel Cage Jail<br/>Pottawattamie County Jail
+| nrhp_type    = nhl
+| image        = Council Bluffs Old Jail.JPG
+| caption      =
+| location     = 226 Pearl St.<br>[[Council Bluffs, Iowa]]
+| coordinates  = {{coord|41|16|35|N|95|50|39|W|display=inline,title}}
+| pushpin_map  = Iowa#USA
+| area         =
+| built        = 1885
+| architect    =
+| architecture =
+| added        = March 16, 1972
+| designated_nrhp_type = December 11, 2023
+| mpsub        =
+| ref_num      = 72000481 (NRHP listing),<ref name="NRIS">{{NRISref|2009a}}</ref><br>100009825 (NHL designation)
+}}
+The '''Pottawattamie County Jail''', also known as '''Squirrel Cage Jail''' in [[Council Bluffs, Iowa]], United States, was built in 1885 and it was listed on the [[National Register of Historic Places]] in 1972.<ref name="NRIS" />  The building is one of three extant "squirrel cage jails", also known as [[rotary jail]]s.  It was designated a [[National Historic Landmark]] in 2023.
+
+==History==
+Construction of the jail was simultaneous with that of the county's new courthouse, which was finished in 1888.<ref name="pottcounty">{{cite web|url=http://www.pottcounty.com/visitors/history.php |title=Pottawattamie County IA|publisher=Pottawattamie County, Iowa|access-date=2011-03-02|last= |first= }}</ref> It was designed by William H. Brown and Benjamin F. Haugh of [[Indianapolis, Indiana]],<ref name="pottcounty" /> at a cost of $30,000.<ref name="Historical Society">{{cite web|url=http://thehistoricalsociety.org/jail.htm|title=Historic Pottawattamie County Squirrel Cage Jail|publisher=Historical Society of Pottawattamie County|access-date=2011-03-02|url-status=dead|archive-url=https://web.archive.org/web/20110308112949/http://thehistoricalsociety.org/jail.htm|archive-date=2011-03-08}}</ref>
+
+The building was one of 18 such jails that were built in the United States and the only one that was three stories tall.<ref name="Historical Society" /> Also known as 'Squirrel Cage Jail', it was one of a handful of [[rotary jail]]s built in the Midwestern America in the mid-19th century. The building was designed for maximum security with minimal contact between the prisoners and the jailers.<ref name="pottcounty" /> The front part of the jail had offices for the jailer, a kitchen, trustee cells, and quarters for women. The rest of the building is made up of pie-shaped cells that revolved inside of a cage.
+
+The building was used as a jail until its closure in 1969.<ref name="Historical Society" /> In 1971, the Council Bluffs Park Board acquired the building, and in 1977, the county historical society took ownership of the building and maintains it as a museum.
+
+==In popular culture==
+===Television===
+The Pottawattamie County Jail was featured as a haunted location in a special episode of ''[[Ghost Adventures]]'' in 2019 titled, "Serial Killer Spirits: Axe-Killer Jail" which aired on the [[Travel Channel]].<ref>{{Cite web|url=https://www.travelchannel.com/shows/ghost-adventures/episodes/serial-killer-spirits-axe-killer-jail|title=Serial Killer Spirits: Axe Killer Jail}}</ref>
+
+===Radio===
+The jail was also referenced in an old time radio program [[Gang Busters]], in the episode Gang Busters – The Case of John K. Giles, which originally aired September 29, 1945.  In the episode [[John K. Giles]] is reportedly captured and sent to the "Pottawattamie Prison", a special jail with impregnable bars and microphones in the wall.  The escape artist fashioned a key out of a sharpened utensil and was able to unlock the cell door to get free.<ref>{{YouTube|id=t2vkinY_Q20|Gang Busters – The Case of John K. Giles|time=8m18s}}</ref>
+
+==See also==
+* [[List of National Historic Landmarks in Iowa]]
+* [[National Register of Historic Places listings in Pottawattamie County, Iowa]]
+
+==References==
+{{Reflist}}
+
+==External links==
+* [https://www.thehistoricalsociety.org/museums/squirrel-cage-jail-1.html Squirrel Cage Jail] – Historical Society of Pottawattamie County
+
+{{NHLs in IA}}
+{{NRHP in Pottawattamie County, Iowa}}
+
+[[Category:Government buildings completed in 1885]]
+[[Category:Museums in Council Bluffs, Iowa]]
+[[Category:National Register of Historic Places in Pottawattamie County, Iowa]]
+[[Category:Jails on the National Register of Historic Places in Iowa]]
+[[Category:Prison museums in the United States]]
+[[Category:History museums in Iowa]]
+[[Category:National Historic Landmarks in Iowa]]

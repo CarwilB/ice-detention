@@ -184,12 +184,23 @@ build_mn_arrests_data <- function(arrests, stays, detloc_lookup, geo_all,
 
   geo_lkp <- .build_geo_lookup(detloc_lookup, geo_all)
 
-  # County arrest counts (for choropleth)
-  county_counts <- mn_arr |>
-    dplyr::mutate(county = .parse_mn_county(apprehension_site_landmark)) |>
-    dplyr::count(county) |>
-    dplyr::filter(!is.na(county)) |>
+  # County arrest counts and per-county landmark detail (for choropleth).
+  # .parse_landmark_county_state() (state-arrests.R) attributes out-of-state
+  # landmarks to their own county/state so adjoining-state counties can be
+  # overlaid on the choropleth.
+  geo <- .parse_landmark_county_state(mn_arr$apprehension_site_landmark, "MINNESOTA")
+  county_parsed <- dplyr::bind_cols(
+    mn_arr,
+    geo |> dplyr::select(geo_county = county, geo_state = state)
+  )
+  county_counts <- county_parsed |>
+    dplyr::filter(!is.na(geo_county)) |>
+    dplyr::count(county = geo_county, state = geo_state) |>
     dplyr::arrange(dplyr::desc(n))
+  county_landmarks <- county_parsed |>
+    dplyr::filter(!is.na(geo_county)) |>
+    dplyr::count(county = geo_county, state = geo_state,
+                 landmark = apprehension_site_landmark, sort = TRUE)
 
   # All facilities appearing in itineraries
   all_facs <- mn_stays |>
@@ -226,6 +237,7 @@ build_mn_arrests_data <- function(arrests, stays, detloc_lookup, geo_all,
       dplyr::count(apprehension_criminality, sort = TRUE) |>
       dplyr::mutate(pct = round(n / sum(n) * 100, 1)),
     county_counts = county_counts,
+    county_landmarks = county_landmarks,
     first_fac     = .fac_with_geo(mn_stays, "detention_facility_code_first",
                                    "detention_facility_first", geo_lkp),
     last_fac      = .fac_with_geo(mn_stays, "detention_facility_code_last",

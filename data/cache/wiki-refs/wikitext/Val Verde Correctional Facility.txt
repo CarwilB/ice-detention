@@ -1,0 +1,41 @@
+{{short description|Private prison in Del Rio, Texas}}
+{{Use American English|date=August 2025}}
+{{Infobox Prison
+| name           = Val Verde Correctional Facility
+| image          = 
+| location       = 253 FM 2523 <br> [[Del Rio, Texas]]
+| coordinates    = 
+| status         = open
+| classification = medium
+| capacity       = 1407
+| opened         = 1998
+| closed         = 
+| managed_by     = [[GEO Group]]
+| director       = 
+}}
+
+The '''Val Verde Correctional Facility''' is a privately owned and operated prison, located in [[Del Rio, Texas|Del Rio]], [[Val Verde County, Texas]], operated by the [[GEO Group]] under contract with the county of Val Verde.  The county, in turn, contracts with [[U.S. Immigration and Customs Enforcement]], [[United States Marshals Service]], and the [[U.S. Customs and Border Protection]]. <ref>{{cite web|title=Val Verde Correctional Facility|url=http://www.geogroup.com/maps/locationdetails/33|website=GEO Group|accessdate=30 August 2016}}</ref>
+
+The facility holds a maximum of 1407 male and female prisoners, and was built in 1998.
+
+== History ==
+
+Val Verde has had a troubled history.  In early 2004 female detainee LeTisha Tapia reported to the warden that male and female prisoners were having regular sexual contact with the approval of guards.  She was then sexually assaulted by inmates and an officer as punishment for being a 'snitch'.  Tapia hanged herself.<ref>{{cite news|last1=Hughes|first1=Polly Ross|title=Suit claims Val Verde County jailers ignored inmate sex|url=http://www.chron.com/news/houston-texas/article/Suit-claims-Val-Verde-County-jailers-ignored-1558950.php|accessdate=30 August 2016|publisher=Houston Chronicle|date=16 February 2006}}</ref>  Her family sued and settled.  The money damages were undisclosed but the settlement terms mandated a full-time county monitor.
+
+In 2006 GEO Group also settled a lawsuit brought by a former black guard whose supervisor "kept a hangman’s noose in his office and a Polaroid photo of himself in a Ku Klux Klan hood in his desk."<ref>{{cite news|title=State sends 100 inmates to Texas|url=http://www.spokesman.com/stories/2007/jul/11/state-sends-100-inmates-to-texas/|accessdate=30 August 2016|publisher=Spokane Spokesman-Review|date=11 July 2007}}</ref>
+
+In July 2007 the [[Idaho Department of Corrections]] moved about 60 prisoners into Val Verde, roughly half of the Idaho prisoners withdrawn from another GEO Group facility in Texas for maltreatment. <ref>{{cite news|last1=Miller|first1=John|title=Idahoans Bound for Private Texas Prison|url=http://newsok.com/article/3081050|accessdate=30 August 2016|publisher=The Oklahoman|date=11 July 2007}}</ref>  The following month two inmates died of dehydration and two others hospitalized by a "mysterious illness".<ref>{{cite news|title=Feds will look into illness at Val Verde jail|url=http://www.chron.com/news/houston-texas/article/Feds-will-look-into-mystery-illness-at-Val-Verde-1802992.php|accessdate=30 August 2016|agency=AP|publisher=Houston Chronicle|date=11 August 2007}}</ref>  (The Idaho prisoners returned home no later than July 2009.)
+
+In May 2008 former guard Emmanuel Cassio pleaded guilty to federal civil rights charges brought from a 2006 incident where he punched an inmate, then obstructed the investigation. <ref>{{cite news|title=Former Del Rio, Texas, Corrections Officer Pleads Guilty to Civil Rights Violation|url=https://www.justice.gov/archive/opa/pr/2008/May/08-crt-363.html|accessdate=30 August 2016|publisher=U.S. Department of Justice press release|date=1 May 2008}}</ref> Cassio had been 19 years old at the time.  In 2007 another Val Verde guard was caught attempting to smuggle love letters and "cheap wine" into the facility.  She was sentenced to serve time where she'd worked. <ref>{{cite news|last1=Gleason|first1=Karen|title=Jailers Jailed|url=http://delrionewsherald.com/news/article_07cbbfd5-f07c-576e-abbb-8a73d9e429ba.html|accessdate=30 August 2016|publisher=Del Rio News Herald|date=20 May 2007}}</ref>
+
+In 2015 the former laundry supervisor at Val Verde was under federal indictment for the sexual abuse of a ward.  The supervisor faced a 15 year sentence.<ref>{{cite news|title=Federal Grand Jury Indicts Former Prison Supervisor for Sexual Abuse of a Ward|url=https://www.fbi.gov/contact-us/field-offices/sanantonio/news/press-releases/federal-grand-jury-indicts-former-prison-supervisor-for-sexual-abuse-of-a-ward|accessdate=30 August 2016|publisher=U.S. Attorney's Office Western District of Texas|date=14 October 2015}}</ref>
+
+==References==
+{{reflist}}
+
+{{coord|29.373212|-100.847885|format=dms|display=title|type:landmark}}
+
+[[Category:Prisons in Texas]]
+[[Category:Buildings and structures in Val Verde County, Texas]]
+[[Category:GEO Group]]
+[[Category:1998 establishments in Texas]]

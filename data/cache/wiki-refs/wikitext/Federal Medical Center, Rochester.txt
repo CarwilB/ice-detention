@@ -1,0 +1,176 @@
+{{Short description|United States federal medical prison}}
+{{Use American English|date=August 2025}}
+{{Infobox prison
+| name            = Federal Medical Center, Rochester<br/>(FMC Rochester)
+| image           = FederalMedicalCenterRochester.jpg
+| caption         = 
+| location        = [[Rochester, Minnesota]], U.S.
+| coordinates     = 
+| status          = Operational
+| classification  = Medical
+| capacity        = 
+| population      = 786
+| population_date = {{start date|2024|07|13}}
+| opened          = {{start date|1984}}
+| closed          = 
+| former_name     = 
+| managed_by      = [[Federal Bureau of Prisons]]
+| director        = 
+| governor        = 
+| warden          = Jared Rardin
+| website         = {{URL|https://www.bop.gov/locations/institutions/rch/}}
+}}
+
+The '''Federal Medical Center, Rochester (FMC Rochester)''' is a United States [[federal prison]] in Minnesota for male inmates requiring specialized or long-term medical or mental health care. It is designated as an administrative facility, which means it holds inmates of all security classifications. It is operated by the [[Federal Bureau of Prisons]], a division of the [[United States Department of Justice]].
+
+FMC Rochester is located in southeastern Minnesota, {{convert|2|mi|km}} east of downtown Rochester.<ref>{{cite web|url=http://www.bop.gov/locations/institutions/rch/index.jsp |title=FMC Rochester |publisher=Bop.gov |date=2015-06-11 |access-date=2015-10-09}}</ref>
+
+==Facility==
+FMC Rochester is one of six medical referral centers within the Federal Bureau of Prisons. Health Services staff at FMC include physicians, a dentist, dental assistants, nurse practitioners, physician assistants, nurses, pharmacists, pharmacy technicians, a radiological technician, physical therapists, laboratory technologists and a respiratory therapist. Mental Health Services through the Psychiatry and Psychology Departments are available to all inmates. These include educational groups, therapy groups, individual therapy, intensive diagnosis/assessment, and inpatient treatment. In addition, outpatient substance abuse treatment services are available.<ref>{{cite web|url=http://www.bop.gov/locations/institutions/rch/RCH_aohandbook.pdf |title=Admission and Orientation Handbook |publisher=Bop.gov |access-date=2015-10-09}}</ref>
+
+In 2009, Philip Fornaci, the director of the DC Prisoners' Project, stated that Rochester, along with [[FMC Butner]] and [[FMC Carswell]], "are clearly the "gold standard" in terms of what BOP facilities can achieve in providing medical care" and that they had provided "excellent medical care, sometimes for extremely complex medical needs."<ref name=Fornaci2009p2>Fornaci, Philip (Director of the DC Prisoners' Project). "[http://judiciary.house.gov/_files/hearings/pdf/Fornaci090721.pdf Federal Bureau of Prisons Oversight Hearing] {{Webarchive|url=https://web.archive.org/web/20160907070638/http://www.judiciary.house.gov/_files/hearings/pdf/Fornaci090721.pdf |date=2016-09-07 }}" ([https://web.archive.org/web/20160907070638/http://www.judiciary.house.gov/_files/hearings/pdf/Fornaci090721.pdf Archive]). Subcommittee on Crime, Terrorism, and Homeland Security. [[U.S. House of Representatives]] Committee on the Judiciary. July 21, 2009. Retrieved on February 5, 2016.</ref>
+
+==Notable incidents==
+In July 2009, Richard Torres, a correction officer at FMC Rochester, was indicted for smuggling [[contraband]] into the facility for an inmate in exchange for thousands of dollars in bribes. The contraband included cellular telephones, tobacco and [[creatine]] powder. Torres was terminated. Two months later, he pleaded guilty to soliciting a bribe and he was sentenced to one year in federal prison.<ref>{{cite web|url=http://minnesota.publicradio.org/display/web/2009/07/15/rochester_prison_guard?refid=0 |title=Rochester prison guard charged with smuggling contraband &#124; Minnesota Public Radio News |publisher=Minnesota.publicradio.org |access-date=2015-10-09}}</ref><ref>{{cite web|url=http://minnesota.publicradio.org/display/web/2010/03/04/guard-charged?refid=0 |title=Prison guard sentenced for smuggling contraband &#124; Minnesota Public Radio News |publisher=Minnesota.publicradio.org |date=2010-03-04 |access-date=2015-10-09}}</ref>
+
+==Notable inmates==
+
+===Current===
+{|class="wikitable sortable"
+|-
+!width=13%|Inmate Name
+!width=9%|[https://www.bop.gov/inmateloc/ Register Number]
+!width=5%|Photo
+!width=24%|Status
+!width=54%|Details
+|-
+| style="text-align:center;"| {{sortname|Jared Lee|Loughner}}
+| style="text-align:center;"| 15213-196
+| style="text-align:center;"| [[File:Jared Loughner USMS.jpg|80px]]
+| Serving 7 life sentences without parole plus 140 years.
+| Perpetrator of the [[2011 Tucson shooting]] in Arizona; pleaded guilty in 2012 to the attempted [[assassination]] of [[United States House of Representatives|U.S. Representative]] [[Gabby Giffords]] and the murder of six people, including [[United States federal judge|U.S. District Judge]] [[John Roll]].<ref>{{cite web|title=Jared Lee Loughner Pleads Guilty to Federal Charges in Tucson Shooting|url=https://www.fbi.gov/phoenix/press-releases/2012/jared-lee-loughner-pleads-guilty-to-federal-charges-in-tucson-shooting|publisher=Federal Bureau of Investigation|access-date=3 November 2013|date=August 7, 2012}}</ref><ref>{{cite web|title=Jared Loughner Sentenced To Life In Prison For Arizona Shooting That Wounded Gabrielle Giffords|url=http://www.huffingtonpost.com/2012/11/08/jared-loughner-sentenced_n_2092550.html|publisher=Huffington Post|access-date=3 November 2013|author=Jacques Billeaud|author2=Brian Skoloff |date=November 8, 2012}}</ref>
+|-
+| style="text-align:center;"| [[Luke Helder]]
+| style="text-align:center;"| 36460-048
+| style="text-align:center;"| [[File:LucasHelder.jpg|80px]]
+| Currently being held indefinitely.
+| Accused of planting homemade [[pipe bomb]]s in mailboxes in five Midwestern states in 2002; ruled incompetent to stand trial in 2004.<ref>{{cite news| url=http://articles.cnn.com/2002-05-10/us/mailbox.pipebombs_1_cameron-helder-federal-charges-lucas-helder?_s=PM:US | archive-url=https://web.archive.org/web/20120924124730/http://articles.cnn.com/2002-05-10/us/mailbox.pipebombs_1_cameron-helder-federal-charges-lucas-helder?_s=PM:US | url-status=dead | archive-date=September 24, 2012 | work=CNN | title=Federal charges brought against accused mailbox bomber | date=2002-05-10}}</ref><ref name="wqad001">{{cite web | last = Van Hyfte | first = Vanessa | title = Helder not fit to stand trial | work = WQAD Report | year = 2004 | url = http://www.wqad.com/Global/story.asp?s=1756862 | access-date = 2007-10-16 | archive-date = 2007-09-27 | archive-url = https://web.archive.org/web/20070927222552/http://www.wqad.com/Global/story.asp?s=1756862 | url-status = dead }}</ref><ref name="wqad002">{{cite web | title = Experts say mailbox bomb suspect unlikely to be freed soon | work = WQAD Report | date = 2004-04-06| url = http://www.wqad.com/Global/story.asp?s=1767322 | access-date = 2007-10-16 | archive-url = https://web.archive.org/web/20070927222627/http://www.wqad.com/Global/story.asp?s=1767322 | archive-date = 2007-09-27}}</ref>
+|-
+| style="text-align: center;" |[[Ray Holmberg]]
+| style="text-align: center;" |84357-510
+| style="text-align: center;" |[[File:Ray Holmberg 2021.png|center|frameless|112x112px]]
+|Serving a 10-year sentence; set to be released on January 23, 2033.
+|Former [[North Dakota Senate|North Dakota state senator]] and longest-serving state legislator in the United States; pleaded guilty to charges related to child sex tourism in 2024.<ref>{{Cite web |last=Beach |first=Amy Dalrymple, Jeff |date=2025-03-26 |title=Former ND Sen. Ray Holmberg sentenced to 10 years in prison for sex crime • North Dakota Monitor |url=https://northdakotamonitor.com/2025/03/26/former-nd-sen-ray-holmberg-sentenced-to-10-years-in-prison-for-sex-crime/ |access-date=2025-06-06 |website=North Dakota Monitor |language=en-US}}</ref>
+|-
+| style="text-align:center;"| [[Ming Sen Shiue]]
+| style="text-align:center;"| 00499-041
+| style="text-align:center;"|<!-- Deleted image removed:  [[File:Ming Sen Shiue.jpg|140px]] -->
+| Serving a life sentence with the possibility of parole.
+| Kidnapped Mary Stauffer and her daughter Elizabeth. Also serving a 40-year sentence on state murder charges for killing a 6-year-old boy who witnessed the crime. Shiue was detained indefinitely as a dangerous sexual predator in 2010.<ref>{{Cite web |date=2010-09-29 |title=Judge says killer-rapist Ming Sen Shiue can be held indefinitely |url=https://www.twincities.com/2010/09/29/judges-says-killer-rapist-ming-sen-shiue-can-be-held-indefinitely/ |access-date=2022-03-21 |website=Twin Cities |language=en-US}}</ref>
+|}
+
+===Former===
+{|class="wikitable sortable"
+|-
+!width=13%|Inmate Name
+!width=9%|[https://www.bop.gov/inmateloc/ Register Number]
+!width=5%|Photo
+!width=24%|Status
+!width=54%|Details
+|-
+| style="text-align:center;"| [[Jim Bakker]]
+| style="text-align:center;"| 07407-058
+| style="text-align:center;"| [[File:Jim Bakker 1977.png|80px]]
+| Served 5 years; released from custody on December 1, 1994.
+| Founder of [[Jim Bakker|Praise the Lord]] (PTL) Ministries; convicted of [[fraud]] in 1989 for stealing millions of dollars in donations from his members.<ref>{{cite news| url=https://www.latimes.com/archives/la-xpm-1989-09-02-mn-1185-story.html | work=Los Angeles Times | title=Bakker Begins Tests to Evaluate His Mental State | date=1989-09-02}}</ref><ref>{{cite web|url=http://postbulletin.com/news/stories/display.php?id=474869&query=van |title=Jim Bakker arrives – PostBulletin.com: Home |publisher=PostBulletin.com |date=1989-11-03 |access-date=2015-10-09}}</ref>
+|-
+| style="text-align:center;"| [[Sol Wachtler]]
+| style="text-align:center;"| 32571-054
+| style="text-align:center;"|
+| Served 11 months; released from custody on October 26, 1994.<ref>{{cite news|last=Van Gelder|first=Lawrence|title=Ex-Judge Wachtler to Move From Prison to Halfway House|url=https://www.nytimes.com/1994/08/27/nyregion/ex-judge-wachtler-to-move-from-prison-to-halfway-house.html|access-date=1 November 2013|newspaper=The New York Times|date=August 27, 1994}}</ref>
+| Former [[Chief Judge of the New York Court of Appeals|Chief Judge]] of the [[New York Court of Appeals]]; pleaded guilty in 1992 to sending messages to his ex-mistress threatening to kidnap her 14-year-old daughter in retaliation for her ending their affair.<ref>[https://www.nytimes.com/1993/09/05/nyregion/seeking-leniency-wachtler-blames-adversaries.html?scp=1&sq=%22sol+wachtler%22+pleaded+kidnap&st=nyt Seeking Leniency, Wachtler Blames Adversaries], ''The New York Times'', September 5, 1993</ref>
+|-
+| style="text-align:center;"| [[Lyndon LaRouche]]
+| style="text-align:center;"| 15204-083
+| style="text-align:center;"| [[File:Lyndon LaRouche (cropped).jpg|80px]]
+| Served 5 years; released from custody on January 26, 1994.
+| Three-time presidential candidate; convicted in 1988 of scheming to defraud the [[Internal Revenue Service|IRS]] and deliberately [[Default (finance)|defaulting]] on more than $30 million in [[loan]]s from his supporters.<ref>{{cite news| url=https://www.nytimes.com/1989/01/28/us/larouche-receives-15-year-sentence.html?pagewanted=all&src=pm | work=The New York Times | title=Larouche Receives 15-Year Sentence | date=1989-01-28}}</ref>
+|-
+| style="text-align:center;"| [[Miles J. Jones]]
+| style="text-align:center;"| 20907-045
+| style="text-align:center;"| [[File:Miles J. Jones.jpg|80px]]
+| Served 18 months; released from custody on August 26, 2010.
+| Forensic [[pathologist]]-[[physician]] convicted of income-tax evasion.<ref>{{cite web|url=https://www.justice.gov/tax/usaopress/2009/txdv09_jones_sen.pdf |title=John F. Wood : FORMER LIBERTY PATHOLOGIST SENTENCED FOR FAILING TO FILE TAX RETURNS |publisher=Justice.gov |access-date=2015-10-09}}</ref>
+|-
+| style="text-align:center;"| Sheikh [[Omar Abdel-Rahman]]<ref>{{cite web | publisher=[[KROC (AM)]] |title=Blind Sheik – Former Rochester Federal Prison Inmate – Has Died |url=http://krocam.com/blind-sheik-former-rochester-federal-prison-inmate-has-died/ |access-date=18 February 2017}}</ref>
+| style="text-align:center;"| 34892-054
+| style="text-align:center;"|[[File:Omar Abdel-Rahman.jpg|80px]]
+| Transferred to [[FMC Butner]], where he died on February 18, 2017.
+| Muslim cleric convicted of seditious conspiracy in connection with the [[1993 World Trade Center bombing]].<ref>{{cite web |last1=Preston |first1=Julia |title=Omar Abdel Rahman, Blind Cleric Found Guilty of Plot to Wage ‘War of Urban Terrorism,’ Dies at 78 |url=https://www.nytimes.com/2017/02/18/world/middleeast/omar-abdel-rahman-dead.html |website=The New York Times |access-date=30 July 2026 |date=18 February 2017}}</ref>
+|-
+| style="text-align:center;" |[[Dennis Hastert]]
+| style="text-align:center;"| 47991-424
+| style="text-align:center;"|[[File:Dennis Hastert 109th pictorial photo.jpg|80px]]
+| Served 13 months of a 15-month sentence; released from custody on August 16, 2017.
+|Former [[Republican Party (United States)|Republican]] [[Speaker of the United States House of Representatives|Speaker of the House]]; convicted of bank fraud in paying [[hush money]] to a victim to cover up his serial molestation of teenage boys.<ref>Michael Tarm, [http://www.startribune.com/ex-us-house-speaker-dennis-hastert-starts-prison-term/383984401/ Ex-Speaker Hastert enters prison: now Inmate No. 47991-424] {{Webarchive|url=https://web.archive.org/web/20160625010333/http://www.startribune.com/ex-us-house-speaker-dennis-hastert-starts-prison-term/383984401/ |date=2016-06-25 }}, Associated Press (June 22, 2016).</ref><ref>{{cite web |title=Prosecutors detail sex abuse allegations against Dennis Hastert |url=https://www.pbs.org/newshour/nation/prosecutors-detail-sex-abuse-allegations-against-dennis-hastert |website=PBS |access-date=30 July 2026}}</ref>
+|-
+| style="text-align:center;"| [[Leo Sharp|Leo Earl Sharp Sr.]]
+| style="text-align:center;"| 46394-039
+| style="text-align:center;"|[[File:Leo Sharp (2011 mugshot, age 87).jpg|80px]]
+| Served 13 months of a 3-year sentence; granted compassionate release on June 25, 2015.
+|Drug courier for [[Sinaloa Cartel]] and inspiration for [[Clint Eastwood]] movie ''[[The Mule (2018 film)|The Mule]]''.<ref>{{Cite web|url=https://www.nbcnews.com/news/us-news/michigan-drug-mule-leo-sharp-gets-3-years-90th-birthday-n99826|title=Michigan Drug 'Mule' Leo Sharp Gets 3 Years on 90th Birthday|website=[[NBC News]]}}</ref>
+|-
+| style="text-align:center;"| [[Gregory Scarpa]]
+| style="text-align:center;"| 30880-053
+| style="text-align:center;"| [[File:Scarpaa.jpg|80px]]
+| Died in custody on June 8, 1994.
+| [[Colombo crime family]] [[hitman]] and [[FBI]] [[informant]]; convicted in 1993 of racketeering and three murders.<ref>{{cite web |last1=Raab |first1=Selwyn |title=The Mobster Was a Mole for the F.B.I.; Tangled Life of a Mafia Figure Who Died of AIDS Is Exposed |url=https://www.nytimes.com/1994/11/20/nyregion/mobster-was-mole-for-fbi-tangled-life-mafia-figure-who-died-aids-exposed.html |website=The New York Times |access-date=30 July 2026 |date=20 November 1994}}</ref>
+|-
+| style="text-align:center;"| Keith E. Anderson 
+| style="text-align:center;"| 63025-004
+| style="text-align:center;"|
+| Served 20 years; released on July 19, 2019.
+| Owner of Anderson's Ark & Associates tax preparation company; extradited from Costa Rica in 2002; convicted in 2004 of [[conspiracy (crime)|conspiracy]], [[mail fraud]], [[wire fraud]] and [[money laundering]] for assisting over 2,000 clients in five countries evade taxes on millions of dollars of income.<ref>{{cite news| url=https://www.nytimes.com/2002/12/12/business/10-are-charged-in-tax-evasion-case-said-to-involve-2000.html | work=The New York Times | title=10 Are Charged in Tax Evasion Case Said to Involve 2,000 | date=2002-12-12}}</ref><ref>{{cite web|url=https://www.justice.gov/opa/pr/2005/April/05_tax_210.htm |title=#210: 04-22-05 FOUR DEFENDANTS SENTENCED IN $120 MILLION INTERNATIONAL TAX SHELTER CASE |publisher=Justice.gov |access-date=2015-10-09}}
+</ref>
+|-
+| style="text-align:center;"| Melvin Mayes
+| style="text-align:center;"| 09891-000
+| style="text-align:center;"|
+| Sentenced to 3 life sentences; granted [[compassionate release]] on February 15, 2022.<ref>{{cite news |last1=Meisner |first1=Jason |title=El Rukn general at center of bizarre Libyan terror plot to be released from prison |url=https://www.chicagotribune.com/news/criminal-justice/ct-el-rukn-gang-general-melvin-mayes-released-20220121-zggfwbmf4rcbvaqlrpx2xhbbnq-story.html |access-date=23 July 2023 |publisher=Chicago Tribune |date=21 January 2022}}</ref>
+| Lieutenant for [[El Rukn]] street gang leader [[Jeff Fort]]; convicted ''[[Trial in absentia|in absentia]]'' in 1987 of [[racketeering]], drug trafficking and conspiring to commit terrorist attacks in the US on behalf of the Libyan government; captured in 1995 after eight years as a fugitive.<ref>{{cite web|url=https://www.chicagotribune.com/1998/04/09/el-rukn-member-gets-3-life-terms-in-racketeering-case/|title=El Rukn Member Gets 3 Life Terms In Racketeering Case|work=tribunedigital-chicagotribune|access-date=1 May 2015}}</ref>
+|-
+| style="text-align:center;"| Yonathan Melaku
+| style="text-align:center;"| 79418-083
+| style="text-align:center;"|
+| Transferred to [[Baltimore]] [[Halfway house|Residential Reentry Management]].
+Serving a 25-year sentence; set to be released on January 12, 2028.
+| Perpetrator of the [[Northern Virginia military shootings]].<ref>{{Cite news|url=https://www.washingtonpost.com/local/crime/pentagon-shooter-sentenced-to-25-years-in-prison/2013/01/11/a9fbd47a-5c2a-11e2-9fa9-5fbdc9530eb9_story.html|title=Yonathan Melaku, who fired at Pentagon and other military facilities, sentenced to 25 years in prison|newspaper=Washington Post|date=January 11, 2013|access-date=September 8, 2024}}</ref>
+|-
+| style="text-align:center;"|[[Brian Kolfage]]
+| style="text-align:center;"|26978-017
+| style="text-align:center;"| [[File:Kolfage.png|80px]]
+| Released from custody on March 6, 2026.
+| Pleaded guilty to conspiracy to commit wire fraud, conspiracy to commit money laundering, filing false tax returns in connection with the [[We Build the Wall |We Build the Wall Scam]]. Kolfage was sentenced to 51 months in prison in April 2023.<ref>{{cite web |title=Two Sentenced To Prison For ‘We Build The Wall’ Online Fundraising Fraud Scheme |url=https://www.justice.gov/usao-sdny/pr/two-sentenced-prison-we-build-wall-online-fundraising-fraud-scheme |website=www.justice.gov |access-date=30 July 2026}}</ref>
+|}
+
+==See also==
+{{Portal|United States|Politics}}
+*[[List of United States federal prisons]]
+*[[Federal Bureau of Prisons]]
+*[[Incarceration in the United States]]
+{{Clear}}
+
+==References==
+{{Reflist|30em}}
+
+==External links==
+*[http://www.bop.gov/locations/institutions/rch/index.jsp FMC Rochester]
+
+{{Coord|44|01|27.36|N|92|26|10.65|W|region:US-MN_type:landmark_source:dewiki|display=title}}
+{{Federal Bureau of Prisons}}
+
+[[Category:Prisons in Minnesota|Rochester]]
+[[Category:Buildings and structures in Rochester, Minnesota]]
+[[Category:Federal Bureau of Prisons Administrative Facilities|Rochester]]
+[[Category:1984 establishments in Minnesota]]
+[[Category:Prison hospitals]]

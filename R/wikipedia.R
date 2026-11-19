@@ -607,7 +607,8 @@ generate_population_wikitable <- function(cid, facilities_panel, facility_presen
 .wiki_list_column_names <- c(
   "Facility Name",
   "Status (year)",
-  "Location",
+  "City",
+  "State",
   "Facility Type",
   "Authority",
   "Management",
@@ -616,11 +617,134 @@ generate_population_wikitable <- function(cid, facilities_panel, facility_presen
   "Demographics"
 )
 
-# Two city-link disambiguations needed for the Wikipedia table
+# Two city-link disambiguations needed for the Wikipedia table, plus
+# Guantanamo: the Migrant Operations Center's "Fpo, FL" city is a Fleet Post
+# Office military mailing address with no Wikipedia article. The remaining
+# entries expand ICE's abbreviated city names, which lack the standard
+# "City, ST" comma-state redirects (found by the era-table city-link scans).
 .city_link_overrides <- c(
   "Philipsburg, PA" = "Philipsburg, Centre County, Pennsylvania",
-  "Greenwood, WV"   = "Greenwood, Doddridge County, West Virginia"
+  "Greenwood, WV"   = "Greenwood, Doddridge County, West Virginia",
+  "Fpo, FL"         = "Guant\u00e1namo Bay Naval Base",
+  "Thornton, PA"    = "Thornton, Pennsylvania",
+  "Bedford Hts, OH" = "Bedford Heights, Ohio",
+  "St Johns, AZ"    = "St. Johns, Arizona"
 )
+
+# State → Wikipedia article titles, following the links used by
+# Template:United States political divisions (retrieved 2026-10-25):
+# https://en.wikipedia.org/wiki/Template:United_States_political_divisions
+# Three states need disambiguated titles (Georgia, New York, Washington);
+# every other state links to its plain-name article. Non-state entries
+# (DC, PR, GU) use their primary-topic articles. Note two of these titles
+# (New York (state), Washington (state)) are redirects on Wikipedia — that
+# is what the template links, so it is what we emit. Editor errors on the
+# live article ([[Arizona|AR]] for Arkansas, [[Master of Arts|MA]] for
+# Massachusetts) are not adopted.
+state_article_titles <- c(
+  "AL" = "Alabama",                  "AK" = "Alaska",
+  "AZ" = "Arizona",                  "AR" = "Arkansas",
+  "CA" = "California",               "CO" = "Colorado",
+  "CT" = "Connecticut",              "DE" = "Delaware",
+  "FL" = "Florida",                  "GA" = "Georgia (U.S. state)",
+  "HI" = "Hawaii",                   "ID" = "Idaho",
+  "IL" = "Illinois",                 "IN" = "Indiana",
+  "IA" = "Iowa",                     "KS" = "Kansas",
+  "KY" = "Kentucky",                 "LA" = "Louisiana",
+  "ME" = "Maine",                    "MD" = "Maryland",
+  "MA" = "Massachusetts",            "MI" = "Michigan",
+  "MN" = "Minnesota",                "MS" = "Mississippi",
+  "MO" = "Missouri",                 "MT" = "Montana",
+  "NE" = "Nebraska",                 "NV" = "Nevada",
+  "NH" = "New Hampshire",            "NJ" = "New Jersey",
+  "NM" = "New Mexico",               "NY" = "New York (state)",
+  "NC" = "North Carolina",           "ND" = "North Dakota",
+  "OH" = "Ohio",                     "OK" = "Oklahoma",
+  "OR" = "Oregon",                   "PA" = "Pennsylvania",
+  "RI" = "Rhode Island",             "SC" = "South Carolina",
+  "SD" = "South Dakota",             "TN" = "Tennessee",
+  "TX" = "Texas",                    "UT" = "Utah",
+  "VT" = "Vermont",                  "VA" = "Virginia",
+  "WA" = "Washington (state)",       "WV" = "West Virginia",
+  "WI" = "Wisconsin",                 "WY" = "Wyoming",
+  "DC" = "Washington, D.C.",         "PR" = "Puerto Rico",
+  "GU" = "Guam"
+)
+
+#' Render the State cell for a 2-letter state abbreviation
+#'
+#' Links each state to the Wikipedia article title used by
+#' Template:United States political divisions — disambiguating Georgia,
+#' New York, and Washington. Abbreviations without an entry in
+#' `state_article_titles` fall through to plain text.
+#'
+#' @param state Character vector of 2-letter state abbreviations.
+#' @return Character vector of `[[Article title|AB]]` wikitext (or the
+#'   abbreviation unchanged when it cannot be linked).
+wiki_state_link <- function(state) {
+  title <- unname(state_article_titles[state])
+  dplyr::if_else(
+    !is.na(state) & !is.na(title),
+    paste0("[[", title, "|", state, "]]"),
+    state
+  )
+}
+
+# Article convention (adopted from other editors): facility types are in
+# sentence case in the list article, and the pipeline's "Jail/Prison"
+# vocabulary renders as plain "Jail". Values not in the map pass through.
+.wiki_type_display <- c(
+  "Jail/Prison"                            = "Jail",
+  "Dedicated Migrant Detention Center"     = "Dedicated migrant detention center",
+  "Private Migrant Detention Center"       = "Private migrant detention center",
+  "Federal Prison"                         = "Federal prison",
+  "ICE Migrant Detention Center"           = "ICE migrant detention center",
+  "ICE Short-Term Migrant Detention Center" = "ICE short-term migrant detention center",
+  "Family Detention Center"                = "Family migrant detention center",
+  "State Migrant Detention Center"         = "State migrant detention center",
+  "Military Detention Center"              = "Military detention center",
+  "Juvenile Detention Center"              = "Juvenile detention center",
+  "Medical Facility"                       = "Medical facility",
+  "ICE Hold Room"                          = "ICE hold room"
+)
+
+# Management values that other editors wikilinked in the article; the rest
+# stay plain text. Applied after standardize_management().
+.management_wikilinks <- c(
+  "CoreCivic"                                = "[[CoreCivic]]",
+  "GEO Group"                                = "[[GEO Group]]",
+  "Management & Training Corporation (MTC)" = "[[Management and Training Corporation|Management & Training Corporation (MTC)]]",
+  "LaSalle Corrections"                      = "[[LaSalle Corrections]]",
+  "Community Education Centers Inc."        = "[[Community Education Centers]] ([[GEO Group]] subsidiary)",
+  "Federal Bureau of Prisons"               = "[[Federal Bureau of Prisons]]"
+)
+
+
+#' Data-quality notes appended to the Average Daily Population cell
+#'
+#' Some ICE spreadsheets list one facility twice under different name
+#' variants (see `duplicate-canonical-rows.md`); `build_fy_range_union()`
+#' keeps the first row and drops the rest. For La Palma and Karnes the
+#' dropped rows carry substantial ADP whose interpretation is unresolved
+#' (subpopulation vs. duplicate listing), so the affected rows carry a note.
+#'
+#' `window_end` is the table's final fiscal year (the `year_name` passed to
+#' `build_wiki_list_table()`), so a note fires only in tables whose window
+#' covers the duplicated years. Names are quoted as they appear in the raw
+#' ICE spreadsheets.
+#'
+#' @return A tibble with `facility_name`, `window_end`, and `note`.
+wiki_adp_notes <- function() {
+  tibble::tribble(
+    ~facility_name, ~window_end, ~note,
+    "La Palma Correctional Center", "FY20",
+    "The ICE spreadsheets from FY19 and FY20 also shows a facility called 'LA PALMA CORRECTION CENTER - APSO.' It is unclear if this is a subpopulation of this facility or a separate addition and its data has been skipped here.",
+    "La Palma Correctional Center", "FY24",
+    "The ICE spreadsheets from FY21 also shows a facility called 'LA PALMA CORRECTION CENTER - APSO.' It is unclear if this is a subpopulation of this facility or a separate addition and its data has been skipped here.",
+    "Karnes County Residential Center", "FY20",
+    "The ICE spreadsheets from FY19 also shows a facility called 'KARNES COUNTY RESIDENTIAL CENTER.' It is unclear if this is a subpopulation of this facility or a separate addition and its data has been skipped here."
+  )
+}
 
 
 #' Prepare FY26 facilities data for Wikipedia list-article table
@@ -633,11 +757,27 @@ generate_population_wikitable <- function(cid, facilities_panel, facility_presen
 #' @param df FY26 facilities tibble with wiki_match, wiki_slug, management,
 #'   facility_type_wiki, facility_type_detailed, sum_criminality_levels,
 #'   inspections_guaranteed_minimum, facility_male_female columns.
-#' @param year_name Year label for the status column (default "FY26").
+#' @param year_name Year label for the status column (default "FY26"). For
+#'   era tables (e.g. an FY21–FY24 section) this is the window's final year.
 #' @param facility_presence Optional facility presence matrix (from
 #'   `build_facility_presence()`). When supplied, the status column shows
-#'   "Active (FYxx \u2013 FY26)" based on each facility's continuous backward
-#'   streak from FY26. When NULL, all facilities get "In use (FY26)".
+#'   "Active (FYxx \u2013 FYyy)" based on each facility's continuous backward
+#'   streak from its last-seen year, and "Closed (Active ...)" for facilities
+#'   no longer present in the final year. When NULL, all facilities get
+#'   "In use (FY26)".
+#' @param status_window Optional fiscal-year label capping the status
+#'   computation at the end of a historical section's window (e.g. "FY24"
+#'   for an FY21–FY24 table). Presence years after the window are ignored
+#'   except that a facility listed again after the window is NOT labeled
+#'   "Closed" — it gets "Active (FYxx \u2013 FYyy)" with the span ending
+#'   inside the window. NULL (the default) uses the full presence history,
+#'   which is correct for tables whose final year is the latest data year.
+#' @param editor_extra_rows Editor-added rows appended verbatim (default
+#'   `wiki_editor_extra_rows()`). Pass an empty tibble for historical-era
+#'   tables: editor additions belong to the current-era section only.
+#' @param editor_row_id_anchors Apply the editor's `.row_id` anchors (default
+#'   TRUE). Pass FALSE for era tables — anchor ids must be unique per page,
+#'   and a facility can appear in several era sections.
 #' @param include_redlinks If TRUE, every facility name becomes a wikilink
 #'   even when there is no wiki_slug or wiki_match. Unmatched names get bare
 #'   `[[facility_name]]` links, which render as red links on Wikipedia.
@@ -646,11 +786,26 @@ generate_population_wikitable <- function(cid, facilities_panel, facility_presen
 #'   wiki_slug and wiki_match actually exists. Non-existent titles are cleared
 #'   before building links, so they fall through to plain text (or red links
 #'   when `include_redlinks` is TRUE). Set to FALSE to skip the API call.
-#' @return A 9-column tibble with wikitext-formatted values.
+#' @return A 10-column tibble with wikitext-formatted values.
 build_wiki_list_table <- function(df, year_name = "FY26",
                                   facility_presence = NULL,
                                   include_redlinks = FALSE,
-                                  validate_slugs = !include_redlinks) {
+                                  validate_slugs = !include_redlinks,
+                                  status_window = NULL,
+                                  editor_extra_rows = wiki_editor_extra_rows(),
+                                  editor_row_id_anchors = TRUE) {
+
+  # Trailing-period artifacts in ICE facility names ("Baker County Sheriff
+  # Department.") were cleaned up by article editors; match them here.
+  df <- df |>
+    dplyr::mutate(facility_name = stringr::str_remove(facility_name, "\\.+$"))
+
+  # Era tables (DMCP-sourced years) lack the modern ADP/capability columns;
+  # guard so the mutations below work, with ADP falling back to the panel's
+  # `adp` column (the DMCP fyXX_adp, equivalent to sum_criminality_levels).
+  if (!"sum_criminality_levels" %in% names(df)) df$sum_criminality_levels <- NA_real_
+  if (!"inspections_guaranteed_minimum" %in% names(df)) df$inspections_guaranteed_minimum <- NA_real_
+  if (!"adp" %in% names(df)) df$adp <- NA_real_
 
   # ── Optionally validate wiki_slug / wiki_match against live Wikipedia ──
   if (validate_slugs) {
@@ -676,45 +831,79 @@ build_wiki_list_table <- function(df, year_name = "FY26",
     }
   }
 
-  # ── Compute continuous backward streak from the final year ──
+  # ── Compute continuous backward streak and status from presence ──
+  # Streaks run backward from each facility's last present year. With
+  # status_window (era tables), presence after the window is ignored for the
+  # span, but a facility listed again after the window is not labeled
+  # "Closed" — its span simply ends inside the window. Facilities present in
+  # the window's final year keep the "Active (FYxx – FYyy)" labels.
   if (!is.null(facility_presence)) {
     year_cols <- grep("^FY\\d+$", names(facility_presence), value = TRUE)
     # Sort chronologically (FY10, FY11, ..., FY26)
     year_cols <- year_cols[order(as.integer(sub("^FY", "", year_cols)))]
 
+    end_idx <- if (is.null(status_window)) length(year_cols) else {
+      idx <- match(status_window, year_cols)
+      if (is.na(idx)) stop("status_window '", status_window,
+                           "' not a column of facility_presence")
+      idx
+    }
+    window_cols <- year_cols[seq_len(end_idx)]
+
     streak_info <- facility_presence |>
-      dplyr::filter(.data[[year_cols[length(year_cols)]]] == TRUE) |>
       dplyr::select(canonical_id, dplyr::all_of(year_cols)) |>
       dplyr::rowwise() |>
       dplyr::mutate(
+        window_vals = list(dplyr::c_across(dplyr::all_of(window_cols))),
+        present_idx = list(which(unlist(window_vals))),
+        eff_last = if (length(present_idx)) window_cols[max(present_idx)] else NA_character_,
         streak_start_fy = {
-          vals <- dplyr::c_across(dplyr::all_of(year_cols))
-          start <- year_cols[length(year_cols)]
-          for (i in rev(seq_along(year_cols)[-length(year_cols)])) {
-            if (vals[i]) start <- year_cols[i] else break
+          if (!length(present_idx)) NA_character_ else {
+            start <- window_cols[max(present_idx)]
+            vals <- unlist(window_vals)
+            for (i in rev(seq_len(max(present_idx) - 1))) {
+              if (vals[i]) start <- window_cols[i] else break
+            }
+            start
           }
-          start
-        }
+        },
+        listed_later = if (end_idx < length(year_cols)) {
+          any(unlist(dplyr::c_across(dplyr::all_of(year_cols)))[-(seq_len(end_idx))],
+              na.rm = TRUE)
+        } else FALSE
       ) |>
       dplyr::ungroup() |>
-      dplyr::select(canonical_id, streak_start_fy)
+      dplyr::select(canonical_id, eff_last, streak_start_fy, listed_later)
 
     df <- df |>
       dplyr::left_join(streak_info, by = "canonical_id") |>
       dplyr::mutate(
-        status = dplyr::if_else(
-          streak_start_fy == year_name,
-          paste0("Active (", year_name, ")"),
-          paste0("Active (", streak_start_fy, " \u2013 ", year_name, ")")
+        status = dplyr::case_when(
+          is.na(eff_last) ~ paste0("In use (", year_name, ")"),
+          eff_last == year_name & streak_start_fy == year_name ~
+            paste0("Active (", year_name, ")"),
+          eff_last == year_name ~
+            paste0("Active (", streak_start_fy, " \u2013 ", year_name, ")"),
+          # Listed within the window, absent from the window's final year,
+          # but listed again after the window — not closed
+          listed_later ~ dplyr::if_else(
+            streak_start_fy == eff_last,
+            paste0("Active (", eff_last, ")"),
+            paste0("Active (", streak_start_fy, " \u2013 ", eff_last, ")")
+          ),
+          streak_start_fy == eff_last ~
+            paste0("Closed (Active ", eff_last, ")"),
+          TRUE ~ paste0("Closed (Active ", streak_start_fy,
+                        " \u2013 ", eff_last, ")")
         )
       ) |>
-      dplyr::select(-streak_start_fy)
+      dplyr::select(-eff_last, -streak_start_fy, -listed_later)
   } else {
     df <- df |>
       dplyr::mutate(status = paste0("In use (", year_name, ")"))
   }
 
-  df |>
+  out <- df |>
     dplyr::mutate(
       # Facility name wikilink hierarchy: slug > match > redlink/plain text
       facility_name_wiki = dplyr::case_when(
@@ -734,17 +923,66 @@ build_wiki_list_table <- function(df, year_name = "FY26",
         paste0("[[", .city_link_overrides[city_state], "|", city_state, "]]"),
         paste0("[[", city_state, "]]")
       ),
-      location           = city_state_wiki,
+      city               = city_state_wiki,
+      state              = wiki_state_link(facility_state),
       authority          = facility_type_detailed,
-      average_daily_population = round(sum_criminality_levels),
+      average_daily_population = round(dplyr::coalesce(
+        sum_criminality_levels, adp)),
       minimum_capacity   = inspections_guaranteed_minimum,
       demographics       = facility_male_female
     ) |>
     dplyr::select(
-      facility_name_wiki, status, location, facility_type_wiki,
-      authority, management, average_daily_population,
+      facility_name, facility_name_wiki, status, city, state,
+      facility_type_wiki, authority, management, average_daily_population,
       minimum_capacity, demographics
+    ) |>
+    dplyr::mutate(
+      # Article display conventions (sentence-case types, management links);
+      # ADP and capacity become character so refs from cell overrides fit
+      facility_type_wiki = dplyr::coalesce(
+        unname(.wiki_type_display[facility_type_wiki]), facility_type_wiki),
+      management = dplyr::coalesce(
+        unname(.management_wikilinks[management]), management),
+      average_daily_population = as.character(average_daily_population),
+      minimum_capacity = as.character(minimum_capacity)
     )
+
+  # Editor-learned cell overrides (refs, link fixes, management updates),
+  # then editor-added rows absent from every ICE spreadsheet. Era tables
+  # pass editor_extra_rows = NULL (editor additions belong to the current
+  # era) and editor_row_id_anchors = FALSE (anchor ids are per-page unique).
+  # Before that: data-quality notes appended to the ADP cell (see
+  # wiki_adp_notes()), keyed to the table's window-end year.
+  notes <- wiki_adp_notes() |>
+    dplyr::filter(window_end == year_name)
+  if (nrow(notes) > 0) {
+    out <- out |>
+      dplyr::rows_update(
+        out |>
+          dplyr::inner_join(notes, by = "facility_name") |>
+          dplyr::transmute(
+            facility_name,
+            average_daily_population = paste(average_daily_population, note)
+          ),
+        by = "facility_name", unmatched = "ignore"
+      )
+  }
+
+  overrides <- wiki_editor_cell_overrides()
+  if (!editor_row_id_anchors) {
+    overrides <- dplyr::filter(overrides, column != ".row_id")
+  }
+  out <- apply_wiki_editor_overrides(out, overrides)
+  if (!is.null(editor_extra_rows)) {
+    out <- dplyr::bind_rows(out, editor_extra_rows)
+  }
+
+  # The live article keeps rows alphabetically; sort by the cleaned label
+  # so diffs show content changes, not reordering.
+  out |>
+    dplyr::mutate(.sort_key = tolower(clean_wiki_cell(facility_name_wiki))) |>
+    dplyr::arrange(.sort_key) |>
+    dplyr::select(-.sort_key)
 }
 
 
@@ -762,7 +1000,7 @@ build_wiki_list_table <- function(df, year_name = "FY26",
 #'   wikilinked names.
 #' @param include_redlinks If TRUE, unmatched facility names get bare
 #'   `[[facility_name]]` red links.
-#' @return A 9-column tibble with wikitext-formatted values matching the
+#' @return A 10-column tibble with wikitext-formatted values matching the
 #'   `.wiki_list_column_names` schema.
 build_closed_wiki_list_table <- function(facilities_panel,
                                          facility_presence,
@@ -828,7 +1066,8 @@ build_closed_wiki_list_table <- function(facilities_panel,
         paste0("[[", .city_link_overrides[city_state], "|", city_state, "]]"),
         paste0("[[", city_state, "]]")
       ),
-      location           = city_state_wiki,
+      city               = city_state_wiki,
+      state              = wiki_state_link(facility_state),
       authority          = facility_type_detailed,
       average_daily_population = round(adp),
       minimum_capacity   = inspections_guaranteed_minimum,
@@ -837,9 +1076,17 @@ build_closed_wiki_list_table <- function(facilities_panel,
         management else NA_character_
     ) |>
     dplyr::select(
-      facility_name_wiki, status, location, facility_type_wiki,
+      facility_name_wiki, status, city, state, facility_type_wiki,
       authority, management, average_daily_population,
       minimum_capacity, demographics
+    ) |>
+    dplyr::mutate(
+      # Same article display conventions as the active table
+      facility_type_wiki = dplyr::coalesce(
+        unname(.wiki_type_display[facility_type_wiki]), facility_type_wiki),
+      management = dplyr::coalesce(
+        unname(.management_wikilinks[management]), management),
+      minimum_capacity = as.character(minimum_capacity)
     )
 }
 
@@ -871,7 +1118,9 @@ generate_closed_wikitable <- function(facilities_panel,
 #' Convert a data frame to MediaWiki table markup
 #'
 #' General-purpose function that generates a complete `{| class="wikitable" |}`
-#' block from a data frame. NA values are replaced with empty strings.
+#' block from a data frame, in the list article's house style: one `!Header`
+#' per line, a `|-` separator before each row, and one cell per line with a
+#' leading `|` (empty cells as a bare `|`). NA values become empty cells.
 #'
 #' @param df Data frame to convert.
 #' @param caption Optional table caption.
@@ -881,25 +1130,39 @@ generate_closed_wikitable <- function(facilities_panel,
 generate_wikitable <- function(df, caption = NULL,
                                class = "wikitable sortable",
                                column_names = NULL) {
+  # Optional per-row HTML anchors (e.g. editor-added |- id="..." attributes)
+  row_ids <- if (".row_id" %in% names(df)) {
+    as.character(df$.row_id)
+  } else {
+    rep(NA_character_, nrow(df))
+  }
+  df <- df[, setdiff(names(df), ".row_id"), drop = FALSE]
+
   out <- paste0('{| class="', class, '"')
 
   if (!is.null(caption)) {
-    out <- c(out, paste0("|+ ", caption))
+    out <- c(out, paste0("|+", caption))
   }
 
   if (is.null(column_names)) {
     column_names <- names(df)
   }
-  out <- c(out, paste0("! ", paste(column_names, collapse = " !! ")))
+  out <- c(out, paste0("!", column_names))
 
-  formatted_rows <- apply(df, 1, function(row) {
-    row_clean <- as.character(row)
+  cell_lines <- lapply(seq_len(nrow(df)), function(i) {
+    # Extract scalars before coercion: apply()'s as.matrix() would pad
+    # numeric columns with leading spaces to a common width.
+    row_clean <- vapply(df, function(col) as.character(col[i]), character(1))
     row_clean[is.na(row_clean)] <- ""
-    paste0("| ", paste(row_clean, collapse = " || "))
+    ifelse(row_clean == "", "|", paste0("|", row_clean))
   })
 
-  out <- c(out, paste0("|-\n", formatted_rows))
-  out <- c(out, "|}")
+  row_blocks <- lapply(seq_along(cell_lines), function(i) {
+    sep <- if (!is.na(row_ids[i])) paste0('|- id="', row_ids[i], '"') else "|-"
+    c(sep, cell_lines[[i]])
+  })
+
+  out <- c(out, unlist(row_blocks, use.names = FALSE), "|}")
 
   paste(out, collapse = "\n")
 }
@@ -929,5 +1192,152 @@ generate_fy26_wikitable <- function(df, year_name = "FY26",
     wiki_df,
     caption      = paste0("ICE Detention Facilities in ", year_name),
     column_names = .wiki_list_column_names
+  )
+}
+
+
+#' Generate the FY25–FY26 union Wikipedia list-article wikitable
+#'
+#' End-to-end wrapper for the combined table covering every facility listed
+#' in the FY25 spreadsheet or either FY26 snapshot (Feb 12 / July 20).
+#' Facilities present in FY26 (either snapshot, per the presence matrix) get
+#' "Active (FYxx – FY26)" status; facilities last seen in FY25 get
+#' "Closed (Active FYxx – FY25)".
+#'
+#' Output includes the article-section heading before the table and the
+#' data-provenance note with named refs after it (matching the live
+#' article's layout).
+#'
+#' @param df FY25–FY26 union facilities tibble (output of the
+#'   `facilities_fy25_26_wiki` target).
+#' @param facility_presence Optional facility presence matrix, passed through
+#'   to `build_wiki_list_table()`.
+#' @param include_redlinks If TRUE, passed through to `build_wiki_list_table()`.
+#' @param validate_slugs Passed through to `build_wiki_list_table()`.
+#' @return A single character string of MediaWiki markup: section heading,
+#'   table, and source note.
+generate_fy25_26_wikitable <- function(df, facility_presence = NULL,
+                                       include_redlinks = FALSE,
+                                       validate_slugs = !include_redlinks) {
+  wiki_df <- build_wiki_list_table(df, year_name = "FY26",
+                                   facility_presence = facility_presence,
+                                   include_redlinks = include_redlinks,
+                                   validate_slugs = validate_slugs)
+  table <- generate_wikitable(
+    wiki_df,
+    caption      = "ICE Detention Facilities in FY25\u2013FY26",
+    column_names = .wiki_list_column_names
+  )
+  paste0(
+    "==Centers active in Fiscal Years 2025 and 2026==\n\n",
+    table, "\n",
+    fy25_26_source_note()
+  )
+}
+
+
+#' Generate a historical-era Wikipedia list-article section
+#'
+#' Generalization of `generate_fy25_26_wikitable()` for the historical era
+#' sections of the list article (e.g. FY21–FY24, FY17–FY20, FY10–FY16).
+#' Emits the section heading, the wikitable, and the era's source note.
+#' Status labels are capped at the era's final year (`status_window`);
+#' facilities listed again after the window are not labeled "Closed".
+#'
+#' @param df Era union facilities tibble with wiki columns (output of the
+#'   era's `facilities_{range}_wiki` target).
+#' @param year_name The era's final fiscal year (e.g. "FY24"); used for the
+#'   status column and as the status window.
+#' @param facility_presence Facility presence matrix.
+#' @param heading Full section heading including `==` markers.
+#' @param caption Table caption (without the `|+` marker).
+#' @param source_note Wikitext appended after the table (see the
+#'   `*_source_note()` helpers).
+#' @param include_redlinks,validate_slugs Passed through to
+#'   `build_wiki_list_table()`.
+#' @return A single character string of MediaWiki markup.
+generate_era_wikitable <- function(df, year_name, facility_presence = NULL,
+                                   heading, caption, source_note,
+                                   include_redlinks = FALSE,
+                                   validate_slugs = !include_redlinks) {
+  wiki_df <- build_wiki_list_table(
+    df, year_name = year_name,
+    facility_presence = facility_presence,
+    include_redlinks = include_redlinks,
+    validate_slugs = validate_slugs,
+    status_window = year_name,
+    editor_extra_rows = NULL,
+    editor_row_id_anchors = FALSE
+  )
+  table <- generate_wikitable(
+    wiki_df,
+    caption      = caption,
+    column_names = .wiki_list_column_names
+  )
+  paste0(heading, "\n\n", table, "\n", source_note)
+}
+
+
+# ── Era source notes ─────────────────────────────────────────────────────────
+# Drafted to parallel the FY25–FY26 note (fy25_26_source_note()); the exact
+# wording should be reviewed against the live article before upload.
+
+#' FY21–FY24 source note
+fy21_24_source_note <- function() {
+  paste0(
+    "Data from ICE Detention Management spreadsheets (except where cited ",
+    "otherwise), with all current data from Fiscal years 2021 through 2024, ",
+    "and status sourced from presence or absence in prior years' data.",
+    "<ref name=\"ice-detention-fy21-fy24\">",
+    gsub(" }}", "}}", ice_citation(2021:2024), fixed = TRUE),
+    "</ref>",
+    "<ref name=\"ice-dmcp-faclist17\">", dmcp_source_info$citation[2], "</ref>"
+  )
+}
+
+#' FY17–FY20 source note (FY17 data comes from the 2017 DMCP listing)
+fy17_20_source_note <- function() {
+  paste0(
+    "Data from ICE Detention Management spreadsheets (except where cited ",
+    "otherwise), with all current data from Fiscal years 2019 and 2020, from ",
+    "the ICE DMCP facility listing for Fiscal year 2017, and status sourced ",
+    "from presence or absence in prior years' data.",
+    "<ref name=\"ice-detention-fy19-fy20\">",
+    gsub(" }}", "}}", ice_citation(2019:2020), fixed = TRUE),
+    "</ref>",
+    "<ref name=\"ice-dmcp-faclist17\">", dmcp_source_info$citation[2], "</ref>"
+  )
+}
+
+#' FY10–FY16 source note (all data from the DMCP facility listings)
+fy10_16_source_note <- function() {
+  paste0(
+    "Data from ICE DMCP facility authorization listings (except where cited ",
+    "otherwise), with all current data from Fiscal years 2010 through 2016, ",
+    "and status sourced from presence or absence in prior years' data.",
+    "<ref name=\"ice-dmcp-faclist17\">", dmcp_source_info$citation[2], "</ref>",
+    "<ref name=\"ice-dmcp-faclist15\">", dmcp_source_info$citation[1], "</ref>"
+  )
+}
+
+
+#' Data-provenance note closing the FY25–FY26 table
+#'
+#' Composed from the existing citation metadata: the ICE annual stats
+#' citation covers FY19–FY26 (`ice_citation()`; the FY26 row points at the
+#' Feb 2 snapshot, the first FY26 file published), and the DMCP faclist17
+#' citation covers the pre-FY19 history used for status. Wrapped in named
+#' refs so per-cell citations can reuse them.
+#'
+#' @return Character scalar of wikitext.
+fy25_26_source_note <- function() {
+  ice_cite <- gsub(" }}", "}}", ice_citation(2019:2026), fixed = TRUE)
+  paste0(
+    "Data from ICE Detention Management spreadsheets (except where cited ",
+    "otherwise), with all current data from Fiscal year 2026, or 2025 if ",
+    "not operating in 2026, and status sourced from presence or absence in ",
+    "prior years' data.",
+    "<ref name=\"ice-detention-fy19-fy26\">", ice_cite, "</ref>",
+    "<ref name=\"ice-dmcp-faclist17\">", dmcp_source_info$citation[2], "</ref>"
   )
 }

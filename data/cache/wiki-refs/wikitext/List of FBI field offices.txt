@@ -1,0 +1,467 @@
+{{Short description|None}}
+
+The [[Federal Bureau of Investigation]] (FBI) operates 55 '''field offices''' in major cities throughout the [[United States]] and [[Puerto Rico]]. Many of these offices are further subdivided into smaller resident agencies that have jurisdiction over a specific area. These resident agencies are considered to be part of the primary field offices. FBI headquarters, located in [[Washington, D.C.]], controls the flow of the agents and support staff that work out of the field offices across the country. Each field office is overseen by a [[Special Agent in Charge]] (SAC), except those located in [[Los Angeles]], [[New York City]], and [[Washington, D.C.]], which due to their large size, are each managed by an Assistant Director in Charge (ADIC), assisted by SACs responsible for specific programs or departments. The FBI also has offices overseas otherwise known as legal attachés. The FBI international offices are usually in American embassies. 
+
+{{Location map+ | USA
+| AlternativeMap = Usa edcp (+HI +AK +PR) location map.svg
+| caption = Map of the [[Federal Bureau of Investigation]]'s field offices in the [[United States]] (the non-contiguous states of [[Alaska]] and [[Hawaii]] are displayed on the bottom left) and [[Puerto Rico]] (displayed on the bottom right)
+| width   = 620
+| places  =
+{{Location map~ | USA
+  | label   = [[Anchorage, Alaska|Anchorage]]
+  | lat_deg =  26.9
+  | lon_deg = -113.1 <!-- Latitude/longitude are set to allow for the marker to appear in the correct place on display; the actual coordinates for the city are different -->
+  }}
+  {{Location map~ | USA
+  | label = [[Honolulu]]
+  | lat_deg = 27.95
+  | lon_deg = -105.5 <!-- Latitude/longitude are set to allow for the marker to appear in the correct place on display; the actual coordinates for the city are different -->
+  }}
+  {{Location map~ | USA
+  | label = [[San Juan, Puerto Rico|San Juan]]
+  | lat_deg = 23.35
+  | lon_deg = -73.4 <!-- Latitude/longitude are set to allow for the marker to appear in the correct place on display; the actual coordinates for the city are different -->
+  }}
+  {{Location map~ | USA
+  | label   = [[Mobile, Alabama|MOB]]
+  | lat_deg = 30.69
+  | lon_deg = -88.04
+  |position=left
+  }}
+  {{Location map~ | USA
+  | label   = [[Birmingham, Alabama|BHM]]
+  | lat_deg = 33.53
+  | lon_deg = -86.81
+  |position=bottom
+  }}
+  {{Location map~ | USA
+  | label   = [[Phoenix, Arizona|PHX]]
+  | lat_deg = 33.45
+  | lon_deg = -112.07
+  }}
+  {{Location map~ | USA
+  | label   = [[Little Rock, Arkansas|LIT]]
+  | lat_deg = 34.74
+  | lon_deg = -92.33
+  }}
+  {{Location map~ | USA
+  | label   = [[Los Angeles|LAX]]
+  | lat_deg = 34.05
+  | lon_deg = -118.25
+  }}
+  {{Location map~ | USA
+  | label   = [[Sacramento, California|SMF]]
+  | lat_deg = 38.56
+  | lon_deg = -121.47
+  }}
+  {{Location map~ | USA
+  | label   = [[San Diego|SAN]]
+  | lat_deg = 32.72
+  | lon_deg = -117.16
+  }}
+  {{Location map~ | USA
+  | label   = [[San Francisco|SFO]]
+  | lat_deg = 37.78
+  | lon_deg = -122.42
+  }}
+  {{Location map~ | USA
+  | label   = [[Denver|DEN]]
+  | lat_deg = 39.74
+  | lon_deg = -104.99
+  }}
+  {{Location map~ | USA
+  | label   = [[New Haven, Connecticut|HVN]]
+  | lat_deg = 41.31
+  | lon_deg = -72.92
+  }}
+  {{Location map~ | USA
+  | label   = [[Jacksonville, Florida|JAX]]
+  | lat_deg = 30.34
+  | lon_deg = -81.66
+  }}
+  {{Location map~ | USA
+  | label   = [[Miami|MIA]]
+  | lat_deg = 25.78
+  | lon_deg = -80.21
+  }}
+  {{Location map~ | USA
+  | label   = [[Tampa, Florida|TPA]]
+  | lat_deg = 27.97
+  | lon_deg = -82.48
+  }}
+  {{Location map~ | USA
+  | label   = [[Atlanta|ATL]]
+  | lat_deg = 33.76
+  | lon_deg = -84.39
+  }}
+  {{Location map~ | USA
+  | label   = [[Chicago|ORD]]
+  | lat_deg = 41.84
+  | lon_deg = -87.68
+  |position=left
+  }}
+  {{Location map~ | USA
+  | label   = [[Springfield, Illinois|SGF]]
+  | lat_deg = 39.70
+  | lon_deg = -89.62
+  }}
+  {{Location map~ | USA
+  | label   = [[Indianapolis|IND]]
+  | lat_deg = 39.79
+  | lon_deg = -86.15
+  |position=right
+  }}
+  {{Location map~ | USA
+  | label   = [[Louisville, Kentucky|LOU]]
+  | lat_deg = 38.25
+  | lon_deg = -85.77
+  }}
+  {{Location map~ | USA
+  | label   = [[New Orleans|MSY]]
+  | lat_deg = 29.95
+  | lon_deg = -90.07
+  }}
+  {{Location map~ | USA
+  | label   = [[Baltimore|BWI]]
+  | lat_deg = 39.28
+  | lon_deg = -76.62
+  }}
+  {{Location map~ | USA
+  | label   = [[Boston|BOS]]
+  | lat_deg = 42.36
+  | lon_deg = -71.06
+  |position=left
+  }}
+  {{Location map~ | USA
+  | label   = [[Detroit|DTW]]
+  | lat_deg = 42.33
+  | lon_deg = -83.05
+  }}
+  {{Location map~ | USA
+  | label   = [[Minneapolis|MSP]]
+  | lat_deg = 44.98
+  | lon_deg = -93.27
+  }}
+  {{Location map~ | USA
+  | label   = [[Jackson, Mississippi|JAN]]
+  | lat_deg = 32.30
+  | lon_deg = -90.18
+  }}
+  {{Location map~ | USA
+  | label   = [[Kansas City, Missouri|MCI]]
+  | lat_deg = 39.10
+  | lon_deg = -94.58
+  }}
+  {{Location map~ | USA
+  | label   = [[St. Louis|STL]]
+  | lat_deg = 38.63
+  | lon_deg = -90.20
+  }}
+  {{Location map~ | USA
+  | label   = [[Omaha, Nebraska|OMA]]
+  | lat_deg = 41.25
+  | lon_deg = -96.00
+  }}
+  {{Location map~ | USA
+  | label   = [[Las Vegas|LAS]]
+  | lat_deg = 36.12
+  | lon_deg = -115.17
+  }}
+{{Location map~ | USA
+  | label   = [[Newark, New Jersey|EWR]]
+  | lat_deg = 40.72
+  | lon_deg = -74.17
+  }}
+  {{Location map~ | USA
+  | label   = [[Albuquerque, New Mexico|ABQ]]
+  | lat_deg = 35.11
+  | lon_deg = -106.61
+  }}
+  {{Location map~ | USA
+  | label   = [[Albany, New York|ALB]]
+  | lat_deg = 42.65
+  | lon_deg = -73.76
+  }}
+  {{Location map~ | USA
+  | label   = [[Buffalo, New York|BUF]]
+  | lat_deg = 42.90
+  | lon_deg = -78.85
+  }}
+  {{Location map~ | USA
+  | label   = [[New York City|NYC]]
+  | lat_deg = 40.71
+  | lon_deg = -74.01
+  |position=right
+  }}
+  {{Location map~ | USA
+  | label   = [[Charlotte, North Carolina|CHS]]
+  | lat_deg = 35.23
+  | lon_deg = -80.85
+  }}
+  {{Location map~ | USA
+  | label   = [[Cincinnati|CIN]]
+  | lat_deg = 39.10
+  | lon_deg = -84.52
+  }}
+  {{Location map~ | USA
+  | label   = [[Cleveland|CLE]]
+  | lat_deg = 41.48
+  | lon_deg = -81.67
+  }}
+  {{Location map~ | USA
+  | label   = [[Oklahoma City|OKC]]
+  | lat_deg = 35.48
+  | lon_deg = -97.54
+  }}
+  {{Location map~ | USA
+  | label   = [[Portland, Oregon|PDX]]
+  | lat_deg = 45.52
+  | lon_deg = -122.68
+  }}
+  {{Location map~ | USA
+  | label   = [[Philadelphia|PHL]]
+  | lat_deg = 39.95
+  | lon_deg = -75.17
+  }}
+  {{Location map~ | USA
+  | label   = [[Pittsburgh|PIT]]
+  | lat_deg = 40.44
+  | lon_deg = -79.98
+  }}
+  {{Location map~ | USA
+  | label   = [[Columbia, South Carolina|CAE]]
+  | lat_deg = 34.03
+  | lon_deg = -80.90
+  }}
+  {{Location map~ | USA
+  | label   = [[Knoxville, Tennessee|TYS]]
+  | lat_deg = 35.97
+  | lon_deg = -83.94
+  }}
+  {{Location map~ | USA
+  | label   = [[Memphis, Tennessee|MEM]]
+  | lat_deg = 35.12
+  | lon_deg = -89.97
+  }}
+  {{Location map~ | USA
+  | label   = [[Dallas|DAL]]
+  | lat_deg = 32.78
+  | lon_deg = -96.80
+  }}
+  {{Location map~ | USA
+  | label   = [[El Paso, Texas|ELP]]
+  | lat_deg = 31.79
+  | lon_deg = -106.42
+  }}
+  {{Location map~ | USA
+  | label   = [[Houston|HOU]]
+  | lat_deg = 29.76
+  | lon_deg = -95.37
+  }}
+  {{Location map~ | USA
+  | label   = [[San Antonio|SAT]]
+  | lat_deg = 29.42
+  | lon_deg = -98.50
+  |position=left
+  }}
+  {{Location map~ | USA
+  | label   = [[Salt Lake City|SLC]]
+  | lat_deg = 40.75
+  | lon_deg = -111.88
+  }}
+  {{Location map~ | USA
+  | label   = [[Norfolk, Virginia|ORF]]
+  | lat_deg = 36.92
+  | lon_deg = -76.20
+  }}
+  {{Location map~ | USA
+  | label   = [[Richmond, Virginia|RIC]]
+  | lat_deg = 37.53
+  | lon_deg = -77.47
+  }}
+  {{Location map~ | USA
+  | label   = [[Washington, D.C.|Washington D.C. (HQ)]]
+  | lat_deg = 38.89
+  | lon_deg = -77.04
+  |position=right
+  }}
+  {{Location map~ | USA
+  | label   = [[Seattle|SEA]]
+  | lat_deg = 47.61
+  | lon_deg = -122.33
+  }}
+  {{Location map~ | USA
+  | label   = [[Milwaukee|MKE]]
+  | lat_deg = 43.05
+  | lon_deg = -87.95
+  |position=left
+  }}
+}}
+
+== Alabama ==
+* '''[[Birmingham, Alabama|Birmingham]]''': Serves the counties of [[Bibb County, Alabama|Bibb]], [[DeKalb County, Alabama|DeKalb]], [[Lauderdale County, Alabama|Lauderdale]], [[St. Clair County, Alabama|St. Clair]], [[Blount County, Alabama|Blount]], [[Etowah County, Alabama|Etowah]], [[Lawrence County, Alabama|Lawrence]], [[Shelby County, Alabama|Shelby]], [[Calhoun County, Alabama|Calhoun]], [[Fayette County, Alabama|Fayette]], [[Limestone County, Alabama|Limestone]], [[Sumter County, Alabama|Sumter]], [[Cherokee County, Alabama|Cherokee]], [[Franklin County, Alabama|Franklin]], [[Madison County, Alabama|Madison]], [[Talladega County, Alabama|Talladega]], [[Clay County, Alabama|Clay]], [[Greene County, Alabama|Greene]], [[Marion County, Alabama|Marion]], [[Tuscaloosa County, Alabama|Tuscaloosa]], [[Cleburne County, Alabama|Cleburne]], [[Jackson County, Alabama|Jackson]], [[Marshall County, Alabama|Marshall]], [[Walker County, Alabama|Walker]], [[Colbert County, Alabama|Colbert]], [[Jefferson County, Alabama|Jefferson]], [[Morgan County, Alabama|Morgan]], [[Winston County, Alabama|Winston]], [[Cullman County, Alabama|Cullman]], [[Lamar County, Alabama|Lamar]] and [[Pickens County, Alabama|Pickens]].  Four Resident Agencies in [[Florence, Alabama|Florence]], [[Gadsden, Alabama|Gadsden]], [[Huntsville, Alabama|Huntsville]] and [[Tuscaloosa, Alabama|Tuscaloosa]].
+* '''[[Mobile, Alabama|Mobile]]''': Serves the counties of [[Autauga County, Alabama|Autauga]], [[Coffee County, Alabama|Coffee]], [[Geneva County, Alabama|Geneva]], [[Monroe County, Alabama|Monroe]], [[Baldwin County, Alabama|Baldwin]], [[Conecuh County, Alabama|Conecuh]], [[Hale County, Alabama|Hale]], [[Montgomery County, Alabama|Montgomery]], [[Barbour County, Alabama|Barbour]], [[Coosa County, Alabama|Coosa]], [[Henry County, Alabama|Henry]], [[Perry County, Alabama|Perry]], [[Bullock County, Alabama|Bullock]], [[Covington County, Alabama|Covington]], [[Houston County, Alabama|Houston]], [[Pike County, Alabama|Pike]], [[Butler County, Alabama|Butler]], [[Crenshaw County, Alabama|Crenshaw]], [[Lee County, Alabama|Lee]], [[Randolph County, Alabama|Randolph]], [[Chambers County, Alabama|Chambers]], [[Dale County, Alabama|Dale]], [[Lowndes County, Alabama|Lowndes]], [[Russell County, Alabama|Russell]], [[Chilton County, Alabama|Chilton]], [[Dallas County, Alabama|Dallas]], [[Macon County, Alabama|Macon]], [[Tallapoosa County, Alabama|Tallapoosa]], [[Choctaw County, Alabama|Choctaw]], [[Elmore County, Alabama|Elmore]], [[Marengo County, Alabama|Marengo]], [[Washington County, Alabama|Washington]], [[Clarke County, Alabama|Clarke]], [[Escambia County, Alabama|Escambia]], [[Mobile County, Alabama|Mobile]] and [[Wilcox County, Alabama|Wilcox]]. Resident Agencies in [[Auburn, Alabama|Auburn]], [[Dothan, Alabama|Dothan]], [[Monroeville, Alabama|Monroeville]], [[Montgomery, Alabama|Montgomery]], and [[Selma, Alabama|Selma]].
+
+== Alaska ==
+* '''[[Anchorage, Alaska|Anchorage]]''': Entire state. Resident Agencies in [[Fairbanks, Alaska|Fairbanks]] and [[Juneau, Alaska|Juneau]].
+
+== Arizona ==
+* '''[[Phoenix, Arizona|Phoenix]]''': Entire State. Resident agencies in [[Flagstaff, Arizona|Flagstaff]], [[Lake Havasu City, Arizona|Lake Havasu City]], [[Lakeside, Arizona|Lakeside]], [[Sierra Vista, Arizona|Sierra Vista]], [[Tucson, Arizona|Tucson]], and [[Yuma, Arizona|Yuma]].
+
+== Arkansas ==
+* '''[[Little Rock, Arkansas|Little Rock]]''': Entire state. Resident agencies in [[El Dorado, Arkansas|El Dorado]], [[Fayetteville, Arkansas|Fayetteville]], [[Fort Smith, Arkansas|Fort Smith]], [[Hot Springs, Arkansas|Hot Springs]], [[Jonesboro, Arkansas|Jonesboro]], [[Marion, Arkansas|Marion]], [[Pine Bluff, Arkansas|Pine Bluff]] and [[Texarkana, Arkansas|Texarkana]].
+
+== California ==
+* '''[[Los Angeles]]''': Serves the counties of [[Los Angeles County, California|Los Angeles]], [[Orange County, California|Orange]], [[San Bernardino County, California|San Bernardino]], [[San Luis Obispo County, California|San Luis Obispo]], [[Santa Barbara County, California|Santa Barbara]], [[Riverside County, California|Riverside]], and [[Ventura County, California|Ventura]].  Resident Agencies in [[Lancaster, California|Lancaster]], [[Los Angeles International Airport|LAX]], [[Long Beach, California|Long Beach]], [[Orange, California|Orange]], [[Palm Springs, California|Palm Springs]], [[Riverside, California|Riverside]], [[Santa Maria, California|Santa Maria]], [[Ventura, California|Ventura]], [[Victorville, California|Victorville]] and [[West Covina, California|West Covina]]. Located inside the [[Wilshire Federal Building]].
+* '''[[Sacramento, California|Sacramento]]''': Serves [[Yosemite National Park]] and the counties of [[Alpine County, California|Alpine]], [[Amador County, California|Amador]], [[Butte County, California|Butte]], [[Calaveras County, California|Calaveras]], [[Colusa County, California|Colusa]], [[El Dorado County, California|El Dorado]], [[Fresno County, California|Fresno]], [[Glenn County, California|Glenn]], [[Inyo County, California|Inyo]], [[Kern County, California|Kern]], [[Kings County, California|Kings]], [[Lassen County, California|Lassen]], [[Madera County, California|Madera]], [[Merced County, California|Merced]], [[Mariposa County, California|Mariposa]], [[Modoc County, California|Modoc]], [[Mono County, California|Mono]], [[Nevada County, California|Nevada]], [[Placer County, California|Placer]], [[Plumas County, California|Plumas]], [[Sacramento County, California|Sacramento]], [[San Joaquin County, California|San Joaquin]], [[Shasta County, California|Shasta]], [[Sierra County, California|Sierra]], [[Siskiyou County, California|Siskiyou]], [[Solano County, California|Solano]], [[Stanislaus County, California|Stanislaus]], [[Sutter County, California|Sutter]], [[Tehama County, California|Tehama]], [[Trinity County, California|Trinity]], [[Tulare County, California|Tulare]], [[Tuolumne County, California|Tuolumne]], [[Yolo County, California|Yolo]], and [[Yuba County, California|Yuba]].  Resident agencies in [[Bakersfield, California|Bakersfield]], [[Chico, California|Chico]], [[Fairfield, California|Fairfield]], [[Fresno, California|Fresno]],  [[Redding, California|Redding]], [[South Lake Tahoe, California|South Lake Tahoe]], and [[Stockton, California|Stockton]]
+* '''[[San Diego]]''': Serves the counties of [[Imperial County, California|Imperial]] and [[San Diego County, California|San Diego]].  Resident agencies in [[Imperial, California|Imperial]] and [[North County (San Diego area)|North County]].
+* '''[[San Francisco]]''': Serves the counties of: [[Alameda County, California|Alameda]], [[Contra Costa County, California|Contra Costa]], [[Del Norte County, California|Del Norte]], [[Humboldt County, California|Humboldt]], [[Lake County, California|Lake]], [[Marin County, California|Marin]], [[Mendocino County, California|Mendocino]], [[Monterey County, California|Monterey]], [[Napa County, California|Napa]], [[San Benito County, California|San Benito]], [[San Francisco]], [[Santa Clara County, California|Santa Clara]], [[Santa Cruz County, California|Santa Cruz]], [[San Mateo County, California|San Mateo]] and [[Sonoma County, California|Sonoma]].  Resident agencies in [[Concord, California|Concord]], [[Fortuna, California|Fortuna]], [[Monterey County, California|Monterey Bay]], [[Oakland, California|Oakland]], [[Palo Alto, California|Palo Alto]], [[San Jose, California|San Jose]] and [[Santa Rosa, California|Santa Rosa]].
+
+== Colorado ==
+* '''[[Denver]]''': Serves all counties and the state of [[Wyoming]].  Resident agencies in [[Casper, Wyoming|Casper]], [[Cheyenne, Wyoming|Cheyenne]], [[Colorado Springs, Colorado|Colorado Springs]], [[Durango, Colorado|Durango]], [[Fort Collins, Colorado|Fort Collins]], [[Glenwood Springs, Colorado|Glenwood Springs]], [[Grand Junction, Colorado|Grand Junction]], [[Jackson, Wyoming|Jackson Hole]], [[Lander, Wyoming|Lander]] and [[Pueblo, Colorado|Pueblo]].
+
+== Connecticut ==
+* '''[[New Haven, Connecticut|New Haven]]''': Entire state.  Resident agencies in [[Bridgeport, Connecticut|Bridgeport]], [[Meriden, Connecticut|Meriden]] and [[New London, Connecticut|New London]].
+
+== Florida ==
+* '''[[Jacksonville, Florida|Jacksonville]]''': Serves the counties of [[Alachua County, Florida|Alachua]], [[Baker County, Florida|Baker]], [[Bay County, Florida|Bay]], [[Bradford County, Florida|Bradford]], [[Calhoun County, Florida|Calhoun]], [[Citrus County, Florida|Citrus]], [[Clay County, Florida|Clay]], [[Columbia County, Florida|Columbia]], [[Dixie County, Florida|Dixie]], [[Duval County, Florida|Duval]], [[Escambia County, Florida|Escambia]], [[Flagler County, Florida|Flagler]], [[Franklin County, Florida|Franklin]], [[Gadsden County, Florida|Gadsden]], [[Gilchrist County, Florida|Gilchrist]], [[Gulf County, Florida|Gulf]], [[Hamilton County, Florida|Hamilton]], [[Holmes County, Florida|Holmes]], [[Jackson County, Florida|Jackson]], [[Jefferson County, Florida|Jefferson]], [[Lafayette County, Florida|Lafayette]], [[Lake County, Florida|Lake]], [[Leon County, Florida|Leon]], [[Levy County, Florida|Levy]], [[Liberty County, Florida|Liberty]], [[Madison County, Florida|Madison]], [[Marion County, Florida|Marion]], [[Nassau County, Florida|Nassau]], [[Okaloosa County, Florida|Okaloosa]], [[Putnam County, Florida|Putnam]], [[St. Johns County, Florida|St. Johns]], [[Santa Rosa County, Florida|Santa Rosa]], [[Sumter County, Florida|Sumter]], [[Suwannee County, Florida|Suwannee]], [[Taylor County, Florida|Taylor]], [[Union County, Florida|Union]], [[Volusia County, Florida|Volusia]], [[Wakulla County, Florida|Wakulla]], [[Walton County, Florida|Walton]], and [[Washington County, Florida|Washington]]. Resident agencies in [[Daytona Beach, Florida|Daytona Beach]], [[Fort Walton Beach, Florida|Fort Walton Beach]], [[Gainesville, Florida|Gainesville]], [[Ocala, Florida|Ocala]], [[Panama City, Florida|Panama City]], [[Pensacola, Florida|Pensacola]], and [[Tallahassee, Florida|Tallahassee]].
+* '''[[Miami]]''' ([[Miramar, Florida|Miramar]]): Serves the counties of [[Broward County, Florida|Broward]], [[Highlands County, Florida|Highlands]], [[Indian River County, Florida|Indian River]], [[Monroe County, Florida|Monroe]], [[Palm Beach County, Florida|Palm Beach]], [[Miami-Dade County, Florida|Miami-Dade]], [[Martin County, Florida|Martin]], [[Okeechobee County, Florida|Okeechobee]], and [[St. Lucie County, Florida|St. Lucie]]. Resident agencies in [[Fort Pierce, Florida|Fort Pierce]], [[Homestead, Florida|Homestead]], [[Key West, Florida|Key West]] and [[West Palm Beach]].
+* '''[[Tampa, Florida|Tampa]]''': Serves the counties of [[Brevard County, Florida|Brevard]], [[Charlotte County, Florida|Charlotte]], [[Collier County, Florida|Collier]], [[DeSoto County, Florida|De Soto]], [[Glades County, Florida|Glades]], [[Hardee County, Florida|Hardee]], [[Hendry County, Florida|Hendry]], [[Hernando County, Florida|Hernando]], [[Hillsborough County, Florida|Hillsborough]], [[Lee County, Florida|Lee]], [[Manatee County, Florida|Manatee]], [[Orange County, Florida|Orange]], [[Osceola County, Florida|Osceola]], [[Pasco County, Florida|Pasco]], [[Pinellas County, Florida|Pinellas]], [[Polk County, Florida|Polk]], [[Sarasota County, Florida|Sarasota]], and [[Seminole County, Florida|Seminole]]. Resident agencies in [[Clearwater, Florida|Clearwater]], [[Fort Myers, Florida|Fort Myers]], [[Lakeland, Florida|Lakeland]], [[Melbourne, Florida|Melbourne]], [[Naples, Florida|Naples]], [[Orlando, Florida|Orlando]] and [[Sarasota, Florida|Sarasota]].
+
+== Georgia ==
+* '''[[Atlanta]]''' ([[DeKalb County, Georgia|DeKalb County]]): Entire state.  Resident agencies in [[Albany, Georgia|Albany]], [[Athens, Georgia|Athens]], [[Augusta, Georgia|Augusta]], [[Brunswick, Georgia|Brunswick]], [[Columbus, Georgia|Columbus]], [[Dalton, Georgia|Dalton]], [[Gainesville, Georgia|Gainesville]], [[Hartsfield-Jackson International Airport]], [[Macon, Georgia|Macon]], [[Rome, Georgia|Rome]], [[Savannah, Georgia|Savannah]], [[Statesboro, Georgia|Statesboro]], [[Thomasville, Georgia|Thomasville]] and [[Valdosta, Georgia|Valdosta]].
+
+The field office's current location, on the grounds of [[Mercer University]] Atlanta Campus, opened in 2017.<ref>{{cite press release |url=https://www.fbi.gov/contact-us/field-offices/atlanta/news/press-releases/fbi-atlanta-hosts-ribbon-cutting-ceremony-at-its-new-mercer-atlanta-location|title=FBI Atlanta Hosts Ribbon Cutting Ceremony at Its New Mercer Atlanta Location|publisher=[[Federal Bureau of Investigation]]|date=2017-10-12|accessdate=2018-09-23}}</ref> The office was previously located in [[Chamblee, Georgia|Chamblee]].<ref>"[https://www.fbi.gov/atlanta Atlanta Division]". [[Federal Bureau of Investigation]]. Retrieved on June 9, 2015. "2635 Century Parkway N.E., Suite 400 Atlanta, GA 30345".</ref><ref>"[http://www.chambleega.com/DocumentCenter/View/452 City of Chamblee Street Map]" ([https://web.archive.org/web/20150619030543/http://www.chambleega.com/DocumentCenter/View/452 Archive]). City of Chamblee. Retrieved on June 9, 2015.</ref>
+
+== Hawaii ==
+* '''[[Honolulu]]''' ([[Kapolei, Hawaii|Kapolei]]): Serves all counties, the US territories of [[American Samoa]], and [[Guam]], and the [[Northern Marianas]].  Resident agencies in [[Kona District, Hawaii|Kona]], [[Mongmong-Toto-Maite, Guam|Mongmong-Toto-Maite]], [[Saipan]], [[Wailuku, Hawaii|Wailuku]], and [[Pago Pago]].
+
+== Illinois ==
+*{{Anchor|Chicago}} '''[[Chicago]]''': Serves the counties of [[Boone County, Illinois|Boone]], [[Grundy County, Illinois|Grundy]], [[LaSalle County, Illinois|La Salle]], [[Whiteside County, Illinois|Whiteside]], [[Carroll County, Illinois|Carroll]], [[Jo Daviess County, Illinois|Jo Daviess]], [[Lee County, Illinois|Lee]], [[Will County, Illinois|Will]], [[Cook County, Illinois|Cook]], [[Kane County, Illinois|Kane]], [[McHenry County, Illinois|McHenry]], [[Winnebago County, Illinois|Winnebago]], [[DeKalb County, Illinois|De Kalb]], [[Kendall County, Illinois|Kendall]], [[Ogle County, Illinois|Ogle]], [[DuPage County, Illinois|Du Page]], [[Lake County, Illinois|Lake]], and [[Stephenson County, Illinois|Stephenson]].  Resident agencies in [[Lisle, Illinois|Lisle]], [[Orland Park, Illinois|Orland Park]], [[Rockford, Illinois|Rockford]], and [[Schaumburg, Illinois|Schaumburg]].
+* '''[[Springfield, Illinois|Springfield]]''': [[Adams County, Illinois|Adams]], [[Brown County, Illinois|Brown]], [[Cass County, Illinois|Cass]], [[Christian County, Illinois|Christian]], [[DeWitt County, Illinois|DeWitt]], [[Greene County, Illinois|Greene]], [[Logan County, Illinois|Logan]], [[Macon County, Illinois|Macon]], [[Macoupin County, Illinois|Macoupin]], [[Mason County, Illinois|Mason]], [[Menard County, Illinois|Menard]], [[Montgomery County, Illinois|Montgomery]], [[Morgan County, Illinois|Morgan]], [[Pike County, Illinois|Pike]], [[Sangamon County, Illinois|Sangamon]], [[Schuyler County, Illinois|Schuyler]], [[Scott County, Illinois|Scott]], [[Champaign County, Illinois|Champaign]], [[Clark County, Illinois|Clark]], [[Coles County, Illinois|Coles]], [[Crawford County, Illinois|Crawford]], [[Cumberland County, Illinois|Cumberland]], [[Douglas County, Illinois|Douglas]], [[Edgar County, Illinois|Edgar]], [[Ford County, Illinois|Ford]], [[Iroquois County, Illinois|Iroquois]], [[Jasper County, Illinois|Jasper]], [[Kankakee County, Illinois|Kankakee]], [[Moultrie County, Illinois|Moultrie]], [[Piatt County, Illinois|Piatt]], [[Shelby County, Illinois|Shelby]], [[Vermilion County, Illinois|Vermilion]], [[Bond County, Illinois|Bond]], [[Calhoun County, Illinois|Calhoun]], [[Clinton County, Illinois|Clinton]], [[Effingham County, Illinois|Effingham]], [[Fayette County, Illinois|Fayette]], [[Jersey County, Illinois|Jersey]], [[Madison County, Illinois|Madison]], [[Marion County, Illinois|Marion]], [[Monroe County, Illinois|Monroe]], [[Randolph County, Illinois|Randolph]], [[St. Clair County, Illinois|St. Clair]], [[Washington County, Illinois|Washington]], [[Alexander County, Illinois|Alexander]], [[Clay County, Illinois|Clay]], [[Edwards County, Illinois|Edwards]], [[Franklin County, Illinois|Franklin]], [[Gallatin County, Illinois|Gallatin]], [[Hamilton County, Illinois|Hamilton]], [[Hardin County, Illinois|Hardin]], [[Jackson County, Illinois|Jackson]], [[Jefferson County, Illinois|Jefferson]], [[Johnson County, Illinois|Johnson]], [[Lawrence County, Illinois|Lawrence]], [[Massac County, Illinois|Massac]], [[Perry County, Illinois|Perry]], [[Pope County, Illinois|Pope]], [[Pulaski County, Illinois|Pulaski]], [[Richland County, Illinois|Richland]], [[Saline County, Illinois|Saline]], [[Union County, Illinois|Union]], [[Wabash County, Illinois|Wabash]], [[Wayne County, Illinois|Wayne]], [[White County, Illinois|White]], [[Williamson County, Illinois|Williamson]], [[Fulton County, Illinois|Fulton]], [[Hancock County, Illinois|Hancock]], [[Livingston County, Illinois|Livingston]], [[Marshall County, Illinois|Marshall]], [[McDonough County, Illinois|McDonough]], [[McLean County, Illinois|McLean]], [[Peoria County, Illinois|Peoria]], [[Putnam County, Illinois|Putnam]], [[Tazewell County, Illinois|Tazewell]], [[Woodford County, Illinois|Woodford]], [[Bureau County, Illinois|Bureau]], [[Henderson County, Illinois|Henderson]], [[Henry County, Illinois|Henry]], [[Knox County, Illinois|Knox]], [[Mercer County, Illinois|Mercer]], [[Rock Island County, Illinois|Rock Island]], [[Stark County, Illinois|Stark]], and [[Warren County, Illinois|Warren]]. Resident agencies in [[Champaign, Illinois|Champaign]], [[Decatur, Illinois|Decatur]], [[Fairview Heights, Illinois|Fairview Heights]], [[Marion, Illinois|Marion]], [[Peoria, Illinois|Peoria]] and [[Quad Cities]].
+
+== Indiana ==
+* '''[[Indianapolis]]''': Entire state. Resident agencies in [[Bloomington, Indiana|Bloomington]], [[Evansville, Indiana|Evansville]], [[Fort Wayne, Indiana|Fort Wayne]], [[Lafayette, Indiana|Lafayette]], [[Merrillville, Indiana|Merrillville]], [[Muncie, Indiana|Muncie]], [[New Albany, Indiana|New Albany]], [[South Bend, Indiana|South Bend]] and [[Terre Haute, Indiana|Terre Haute]].
+
+== Kentucky ==
+* '''[[Louisville, Kentucky|Louisville]]''': Entire state. Resident agencies in [[Bowling Green, Kentucky|Bowling Green]], [[Covington, Kentucky|Covington]], [[Hopkinsville, Kentucky|Hopkinsville]], [[Lexington, Kentucky|Lexington]], [[London, Kentucky|London]], [[Owensboro, Kentucky|Owensboro]], [[Paducah, Kentucky|Paducah]] and [[Pikeville, Kentucky|Pikeville]].
+
+== Louisiana ==
+* '''[[New Orleans]]''': Entire state. Resident agencies in [[Alexandria, Louisiana|Alexandria]], [[Baton Rouge, Louisiana|Baton Rouge]], [[Lafayette, Louisiana|Lafayette]], [[Lake Charles, Louisiana|Lake Charles]], [[Monroe, Louisiana|Monroe]] and [[Shreveport]].
+
+== Maryland ==
+* '''[[Baltimore]]''' ([[Windsor Mill, Maryland|Windsor Mill]]): Serves all counties and the state of [[Delaware]]. Resident agencies in  [[Annapolis, Maryland|Annapolis]], [[Bel Air, Maryland|Bel Air]], [[Calverton, Maryland|Calverton]], [[Dover, Delaware|Dover]], [[Frederick, Maryland|Frederick]], [[Rockville, Maryland|Rockville]], [[Salisbury, Maryland|Salisbury]], and [[Wilmington, Delaware|Wilmington]].
+
+== Massachusetts ==
+[[File:FBI Field Office in Chelsea Massachusetts.jpg|thumb|right|The FBI Field Office in [[Chelsea, Massachusetts]].]]
+* '''[[Boston]]''' ([[Chelsea, Massachusetts|Chelsea]]): Serves all counties and the states of [[Maine]], [[New Hampshire]], and [[Rhode Island]]. Resident agencies in [[Augusta, Maine|Augusta]], [[Bangor, Maine|Bangor]], [[Bedford, New Hampshire|Bedford (NH)]], [[Lakeville, Massachusetts|Lakeville (MA)]], [[Lowell, Massachusetts|Lowell (MA)]], [[Portland, Maine|Portland (ME)]], [[Portsmouth, New Hampshire|Portsmouth]], [[Springfield, Massachusetts|Springfield]], [[Providence, Rhode Island|Providence (RI)]] and [[Worcester, Massachusetts|Worcester]].<ref>{{cite web |title=Boston |url=https://www.fbi.gov/contact-us/field-offices/boston |access-date=2017-04-08 |quote=Contact Us 201 Maple Street Chelsea, MA 02150 (857) 386-2000 }}.</ref>
+
+== Michigan ==
+* '''[[Detroit]]''': Entire state. Resident agencies in [[Ann Arbor, Michigan|Ann Arbor]], [[Bay City, Michigan|Bay City]], [[Clinton Township, Macomb County, Michigan|Clinton Township]], [[Flint, Michigan|Flint]], [[Grand Rapids, Michigan|Grand Rapids]], [[Kalamazoo, Michigan|Kalamazoo]], [[Lansing, Michigan|Lansing]], [[Marquette, Michigan|Marquette]], [[St. Joseph, Michigan|St. Joseph]], [[Traverse City, Michigan|Traverse City]] and [[Troy, Michigan|Troy]].
+
+== Minnesota ==
+* '''[[Minneapolis]]''' ([[Brooklyn Center, Minnesota|Brooklyn Center]]): Serves all counties and the states of [[North Dakota]] and [[South Dakota]]. Fifteen resident agencies, in [[Aberdeen, South Dakota|Aberdeen]], [[Bemidji, Minnesota|Bemidji]], [[Bismarck, North Dakota|Bismarck]], [[Duluth, Minnesota|Duluth]], [[Fargo, North Dakota|Fargo]], [[Grand Forks, North Dakota|Grand Forks]], [[Mankato, Minnesota|Mankato]], [[Minot, North Dakota|Minot]], [[Pierre, South Dakota|Pierre]], [[Rapid City, South Dakota|Rapid City]], [[Rochester, Minnesota|Rochester]], [[Sioux Falls, South Dakota|Sioux Falls]], [[St. Cloud, Minnesota|St. Cloud]] and [[St. Paul, Minnesota|St. Paul]].
+
+== Mississippi ==
+* '''[[Jackson, Mississippi|Jackson]]''': Entire state. Resident agencies in [[Columbus, Mississippi|Columbus]], [[Gulfport, Mississippi|Gulfport]], [[Hattiesburg, Mississippi|Hattiesburg]], [[Meridian, Mississippi|Meridian]], [[Oxford, Mississippi|Oxford]], [[Pascagoula, Mississippi|Pascagoula]], and [[Southaven, Mississippi|Southaven]].
+
+== Missouri ==
+* '''[[Kansas City, Missouri|Kansas City]]''': Serves the city of Kansas City and all of [[Kansas]] and the Missouri counties of [[Andrew County, Missouri|Andrew]], [[Atchison County, Missouri|Atchison]], [[Barry County, Missouri|Barry]], [[Barton County, Missouri|Barton]], [[Bates County, Missouri|Bates]], Benton, Boone, Buchanan, Caldwell, Callaway, Camden, Carroll, Cass, Cedar, Christian, Clay, Clinton, Cole, Cooper, Dade, Dallas, Daviess, De Kalb, Douglas, Gentry, Greene, Grundy, Harrison, Henry, Hickory, Holt, Howard, Howell, Jackson, Jasper, Johnson, Laclede, Lafayette, Lawrence, Livingston, McDonald, Mercer, Miller, Moniteau, Morgan, Newton, Nodaway, Oregon, Osage, Ozark, Pettis, Platte, Polk, Pulaski, Putnam, Ray, Saline, St. Clair, Stone, Sullivan, Taney, Texas, Vernon, Webster, Worth and Wright. Resident agencies in [[Garden City, Kansas|Garden City]], [[Jefferson City, Missouri|Jefferson City]], [[Joplin, Missouri|Joplin]], [[Manhattan, Kansas|Manhattan]], [[St. Joseph, Missouri|St. Joseph]], [[Springfield, Missouri|Springfield]], [[Topeka, Kansas|Topeka]] and [[Wichita, Kansas|Wichita]].
+* '''[[St. Louis]]''': The city of St. Louis and the counties of Adair, Audrain, Bollinger, Butler, Cape Girardeau, Carter, Chariton, Clark, Crawford, Dent, Dunklin, Franklin, Gasconade, Iron, Jefferson, Knox, Lewis, Lincoln, Linn, Macon, Madison, Maries, Marion, Mississippi, Monroe, Montgomery, New Madrid, Pemiscot, Perry, Phelps, Pike, Ralls, Randolph, Reynolds, Ripley, Sainte Genevieve, Schuyler, Scotland, Scott, Shannon, Shelby, St. Charles, St. Francois, St. Louis, Stoddard, Warren, Washington and Wayne. Resident agencies in [[Cape Girardeau, Missouri|Cape Girardeau]], [[Kirksville, Missouri|Kirksville]] and [[Rolla, Missouri|Rolla]].
+
+== Montana ==
+* '''[[Billings, Montana|Billings]]''': Entire state. Resident agencies in [[Bozeman, Montana|Bozeman]], [[Glasgow, Montana|Glasgow]], [[Great Falls, Montana|Great Falls]], [[Havre, Montana|Havre]], [[Helena, Montana|Helena]], [[Kalispell, Montana|Kalispell]], [[Missoula, Montana|Missoula]], and [[Shelby, Montana|Shelby]].
+
+== Nebraska ==
+* '''[[Omaha, Nebraska|Omaha]]''': Serves all counties and the state of [[Iowa]]. Resident agencies in [[Cedar Rapids, Iowa|Cedar Rapids]], [[Des Moines, Iowa|Des Moines]], [[Grand Island, Nebraska|Grand Island]], [[Lincoln, Nebraska|Lincoln]], [[North Platte, Nebraska|North Platte]], [[Quad Cities]], [[Sioux City, Iowa|Sioux City]] and [[Waterloo, Iowa|Waterloo]].
+
+== Nevada ==
+* '''[[Las Vegas]]''': Entire state. Resident agencies in [[Elko, Nevada|Elko]], [[Reno, Nevada|Reno]] and [[Stateline, Nevada|Stateline]].
+
+== New Jersey ==
+[[File:RiverfrontPark.DockBridge.PennPlaza.FBI.Gateway1.Newark.jpg|thumb|FBI field office on Passaic River in Newark]]
+* '''[[Newark, New Jersey|Newark]]''': Serves 18 counties.  Camden, Gloucester, and Salem counties are handled by the Philadelphia field office.  Resident agencies in [[Atlantic City, New Jersey|Atlantic City]], [[Franklin Township, Somerset County, New Jersey|Franklin Township]], [[Paterson, New Jersey|Paterson]], [[Red Bank, New Jersey|Red Bank]] and [[Trenton, New Jersey|Trenton]].
+
+== New Mexico ==
+* '''[[Albuquerque, New Mexico|Albuquerque]]''': Entire State. Resident agencies in [[Farmington, New Mexico|Farmington]], [[Gallup, New Mexico|Gallup]], [[Las Cruces, New Mexico|Las Cruces]], [[Roswell, New Mexico|Roswell]] and [[Santa Fe, New Mexico|Santa Fe]].
+
+== New York ==
+* '''[[Albany, New York|Albany]]''': Serves all of [[Vermont]] and the New York Counties of Albany, Broome, Cayuga, Chenango, Clinton, Columbia, Cortland, Delaware, Essex, Franklin, Fulton, Greene, Hamilton, Herkimer, Jefferson, Lewis, Madison, Montgomery, Oneida, Onondaga, Oswego, Otsego, Rensselaer, Saratoga, Schenectady, Schoharie, St. Lawrence, Tioga, Tompkins, Ulster, Warren and Washington. Resident agencies in [[Binghamton, New York|Binghamton]], [[Burlington, Vermont|Burlington]], [[Ithaca, New York|Ithaca]], [[Plattsburgh, New York|Plattsburgh]], [[Rutland (city), Vermont|Rutland]], [[Syracuse, New York|Syracuse]] and [[Utica, New York|Utica]].
+* '''[[Buffalo, New York|Buffalo]]''': Serves the counties of Allegany, Cattaraugus, Chautauqua, Chemung, Erie, Genesee, Livingston, Monroe, Niagara, Ontario, Orleans, Schuyler, Seneca, Steuben, Wayne, Wyoming and Yates. Resident agencies in [[Elmira, New York|Elmira]], [[Jamestown, New York|Jamestown]] and [[Rochester, New York|Rochester]].
+* '''[[New York City]]''' ([[Jacob K. Javits Federal Building]]): Serves the City of New York (counties of the Bronx, New York, Richmond, Queens & Kings) and the counties of Dutchess, Nassau, Orange, Putnam, Rockland, Suffolk, Sullivan and Westchester. Resident agencies in [[Brooklyn]], [[Goshen, New York|Goshen]], [[John F. Kennedy International Airport|JFK Airport]], [[Melville, New York|Melville]] and [[Rye, New York|Rye]] (formerly located in [[White Plains, New York|White Plains]]).
+
+<gallery widths="200" heights="145">
+File:Albany Field Office.jpg|FBI Albany Field Office
+File:FBI Buffalo Field Office.jpg|FBI Buffalo Field Office
+</gallery>
+
+== North Carolina ==
+* '''[[Charlotte, North Carolina|Charlotte]]''': Entire state. Resident agencies in [[Asheville, North Carolina|Asheville]], [[Fayetteville, North Carolina|Fayetteville]], [[Greensboro, North Carolina|Greensboro]], [[Greenville, North Carolina|Greenville]], [[Hickory, North Carolina|Hickory]], [[Raleigh, North Carolina|Raleigh]], and [[Wilmington, North Carolina|Wilmington]].
+
+== Ohio ==
+[[File:Cincinnati FBI Field Office.jpg|thumb|FBI Cincinnati Field Office]]
+[[File:FBI Cleveland Office.jpg|thumb|FBI Cleveland Field Office]]
+
+* '''[[Cincinnati]]''': Serves the counties of Adams, Athens, Belmont, Brown, Butler, Champaign, Clark, Clermont, Clinton, Coshocton, Darke, Delaware, Fairfield, Fayette, Franklin, Gallia, Greene, Guernsey, Hamilton, Harrison, Highland, Hocking, Jackson, Jefferson, Knox, Lawrence, Licking, Logan, Madison, Meigs, Miami, Monroe, Montgomery, Morgan, Morrow, Muskingum, Noble, Perry, Pickaway, Pike, Preble, Ross, Scioto, Shelby, Union, Vinton, Warren, and Washington. Resident agencies in [[Athens, Ohio|Athens]], [[Cambridge, Ohio|Cambridge]], [[Columbus, Ohio|Columbus]], [[Dayton, Ohio|Dayton]] and [[Portsmouth, Ohio|Portsmouth]].
+* '''[[Cleveland]]''': Serves the counties of Allen, Fulton, Mahoning, Seneca, Ashland, Geauga, Marion, Stark, Ashtabula, Hancock, Medina, Summit, Auglaize, Hardin, Mercer, Trumbull, Carroll, Henry, Ottawa, Tuscarawas, Columbiana, Holmes, Paulding, Van Wert, Crawford, Huron, Portage, Wayne, Cuyahoga, Lake, Putnam, Williams, Defiance, Lorain, Richland, Wood, Erie, Lucas, Sandusky, and Wyandot. Resident agencies in [[Akron, Ohio|Akron]], [[Canton, Ohio|Canton]], [[Lima, Ohio|Lima]], [[Mansfield, Ohio|Mansfield]], [[Painesville, Ohio|Painesville]], [[Sandusky, Ohio|Sandusky]], [[Toledo, Ohio|Toledo]] and [[Youngstown, Ohio|Youngstown]].
+
+== Oklahoma ==
+* '''[[Oklahoma City]]''': Entire state. Resident agencies in [[Ardmore, Oklahoma|Ardmore]], [[Durant, Oklahoma|Durant]], [[Elk City, Oklahoma|Elk City]], [[Lawton, Oklahoma|Lawton]],  [[Muskogee, Oklahoma|Muskogee]], [[Norman, Oklahoma|Norman]], [[Stillwater, Oklahoma|Stillwater]], [[Tulsa, Oklahoma|Tulsa]] and [[Woodward, Oklahoma|Woodward]].
+
+== Oregon ==
+* '''[[Portland, Oregon|Portland]]''': Entire state. Resident agencies in [[Bend, Oregon|Bend]], [[Eugene, Oregon|Eugene]], [[Medford, Oregon|Medford]], [[Pendleton, Oregon|Pendleton]] and [[Salem, Oregon|Salem]].
+
+== Pennsylvania ==
+* '''[[Philadelphia]]''': Serves the Pennsylvania counties of Adams, Berks, Bradford, Bucks, Cameron, Carbon, Centre, Chester, Clinton, Columbia, Cumberland, Delaware, Dauphin, Franklin, Fulton, Huntingdon, Juniata, Lackawanna, Lancaster, Lebanon, Lehigh, Luzerne, Lycoming, Mifflin, Monroe, Montour, Montgomery, Northampton, Northumberland, Perry, Philadelphia, Pike, Potter, Schuylkill, Snyder, Sullivan, Susquehanna, Tioga, Union, Wayne, and Wyoming, and the [[New Jersey]] counties of Camden, Gloucester, and Salem. Eight resident agencies, in [[Allentown, Pennsylvania|Allentown]], [[Cherry Hill, New Jersey|Cherry Hill]], [[Fort Washington, Pennsylvania|Fort Washington]], [[Harrisburg, Pennsylvania|Harrisburg]], [[Newtown Square, Pennsylvania|Newtown Square]], [[Scranton, Pennsylvania|Scranton]], [[State College, Pennsylvania|State College]] and [[Williamsport, Pennsylvania|Williamsport]].
+* '''[[Pittsburgh]]''': Serves all of [[West Virginia]] and the Pennsylvania counties of Allegheny, Armstrong, Beaver, Bedford, Blair, Butler, Cambria, Clarion, Clearfield, Crawford, Elk, Erie, Fayette, Forest, Green, Indiana, Jefferson, Lawrence, McKean, Mercer, Somerset, Venango, Warren, Washington, and Westmoreland. Ten resident agencies, in [[Beckley, West Virginia|Beckley]], [[Charleroi, Pennsylvania|Charleroi]], [[Charleston, West Virginia|Charleston]], [[Clarksburg, West Virginia|Clarksburg]], [[Cranberry Township, Butler County, Pennsylvania|Cranberry Township]], [[Erie, Pennsylvania|Erie]], [[Huntington, West Virginia|Huntington]], [[Johnstown, Pennsylvania|Johnstown]], [[Martinsburg, West Virginia|Martinsburg]] and [[Wheeling, West Virginia|Wheeling]].
+
+== Puerto Rico ==
+* '''[[San Juan, Puerto Rico|San Juan]]''': Serves all of [[Puerto Rico]] and the [[U.S. Virgin Islands]] (two US territories) with resident agencies in [[Aguadilla, Puerto Rico|Aguadilla]], [[Fajardo, Puerto Rico|Fajardo]], and [[Ponce, Puerto Rico|Ponce]], in Puerto Rico and [[Saint Croix, U.S. Virgin Islands|St. Croix]] and [[Saint Thomas, U.S. Virgin Islands|St. Thomas]] in the U.S. Virgin Islands.
+
+== South Carolina ==
+[[File:FBI Columbia field office.jpg|thumb|FBI Columbia Field Office]]
+* '''[[Columbia, South Carolina|Columbia]]''': Entire state. Resident agencies in [[Aiken, South Carolina|Aiken]], [[Charleston, South Carolina|Charleston]], [[Florence, South Carolina|Florence]], [[Greenville, South Carolina|Greenville]], [[Hilton Head, South Carolina|Hilton Head]], [[Myrtle Beach, South Carolina|Myrtle Beach]], [[Rock Hill, South Carolina|Rock Hill]] and [[Spartanburg, South Carolina|Spartanburg]].
+
+== Tennessee ==
+* '''[[Nashville, Tennessee|Nashville]]''': Entire state. Resident agencies in [[Chattanooga, Tennessee|Chattanooga]], [[Clarksville, Tennessee|Clarksville]], [[Columbia, Tennessee|Columbia]], [[Cookeville, Tennessee|Cookeville]], [[Jackson, Tennessee|Jackson]], [[Johnson City, Tennessee|Johnson City]], [[Knoxville, Tennessee|Knoxville]], [[Memphis, Tennessee|Memphis]], and [[Tullahoma, Tennessee|Tullahoma]].
+
+== Texas ==
+* '''[[Dallas]]''': Serves the counties of: Dallas, Allen, Ellis, Kaufman, Navarro, Brown, Callahan, Eastland, Fisher, Haskell, Howard, Jones, Mills, Mitchell, Nolan, Shackelford, Stephens, Stonewall, Taylor, Throckmorton, Armstrong, Briscoe, Carson, Castro, Childress, Collingsworth, Dallam, Deaf Smith, Donley, Gray, Hall, Hansford, Hartley, Hemphill, Hutchinson, Lipscomb, Moore, Ochiltree, Oldham, Parmer, Potter, Randall, Roberts, Sherman, Swisher, Wheeler, Comanche, Erath, Hood, Johnson, Palo Pinto, Parker, Tarrant, Wise, Collin, Denton, Hunt, Rockwall, Bailey, Brown, Cochran, Crosby, Dawson, Dickens, Floyd, Gaines, Garza, Hale, Hockley, Kent, lamb, Lubbock, Lynn, Motley, Scurry, Terry, Yoakum, Angelina, Houston, Nacogdoches, Polk, Sabine, San Augustine, Shelby, Trinity, Tyler, Brown, Coke, Coleman, Concho, Crockett, Glasscock, Irion, Menard, Reagan, Runnels, Schleicher, Sterling, Sutton, Tom Green, Cooke, Delta, Fannin, Grayson, Lamar, Bowie, Camp, Cass, Franklin, Hopkins, Morris, Red River, Titus, Anderson, Cherokee, Gregg, Harrison, Henderson, Marion, Panola, Rains, Rusk, Smith, Upshur, Van Zandt, Wood, Archer, Baylor, Clay, Cottle, Foard, Hardeman, Jack, King, Knox, Montague, Wichita, Wilbarger and Young.  Twelve resident agencies, in [[Abilene, Texas|Abilene]], [[Amarillo, Texas|Amarillo]], [[Dallas/Fort Worth International Airport|DFW Airport]], [[Fort Worth, Texas|Fort Worth]], [[Frisco, Texas|Frisco]], [[Lubbock, Texas|Lubbock]], [[Lufkin, Texas|Lufkin]], [[San Angelo, Texas|San Angelo]], [[Sherman, Texas|Sherman]], [[Texarkana, Texas|Texarkana]], [[Tyler, Texas|Tyler]] and [[Wichita Falls, Texas|Wichita Falls]].
+* '''[[El Paso, Texas|El Paso]]''': Serves the counties of: El Paso, Culberson, Hudspeth, Andrews, Brewster, Crane, Ector, Jeff Davis, Loving, Martin, Midland, Pecos, Presidio, Reeves, Upton, Ward and Winkler. Two resident agencies, in [[Alpine, Texas|Alpine]] and [[Midland, Texas|Midland]].
+* '''[[Houston]]''': Serves the counties of: Harris, Hardin, Jasper, Jefferson, Liberty, Newton, Orange, Austin, Brazos, Colorado, Fayette, Grimes, Madison, Waller, Montgomery, San Jacinto, Walker, Aransas, Bee, Brooks, Duval, Jim Wells, Kenedy, Kleburg, Live Oak, Nueces, San Patricio, Brazoria, Chambers, Fort Bend, Galveston, Matagorda, Wharton, Calhoun, Goliad, DeWitt, Jackson, Lavaca, Refugio and Victoria. Six resident agencies, in [[Beaumont, Texas|Beaumont]], [[Bryan, Texas|Bryan]],  [[Corpus Christi, Texas|Corpus Christi]] and [[Texas City, Texas|Texas City]].
+* '''[[San Antonio]]''': Serves the counties of: Atascosa, Bandera, Bexar, Comal, Frio, Gillespie, Gonzalez, Guadalupe, Karnes, Kendall, Kerr, Kimble, Mason, Medina, Real, Uvalde, Wilson, Bastrop, Blanco, Burleson, Burnett, Caldwell, Hays, Lampasas, Lee, Llano, McCullough, San Saba, Travis, Washington, Williamson, Cameron, Willacy, Dimmitt, Edwards, Kinney, Maverick, Terrell, Val Verde, Zavala, Jim Hogg, LaSalle, McMullen, Webb, Zapata, Hidalgo, Starr, Bell, Bosque, Coryell, Falls, Freestone, Hamilton, Hill, Leon, Limestone, McLennan, Milam and Robertson. Six resident agencies, in [[Austin, Texas|Austin]], [[Brownsville, Texas|Brownsville]], [[Del Rio, Texas|Del Rio]], [[Laredo, Texas|Laredo]], [[McAllen, Texas|McAllen]] and [[Waco, Texas|Waco]].
+
+== Utah ==
+* '''[[Salt Lake City]]''': Serves all counties and the state of [[Idaho]]. Resident agencies in [[Boise, Idaho|Boise]], [[Coeur d'Alene, Idaho|Coeur d'Alene]], [[Lewiston, Idaho|Lewiston]], [[Monticello, Utah|Monticello]], [[Ogden, Utah|Ogden]], [[Pocatello, Idaho|Pocatello]], [[Provo, Utah|Provo]], [[St. George, Utah|St. George]] and [[Vernal, Utah|Vernal]].
+
+== Virginia ==
+* '''[[Richmond, Virginia|Richmond]]''': Serves [[Naval Surface Warfare Center Dahlgren Division|Dahlgren Naval Center]], [[Fort Monroe]], [[Fort Walker]], and all cities and counties in Virginia not covered by the Washington, D.C. office. Resident agencies in [[Bristol, Virginia|Bristol]], [[Charlottesville, Virginia|Charlottesville]], [[Fredericksburg, Virginia|Fredericksburg]], [[Lynchburg, Virginia|Lynchburg]], [[Newport News, Virginia|Newport News]], [[Norfolk, Virginia|Norfolk]], [[Roanoke, Virginia|Roanoke]], and [[Winchester, Virginia|Winchester]].
+
+== Washington ==
+* '''[[Seattle]]''': Entire state. Resident agencies in [[Bellingham, Washington|Bellingham]], [[Everett, Washington|Everett]], [[Olympia, Washington|Olympia]], [[Silverdale, Washington|Silverdale]], [[Spokane, Washington|Spokane]], [[Tacoma, Washington|Tacoma]], [[Tri-Cities, Washington|Tri-Cities]], [[Vancouver, Washington|Vancouver]] and [[Yakima, Washington|Yakima]].
+
+== Washington, D.C. ==
+[[File:FBI Washington Office by Matthew Bisanz.jpg|thumb|[[Washington, D.C.]] field office]]
+
+* '''[[Washington, D.C.]]''': Serves all of the District of Columbia and the Navy Annex, plus the Virginia counties of Fauquier, Arlington, Prince William, Fairfax (City and County) and Loudoun. It also serves cities and towns including Quantico, Warrenton, Falls Church, Alexandria, Manassas, Leesburg and Vienna. One resident agency, in [[Manassas, Virginia|Manassas]].
+
+== Wisconsin ==
+* '''[[Milwaukee]]''': Entire state. Resident agencies in [[Eau Claire, Wisconsin|Eau Claire]], [[Green Bay, Wisconsin|Green Bay]], [[La Crosse, Wisconsin|La Crosse]], [[Madison, Wisconsin|Madison]] and [[Wausau, Wisconsin|Wausau]].
+
+== See also ==
+* [[List of ATF field divisions]]
+* [[List of ICE field offices]]
+* [[List of United States Secret Service field offices]]
+
+== References ==
+{{reflist}}
+
+== External links ==
+{{Commons category|Federal Bureau of Investigation buildings}}
+* [https://www.fbi.gov/contact-us/field-offices/ Field Offices]—Federal Bureau of Investigation
+
+{{FBI}}
+
+{{DEFAULTSORT:FBI field offices}}
+[[Category:Federal Bureau of Investigation field offices| ]]
+[[Category:Local government-related lists]]

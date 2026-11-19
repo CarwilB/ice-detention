@@ -1,0 +1,37 @@
+{{Short description|Private prison in Georgia, United States}}
+{{Use American English|date=August 2025}}
+{{Use mdy dates|date=July 2023}}
+{{Infobox Prison
+| name           = Stewart Detention Center
+| image          = 
+| location       = 146 CCA Road <br> [[Lumpkin, Georgia]]
+| coordinates    = 
+| status         = open
+| classification = medium
+| capacity       = 1752
+| opened         = 2004
+| closed         = 
+| managed_by     = [[U.S. Immigration and Customs Enforcement]]
+| director       = 
+}}
+
+'''Stewart Detention Center ''' is a private prison operated by [[CoreCivic]] under contract with the [[U.S. Immigration and Customs Enforcement]], primarily used for housing immigrant detainees.  The facility stands in [[Lumpkin, Georgia|Lumpkin]], [[Stewart County, Georgia]] and has an official capacity of 1752 inmates.<ref>{{cite web |title=Stewart Detention Center |url=http://www.cca.com/facilities/stewart-detention-center |website=Corrections Corporation of America |access-date=July 31, 2016 |archive-url=https://web.archive.org/web/20160801211045/http://www.cca.com/facilities/stewart-detention-center |archive-date=August 1, 2016}}</ref>
+
+In 2011 Stewart was ranked as the largest and busiest such facility in the United States.  Stewart County's share of revenue from the federal government, 85 cents per inmate per day, amounted to more than half of the county's entire annual budget.<ref>{{cite news |last1=Redmon |first1=Jeremy |title=Georgia deportation jail largest in nation |url=https://www.ajc.com/news/local/georgia-deportation-jail-largest-nation/FEl5Bp8jdy3oOHRXBAjx5I/ |access-date=August 1, 2016 |newspaper=[[The Atlanta Journal-Constitution]] |date=January 17, 2011}}</ref>
+
+Stewart was named one of ten ICE facilities targeted for closure by the Detention Watch Network in 2012, citing the March 2009 death of inmate Roberto Medina-Martinez reportedly caused by [[medical neglect]], among many other serious issues.<ref>{{cite web |title=Stewart Detention Center Georgia |url=https://www.detentionwatchnetwork.org/sites/default/files/reports/DWN%20Expose%20and%20Close%20Stewart.pdf |website=Detention Watch Network |access-date=August 1, 2016 |date=November 2012}}</ref> Stewart was also identified by the [[American Civil Liberties Union|ACLU of Georgia]] in 2012 as one of four ICE detention centers that demonstrate that "ICE has consistently shown that it is incapable of protecting the basic human rights of immigrants under its care." (The other three were the North Georgia Detention Center, the [[Irwin County Detention Center]], and the Atlanta City Detention Center.)<ref>{{cite web |title=Prisoners of Profit |url=https://www.acluga.org/sites/default/files/field_documents/prisoners_of_profit.pdf |website=ACLU of Georgia |access-date=August 1, 2016 |editor-first=Azadeh N. |editor-last=Shahshahani |editor-link=Azadeh N. Shahshahani |archive-url=https://web.archive.org/web/20160806100401/https://www.acluga.org/sites/default/files/field_documents/prisoners_of_profit.pdf |archive-date=August 6, 2016}}</ref>
+
+==References==
+{{reflist}}
+
+{{coord|32.036603|-84.771961|format=dms|display=title|type:landmark}}
+{{CoreCivic Facilities}}
+{{Authority control}}
+
+[[Category:CoreCivic]]
+[[Category:Prisons in Georgia (U.S. state)]]
+[[Category:Buildings and structures in Stewart County, Georgia]]
+[[Category:2004 establishments in Georgia (U.S. state)]]
+[[Category:Immigration detention centers and prisons in the United States]]
+[[Category:United States Immigration and Customs Enforcement]]
+[[Category:Prisons completed in the 2000s]]

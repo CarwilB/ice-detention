@@ -1,0 +1,110 @@
+---
+# Provenance metadata for DDP facilities daily population dataset
+# (published through 20260330; recreated from stints since 20260806)
+
+source:
+  title: "Deportation Data Project — ICE Detention Facility Daily Populations"
+  publisher: "Deportation Data Project"
+  principal_investigators:
+    - "Graeme Blair, University of California–Los Angeles"
+    - "David Hausman, University of California–Berkeley School of Law"
+    - "Phil Neff, University of Washington Center for Human Rights"
+  url: "https://deportationdata.org/data/processed/ice.html"
+  docs_url: "https://deportationdata.org/docs/ice/processing.html#detention-facility-populations"
+  foia_request: "2026-ICLI-00005"
+  notes: >
+    Facility-day counts of people in ICE detention, derived by DDP from the
+    detention-stints records: each stint expands to one row per day, and
+    distinct persons are counted per facility code per day. Seven count
+    variables per facility-day: n_detained (booked that day), 
+    n_detained_at_midnight (in custody at midnight), male, female,
+    convicted criminal, and possibly under 18. DDP stopped publishing this
+    file with its 20260806 release, so this project recreates it with
+    build_ddp_daily_population() (R/ddp-daily-population.R), following DDP's
+    published methodology. DDP's original generating script was removed from
+    their repository on 2026-07-06 (commit bfc8b3fa76); the last version
+    (commit c19668375f, 2026-03-30) is preserved at
+    data/ddp/facilities-daily-population-latest.R.
+  citation: >
+    Blair, Graeme, David Hausman, and Phil Neff. 2025. "Immigration and Customs
+    Enforcement Individual-Level Data: An Introduction."
+    https://deportationdata.org/docs/ice/ice-data-preprint.pdf
+  license: "CC-0 (no rights reserved)"
+
+data:
+  schema:
+    unit_of_observation: "One row per facility code per day (complete grid, zero-filled)."
+    columns:
+      - detention_facility_code: "ICE DETLOC code"
+      - date: "Observation date (Date)"
+      - n_detained: "Distinct persons booked at the facility on that date (integer)"
+      - n_detained_at_midnight: "Distinct persons in custody at midnight (booked in on or before date and booked out after it, or still open; integer)"
+      - n_detained_male: "Distinct male detainees (integer)"
+      - n_detained_female: "Distinct female detainees (integer)"
+      - n_detained_convicted_criminal: "Distinct persons with book_in_criminality '1 Convicted Criminal' (integer)"
+      - n_detained_possibly_under_18: "Distinct persons younger than birth_year + 18 on that date (integer)"
+      - detention_facility: "Facility name from the code's most recent book-in"
+    notes:
+      - >
+        NA unique_identifier rows each count as one distinct person (DDP
+        assigns synthetic 'noid_' IDs before distinct counting).
+      - >
+        Duplicate-flagged stints are NOT filtered, matching DDP's processing.
+      - >
+        Grid starts 2022-10-01 in every version; open-ended stints are
+        censused through the data-through date (release date minus one day).
+
+recreation:
+  function: "build_ddp_daily_population() in R/ddp-daily-population.R"
+  pipeline_targets: "facilities_daily_population_file (writes the parquet) -> facilities_daily_population"
+  end_date_convention: "Data-through date = DDP release date minus one day (2026-08-05 for the 20260806 release)."
+  validation: >
+    Recreating the 20260330 published file from the 20260515 stints reproduced
+    all 888,699 rows and all six count columns plus facility names exactly,
+    cell for cell (2026-10-03).
+
+versions:
+  note: >
+    DDP overwrites "-latest" files with each release; this project pins local
+    copies with the DDP release date as a suffix. The 20260806 version is
+    pipeline-generated, not downloaded.
+  releases:
+    - version: "20260330"
+      label: "March 2026 release (DDP-published; archived)"
+      local_file: "data/ddp/facilities-daily-population-latest_20260330.parquet"
+      rows: 888699
+      facility_codes: 707
+      date_range: "2022-10-01 – 2026-03-10"
+      date_downloaded: "2026-04-11"
+      pipeline_targets: "ddp_parquet_file -> ddp_new (frozen); feeds ddp_codes_new, ddp_annual_panel, facility profiles/directory, and the archived through-March FY26 comparison (*_20260330 targets, ddp-comparison-26-20260330.qmd)"
+      notes: >
+        Renamed from facilities-daily-population-latest.parquet. Data exports
+        for the published FY26 comparison post are archived in
+        data/ddp-comparison-export-fy26-20260330/.
+    - version: "20260806"
+      label: "August 6 2026 release (recreated from stints; current)"
+      local_file: "data/ddp/facilities-daily-population-latest_20260806.parquet"
+      rows: 1039700
+      facility_codes: 740
+      date_range: "2022-10-01 – 2026-08-05"
+      source_stints: "data/ddp/detention-stints-latest_20260806.parquet"
+      pipeline_targets: "facilities_daily_population_file -> facilities_daily_population; feeds the current FY26 comparison chain (ddp_fy26_keyed, daily_totals_fy26, unmatched_fy26, peak_fy26, ddp_fy26_comparison_export)"
+      notes: >
+        DDP did not publish this file for the 20260806 release; it is written
+        by the pipeline from the stints data. Overlap vs the 20260330 file
+        (through 2026-03-10): about 90–91% of facility-day cells are exactly
+        equal; the 20260806 totals are ~0.2% lower, reflecting retroactive
+        record revisions in DDP's stints data, not method differences.
+        36 facility codes are new in 20260806 (e.g. BASCOTX, GALVETX,
+        KERCOTX, TAYLOFL); 2 old codes are absent (ECC, YORCOPA). See
+        ddp-parquet-summary.qmd for the full overlap analysis.
+
+import:
+  local_path: "data/ddp/facilities-daily-population-latest_20260806.parquet"
+  imported_with: "arrow::read_parquet()"
+  date_downloaded: "n/a — generated by the facilities_daily_population_file target"
+  related_files:
+    - "R/ddp-daily-population.R — recreation implementation"
+    - "data/ddp/facilities-daily-population-latest.R — DDP's original script (preserved for provenance)"
+    - "ddp-parquet-summary.qmd — version comparison and overlap analysis"
+    - "data/ddp-detention-stints.yml — stints source data provenance"

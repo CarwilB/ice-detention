@@ -1,0 +1,45 @@
+{{Short description|Historic jail in the US state of Georgia}}
+{{Use American English|date=August 2025}}
+{{Use mdy dates|date=August 2023}}
+{{Infobox NRHP
+| name         = Brooks County Jail
+| nrhp_type    = 
+| image        = Quitman GA old jail01.jpg
+| caption      = 
+| location     = 200 S. Madison St., [[Quitman, Georgia]]
+| coordinates  = {{coord|30.78406|N|83.56126|W|display=inline,title}}
+| pushpin_map  = USA Georgia
+| built        = {{Start date and age|1884}}
+| builder      = Remington, Simeon A.
+| architecture = Romanesque
+| added        = August 26, 1982
+| area         = less than one acre
+| mpsub        = County Jails of Ben Hill, Berrien, Brooks, and Turner Counties TR;Georgia County Courthouses TR
+| ref_num      = 82002387<ref name="nris">{{NRISref|version=2010a}}</ref>
+}}
+The '''Brooks County Jail''' is a historic building in [[Quitman, Georgia]]. It was built in 1884 and served as [[Brooks County, Georgia|Brooks County]]'s only jail until 1980.<ref name=nrhpdoc/>
+
+It was added to the [[National Register of Historic Places]] in 1982. It is located at 200 South Madison Street.<ref name="nris"/>
+
+The jail was built in 1884 by contractor Simeon A. Remington to replace an uninsured wooden 1867 jail which "burned to the ground" on June 17, 1880. It was built to be fireproof and cost $3,870 for the building plus $2,000 for its free-standing two-story steel cells.  The jail "was considered 'one of the best in the state,' and housed prisoners until 1980 when it no longer met state fire and criminal justice codes.  It was a site of executions.<ref name=nrhpdoc/>
+
+A 1981 review asserted that the building is architecturally significant as "the county's prime example of [[Romanesque Revival architecture|Romanesque style architecture]]."<ref name=nrhpdoc>{{cite web|url={{NRHP url|id=82002387}}|title=Georgia Architectural and Historic Properties Survey-Inventory: Brooks County Jail |publisher=[[National Park Service]]|accessdate=January 18, 2017 |author=Haley Blanchard |date=1981 }} with {{NRHP url|id=82002387|photos=y|title=seven photos from 1981}}</ref>
+
+==See also==
+*[[National Register of Historic Places listings in Brooks County, Georgia]]
+
+==References==
+{{Reflist}}
+
+==External links==
+*[https://www.youtube.com/watch?v=bDWvWuzQSJg YouTube video about the jail with personal reminisces]
+* {{Commons category-inline|Old Brooks County Jail}}
+
+{{National Register of Historic Places}}
+
+[[Category:Jails on the National Register of Historic Places in Georgia (U.S. state)]]
+[[Category:Government buildings completed in 1884]]
+[[Category:Buildings and structures in Brooks County, Georgia]]
+[[Category:Romanesque Revival architecture in Georgia (U.S. state)]]
+
+{{BrooksCountyGA-NRHP-stub}}

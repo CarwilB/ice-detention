@@ -1,0 +1,46 @@
+{{Use American English|date=July 2025}}
+{{Use mdy dates|date=January 2025}}
+{{Infobox NRHP
+| name                    = Old Franklin County Jail
+| nrhp_type               = 
+| image                   = Old Jail Cburg.JPG
+| caption                 = Old Franklin County Jail, October 2010
+| location                = NW corner of King and 2nd Sts., [[Chambersburg, Pennsylvania]]
+| coordinates             = {{coord|39|56|20|N|77|39|35|W|display=inline,title}}
+| pushpin_map             = Pennsylvania#USA
+| built                   = 1818
+| architecture            = Georgian
+| added                   = January 21, 1970
+| area                    = less than one acre
+| ref_num                 = 70000549<ref name="nris">{{NRISref|version=2010a}}</ref>
+| designated_other1_name  = Pennsylvania state historical marker
+| designated_other1_abbr  = PHMC
+| designated_other1_date  = May 9, 1975<ref name=phmcdatabase>{{cite web | title =PHMC Historical Markers | work =Historical Marker Database | publisher =Pennsylvania Historical & Museum Commission | url =http://search.pahistoricalmarkers.com/ | accessdate =December 20, 2013 | archive-url =https://archive.today/20131207041235/http://search.pahistoricalmarkers.com/ | archive-date =December 7, 2013 | url-status =dead }}</ref>
+| designated_other1_link  = List of Pennsylvania state historical markers
+| designated_other1_color = navy
+| designated_other1_textcolor = #ffc94b
+}}
+The '''Old Franklin County Jail''' is a historic [[jail]] located at [[Chambersburg, Pennsylvania|Chambersburg]] in [[Franklin County, Pennsylvania]]. It was built in 1818, and is a two-story, brick building with a [[slate]] covered hipped roof topped by a [[cupola]].  The original building measures 84 feet wide by 48 feet deep.  In 1880, a cell block was added.  The jail yard is divided into two sections and surrounded by a 20-foot-high wall.<ref name=nrhpdoc>{{cite report|type=none|url=https://catalog.archives.gov/id/71994969 |title=National Register of Historic Places Registration: Pennsylvania SP Franklin County Jail|publisher=National Archives and Records Administration |author= Murray E. Kauffman| date = September 1969 | access-date=December 20, 2025 }} ({{NationalArchivesNote}})</ref> At least five prisoners were hanged on the premises.<ref>{{cite web | url=http://articles.herald-mail.com/2000-08-06/news/25143410_1_gallows-humor-trap-door-executions | archive-url=https://web.archive.org/web/20160304111956/http://articles.herald-mail.com/2000-08-06/news/25143410_1_gallows-humor-trap-door-executions | url-status=dead | archive-date=March 4, 2016 | title=Gallows refurbished in Pa. | work=The Herald-Mail | date=August 6, 2000 | accessdate=2 December 2015 | author=Aines, Don}}</ref>
+
+Now known as the '''Old Jail''', the building houses a museum and genealogical library operated by the Franklin County Historical Society - Kittochtinny.
+
+It was listed on the [[National Register of Historic Places]] in 1970. It is included in the [[Chambersburg Historic District]].<ref name="nris"/>
+
+== References ==
+{{Reflist}}
+
+==External links==
+{{commonscat-inline|Franklin County Jail}}
+* [http://franklinhistorical.org/ Franklin County Historical Society - Kittochtinny] - official site
+
+{{National Register of Historic Places in Pennsylvania}}
+
+[[Category:Jails in Pennsylvania]]
+[[Category:Museums in Franklin County, Pennsylvania]]
+[[Category:History museums in Pennsylvania]]
+[[Category:Buildings and structures in Franklin County, Pennsylvania]]
+[[Category:Government buildings completed in 1818]]
+[[Category:Jails on the National Register of Historic Places in Pennsylvania]]
+[[Category:National Register of Historic Places in Franklin County, Pennsylvania]]
+[[Category:History of Franklin County, Pennsylvania]]
+[[Category:Individually listed contributing properties to historic districts on the National Register in Pennsylvania]]

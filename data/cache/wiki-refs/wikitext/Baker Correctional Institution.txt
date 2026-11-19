@@ -1,0 +1,39 @@
+{{Short description|State prison in Florida, United States}}
+{{Use American English|date=August 2025}}
+{{Infobox Prison
+| name           = Baker Correctional Institution
+| image          = Baker Correctional Institution, Sanderson, Florida.jpg
+| caption        = Main entrance, c. 2018
+| location       = 20706 U.S. Highway 90 West <br> [[Sanderson, Florida]]
+| coordinates    = 
+| status         = Temporarily Closed
+| classification = 
+| capacity       = 1,165
+| opened         = 1978
+| closed         = 
+| managed_by     = [[Florida Department of Corrections]]
+| director       = 
+}}
+
+The '''Baker Correctional Institution''' was a state prison for men located in [[Sanderson, Florida|Sanderson]], [[Baker County, Florida]], owned and operated by the [[Florida Department of Corrections]].<ref>{{cite web|title=Baker Correctional Institution|url=http://www.dc.state.fl.us/facilities/region2/279.html|website=Florida Department of Corrections|accessdate=5 August 2016}}</ref>
+
+Since November 2009, Baker's mission has been to "prepare inmates for work release and aid in a successful re-entry into society." The facility has a mix of security levels, including minimum, medium, and close. Baker Correctional Institution opened in 1978 and has a maximum capacity of 1165 inmates.
+
+In July 2015 two inmates died within a week: Antonio Gallashaw on the 28th,<ref>{{cite news|title=Investigation under way after inmate death Tuesday at Baker Correctional Institution|url=http://jacksonville.com/news/crime/2015-07-29/story/investigation-under-way-after-inmate-death-tuesday-baker-correctional|accessdate=5 August 2016|agency=First Coast News|publisher=Jacksonville.com|date=29 July 2015}}</ref> and Denis Robinson on the 30th.<ref>{{cite news|last1=Fouracker|first1=Clark|title=Second Baker Correctional inmate dies this week|url=http://www.firstcoastnews.com/news/local/second-baker-correctional-inmate-dies-this-week_20160407030805530/123449200|accessdate=5 August 2016|agency=First Coast News|date=30 July 2015}}</ref>
+
+In 2021, Baker Correctional Institution, along with [[New River Correctional Institution]] and [[Cross City Correctional Institution]], was closed temporarily due to a staffing shortage.<ref>{{cite news |last1=News Service of Florida |title=State to temporarily close 3 North Florida prisons |url=https://www.jacksonville.com/story/news/state/2021/08/27/state-temporarily-close-3-north-florida-prisons-staff-shortage-covid-19/5618510001/ |access-date=15 August 2025 |work=The Florida Times-Union |date=27 August 2021}}</ref>
+
+== Migrant detention center ==
+On August 14, 2025, Gov. [[Ron DeSantis]] announced the shuttered facility would be turned into an immigration detention center. The facility was dubbed 'Deportation Depot.' The [[Florida National Guard]], rather than the Department of Corrections, will work at the facility.<ref>{{cite news |last1=Fineout |first1=Gary |title=Florida to use shuttered prison as 2nd immigration detention center after ‘Alligator Alcatraz’ |url=https://www.politico.com/news/2025/08/14/florida-to-use-shuttered-prison-as-2nd-immigration-detention-center-after-alligator-alcatraz-00509108 |access-date=14 August 2025 |publisher=Politico |date=14 August 2025}}</ref> The facility can host up to 1300 migrants. With the proximity to [[Lake City Gateway Airport]], the facility looks to be able to deport people from that airport.<ref>{{cite news |last1=Sandidge |first1=Will |title=‘Deportation Depot’: DeSantis announces new immigration detention center at Baker Correctional instead of Camp Blanding |url=https://www.news4jax.com/news/local/2025/08/14/gov-desantis-to-hold-news-conference-at-baker-correctional-institution/ |access-date=15 August 2025 |work=WJXT |date=14 August 2025 |language=en|last2=Camargo|first2=Marcel|last3=Yauger|first3=Caleb}}</ref> 
+
+==References==
+{{reflist}}
+
+{{coord|30.213319|-82.374539|format=dms|display=title|type:landmark}}
+
+{{State prisons in Florida}}
+
+[[Category:Prisons in Florida]]
+[[Category:Buildings and structures in Baker County, Florida]]
+[[Category:1978 establishments in Florida]]
+[[Category:Government buildings completed in 1978]]

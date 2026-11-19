@@ -1,0 +1,637 @@
+{{short description|County in Massachusetts, United States}}
+{{redirect|Barnstable County}}
+{{Use American English|date=March 2025}}
+{{Use mdy dates|date=April 2024}}
+{{Infobox U.S. county
+ | county                   = Barnstable County
+ | name                     = Barnstable County
+ | official_name            = County of Barnstable
+ | state                    = Massachusetts
+ | type                     = [[List of counties in Massachusetts|County]]
+ | image_flag               = Flag of Barnstable County, Massachusetts.svg
+ | image_seal               = Seal of Barnstable County, Massachusetts.svg
+ | founded                  = June 2, 1685
+ | seat_wl                  = Barnstable
+ | largest_city_wl          = Barnstable
+ | city_type                = town
+ | area_total_sq_mi         = 1306
+ | area_land_sq_mi          = 394
+ | area_water_sq_mi         = 912
+ | area_water_percent       = 70%
+ | population_as_of         = 2020
+ | population_total         = 228996
+ | pop_est_as_of            = 2025
+ | population_est           = 233539 {{gain}}
+ | population_density_sq_mi = auto
+ | website                  = {{url|www.capecod.gov}}
+ | image                    = {{multiple image
+  | total_width   = 288
+  | border        = infobox
+  | perrow        = 1/2/2/2
+  | caption_align = center
+  | image1        = Sailboat_in_Hyannis_Harbor.jpg
+  | alt1          = LY
+  | caption1      = [[Barnstable, Massachusetts|Barnstable]]
+  | image2        = View_of_Provincetown_from_Pilgrim_Monument_looking_east,_MA,_USA_-_Sept,_2013.jpg
+  | alt2          = Fitchburg
+  | caption2      = [[Provincetown]]
+  | image3        = Kennedy_Compound_2021.jpg
+  | alt3          = Lawrence
+  | caption3      = [[Kennedy Compound]]
+  | image4        = Nauset_Light,_Eastham,_MA,_Cape_Cod.jpg
+  | alt4          = CE
+  | caption4      = [[Nauset Light]]
+  | image5        = Cape_Cod_Bourne_Bridge_and_Railroad_Bridge.jpg
+  | alt5          = JH
+  | caption5      = [[Bourne Bridge]]
+  | image6        = Race_point_sunset.jpg
+  | alt6          = MBTS
+  | caption6      = [[Cape Cod National Seashore]]
+
+}}
+ | district                 = 9th
+ | time_zone                = Eastern
+ | named_for                = [[Barnstable, Massachusetts|Town of Barnstable]]
+}}
+
+'''Barnstable County''' ({{IPAc-en|ˈ|b|ɑːr|n|s|t|ə|b|əl}} {{respell|BARN|stə|bəl}}) is a [[County (United States)|county]] in the U.S. state of [[Massachusetts]]. At the [[2020 United States census|2020 census]], the population was 228,996.<ref name="QF">{{cite web|title=2020 Census Demographic Data Map Viewer|url=https://mtgis-portal.geo.census.gov/arcgis/apps/MapSeries/index.html?appid=2566121a73de463995ed2b2fd7ff6eb7|access-date=August 12, 2021|publisher=United States Census Bureau}}</ref> The [[county seat]] is [[Barnstable, Massachusetts|Barnstable]].<ref name="GR6">{{cite web |url=http://www.naco.org/Counties/Pages/FindACounty.aspx |access-date=June 7, 2011 |title=Find a County |publisher=National Association of Counties |url-status=dead |archive-url=https://web.archive.org/web/20120704084002/http://www.naco.org/Counties/Pages/FindACounty.aspx |archive-date=July 4, 2012 }}</ref> The county consists of [[Cape Cod]] and associated islands (some adjacent islands are in [[Dukes County, Massachusetts|Dukes County]] and [[Nantucket County]]). Barnstable County was formed within the [[Plymouth Colony]] on June 2, 1685, including the towns of [[Falmouth, Massachusetts|Falmouth]], [[Sandwich, Massachusetts|Sandwich]], and others to the east and north on Cape Cod. Plymouth Colony was merged into the [[Province of Massachusetts Bay]] in 1691.
+
+==History==
+
+===Giovanni da Verrazzano===
+Cape Cod is described in a letter from the Italian explorer [[Giovanni da Verrazzano]] to [[Francis I of France]], relating the details of a voyage to the New World made on behalf of the French crown in the ship Dauphine, the only surviving of a fleet of four.<ref>{{cite web | author=Giovanni da Verrazzano | title=Letter to King Francis I of France, 8 July 1524: Excerpts | year=2006 | publisher=National Humanities Center | page=8 | url=http://nationalhumanitiescenter.org/pds/amerbegin/contact/text4/verrazzano.pdf | url-status=live | archive-url=https://web.archive.org/web/20130423064629/http://nationalhumanitiescenter.org/pds/amerbegin/contact/text4/verrazzano.pdf | archive-date=April 23, 2013 }} Text reproduced by permission from {{cite book | editor-first=Lawrence C. | editor-last=Wroth | title=The Voyages of Giovanni da Verrazzano, 1524-1528 | url=https://archive.org/details/voyagesofgiovann0000wrot | url-access=registration | year=1970 | location=New Haven | publisher=Yale University Press}}</ref>  Sailing from [[Madeira]] in 1524, the Dauphine made land in North Carolina in March. It sailed north to Newfoundland, mapping the coast and interviewing the natives, whom he found friendly south of the cape, but unfriendly north of it. To the north of an island that reminded Verrazzano of [[Rhodes]], the Dauphine made its way with difficulty over [[shoal]]s "never less than three feet deep" extending "from the continent fifty leagues out to sea," which Brevoort, based on their extent, has identified as [[Nantucket Shoals]].<ref name=Brevoort135-136/> Verrazzano called them Armellini. On the other side was a promontory, Pallavisino, which is probably the cape,<ref name=Brevoort135-136/> as they sailed along it for "fifty leagues." Details of the north end are not given, but subsequently they came to a "high country, full of very dense forests, composed of pines," which, according to Brevoort and others, resembles the coast of Maine.<ref name=Brevoort135-136>{{cite book | first=James Carson | last=Brevoort | title=Verrazano the Navigator | year=1874 | location=New York | publisher=American Geographical Society of New York | pages=135–136}}</ref>
+
+===Bartholomew Gosnold===
+After Verrazzano, what is now the eastern United States acquired the map label of [[New France]], but France had no way to develop it. Scattered colonies in the wilderness of a few dozen men could not be supported until the foundation of [[Quebec]] in 1608. Meanwhile, the paper claim did not deter entrepreneurs. In March 1602, [[Bartholomew Gosnold]] set sail from [[Falmouth, Cornwall]], in the ship, Concord, transporting a crew of eight, an exploration party of 12, and 20 colonists, with the intent of establishing a trading post in the New World. Intersecting the coast of Maine, they turned to the south, encountered what appeared to be an island, and dropped anchor in [[Provincetown Harbor]]. Gosnold at first called the land Shoal Hope, but after discovering it was a cape, and acquiring a hold full of cod from the abundant schools in [[Cape Cod Bay]], he changed the name to Cape Cod.<ref name=conway31-32>{{harvnb|Conway|2008|pp=31–32}}</ref>
+
+Gosnold explored the cape, establishing good relations with the natives there, approximately 1500 members of the [[Nauset]] Tribe, closely related in language and custom to the [[Wampanoag people]] of the mainland, and under their sovereignty. [[John Brereton]], chaplain of the expedition, reported that they were dark-skinned, customarily nude except for deerskins over the shoulders and sealskins around the waist, and wore their long, black hair up in a knot. They painted their bodies. Some knew a few English words, which is something of a historical problem, as Gosnold and his companions are believed to have been the first English to land in America.<ref>{{harvnb|Conway|2008|pp=33–35}}</ref> Gosnold made a point of describing how healthy the people appeared.
+
+Subsequently, Gosnold sailed around the cape to discover an island, "full of wood, vines, gooseberry bushes, whortleberries, raspberries, eglantines, etc.," as well as large numbers of shore birds. He named it [[Martha's Vineyard]] after his daughter. Another island nearby, [[Cuttyhunk Island]], he named Elizabeth Island, in honor of [[Elizabeth I of England]], from which the [[Elizabeth Islands]] take their name. He intended to place a trading post there, but when the time came for the return voyage, the colonists decided not to remain. Gosnold ventured a second time to the New World in 1608 as [[John Smith (explorer)|Captain John Smith]]'s second in command of the [[Jamestown, Virginia|Jamestown]] expedition. After three months there, he died of [[malaria]].<ref name=conway31-32/>
+
+===Martin Pring===
+In 1603, another mercantile expedition set sail from Bristol, England, in two ships, the ''Speedwell'' and the ''Discoverer'', commanded by a 23-year-old captain, Martin Pring. Elizabeth I had died two weeks earlier, but Pring had secured permission from Sir Walter Raleigh, who held from the queen exploration rights to all of North America. Pring's expedition reached the New England coast in the summer of 1603, exploring portions of present-day Maine and Massachusetts in search of sassafras, which was then prized in Europe as a remedy for syphilis and other ailments. Pring's party landed on Cape Cod, where they spent several weeks gathering sassafras and trading with the local Wampanoag inhabitants, before returning to England with a profitable cargo. The voyage helped publicize the commercial potential of the region and influenced later English colonization efforts.
+
+===Founding of the county===
+On June 2, 1685, the General Court of Plymouth Colony established Barnstable County as one of three counties in the colony, alongside Plymouth and Bristol. The new county was named for the town of Barnstable, itself named for the English port of Barnstaple in Devon. At its founding, Barnstable County included the towns of Sandwich, Barnstable, Yarmouth, Eastham, and Falmouth. When Plymouth Colony was merged into the Province of Massachusetts Bay in 1691, Barnstable County was retained intact, and additional towns were incorporated within its boundaries over the following two centuries.<ref>{{cite book |last=Freeman |first=Frederick |title=The History of Cape Cod: the Annals of Barnstable County and of its Several Towns |year=1862 |volume=II |publisher=Geo. C. Rand & Avery |location=Boston}}</ref>
+
+===Colonial era and the Revolution===
+Through the seventeenth and eighteenth centuries, the Cape's economy was built around small-scale farming, fishing, coastal trade, and the harvest of salt hay from the extensive marshes that fringed its bays. A solar-evaporation sea-salt industry, pioneered by Captain John Sears of [[Dennis, Massachusetts|Dennis]] beginning around 1776, became one of the major industries in nearly every Cape town through the early and mid-nineteenth century before fading by 1900 with the arrival of railroads and refrigerated commercial salt from elsewhere.<ref>{{cite web |url=https://newenglandhistoricalsociety.com/sleepy-john-sears-revolutionary-white-gold-cape-cod/ |title=Sleepy John Sears and the Revolutionary White Gold of Cape Cod |publisher=New England Historical Society |access-date=May 27, 2026}}</ref> During the [[American Revolutionary War]], Cape Cod ports were vulnerable to British naval action; on April 3, 1779, a British fleet [[Battle of Falmouth (1779)|fired]] on [[Falmouth, Massachusetts|Falmouth]], but an attempted landing was repulsed by local militia under Colonel Nathaniel Freeman and Major Joseph Dimmick.<ref>{{cite web |url=https://woodsholemuseum.org/giffordpaintings/pages/british.html |title=The Battle of Falmouth, 1779 |publisher=Woods Hole Museum |access-date=May 27, 2026}}</ref> The Cape produced several prominent figures of the revolutionary era, including [[James Otis Jr.|James Otis]] and [[Mercy Otis Warren]] of [[West Barnstable, Massachusetts|West Barnstable]].
+
+===Whaling and maritime era===
+In the nineteenth century, the Cape's economy turned increasingly to the sea. [[Provincetown, Massachusetts|Provincetown]], [[Wellfleet, Massachusetts|Wellfleet]], and other Outer Cape ports developed substantial whaling and cod-fishing fleets, while shipbuilding and coastal trade flourished in mid-Cape towns. The county's population peaked at 35,990 in 1860 before entering a long decline driven by the collapse of whaling, the rise of steam-powered shipping that bypassed Cape ports, and emigration of young people to the cities and the West. By 1920 the population had fallen to 26,670, well below mid-nineteenth-century levels.<ref>{{cite web |url=https://usafacts.org/data/topics/people-society/population-and-demographics/our-changing-population/state/massachusetts/county/barnstable-county/ |title=Barnstable County, MA population by year |publisher=USAFacts |access-date=May 27, 2026}}</ref>
+
+===Railroad, tourism, and the Cape Cod Canal===
+The arrival of the [[Cape Cod Branch Railroad]] in the 1840s and its extension to Provincetown in 1873 transformed the regional economy, opening the Cape to summer tourism from Boston and beyond. Resort hotels, cottage colonies, and artist communities developed in towns such as Provincetown, [[Chatham, Massachusetts|Chatham]], and Falmouth in the late nineteenth and early twentieth centuries. In 1914 the [[Cape Cod Canal]] opened, connecting Cape Cod Bay to Buzzards Bay and physically separating the Cape from the Massachusetts mainland; the canal was later widened and acquired by the federal government, with the [[Bourne Bridge]] and [[Sagamore Bridge]] opening in 1935 to carry road traffic over the new waterway.
+
+===Cape Cod National Seashore and the modern era===
+On August 7, 1961, President [[John F. Kennedy]] signed Public Law 87-126, establishing the [[Cape Cod National Seashore]] and permanently protecting approximately 40 miles of Outer Cape shoreline and inland habitat from development.<ref>{{cite web |url=https://www.jfklibrary.org/asset-viewer/archives/jfkwhp-1961-08-07-a |title=Bill signing – S. 857 Public Law 87-126, Cape Cod National Seashore Act, 11:47 AM |publisher=John F. Kennedy Presidential Library and Museum |date=August 7, 1961 |access-date=May 27, 2026}}</ref> The post-war decades saw a rapid expansion of the Cape's year-round and seasonal population, with county population growing from 46,805 in 1950 to 222,230 by 2000 — a nearly five-fold increase driven by tourism, retirement migration, and the spread of second-home ownership. In 1989 voters approved the Barnstable County Home Rule Charter, restructuring county government around an Assembly of Delegates and an elected board of County Commissioners. The county today is one of the few in Massachusetts that retains a meaningful functioning county government.
+
+==Geography==
+According to the [[U.S. Census Bureau]], the county has a total area of {{convert|1306|sqmi}}, of which {{convert|394|sqmi}} is land and {{convert|912|sqmi}} (70%) is water.<ref name="GR1">{{cite web|url=https://www.census.gov/geo/maps-data/data/docs/gazetteer/counties_list_25.txt|publisher=United States Census Bureau|access-date=September 15, 2014|date=August 22, 2012|title=2010 Census Gazetteer Files|url-status=dead|archive-url=https://archive.today/20140914175857/http://www.census.gov/geo/maps-data/data/docs/gazetteer/counties_list_25.txt|archive-date=September 14, 2014}}</ref> It is the second largest county in Massachusetts by total area. It has about {{convert|550|mi|km}} of shoreline.
+
+Barnstable County is not co-extensive with [[Cape Cod]]. The latter is a geophysical place defined by its insular or peninsular landmass. According to Freeman, it is a "long, irregular peninsula" between {{convert|65|and|75|mi|km|abbr=on}}, measured along the north or the south shores respectively, and between {{convert|5|and|20|mi|km|abbr=on}} wide. Originally, only the tip was considered the cape, but as it was settled the name extended from its tip to the shortest line across the isthmus.<ref>{{harvnb|Freeman|1860|p=27}}</ref> Barnstable County, on the other hand, is a geopolitical and legal entity. It is the area contained within the borders of all cities and towns defined to be in the county by the [[Massachusetts General Court]]. These borders were decided in episodes of disputed legislation during the centuries since the founding of [[Plymouth Colony]].<ref>A history of this extensive legislation through 1860 on a town-by-town basis can be found in {{harvnb|Freeman|1862|loc=passim}}</ref>
+
+The main difference between Cape Cod and Barnstable County is the band of water up to several miles wide extending from the shoreline to the outermost county border. The offshore area contains significant maritime life, is a recreational and transport medium, and contains historical material lost in shipwrecks.<ref>To protect this area, Barnstable County created the [[Cape Cod Commission]], giving it control over the oceanic waters within county jurisdiction, excluding the bays, the river mouths, and the [[Cape Cod Canal]]. Its final plan, completed in 2011, includes maps showing the total extent of Barnstable County, most of which is oceanic, including most of [[Cape Cod Bay]], half of upper [[Buzzard's Bay]], and some of the waters south of the cape.{{cite web | title=Cape Cod Ocean Management PLan | date=October 13, 2011 | publisher=Cape Cod Commission | page=33 | url=http://www.capecodcommission.org/resources/dcpc/CCOMPfinal10-13-11.pdf | url-status=dead | archive-url=https://web.archive.org/web/20130617081244/http://www.capecodcommission.org/resources/dcpc/CCOMPfinal10-13-11.pdf | archive-date=June 17, 2013 | access-date=December 5, 2012 }}</ref>
+
+The highest elevation in the county is {{convert|306|ft|m}}, at the summit of [[Pine Hill (Barnstable County, Massachusetts)|Pine Hill]], on [[Joint Base Cape Cod]], in Bourne. The lowest point is sea level.
+
+===Adjacent counties===
+Barnstable County borders [[Plymouth County, Massachusetts|Plymouth County]] to the northwest; off Barnstable County's southern shore are [[Dukes County, Massachusetts|Dukes County]] and [[Nantucket]] County.
+
+===National protected areas===
+* [[Cape Cod National Seashore]]
+* [[Mashpee National Wildlife Refuge]]
+* [[Monomoy National Wildlife Refuge]]
+
+{{Massachusetts rivers}}
+
+==Demographics==
+With a median age of 55 years as of the 2020 census, Barnstable County is one of the oldest in the country.<ref>{{cite web|url=https://www2.census.gov/library/publications/decennial/2020/census-briefs/c2020br-06.pdf|title=Age and Sex Composition: 2020 Census Brief C2020BR-06 | date = May 2023 |publisher=United States Census Bureau|access-date=February 5, 2024}}</ref>
+
+[[File:Barnstable_County_municipality_population_trends.png|thumb|Barnstable county municipal population trends.]]
+{{US Census population
+| 1790 = 17342
+| 1800 = 19293
+| 1810 = 22211
+| 1820 = 24026
+| 1830 = 28514
+| 1840 = 32548
+| 1850 = 35276
+| 1860 = 35990
+| 1870 = 32774
+| 1880 = 31897
+| 1890 = 29172
+| 1900 = 27826
+| 1910 = 27542
+| 1920 = 26670
+| 1930 = 32305
+| 1940 = 37295
+| 1950 = 46805
+| 1960 = 70286
+| 1970 = 96656
+| 1980 = 147925
+| 1990 = 186605
+| 2000 = 222230
+| 2010 = 215888
+| align-fn = center
+| footnote = U.S. Decennial Census<ref>{{cite web|url=https://www.census.gov/programs-surveys/decennial-census.html|title=U.S. Decennial Census|publisher=United States Census Bureau|access-date=September 15, 2014}}</ref><br />1790–1960<ref>{{cite web|url=http://mapserver.lib.virginia.edu|title=Historical Census Browser|publisher=University of Virginia Library|access-date=September 15, 2014|url-status=live|archive-url=https://web.archive.org/web/20120811110448/http://mapserver.lib.virginia.edu/|archive-date=August 11, 2012}}</ref> 1900–1990<ref>{{cite web|url=https://www.census.gov/population/cencounts/ma190090.txt|title=Population of Counties by Decennial Census: 1900 to 1990|publisher=United States Census Bureau|access-date=September 15, 2014|url-status=live|archive-url=https://web.archive.org/web/20150428025655/http://www.census.gov/population/cencounts/ma190090.txt|archive-date=April 28, 2015}}</ref><br />1990–2000<ref>{{cite web|url=https://www.census.gov/population/www/cen2000/briefs/phc-t4/tables/tab02.pdf|title=Census 2000 PHC-T-4. Ranking Tables for Counties: 1990 and 2000|publisher=United States Census Bureau|access-date=September 15, 2014|url-status=live|archive-url=https://web.archive.org/web/20141218203824/http://www.census.gov/population/www/cen2000/briefs/phc-t4/tables/tab02.pdf|archive-date=December 18, 2014}}</ref> 2010–2020<ref>{{cite web|url=https://mtgis-portal.geo.census.gov/arcgis/apps/MapSeries/index.html?appid=2566121a73de463995ed2b2fd7ff6eb7|title=2020 Census Demographic Data Map Viewer|publisher=United States Census Bureau|access-date=August 12, 2021}}</ref>
+| 2020 = 228996
+| estyear = 2025
+| estimate = 233539
+| estref = <ref name="USCensusEst2025">{{cite web|url=https://www.census.gov/data/tables/time-series/demo/popest/2020s-counties-total.html|title=County Population Totals and Components of Change: 2020-2025|publisher=United States Census Bureau|access-date=April 6, 2026}}</ref> {{increase}}
+| align = right
+}}
+
+===2020 census===
+
+As of the [[2020 United States census|2020 census]], the county had a population of 228,996. Of the residents, 14.3% were under the age of 18 and 32.2% were 65 years of age or older; the median age was 55.0 years. For every 100 females there were 91.4 males, and for every 100 females age 18 and over there were 89.4 males. 97.2% of residents lived in urban areas and 2.8% lived in rural areas.<ref name="Census2020DHC">{{cite web|title=2020 Decennial Census Demographic and Housing Characteristics (DHC)|url=https://api.census.gov/data/2020/dec/dhc?get=NAME%2CP2_002N%2CP2_003N&for=county%3A001&in=state%3A25|website=United States Census Bureau|year=2023|access-date=10 December 2025|df=mdy}}</ref><ref name="Census2020DP">{{cite web|title=2020 Decennial Census Demographic Profile (DP1)|url=https://api.census.gov/data/2020/dec/dp?get=NAME%2CDP1_0021P%2CDP1_0024P%2CDP1_0025C%2CDP1_0049C%2CDP1_0045C%2CDP1_0069C%2CDP1_0073C%2CDP1_0125P%2CDP1_0126P%2CDP1_0129P%2CDP1_0138P%2CDP1_0139P%2CDP1_0141P%2CDP1_0142P%2CDP1_0143P%2CDP1_0145P%2CDP1_0146P%2CDP1_0147C%2CDP1_0148C%2CDP1_0149C%2CDP1_0156C%2CDP1_0157C%2CDP1_0158C%2CDP1_0159P%2CDP1_0160P&for=county%3A001&in=state%3A25|website=United States Census Bureau|year=2021|access-date=10 December 2025|df=mdy}}</ref><ref name="Census2020PL">{{cite web|title=2020 Decennial Census Redistricting Data (Public Law 94-171)|url=https://api.census.gov/data/2020/dec/pl?get=NAME%2CP1_001N%2CP1_003N%2CP1_004N%2CP1_005N%2CP1_006N%2CP1_007N%2CP1_008N%2CP1_009N%2CP2_001N%2CP2_002N%2CH1_001N%2CH1_002N&for=county%3A001&in=state%3A25|website=United States Census Bureau|year=2021|access-date=10 December 2025|df=mdy}}</ref>
+
+The racial makeup of the county was 85.8% White, 2.9% [[African Americans|Black or African American]], 0.5% [[Native Americans in the United States|American Indian and Alaska Native]], 1.4% [[Asian Americans|Asian]], 0.0% [[Native Hawaiians|Native Hawaiian]] and [[Pacific Islander]], 2.4% from some other race, and 6.9% from [[Multiracial Americans|two or more races]]. [[Hispanic and Latino Americans|Hispanic or Latino]] residents of any race comprised 3.5% of the population.<ref name="Census2020PL"/>
+
+There were 103,368 households in the county, of which 18.6% had children under the age of 18 living with them and 29.9% had a female householder with no spouse or partner present. About 33.0% of all households were made up of individuals and 19.2% had someone living alone who was 65 years of age or older.<ref name="Census2020DP"/>
+
+There were 164,885 housing units, of which 37.3% were vacant. Among occupied housing units, 77.6% were owner-occupied and 22.4% were renter-occupied. The homeowner vacancy rate was 1.4% and the rental vacancy rate was 8.9%.<ref name="Census2020DP"/>
+
+===Racial and ethnic composition===
+{| class="wikitable sortable" style="text-align:center;"
+|+'''Barnstable County, Massachusetts – Racial and ethnic composition'''<br><small>{{nobold|''Note: the US Census treats Hispanic/Latino as an ethnic category. This table excludes Latinos from the racial categories and assigns them to a separate category. Hispanics/Latinos may be of any race.''}}</small>
+!Race / Ethnicity <small>(''NH = Non-Hispanic'')</small>
+!Pop 1980<ref name=1980Census>{{Cite web|title=1980 Census of Population - General Social and Economic Characteristics - Massachusetts - Table 15 and 15A - Race by Sex: 1980 and Table 16 and 16A - Total Persons and Spanish Origin Persons by Type of Spanish Origin and Race: 1980 |url=https://www2.census.gov/prod2/decennial/documents/1980a_maABC-02.pdf|website=[[United States Census Bureau]]|page=15-30|archive-url=https://web.archive.org/web/20221007094852/https://www2.census.gov/prod2/decennial/documents/1980a_maABC-02.pdf| archive-date=October 7, 2022|via= [[Wayback Machine]]}}</ref>
+!Pop 1990<ref>{{Cite web |title=1990 Census of Population - General Population Characteristics - Massachusetts: Tables 4, 5, and 6 - Race and Hispanic Origin |website=[[United States Census Bureau]]|url=https://www2.census.gov/library/publications/decennial/1990/cp-1/cp-1-23.pdf|access-date=|page=13-45|archive-url=https://web.archive.org/web/20260116011614/https://www2.census.gov/library/publications/decennial/1990/cp-1/cp-1-23.pdf|via= [[Wayback Machine]]| archive-date=January 16, 2026}}</ref>
+!Pop 2000<ref name=2000CensusP004>{{Cite web|title=P004: Hispanic or Latino, and Not Hispanic or Latino by Race – 2000: DEC Summary File 1 – Barnstable County, Massachusetts|url=https://data.census.gov/table?g=050XX00US25001&tid=DECENNIALSF12000.P004|website=[[United States Census Bureau]] |access-date= }}</ref>
+!Pop 2010<ref name=2010CensusP2>{{Cite web|title=P2: Hispanic or Latino, and Not Hispanic or Latino by Race – 2010: DEC Redistricting Data (PL 94-171) – Barnstable County, Massachusetts|url=https://data.census.gov/cedsci/table?q=p2&g=050XX00US25001&tid=DECENNIALPL2010.P2|website=[[United States Census Bureau]] |access-date= }}</ref>
+!style="background-color: #ffffb3;" | Pop 2020<ref name=2020CensusP2>{{Cite web|title=P2: Hispanic or Latino, and Not Hispanic or Latino by Race – 2020: DEC Redistricting Data (PL 94-171) – Barnstable County, Massachusetts|url=https://data.census.gov/cedsci/table?q=p2&g=050XX00US25001&tid=DECENNIALPL2020.P2|website=[[United States Census Bureau]] |access-date= }}</ref>
+!% 1980
+!% 1990
+!% 2000
+!% 2010
+!style="background-color: #ffffb3;" |% 2020
+|-
+|[[Non-Hispanic or Latino whites|White]] alone (NH)
+|142,277
+|177,956
+|207,518
+|197,327
+|style='background: #ffffe6; |194,561
+|96.18%
+|95.37%
+|93.38%
+|91.40%
+|style='background: #ffffe6; |84.96%
+|-
+|[[Non-Hispanic or Latino African Americans|Black or African American]] alone (NH)
+|1,749
+|2,727
+|3,848
+|3,857
+|style='background: #ffffe6; |6,409
+|1.18%
+|1.46%
+|1.73%
+|1.79%
+|style='background: #ffffe6; |2.80%
+|-
+|[[Native Americans in the United States|Native American]] or [[Alaska Native]] alone (NH)
+|812
+|1,127
+|1,148
+|1,184
+|style='background: #ffffe6; |1,092
+|0.55%
+|0.60%
+|0.52%
+|0.55%
+|style='background: #ffffe6; |0.48%
+|-
+|[[Asian Americans|Asian]] alone (NH)
+|447
+|942
+|1,363
+|2,263
+|style='background: #ffffe6; |3,183
+|0.30%
+|0.50%
+|0.61%
+|1.05%
+|style='background: #ffffe6; |1.39%
+|-
+|[[Native Hawaiian]] or [[Pacific Islander Americans|Pacific Islander]] alone (NH)
+|x <ref>included in the Asian category in the 1980 Census</ref>
+|x <ref>included in the Asian category in the 1990 Census</ref>
+|50
+|65
+|style='background: #ffffe6; |65
+|x
+|x
+|0.02%
+|0.03%
+|style='background: #ffffe6; |0.03%
+|-
+|[[Race and ethnicity in the United States census|Other race]] alone (NH)
+|1,586
+|1,566
+|1,842
+|2,284
+|style='background: #ffffe6; |3,448
+|1.07%
+|0.84%
+|0.83%
+|1.06%
+|style='background: #ffffe6; |1.51%
+|-
+|[[Multiracial Americans|Mixed race or Multiracial]] (NH)
+|x <ref>not an option in the 1980 Census</ref>
+|x <ref>not an option in the 1990 Census</ref>
+|3,461
+|4,221
+|style='background: #ffffe6; |12,330
+|x
+|x
+|1.56%
+|1.96%
+|style='background: #ffffe6; |5.38%
+|-
+|[[Hispanic and Latino Americans|Hispanic or Latino]] (any race)
+|1,054
+|2,287
+|3,000
+|4,687
+|style='background: #ffffe6; |7,908
+|0.71%
+|1.23%
+|1.35%
+|2.17%
+|style='background: #ffffe6; |3.45%
+|-
+|'''Total'''
+|'''147,925'''
+|'''186,605'''
+|'''222,230'''
+|'''215,888'''
+|style='background: #ffffe6; |'''228,996 '''
+|'''100.00%'''
+|'''100.00%'''
+|'''100.00%'''
+|'''100.00%'''
+|style='background: #ffffe6; |'''100.00%'''
+|}
+
+===2010 census===
+As of the [[2010 United States census]], there were 215,888&nbsp;people, 95,755&nbsp;households, and 58,724&nbsp;families residing in the county.<ref name="census-dp1">{{cite web
+  |url=http://factfinder.census.gov/bkmk/table/1.0/en/DEC/10_DP/DPDP1/0500000US25001
+  |title=DP-1 Profile of General Population and Housing Characteristics: 2010 Demographic Profile Data
+  |access-date=January 12, 2016
+  |publisher=[[United States Census Bureau]]
+  |archive-url=https://archive.today/20200213010845/http://factfinder.census.gov/bkmk/table/1.0/en/DEC/10_DP/DPDP1/0500000US25001
+  |archive-date=February 13, 2020
+  |url-status=dead
+  }}</ref> The population density was {{convert|548.3|PD/sqmi}}. There were 160,281 housing units at an average density of {{convert|407.1|/sqmi}}.<ref name="census-density">{{cite web
+  |url=http://factfinder.census.gov/bkmk/table/1.0/en/DEC/10_SF1/GCTPH1.CY07/0500000US25001
+  |access-date=January 12, 2016
+  |title=Population, Housing Units, Area, and Density: 2010 - County
+  |publisher=[[United States Census Bureau]]
+  |archive-url=https://archive.today/20200213193357/http://factfinder.census.gov/bkmk/table/1.0/en/DEC/10_SF1/GCTPH1.CY07/0500000US25001
+  |archive-date=February 13, 2020
+  |url-status=dead
+  }}</ref> The racial makeup of the county was 92.7% white, 1.9% black or African American, 1.1% Asian, 0.6% American Indian, 1.5% from other races, and 2.2% from two or more races. Those of Hispanic or Latino origin made up 2.2% of the population.<ref name="census-dp1"/> In terms of ancestry, 27.0% were Irish, 19.2% were English, 11.4% were Italian, 11.4% were American, and 9.1% were German.<ref name="census-dp2">{{cite web
+  |url=http://factfinder.census.gov/bkmk/table/1.0/en/ACS/10_5YR/DP02/0500000US25001
+  |title=DP02 Selected Social Characteristics in the United States – 2006-2010 American Community Survey 5-Year Estimates
+  |access-date=January 12, 2016
+  |publisher=[[United States Census Bureau]]
+  |archive-url=https://archive.today/20200213015507/http://factfinder.census.gov/bkmk/table/1.0/en/ACS/10_5YR/DP02/0500000US25001
+  |archive-date=February 13, 2020
+  |url-status=dead
+  }}</ref>
+
+Of the 95,755&nbsp;households, 22.2% had children under the age of 18 living with them, 48.3% were married couples living together, 9.6% had a female householder with no husband present, 38.7% were non-families, and 31.8% of all households were made up of individuals. The average household size was 2.21 and the average family size was 2.77. The median age was 49.9 years.<ref name="census-dp1"/>
+
+The median income for a household in the county was $60,317 and the median income for a family was $75,056. Males had a median income of $53,480 versus $41,990 for females. The per capita income for the county was $35,246. About 5.0% of families and 7.2% of the population were below the poverty line, including 9.8% of those under age 18 and 5.6% of those age 65 or over.<ref name="census-dp3">{{cite web
+  |url=http://factfinder.census.gov/bkmk/table/1.0/en/ACS/10_5YR/DP03/0500000US25001
+  |title=DP03 Selected Economic Characteristics – 2006-2010 American Community Survey 5-Year Estimates
+  |access-date=January 12, 2016
+  |publisher=[[United States Census Bureau]]
+  |archive-url=https://archive.today/20200213034812/http://factfinder.census.gov/bkmk/table/1.0/en/ACS/10_5YR/DP03/0500000US25001
+  |archive-date=February 13, 2020
+  |url-status=dead
+  }}</ref>
+===2000 census===
+As of the census<ref name="GR2">{{cite web |url=https://www.census.gov |publisher=[[United States Census Bureau]] |access-date=January 31, 2008 |title=U.S. Census website }}</ref> of 2000, there were 222,230 people, 94,822 households, and 61,065 families residing in the county. The population density was {{convert|562|/mi2|/km2|disp=preunit|people&nbsp;|people}}. There were 147,083 housing units at an average density of {{convert|372|/mi2|/km2}}. The racial makeup of the county was 94.23% [[Race (United States Census)|White]], 1.79% [[Race (United States Census)|Black]] or [[Race (United States Census)|African American]], 0.56% [[Race (United States Census)|Native American]], 0.63% [[Race (United States Census)|Asian]], 0.02% [[Race (United States Census)|Pacific Islander]], 1.11% from [[Race (United States Census)|other races]], and 1.66% from two or more races. 1.35% of the population were [[Race (United States Census)|Hispanic]] or [[Race (United States Census)|Latino]] of any race. 24.0% were of [[irish Americans|Irish]], 15.6% [[English Americans|English]], 9.4% [[italian Americans|Italian]], 5.9% [[German Americans|German]] and 5.0% [[United States|"American"]] ancestry, 93.6% spoke English, 1.7% [[Portuguese language|Portuguese]], 1.4% Spanish and 1.0% French as their first language.
+
+There were 94,822 households, out of which 24.30% had children under the age of 18 living with them, 52.20% were married couples living together, 9.40% had a female householder with no husband present, and 35.60% were non-families. 29.50% of all households were made up of individuals, and 14.40% had someone living alone who was 65 years of age or older. The average household size was 2.28 and the average family size was 2.82.
+
+In the county, the population was spread out, with 20.40% under the age of 18, 5.20% from 18 to 24, 25.00% from 25 to 44, 26.20% from 45 to 64, and 23.10% who were 65 years of age or older. The median age was 45 years. For every 100 females, there were 89.90 males. For every 100 females age 18 and over, there were 86.10 males.
+
+The median income for a household in the county was $45,933, and the median income for a family was $54,728. Males had a median income of $41,033 versus $30,079 for females. The per capita income for the county was $25,318. About 4.60% of families and 6.90% of the population were below the poverty line, including 8.60% of those under age 18 and 5.00% of those age 65 or over.
+
+==Politics==
+{{PresHead|place=Barnstable County, Massachusetts|source=<ref>{{cite web|url=http://uselectionatlas.org/RESULTS|title=Dave Leip's Atlas of U.S. Presidential Elections|first=David|last=Leip|website=uselectionatlas.org|access-date=May 6, 2018|url-status=live|archive-url=https://web.archive.org/web/20180323225526/https://uselectionatlas.org/RESULTS/|archive-date=March 23, 2018}}</ref>}}
+<!-- {{PresRow|Year|Winning party|GOP vote No.|Dem. vote No.|3rd party vote No.|State}} -->
+{{PresRow|1804|Whig|724|403|0|Massachusetts}}
+{{PresRow|1812|Whig|1,282|508|0|Massachusetts}}
+{{PresRow|1820|Whig|648|197|0|Massachusetts}}
+{{PresRow|1824|Whig|769|155|0|Massachusetts}}
+{{PresRow|1828|Whig|627|25|0|Massachusetts}}
+{{PresRow|1832|Whig|1,013|194|123|Massachusetts}}
+{{PresRow|1836|Whig|1,187|882|0|Massachusetts}}
+{{PresRow|1840|Whig|2,751|1,554|68|Massachusetts}}
+{{PresRow|1844|Whig|2,290|1,415|251|Massachusetts}}
+{{PresRow|1848|Whig|2,015|802|516|Massachusetts}}
+{{PresRow|1852|Whig|1,379|892|482|Massachusetts}}
+{{PresRow|1856|Republican|2,667|703|300|Massachusetts}}
+{{PresRow|1860|Republican|2,371|133|643|Massachusetts}}
+{{PresRow|1864|Republican|3,994|701|0|Massachusetts}}
+{{PresRow|1868|Republican|3,381|647|0|Massachusetts}}
+{{PresRow|1872|Republican|2,703|353|0|Massachusetts}}
+{{PresRow|1876|Republican|3,493|785|6|Massachusetts}}
+{{PresRow|1880|Republican|3,473|956|38|Massachusetts}}
+{{PresRow|1884|Republican|3,144|937|544|Massachusetts}}
+{{PresRow|1888|Republican|3,371|1,044|180|Massachusetts}}
+{{PresRow|1892|Republican|3,688|1,373|171|Massachusetts}}
+{{PresRow|1896|Republican|4,456|517|185|Massachusetts}}
+{{PresRow|1900|Republican|3,372|749|108|Massachusetts}}
+{{PresRow|1904|Republican|3,638|900|143|Massachusetts}}
+{{PresRow|1908|Republican|3,312|777|252|Massachusetts}}
+{{PresRow|1912|Progressive|1,249|1,322|2,404|Massachusetts}}
+{{PresRow|1916|Republican|2,836|1,892|105|Massachusetts}}
+{{PresRow|1920|Republican|6,383|1,125|54|Massachusetts}}
+{{PresRow|1924|Republican|7,333|881|363|Massachusetts}}
+{{PresRow|1928|Republican|9,886|2,899|60|Massachusetts}}
+{{PresRow|1932|Republican|9,476|3,829|222|Massachusetts}}
+{{PresRow|1936|Republican|11,337|4,751|397|Massachusetts}}
+{{PresRow|1940|Republican|12,659|5,351|108|Massachusetts}}
+{{PresRow|1944|Republican|11,543|4,938|44|Massachusetts}}
+{{PresRow|1948|Republican|14,633|4,616|241|Massachusetts}}
+{{PresRow|1952|Republican|20,943|4,984|44|Massachusetts}}
+{{PresRow|1956|Republican|23,472|4,672|58|Massachusetts}}
+{{PresRow|1960|Republican|20,900|12,423|49|Massachusetts}}
+{{PresRow|1964|Democratic|15,133|20,101|121|Massachusetts}}
+{{PresRow|1968|Republican|24,296|16,546|1,320|Massachusetts}}
+{{PresRow|1972|Republican|36,340|22,636|466|Massachusetts}}
+{{PresRow|1976|Republican|39,295|31,268|2,554|Massachusetts}}
+{{PresRow|1980|Republican|41,493|23,952|16,828|Massachusetts}}
+{{PresRow|1984|Republican|51,261|38,369|321|Massachusetts}}
+{{PresRow|1988|Republican|49,676|48,747|1,449|Massachusetts}}
+{{PresRow|1992|Democratic|33,916|46,641|28,440|Massachusetts}}
+{{PresRow|1996|Democratic|40,144|59,223|11,370|Massachusetts}}
+{{PresRow|2000|Democratic|49,686|62,363|9,037|Massachusetts}}
+{{PresRow|2004|Democratic|58,527|72,156|1,465|Massachusetts}}
+{{PresRow|2008|Democratic|55,694|74,264|2,395|Massachusetts}}
+{{PresRow|2012|Democratic|60,446|70,822|1,847|Massachusetts}}
+{{PresRow|2016|Democratic|54,099|72,430|9,252|Massachusetts}}
+{{PresRow|2020|Democratic|55,311|91,994|3,020|Massachusetts}}
+{{PresRow|2024|Democratic|57,451|88,129|3,205|Massachusetts}}
+{{PresFoot}}
+Until the 1990s, Barnstable County was a stronghold of the [[Republican Party (United States)|Republican Party]]. The county voted for Republican presidential candidates in every election from 1856 to 1988, with the exception of 1912 (when the Progressive candidate won the county) and 1964. It has since come to favor the [[Democratic Party (United States)|Democratic Party]], supporting Democratic candidates in all presidential elections since 1992. 
+
+Despite Barnstable's safe Democratic swing federally, it remained competitive well into the 21st century, with Republicans and Democrats frequently trading control of the county council and county positions and Republicans dominating local elections. The shift of the national Republican Party, in addition to the disorganization of the state Republican Party, has allowed Democrats to slowly make inroads in the county. The onset of the [[COVID-19 pandemic]] has been cited as an accelerant of that effect, with left-leaning remote workers moving into the county from places like [[Boston]] and [[New York City]], and Barnstable County is now predominantly Democratic at the local level as well. Despite this, Barnstable still remains the Republican Party's strongest county in terms of voter registration, although, like Democrats, they are dwarfed by registered Independents.<ref>{{Cite web |last=Globe |first=The Boston |date=2022-12-12 |title=Not long ago, the GOP controlled most of Cape Cod. A blue wave is changing the region. |url=https://www.boston.com/news/the-boston-globe/2022/12/12/not-long-ago-the-gop-controlled-most-of-cape-cod-a-blue-wave-is-changing-the-region/ |access-date=2025-10-22 |website=Boston.com |language=en-US}}</ref><ref>{{Cite web |url=https://www.sec.state.ma.us/divisions/elections/research-and-statistics/accessible-table/enrollment-breakdown-2025.htm |access-date=2025-10-22 |website=www.sec.state.ma.us |title=2025 State Election Enrollment Statistics}}</ref>
+===Voter registration===
+{| class=wikitable
+! colspan = 6 | Voter registration and party enrollment as of February 2025<ref name="Voters">{{cite web |title=The Commonwealth of Massachusetts |url=https://www.sec.state.ma.us/divisions/elections/research-and-statistics/accessible-table/enrollment-breakdown-2025.htm|website=Secretary of the Commonwealth of Massachusetts |access-date=October 22, 2025 |date=February 1, 2025}}</ref>
+|-
+| {{party color cell|Independent Party (United States)}}
+| Unenrolled
+| align = center | {{formatnum: 129,067}}
+| align = center | {{Percentage |129,067 |196,566 |2}}
+|-
+| {{party color cell|Democratic Party (United States)}}
+| [[Democratic Party (United States)|Democratic]]
+| align = center | {{formatnum: 42,512}}
+| align = center | {{Percentage |42,512 |196,566 |2}}
+|-
+| {{party color cell|Republican Party (United States)}}
+| [[Republican Party (United States)|Republican]]
+| align = center | {{formatnum: 23,181}}
+| align = center | {{Percentage |23,181 |196,566 |2}}
+|-
+| {{party color cell|Independent Party (United States)}}
+| [[Third party (U.S. politics)|Other parties]]
+| align = center | {{formatnum: 	1,806}}
+| align = center | {{Percentage |	1,806 |196,566 |2}}
+|-
+! colspan = 2 | Total
+! align = center | {{formatnum: 196,566}}
+! align = center | {{Percentage |100}}
+|}
+
+==Government==
+
+Barnstable County has one of the last functioning county governments in Massachusetts. County government consists of a legislative branch (Barnstable County Assembly of Delegates) and an executive branch (Barnstable County Commissioners).
+
+===Barnstable County Assembly of Delegates===
+The Assembly of Delegates is the legislative branch of Barnstable County. There are 15 towns in Barnstable County, each town represented on the Assembly. In 1989, by an Act of the [[Massachusetts General Court]] and confirmed by most Barnstable County voters, the Barnstable County Home Rule Charter went into effect and the first session of the Assembly of Delegates convened. All legislative powers of the county are vested in the Assembly, which acts by [[Local ordinance|ordinance]] and adopts resolutions.
+
+The Assembly of Delegates consists of 15 delegates, one representing each of the towns in Barnstable County. A delegate's vote is weighted on the basis of the population of his or her town. The town of Barnstable, for example, has the largest share of the vote, at 20.92%, and Truro has the smallest, at 0.93%.
+
+===Barnstable County Commissioners===
+There are three Barnstable County Commissioners, who together act as the Executive Branch of county government. Each commissioner is elected at large and serves a four-year staggered term. The commissioners direct county agencies, prepare budgets to submit to the Assembly, oversee the care of county property and finances, propose ordinances to the Assembly, and appoint the County Administrator.
+
+Ronald Bergstrom ([[Democratic Party (United States)|D]]-Chatham), Chair
+*Term: 2023–2027
+
+Sheila Lyons ([[Democratic Party (United States)|D]]-Wellfleet), Vice-chair
+*Term: 2021–2025
+
+Mark Forest ([[Democratic Party (United States)|D]]-Yarmouth), Commissioner
+*Term: 2021–2025
+
+===Cape Cod Commission===
+The planning agency of Barnstable County is the [[Cape Cod Commission]].
+
+==Communities==
+Cities and towns have been legally incorporated as such under the laws of the State of Massachusetts. They include the entire territory of the state. A city may continue to name itself a town even though legally a city. Villages are subordinate to cities or towns. In addition to and not necessarily based on these legal municipalities are the arbitrary divisions of the [[United States Census Bureau]]. Villages are census divisions which may be used as [[special purpose municipalities]] or may have a greater sense of civic identity than their constituent town(s), but are not fully functioning municipal corporations. For example, the City of Barnstable has five fire districts that cover the seven villages - each village has its own fire department except that Centerville, Osterville and Marstons Mills have combined their efforts into the COMM Fire Department.
+{{Cape Cod overlay map|width=250|columns=2}}
+
+===City===
+*[[Barnstable, Massachusetts|Barnstable]] (county seat)
+
+===Towns===
+{{div col|colwidth=22em}}
+*[[Bourne, Massachusetts|Bourne]]
+*[[Brewster, Massachusetts|Brewster]]
+*[[Chatham, Massachusetts|Chatham]]
+*[[Dennis (town), Massachusetts|Dennis]]
+*[[Eastham, Massachusetts|Eastham]]
+*[[Falmouth, Massachusetts|Falmouth]]
+*[[Harwich, Massachusetts|Harwich]]
+*[[Mashpee, Massachusetts|Mashpee]]
+*[[Orleans, Massachusetts|Orleans]]
+*[[Provincetown, Massachusetts|Provincetown]]
+*[[Sandwich, Massachusetts|Sandwich]]
+*[[Truro, Massachusetts|Truro]]
+*[[Wellfleet, Massachusetts|Wellfleet]]
+*[[Yarmouth, Massachusetts|Yarmouth]]
+{{div col end}}
+
+===Villages===
+{{div col|colwidth=22em}}
+*[[Barnstable (village), Massachusetts|Barnstable]]
+*[[Centerville, Massachusetts|Centerville]]
+*[[Cotuit, Massachusetts|Cotuit]]
+*[[Craigville, Massachusetts|Craigville]]
+*[[Hyannis, Massachusetts|Hyannis]]
+*[[Hyannis Port, Massachusetts|Hyannis Port]]
+*[[Marstons Mills, Massachusetts|Marstons Mills]]
+*[[North Harwich, Massachusetts|North Harwich]]
+*[[North Truro, Massachusetts|North Truro]]
+*[[Osterville, Massachusetts|Osterville]]
+*[[Pleasant Lake, Massachusetts|Pleasant Lake]]
+*[[South Harwich, Massachusetts|South Harwich]]
+*[[West Barnstable, Massachusetts|West Barnstable]]
+*[[West Harwich, Massachusetts|West Harwich]]
+*[[Monument Beach, Massachusetts|Monument Beach]]
+*[[Pocasset, Massachusetts|Pocasset]]
+*[[Sagamore, Massachusetts|Sagamore]]
+*[[Sagamore Beach, Massachusetts|Sagamore Beach]]
+*[[Cataumet, Massachusetts|Cataumet]]
+*[[Buzzards Bay, Massachusetts|Buzzards Bay]]
+{{div col end}}
+
+===Census-designated places===
+{{div col|colwidth=12em}}
+*[[Bourne (CDP), Massachusetts|Bourne]]
+*[[Brewster (CDP), Massachusetts|Brewster]]
+*[[Buzzards Bay, Massachusetts|Buzzards Bay]]
+*[[Chatham (CDP), Massachusetts|Chatham]]
+*[[Dennis (CDP), Massachusetts|Dennis]]
+*[[Dennis Port, Massachusetts|Dennis Port]]
+*[[East Dennis, Massachusetts|East Dennis]]
+*[[East Falmouth, Massachusetts|East Falmouth]]
+*[[East Harwich, Massachusetts|East Harwich]]
+*[[East Sandwich, Massachusetts|East Sandwich]]
+*[[Falmouth (CDP), Massachusetts|Falmouth]]
+*[[Forestdale, Massachusetts|Forestdale]]
+*[[Harwich Center, Massachusetts|Harwich Center]]
+*[[Harwich Port, Massachusetts|Harwich Port]]
+*[[Mashpee Neck, Massachusetts|Mashpee Neck]]
+*[[Monomoscoy Island, Massachusetts|Monomoscoy Island]]
+*[[Monument Beach, Massachusetts|Monument Beach]]
+*[[New Seabury, Massachusetts|New Seabury]]
+*[[North Eastham, Massachusetts|North Eastham]]
+*[[North Falmouth, Massachusetts|North Falmouth]]
+*[[Northwest Harwich, Massachusetts|Northwest Harwich]]
+*[[Orleans (CDP), Massachusetts|Orleans]]
+*[[Pocasset, Massachusetts|Pocasset]]
+*[[Popponesset, Massachusetts|Popponesset]]
+*[[Popponesset Island, Massachusetts|Popponesset Island]]
+*[[Provincetown (CDP), Massachusetts|Provincetown]]
+*[[Sagamore, Massachusetts|Sagamore]]
+*[[Sandwich (CDP), Massachusetts|Sandwich]]
+*[[Seabrook, Massachusetts|Seabrook]]
+*[[Seconsett Island, Massachusetts|Seconsett Island]]
+*[[South Dennis, Massachusetts|South Dennis]]
+*[[South Yarmouth, Massachusetts|South Yarmouth]]
+*[[Teaticket, Massachusetts|Teaticket]]
+*[[West Chatham, Massachusetts|West Chatham]]
+*[[West Dennis, Massachusetts|West Dennis]]
+*[[West Falmouth, Massachusetts|West Falmouth]]
+*[[West Yarmouth, Massachusetts|West Yarmouth]]
+*[[Woods Hole, Massachusetts|Woods Hole]]
+*[[Yarmouth Port, Massachusetts|Yarmouth Port]]
+{{div col end}}
+
+===Unincorporated communities===
+{{div col|colwidth=22em}}
+*[[Bellingsgate Island|Bellingsgate]]
+*[[Captains Hill, Massachusetts|Captains Hill]]
+*[[Captains Village, Massachusetts|Captains Village]]
+*[[Ferris Fields, Massachusetts|Ferris Fields]]
+*[[Hatchville, Massachusetts|Hatchville]]
+*[[Long Point (Cape Cod)|Long Point]]
+*[[Monomoy Island]]
+*[[South Brewster, Massachusetts|South Brewster]]
+*[[South Chatham]]
+*[[South Sandwich, Massachusetts|South Sandwich]]
+*[[Waquoit, Massachusetts|Waquoit]]
+*[[Wood End, Massachusetts|Wood End]]
+{{div col end}}
+
+==Education==
+School districts include:<ref name=Schooldistlist2020>{{cite web|url=https://www2.census.gov/geo/maps/DC2020/PL20/st25_ma/schooldistrict_maps/c25001_barnstable/DC20SD_C25001.pdf|title=2020 CENSUS - SCHOOL DISTRICT REFERENCE MAP: Barnstable County, MA|publisher=[[U.S. Census Bureau]]|accessdate=July 21, 2022}} - [https://www2.census.gov/geo/maps/DC2020/PL20/st25_ma/schooldistrict_maps/c25001_barnstable/DC20SD_C25001_SD2MS.txt Text list]</ref>
+
+Officially K-12:
+* [[Barnstable School District]]
+* [[Bourne School District]]
+* [[Dennis-Yarmouth School District]]
+* [[Falmouth School District]]
+* [[Mashpee School District]]
+* [[Monomoy Regional School District]]
+* [[Provincetown School District]] - While it is designated as a K-12 district,<ref name=Schooldistlist2020/> Provincetown High School ended operations after 2013.<ref>{{cite web|url=https://www.bostonglobe.com/metro/2013/06/08/provincetown-high-sends-off-its-final-graduating-class/KDoD6enm39DpRSLsYPpCjJ/story.html|title=Final class graduates from Provincetown High School - The Boston Globe|website=[[The Boston Globe]]}}</ref>
+* [[Sandwich School District]]
+
+Secondary:
+* [[Nauset School District]]
+
+Elementary:
+* [[Brewster School District (Massachusetts)|Brewster School District]]
+* [[Eastham School District]]
+* [[Orleans School District]]
+* [[Truro School District]]
+* [[Wellfleet School District]]
+
+Truro residents are eligible to go to [[Nauset Regional High School]], and formerly to Provincetown High.<ref name=Schooldistlist2020/>
+
+[[Cape Cod Community College]] is in the county.
+
+==Economy==
+The county is known for [[aquaculture]].<ref name="2017-census-county" /> It ranks first in the state for revenue from aquaculture products.<ref name="2017-census-county">{{cite web | access-date=July 29, 2022 | date=2017 | title=Census of Agriculture - State and County Profiles - Barnstable County Massachusetts | website=USDA, [[National Agricultural Statistics Service]] | url=https://www.nass.usda.gov/Publications/AgCensus/2017/Online_Resources/County_Profiles/Massachusetts/}}</ref>
+
+==See also==
+{{Portal|United States}}
+{{div col|colwidth=30em}}
+*[[List of counties in Massachusetts]]
+* [[List of Massachusetts locations by per capita income]]
+* [[Barnstable County Correctional Facility]]
+* [[Barnstable County Courthouse]]
+* [[Barnstable County Hospital]]
+* [[Barnstable Municipal Airport]]
+* [[Cape Cod]]
+* [[Cape Cod Commission]]
+* [[Joint Base Cape Cod]]
+* [[Nantucket Sound]]
+* [[National Register of Historic Places listings in Barnstable County, Massachusetts]]
+* [[Registry of Deeds (Massachusetts)#Barnstable|Registry of Deeds (Massachusetts)]]
+* [[Scusset Beach State Reservation]]
+* [[Shawme-Crowell State Forest]]
+* {{USS|Barnstable County|LST-1197}}
+{{div col end}}
+
+==Citations==
+{{reflist}}
+
+==General bibliography==
+* {{cite book | first=Jack North | last=Conway | title=The Cape Cod Canal | year=2008 | location=Charleston, South Carolina | publisher=The History Press}}
+* {{cite book | first=Frederick | last=Freeman | title=The History of Cape Cod: the Annals of Barnstable County and of its Several Towns, Including the District of Mashpee | year=1860 | location=Boston | publisher=Geo. C Rand & Avery | volume=I | url=https://books.google.com/books?id=D9uEQbPZB9YC&q=Barnstable+County+Cape+Cod}}
+* {{cite book | first=Frederick | last=Freeman | title=The History of Cape Cod: the Annals of the Thirteen Towns of Barnstable County | year=1862 | location=Boston | publisher=Geo. C Rand & Avery | volume=II | url=https://books.google.com/books?id=VN8_AAAAYAAJ&q=Barnstable+County+Definition&pg=PA516}}
+* {{cite book | first=Richard F. | last=Whalen | title=Truro | year=2007 | location=Charleston, South Carolina | publisher=The History Press}}
+
+==External links==
+{{Commons category|Barnstable County, Massachusetts}}
+* {{osmrelation|2294308}}
+* [http://www.barnstabledeeds.org/ Barnstable County Registry of Deeds]
+* [http://www.capecodcommission.org/ Cape Cod Commission official site]
+* [http://www.plymouthcolony.net/barnstable/  USGenWeb Genealogical Site for Barnstable County]
+* {{Deprecated archive|url=https://archive.today/20121215084615/http://oasis.lib.harvard.edu//oasis/deliver/deepLink?_collection=oasis&uniqueId=hou00282|title=OASIS Online Archival Search Information System; Barnstable County|sec=el}}
+* [https://www2.census.gov/geo/maps/general_ref/cousub_outline/cen2k_pgsz/ma_cosub.pdf US Census Bureau map] of cities, towns, Native American reservations, and census-designated places
+
+{{Geographic location
+| Centre    = Barnstable County, Massachusetts
+| North     = ''[[Cape Cod Bay]]''
+| Northeast = ''[[Gulf of Maine]]''
+| East      = ''Atlantic Ocean''
+| Southeast = ''Atlantic Ocean''
+| South     = [[Nantucket]] County
+| Southwest = [[Dukes County, Massachusetts|Dukes County]]
+| West      = ''[[Buzzards Bay]]''
+| Northwest = [[Plymouth County, Massachusetts|Plymouth County]]
+}}
+{{Barnstable County, Massachusetts}}
+{{Massachusetts}}
+{{Massachusetts Public High Schools}}
+{{Authority control}}
+{{coord|41.72|-70.25|type:adm2nd_region:US-MA_source:UScensus1990|display=title}}
+
+[[Category:Barnstable County, Massachusetts| ]]
+[[Category:1685 establishments in Plymouth Colony]]
+[[Category:Counties of Plymouth Colony]]
+[[Category:Massachusetts counties]]
+[[Category:Populated places established in 1685]]

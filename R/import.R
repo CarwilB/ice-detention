@@ -100,7 +100,11 @@ read_facilities_data <- function(data_file_info_row, clean_names_list) {
 
 import_all_years <- function(data_file_info, clean_names_list) {
   facilities_data_list <- purrr::map(seq_len(nrow(data_file_info)), function(i) {
-    read_facilities_data(data_file_info[i, ], clean_names_list)
+    read_facilities_data(data_file_info[i, ], clean_names_list) |>
+      # Snapshot flag distinguishing the two FY26 releases (b = Feb 12,
+      # c = July 20); NA for all other years. Carried through the pipeline so
+      # panel builds can split or merge the FY26 snapshots.
+      dplyr::mutate(fy26_snapshot = data_file_info$snapshot[i])
   })
   names(facilities_data_list) <- data_file_info$year_name
   facilities_data_list

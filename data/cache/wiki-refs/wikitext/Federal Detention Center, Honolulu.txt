@@ -1,0 +1,101 @@
+{{Short description|Prison facility in the United States}}
+{{Use American English|date=August 2025}}
+{{Use mdy dates|date=December 2023}}
+{{Infobox Prison
+| name           = Federal Detention Center, Honolulu
+| image          = Federal Detention Center Honolulu.jpg
+| image_size     = 300
+| caption        = FDC Honolulu as seen from the Inter-Island Terminal at [[Honolulu International Airport]].
+| location       = [[Honolulu, Hawaii]]
+| status         = Operational
+| classification = Administrative Security
+| capacity       = 695
+| opened         = 2001
+| managed_by     = [[Federal Bureau of Prisons]]
+| warden         = Estela Derr
+| website        = {{Official website|https://www.bop.gov/locations/institutions/hon/}}
+}}
+The '''Federal Detention Center, Honolulu (FDC Honolulu)''' is a [[federal prison]] in [[Honolulu, Hawaii]], United States. It holds male and female prisoners of all security levels prior to or during court proceedings in [[United States District Court for the District of Hawaii|Hawaii Federal District Court]], as well as inmates serving brief sentences. It is operated by the [[Federal Bureau of Prisons]], a division of the [[United States Department of Justice]].
+
+FDC Honolulu is located adjacent to [[Daniel K. Inouye International Airport]],<ref>{{Cite web |last=Federal Bureau of Prisons |title=FDC Honolulu |url=https://www.bop.gov/locations/institutions/hon/index.jsp |access-date=2023-12-08 |website=www.bop.gov}}</ref> and is at the airport's western perimeter. The building has twelve stories.<ref>{{Cite book |last=Bosworth |first=Mary |url=https://books.google.com/books?id=JKHaAAAAMAAJ |title=The U.S. Federal Prison System |date=2002-07-19 |publisher=SAGE Publications |isbn=978-0-7619-2304-6 |pages=235 |language=en}}</ref>
+
+As of 2013, it houses 300 prisoners sentenced under Hawaii state law rather than federal law; the Hawaii state prison system did not have enough capacity for these prisoners.<ref>{{Cite web |last=Thompson |first=David |date=July 9, 2012 |title=Field Guide: Honolulu Behind Bars |url=https://www.honolulumagazine.com/field-guide-honolulu-behind-bars/ |archive-url=https://web.archive.org/web/20160213154954/http://www.honolulumagazine.com/Honolulu-Magazine/July-2012/Field-Guide-Honolulu-Behind-Bars/ |archive-date=February 13, 2016 |access-date=December 8, 2023 |website=Honolulu Magazine}}</ref>
+
+==History==
+The facility opened in 2001. The first 25 inmates to occupy the facility were scheduled to arrive at FDC Honolulu on July 31 of that year; previously they were held in facilities in the [[Mainland United States]]. The first five groups, each consisting of 25 inmates, were made up of inmates within their final two years of their federal prison sentences. FDC Honolulu relieved the Oahu Community Correctional Center, operated by the [[Hawaii Department of Public Safety]]. As of June 2001, the Oahu Community Correctional Center, designed to hold 1,000 pretrial inmates, held 1,150 pretrial inmates. The first pretrial inmates from Hawaii were scheduled to move into the federal center one month after the first five groups of 25 convicted inmates had arrived.<ref>{{Cite news |last=Daranciang |first=Nelson |date=2001-06-13 |title=New jailhouse ready for first inmates |work=Honolulu Star-Bulletin |url=https://archives.starbulletin.com/2001/06/13/news/story9.html |access-date=2023-12-08 |archive-url=https://web.archive.org/web/20121020145038/http://archives.starbulletin.com/2001/06/13/news/story9.html |archive-date=October 20, 2012 |url-status=live }}</ref>
+
+As of 2016, the Hawaii State Legislature has expressed an interest in acquiring FDC Honolulu.<ref>{{Cite web |date=2016 |title=H.C.R. No. 31 |url=http://www.capitol.hawaii.gov/session2016/bills/HCR31_.HTM |archive-url=https://web.archive.org/web/20160207222545/http://www.capitol.hawaii.gov/session2016/bills/HCR31_.HTM |archive-date=2016-02-07 |access-date=2023-12-08 |publisher=Hawaii House of Representatives}}</ref>
+
+==Notable inmates (current and former)==
+{|class="wikitable sortable"
+!width=15%|Inmate Name
+!width=12%|[https://www.bop.gov/inmateloc/ Register Number]
+!width=5%|Photo
+!width=24%|Status
+!width=49%|Details
+|-
+| align="center" | [[Duane Chapman|Duane "Dog" Chapman]]
+| align="center" | 95743–022
+| [[File:Dog-Chapman (cropped).jpg|80px]]
+| rowspan=3|Arrested on September 14, 2006; released on bail the next day.
+| rowspan=3|Subjects of the [[A&E (TV channel)|A&E]] reality television program ''[[Dog the Bounty Hunter]]''; arrested on an illegal [[bounty hunting]] warrant issued in Mexico in connection with their apprehension of [[serial rapist]] [[Andrew Luster]] in 2003; the charges against them were later dismissed.<ref>{{Cite web |date=2006-09-21 |title=Bounty hunter Duane 'Dog' Chapman arrested |url=http://www.today.com/popculture/bounty-hunter-duane-dog-chapman-arrested-2D80555484 |access-date=2023-12-08 |website=TODAY.com |language=en}}</ref>
+|-
+| align="center" | [[Leland Chapman]]
+| align="center" | 95744–022
+| 
+|-
+| align="center" | [[Tim Chapman]]
+| align="center" | 95742–022
+| 
+|-
+| align="center" | [[Roger Christie]]
+| align="center" | 99279–022
+| 
+|Served 4 years; released in September 2014.<ref>{{cite web |title=Hilo's 'pot minister' speaks out after prison release |url=https://www.hawaiinewsnow.com/story/26628600/hilos-pot-minister-speaks-out-after-prison-release/ |website=www.hawaiinewsnow.com |access-date=29 July 2026 |language=en |date=25 September 2014}}</ref>
+|Pleaded guilty to marijuana trafficking and two counts of failing to file income tax returns.
+|-
+| align="center" |[[Dalton Tanonaka]]
+| align="center" |95456-022
+| [[File:Dalton Tanonaka.JPG|80px]]
+|Served a 90-day sentence; released on March 13, 2006.
+|Pleaded guilty for not being truthful about funds he received for his failed campaigns for [[Lieutenant Governor of Hawaii]], and his campaign for [[United States House of Representatives]].<ref>{{Cite web |title=StarBulletin.com {{!}} News {{!}} /2005/11/04/ |url=https://archives.starbulletin.com/2005/11/04/news/story02.html |access-date=2024-06-14 |website=archives.starbulletin.com}}</ref>
+|-
+| align="center" |[[Alexander Yuk Ching Ma|Alexander Ma]]
+| align="center" |12272-122
+| [[File:Alexander Yuk Ching Ma.png|80px]]
+|Transferred to [[Federal Correctional Institution, Beaumont|FCI Beaumont]].
+Serving a 10-year sentence; scheduled for release on February 19, 2029.
+|Former [[Central Intelligence Agency|CIA]] agent who was convicted of sending classified documents to [[China]].<ref>{{Cite news|url=https://apnews.com/article/cia-fbi-officer-spying-china-1fe72330dc5a6fea20a4df2337a0e182|title=Ex-CIA officer who spied for China gets 10 years in prison — and a lifetime of polygraph tests|publisher=AP News|date=September 11, 2024}}</ref>
+|-
+| align="center" | [[Nicholas Ochs]]
+| align="center" | 12336–122
+| 
+|Transferred to [[Federal Correctional Complex, Butner|FCI Butner]].
+Sentenced to four years in prison; released on November 4, 2024, after his conviction was overturned by the [[United States Supreme Court|Supreme Court]]. Pardoned by President [[Donald Trump]] in January 2025.<ref>{{cite web |last1=Grube |first1=Nick |title=Trump Pardons Hawaiʻi Proud Boys Founder For Jan. 6 Insurrection |url=https://www.civilbeat.org/2025/01/hawai%CA%BBi-proud-boy-founder-us-army-soldier-get-jan-6-pardons-from-trump/ |website=Honolulu Civil Beat |access-date=29 July 2026 |language=en |date=21 January 2025}}</ref>
+|Leader of the [[Proud Boys]] Hawaii chapter. Arrested upon returning from Washington, D.C. at the [[Daniel K. Inouye International Airport]] for participating in the [[January 6 United States Capitol attack|U.S. Capitol attack]].<ref>{{Cite web |last=Bernardo |first=Rosemarie |date=2021-01-15 |title=Federal judge orders 'Proud Boys Hawaii' founder to surrender passport |url=https://www.staradvertiser.com/2021/01/15/breaking-news/federal-judger-orders-proud-boys-hawaii-founder-to-surrender-passport/ |access-date=2023-12-08 |website=Honolulu Star-Advertiser |language=en-US}}</ref>
+|}
+
+==See also==
+{{Portal bar|Hawaii|United States|Politics}}
+*[[List of U.S. federal prisons]]
+*[[Federal Bureau of Prisons]]
+*[[Incarceration in the United States]]
+
+==References==
+{{Reflist}}
+
+==External links==
+{{Commons category}}
+*[http://www.bop.gov/locations/institutions/hon/index.jsp FDC Honolulu Official site]
+{{Honolulu}}
+{{Federal Bureau of Prisons}}
+{{coord|21.333597|-157.928093|type:landmark_globe:earth_region:US-HI|display=title}}
+
+[[Category:Buildings and structures in Honolulu]]
+[[Category:Federal Bureau of Prisons Administrative Facilities|Honolulu]]
+[[Category:Prisons in Hawaii]]
+[[Category:2001 establishments in Hawaii]]
+
+{{Hawaii-struct-stub}}
+{{US-prison-stub}}
+{{Honolulu-stub}}

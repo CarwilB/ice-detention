@@ -1,0 +1,44 @@
+{{Short description|Prison in Baldwin, Michigan}}
+{{Use American English|date=August 2025}}
+{{Infobox Prison
+| name           = North Lake Correctional Facility
+| image          = 
+| location       = 1805 W 32nd Street <br>[[Baldwin, Michigan]]
+| coordinates    = 
+| status         = 
+| classification = {{hlist|Medium|maximum}}
+| capacity       = 1,741
+| opened         = 1999; expanded 2009
+| closed         = 
+| managed_by     = [[GEO Group]]
+| director       = 
+}}
+
+'''North Lake Correctional Facility''' is a privately owned medium- and maximum-security prison for men located in [[Baldwin, Michigan]], United States, owned & operated by [[GEO Group]].<ref>{{cite web|title=North Lake Correctional Facility|url=http://www.geogroup.com/Maps/LocationDetails/132|website=GEO Group|access-date=30 July 2016|archive-url=https://web.archive.org/web/20160717211740/http://www.geogroup.com/Maps/LocationDetails/132|archive-date=17 July 2016|url-status=dead}}</ref>
+
+Originally opened in 1999, it was closed in 2022 when the federal government cancelled contracts with for-profit prisons. It was re-opened in 2025 as the '''North Lake Processing Center'''. It is the largest immigrant detention center in the [[Midwest]] region.<ref name = advance/>
+
+==History==
+The prison was originally built in 1999 by Wackenhut to house Michigan’s youth offenders under contract for the [[Michigan Department of Corrections]]. The GEO Group, Wackenhut's successor firm, expanded the prison from 570 to 1,748 beds in late 2009.<ref name="vtdigger">{{cite web|url=https://vtdigger.org/2015/05/29/michigan-adjusts-law-to-accept-vermont-inmates/|title=Michigan adjusts law to accept Vermont inmates &#124; VTDigger|date=29 May 2015|publisher=vtdigger.org|access-date=30 July 2016}}</ref> Some 280 high security inmates convicted of crimes in the state of Vermont arrived from other out-of-state prisons (in Arizona and Kentucky) to the Baldwin facility in June 2015.<ref>{{Cite web|url=https://vtdigger.org/2015/06/30/vermonts-out-of-state-inmates-arrive-at-michigan-prison/|title=Vermont's out-of-state inmates arrive at Michigan prison|date=30 June 2015}}</ref> County Commissioner Dan Sloan stated that as many as 150 jobs would result from the influx of out-of-state prisoners to the facility.<ref>{{Cite web|url=https://vtdigger.org/2015/05/29/michigan-adjusts-law-to-accept-vermont-inmates/|title=Michigan adjusts law to accept Vermont inmates|date=29 May 2015}}</ref>
+
+Vermont received notice that GEO was terminating its contract effective June 2017; Vermont Corrections relocated the prisoners from the Baldwin facility.<ref>{{cite web|last1=Hewitt|first1=Elizabeth|title=Vt. Prisoners to Leave Private Michigan Prison|url=https://www.vnews.com/vtprisonersto-leave-michigan-for-profit-prison-7150554|website=Valley News / VT Digger|access-date=22 January 2017}}</ref> GEO secured a 10-year contract with the [[Federal Bureau of Prisons]] in 2019 to house non-citizen immigrant convicts, but the prison closed again in September 2022 when the federal government cancelled all contracts with privately owned [[Private prison|for-profit prisons]].<ref name="Mass">{{cite news |last1=White |first1=Rose |title=Owner of idled Michigan prison sees ‘unprecedented opportunity’ in mass deportations |url=https://www.mlive.com/public-interest/2025/03/owner-of-idled-michigan-prison-sees-unprecedented-opportunity-in-mass-deportations.html |access-date=13 March 2025 |work=MLive |publisher=MLive Media Group |date=2 March 2025}}</ref><ref name="Private">{{cite news |last1=Oosting |first1=Jonathan |title=Private firm set to open immigrant prison in Michigan |url=https://www.detroitnews.com/story/news/local/michigan/2019/05/02/private-prison-firm-house-immigrant-detainees-michigan/3654038002/ |access-date=13 March 2025 |work=The Detroit News |publisher=Digital First Media |date=2 May 2019}}</ref>
+
+The prison was reopened as the North Lake Processing Center on June 16, 2025 as a [[U.S. Immigration and Customs Enforcement|United States Immigration and Customs Enforcement (ICE)]] [[List of immigrant detention sites in the United States|processing center]], making it one of the largest such facilities in the country.<ref name="WZZM">{{cite web |last1=Meyer |first1=Brielle |title=Closed private prison near Baldwin now reopen as ICE processing center |url=https://www.wzzm13.com/article/news/local/closed-private-prison-near-baldwin-now-reopen-ice-processing-center/69-371de652-d80e-4122-8409-2af9bfc9f4a9 |website=13 ABC On Your Side |publisher=WZZM-TV |access-date=4 July 2025}}</ref> Between August 2025 and February 2026, over 800 [[Habeas petition|habeas petitions]] were filed on behalf of people detained at the facility, with judges ruling in over 90% of the petitions that they were unlawfully detained.<ref>{{Cite web |last=Rayes |first=Adam Yahya |last2=Polo |first2=Michelle Jokisch |last3=Smith |first3=Lindsey |date=2026-03-04 |title=Judges rule hundreds of immigrants “unlawfully detained” at ICE center in Northern Michigan |url=https://www.michiganpublic.org/criminal-justice-legal-system/2026-03-04/judges-rule-hundreds-of-immigrants-unlawfully-detained-at-ice-center-in-northern-michigan |access-date=2026-03-04 |website=Michigan Public |language=en}}</ref>
+
+On April 20, 2026, detainees at the processing center began a hunger strike. As of April 21, approximately 200 detainees are participating in the strike.<ref>{{Cite web |last=Dailey|first=Katherine|date=April 24, 2026|title=Civil rights organizations call for independent investigation into Michigan ICE detention center|url=https://michiganadvance.com/2026/04/24/civil-rights-organizations-call-for-independent-investigation-into-michigan-ice-detention-center/|access-date=April 25, 2026|website=Michigan Advance|language=en}}</ref> The strike is in protest of poor living condition and medical care, as well as procedural delays.<ref>{{Cite web |last=White|first=Rose|date=April 22, 2026|title=Detained immigrants launch hunger strike at Michigan ICE facility|url=https://www.mlive.com/news/2026/04/detained-immigrants-launch-hunger-strike-at-michigan-ice-facility.html|access-date=April 23, 2026|website=[[MLive]]|language=en}}</ref> The [[Department of Homeland Security]] has officially denied the hunger strike.<ref name = advance>{{Cite web |last=King|first=Jon|date=April 23, 2026|title=Detainee speaks out as hunger strike continues at Michigan's largest ICE detention center|url=https://michiganadvance.com/2026/04/23/detainee-speaks-out-as-hunger-strike-continues-at-michigans-largest-ice-detention-center/|access-date=April 23, 2026|website=Michigan Advance|language=en}}</ref> In May 2026, according to the ''Manchester Mirror'', the ACLU of Michigan and the Michigan Immigrant Rights Center claimed detainees at the facility were being "denying adequate medical care" and that the facility was "limiting their access to attorneys, immigrant advocacy and civil rights organizations".<ref>{{Cite web |last=Gibbons|first=Lauren|date=May 18, 2026|title=Civil rights organizations call for independent investigation into Michigan ICE detention center|url=https://themanchestermirror.com/2026/05/18/advocates-ice-denying-medical-legal-access-at-michigan-detention-center/|access-date=May 22, 2026|website=The Manchester Mirror|language=en}}</ref>
+
+==References==
+{{reflist}}
+
+{{coord|43.929557|-85.841025|format=dms|display=title|type:landmark}}
+
+{{State prisons in Vermont}}
+
+[[Category:Prisons in Michigan]]
+[[Category:Buildings and structures in Lake County, Michigan]]
+[[Category:GEO Group]]
+[[Category:1999 establishments in Michigan]]
+[[Category:Immigration detention centers and prisons in the United States]]
+
+{{Michigan-struct-stub}}
+{{US-prison-stub}}

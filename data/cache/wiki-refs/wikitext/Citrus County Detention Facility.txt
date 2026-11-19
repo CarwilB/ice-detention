@@ -1,0 +1,34 @@
+{{Short description|Jail in Lecanto, Florida, US}}
+{{Use American English|date=August 2025}}
+{{Infobox Prison
+| name           = Citrus County Detention Facility
+| image          = 
+| location       = 2604 W. Woodland Ridge Drive <br> [[Lecanto, Florida]]
+| coordinates    = 
+| status         = open
+| classification = mixed
+| capacity       = 760
+| opened         = 1995
+| closed         = 
+| managed_by     = [[Corrections Corporation of America]]
+| director       = 
+}}
+
+The '''Citrus County Detention Facility''' is a privately operated jail located in [[Lecanto, Florida|Lecanto]], [[Citrus County, Florida]], run by the [[Corrections Corporation of America]] to house inmates for multiple jurisdictions:  the county, the [[United States Virgin Islands Department of Justice]], and the [[U.S. Marshals Service]].  The facility houses a maximum of 760 prisoners, both male and female, at mixed security levels.<ref>{{cite web|title=Citrus County Detention Facility|url=http://www.cca.com/facilities/citrus-county-detention-facility|website=Corrections Corporation of America|accessdate=11 September 2016}}</ref>
+
+==References==
+{{reflist}}
+
+{{coord|28.844993|-82.476751|format=dms|display=title|type:landmark}}
+
+{{CoreCivic Facilities}}
+
+[[Category:Prisons in Florida]]
+[[Category:Buildings and structures in Citrus County, Florida]]
+[[Category:CoreCivic]]
+[[Category:1995 establishments in Florida]]
+[[Category:Private prisons in the United States]]
+[[Category:Government buildings completed in 1995]]
+
+{{Florida-struct-stub}}
+{{US-prison-stub}}

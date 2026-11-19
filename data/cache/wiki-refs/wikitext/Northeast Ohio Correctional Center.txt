@@ -1,0 +1,44 @@
+{{Short description|Private medium-security prison for men}}
+{{Use American English|date=August 2025}}
+{{Use mdy dates|date=August 2026}}
+{{Infobox Prison
+| name           = Northeast Ohio Correctional Center
+| image          = 
+| location       = 2240 Hubbard Road, [[Youngstown, Ohio]], U.S.
+| coordinates    = 
+| status         = operational
+| classification = medium security
+| capacity       = 2,016 (as of 2017)<ref name="y045">{{cite web | title=CoreCivic Expands Contract with the State of Ohio for Capacity at the Northeast Ohio Correctional Center | website=CoreCivic | date=April 11, 2017 | url=https://ir.corecivic.com/news-releases/news-release-details/corecivic-expands-contract-state-ohio-capacity-northeast-ohio | access-date=February 17, 2026}}</ref>
+| opened         = 1997
+| closed         = 
+| managed_by     = [[CoreCivic]]
+| director       = 
+}}
+'''Northeast Ohio Correctional Center''' is a private medium-security prison for men in [[Youngstown, Ohio]], United States. It opened in 1997 and is operated by [[CoreCivic]], under contract with the [[United States Marshals Service]]<ref>{{cite web|title=Northeast Ohio Correctional Center|url=http://www.corecivic.com/facilities/northeast-ohio-correctional-center|website=CoreCivic|accessdate=16 December 2017}}</ref><ref>{{cite web|title=Northeast Ohio Correctional Center|url=http://www.drc.ohio.gov/northeastocc|website=Ohio Department of Rehabilitation and Correction|accessdate=16 December 2017}}</ref> and the [[Ohio Department of Rehabilitation and Correction]]. As of 2017, the facility has capacity for approximately 2,016 inmates as well as 550 detainees from the Marshals Service and 200 detainees from [[United States Immigration and Customs Enforcement|Immigration and Customs Enforcement]].<ref name="y045"/>
+
+==History==
+The facility has been owned and operated by CoreCivic and its predecessor, [[Corrections Corporation of America]], since 1997. It opened in May 1997 with a short-term contract with the [[District of Columbia Department of Corrections]] to house 900 inmates from their notorious [[Lorton Reformatory|Lorton Correctional Complex]].
+
+The combination of an inexperienced, unprepared staff with "young, aggressive, and violent" residents meant immediate friction.<ref>{{cite news|last1=Yeoman|first1=Barry|title=Steel Town Lockdown|url=https://www.motherjones.com/politics/2000/05/steel-town-lockdown/|accessdate=16 December 2017|issue=May/June 2000|publisher=Mother Jones}}</ref>  There was a serious disruption by May 30.  Through 1997 a pattern of disruptions, assaults, and challenges to authority did not deter the District from expanding the contract to 1700 prisoners by October.  On February 22, 1998, inmate Derrick Davis was stabbed to death in his cell.  [[United States federal judge|United States District Judge]] [[Sam H. Bell]] halted any further transfers of prisoners from the District of Columbia.  On March 11, "in a devastating convergence of security lapses," inmate Bryson Chisley was stabbed by a fellow inmate in a high security segregation unit.  Chisley's wife had been urging officials to keep them separated and had even gone to the local press.  Chisley's killer had "the assistance of the individual who was the principal assailant of Davis three weeks earlier."<ref>{{cite web|title=REPORT TO THE ATTORNEY GENERAL INSPECTION AND REVIEW OF THE NORTHEAST OHIO CORRECTIONAL CENTER|url=https://www.justice.gov/archives/ag/report-attorney-general-inspection-and-review-northeast-ohio-correctional-center|website=United States Dept. of Justice Archives|publisher=U.S. Department of Justice|accessdate=16 December 2017}}</ref>
+
+In May a surprise inspection by members of the Ohio state Correctional Institution Inspection Committee were turned away at the gate.{{Citation needed|date=August 2026}} On July 25, 1998, six violent criminals escaped through a perimeter fence.  All were eventually caught.{{Citation needed|date=August 2026}}
+
+A federal report on the continuing crisis was released to the Attorney General on November 25, 1998.  The overview of its major findings began with:<ref>{{cite web|title=REPORT TO THE ATTORNEY GENERAL INSPECTION AND REVIEW OF THE NORTHEAST OHIO CORRECTIONAL CENTER|url=https://www.justice.gov/archives/ag/report-attorney-general-inspection-and-review-northeast-ohio-correctional-center|website=United States Dept. of Justice Archives|publisher=U.S. Department of Justice|accessdate=16 December 2017}}</ref>
+
+:The Northeast Ohio Correctional Center has experienced pivotal failures in its security and operational management as a result of seriously flawed decisions by leaders of both CCA and DOC. Expediency and the pressure of short-term objectives often prevailed over good judgement and sound correctional management procedures. Identification and resolution of problems were too often delayed by the failure to perform self-assessment and management oversight. It is reasonable to conclude that certain of the most serious problems which endangered the safety of the public, the staff or the inmates were preventable or subject to mitigation.
+
+The [[Federal Bureau of Prisons]] ended its contract in 2014 and removed all its prisoners the following year.<ref>{{cite news|last1=Koff|first1=Stephen|title=Federal prison in Youngstown might not feel effects of private-prison phase-out|url=http://www.cleveland.com/metro/index.ssf/2016/08/federal_prison_in_youngstown_u.html|accessdate=16 December 2017|publisher=Cleveland.com|date=18 August 2016}}</ref>
+
+==References==
+{{Reflist}}
+
+{{Coord|41.131364|-80.631876|format=dms|display=title|type:landmark}}
+
+{{State prisons in Ohio}}
+{{CoreCivic Facilities}}
+{{Authority control}}
+
+[[Category:CoreCivic]]
+[[Category:Prisons in Ohio]]
+[[Category:Buildings and structures in Mahoning County, Ohio]]
+[[Category:1997 establishments in Ohio]]

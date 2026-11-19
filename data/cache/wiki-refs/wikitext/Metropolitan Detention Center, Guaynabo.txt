@@ -1,0 +1,117 @@
+{{short description|United States federal prison facility in Guaynabo, Puerto Rico}}
+{{Use American English|date=March 2026}}
+{{Infobox prison
+| name           = Federal Correctional Institution, Guaynabo
+| image          = MDC Guaynabo.jpg
+| image_size     = 250px
+| location       = [[Guaynabo, Puerto Rico]]
+| coordinates    = 
+| status         = Operational
+| classification = All security levels
+| population     = 1,725
+| opened         = 1993
+| closed         = 
+| managed_by     = [[Federal Bureau of Prisons]]
+| warden         = 
+}}
+
+The '''Metropolitan Detention Center, Guaynabo (MDC Guaynabo)''' is a United States [[federal prison]] facility in [[Guaynabo, Puerto Rico]]. It holds male and female inmates of all security levels who are awaiting trial or sentencing. It is operated by the [[Federal Bureau of Prisons]], a division of the [[United States Department of Justice]].
+
+MDC Guaynabo is located next to [[Fort Buchanan, Puerto Rico|Fort Buchanan]] U.S. Army base,<ref>"[https://www.bop.gov/locations/institutions/gua/GUA_aohandbook.pdf Federal Bureau of Prisons Metropolitan Detention Center Guaynabo, Puerto Rico Unit Admission & Orientation Booklet 2011]." [[Bureau of Prisons]]. October 13, 2011. p. 7 (PDF p. 7/54). Retrieved on September 14, 2017.</ref> and is {{convert|6|mi|km}} west of San Juan, the capital of Puerto Rico.<ref>{{cite web|title=MDC Guaynabo|url=http://www.bop.gov/locations/institutions/gua/index.jsp|publisher=Federal Bureau of Prisons}}</ref>
+
+In the wake of the destruction of [[Hurricane Maria]] in September 2017, some 1200 federal prisoners were transferred from Guaynabo to the [[Federal Correctional Institution, Yazoo City]] in Mississippi.<ref>{{cite news |last1=Gates |first1=Jimmie E. |title=State is housing 1,200 federal prisoners from Puerto Rico |url=https://www.clarionledger.com/story/news/2017/10/18/state-housing-1-200-federal-prisoners-puerto-rico/777228001/ |access-date=10 January 2019 |publisher=Clarion-Ledger (Jackson, Mississippi) |date=18 October 2017}}</ref>  Those 1200 were returned to Guaynabo in the first quarter of 2018, along with other prisoners who had been temporarily held in Atlanta, Georgia, Talladega Alabama, and Miami, Florida.<ref>{{cite news |last1=Speri |first1=Alice |title=PUERTO RICO WANTS TO CUT THE COST OF INCARCERATING PEOPLE BY SHIPPING THEM OFF THE ISLAND |url=https://theintercept.com/2018/03/23/puerto-rico-prisons-hurricane-maria/ |access-date=10 January 2019 |publisher=The Intercept |date=23 March 2018}}</ref>
+
+==Notable incidents==
+In 2010, an [[FBI]] investigation uncovered a conspiracy to distribute [[cocaine]], [[heroin]], [[marijuana]], [[Percocet]], and [[Xanax]] to an inmate at MDC Guaynabo. Several conspirators, led by Juan Rios-Ortiz, also attempted to provide cellular telephones, chargers, and [[SIM card]]s to an inmate of MDC. Rios-Ortiz worked for a company that had a contract to supply produce to the prison kitchen. Rios-Ortiz was subsequently convicted of [[conspiracy (crime)|conspiracy]] to distribute controlled substances, distribution of controlled substances, and providing contraband to an inmate of a federal prison.<ref>{{cite web|title=Juan Ríos Ortiz Found Guilty of Providing Contraband to the Federal Prison Defendant is Facing up to 20 Years in Prison and $1,000,000 in Fines|url=https://www.fbi.gov/sanjuan/press-releases/2010/sj111810.htm|publisher=Federal Bureau of Investigation|access-date=28 October 2013|date=November 18, 2010}}</ref><ref>{{cite web|title=Inmate Locator - Juan Rios-Ortiz|url=http://www.bop.gov/iloc2/InmateFinderServlet?Transaction=IDSearch&needingMoreList=false&IDType=IRN&IDNumber=15853-069&x=86&y=18|publisher=Federal Bureau of Prisons|access-date=28 October 2013}}</ref>
+
+On February 26, 2013, Osvaldo Albarati, a lieutenant for the [[Federal Bureau of Prisons]], was shot and killed in what is believed to be retaliation for his investigations into cellphone smuggling at MDC Guaynabo. He had just left the facility and was driving home when several gunmen opened fire on his vehicle on the De Diego Expressway near Bayamon.<ref>{{cite web|title=Federal corrections officer slain in Puerto Rico|url=http://www.globalpost.com/dispatch/news/agencia-efe/130227/federal-corrections-officer-slain-puerto-rico|publisher=GlobalPost – International News|access-date=28 October 2013|date=February 27, 2013}}</ref>  Albarati worked in the investigative branch at the prison, where he was responsible for investigating crime within the prison, including drug smuggling and illegal cellphone use. Authorities have said his killing may have been contracted by powerful drug kingpins being held at the facility in reprisal for recent seizures he spearheaded.<ref>{{cite web|title=FBI: $50K reward in prison officer's slaying|url=http://www.caribbeanbusinesspr.com/news03.php?nt_id=82257&ct_id=1|publisher=Casiano Communications|access-date=28 October 2013|date=March 15, 2013|url-status=usurped|archive-url=https://web.archive.org/web/20131029232436/http://www.caribbeanbusinesspr.com/news03.php?nt_id=82257&ct_id=1|archive-date=29 October 2013}}</ref> The [[FBI]] investigated the killing and no charges were filed.<ref>{{cite web|title=Lieutenant Osvaldo Albarati|url=http://www.odmp.org/officer/21764-lieutenant-osvaldo-albarati#ixzz2fZwUMVZv|publisher=Officer Down Memorial Page|access-date=28 October 2013}}</ref>
+
+On March 24, 2020 as a result of the [[COVID-19 pandemic in Puerto Rico|COVID-19 pandemic]], the prison reported that it was operating on a modified schedule and inmates were not allowed visitors.<ref name="COVID-19">{{cite web |title=Bureau of Prisons Update on COVID-19 |url=https://www.bop.gov/resources/news/pdfs/20200324_bop_press_release_covid19_update.pdf |website=Bureau of Prisons |access-date=26 March 2020}}</ref>
+
+==Notable inmates (current and former)==
+{|class="wikitable sortable"
+!width=16%|Inmate Name
+!width=10%|Register Number <ref>[https://www.bop.gov/inmateloc/ Inmate Locator], Bureau of Prisons</ref>
+!width=5%|Photo
+!width=16%|Status
+!width=52%|Details
+|-
+| align="center" | [[José Figueroa Agosto]]
+| align="center" | 35318-069
+| 
+| Released on March 27, 2020.
+| Leader of the largest drug trafficking organization in the Caribbean; apprehended in 2010 after ten years as Puerto Rico's most wanted fugitive and indicted for [[drug trafficking]] [[conspiracy (crime)|conspiracy]] and [[money laundering]]; known as the "Pablo Escobar of the Caribbean."<ref>{{cite web|title=DEA agents nab alleged drug kingpin in Puerto Rico|url=http://www.cnn.com/2010/CRIME/07/17/puerto.rico.drug.arrest/index.html|publisher=CNN|access-date=28 October 2013|date=July 18, 2010}}</ref><ref>{{cite web|last=Coto|first=Danica|title=Jose Figueroa Agosto Arrested: Feds Catch Alleged Puerto Rico Drug Lord After 10-Year Hunt|url=http://www.huffingtonpost.com/2010/07/18/jose-figueroa-agosto-arre_n_650628.html|publisher=Huffington Post|access-date=28 October 2013|date=July 17, 2010}}</ref><ref>{{cite web|title=José Figueroa Agosto and 16 Other Individuals Indicted for Drug Trafficking as a Result of a Joint DEA, FBI and ICE Investigation|url=https://www.justice.gov/dea/divisions/car/2010/carib112210p.html|publisher=US Department of Justice|access-date=28 October 2013|date=November 22, 2010}}</ref>   
+|-
+| align="center" |[[Murder of Adam Anhang|Áurea Vázquez-Rijos]]
+| align="center" |46255-069
+| 
+|rowspan=2|Transferred to [[Federal Medical Center, Carswell|FMC Carswell]].
+Serving life sentences. 
+|rowspan=2|Sisters convicted in 2018 for murdering Aurea's estranged husband Adam Joel Anhang Uster in 2005.
+|-
+| align="center" |[[Murder of Adam Anhang|Marcia Vázquez-Rijos]]
+| align="center" |42102-069
+| 
+|-
+| align="center" |[[Al Sharpton]]
+| align="center" |21458-069
+| [[File:Rev. Al Sharpton (5437318160) (1).jpg|80px]]
+|Held for two days; transferred to [[MDC Brooklyn]] for seven weeks before being released on August 17, 2001.<ref>{{cite web |last1=Feuer |first1=Alan |title=Sleeker by 14 Pounds, Sharpton Fights On |url=https://www.nytimes.com/2001/06/12/nyregion/sleeker-by-14-pounds-sharpton-fights-on.html |website=The New York Times |access-date=29 July 2026 |date=12 June 2001}}</ref>
+|Baptist minister, political activist and current [[MSNBC]] television host; convicted of trespassing on federal property for protesting against the US military presence on the island of Vieques, Puerto Rico.<ref>{{Cite web|title=Sharpton Sentenced to Jail for Vieques Protest|website=[[The New York Times]] |url=https://www.nytimes.com/2001/05/23/nyregion/sharpton-sentenced-to-jail-for-vieques-protest.html}}</ref>
+|-
+| align="center" | [[Edward James Olmos]]
+| align="center" | 21554-069
+| [[File:Edward James Olmos Sept 06 crop face.jpg|80px]]
+|Served 20 days; released on August 24, 2001.<ref>{{cite web |title=Actor Olmos Gets Jail Term |url=https://www.courant.com/2001/08/11/actor-olmos-gets-jail-term/ |website=Hartford Courant |access-date=29 July 2026 |date=11 August 2001}}</ref>
+|Convicted of trespassing on federal property for protesting against the US military presence on the island of Vieques, Puerto Rico.
+|-
+| align="center" | [[Félix Verdejo]]
+| align="center" | 51145-069
+| [[File:FelixVerdejo18 (cropped).jpg|80px]]
+|Transferred to [[USP Pollock]].
+Serving a life sentence. 
+|Former Olympic boxer convicting of the kidnapping and murder of Keishla Rodríguez Ortiz and their unborn child.<ref>{{cite web |title=Félix Verdejo, ex-boxer convicted of killing pregnant lover Keishla Rodríguez Ortiz, gets life sentence - CBS News |url=https://www.cbsnews.com/news/felix-verdejo-keishla-rodriguez-ortiz-puerto-rico-sentence-life-prison/ |website=www.cbsnews.com |access-date=29 July 2026 |date=6 November 2023}}</ref>
+|-
+| style="text-align:center;"| [[2009 Sabana Seca massacre|David Oquendo-Rivas]]
+| style="text-align:center;"| 34348-069
+| 
+|Transferred to [[FCI Coleman]].
+Serving a life sentence.
+| rowspan="2" |Convicted in 2013 for the [[2009 Sabana Seca massacre]]
+|-
+| align="center" | [[Alexis Candelario Santana|Alexis Candelario-Santana]]
+| align="center" | 34421-069
+| 
+|Transferred to [[Federal Correctional Institution, McDowell|FCI McDowell]].
+Serving a life sentence.
+|-
+| align="center" | {{nowrap|[[Anuel AA|Emmanuel Gazmey-Santiago]]}}
+| align="center" | 48816-069
+| [[File:Anuel AA in 2022.png|80px]]
+|Served 30 month sentence; released July 17, 2018.<ref>{{cite web |last1=Gómez |first1=Shirley |title=Anuel AA Convicted: Reggaeton Singer Sentenced To 30 Months In Prison For Gun Possession |url=https://www.latintimes.com/anuel-aa-convicted-reggaeton-singer-sentenced-30-months-prison-gun-possession-419111 |website=Latin Times |access-date=29 July 2026 |language=en |date=20 June 2017}}</ref>
+|Latin trap artist known as Anuel AA, convicted of illegal possession of [[firearms]].<ref>{{cite web|title=Bajo arresto el reguetonero Anuel AA
+|url=https://www.metro.pr/pr/noticias/2016/04/03/arresto-reguetonero-anuel-aa.html|publisher=Metro Noticias|access-date=April 3, 2016|date=April 3, 2016|language=es}}</ref>
+|}
+{{notelist}}
+
+==See also==
+{{Portal|Puerto Rico|United States|Politics}}
+* [[List of U.S. federal prisons]]
+* [[Federal Bureau of Prisons]]
+* [[Incarceration in the United States]]
+{{Clear}}
+
+==References==
+{{reflist}}
+
+==External links==
+{{Commons category|Metropolitan Detention Center, Guaynabo}}
+* [http://www.bop.gov/locations/institutions/gua/index.jsp MDC Guaynabo] - [[Federal Bureau of Prisons]]
+{{Federal Bureau of Prisons|state=collapsed}}
+{{coord|18|25|24|N|66|06|45|W|scale:5000|display=title}}
+
+[[Category:Buildings and structures in Guaynabo, Puerto Rico]]
+[[Category:1993 establishments in Puerto Rico]]
+[[Category:Guaynabo, Puerto Rico]]
+[[Category:Prisons in Puerto Rico]]
+[[Category:Federal Bureau of Prisons Administrative Facilities|Guaynabo]]

@@ -1,0 +1,53 @@
+{{Short description|United States federal prison in Colorado}}
+{{Distinguish|text=[[Arizona State Prison Complex – Florence]] or other similarly named [[Florence, Arizona#Prisons|prisons in Florence, Arizona]]}}
+{{More citations needed|date=January 2017}}
+{{Use American English|date=August 2025}}
+{{Infobox prison
+| name           = Federal Correctional Complex,<br />Florence
+| image          = <!-- Deleted image removed:  [[File:FCI Florence.jpg|200px]] -->
+| location       = [[Fremont County, Colorado|Fremont County]],<br />near [[Florence, Colorado]]
+| coordinates    = {{Coord|38.36|N|105.1|W|type:landmark_region:US-CO|display=inline,title}}
+| status         = Operational
+| classification = Supermax, high, medium and minimum-security
+| population     = ≈2,900
+| opened         = 1994
+| closed         = 
+| managed_by     = [[Federal Bureau of Prisons]]
+| warden         = 
+}}
+
+The '''Federal Correctional Complex, Florence''' ('''FCC Florence''') is a United States [[federal prison]] complex for male inmates in Colorado. It is operated by the [[Federal Bureau of Prisons]], a division of the [[United States Department of Justice]], and consists of four facilities:
+
+* [[Federal Prison Camp, Florence]] (FPC Florence): a minimum-security facility.
+* [[Federal Correctional Institution, Florence]] (FCI Florence): a medium-security facility.
+* [[United States Penitentiary, Florence High]] (USP Florence High): a high-security facility.
+* [[ADX Florence|United States Penitentiary, Florence Administrative Maximum Facility]] (USP Florence ADMAX): a [[supermax prison|supermax]] facility which holds the most "dangerous" inmates in the federal prison system.<ref>{{cite web|url=http://www.bop.gov/locations/institutions/flx/index.jsp |access-date=July 27, 2012 |url-status=dead |archive-url=https://web.archive.org/web/20120808035232/http://www.bop.gov/locations/institutions/flx/index.jsp |archive-date=August 8, 2012
+|title=FCC Florence}}</ref>
+
+FCC Florence is located in [[unincorporated area|unincorporated]] [[Fremont County, Colorado]],<ref>{{cite web|url=https://www2.census.gov/geo/maps/DC2020/DC20BLK/st08_co/county/c08043_fremont/DC20BLK_C08043.pdf|title=2020 CENSUS - CENSUS BLOCK MAP: Fremont County, CO|publisher=[[U.S. Census Bureau]]|accessdate=2022-08-13|page=37 (PDF p. 38/51)|quote=Florence Federal Correctional Complex}}</ref> approximately 100 miles south of Denver, Colorado.
+
+==See also==
+*{{Portal-inline|United States}}
+*{{Portal-inline|Colorado}}
+*{{Portal-inline|Law}}
+*[[List of U.S. federal prisons]]
+*[[Federal Bureau of Prisons]]
+*[[Incarceration in the United States]]
+
+==References==
+{{Reflist}}
+
+==External links==
+*[http://www.bop.gov/locations/institutions/flf/index.jsp FCI Florence]
+*[http://www.bop.gov/locations/institutions/flp/index.jsp USP Florence]
+*[http://www.bop.gov/locations/institutions/flm/index.jsp USP Florence ADMAX]
+
+{{Federal Bureau of Prisons}}
+
+[[Category:Buildings and structures in Fremont County, Colorado]]
+[[Category:Prisons in Colorado]]
+[[Category:Federal Correctional Complexes in the United States|Florence]]
+[[Category:1994 establishments in Colorado]]
+
+{{Colorado-struct-stub}}
+{{US-prison-stub}}

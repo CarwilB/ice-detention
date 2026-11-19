@@ -1,0 +1,37 @@
+{{Use American English|date=July 2025}}
+{{Use mdy dates|date=February 2025}}
+{{Infobox NRHP
+| name        = Boone County Jail
+| nrhp_type   = 
+| image       = Boone County Jail 2-2025 Wikipedia.jpg
+| caption     = Boone County Jail, February 2025
+| location    = Central Ave. and Willow St., [[Harrison, Arkansas]]
+| coordinates = {{coord|36|13|45|N|93|6|30|W|display=inline,title}}
+| pushpin_map = Arkansas#USA
+| map_caption = Location in [[Arkansas]]##Location in United States
+| built       = 1914
+| architect   = [[Charles L. Thompson]]
+| added       = December 12, 1976
+| area        = less than one acre
+| ref_num     = 76000388<ref name="nris">{{NRISref|version=2010a}}</ref>
+}}
+The '''Boone County Jail''' is a historic jail building at Central Ave. and Willow St. in [[Harrison, Arkansas]].  It is a two-story red brick building, built in 1914. Its design has been attributed to prominent Arkansas [[architect]] [[Charles L. Thompson]].  Its hip roof is finished in red tile, as is the roof of the single-story porch sheltering the main entrance.  The jail was laid out to house the jailer on the first floor, and the prisoners on the second.<ref name=NRHP>{{cite web|url=https://www.arkansasheritage.com/docs/default-source/national-registry/BO0018-pdf|title=NRHP nomination for Boone County Jail|publisher=Arkansas Preservation|accessdate=2015-01-31|url-status=dead|archiveurl=https://web.archive.org/web/20150201081454/http://www.arkansaspreservation.com/%21userfiles/BO0018.nr.pdf|archivedate=2015-02-01}}</ref>
+
+It was listed on the [[National Register of Historic Places]] in 1976 for its architecture.<ref name=nris/>
+
+==See also==
+*[[Boone County Courthouse (Arkansas)]], also designed by Thompson and NRHP-listed in Harrison
+*[[National Register of Historic Places listings in Boone County, Arkansas]]
+
+==References==
+{{reflist}}
+
+{{National Register of Historic Places}}
+
+[[Category:Buildings and structures in Harrison, Arkansas]]
+[[Category:Government buildings completed in 1914]]
+[[Category:Jails on the National Register of Historic Places in Arkansas]]
+[[Category:National Register of Historic Places in Boone County, Arkansas]]
+[[Category:1914 establishments in Arkansas]]
+
+{{BooneCountyAR-NRHP-stub}}

@@ -1,0 +1,641 @@
+{{short description|County in Michigan, United States}}
+{{Use American English|date=June 2025}}
+{{Use mdy dates|date=April 2024}}
+{{Infobox settlement
+| name            = Wayne County
+| type    = [[Administrative divisions of Michigan|Charter County]]
+| official_name      = Charter County of Wayne
+| native_name        = 
+| other_name         = 
+<!-- Images and maps ---------->
+| image      = {{multiple image
+| border               = infobox
+| total_width              = 300
+| image_style        = border:1;
+| perrow                 = 1/2/2
+| image1                   = Detroit Skyline from Windsor 2025-09-01 2.jpg
+| alt1                     =
+| image2                   = FordGlassHouse.jpg
+| alt2                     =
+| image3                   = JSMFFULL.jpg
+| alt3                     =
+| image4                   = Gateway Bridge, Taylor Michigan.jpg
+| alt4                     =
+| image5                   = Uniroyal tire in Allen Park taken from car.jpg
+| alt5                     =
+| image6                   = Detroit Metropolitan Wayne County Airport DTW.jpg
+| alt6                     = }}
+| caption      = Left to right, top to bottom: [[Downtown Detroit]], [[Henry Ford II World Center]], [[James Scott Memorial Fountain]], [[Gateway Bridge (Michigan)|Gateway Bridge]], the [[Uniroyal Giant Tire]] and the [[Detroit Metropolitan Airport]]
+| image_flag         = Flag of Wayne County, Michigan.svg
+| flag_size          = 110
+| image_seal         = Seal of Wayne County, Michigan.png
+| seal_size          = 85
+| image_blank_emblem = Logo of Wayne County, Michigan.svg{{!}}class=skin-invert
+| blank_emblem_type  = Wordmark
+| blank_emblem_size  = 140
+| image_map          = Map of Michigan highlighting Wayne County.svg
+| map_size            = 300px
+| map_caption        = Location in Michigan
+| image_map1         = Wayne County, MI census map2.png
+| map_size1           = 300px
+| map_caption1       = Municipalities in Wayne County
+<!-- Location ------------->
+| coordinates        = 
+| subdivision_type   = Country
+| subdivision_name   = United States
+| subdivision_type1  = [[U.S. state|State]]
+| subdivision_name1  = [[Michigan]]
+| subdivision_type2  = [[Metropolitan area|Region]]
+| subdivision_name2  = [[Metro Detroit]]
+<!-- History -------------->
+| established_title  = [[Municipal corporation|Incorporated]]
+| established_date   = 1796 (created)<br />1815 (organized)<ref name="Clarke">{{cite web|url=https://www.cmich.edu/library/clarke/AccessMaterials/Bibliographies/MichiganLocalHistory/Pages/wayne.aspx|publisher=[[Clarke Historical Library]], [[Central Michigan University]]|title=Bibliography on Wayne County|access-date=January 23, 2013|archive-date=October 6, 2014|archive-url=https://web.archive.org/web/20141006083438/https://www.cmich.edu/library/clarke/AccessMaterials/Bibliographies/MichiganLocalHistory/Pages/wayne.aspx|url-status=live}}</ref><ref>{{Cite web|url=http://www.michiganhistorymagazine.com/date/august03/08_15_1796.html|archiveurl=https://web.archive.org/web/20060513203053/http://www.michiganhistorymagazine.com/date/august03/08_15_1796.html|url-status=dead|title=Wayne County, Michigan History Magazine|archivedate=May 13, 2006}}</ref>
+| named_for  = [[Anthony Wayne]]
+<!-- Government -------------->
+| leader_title       = Executive
+| leader_name        = Warren Evans
+<!-- Parts ------------------->
+| seat_type          = [[County seat]] and Largest city
+| seat             = [[Detroit]]
+| seat1_type         = 
+| seat1              =
+<!-- Area ------------------->
+| unit_pref          = US
+| area_total_sq_mi   = 673
+| area_land_sq_mi    = 612
+| area_water_sq_mi   = 61
+| area_water_percent = 9
+<!-- Elevation -------------->
+| elevation_max_footnotes = 
+| elevation_max_ft   = 
+| elevation_min_footnotes = 
+| elevation_min_ft   = 
+<!-- Population ------------>
+| population_as_of   = 2020
+| population_total   = 1793561
+| pop_est_as_of      = 2025
+| population_est     = 1769038 {{loss}}
+| population_density_sq_mi= auto
+| population_footnotes = 
+| pop_est_footnotes  = 
+| population_demonym = Detroiter
+| custom_label2_sec1        = 
+<!-- GDP ------------------>
+| demographics_type2 = GDP
+| demographics2_footnotes = <ref>{{cite web |url = https://fred.stlouisfed.org/series/GDPALL26163 |title = Gross Domestic Product: All Industries in Wayne County, MI |website = fred.stlouisfed.org}}</ref>
+| demographics2_title1 = Total
+| demographics2_info1 = $129.920 billion (2024) 
+<!-- Time zones ---------->
+| time_zone           = [[Eastern Time Zone]]
+| utc_offset         = −5
+| time_zone_DST       = [[Eastern Daylight Time]]
+| utc_offset_DST     = −4
+<!-- Codes -------------->
+| area_code_type     = [[North American Numbering Plan|Area codes]]
+| area_code          = [[Area code 313|313]], [[Area code 734|734]], [[Area code 248|248]]
+| website            = {{URL|www.waynecountymi.gov}}
+}}
+
+'''Wayne County''' is the most populous [[County (United States)|county]] in the [[U.S. state]] of [[Michigan]]. As of 2020, the [[United States census]] placed its population at 1,793,561, making it the [[List of the most populous counties in the United States|19th-most populous]] county in the United States.<ref name="QF">{{cite web|title=State & County QuickFacts|url=https://www.census.gov/quickfacts/fact/table/waynecountymichigan/POP010220|publisher=United States Census Bureau|access-date=September 15, 2021}}</ref> The [[county seat]] and the largest city in the county is [[Detroit]], the [[List of United States cities by population|26th-most populous city in the United States]] and the largest U.S. city on the [[Canada–United States border]].<ref name="GR6">{{cite web|url=http://www.naco.org/Counties/Pages/FindACounty.aspx|access-date=June 7, 2011|title=Find a County|publisher=National Association of Counties|archive-date=July 12, 2012|archive-url=https://web.archive.org/web/20120712220218/http://www.naco.org/Counties/Pages/FindACounty.aspx|url-status=live}}</ref>
+
+The county was founded in 1796 and organized in 1815, the application for the [[Michigan Territory|territory]] that would become [[Michigan|the State of Michigan]].<ref name="HR201">{{cite web |title=H.R. 201 (23rd Congress): A Bill To grant a certain quantity of land to the Territory of Michigan, for the purpose of aiding said Territory in opening a canal... |url=https://congress.gov |access-date=2026-06-03 |publisher=Library of Congress}}</ref><ref name="MIManual">{{cite book |url=http://mi.gov |title=Michigan Manual |publisher=Michigan Legislature |pages=3–4 |chapter=Chronology of Michigan History |access-date=2026-06-03}}</ref><ref name="WCCharter">{{cite web |author=Wayne County Commission |title=A Citizen's Guide to Wayne County Government: Wayne County Home Rule Charter |publisher=Wayne County Government |quote=We, the people of Wayne County, by God's grace, and with gratitude for His blessings... |url=https://waynecountymi.gov |access-date=2026-06-03}}</ref><ref name="Clarke" /> Wayne County is included in the [[Metro Detroit|Detroit-]][[Warren, Michigan|Warren]]-[[Dearborn, Michigan|Dearborn]], MI Metropolitan Statistical Area. It is one of several U.S. counties named after [[American Revolutionary War|Revolutionary War]]-era general [[Anthony Wayne]].
+
+==History==
+{{Further|History of Detroit}}
+[[File:Wayne County by proclamation 1796.jpg|thumb|Original Wayne County of the [[Northwest Territory]] ]]
+[[File:Detroit Police car in 1955.jpg|thumb|left|upright|Wayne County in 1955]]
+Wayne County was the [[Northwest Territory#Counties|sixth county]] in the [[Northwest Territory]], formed August 15, 1796, from portions of [[Hamilton County, Ohio#History|territorial Hamilton County]], [[Knox County, Indiana#History|territorial Knox County]], and unorganized territory. It was named for the U.S. general [[Anthony Wayne|"Mad Anthony" Wayne]]. It originally encompassed the entire area of the [[Lower Peninsula of Michigan]], most of the [[Upper Peninsula]], as well as smaller sections that are now part of northern [[Ohio]], [[Indiana]], [[Illinois]] and [[Wisconsin]]. By proclamation of the Territorial Secretary and Acting Governor, [[Winthrop Sargent]], on August 15, 1796, the boundaries of Wayne County were declared to begin at the mouth of the [[Cuyahoga River]] then west to [[Fort Wayne, Indiana|Fort Wayne]], then to the southernmost point of [[Lake Michigan]] and along the western shore north to the territorial boundary in [[Lake Superior]] and then along the territorial boundary through [[Lake Huron]], [[Lake Saint Clair, North America|Lake St. Clair]], and [[Lake Erie]] back to the starting point.<ref name="Sargent">{{cite book | title = Collections of the Pioneer Society of the State of Michigan together with Reports of County Pioneer Societies, Vol VIII. | url = http://memory.loc.gov/cgi-bin/query/r?ammem/lhbumbib:@field(NUMBER+@band(lhbum+5298a)): | access-date = October 15, 2006 | orig-year = 1886 | year = 1907 | edition = second | publisher = Wynkoop Hallenbeck Crawford | location = Lansing, Mich. | pages = 496–497 | chapter = Proclamation by Winthrop Sargent | chapter-url = http://memory.loc.gov/cgi-bin/ampage?collId=lhbum&fileName=5298a/lhbum5298a.db&recNum=511&itemLink=r?ammem/lhbum:@field(DOCID+@lit(lhbum5298adiv236))%235298a0512&linkText=1 | archive-date = November 5, 2015 | archive-url = https://web.archive.org/web/20151105132304/http://memory.loc.gov/cgi-bin/query/r?ammem%2Flhbumbib%3A%40field%28NUMBER+%40band%28lhbum+5298a%29%29%3A | url-status = live }}</ref> The first division of the county into townships occurred November 1, 1798, into the four townships of [[Detroit]], [[Hamtramck, Michigan|Hamtramck]], [[Mackinaw Township, Michigan|Mackinaw]], and Sargent. The extent of Wayne county at that time included all the present state of Michigan in addition to parts of Indiana, Ohio, and Wisconsin, so that the townships erected at that time were vastly larger than the corresponding divisions of the present time.<ref>{{Cite book|last=Fuller|first=George Newman|title=Historic Michigan, land of the Great Lakes; its life, resources, industries, people, politics, government, wars, institutions, achievements, the press, schools and churches, legendary and prehistoric lore.|publisher=National Historical Association, Inc.|year=1924|isbn=|location=Dayton Ohio United|pages=101}}</ref>
+
+[[Image:Guardianbuilding.jpg|thumb|The historic [[Guardian Building]] in [[Detroit]] is the Wayne County headquarters.]]
+
+On January 14, 1803, the Governor of [[Indiana Territory]], [[William Henry Harrison]], issued a similar proclamation defining the boundaries as beginning at a point where an east and west line passing through the southernmost extreme of Lake Michigan would intersect a north and south line, passing through the westernmost extreme of the lake, then north to the territorial boundary, then along said boundary line to a point where an east and west line passing through the southerly extreme of Lake Michigan would intersect the same, then along this last mentioned line to the place of beginning. This boundary would include [[Chicago]], Illinois, and a sizable strip of [[Wisconsin]] along Lake Michigan.<ref name="Harrison">{{cite book | title = Collections of the Pioneer Society of the State of Michigan together with Reports of County Pioneer Societies, Vol VIII. | url = http://memory.loc.gov/cgi-bin/query/r?ammem/lhbumbib:@field(NUMBER+@band(lhbum+5298a)): | access-date = October 15, 2006 | orig-year = 1886 | year = 1907 | edition = second | publisher = Wynkoop Hallenbeck Crawford | location = Lansing, Mich. | pages = 540–542 | chapter = Proclamation by Governor Harrison | chapter-url = http://memory.loc.gov/cgi-bin/ampage?collId=lhbum&fileName=5298a/lhbum5298a.db&recNum=555&itemLink=r%3Fammem%2Flhbum%3A%40field%28DOCID%2B%40lit%28lhbum5298adiv3%29%29%235298a0009&linkText=1 | archive-date = November 5, 2015 | archive-url = https://web.archive.org/web/20151105132304/http://memory.loc.gov/cgi-bin/query/r?ammem%2Flhbumbib%3A%40field%28NUMBER+%40band%28lhbum+5298a%29%29%3A | url-status = live }}</ref>
+
+These boundaries would be adjusted as [[Indiana]] and Illinois became states and as other counties were formed within [[Michigan Territory]].
+
+==Geography==
+According to the [[U.S. Census Bureau]], the county has a total area of {{convert|673|sqmi}}, of which {{convert|612|sqmi}} is land and {{convert|61|sqmi}} (9.0%) is water.<ref name="GR1">{{cite web|url=https://www.census.gov/geo/maps-data/data/docs/gazetteer/counties_list_26.txt|publisher=United States Census Bureau|access-date=September 28, 2014|date=August 22, 2012|title=2010 Census Gazetteer Files|url-status=dead|archive-url=https://web.archive.org/web/20131113024015/http://www.census.gov/geo/maps-data/data/docs/gazetteer/counties_list_26.txt|archive-date=November 13, 2013}}</ref> Its water area includes parts of the [[Detroit River]] and [[Lake St. Clair]].
+
+Wayne County borders [[Oakland County, Michigan|Oakland County]] and [[Macomb County, Michigan|Macomb County]] to the north, [[Washtenaw County, Michigan|Washtenaw County]] to the west, [[Essex County, Ontario|Essex County]], Ontario, Canada to the east, and [[Monroe County, Michigan|Monroe County]] to the south.
+
+The eastern (and sometimes southern) boundary is a water boundary in the Detroit River and Lake St. Clair with Essex County, [[Ontario]]. Automotive traffic crosses this boundary at the [[Detroit–Windsor Tunnel]] and the [[Ambassador Bridge]]. Due to the southwestern course of the river, this small portion of Canada actually lies to the south of Wayne County. The southern communities of the county are usually referred to as ''[[Downriver]]'', in reference to their location downstream of downtown Detroit.
+
+[[Grosse Ile (Michigan)|Grosse Ile]] is the largest island in the county and is connected to the mainland by the [[Wayne County Bridge]] and the [[Grosse Ile Toll Bridge]]. The highest elevation ({{convert|990|ft}}) in the county is in [[Maybury State Park]] in [[Northville Charter Township, Michigan|Northville Township]].
+
+===Adjacent counties===
+* [[Washtenaw County, Michigan|Washtenaw County]] (west)
+* [[Monroe County, Michigan|Monroe County]] (south/southwest)
+* [[Essex County, Ontario]], Canada (east/southeast)
+* [[Lambton County, Ontario]], Canada (east/northeast across [[Lake St. Clair]])
+* [[Macomb County, Michigan|Macomb County]] (north/northeast)
+* [[Oakland County, Michigan|Oakland County]] (north)
+
+===National protected area===
+* [[Detroit River International Wildlife Refuge]] (part)
+
+==Transportation==
+
+===Wayne County Department of Public Services===
+The '''Wayne County Department of Public Services''' was formed in 1906 as the '''Wayne County Road Commission'''. It was the government agency in Wayne County, Michigan responsible for building and maintaining the county's roads and highways.<ref>{{cite web |author= Staff |title= Department of Public Services |publisher= Wayne County Department of Public Services |url= http://www.co.wayne.mi.us/dps/index.htm |archive-date= September 26, 2012 |archive-url= https://web.archive.org/web/20120926064139/http://www.co.wayne.mi.us/dps/index.htm |url-status= live }}</ref>
+
+Its first commissioners were [[Edward N. Hines]], Cassius R. Benton, and automobile manufacturer [[Henry Ford]]. While the commission was authorized by an 80% positive vote of county voters in a 1906 referendum, it was controversial and there was a Michigan state supreme court case pressed which found it unconstitutional. Commissioners Benton and Ford quit, but commissioner Hines persisted and led the commission through reorganization getting around the obstacles.<ref name="mps" />{{rp|33}} Hines was a commissioner continuously from 1906 to 1938. Hines is credited with the idea of putting a painted line down a roadway's center to divide traffic, and other innovations that were later widely adopted.<ref>{{Cite web|date=December 28, 2017|title=Painting lane lines on roadways was a Michigan man's idea|url=https://www.mlive.com/news/2017/12/painted_lines_on_roadways_was.html|access-date=January 9, 2021|website=mlive|language=en}}</ref>
+
+The commission claims credit for constructing the country's first mile of concrete-paved rural highway, a section of Woodward Avenue just outside the Detroit city limits.<ref name="mps" />
+
+A number of the county road commissions' works are listed on the [[National Register of Historic Places listings in Wayne County, Michigan|National Register of Historic Places]].<ref name=mps>{{cite web|url={{NRHP url|id=64500271}} |title=National Register of Historic Places Multiple Property Documentation: Historic Highway Bridges of Michigan, 1875-1948 / Wayne County: An Exemplary Road Commission, 1906-1948 |first1= Charlene K. |last1= Roise |first2= Clayton B. |last2=Fraser |date=August 1998 |publisher=National Park Service}}</ref><ref name="nris">{{NRISref|version=2010a|dateform=mdy}}</ref>
+
+The county road commission was merged into the general county government,<ref name=mps/>{{rp|42}} becoming the Roads Division of the Department of Public Services.<ref>{{cite web |author= Roads Division |url= http://www.co.wayne.mi.us/dps/dps_roads_history.htm |title= History of the Wayne County Road Commission |publisher= Wayne County Department of Public Services |access-date= October 18, 2012 |url-status= dead |archive-url= https://web.archive.org/web/20121101031522/http://www.co.wayne.mi.us/dps/dps_roads_history.htm |archive-date= November 1, 2012 }}</ref>
+
+===Transit===
+* [[File:CA-QC road sign I-310.svg|25px|alt=|link=]] [[Detroit station]] is located in the [[New Center]] neighborhood and serves the [[Amtrak]] [[Wolverine (Amtrak)|Wolverine]] intercity trains.
+* [[File:Bus Sign.svg|25px|alt=|link=]] The [[Detroit Bus Station]] is located in the [[Corktown, Detroit|Corktown]] neighborhood and serves intercity buses to destinations across the Midwest.
+* The [[Detroit Department of Transportation]] and [[Suburban Mobility Authority for Regional Transportation]] provide local and regional bus service.
+* The [[QLine]] operates [[streetcar]] service down Woodward Avenue.
+
+===Major highways===
+* {{jct|state=MI|I|75}} through the [[Downriver]] communities, then through the southwest-side neighborhoods of [[Detroit]] and serves as the northern border of [[Downtown Detroit]] as the Fisher Freeway. It then turns away from the Fisher onto the Chrysler Freeway at a complex interchange with I-375 and an unnumbered extension which connects with M-3, then follows M-1, which is less than a mile away through the remainder of Detroit, connecting eastern Wayne County to [[Toledo, Ohio|Toledo]] and [[Flint, Michigan|Flint]] to the south and north respectively. It runs non-stop to the [[Sault Ste. Marie International Bridge]] to the north and to [[Florida]] to the south.
+* {{jct|state=MI|I|94}} runs east–west through the central parts of Wayne County, connecting it to [[Port Huron, Michigan|Port Huron]] eastbound and [[Chicago]] westbound. To the west it provides an uninterrupted route as far as [[Montana]] and connects to the northern side of the [[Detroit Metropolitan Wayne County Airport|Detroit Metro Airport]]. In Detroit it is known as the Edsel Ford Freeway.
+* {{jct|country=USA|I|96}} has its eastern terminus in the county, in [[Detroit]]. It follows [[Grand River Avenue]] until the city's northwest side, there it turns due west to I-275, where it turns north to concurrent with I-275. West of Detroit to I-275 it is known as the Jeffries Freeway; in Detroit it is the Rosa Parks Memorial Highway, but it is sometimes still known as the Jeffries.
+* {{jct|state=MI|I|275}}, most of whose mileage is in Wayne County, serves the southern side of the [[Detroit Metropolitan Wayne County Airport|Detroit Metro Airport]].
+* {{jct|state=MI|I|375}} is the nation's shortest Interstate Highway to be ''signed''. However some highways are shorter but are not signed at all. It serves as the eastern boundary of [[Downtown Detroit]] and is a southern extension of the Chrysler Freeway. There are currently plans in the works to turn I-375 into a 6-lane boulevard.<ref>{{Cite web|url=https://www.freep.com/story/news/local/michigan/detroit/2022/03/17/interstate-375-replacement-detroit-black-bottom-paradise-valley/7073405001/|title=I-375 replacement project in Detroit moves closer to reality, gets OK from feds|website=Detroit Free Press}}</ref> Construction will start in 2025 and is expected to finish by 2028.<ref>{{Cite web|url=https://www.wxyz.com/news/detroiters-react-to-i-375-being-converted-into-a-boulevard|title=Detroiters react to I-375 being converted into a boulevard|date=September 15, 2022|website=WXYZ 7 Action News Detroit}}</ref>
+* {{jct|state=MI|US|12}} has its eastern terminus in [[Downtown Detroit]] at Cass Avenue. From there it travels through the west side of [[Detroit]] and through [[Dearborn, Michigan|Dearborn]] and other points west and is a useful alternative to I-94. US 12 continues west through Michigan, passing through several US cities including Chicago and Minneapolis, eventually ending in the Pacific Northwest in Aberdeen, Washington. Locally it is known as Michigan Avenue.
+* {{jct|state=MI|US|24}} traverses through [[Downriver]] and the far west sides of [[Dearborn, Michigan|Dearborn]] and [[Detroit]] and is a useful alternative to I-75. Locally it is known as Telegraph Road.
+* {{jct|state=MI|US|10}} entered the county by two ways. Initially it was via Woodward Avenue but when the Lodge Freeway was completed U.S. Route 10 was relocated onto it; the Woodward route became M-1. Later the existing highway was truncated in [[Bay City, Michigan|Bay City]] and M-10 replaced it on the Lodge.
+* {{jct|state=MI|US 1948|16}} entered Wayne County on [[Grand River Avenue]] and ended in [[Downtown Detroit]].
+* {{jct|state=MI|US 1948|25}} was the designated name for Dix-Toledo Highway in [[Downriver]] and Fort Street and Gratiot Avenue in [[Detroit]]. The construction of I-75 resulted in the truncation of U.S. Route 25 to [[Cincinnati]].
+* {{jct|state=MI|US 1948|112}} followed Michigan Avenue out of [[Downtown Detroit]] and out of Wayne County. Is now a routing of U.S. Route 12.
+* {{jct|state=MI|M|1}} has its southern terminus in [[Downtown Detroit]] at Adams Street. It travels through Midtown Detroit and New Center and through [[Highland Park, Michigan|Highland Park]]. It serves as an alternative to I-75 and M-10. Locally known as Woodward Avenue. M-1 was a result of US-10 being redesignated to the Lodge Freeway.
+* {{jct|state=MI|M|3}} has its southern terminus in [[Downtown Detroit]] at Randolph and [[Jefferson Avenue (Detroit)|Jefferson Avenue]]. It proceeds northeasterly through Detroit's northeast side and beyond towards [[Mount Clemens, Michigan|Mount Clemens]] and points further north. Locally known as Gratiot Avenue. M-3 was the result of the removal of US-25 from Michigan.
+* {{jct|state=MI|M|5}} begins at the northern intersection with I-96 on Detroit's northwest side and follows [[Grand River Avenue]] out of the county.
+* {{jct|state=MI|M|8}} runs from I-96 to Conant Street in [[Detroit]], passing through [[Highland Park, Michigan|Highland Park]]. The freeway portion is known as the Davison Freeway.
+* {{jct|state=MI|M|10}} starts at the same intersection where M-3 starts in [[Downtown Detroit]] and travels further into the city on the Lodge Freeway and connects it to [[Southfield, Michigan|Southfield]].
+* {{jct|state=MI|M|14}} starts at the interchange with I-96 and I-275 in [[Livonia, Michigan|Livonia]] and travels out into rural areas, serving [[Plymouth, Michigan|Plymouth]] and [[Ann Arbor, Michigan|Ann Arbor]].
+* {{jct|state=MI|M|39}} starts in [[Lincoln Park, Michigan|Lincoln Park]]'s city center and runs along Southfield Road to [[Allen Park, Michigan|Allen Park]] and becomes the Southfield Freeway, traveling through the west side of [[Detroit]].
+* {{jct|state=MI|M|53}} begins at M-3 in [[Detroit]], running through the city and connecting it to the Thumb area of the state. Locally known as Van Dyke Avenue.
+* {{jct|state=MI|M|85}}, which is entirely in Wayne County, starts at [[Griswold Street]] in [[Downtown Detroit]] and connects the city's southwest side to [[Downriver]], ending near [[Flat Rock, Michigan|Flat Rock]] at I-75, for whom which M-85 serves as an alternative. Locally known as West Fort and South Fort, divided at the [[River Rouge (Michigan)|River Rouge]].
+* {{jct|state=MI|M|97}} only runs a short distance through Detroit's northeast side, starting at M-3. In the city it follows Gunston Street and Hoover Street.
+* {{jct|state=MI|M|102}} follows the county line between M-5 and I-94. Locally known as West 8 Mile and East 8 Mile, divided at John R. Street.
+* {{jct|state=MI|M|153}} starts at Wyoming Street on the Detroit-Dearborn limit and continues through the western suburbs as Ford Road.
+* {{jct|state=MI|M 1919|16}} became part of US&nbsp;16, which is also removed from Michigan.
+* {{jct|state=MI|M 1948|17}} once followed Ecorse Road into [[Lincoln Park, Michigan|Lincoln Park]], then ran concurrently with U.S. Route 25 to [[Downtown Detroit]].
+* {{jct|state=MI|M 1948|56|dab1=1919–1957}} connected US&nbsp;24 in [[Monroe, Michigan|Monroe]] to [[Flat Rock, Michigan|Flat Rock]]; it once connected to US&nbsp;112 in [[Canton, Michigan|Canton]] along Huron River Drive and Belleville Road.
+* {{jct|state=MI|M 1948|112}} entered Wayne County during [[World War II]], and the years following, on an expressway, providing access to the [[Willow Run Airport]] in [[Van Buren Township, Michigan|Van Buren Township]] and turned onto present-day Interstate 94 in [[Romulus, Michigan|Romulus Township]]. In [[Taylor, Michigan|Taylor Township]] it had interchanges with both M-17 and US&nbsp;24, then ended at US&nbsp;112 in [[Dearborn, Michigan|Dearborn]].
+* [[File:Dixie Highway marker.svg|20px|alt=|link=]] [[Dixie Highway]] ran through Wayne County as early as 1915. Back then it was one of the only routes that connected the county to the [[Southern United States]]. Today there are no traces of the old highway in the county.
+
+===Airports===
+* [[File:Airport Sign.svg|20px|alt=|link=]] [[Detroit Metropolitan Wayne County Airport]] is located in the [[Downriver]] community of [[Romulus, Michigan|Romulus]]. It serves as a hub for [[Delta Air Lines]] and [[Spirit Airlines]] and is one of the two airports operated by the [[Wayne County Airport Authority]].
+* [[File:Airport Sign.svg|20px|alt=|link=]] [[Willow Run Airport]] is located in [[Van Buren Township, Michigan|Van Buren Township]] and has four runways (a fifth was recently converted into a taxiway). No scheduled flights operate out of Willow Run and is one of the two airports operated by the [[Wayne County Airport Authority]].
+* [[File:Airport Sign.svg|20px|alt=|link=]] [[Grosse Ile Municipal Airport]] is located about {{convert|2|mi|km|spell=in}} south of [[Grosse Ile Township, Michigan|Grosse Ile Township]]'s downtown area. It has two paved runways. No scheduled flights operate out of this airport as well.
+* [[File:Airport Sign.svg|20px|alt=|link=]] [[Coleman A. Young International Airport]] is also known as the Detroit City Airport, which is not to be confused with the larger and nearby Detroit Metro Airport. It is located just a short drive from [[Downtown Detroit]] along M-3. It also has two runways and no scheduled flights, although it has been attempted in the past.
+
+==Demographics==
+{{US Census population
+|1810= 2227
+|1820= 3574
+|1830= 6781
+|1840= 24173
+|1850= 42756
+|1860= 75547
+|1870= 119068
+|1880= 168444
+|1890= 257114
+|1900= 348793
+|1910= 531591
+|1920= 1177645
+|1930= 1888946
+|1940= 2015623
+|1950= 2435235
+|1960= 2666297
+|1970= 2666751
+|1980= 2337843
+|1990= 2111687
+|2000= 2061162
+|2010= 1820584
+|2020= 1793561
+|estyear=2025
+|estimate=1769038
+|estref=<ref name="USCensusEst2025">{{cite web|url=https://www.census.gov/data/tables/time-series/demo/popest/2020s-counties-total.html|title=County Population Totals and Components of Change: 2020-2025|publisher=United States Census Bureau|access-date=April 12, 2026}}</ref> {{decrease}}
+|align-fn=center
+|footnote=U.S. Decennial Census<ref name="DecennialCensus">{{cite web|url=https://www.census.gov/prod/www/decennial.html|title=Census of Population and Housing from 1790|publisher=[[US Census Bureau]]|access-date=January 24, 2022}}</ref><br />1790–1960<ref>{{cite web|url=http://mapserver.lib.virginia.edu|title=Historical Census Browser|publisher=University of Virginia Library|access-date=September 28, 2014|archive-date=August 11, 2012|archive-url=https://web.archive.org/web/20120811110448/http://mapserver.lib.virginia.edu/|url-status=live}}</ref> 1900–1990<ref>{{cite web|url=https://www.census.gov/population/cencounts/mi190090.txt|title=Population of Counties by Decennial Census: 1900 to 1990|publisher=United States Census Bureau|access-date=September 28, 2014|archive-date=February 15, 2015|archive-url=https://web.archive.org/web/20150215142038/http://www.census.gov/population/cencounts/mi190090.txt|url-status=live}}</ref><br />1990–2000<ref>{{cite web|url=https://www.census.gov/population/www/cen2000/briefs/phc-t4/tables/tab02.pdf|title=Census 2000 PHC-T-4. Ranking Tables for Counties: 1990 and 2000|publisher=United States Census Bureau|access-date=September 28, 2014|archive-date=December 18, 2014|archive-url=https://web.archive.org/web/20141218203824/http://www.census.gov/population/www/cen2000/briefs/phc-t4/tables/tab02.pdf|url-status=live}}</ref> 2010–2019<ref name="QF"/> [[2020 United States census|2020 census]]<ref>https://www.census.gov/quickfacts/fact/table/waynecountymichigan,US/PST120219 {{Dead link|date=February 2022}}</ref>
+| align = right
+}}
+[[File:Wayne MI Density.png|thumb|2020 population density of Wayne County MI by census block<ref>{{Cite web |title=2025 TIGER/Line® Shapefiles |url=https://www.census.gov/cgi-bin/geo/shapefiles/index.php?year=2025&layergroup=Blocks+(2020) |access-date=2026-04-13 |website=www.census.gov}}</ref>]]
+
+===2020 census===
+As of the [[2020 United States census|2020 census]], the county had a population of 1,793,561. The median age was 37.7 years. 23.3% of residents were under the age of 18 and 15.5% of residents were 65 years of age or older. For every 100 females there were 94.2 males, and for every 100 females age 18 and over there were 91.3 males.<ref name="Census2020DP">{{cite web|title=2020 Decennial Census Demographic Profile (DP1)|url=https://api.census.gov/data/2020/dec/dp?get=NAME,DP1_0021P,DP1_0024P,DP1_0025C,DP1_0049C,DP1_0045C,DP1_0069C,DP1_0073C,DP1_0125P,DP1_0126P,DP1_0129P,DP1_0133P,DP1_0137P,DP1_0138P,DP1_0139P,DP1_0141P,DP1_0142P,DP1_0143P,DP1_0145P,DP1_0146P,DP1_0147C,DP1_0148C,DP1_0149C,DP1_0156C,DP1_0157C,DP1_0158C,DP1_0159P,DP1_0160P&for=county%3A163&in=state%3A26|website=United States Census Bureau|year=2021|access-date=January 1, 2026|df=mdy}}</ref><ref name="Census2020PL">{{cite web|title=2020 Decennial Census Redistricting Data (Public Law 94-171)|url=https://api.census.gov/data/2020/dec/pl?get=NAME,P1_001N,P1_003N,P1_004N,P1_005N,P1_006N,P1_007N,P1_008N,P1_009N,P2_001N,P2_002N,H1_001N,H1_002N&for=county%3A163&in=state%3A26|website=United States Census Bureau|year=2021|access-date=January 1, 2026|df=mdy}}</ref>
+
+The racial makeup of the county was 49.2% [[White Americans|White]], 37.6% [[African Americans|Black or African American]], 0.4% [[Native Americans in the United States|American Indian and Alaska Native]], 3.6% [[Asian Americans|Asian]], &lt;0.1% [[Native Hawaiians|Native Hawaiian]] and [[Pacific Islander]], 3.0% from some other race, and 6.2% from [[Multiracial Americans|two or more races]]. [[Hispanic and Latino Americans|Hispanic or Latino]] residents of any race comprised 6.6% of the population.<ref name="Census2020PL"/>
+
+99.1% of residents lived in urban areas, while 0.9% lived in rural areas.<ref name="Census2020DHC">{{cite web|title=2020 Decennial Census Demographic and Housing Characteristics (DHC)|url=https://api.census.gov/data/2020/dec/dhc?get=NAME,P2_002N,P2_003N&for=county%3A163&in=state%3A26|website=United States Census Bureau|year=2023|access-date=January 1, 2026|df=mdy}}</ref>
+
+There were 709,400 households in the county, of which 30.0% had children under the age of 18 living in them. Of all households, 35.2% were married-couple households, 22.8% were households with a male householder and no spouse or partner present, and 35.2% were households with a female householder and no spouse or partner present. About 32.4% of all households were made up of individuals and 12.3% had someone living alone who was 65 years of age or older.<ref name="Census2020DP"/>
+
+There were 790,191 housing units, of which 10.2% were vacant. Among occupied housing units, 61.6% were owner-occupied and 38.4% were renter-occupied. The homeowner vacancy rate was 1.5% and the rental vacancy rate was 8.6%.<ref name="Census2020DP"/>
+
+===Racial and ethnic composition===
+[[File:Ethnic Origins in Wayne County, MI.png|right|thumb|330x330px|Ethnic origins in Wayne County]]
+{| class="wikitable sortable" style="text-align:center;"
+|+'''Wayne County, Michigan – Racial and ethnic composition'''<br><small>{{nobold|''Note: the US Census treats Hispanic/Latino as an ethnic category. This table excludes Latinos from the racial categories and assigns them to a separate category. Hispanics/Latinos may be of any race.''}}</small>
+!Race / Ethnicity <small>(''NH = Non-Hispanic'')</small>
+!Pop 1980<ref name=1980Census>{{Cite web|title=1980 Census of Population - General Social and Economic Characteristics - Michigan - Tables 15 and 16 – Race by Sex: 1980 and Tables 16 and 17 – Persons by Spanish Origin, Race, and Sex: 1980 |url=https://www2.census.gov/prod2/decennial/documents/1980/1980censusofpopu80124uns_bw.pdf|website=[[United States Census Bureau]]|pages=24–59|archive-url=https://web.archive.org/web/20250111013246/https://www2.census.gov/prod2/decennial/documents/1980/1980censusofpopu80124uns_bw.pdf| archive-date=January 11, 2025|via= [[Wayback Machine]]}}</ref>
+!Pop 1990<ref name=1990Census>{{Cite web |title=1990 Census of Population - General Population Characteristics - Michigan: Table 3-5 - Race and Hispanic Origin |website=[[United States Census Bureau]]|url=https://www2.census.gov/library/publications/decennial/1990/cp-1/cp-1-24.pdf|access-date=|pages=37–179|archive-url=https://web.archive.org/web/20260304021445/https://www2.census.gov/library/publications/decennial/1990/cp-1/cp-1-24.pdf|via= [[Wayback Machine]]| archive-date=March 4, 2026}}</ref>
+!Pop 2000<ref name=2000CensusP004>{{Cite web|title=P004: Hispanic or Latino, and Not Hispanic or Latino by Race – 2000: DEC Summary File 1 – Wayne County, Michigan|url=https://data.census.gov/table?g=050XX00US26163&tid=DECENNIALSF12000.P004|website=[[United States Census Bureau]] |access-date= }}</ref>
+!Pop 2010<ref name=2010CensusP2>{{Cite web|title=P2: Hispanic or Latino, and Not Hispanic or Latino by Race – 2010: DEC Redistricting Data (PL 94-171) – Wayne County, Michigan|url=https://data.census.gov/cedsci/table?q=p2&g=050XX00US26163&tid=DECENNIALPL2010.P2|website=[[United States Census Bureau]] |access-date= }}</ref>
+!style="background-color: #ffffb3;" | Pop 2020<ref name=2020CensusP2>{{Cite web|title=P2: Hispanic or Latino, and Not Hispanic or Latino by Race – 2020: DEC Redistricting Data (PL 94-171) – Wayne County, Michigan|url=https://data.census.gov/cedsci/table?q=p2&g=050XX00US26163&tid=DECENNIALPL2020.P2|website=[[United States Census Bureau]] |access-date= }}</ref>
+!% 1980
+!% 1990
+!% 2000
+!% 2010
+!style="background-color: #ffffb3;" |% 2020
+|-
+|[[Non-Hispanic or Latino whites|White]] alone (NH)
+|1,433,148
+|1,185,576
+|1,028,984
+|902,180
+|style='background: #ffffe6; |857,132
+|61.30%
+|56.14%
+|49.92%
+|49.55%
+|style='background: #ffffe6; |47.79%
+|-
+|[[Non-Hispanic or Latino African Americans|Black or African American]] alone (NH)
+|824,892
+|845,324
+|864,627
+|732,801
+|style='background: #ffffe6; |669,277
+|35.28%
+|40.03%
+|41.95%
+|40.25%
+|style='background: #ffffe6; |37.32%
+|-
+|[[Native Americans in the United States|Native American]] or [[Alaska Native]] alone (NH)
+|6,671
+|7,442
+|6,582
+|5,635
+|style='background: #ffffe6; |4,265
+|0.29%
+|0.35%
+|0.32%
+|0.31%
+|style='background: #ffffe6; |0.24%
+|-
+|[[Asian Americans|Asian]] alone (NH)
+|15,177
+|21,046
+|34,837
+|45,590
+|style='background: #ffffe6; |64,604
+|0.65%
+|1.00%
+|1.69%
+|2.50%
+|style='background: #ffffe6; |3.60%
+|-
+|[[Native Hawaiian]] or [[Pacific Islander Americans|Pacific Islander]] alone (NH)
+|x <ref>included in the Asian category in the 1980 Census</ref>
+|x <ref>included in the Asian category in the 1990 Census</ref>
+|398
+|304
+|style='background: #ffffe6; |322
+|x
+|x
+|0.02%
+|0.02%
+|style='background: #ffffe6; |0.02%
+|-
+|[[Race and ethnicity in the United States census|Other race]] alone (NH)
+|11,685
+|1,793
+|3,191
+|2,387
+|style='background: #ffffe6; |7,974
+|0.50%
+|0.08%
+|0.15%
+|0.13%
+|style='background: #ffffe6; |0.44%
+|-
+|[[Multiracial Americans|Mixed race or Multiracial]] (NH)
+|x <ref>not an option in the 1980 Census</ref>
+|x <ref>not an option in the 1990 Census</ref>
+|45,336
+|36,427
+|style='background: #ffffe6; |72,338
+|x
+|x
+|2.20%
+|2.00%
+|style='background: #ffffe6; |4.03%
+|-
+|[[Hispanic and Latino Americans|Hispanic or Latino]] (any race)
+|46,318
+|50,506
+|77,207
+|95,260
+|style='background: #ffffe6; |117,649
+|1.98%
+|2.39%
+|3.75%
+|5.23%
+|style='background: #ffffe6; |6.56%
+|-
+|'''Total'''
+|'''2,337,891'''
+|'''2,111,687'''
+|'''2,061,162'''
+|'''1,820,584'''
+|style='background: #ffffe6; |'''1,793,561 '''
+|'''100.00%'''
+|'''100.00%'''
+|'''100.00%'''
+|'''100.00%'''
+|style='background: #ffffe6; |'''100.00%'''
+|}
+
+{{clear|left}}
+
+===2010 census===
+The [[2010 United States census]]<ref name=AmFactFinder>{{cite web | url=https://www.census.gov | title=U.S. Census website | publisher=[[United States Census Bureau]] | access-date=March 11, 2012 | archive-date=December 27, 1996 | archive-url=https://web.archive.org/web/19961227012639/http://www.census.gov/ | url-status=live }}</ref> indicates Wayne County had a 2010 population of 1,820,584. This is a decrease of 240,578 people from the [[2000 United States census]]. Overall, the county had an -11.7% growth rate during this ten-year period. In 2010 there were 702,749 households and 450,651 families in the county. The [[population density]] was {{convert|2,974.4|/mi2|/km2|abbr=off|sp=us}}. There were 821,693 housing units at an average density of {{convert|1,342.5|/mi2|/km2|abbr=off|sp=us}}. 52.3% were [[White American|White]], 40.5% [[African American|Black or African American]], 2.5% [[Asian American|Asian]], 0.4% [[Native Americans in the United States|Native American]], 0.8% of some other race and 2.4%  [[Multiracial American|of two or more races]]. 5.2% were [[Hispanic and Latino Americans|Hispanic or Latino]] (of any race). 7.5% were of [[German Americans|German]], 6.8% [[Polish Americans|Polish]] and 5.2% [[Irish Americans|Irish]] ancestry.<ref>{{cite web|url=https://www.census.gov|title=U.S. Census website|author=Data Access and Dissemination Systems (DADS)|work=census.gov|access-date=March 24, 2017|archive-date=December 27, 1996|archive-url=https://web.archive.org/web/19961227012639/http://www.census.gov/|url-status=live}}</ref>
+
+There were 702,749 households, out of which 33.1% had children under the age of 18 living with them, 37.4% were [[Family|husband and wife families]], 20.7% had a female householder with no husband present, 35.9% were non-families, and 30.7% were made up of individuals. The average household size was 2.56 and the average family size was 3.22.
+
+In the county, 25.4% of the population was under the age of 18, 9.7% was from 18 to 24, 25.5% from 25 to 44, 26.8% from 45 to 64, and 12.7% was 65 years of age or older. The median age was 37 years. For every 100 females, there were 92.4 males. For every 100 females age 18 and over, there were 88.7 males.
+
+The [[American Community Survey|2010 American Community Survey 1-year estimate]]<ref name=AmFactFinder/>  indicates the median income for a household in the county was $39,408 and the median income for a family was $49,176. Males had a median income of $26,823 versus $17,744 for females. The [[per capita income]] for the county was $20,948. About 18.6% of families and 23.7% of the population were below the [[poverty line]], including 34.8% of those under the age 18 and 11.7% of that age 65 or over.
+
+==Religion==
+According to 2010 statistics, the largest religious group in Wayne County was the [[Roman Catholic Archdiocese of Detroit|Archdiocese of Detroit]], with 297,283 Catholics worshipping at 149 parishes, followed by 92,394 [[Nondenominational Christianity|non-denominational]] adherents with 144 congregations, 76,422 [[National Baptist Convention, USA, Inc.|NBC]] Baptists with 110 congregations, an estimated 67,775 [[Islam in the United States|Muslims]] with 38 congregations, 28,021 [[American Baptist Churches USA|ABCUSA]] Baptists with 32 congregations, 22,687 [[Lutheran Church–Missouri Synod|Missouri Synod]] Lutherans with 52 congregations, 16,043 [[Church of God in Christ|CoGiC]] Pentecostals with 66 congregations, 14,689 [[United Methodist Church|UMC]] Methodists with 53 congregations, 14,107 [[Presbyterian Church in the United States of America|PC-USA]] Presbyterians with 36 congregations, and 13,199 [[African Methodist Episcopal Church|AME]] Methodists with 29 congregations. Altogether, 43.3% of the population was claimed as members by religious congregations, although members of historically African-American denominations were underrepresented due to incomplete information.<ref>{{cite web | title = County Membership Report Wayne County (Michigan) | url = http://www.thearda.com/rcms2010/rcms2010A.asp?U=26163&T=county&Y=2010&S=adh | website = The [[Association of Religion Data Archives]] | date = 2010 | access-date = January 2, 2020 | archive-date = September 19, 2021 | archive-url = https://web.archive.org/web/20210919172431/https://www.thearda.com/rcms2010/rcms2010A.asp?U=26163&T=county&Y=2010&S=adh | url-status = dead }}</ref> In 2014, Wayne County had 780 religious organizations, the 12th most among all US counties.<ref>{{cite web | title = Social Capital Variables Spreadsheet for 2014 | url = https://aese.psu.edu/nercrd/community/social-capital-resources/social-capital-variables-for-2014/social-capital-variables-spreadsheet-for-2014 | website = PennState College of Agricultural Sciences, Northeast Regional Center for Rural Development | date = December 8, 2017 | access-date = December 30, 2019 | archive-date = December 31, 2019 | archive-url = https://web.archive.org/web/20191231001016/https://aese.psu.edu/nercrd/community/social-capital-resources/social-capital-variables-for-2014/social-capital-variables-spreadsheet-for-2014 | url-status = live }}</ref>
+
+==Government==
+[[File:Detroit December 2019 02 (Wayne County Building).jpg|thumb|[[Wayne County Building]]]]
+
+Wayne County is Michigan's first "[[charter county]]", with a [[Municipal charter|home rule charter]] setting up its structures within limits set in state law and constitution. Most Michigan county governments are structured according to state law, without a locally adopted charter. The county is governed pursuant to the ''Home Rule Charter of Wayne County, Michigan'', and the ''Wayne County Code'' is the [[codification (law)|codification]] of Wayne County's [[local ordinance]]s. Unless a violation of the code or other ordinance is specifically designated as a municipal civil infraction (or unless expressly otherwise required by applicable state or federal laws), the violation is a [[misdemeanor]].<ref>Wayne County Code § 1-25</ref>
+
+The county government operates the [[County jail|jail]], maintains rural roads, keeps files of deeds and mortgages, maintains [[vital records]] for all areas except Detroit, administers public health regulations, and participates with the state in the provision of welfare and other social services. Most other local government functions – police and fire, building and zoning, tax assessment, street maintenance, etc. – are the responsibility of individual cities and townships.
+
+===Elected officials===
+* [[County Executive]]: [[Warren Evans]] ([[Democratic Party (United States)|Democratic]])
+* [[Prosecutor|Prosecuting Attorney]]: [[Kym Worthy]] ([[Democratic Party (United States)|Democratic]])
+* [[Sheriff]]: Raphael Washington ([[Democratic Party (United States)|Democratic]])
+* [[County Clerk]]: Cathy M. Garrett ([[Democratic Party (United States)|Democratic]])
+* [[Treasurer|County Treasurer]]: Eric Sabree ([[Democratic Party (United States)|Democratic]])
+* [[Register of Deeds]]: Bernard J. Youngblood ([[Democratic Party (United States)|Democratic]])
+* [[Wayne County Commission]]: Alisha Bell, Chair ([[Democratic Party (United States)|Democratic]]) 15 members, elected from districts (14 [[Democratic Party (United States)|Democrats]], 1 [[Republican Party (United States)|Republican]])
+* [[Circuit Court]] (3rd Circuit encompasses Wayne County): 61 judges (non-partisan)
+* [[Probate Court]]: 8 judges (non-partisan)
+
+<small>(information as of February 2021)</small>
+
+===Department of Public Services===
+Formerly the Wayne County Road Commission, the [[Wayne County Department of Public Services|Department of Public Services]] is the government agency in Wayne County responsible for building and maintaining the county's roads and highways. A number of the former agency's works are listed on the [[National Register of Historic Places listings in Wayne County, Michigan|National Register of Historic Places]].<ref name=mps/><ref name="nris"/>
+
+===Corrections===
+Wayne County operates the Adult Detention Facility and Juvenile Detention Facility, both located at the Wayne County Criminal Justice Center.<ref>[https://www.waynecountymi.gov/Government/Projects-Initiatives/Criminal-Justice-Center|name=Criminal Justice Center]</ref>
+
+==Politics==
+Wayne County has backed the [[Democratic Party (United States)|Democratic]] presidential nominee in every election since 1932, at times by large margins. From 1896 to 1928, it had always voted Republican for president, or at least more Republican than Democratic. <!-- this is important because the 1932 election is a realignment. this is a very rare streak. --> Its large population has helped swing the election to Democrats in many statewide elections since then, with candidates running up large margins here offsetting Republican majorities in most rural counties of Michigan. In fact, between 1944 and 2012, the county had the largest margin of victory for the Democratic candidate in Michigan in every presidential election except for 1976 and 1984, both times coming in second place to [[Gogebic County, Michigan|Gogebic County]] in the [[Upper Peninsula of Michigan|Upper Peninsula]] by less than 1.5%.
+
+More recently, however, the margin of victory for the Democrats has started to shrink. Beginning in 2016, neighboring [[Washtenaw County, Michigan|Washtenaw County]], home of the [[University of Michigan]], has surpassed Wayne County as the most Democratic county in Michigan; and in 2024, [[Ingham County, Michigan|Ingham County]], home of [[Michigan State University]], also voted more Democratic than Wayne County. In 2020, [[Donald Trump 2020 presidential campaign|Donald Trump]] became the first Republican since 1988 to crack 30% of the vote in the county.
+
+The 2024 election saw a bigger shift, with [[Donald Trump 2024 presidential campaign|Trump]] taking slightly more than one-third of the county's vote, and [[Kamala Harris 2024 presidential campaign|Kamala Harris]] turning in the worst performance for a Democrat in Wayne County in 36 years, winning by less than 30% for the first time since 1988. The shift was due in part to many [[Arab Americans|Arab American]] and [[Islam in the United States|American Muslim]] voters in [[Dearborn, Michigan|Dearborn]] and [[Hamtramck, Michigan|Hamtramck]] voting for a third-party candidate (mostly for [[Green Party of the United States|Green Party]] candidate [[Jill Stein 2024 presidential campaign|Jill Stein]]<ref>{{Cite web |last=Filbrandt |first=John |date=2024-11-13 |title=Breaking down the 2024 election in Dearborn, southeast Michigan |url=https://wdet.org/2024/11/13/breaking-down-the-2024-election-in-dearborn-southeast-michigan/ |access-date=2025-12-24 |website=WDET 101.9 FM |language=en-US}}</ref>), voting for Trump, or abstaining from the election, to protest the [[Presidency of Joe Biden|Biden Administration]]'s handling of the [[Gaza War]].<ref>{{Cite web|url=https://www.nytimes.com/2024/11/06/us/dearborn-michigan-trump-arab-voters.html|title=For Many Arab Americans in Dearborn, Trump Made the Case for Their Votes|date=November 6, 2024|access-date=November 6, 2024|first1=Hamed|last1=Aleaziz|website=The New York Times}}</ref>
+
+The last Republican candidate to carry Wayne County in a statewide election was [[Candice Miller]] when she won re-election to the [[Michigan Secretary of State|Secretary of State]] office in [[1998 Michigan Secretary of State election|1998]].
+
+===Federal representation===
+Wayne County is split between three congressional districts:
+* [[Michigan's 6th congressional district|6th]]
+* [[Michigan's 12th congressional district|12th]]
+* [[Michigan's 13th congressional district|13th]]
+
+{{PresHead|place=Wayne County, Michigan|source=<ref>{{Cite web |url=http://uselectionatlas.org/RESULTS |title=Dave Leip's Atlas of U.S. Presidential Elections |access-date=July 12, 2017 |archive-date=March 23, 2018 |archive-url=https://web.archive.org/web/20180323225526/https://uselectionatlas.org/RESULTS/ |url-status=live }}</ref><ref>{{Cite news|url=https://mvic.sos.state.mi.us/votehistory/Index?type=C&electionDate=11-5-2024|title=2024 Michigan Election Results|last=Benson|first=Jocelyn|author-link=Jocelyn Benson|date=November 5, 2024|work=[[Michigan Department of State]]|access-date=June 10, 2026}}</ref>}}
+<!-- PresRow should be {{PresRow|Year|Winning party|GOP vote #|Dem vote #|3rd party vote #|State}} -->
+{{PresRow|1884|Democratic|17,315|20,930|703|Michigan}}
+{{PresRow|1888|Democratic|21,326|25,986|900|Michigan}}
+{{PresRow|1892|Democratic|26,361|27,508|1,197|Michigan}}
+{{PresRow|1896|Republican|36,400|26,231|1,527|Michigan}}
+{{PresRow|1900|Republican|36,671|28,337|1,348|Michigan}}
+{{PresRow|1904|Republican|48,393|19,548|1,809|Michigan}}
+{{PresRow|1908|Republican|49,580|24,128|4,132|Michigan}}
+{{PresRow|1912|Progressive|26,599|22,678|39,144|Michigan}}
+{{PresRow|1916|Republican|70,056|60,935|4,193|Michigan}}
+{{PresRow|1920|Republican|220,482|51,773|22,688|Michigan}}
+{{PresRow|1924|Republican|268,653|23,817|42,866|Michigan}}
+{{PresRow|1928|Republican|265,852|157,047|3,819|Michigan}}
+{{PresRow|1932|Democratic|212,678|310,686|20,237|Michigan}}
+{{PresRow|1936|Democratic|190,732|404,055|31,333|Michigan}}
+{{PresRow|1940|Democratic|275,974|451,003|5,592|Michigan}}
+{{PresRow|1944|Democratic|316,270|554,670|4,153|Michigan}}
+{{PresRow|1948|Democratic|321,773|489,654|34,679|Michigan}}
+{{PresRow|1952|Democratic|456,371|622,236|4,774|Michigan}}
+{{PresRow|1956|Democratic|481,783|664,618|1,844|Michigan}}
+{{PresRow|1960|Democratic|394,485|773,327|4,097|Michigan}}
+{{PresRow|1964|Democratic|260,901|831,674|2,149|Michigan}}
+{{PresRow|1968|Democratic|270,566|654,157|109,537|Michigan}}
+{{PresRow|1972|Democratic|435,877|514,913|16,087|Michigan}}
+{{PresRow|1976|Democratic|348,588|548,767|15,635|Michigan}}
+{{PresRow|1980|Democratic|315,532|522,024|53,288|Michigan}}
+{{PresRow|1984|Democratic|367,391|496,632|4,320|Michigan}}
+{{PresRow|1988|Democratic|291,996|450,222|5,938|Michigan}}
+{{PresRow|1992|Democratic|227,002|508,464|106,499|Michigan}}
+{{PresRow|1996|Democratic|175,886|504,466|51,245|Michigan}}
+{{PresRow|2000|Democratic|223,021|530,414|15,192|Michigan}}
+{{PresRow|2004|Democratic|257,750|600,047|6,931|Michigan}}
+{{PresRow|2008|Democratic|219,582|660,085|12,064|Michigan}}
+{{PresRow|2012|Democratic|213,814|595,846|8,476|Michigan}}
+{{PresRow|2016|Democratic|228,993|519,444|34,282|Michigan}}
+{{PresRow|2020|Democratic|264,553|597,170|12,295|Michigan}}
+{{PresRow|2024|Democratic|288,860|537,032|30,798|Michigan}}
+{{PresFoot}}
+{{U.S. SenHead|place=Wayne County, Michigan|Seat=1|source=<ref>{{cite news |title=2024 Senate Election (Official Returns)|website=Commonwealth of Michigan by county |date=November 5, 2024 |access-date=December 5, 2024 |url=https://www.nbcnews.com/politics/2024-elections/pennsylvania-senate-results}}</ref>}}
+<!-- U.S. SenRow should be {{U.S. SenRow|Year|Winning party|GOP vote #|Dem vote #|3rd party vote #|State}} -->
+{{U.S. SenRow|2024|Democratic|267,761|532,029|39,069|Michigan}}
+{{U.S. SenFoot}}
+{{M.I. GovHead|place=Wayne County|Seat=|source=}}
+<!-- M.I. GovRow should be {{M.I. GovHead|Year|Winning party|GOP vote #|Dem vote #|3rd party vote #|State}} -->
+{{M.I. GovRow|2022|Democratic|180,487|457,601|7,651}}
+{{M.I. GovFoot}}
+
+==Communities==
+[[File:Wayne County, MI census map2.png|thumb|right|500px|[[United States Census|U.S. census]] data map showing local municipal boundaries within Wayne County. Shaded areas represent incorporated cities.]]
+
+===Cities===
+{{div col|colwidth=12em}}
+* [[Allen Park, Michigan|Allen Park]]
+* [[Belleville, Michigan|Belleville]]
+* [[Dearborn, Michigan|Dearborn]]
+* [[Dearborn Heights, Michigan|Dearborn Heights]]
+* [[Detroit]] (county seat)
+* [[Ecorse, Michigan|Ecorse]]
+* [[Flat Rock, Michigan|Flat Rock]] (partially in [[Monroe County, Michigan|Monroe County]])
+* [[Garden City, Michigan|Garden City]]
+* [[Gibraltar, Michigan|Gibraltar]]
+* [[Grosse Pointe, Michigan|Grosse Pointe]]
+* [[Grosse Pointe Farms, Michigan|Grosse Pointe Farms]]
+* [[Grosse Pointe Park, Michigan|Grosse Pointe Park]]
+* [[Grosse Pointe Shores, Michigan|Grosse Pointe Shores]] (partially in [[Macomb County, Michigan|Macomb County]])
+* [[Grosse Pointe Woods, Michigan|Grosse Pointe Woods]]
+* [[Hamtramck, Michigan|Hamtramck]]
+* [[Harper Woods, Michigan|Harper Woods]]
+* [[Highland Park, Michigan|Highland Park]]
+* [[Inkster, Michigan|Inkster]]
+* [[Lincoln Park, Michigan|Lincoln Park]]
+* [[Livonia, Michigan|Livonia]]
+* [[Melvindale, Michigan|Melvindale]]
+* [[Northville, Michigan|Northville]] (partially in [[Oakland County, Michigan|Oakland County]])
+* [[Plymouth, Michigan|Plymouth]]
+* [[River Rouge, Michigan|River Rouge]]
+* [[Riverview, Michigan|Riverview]]
+* [[Rockwood, Michigan|Rockwood]]
+* [[Romulus, Michigan|Romulus]]
+* [[Southgate, Michigan|Southgate]]
+* [[Taylor, Michigan|Taylor]]
+* [[Trenton, Michigan|Trenton]]
+* [[Wayne, Michigan|Wayne]]
+* [[Westland, Michigan|Westland]]
+* [[Woodhaven, Michigan|Woodhaven]]
+* [[Wyandotte, Michigan|Wyandotte]]
+{{div col end}}
+
+===Charter townships===
+{{div col}}
+* [[Brownstown Charter Township, Michigan|Brownstown Charter Township]]
+* [[Canton, Michigan|Canton Charter Township]]
+* [[Huron Charter Township, Michigan|Huron Charter Township]]
+* [[Northville Charter Township, Michigan|Northville Charter Township]]
+* [[Plymouth Charter Township, Michigan|Plymouth Charter Township]]
+* [[Redford, Michigan|Redford Charter Township]]
+* [[Van Buren Township, Michigan|Van Buren Charter Township]]
+{{div col end}}
+
+===Civil townships===
+* [[Grosse Ile Township, Michigan|Grosse Ile Township]]
+* [[Sumpter Township, Michigan|Sumpter Township]]
+
+===Unincorporated communities===
+{{div col|colwidth=21em}}
+* [[Beech, Michigan|Beech]]
+* [[Belleville North, Michigan|Belleville North]]
+* [[Cherry Hill, Michigan|Cherry Hill]]
+* [[Cherry Island, Michigan|Cherry Island]]
+* [[Conners Creek, Michigan|Conners Creek]] (former)
+* [[Denton, Michigan|Denton]]
+* [[Duboisville, Michigan|Duboisville]] (former)
+* [[East Rockwood, Michigan|East Rockwood]]
+* [[Edgewater Heights, Michigan|Edgewater Heights]]
+* [[French Landing, Michigan|French Landing]]
+* [[Grand View Acres, Michigan|Grand View Acres]]
+* [[Maple Beach, Michigan|Maple Beach]]
+* [[Martinsville, Michigan|Martinsville]]
+* [[Milleville Beach, Michigan|Milleville Beach]]
+* [[New Boston, Michigan|New Boston]]
+* [[Rawsonville, Michigan|Rawsonville]] (partially in [[Washtenaw County, Michigan|Washtenaw County]])
+* [[Roulo, Michigan|Roulo]]
+* [[Sheldon, Michigan|Sheldon]]
+* [[Waltz, Michigan|Waltz]]
+* [[West Sumpter, Michigan|West Sumpter]]
+* [[Willow, Michigan|Willow]]
+{{div col end}}
+
+==Education==
+School districts:<ref>{{cite map|author=Geography Division|url=https://www2.census.gov/geo/maps/DC2020/PL20/st26_mi/schooldistrict_maps/c26163_wayne/DC20SD_C26163.pdf |archive-url=https://web.archive.org/web/20220109033314/https://www2.census.gov/geo/maps/DC2020/PL20/st26_mi/schooldistrict_maps/c26163_wayne/DC20SD_C26163.pdf |archive-date=January 9, 2022 |url-status=live|title=2020 Census – School District Reference Map: Wayne County, MI|publisher=[[U.S. Census Bureau]]|date=January 15, 2021 |accessdate=July 20, 2022}} - [https://www2.census.gov/geo/maps/DC2020/PL20/st26_mi/schooldistrict_maps/c26163_wayne/DC20SD_C26163_SD2MS.txt Text list]</ref>
+{{div col|colwidth=30em}}
+* [[Airport Community Schools]]
+* [[Allen Park Public Schools]]
+* [[Crestwood School District (Michigan)|Crestwood School District]]
+* [[Clarenceville School District]]
+* [[Dearborn Public Schools]]
+* [[Dearborn Heights School District 7]]
+* [[Detroit Public Schools Community District]]
+* [[Ecorse Public Schools]]
+* [[Flat Rock Community Schools]]
+* [[Garden City Public Schools]]
+* [[Gibraltar School District]]
+* [[Grosse Ile Township Schools]]
+* [[Grosse Pointe Public School System]]
+* [[Hamtramck Public Schools]]
+* [[Harper Woods School District]]
+* [[Highland Park Schools]]
+* [[Huron School District (Michigan)|Huron School District]]
+* [[Lincoln Consolidated School District (Michigan)|Lincoln Consolidated School District]]
+* [[Lincoln Park Public Schools (Michigan)|Lincoln Park Public Schools]]
+* [[Livonia Public Schools]]
+* [[Melvindale–Northern Allen Park Public Schools]]
+* [[Northville Public Schools]]
+* [[Plymouth-Canton Community Schools]]
+* [[Redford Union Schools]]
+* [[River Rouge School District]]
+* [[Riverview Community School District]]
+* [[Romulus Community School District]]
+* [[South Redford School District]]
+* [[Southgate Community School District]]
+* [[Taylor School District]]
+* [[Trenton Public Schools (Michigan)|Trenton Public Schools]]
+* [[Van Buren Public Schools]]
+* [[Wayne-Westland Community Schools]]
+* [[Westwood Community School District (Michigan)|Westwood Community Schools]]
+* [[Woodhaven-Brownstown School District]]
+* [[Wyandotte Public Schools]]
+{{div col end}}
+
+Former school districts:
+* [[Inkster Public Schools]]<ref>{{cite web|url=https://www2.census.gov/geo/maps/dc10map/sch_dist/st26_mi/c26163_wayne/DC10SD_C26163_000.pdf |archive-url=https://web.archive.org/web/20160304114859/http://www2.census.gov/geo/maps/dc10map/sch_dist/st26_mi/c26163_wayne/DC10SD_C26163_000.pdf |archive-date=March 4, 2016 |url-status=live|title=School District Reference Map (2010 Census): Wayne County, MI|publisher=[[U.S. Census Bureau]]|accessdate=July 22, 2022}} - Pages [https://www2.census.gov/geo/maps/dc10map/sch_dist/st26_mi/c26163_wayne/DC10SD_C26163_001.pdf 1] and [https://www2.census.gov/geo/maps/dc10map/sch_dist/st26_mi/c26163_wayne/DC10SD_C26163_002.pdf 2] - [https://www2.census.gov/geo/maps/dc10map/sch_dist/st26_mi/c26163_wayne/DC10SD_C26163_SD2MS.txt Text list]</ref>
+
+Tertiary institutions:
+* [[Henry Ford College]]
+* [[Schoolcraft College]]
+* [[University of Detroit Mercy]]
+* [[Wayne State University]]
+
+==See also==
+{{Portal|Michigan|United States}}
+* [[List of Michigan State Historic Sites in Wayne County]]
+* [[National Register of Historic Places listings in Wayne County, Michigan]]
+* [[Saginaw Trail]]
+* [[Sauk Trail]]
+* [[Woodward Corridor]]
+* [[Downriver]]
+
+==References==
+{{Reflist|30em}}
+
+==Further reading==
+* {{cite book |url= https://openlibrary.org/works/OL161750W/The_history_of_Detroit_and_Michigan_or_The_metropolis_illustrat |last= Farmer |first= Silas |orig-year=1884 |year= 1969 |title= The history of Detroit and Michigan, or, The metropolis illustrated: a chronological cyclopaedia of the past and present: including a full record of territorial days in Michigan, and the annuals of Wayne County |location= Detroit |publisher= S. Farmer & Co |oclc= 7959532}}
+
+==External links==
+* [https://www.waynecountymi.gov/ Wayne County Government]
+* [https://web.archive.org/web/20091019170520/http://geocities.com/histmich/index.html Wayne County Local History]
+* {{cite web |url=http://clarke.cmich.edu/resource_tab/bibliographies_of_clarke_library_material/michigan_local_history/county_material/wayne.html |publisher=[[Clarke Historical Library]], [[Central Michigan University]] |title=Bibliography on Wayne County|access-date=January 23, 2013}}
+* [https://web.archive.org/web/20121101031522/http://www.co.wayne.mi.us/dps/dps_roads_history.htm History of the Wayne County Road Commission]
+* [http://vimeo.com/27264473 Wayne County Road Commission Photos]
+* [https://web.archive.org/web/20121101053245/http://www.co.wayne.mi.us/dps/dps_roads_history_woodwardfacts.htm History: Facts about the World's First Mile of Concrete Highway]
+* [http://library.municode.com/index.aspx?clientId=13032 Wayne County Code] from [[Municode]]
+
+{{Geographic Location
+|Centre    = Wayne County, Michigan
+|North     =
+|Northeast = [[Macomb County, Michigan|Macomb County]] / ''[[Lake Saint Clair (North America)|Lake St. Clair]]''
+|East      = ''[[Detroit River]]''<br />[[Essex County, Ontario]] {{flagicon|Canada}}
+|Southeast = ''[[Lake Erie]]'' / ''[[Detroit River]]''
+|South     = [[Monroe County, Michigan|Monroe County]]
+|Southwest = [[Lenawee County, Michigan|Lewanee County]]
+|West      = [[Washtenaw County, Michigan|Washtenaw County]]
+|Northwest = [[Oakland County, Michigan|Oakland County]]
+}}
+
+{{Cities of Wayne County, Michigan}}
+{{Metro Detroit}}
+{{michigan}}
+{{Authority control}}
+{{Coord|42.28|-83.26|display=title|type:adm2nd_region:US-MI_source:UScensus1990}}
+
+[[Category:Wayne County, Michigan| ]]
+[[Category:Michigan counties]]
+[[Category:Metro Detroit]]
+[[Category:Counties in Metro Detroit]]
+[[Category:1815 establishments in Michigan Territory]]
+[[Category:Populated places in the United States established in 1815]]
+[[Category:Majority-minority counties in the United States]]

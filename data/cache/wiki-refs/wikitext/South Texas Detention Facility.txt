@@ -1,0 +1,39 @@
+{{Short description|Immigrant detention center in Texas, United States}}
+{{About|the Pearsall TX facility|the nearby facility in Dilley TX|South Texas Family Residential Center}}
+{{Use American English|date=August 2025}}
+{{Infobox Prison
+| name           = South Texas ICE Processing Center
+| image          = STDC Exterior.jpg
+| location       = 566 Veteran Drive <br> [[Pearsall, Texas]], [[Frio County]] <br> [[United States]], 78061
+| coordinates    = {{coord|28.894301|N|99.120929|W|type:landmark|display=inline,title}}
+| status         = Operational
+| classification = Mixed Security
+| capacity       = 1904
+| opened         = May 2005
+| closed         = 
+| managed_by     = [[GEO Group]]
+| warden         = Bobby Thompson
+}}
+
+The '''South Texas ICE Processing Center'''<ref>{{Cite web|url=https://www.geogroup.com/FacilityDetail/FacilityID/44|title=South Texas ICE Processing Center|website=www.geogroup.com|language=en-US|access-date=2017-12-26}}</ref> is a privately operated detention facility located in [[Pearsall, Texas|Pearsall]], [[Frio County, Texas]], run by the [[GEO Group]] to house detainees for the [[U.S. Immigration and Customs Enforcement]].<ref>{{cite web|title=South Texas Detention Complex|url=https://www.ice.gov/detention-facility/south-texas-detention-complex|website=U.S. Immigration and Customs Enforcement|accessdate=12 September 2016}}</ref>
+
+The facility holds a maximum of 1904 detainees, male and female, at a mix of security levels.  The facility first opened in May 2005 as the "Pearsall Immigration Detention Center" by the [[Correctional Services Corporation]], which was bought by the GEO Group later that year.<ref>{{cite web|title=South Texas Detention Complex|url=http://geogroup.com/maps/locationdetails/32|website=GEO Group|accessdate=12 September 2016}}</ref>
+
+A 2015 report from watchdog organizations, Detention Watch Network and the [[Center for Constitutional Rights]], showed that contracts between ICE and five detention facilities in Texas obligated ICE to pay for daily minimum populations. Detention Watch Network says this incentivized ICE  to fill the center up to the minimum, effectively creating a quota system.  The nightly minimum for this facility was 725, which was regularly exceeded.<ref>{{cite web|title=Banking on Detention|url=http://www.detentionwatchnetwork.org/sites/default/files/reports/DWN%20CCR%20Banking%20on%20Detention%20Report.pdf|website=Detention Watch Network|accessdate=12 September 2016}}</ref>
+
+==See also==
+*[[List of detention sites in the United States]]
+
+==References==
+{{reflist}}
+
+== External links ==
+
+* McLemore, D. [https://texascivilrightsreview.org/0004/05/06/mclemore-south-texas-detention-center/ South Texas Detention Center]. 2004 description of ICE activities in South Texas, reproduced from [[Dallas Morning News]]
+
+[[Category:Prisons in Texas]]
+[[Category:Buildings and structures in Frio County, Texas]]
+[[Category:GEO Group]]
+[[Category:2005 establishments in Texas]]
+[[Category:Immigration detention centers and prisons in the United States]]
+[[Category:United States Immigration and Customs Enforcement]]

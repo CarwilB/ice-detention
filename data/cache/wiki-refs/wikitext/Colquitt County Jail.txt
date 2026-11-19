@@ -1,0 +1,32 @@
+{{Use American English|date=July 2025}}
+{{Use mdy dates|date=January 2025}}
+{{Infobox NRHP
+| name         = Colquitt County Jail
+| nrhp_type    = 
+| image        = Colquitt County Jail.JPG
+| caption      = 
+| location     = 126 1st Ave., SE, [[Moultrie, Georgia]]
+| coordinates  = {{coord|31|10|42|N|83|47|12|W|display=inline,title}}
+| pushpin_map  = USA Georgia#USA
+| built        = 1915
+| builder      = Southern Structural Steel Co.
+| architecture = [[Late Gothic Revival architecture|Late Gothic Revival]]
+| added        = October 10, 1980
+| area         = {{convert|0.5|acre}}
+| ref_num      = 80001004<ref name="nris">{{NRISref|version=2010a}}</ref>
+}}
+'''Colquitt County Jail''' is a historic jail building at 126 1st Avenue SE in [[Moultrie, Georgia]] that was built in 1915. It was added to the [[National Register of Historic Places]] in 1980.<ref name=nris/>
+
+The previous jail was a brick building, the second brick building in Moultrie, that was built in 1892 and was torn down in 1953.  This jail, built in 1915 just to the north of the old one, is "among the most impressive buildings in Moultrie and is one of the county's few examples of Gothic Revival architecture."  It cost about $28,000.<ref name=nrhpdoc>{{cite web|url={{NRHP url|id=80001004}}|title=National Register of Historic Places Inventory/Nomination: Colquitt County Jail |publisher=[[National Park Service]]|accessdate=January 21, 2017 |author=Erick D. Montgomery and Kenneth H. Thomas, Jr. |date=March 28, 1980 }} with {{NRHP url|id=80001004|photos=y|title=six photos from 1980}}</ref>
+
+==See also==
+*[[National Register of Historic Places listings in Colquitt County, Georgia]]
+
+==References==
+{{Reflist}}
+
+[[Category:Jails on the National Register of Historic Places in Georgia (U.S. state)]]
+[[Category:Buildings and structures in Colquitt County, Georgia]]
+[[Category:National Register of Historic Places in Colquitt County, Georgia]]
+[[Category:Government buildings completed in 1915]]
+[[Category:Individually listed contributing properties to historic districts on the National Register in Georgia (U.S. state)]]

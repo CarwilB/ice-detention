@@ -1,0 +1,46 @@
+{{Short description|County jail in Omaha, Nebraska}}
+{{Only primary sources|date=September 2025}}
+{{Use American English|date=August 2025}}
+{{Infobox prison
+| name            = Douglas County Correctional Center
+| image           = 
+| caption         = 
+| location        = [[Omaha, Nebraska|Omaha]], [[Nebraska]]
+| coordinates     = {{coord|41.2534|-95.9384|type:landmark|display=inline,title}}
+| status          = 
+| classification  = 
+| capacity        = 
+| population      = 
+| population_date = 
+| opened          = July 1979
+| closed          = 
+| former_name     = 
+| managed_by      = Douglas County Department of Corrections
+| director        = 
+| governor        = 
+| warden          = 
+| website         = 
+| prisoners       = 
+}}
+
+'''Douglas County Correctional Center''' ('''DCCC''') is a jail in [[Omaha, Nebraska]].  The jail is the largest in the Midwest and is operated by the [[Douglas County, Nebraska|Douglas County]] Department of Corrections.<ref name=":0">{{Cite web|url = http://www.dccorr.com/corrections/|title = Department of Corrections of Douglas County|date = |accessdate = November 5, 2014|website = dccorr.com |publisher = Douglas County and the City of Omaha|last = |first = }}</ref>  The jail is used to house inmates in criminal or immigration related offenses. The jail is located at 710 S. 17th St, Omaha, Nebraska.
+
+== Timeline ==
+
+Douglas County Correctional Center was opened in July 1979. It was designed with 12 housing units that held a total of 200 single bed cells.<ref name=":0" />
+
+By 1983, the majority of the single cells were double bunked to bring the capacity to 363 beds.<ref name=":0" />
+
+In April 1989, the annex was added to the Correctional Center. Eight dormitory style housing units were added with 354 beds and 2 isolation cells. This brought the capacity to 719 beds.<ref name=":0" />
+
+In June 2005, construction of the Correctional Center was completed, adding nine housing units with 62 beds each and a medical housing unit that can accommodate a combination of 61 male and female inmates. This brings total capacity to 1,453 beds.<ref name=":0" />
+
+== See also ==
+* [[List of Nebraska state prisons]]
+
+== References ==
+{{Reflist}}
+
+[[Category:Prisons in Nebraska]]
+[[Category:Buildings and structures in Omaha, Nebraska]]
+[[Category:1979 establishments in Nebraska]]

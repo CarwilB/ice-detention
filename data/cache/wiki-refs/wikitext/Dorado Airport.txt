@@ -1,0 +1,51 @@
+{{Short description|Airport in Dorado, Puerto Rico}}
+{{For | airports named El Dorado | El Dorado Airport (disambiguation)}}
+{{Infobox airport
+| name            = Dorado Airport
+| image           = 
+| IATA            = DDP
+| ICAO            = 
+| FAA             = 
+| type            = 
+| owner           = 
+| operator        = 
+| area_served     = 
+| location        = [[Dorado, Puerto Rico]]
+| elevation_f     = 
+| elevation_m     = 
+| coordinates     = {{Coord|18|27|52|N|066|17|33|W|region:US-PR|display=inline,title}}
+| pushpin_map     = Puerto Rico
+| pushpin_label   = DPP
+| pushpin_caption = Location in Puerto Rico
+| website         = 
+| r1_number       = 10/28
+| r1_length_f     = 3,500
+| r1_surface      = Paved
+| footnotes       = Sources: IATA,<ref name=GCM>[http://gc.kls2.com/airport/DDP Great Circle Mapper: DDP - Dorado, Puerto Rico (Dorado Beach Airport)]</ref> coordinates,<ref name=TopoZone>[http://www.topoquest.com/map.asp?lat=18.4644&lon=-66.2925&size=m&s=24 TopoQuest: Dorado Airport]</ref> runway,<ref name=Freeman>{{cite web|url=https://www.airfieldsfreeman.com/PR/Airfields_PR_E.htm#dorado|publisher=[[Abandoned & Little-Known Airfields]]|title=Eastern Puerto Rico: Dorado|access-date=2016-07-05}}</ref> well<ref name=Spaced>{{Cite web |url=http://www.doradobeachclubs.com/dorado.asp?id=488&page=24791 |title=Dorado Beach History |access-date=2008-08-07 |archive-date=2011-07-10 |archive-url=https://web.archive.org/web/20110710144340/http://www.doradobeachclubs.com/dorado.asp?id=488&page=24791 |url-status=dead }}</ref>
+}}
+
+'''Dorado Airport''' or '''Dorado Beach Airport''' {{Airport codes|DDP}}<ref name=GCM /> was a small single runway airport in [[Dorado, Puerto Rico|Dorado]], [[Puerto Rico]].
+
+[[Clara Livingston]], the owner of the property at the time, ordered the strip be built, and her friend, [[Amelia Earhart]], may have used the facility as well.<ref name=Spaced /> Later on, the [[United States]] military, during [[World War II]], paved the runway.<ref name=Freeman />
+
+Much later on, a large airline named [[Caribair (Puerto Rico)|Caribair]] (later overtaken by [[Eastern Air Lines]]), began flights there. When Caribair became part of Eastern, flights to Dorado Airport were suspended.
+
+During the mid 1960s, Dorado was served by [[Dorado Wings]] (later renamed Crown Air), a small airline that operated charter flights between Dorado Airport and [[Luis Muñoz Marín International Airport]] in [[San Juan, Puerto Rico|San Juan]]. The airline operated propeller airplanes.
+
+In the early 1990s, the airport was officially closed. In 1996, the parcel was rezoned and construction commenced of a master planned community: Dorado Beach East. In memory of Dorado Airport and its founder, Ms. Clara Livingston, the developers built a children's playground themed with unique play airplanes, a hangar for activities, and a runway plaza.
+
+== See also ==
+* {{Portal-inline|Puerto Rico}}
+
+== References ==
+{{Reflist}}
+
+== External links ==
+* [http://msrmaps.com/map.aspx?lat=18.4644&lon=-66.2925&s=11&w=700&h=350&g=1 MSR Maps: Dorado Airport] ([[USGS]] aerial photo dated 24 November 1994 showing closed runway with X's).
+* [http://www.world-airport-codes.com/puerto-rico/dorado-beach-1975.html World Airport Codes: Dorado Beach Airport (DDP)].
+<!--Templates-->
+{{Airports in Puerto Rico}}
+
+[[Category:Dorado, Puerto Rico]]
+[[Category:Airports in Puerto Rico]]
+[[Category:Defunct airports in Puerto Rico]]

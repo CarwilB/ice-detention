@@ -1,0 +1,37 @@
+{{Short description|Prison in Massachusetts, United States}}
+{{primary sources|date=August 2023}}
+{{Use American English|date=August 2025}}
+{{Infobox Prison
+| name            = MCI - Plymouth
+| image           = <!-- Deleted image removed:  [[File:Mass Prison MCI Plymouth.jpg|240px]] -->
+| caption         = MCI Plymouth Prison
+| location        = [[Plymouth, Massachusetts|Plymouth, MA]]
+| coordinates     = 
+| status          = Operational
+| classification  = Level 3 (Minimum) Pre-Release facility
+| capacity        = 211
+| population      = 199
+| population_date = 
+| opened          = {{Start date|1952}}
+| closed          = 
+| managed_by      = [[Massachusetts Department of Correction]]
+| director        = Acting Superintendent Noemi Cruz
+}}
+
+'''Massachusetts Correctional Institution – Plymouth''' or '''MCI - Plymouth''' is a minimum-security prison facility located in the [[Myles Standish State Forest]] in [[Plymouth, Massachusetts]].  It is not to be confused with much larger [[Plymouth County Correctional Facility]], also located in Plymouth.<ref>{{Cite web|url=https://www.statecourts.org/inmate-search/massachusetts/plymouth-county/massachusetts-correctional-institution-plymouth/|title=Massachusetts Correctional Institution - Plymouth Inmate Records Search, Massachusetts - StateCourts|website=www.statecourts.org}}</ref>
+
+== References ==
+{{refs}}
+
+{{coord|41|50|55|N|70|39|40|W|scale:10000|display=title}}
+
+{{State prisons in Massachusetts}}
+
+{{DEFAULTSORT:Massachusetts Correctional Institution - Plymouth}}
+[[Category:1952 establishments in Massachusetts]]
+[[Category:Prisons in Massachusetts|Plymouth]]
+[[Category:Buildings and structures in Plymouth, Massachusetts]]
+[[Category:Prisons completed in the 1950s]]
+
+{{Massachusetts-struct-stub}}
+{{US-prison-stub}}

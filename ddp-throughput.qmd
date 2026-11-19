@@ -1,0 +1,636 @@
+---
+title: "Detention throughput: daily population, removals, and re-detention"
+subtitle: "Person-level analysis of the DDP detention stints (20260806 release), with presidential comparison windows"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+---
+
+```{r}
+#| include: false
+#| label: setup
+
+library(arrow)
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(data.table)
+
+stints <- read_parquet(
+  targets::tar_read(stints_file),
+  col_select = c(
+    "unique_identifier", "stay_ID",
+    "book_in_date_time", "book_out_date_time",
+    "detention_release_reason"
+  )
+)
+fdp <- read_parquet(
+  targets::tar_read(facilities_daily_population_file),
+  col_select = c("date", "n_detained_at_midnight")
+)
+
+n_unidentified <- sum(is.na(stints$unique_identifier))
+
+# Daily population (midnight census)
+pop_daily <- fdp |>
+  group_by(date) |>
+  summarise(pop_midnight = sum(n_detained_at_midnight), .groups = "drop")
+
+# Daily removals: distinct persons (unique_identifier x stay_ID) removed per book-out date
+removals_daily <- stints |>
+  filter(detention_release_reason == "Removed", !is.na(book_out_date_time)) |>
+  mutate(date = as.Date(book_out_date_time)) |>
+  distinct(date, unique_identifier, stay_ID) |>
+  count(date, name = "removals")
+
+# Stay- and person-level tables (identified persons only)
+id <- data.table::as.data.table(stints)[!is.na(unique_identifier)]
+
+stays <- id[, .(
+  stay_start = min(as.Date(book_in_date_time), na.rm = TRUE),
+  stay_end   = suppressWarnings(max(as.Date(book_out_date_time), na.rm = TRUE)),
+  removed    = any(detention_release_reason == "Removed", na.rm = TRUE)
+), by = .(unique_identifier, stay_ID)]
+
+persons <- stays[, .(
+  n_stays        = .N,
+  first_bookin   = min(stay_start),
+  last_stay_start = max(stay_start),
+  n_removals     = sum(removed),
+  first_removal  = if (any(removed)) min(stay_end[removed]) else as.Date(NA)
+), by = unique_identifier]
+
+# Daily book-ins: new detention starts (one row per identified stay, at stay start)
+bookins_daily <- stays[, .(bookins = .N), by = .(date = stay_start)]
+
+n_persons          <- nrow(persons)
+n_removed_persons  <- sum(persons$n_removals >= 1)
+n_redetained       <- sum(persons$n_stays >= 2)
+n_removed_2plus    <- sum(persons$n_removals >= 2)
+n_removed_then_back <- persons[, sum(n_removals >= 1 & last_stay_start > first_removal, na.rm = TRUE)]
+
+# Gap between consecutive stays, for persons with 2+ stays
+gaps <- stays[order(unique_identifier, stay_start),
+  .(prev_end = data.table::shift(stay_end), next_start = stay_start, n_stays = .N),
+  by = unique_identifier][n_stays >= 2][!is.na(prev_end)]
+gaps[, gap := as.integer(next_start - prev_end)]
+
+gap_summary <- gaps[, .(
+  gaps = .N,
+  overlapping = sum(gap < 0, na.rm = TRUE),
+  median_gap = median(gap, na.rm = TRUE),
+  within_30 = mean(gap >= 0 & gap <= 30, na.rm = TRUE)
+)]
+
+# Cumulative distinct persons ever detained / ever removed (full dataset window)
+cum_detained <- persons[, .(persons = .N), by = .(date = first_bookin)][order(date)][
+  , cum_persons := cumsum(persons)][]
+cum_removed <- persons[!is.na(first_removal), .(persons = .N), by = .(date = first_removal)][
+  order(date)][, cum_persons := cumsum(persons)][]
+
+# Presidential comparison windows: 2025-01-20 (second Trump inauguration) to the end
+# of the data, and the same number of days immediately before that date.
+inaug <- as.Date("2025-01-20")
+window_end <- max(pop_daily$date)
+n_window_days <- as.integer(window_end - inaug) + 1
+biden_start <- inaug - n_window_days
+
+# Book-ins in the ~11 weeks before the inauguration (composition context)
+pre_inaug_bookins_mean <- round(mean(
+  bookins_daily[date >= as.Date("2024-11-01") & date < inaug]$bookins
+))
+
+full_lab  <- paste0("Full dataset (", format(min(pop_daily$date)), " – ", format(window_end), ")")
+biden_lab <- paste0("Biden (", format(biden_start), " – ", format(inaug - 1), ")")
+trump_lab <- paste0("Trump (", format(inaug), " – ", format(window_end), ")")
+
+combined <- full_join(pop_daily, removals_daily, by = "date") |>
+  full_join(bookins_daily, by = "date") |>
+  tidyr::replace_na(list(removals = 0L, bookins = 0L))
+scale_factor <- max(combined$pop_midnight) / max(combined$removals)
+
+window_daily_stats <- function(d, lab) {
+  d |>
+    summarise(
+      window = lab,
+      days = n(),
+      mean_pop = round(mean(pop_midnight)),
+      max_pop = max(pop_midnight),
+      date_max_pop = format(date[which.max(pop_midnight)]),
+      total_removals = sum(removals),
+      mean_removals = round(mean(removals)),
+      max_removals = max(removals),
+      date_max_rem = format(date[which.max(removals)]),
+      total_bookins = sum(bookins),
+      mean_bookins = round(mean(bookins))
+    )
+}
+
+daily_window_tab <- bind_rows(
+  window_daily_stats(combined, full_lab),
+  window_daily_stats(filter(combined, date >= biden_start, date < inaug), biden_lab),
+  window_daily_stats(filter(combined, date >= inaug), trump_lab)
+)
+
+# Daily series aligned by days-into-window, for the two presidential windows
+align_long <- bind_rows(
+  filter(combined, date >= biden_start, date < inaug) |>
+    mutate(president = "Biden", days_in = as.integer(date - biden_start)),
+  filter(combined, date >= inaug) |>
+    mutate(president = "Trump", days_in = as.integer(date - inaug))
+) |>
+  tidyr::pivot_longer(c(pop_midnight, removals, bookins), names_to = "metric", values_to = "value") |>
+  mutate(metric = case_when(
+    metric == "pop_midnight" ~ "Detained population (midnight census)",
+    metric == "removals" ~ "Removals per day",
+    metric == "bookins" ~ "New detention starts (book-ins)"
+  ))
+
+# Per-window cumulative distinct persons (booked in / removed within the window)
+cum_in_window <- function(ws, we) {
+  d <- stays[stay_start >= ws & stay_start <= we,
+             .(date = min(stay_start)), by = unique_identifier][
+    , .(persons = .N), by = date][order(date)][, cum_persons := cumsum(persons)][]
+  r <- stays[removed == TRUE & stay_end >= ws & stay_end <= we,
+             .(date = min(stay_end)), by = unique_identifier][
+    , .(persons = .N), by = date][order(date)][, cum_persons := cumsum(persons)][]
+  list(detained = d, removed = r)
+}
+biden_cum <- cum_in_window(biden_start, inaug - 1)
+trump_cum <- cum_in_window(inaug, window_end)
+
+cum_window_tab <- data.frame(
+  window = c(full_lab, biden_lab, trump_lab),
+  persons_detained = c(n_persons, sum(biden_cum$detained$persons), sum(trump_cum$detained$persons)),
+  persons_removed = c(n_removed_persons, sum(biden_cum$removed$persons), sum(trump_cum$removed$persons)),
+  removal_events = c(
+    stays[removed == TRUE, .N],
+    stays[removed == TRUE & stay_end >= biden_start & stay_end <= inaug - 1, .N],
+    stays[removed == TRUE & stay_end >= inaug & stay_end <= window_end, .N]
+  )
+)
+
+# Per-window re-detention stats (stays starting within the window)
+window_stay_stats <- function(ws, we) {
+  sw <- stays[stay_start >= ws & stay_start <= we]
+  pp <- sw[, .(n = .N), by = unique_identifier]
+  g <- sw[order(unique_identifier, stay_start),
+          .(gap = as.integer(stay_start - data.table::shift(stay_end)), n = .N),
+          by = unique_identifier][n >= 2][!is.na(gap)]
+  data.frame(
+    stays_started = nrow(sw),
+    persons = nrow(pp),
+    redetained = sum(pp$n >= 2),
+    redetained_pct = round(100 * sum(pp$n >= 2) / nrow(pp), 1),
+    median_gap = as.integer(median(g$gap, na.rm = TRUE))
+  )
+}
+biden_stays_stats <- window_stay_stats(biden_start, inaug - 1)
+trump_stays_stats <- window_stay_stats(inaug, window_end)
+
+det_window_tab <- data.frame(
+  window = c(full_lab, biden_lab, trump_lab),
+  stays_started = c(nrow(stays), biden_stays_stats$stays_started, trump_stays_stats$stays_started),
+  persons_detained = c(n_persons, biden_stays_stats$persons, trump_stays_stats$persons),
+  redetained = c(n_redetained, biden_stays_stats$redetained, trump_stays_stats$redetained),
+  redetained_pct = c(round(100 * n_redetained / n_persons, 1),
+                     biden_stays_stats$redetained_pct, trump_stays_stats$redetained_pct),
+  median_gap_days = c(as.integer(gap_summary$median_gap),
+                      biden_stays_stats$median_gap, trump_stays_stats$median_gap)
+)
+
+# Per-window removal stats (removals occurring within the window)
+window_removal_stats <- function(ws, we) {
+  rw <- stays[removed == TRUE & stay_end >= ws & stay_end <= we]
+  pr <- rw[, .(n = .N), by = unique_identifier]
+  data.frame(
+    removal_events = nrow(rw),
+    persons_removed = nrow(pr),
+    removed_2plus = sum(pr$n >= 2),
+    max_removals = max(pr$n)
+  )
+}
+biden_rem_stats <- window_removal_stats(biden_start, inaug - 1)
+trump_rem_stats <- window_removal_stats(inaug, window_end)
+
+rem_window_tab <- data.frame(
+  window = c(full_lab, biden_lab, trump_lab),
+  removal_events = c(stays[removed == TRUE, .N],
+                     biden_rem_stats$removal_events, trump_rem_stats$removal_events),
+  persons_removed = c(n_removed_persons, biden_rem_stats$persons_removed, trump_rem_stats$persons_removed),
+  removed_2plus = c(n_removed_2plus, biden_rem_stats$removed_2plus, trump_rem_stats$removed_2plus),
+  max_removals = c(max(persons$n_removals), biden_rem_stats$max_removals, trump_rem_stats$max_removals)
+)
+
+gap_cats <- gaps[, .(
+  category = fcase(
+    gap < 0,          "Overlapping stays",
+    gap <= 7,         "0–7 days",
+    gap <= 30,        "8–30 days",
+    gap <= 90,        "31–90 days",
+    gap <= 180,       "91–180 days",
+    gap <= 365,       "181–365 days",
+    default = "Over 1 year"
+  )
+)][, .(gaps = .N), by = category][
+  , category := factor(category, levels = c(
+    "Overlapping stays", "0–7 days", "8–30 days", "31–90 days",
+    "91–180 days", "181–365 days", "Over 1 year"))][]
+```
+
+# Overview
+
+This report uses the Deportation Data Project (DDP) individual-level detention stints
+(`data/ddp/detention-stints-latest_20260806.parquet`, 3.2M stints, book-outs 2022-10-01
+through 2026-08-06) to measure detention throughput:
+
+- **Daily population vs. daily removals** — the national detained population (midnight
+  census, from the recreated `facilities-daily-population-latest_20260806.parquet`)
+  plotted against the number of people removed from detention each day.
+- **Cumulative distinct individuals** — how many distinct people have ever appeared in
+  the data as detained, and how many have been removed, cumulatively over time.
+- **Double detentions** — persons with two or more *separate* stays (consecutive
+  stints caused by transfers within one stay do not count).
+- **Double removals** — persons removed from detention two or more times.
+- **Presidential comparison** — every analysis is also run for two equal-length
+  windows: from the second Trump inauguration (January 20, 2025) to the end of the
+  data, and the same number of days immediately before it.
+
+**Definitions and caveats.** A *stay* is one continuous detention episode; a *stint* is
+one facility segment within a stay (transfers create stints). A removal is a stint
+whose `detention_release_reason` is "Removed" — exactly one such stint exists per
+removed stay, so removal counts are per-person events. Removals here are **removals
+from detention**: people removed by ICE without a detention stint in this dataset are
+invisible (DDP's separate removals dataset covers enforcement actions). Person-level
+counts exclude the `r scales::comma(n_unidentified)` stints whose `unique_identifier`
+(and `stay_ID`) is missing. The dataset is left-truncated at book-outs from 2022-10-01,
+so cumulative counts only cover this window; DDP also retroactively revises records
+between releases.
+
+# Presidential comparison windows
+
+The comparison uses two `r scales::comma(n_window_days)`-day windows:
+
+- **Trump (post-inauguration):** `r format(inaug)` – `r format(window_end)`
+- **Biden (equal-length window before):** `r format(biden_start)` – `r format(inaug - 1)`
+
+```{r}
+#| label: window-align-plot
+#| message: false
+#| fig-width: 9
+#| fig-height: 7.5
+
+ggplot(align_long, aes(days_in, value, color = president)) +
+  geom_line(linewidth = 0.4) +
+  facet_wrap(~ metric, ncol = 1, scales = "free_y") +
+  scale_color_manual(values = c(Biden = "#0072B2", Trump = "#D55E00")) +
+  scale_y_continuous(labels = comma) +
+  labs(
+    title = "Daily detained population and removals, aligned by days into window",
+    subtitle = paste0("Two ", scales::comma(n_window_days),
+                     "-day windows: Biden (", format(biden_start), " – ", format(inaug - 1),
+                     ") vs Trump (", format(inaug), " – ", format(window_end), ")"),
+    x = "Days into window (day 0 = first day of each window)",
+    y = NULL,
+    color = NULL
+  ) +
+  theme_minimal()
+```
+
+The aligned series make the shift visible. The Trump window opens with the population
+at roughly the level the Biden window *ended* on — the post-2024-election surge had
+already begun before January 20 — and then climbs steeply to roughly double the Biden
+window's mean. Daily removals in the Trump window average
+`r comma(daily_window_tab$mean_removals[3])` per day versus
+`r comma(daily_window_tab$mean_removals[2])` under Biden, and the two windows' daily
+removal maxima are `r comma(daily_window_tab$max_removals[3])` vs
+`r comma(daily_window_tab$max_removals[2])`.
+
+The book-ins series separates the surge into its two components: arrivals and hold
+length. New detention starts average `r comma(daily_window_tab$mean_bookins[2])` per
+day in the Biden window versus `r comma(daily_window_tab$mean_bookins[3])` under
+Trump — a `r round(100 * daily_window_tab$mean_bookins[3] / daily_window_tab$mean_bookins[2] - 100)`%
+rise — while the mean population rises
+`r round(100 * daily_window_tab$mean_pop[3] / daily_window_tab$mean_pop[2] - 100)`%.
+So most of the population increase reflects more people coming in. By Little's law
+(mean population ÷ mean daily book-ins — a rough steady-state approximation, since
+both windows have growing populations), the implied average stay lengthens from about
+`r round(daily_window_tab$mean_pop[2] / daily_window_tab$mean_bookins[2], 1)` days to
+about `r round(daily_window_tab$mean_pop[3] / daily_window_tab$mean_bookins[3], 1)`
+days — a modest contribution from people being held longer. The pre-inauguration
+composition is telling: in the eleven weeks before January 20, book-ins averaged just
+`r comma(pre_inaug_bookins_mean)` per day — *below* the Biden-window average even as
+the population climbed — so the growth before the inauguration was already
+hold-lengthening, and the arrival surge came with the new administration.
+
+Two caveats: administration windows are a crude proxy for policy (the Biden window's
+final months already reflect the post-election surge), and the DDP data captures
+removals *from detention* only.
+
+# Daily population vs. daily removals
+
+```{r}
+#| label: daily-plot
+#| message: false
+#| fig-width: 9
+#| fig-height: 4.5
+
+ggplot(combined, aes(date)) +
+  annotate("rect", xmin = biden_start, xmax = inaug - 1,
+           ymin = -Inf, ymax = Inf, fill = "#0072B2", alpha = 0.06) +
+  annotate("rect", xmin = inaug, xmax = window_end,
+           ymin = -Inf, ymax = Inf, fill = "#D55E00", alpha = 0.06) +
+  geom_line(aes(y = pop_midnight, color = "Detained population (midnight census)"), linewidth = 0.4) +
+  geom_line(aes(y = removals * scale_factor, color = "Removals per day"), linewidth = 0.4) +
+  scale_y_continuous(
+    labels = comma,
+    sec.axis = sec_axis(~ . / scale_factor, name = "Removals per day", labels = comma)
+  ) +
+  scale_x_date(date_breaks = "3 months", date_labels = "%b %Y") +
+  labs(
+    title = "Daily detained population vs. removals from detention, Oct 2022 – Aug 2026",
+    subtitle = paste0(
+      "DDP stints & recreated facilities-daily-population, 20260806 release. ",
+      "Shaded bands mark the two presidential comparison windows. ",
+      comma(sum(removals_daily$removals)), " removals from detention total"
+    ),
+    x = NULL,
+    y = "Detained population (midnight census)",
+    color = NULL
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+```{r}
+#| label: daily-window-table
+knitr::kable(
+  daily_window_tab,
+  col.names = c("Window", "Days", "Mean population", "Max population",
+               "Date of max population", "Total removals", "Mean removals/day",
+               "Max removals", "Date of max removals", "Total book-ins",
+               "Mean book-ins/day"),
+  format.args = list(big.mark = ",")
+)
+```
+
+Over the full window, removals run at a median of
+`r comma(median(removals_daily$removals))` per day against a population that grows
+from roughly 35,000 (Oct 2022) to a peak of
+`r comma(max(combined$pop_midnight))` (`r format(combined$date[which.max(combined$pop_midnight)])`,
+midnight census). Both comparison windows tell a sharper story: mean daily population
+is `r comma(daily_window_tab$mean_pop[2])` in the Biden window versus
+`r comma(daily_window_tab$mean_pop[3])` in the Trump window (+58%), while total
+removals are `r comma(daily_window_tab$total_removals[2])` versus
+`r comma(daily_window_tab$total_removals[3])` — the post-inauguration window removes
+just over twice as many people from detention in the same number of days. Expressed as
+throughput, daily removals rise from about
+`r round(100 * daily_window_tab$total_removals[2] / (daily_window_tab$mean_pop[2] * n_window_days), 1)`%
+to about
+`r round(100 * daily_window_tab$total_removals[3] / (daily_window_tab$mean_pop[3] * n_window_days), 1)`%
+of the standing population per day.
+
+The midnight census is used for population because `n_detained` (booked counts)
+double-counts people held at two facilities on a transfer day; the same caveat applies
+to removals — a removal is one event per stay, so the removal series has no transfer
+inflation.
+
+# Cumulative distinct individuals
+
+```{r}
+#| label: cumulative-plot
+#| message: false
+#| fig-width: 9
+#| fig-height: 4.5
+
+ggplot() +
+  geom_line(data = cum_detained,
+            aes(date, cum_persons, color = "Ever detained in window"), linewidth = 0.6) +
+  geom_line(data = cum_removed,
+            aes(date, cum_persons, color = "Ever removed from detention"), linewidth = 0.6) +
+  scale_y_continuous(labels = comma) +
+  scale_x_date(date_breaks = "3 months", date_labels = "%b %Y") +
+  scale_color_manual(values = c("#0072B2", "#D55E00")) +
+  labs(
+    title = "Cumulative distinct individuals detained and removed, Oct 2021 – Aug 2026",
+    subtitle = "Each person counted once, at first appearance; identified persons only",
+    x = NULL,
+    y = "Distinct individuals (cumulative)",
+    color = NULL
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+```{r}
+#| label: cumulative-window-plot
+#| message: false
+#| fig-width: 9
+#| fig-height: 4.5
+
+cum_long <- bind_rows(
+  biden_cum$detained |> mutate(president = "Biden", measure = "Detained in window",
+                               days_in = as.integer(date - biden_start)),
+  biden_cum$removed  |> mutate(president = "Biden", measure = "Removed in window",
+                               days_in = as.integer(date - biden_start)),
+  trump_cum$detained |> mutate(president = "Trump", measure = "Detained in window",
+                               days_in = as.integer(date - inaug)),
+  trump_cum$removed  |> mutate(president = "Trump", measure = "Removed in window",
+                               days_in = as.integer(date - inaug))
+)
+
+ggplot(cum_long, aes(days_in, cum_persons, color = president, linetype = measure)) +
+  geom_line(linewidth = 0.6) +
+  scale_color_manual(values = c(Biden = "#0072B2", Trump = "#D55E00")) +
+  scale_y_continuous(labels = comma) +
+  labs(
+    title = "Cumulative distinct individuals detained and removed, by presidential window",
+    subtitle = "Persons counted at first in-window appearance; both windows are 563 days",
+    x = "Days into window",
+    y = "Distinct individuals (cumulative)",
+    color = NULL,
+    linetype = NULL
+  ) +
+  theme_minimal()
+```
+
+```{r}
+#| label: cumulative-table
+knitr::kable(
+  cum_window_tab,
+  col.names = c("Window", "Persons booked into detention", "Persons removed",
+               "Removal events"),
+  format.args = list(big.mark = ",")
+)
+```
+
+By the end of the data window, `r comma(n_persons)` distinct individuals appear in the
+detention data, of whom `r comma(n_removed_persons)`
+(`r round(100 * n_removed_persons / n_persons, 1)`%) have been removed from detention
+at least once. The full-window curves are cumulative over the data window only —
+book-outs in this file begin 2022-10-01, so anyone detained *and released* before that
+date is absent, and first appearances reach back only to Oct 2021 via long-running open
+stints.
+
+Within the presidential windows, the difference is proportionally even larger than the
+daily plots suggest: `r comma(cum_window_tab$persons_detained[3])` distinct people
+were booked into detention during the Trump window versus
+`r comma(cum_window_tab$persons_detained[2])` during the Biden window — the
+post-inauguration period processes nearly 45% more individuals through detention in
+the same number of days, on top of a much larger standing population. The widening gap
+between each window's detained and removed curves is the stock of people detained in
+the window who have not (yet) been removed — those still in detention, and those
+released by other means (parole, bond, transfer to another agency, voluntary
+departure).
+
+# Double detentions (separate stays)
+
+A double detention is defined as two or more *distinct* stays for the same person —
+transfer-driven consecutive stints within one stay are excluded by construction,
+since they share a `stay_ID`.
+
+```{r}
+#| label: stays-table
+knitr::kable(
+  persons[, .(persons = .N), by = .(group = fifelse(n_stays == 1, "1 stay",
+                                                    fifelse(n_stays == 2, "2 stays",
+                                                            fifelse(n_stays == 3, "3 stays",
+                                                                    "4+ stays"))))][order(group)],
+  format.args = list(big.mark = ",")
+)
+```
+
+`r comma(n_redetained)` persons (`r round(100 * n_redetained / n_persons, 1)`% of
+everyone detained in the window) were detained in two or more separate stays. The
+upper tail is long but thin: the most-frequently detained person in the data has
+`r max(persons$n_stays)` stays.
+
+```{r}
+#| label: det-window-table
+knitr::kable(
+  det_window_tab,
+  col.names = c("Window", "Stays started", "Persons detained", "Persons re-detained",
+               "% re-detained", "Median gap between stays (days)"),
+  format.args = list(big.mark = ",")
+)
+```
+
+The full-dataset re-detention share is partly a function of observation length — the
+longer the window, the more opportunity to return. In the equal-length presidential
+windows the shares are much closer than the headline 7%: 
+`r det_window_tab$redetained_pct[2]`% under Biden versus
+`r det_window_tab$redetained_pct[3]`% under Trump. Re-detention is usually not
+immediate in either window (median gap between consecutive stays
+`r comma(det_window_tab$median_gap_days[2])` days under Biden,
+`r comma(det_window_tab$median_gap_days[3])` under Trump — both shorter than the
+full-window median of `r comma(gap_summary$median_gap)` days, which is inflated by
+gaps spanning the whole multi-year dataset). In both windows, several thousand people
+were removed and then detained again within the same window, matching the double-removal
+pattern below.
+
+```{r}
+#| label: gap-plot
+#| message: false
+#| fig-width: 8
+#| fig-height: 4
+
+ggplot(gap_cats, aes(category, gaps)) +
+  geom_col() +
+  scale_y_continuous(labels = comma) +
+  labs(
+    title = "Time between consecutive stays, re-detained persons (full dataset)",
+    subtitle = paste0(comma(gap_summary$gaps), " stay-to-stay gaps; median ",
+                      comma(gap_summary$median_gap), " days"),
+    x = "Gap between end of one stay and start of the next",
+    y = "Gaps"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 30, hjust = 1))
+```
+
+Only `r round(100 * gap_summary$within_30, 1)`% of full-dataset gaps close within 30
+days. The `r comma(gap_summary$overlapping)` "overlapping" gaps (next stay starting
+before the recorded end of the previous one) are data artifacts — most plausibly stays
+whose `book_out_date_time` was never closed out — rather than genuinely simultaneous
+stays, though a same-day release-and-rebooking cannot be ruled out in individual
+cases.
+
+Among re-detained persons, `r comma(n_removed_then_back)` had at least one removal
+before a later stay began — removed from the country (or at least out of ICE
+detention), then detained again within the window.
+
+# Double removals
+
+```{r}
+#| label: removals-table
+knitr::kable(
+  persons[, .(persons = .N), by = .(
+    group = fcase(
+      n_removals == 0, "Never removed",
+      n_removals == 1, "Removed once",
+      n_removals == 2, "Removed twice",
+      n_removals == 3, "Removed 3 times",
+      default = "Removed 4+ times"
+    ))][order(group)],
+  format.args = list(big.mark = ",")
+)
+```
+
+```{r}
+#| label: rem-window-table
+knitr::kable(
+  rem_window_tab,
+  col.names = c("Window", "Removal events", "Persons removed", "Persons removed 2+ times",
+               "Max removals (one person)"),
+  format.args = list(big.mark = ",")
+)
+```
+
+Double removals do exist: over the full dataset, `r comma(n_removed_2plus)` persons
+(`r round(100 * n_removed_2plus / n_removed_persons, 1)`% of everyone removed in the
+window) were removed from detention two or more times, and one person appears
+`r max(persons$n_removals)` times. The presidential windows show the phenomenon at
+comparable intensity once scale is taken into account:
+`r comma(rem_window_tab$removed_2plus[2])` persons were removed twice within the
+563-day Biden window versus `r comma(rem_window_tab$removed_2plus[3])` within the
+Trump window — but the Trump window removes `r round(100 * rem_window_tab$persons_removed[3] / rem_window_tab$persons_removed[2] - 100)`%
+more people overall, so the *rate* of repeat removals is actually lower (2.0% of
+persons removed vs 3.6%). In a FOIA snapshot with anonymized identifiers, some of
+these are plausibly the same individual genuinely removed and re-detained after
+re-entry — the gap analysis above shows re-detention is overwhelmingly a
+months-apart phenomenon, consistent with that reading — but identifier collisions in
+the `unique_identifier` field would produce the same signature, so the true rate is
+likely somewhat lower than the raw count.
+
+# Data notes
+
+- Source: the `stints_file` pipeline target
+  (`data/ddp/detention-stints-latest_20260806.parquet`; see `data/ddp-detention-stints.yml`)
+  and `facilities_daily_population_file`
+  (`data/ddp/facilities-daily-population-latest_20260806.parquet`; see
+  `data/ddp-daily-population.yml`), both read via `tar_read()`.
+- Presidential windows: the Trump window runs from the second inauguration
+  (2025-01-20) to the end of the population data (2026-08-05,
+  `r scales::comma(n_window_days)` days); the Biden window is the same number of days
+  immediately before it (`r format(biden_start)` – 2025-01-19). Window totals do not
+  sum to full-dataset totals because the earlier period (Oct 2022 – Jul 2023) belongs
+  to neither window.
+- Person-level analysis excludes `r scales::comma(n_unidentified)` stints missing
+  `unique_identifier` (the same rows also lack `stay_ID`).
+- Removal dates use the stint `book_out_date_time`; `departed_date` agrees with it on
+  94% of removed stints (mean lag ≈ 0 days).
+- Book-ins count new detention starts: one per identified stay, at the stay's start
+  date. The `r scales::comma(n_unidentified)` unidentifiable stints are excluded from
+  book-ins but included in the population and removal series — a difference of well
+  under 1%.
+- Window-level re-detention and double-removal counts use only stays/removals
+  *starting or occurring within the window*; events straddling the window edges fall
+  to whichever window contains the stay start or removal date.
+- Overlapping stays (`gap < 0`) are reported as a category rather than dropped, so
+  the re-detention numbers are not silently inflated or deflated by them.
+- Related files: `R/ddp-daily-population.R` (population recreation),
+  `ddp-parquet-summary.qmd` (dataset summaries), `agent/conversation-ddp-update-20261003.md`
+  (the update that established the 20260806 pipeline state).

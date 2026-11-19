@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-10-24">
+
+<title>Geocoding divergence — unresolved facilities</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="geocoding-divergence-unresolved_files/libs/clipboard/clipboard.min.js"></script>
+<script src="geocoding-divergence-unresolved_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="geocoding-divergence-unresolved_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="geocoding-divergence-unresolved_files/libs/quarto-html/popper.min.js"></script>
+<script src="geocoding-divergence-unresolved_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="geocoding-divergence-unresolved_files/libs/quarto-html/anchor.min.js"></script>
+<link href="geocoding-divergence-unresolved_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="geocoding-divergence-unresolved_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="geocoding-divergence-unresolved_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="geocoding-divergence-unresolved_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="geocoding-divergence-unresolved_files/libs/bootstrap/bootstrap-917079515d91bccb85b543faf8aa8bb6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="geocoding-divergence-unresolved_files/libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+<script src="geocoding-divergence-unresolved_files/libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="geocoding-divergence-unresolved_files/libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="geocoding-divergence-unresolved_files/libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="geocoding-divergence-unresolved_files/libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="geocoding-divergence-unresolved_files/libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="geocoding-divergence-unresolved_files/libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="geocoding-divergence-unresolved_files/libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="geocoding-divergence-unresolved_files/libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="geocoding-divergence-unresolved_files/libs/leaflet-binding-2.2.3/leaflet.js"></script>
+<script src="geocoding-divergence-unresolved_files/libs/fuse_js-7.0.0/fuse_js-prod.js"></script>
+<link href="geocoding-divergence-unresolved_files/libs/lfx-search-4.0.0/lfx-search-prod.css" rel="stylesheet">
+<script src="geocoding-divergence-unresolved_files/libs/lfx-search-4.0.0/lfx-search-prod.js"></script>
+<script src="geocoding-divergence-unresolved_files/libs/lfx-search-4.0.0/lfx-search-bindings.js"></script>
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#what-unresolved-means" id="toc-what-unresolved-means" class="nav-link active" data-scroll-target="#what-unresolved-means">What “unresolved” means</a></li>
+  <li><a href="#map-of-unresolved-divergences" id="toc-map-of-unresolved-divergences" class="nav-link" data-scroll-target="#map-of-unresolved-divergences">Map of unresolved divergences</a></li>
+  <li><a href="#near-threshold-divergences-13-km" id="toc-near-threshold-divergences-13-km" class="nav-link" data-scroll-target="#near-threshold-divergences-13-km">Near-threshold divergences (1–3 km)</a></li>
+  <li><a href="#operational-context" id="toc-operational-context" class="nav-link" data-scroll-target="#operational-context">Operational context</a></li>
+  <li><a href="#notes-on-individual-cases" id="toc-notes-on-individual-cases" class="nav-link" data-scroll-target="#notes-on-individual-cases">Notes on individual cases</a>
+  <ul class="collapse">
+  <li><a href="#migrant-ops-center-main-a-404-662-km" id="toc-migrant-ops-center-main-a-404-662-km" class="nav-link" data-scroll-target="#migrant-ops-center-main-a-404-662-km">Migrant Ops Center Main A (404) — 662 km</a></li>
+  <li><a href="#the-county-jail-cluster-316-km" id="toc-the-county-jail-cluster-316-km" class="nav-link" data-scroll-target="#the-county-jail-cluster-316-km">The county-jail cluster (3–16 km)</a></li>
+  </ul></li>
+  <li><a href="#facilities-with-no-coordinates-at-all" id="toc-facilities-with-no-coordinates-at-all" class="nav-link" data-scroll-target="#facilities-with-no-coordinates-at-all">Facilities with no coordinates at all</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Geocoding divergence — unresolved facilities</h1>
+<p class="subtitle lead">Review copy: divergent facilities outside the hold range with no accepted coordinate, plus facilities with no location data at all</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 24, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This report was generated using AI under general human direction. At the time of generation, the contents have not been comprehensively reviewed by a human analyst.</p>
+<p>Working review copy of <code>geocoding-divergence.qmd</code>, focused on the facilities that <code>build_geocoded_all()</code> could not resolve. The pipeline-wired original (<code>geocoding-divergence.qmd</code>, target <code>geocoding_divergence_report</code>) continues to cover all divergent facilities. This copy reads the same live targets, so it reflects the current pipeline state each time it is rendered.</p>
+</div>
+</div>
+<section id="what-unresolved-means" class="level2">
+<h2 class="anchored" data-anchor-id="what-unresolved-means">What “unresolved” means</h2>
+<p>When Google Maps and the source coordinate (Vera Institute, Marshall Project, or the project’s own geocoding) differ by more than 3 km, <code>build_geocoded_all()</code> refuses to pick a side: the facility’s final <code>lat</code>/<code>lon</code> are left NA and the case is flagged for human review. Resolution means adding the facility’s DETLOC to the appropriate group in <code>geocode_source_preference()</code> (<code>R/geocode.R</code>) — <code>google_maps</code>, <code>vera_institute</code>, <code>marshall_project</code>, or <code>manual</code> — and rerunning the pipeline.</p>
+<p>Hold rooms (IDs 2026–2189) are excluded from this copy. Their Marshall coordinates are a separate, larger backlog — they remain visible in the main divergence report.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(targets)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet.extras)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(htmltools)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"add-carto-tiles.R"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Source R/ functions so geocode_source_preference() is available</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_source</span>()</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>facilities_geocoded_all <span class="ot">&lt;-</span> <span class="fu">tar_read</span>(facilities_geocoded_all)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>facility_roster <span class="ot">&lt;-</span> <span class="fu">tar_read</span>(facility_roster)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>unresolved <span class="ot">&lt;-</span> facilities_geocoded_all <span class="sc">|&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(divergent, <span class="fu">is.na</span>(lat) <span class="sc">|</span> <span class="fu">is.na</span>(lon)) <span class="sc">|&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(facility_roster <span class="sc">|&gt;</span> <span class="fu">select</span>(canonical_id, detloc, id_range), <span class="at">by =</span> <span class="st">"canonical_id"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(id_range <span class="sc">!=</span> <span class="st">"hold"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">divergence_km =</span> <span class="fu">round</span>(divergence_km, <span class="dv">1</span>),</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">search_label =</span> <span class="fu">paste0</span>(canonical_name, <span class="st">" ("</span>, facility_city, <span class="st">", "</span>, facility_state, <span class="st">")"</span>),</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">popup_html =</span> <span class="fu">paste0</span>(</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;b&gt;"</span>, <span class="fu">htmlEscape</span>(canonical_name), <span class="st">"&lt;/b&gt; (ID "</span>, canonical_id,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ifelse</span>(<span class="fu">is.na</span>(detloc), <span class="st">""</span>, <span class="fu">paste0</span>(<span class="st">" · "</span>, detloc)), <span class="st">")&lt;br&gt;"</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ifelse</span>(<span class="fu">is.na</span>(facility_address), <span class="st">""</span>, <span class="fu">paste0</span>(<span class="fu">htmlEscape</span>(facility_address), <span class="st">"&lt;br&gt;"</span>)),</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">htmlEscape</span>(facility_city), <span class="st">", "</span>, facility_state,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ifelse</span>(<span class="fu">is.na</span>(facility_zip), <span class="st">""</span>, <span class="fu">paste0</span>(<span class="st">" "</span>, facility_zip)),</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;br&gt;Source: "</span>, source_name,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;br&gt;Divergence: "</span>, divergence_km, <span class="st">" km"</span>,</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;br&gt;Google: "</span>, <span class="fu">round</span>(google_lat, <span class="dv">4</span>), <span class="st">", "</span>, <span class="fu">round</span>(google_lon, <span class="dv">4</span>),</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;br&gt;Source: "</span>, <span class="fu">round</span>(source_lat, <span class="dv">4</span>), <span class="st">", "</span>, <span class="fu">round</span>(source_lon, <span class="dv">4</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p>All 1 unresolved divergences shown here come from the Vera Institute source (every one of these facilities has a Vera coordinate but no Google-agreeing one within 3 km). Hold-room divergences against Marshall coordinates are tracked in the main report.</p>
+</section>
+<section id="map-of-unresolved-divergences" class="level2">
+<h2 class="anchored" data-anchor-id="map-of-unresolved-divergences">Map of unresolved divergences</h2>
+<p>Each grey line connects the Google Maps geocode (blue) to the Vera/source coordinate (red). Unlike the main divergence report, all layers are shown by default — these facilities have no accepted coordinate yet.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>line_features <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(unresolved)), <span class="cf">function</span>(i) {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  row <span class="ot">&lt;-</span> unresolved[i, ]</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_linestring</span>(<span class="fu">matrix</span>(</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(row<span class="sc">$</span>google_lon, row<span class="sc">$</span>source_lon, row<span class="sc">$</span>google_lat, row<span class="sc">$</span>source_lat),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">ncol =</span> <span class="dv">2</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>}) <span class="sc">|&gt;</span> <span class="fu">st_sfc</span>(<span class="at">crs =</span> <span class="dv">4326</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>(unresolved) <span class="sc">|&gt;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addCartoTiles</span>(<span class="st">"CartoDB.Positron"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addPolylines</span>(</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> <span class="fu">st_sf</span>(unresolved, <span class="at">geometry =</span> line_features),</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"#333"</span>, <span class="at">weight =</span> <span class="dv">3</span>, <span class="at">opacity =</span> <span class="fl">0.7</span>,</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">group =</span> <span class="st">"Divergence lines"</span>,</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">popup =</span> <span class="sc">~</span>popup_html</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addCircleMarkers</span>(</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">lng =</span> <span class="sc">~</span>google_lon, <span class="at">lat =</span> <span class="sc">~</span>google_lat,</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">radius =</span> <span class="dv">7</span>, <span class="at">color =</span> <span class="st">"steelblue"</span>, <span class="at">fillColor =</span> <span class="st">"steelblue"</span>,</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">fillOpacity =</span> <span class="fl">0.8</span>, <span class="at">weight =</span> <span class="dv">1</span>, <span class="at">opacity =</span> <span class="fl">0.8</span>,</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">group =</span> <span class="st">"Google"</span>,</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="sc">~</span>search_label,</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">popup =</span> <span class="sc">~</span>popup_html</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addCircleMarkers</span>(</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">lng =</span> <span class="sc">~</span>source_lon, <span class="at">lat =</span> <span class="sc">~</span>source_lat,</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">radius =</span> <span class="dv">7</span>, <span class="at">color =</span> <span class="st">"firebrick"</span>, <span class="at">fillColor =</span> <span class="st">"firebrick"</span>,</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">fillOpacity =</span> <span class="fl">0.8</span>, <span class="at">weight =</span> <span class="dv">1</span>, <span class="at">opacity =</span> <span class="fl">0.8</span>,</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">group =</span> <span class="st">"Source (Vera)"</span>,</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="sc">~</span>search_label,</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">popup =</span> <span class="sc">~</span>popup_html</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addLayersControl</span>(</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">overlayGroups =</span> <span class="fu">c</span>(<span class="st">"Divergence lines"</span>, <span class="st">"Google"</span>, <span class="st">"Source (Vera)"</span>),</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">options =</span> <span class="fu">layersControlOptions</span>(<span class="at">collapsed =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addSearchFeatures</span>(</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">targetGroups =</span> <span class="fu">c</span>(<span class="st">"Google"</span>, <span class="st">"Source (Vera)"</span>),</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">options =</span> <span class="fu">searchFeaturesOptions</span>(</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>      <span class="at">zoom =</span> <span class="dv">9</span>,</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>      <span class="at">openPopup =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>      <span class="at">position =</span> <span class="st">"topleft"</span>,</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>      <span class="at">hideMarkerOnCollapse =</span> <span class="cn">TRUE</span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-5126b33d7f5f8004272d" style="width:100%;height:742px;"></div>
+<script type="application/json" data-for="htmlwidget-5126b33d7f5f8004272d">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png?key=cb1_2xkn_1_fffafcf1ca4d733936bb3206",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://carto.com/attributions\">CARTO<\/a>, &copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap<\/a> contributors"}]},{"method":"addPolylines","args":[[[[{"lng":[-99.7349093,-99.767905],"lat":[32.41693060000001,32.417921]}]]],null,"Divergence lines",{"interactive":true,"className":"","stroke":true,"color":"#333","weight":3,"opacity":0.7,"fill":false,"fillColor":"#333","fillOpacity":0.2,"smoothFactor":1,"noClip":false},"<b>Taylor County Adult Detention Facility<\/b> (ID 1030 · TAYLOTX)<br>910 South 27th Street<br>Abilene, TX 79602<br>Source: vera_institute<br>Divergence: 3.1 km<br>Google: 32.4169, -99.7349<br>Source: 32.4179, -99.7679",null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[32.41693060000001,-99.7349093,7,null,"Google",{"interactive":true,"className":"","stroke":true,"color":"steelblue","weight":1,"opacity":0.8,"fill":true,"fillColor":"steelblue","fillOpacity":0.8},null,null,"<b>Taylor County Adult Detention Facility<\/b> (ID 1030 · TAYLOTX)<br>910 South 27th Street<br>Abilene, TX 79602<br>Source: vera_institute<br>Divergence: 3.1 km<br>Google: 32.4169, -99.7349<br>Source: 32.4179, -99.7679",null,"Taylor County Adult Detention Facility (Abilene, TX)",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[32.417921,-99.767905,7,null,"Source (Vera)",{"interactive":true,"className":"","stroke":true,"color":"firebrick","weight":1,"opacity":0.8,"fill":true,"fillColor":"firebrick","fillOpacity":0.8},null,null,"<b>Taylor County Adult Detention Facility<\/b> (ID 1030 · TAYLOTX)<br>910 South 27th Street<br>Abilene, TX 79602<br>Source: vera_institute<br>Divergence: 3.1 km<br>Google: 32.4169, -99.7349<br>Source: 32.4179, -99.7679",null,"Taylor County Adult Detention Facility (Abilene, TX)",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLayersControl","args":[[],["Divergence lines","Google","Source (Vera)"],{"collapsed":false,"autoZIndex":true,"position":"topright"}]},{"method":"addSearchFeatures","args":[["Google","Source (Vera)"],{"openPopup":true,"propertyName":"label","moveToLocation":true,"zoom":9,"container":"","minLength":1,"initial":false,"casesensitive":false,"autoType":true,"delayType":400,"tooltipLimit":-1,"tipAutoSubmit":true,"firstTipSubmit":false,"autoResize":true,"collapsed":true,"autoCollapse":false,"autoCollapseTime":1200,"textErr":"Location Not Found","textCancel":"Cancel","textPlaceholder":"Search...","position":"topleft","hideMarkerOnCollapse":true,"marker":{"animate":true,"circle":{"radius":10,"weight":3,"color":"#e03","stroke":true,"fill":false}}}]}],"limits":{"lat":[32.41693060000001,32.417921],"lng":[-99.767905,-99.7349093]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="near-threshold-divergences-13-km" class="level2">
+<h2 class="anchored" data-anchor-id="near-threshold-divergences-13-km">Near-threshold divergences (1–3 km)</h2>
+<p><code>build_geocoded_all()</code> auto-accepts the Google coordinate when the divergence is between 1 and 3 km, so these facilities are not flagged as unresolved — but the source coordinate still disagrees modestly, and each case is worth a spot-check. Hold rooms are excluded, as above.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>near_threshold <span class="ot">&lt;-</span> facilities_geocoded_all <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(divergent, divergence_km <span class="sc">&lt;</span> <span class="dv">3</span>) <span class="sc">|&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(facility_roster <span class="sc">|&gt;</span> <span class="fu">select</span>(canonical_id, detloc, id_range), <span class="at">by =</span> <span class="st">"canonical_id"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(id_range <span class="sc">!=</span> <span class="st">"hold"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">divergence_km =</span> <span class="fu">round</span>(divergence_km, <span class="dv">1</span>),</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">search_label =</span> <span class="fu">paste0</span>(canonical_name, <span class="st">" ("</span>, facility_city, <span class="st">", "</span>, facility_state, <span class="st">")"</span>),</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">popup_html =</span> <span class="fu">paste0</span>(</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;b&gt;"</span>, <span class="fu">htmlEscape</span>(canonical_name), <span class="st">"&lt;/b&gt; (ID "</span>, canonical_id,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ifelse</span>(<span class="fu">is.na</span>(detloc), <span class="st">""</span>, <span class="fu">paste0</span>(<span class="st">" · "</span>, detloc)), <span class="st">")&lt;br&gt;"</span>,</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ifelse</span>(<span class="fu">is.na</span>(facility_address), <span class="st">""</span>, <span class="fu">paste0</span>(<span class="fu">htmlEscape</span>(facility_address), <span class="st">"&lt;br&gt;"</span>)),</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>      <span class="fu">htmlEscape</span>(facility_city), <span class="st">", "</span>, facility_state,</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ifelse</span>(<span class="fu">is.na</span>(facility_zip), <span class="st">""</span>, <span class="fu">paste0</span>(<span class="st">" "</span>, facility_zip)),</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;br&gt;Source: "</span>, source_name,</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;br&gt;Divergence: "</span>, divergence_km, <span class="st">" km"</span>,</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;br&gt;Accepted: Google (auto)"</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p>61 facilities fall in this band.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>line_features_nt <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(near_threshold)), <span class="cf">function</span>(i) {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  row <span class="ot">&lt;-</span> near_threshold[i, ]</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_linestring</span>(<span class="fu">matrix</span>(</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(row<span class="sc">$</span>google_lon, row<span class="sc">$</span>source_lon, row<span class="sc">$</span>google_lat, row<span class="sc">$</span>source_lat),</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">ncol =</span> <span class="dv">2</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>}) <span class="sc">|&gt;</span> <span class="fu">st_sfc</span>(<span class="at">crs =</span> <span class="dv">4326</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>(near_threshold) <span class="sc">|&gt;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addCartoTiles</span>(<span class="st">"CartoDB.Positron"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addPolylines</span>(</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> <span class="fu">st_sf</span>(near_threshold, <span class="at">geometry =</span> line_features_nt),</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"#333"</span>, <span class="at">weight =</span> <span class="dv">2</span>, <span class="at">opacity =</span> <span class="fl">0.5</span>,</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">group =</span> <span class="st">"Divergence lines"</span>,</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">popup =</span> <span class="sc">~</span>popup_html</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addCircleMarkers</span>(</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">lng =</span> <span class="sc">~</span>google_lon, <span class="at">lat =</span> <span class="sc">~</span>google_lat,</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">radius =</span> <span class="dv">7</span>, <span class="at">color =</span> <span class="st">"steelblue"</span>, <span class="at">fillColor =</span> <span class="st">"steelblue"</span>,</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">fillOpacity =</span> <span class="fl">0.8</span>, <span class="at">weight =</span> <span class="dv">1</span>, <span class="at">opacity =</span> <span class="fl">0.8</span>,</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">group =</span> <span class="st">"Google (accepted)"</span>,</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="sc">~</span>search_label,</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">popup =</span> <span class="sc">~</span>popup_html</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addCircleMarkers</span>(</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">lng =</span> <span class="sc">~</span>source_lon, <span class="at">lat =</span> <span class="sc">~</span>source_lat,</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">radius =</span> <span class="dv">5</span>, <span class="at">color =</span> <span class="st">"firebrick"</span>, <span class="at">fillColor =</span> <span class="st">"firebrick"</span>,</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">fillOpacity =</span> <span class="fl">0.6</span>, <span class="at">weight =</span> <span class="dv">1</span>, <span class="at">opacity =</span> <span class="fl">0.6</span>,</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">group =</span> <span class="st">"Source (rejected)"</span>,</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="sc">~</span>search_label,</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">popup =</span> <span class="sc">~</span>popup_html</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addLayersControl</span>(</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">overlayGroups =</span> <span class="fu">c</span>(<span class="st">"Divergence lines"</span>, <span class="st">"Google (accepted)"</span>, <span class="st">"Source (rejected)"</span>),</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">options =</span> <span class="fu">layersControlOptions</span>(<span class="at">collapsed =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addSearchFeatures</span>(</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">targetGroups =</span> <span class="fu">c</span>(<span class="st">"Google (accepted)"</span>, <span class="st">"Source (rejected)"</span>),</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">options =</span> <span class="fu">searchFeaturesOptions</span>(</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>      <span class="at">zoom =</span> <span class="dv">9</span>,</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>      <span class="at">openPopup =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>      <span class="at">position =</span> <span class="st">"topleft"</span>,</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>      <span class="at">hideMarkerOnCollapse =</span> <span class="cn">TRUE</span></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-3a313abd2a3c983ae59c" style="width:100%;height:742px;"></div>
+<script type="application/json" data-for="htmlwidget-3a313abd2a3c983ae59c">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png?key=cb1_2xkn_1_fffafcf1ca4d733936bb3206",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://carto.com/attributions\">CARTO<\/a>, &copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap<\/a> contributors"}]},{"method":"addPolylines","args":[[[[{"lng":[-91.22170269999999,-91.230469],"lat":[31.5574938,31.569175]}]],[[{"lng":[-92.783878,-92.756652],"lat":[30.624485,30.620368]}]],[[{"lng":[-80.24205549999999,-80.239052],"lat":[40.6457985,40.629013]}]],[[{"lng":[-99.8880841,-99.909668],"lat":[32.7676451,32.778038]}]],[[{"lng":[-93.74603530000002,-93.757324],"lat":[32.8388766,32.842674]}]],[[{"lng":[-84.24984950000001,-84.246082],"lat":[38.2131205,38.223999]}]],[[{"lng":[-100.7270462,-100.69387],"lat":[46.79672799999999,46.794465]}]],[[{"lng":[-77.26721069999999,-77.277832],"lat":[38.1116967,38.117272]}]],[[{"lng":[-80.01401620000001,-80.00879500000001],"lat":[32.8460024,32.858631]}]],[[{"lng":[-77.3499399,-77.336887],"lat":[41.1508791,41.154871]}]],[[{"lng":[-86.7793245,-86.785022],"lat":[36.1683772,36.186232]}]],[[{"lng":[-85.7729963,-85.760138],"lat":[34.4181788,34.428756]}]],[[{"lng":[-104.8490165,-104.864502],"lat":[39.76134709999999,39.766325]}]],[[{"lng":[-97.9178948,-97.932129],"lat":[26.2963533,26.303264]}]],[[{"lng":[-97.7586475,-97.76733400000001],"lat":[26.470298,26.480407]}]],[[{"lng":[-81.9806924,-81.990967],"lat":[30.8749079,30.883369]}]],[[{"lng":[-81.1822263,-81.18208799999999],"lat":[35.257809,35.2675]}]],[[{"lng":[-86.27049819999999,-86.25788],"lat":[37.4890253,37.491073]}]],[[{"lng":[-97.081435,-97.067347],"lat":[31.549304,31.546298]}]],[[{"lng":[-92.7167189,-92.724609],"lat":[32.2154049,32.222096]}]],[[{"lng":[-95.4480609,-95.46021],"lat":[30.3357896,30.34444]}]],[[{"lng":[-97.9008355,-97.91529800000001],"lat":[28.8849772,28.884651]}]],[[{"lng":[-97.9008355,-97.91529800000001],"lat":[28.8849772,28.884651]}]],[[{"lng":[-97.0691621,-97.07519499999999],"lat":[36.8678591,36.879621]}]],[[{"lng":[-83.8402298,-83.847656],"lat":[36.0851558,36.093499]}]],[[{"lng":[-80.4891143,-80.496826],"lat":[25.7543477,25.76032]}]],[[{"lng":[-111.5320133,-111.54419],"lat":[32.8096576,32.824211]}]],[[{"lng":[-119.0064452,-119.027482],"lat":[35.3799739,35.393033]}]],[[{"lng":[-96.7304941,-96.728557],"lat":[43.5526943,43.57846]}]],[[{"lng":[-95.4425066,-95.44922],"lat":[30.3360804,30.34444]}]],[[{"lng":[-93.0994456,-93.109131],"lat":[31.7302787,31.737511]}]],[[{"lng":[-92.4596506,-92.44906899999999],"lat":[36.6032101,36.599931]}]],[[{"lng":[-97.21167819999999,-97.19690199999999],"lat":[32.4065312,32.420785]}]],[[{"lng":[-89.16413559999999,-89.175133],"lat":[37.2690407,37.272085]}]],[[{"lng":[-92.0784706,-92.087402],"lat":[32.4568901,32.463426]}]],[[{"lng":[-91.55809739999999,-91.571045],"lat":[31.5971028,31.60661]}]],[[{"lng":[-84.30644909999999,-84.32006800000001],"lat":[33.43492120000001,33.440609]}]],[[{"lng":[-76.60355729999999,-76.618652],"lat":[37.2165677,37.22158]}]],[[{"lng":[-113.4079986,-113.412336],"lat":[37.1373633,37.158273]}]],[[{"lng":[-92.7812108,-92.801514],"lat":[31.8503103,31.849565]}]],[[{"lng":[-74.12711809999999,-74.13574199999999],"lat":[40.7209523,40.730608]}]],[[{"lng":[-83.20014809999999,-83.17259199999999],"lat":[42.3133107,42.323147]}]],[[{"lng":[-123.3033804,-123.319457],"lat":[42.4330027,42.438478]}]],[[{"lng":[-98.20625440000001,-98.223738],"lat":[38.3477524,38.347486]}]],[[{"lng":[-75.3569385,-75.35610200000001],"lat":[39.630125,39.614489]}]],[[{"lng":[-149.9511741,-150.006177],"lat":[61.3584506,61.358309]}]],[[{"lng":[-117.3623754,-117.38012],"lat":[34.5707443,34.572116]}]],[[{"lng":[-92.81728990000001,-92.80171199999999],"lat":[45.0564671,45.03786]}]],[[{"lng":[-100.0036095,-99.977576],"lat":[48.3672076,48.37364]}]],[[{"lng":[-75.4086123,-75.420385],"lat":[41.5677119,41.564966]}]],[[{"lng":[-112.4365969,-112.444222],"lat":[33.4700674,33.463292]}]],[[{"lng":[-111.3774191,-111.378808],"lat":[33.0435332,33.064366]}]],[[{"lng":[144.8029416,144.785942],"lat":[13.4497772,13.448146]}]],[[{"lng":[-75.15313019999999,-75.16547],"lat":[39.9538838,39.95995]}]],[[{"lng":[-111.9461895,-111.961248],"lat":[40.7062912,40.684576]}]],[[{"lng":[-118.2010443,-118.217121],"lat":[34.0438298,34.051291]}]],[[{"lng":[-80.12224959999999,-80.09863799999999],"lat":[26.2767718,26.275409]}]],[[{"lng":[-78.17666079999999,-78.187517],"lat":[43.0048535,42.998116]}]],[[{"lng":[-66.1712278,-66.1545],"lat":[18.3721184,18.36813]}]],[[{"lng":[-99.1172931,-99.10973300000001],"lat":[28.89640189999999,28.88813]}]],[[{"lng":[-97.7070494,-97.70071299999999],"lat":[26.1592223,26.172737]}]]],null,"Divergence lines",{"interactive":true,"className":"","stroke":true,"color":"#333","weight":2,"opacity":0.5,"fill":false,"fillColor":"#333","fillOpacity":0.2,"smoothFactor":1,"noClip":false},["<b>Adams County Detention Center (Mississippi)<\/b> (ID 3 · ADAMSMS)<br>20 Hobo Fork Rd.<br>Natchez, MS 39120<br>Source: vera_institute<br>Divergence: 1.5 km<br>Accepted: Google (auto)","<b>Allen Parish Public Safety Complex<\/b> (ID 10 · APPSCLA)<br>7340 Highway 26 West<br>Oberlin, LA 70655<br>Source: vera_institute<br>Divergence: 2.6 km<br>Accepted: Google (auto)","<b>Beaver County Jail<\/b> (ID 18 · BEAVRPA)<br>6000 Woodlawn Boulevard<br>Aliquippa, PA 15001<br>Source: vera_institute<br>Divergence: 1.9 km<br>Accepted: Google (auto)","<b>Bluebonnet Detention Center<\/b> (ID 25 · BLBNATX)<br>400 2nd Street<br>Anson, TX 79501<br>Source: vera_institute<br>Divergence: 2.3 km<br>Accepted: Google (auto)","<b>Bossier Parish Cor. Center<\/b> (ID 27 · BOSSRLA)<br>2984 Old Plain Dealing Highway<br>Plain Dealing, LA 71064<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>Bourbon County Detention Center<\/b> (ID 28 · BOURBKY)<br>Bourbon Co Courthouse, Main Street<br>Paris, KY 40361<br>Source: vera_institute<br>Divergence: 1.3 km<br>Accepted: Google (auto)","<b>Burleigh County Detention Center<\/b> (ID 39 · BURLEND)<br>4000 Apple Creek Road<br>Bismarck, ND 58504<br>Source: vera_institute<br>Divergence: 2.5 km<br>Accepted: Google (auto)","<b>Caroline Detention Facility<\/b> (ID 53 · CARDFVA)<br>11093 S.w. Lewis Memorial Drive<br>Bowling Green, VA 22427<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>Charleston County Detention Center<\/b> (ID 64 · CHARLSC)<br>3841 Leeds Avenue<br>North Charleston, SC 29405<br>Source: vera_institute<br>Divergence: 1.5 km<br>Accepted: Google (auto)","<b>Clinton County Correctional Facility<\/b> (ID 80 · CLINTPA)<br>58 Pine Mountain Rd.<br>McElhattan, PA 17748<br>Source: vera_institute<br>Divergence: 1.2 km<br>Accepted: Google (auto)","<b>Davidson County Sheriff<\/b> (ID 94 · DAVIDTN)<br>448 2nd Avenue North<br>Nashville, TN 37210<br>Source: vera_institute<br>Divergence: 2.1 km<br>Accepted: Google (auto)","<b>Dekalb County Detention Center<\/b> (ID 98 · DEKALAL)<br>2801 Jordan Road<br>Fort Payne, AL 35968<br>Source: vera_institute<br>Divergence: 1.7 km<br>Accepted: Google (auto)","<b>Denver Contract Detention Facility<\/b> (ID 101 · DENICDF)<br>3130 Oakland St<br>Aurora, CO 80010<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>East Hidalgo Detention Center<\/b> (ID 115 · EHDLGTX)<br>1300 TX-107<br>La Villa, TX 78562<br>Source: vera_institute<br>Divergence: 1.6 km<br>Accepted: Google (auto)","<b>El Valle Detention Facility<\/b> (ID 120 · ELVDFTX)<br>1800 Industrial Drive<br>Raymondville, TX 78580<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Folkston Annex IPC<\/b> (ID 138 · FIPCAGA)<br>3424 Hwy 252 East<br>Folkston, GA 31537<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Gaston County Jail<\/b> (ID 148 · GASTNNC)<br>425 North Marietta Street<br>Gastonia, NC 28052<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>Grayson County Jail<\/b> (ID 153 · GRAYSKY)<br>320 Shaw Station Road<br>Leitchfield, KY 42754<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>Jack Harwell Detention Center<\/b> (ID 177 · JHRWLTX)<br>3101 Marlin Hwy<br>Waco, TX 76705<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Jackson Parish Correctional Center<\/b> (ID 178 · JKPCCLA)<br>327 Industrial Drive<br>Jonesboro, LA 71251<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>Joe Corley Processing Center<\/b> (ID 182 · JCRLYTX)<br>500 Hilbig Rd<br>Conroe, TX 77301<br>Source: vera_institute<br>Divergence: 1.5 km<br>Accepted: Google (auto)","<b>Karnes County Residential Center<\/b> (ID 190 · KCCDCTX)<br>409 FM 1144<br>Karnes City, TX 78118<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Karnes County Immigration Processing Center<\/b> (ID 191 · KRNRCTX)<br>409 FM 1144<br>Karnes City, TX 78118<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Kay County Justice Facility<\/b> (ID 192 · KCOJFOK)<br>1101 West Dry Road<br>Newkirk, OK 74647<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Knox County Detention Facility<\/b> (ID 196 · KNXDFTN)<br>5001 Maloneyville Rd<br>Knoxville, TN 37918<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>Krome North Service Processing Center<\/b> (ID 197 · KRO)<br>18201 SW 12th St<br>Miami, FL 33194<br>Source: vera_institute<br>Divergence: 1 km<br>Accepted: Google (auto)","<b>La Palma Correctional Center<\/b> (ID 199 · LPLCCAZ)<br>5501 North La Palma Road<br>Eloy, AZ 85131<br>Source: vera_institute<br>Divergence: 2 km<br>Accepted: Google (auto)","<b>Mesa Verde ICE Processing Center<\/b> (ID 231 · CACFMES)<br>425 Golden State Ave<br>Bakersfield, CA 93301<br>Source: vera_institute<br>Divergence: 2.4 km<br>Accepted: Google (auto)","<b>Minnehaha County Jail<\/b> (ID 238 · MINNESD)<br>500 North Minnesota Avenue<br>Sioux Falls, SD 57104<br>Source: vera_institute<br>Divergence: 2.9 km<br>Accepted: Google (auto)","<b>Montgomery ICE Processing Center<\/b> (ID 244 · MTGPCTX)<br>806 Hilbig Rd<br>Conroe, TX 77301<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>Natchitoches Parish Detention. Center<\/b> (ID 251 · NATCHLA)<br>299 Edwina Dr.<br>Natchitoches, LA 71457<br>Source: vera_institute<br>Divergence: 1.2 km<br>Accepted: Google (auto)","<b>Ozark County Sheriff's Office<\/b> (ID 284 · OZARKMO)<br>1818 County Road 806<br>Gainesville, MO 65655<br>Source: vera_institute<br>Divergence: 1 km<br>Accepted: Google (auto)","<b>Prairieland Detention Center<\/b> (ID 302 · PRLDCTX)<br>1209 Sunflower Ln<br>Alvarado, TX 76009<br>Source: vera_institute<br>Divergence: 2.1 km<br>Accepted: Google (auto)","<b>Pulaski County Jail<\/b> (ID 304 · PULASIL)<br>1026 Shawnee College Road<br>Ullin, IL 62992<br>Source: vera_institute<br>Divergence: 1 km<br>Accepted: Google (auto)","<b>Richwood Correctional Center<\/b> (ID 310 · RWCCMLA)<br>180 Pine Bayou Circle<br>Monroe, LA 71202<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>River Correctional Center<\/b> (ID 314 · RVRCCLA)<br>26362 Highway 15<br>Ferriday, LA 71334<br>Source: vera_institute<br>Divergence: 1.6 km<br>Accepted: Google (auto)","<b>Robert A. Deyton Detention Center<\/b> (ID 318 · RADDFGA)<br>11866 Hastings Bridge Road P.O. Box 429<br>Lovejoy, GA 30250<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Virginia Peninsula Regional Jail<\/b> (ID 373 · VPREGVA)<br>9320 Merrimac Trail<br>Williamsburg, VA 23185<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Washington County Jail (Purgatory Correctional Facility)<\/b> (ID 380 · WASHCUT)<br>750 South 5300 West<br>Hurricane, UT 84737<br>Source: vera_institute<br>Divergence: 2.4 km<br>Accepted: Google (auto)","<b>Winn Correctional Center<\/b> (ID 391 · LAWINCI)<br>180 Cca Blvd<br>Winnfield, LA 71483<br>Source: vera_institute<br>Divergence: 1.9 km<br>Accepted: Google (auto)","<b>Essex County Correctional Facility<\/b> (ID 399 · ESSEXNJ)<br>354 Doremus Avenue<br>Newark, NJ 7105<br>Source: vera_institute<br>Divergence: 1.3 km<br>Accepted: Google (auto)","<b>Dearborn Police Department<\/b> (ID 1009 · DEAPDMI)<br>16099 Michigan Ave<br>Dearborn, MI 48126<br>Source: vera_institute<br>Divergence: 2.5 km<br>Accepted: Google (auto)","<b>Josephine County Jail<\/b> (ID 1014 · JOSEPOR)<br>1901 Northeast F Street<br>Grants Pass, OR 97526<br>Source: vera_institute<br>Divergence: 1.5 km<br>Accepted: Google (auto)","<b>Rice County Detention Center<\/b> (ID 1048 · RICECKS)<br>1482 West United States Highway 56<br>Lyons, KS 67554<br>Source: vera_institute<br>Divergence: 1.5 km<br>Accepted: Google (auto)","<b>Salem County Correctional Facility<\/b> (ID 1049 · SALEMNJ)<br>125 Cemetery Road<br>Woodstown, NJ 80898<br>Source: vera_institute<br>Divergence: 1.7 km<br>Accepted: Google (auto)","<b>Goose Creek Correctional Center<\/b> (ID 1056 · AKGSCCC)<br>22301 Alsop Rd<br>Wasilla, AK 99654<br>Source: vera_institute<br>Divergence: 2.9 km<br>Accepted: Google (auto)","<b>FCI Victorville<\/b> (ID 1070 · BOPVIM)<br>13777 Air Base Rd<br>Victorville, CA 92392<br>Source: vera_institute<br>Divergence: 1.6 km<br>Accepted: Google (auto)","<b>Washington County Jail<\/b> (ID 1130 · WAJAIMN)<br>14900 North 612 Street<br>Stillwater, MN 55082<br>Source: vera_institute<br>Divergence: 2.4 km<br>Accepted: Google (auto)","<b>Pierce County Jail<\/b> (ID 1138 · PIERCND)<br>110 Industial Park Road<br>Rugby, ND 58368<br>Source: vera_institute<br>Divergence: 2.1 km<br>Accepted: Google (auto)","<b>USP Canaan<\/b> (ID 1153 · BOPCAA)<br>3057 Easton Turnpike<br>Waymart, PA 18472<br>Source: vera_institute<br>Divergence: 1 km<br>Accepted: Google (auto)","<b>Perryville State Prison<\/b> (ID 1205 · AZSPPER)<br>2105 North Citrus Rd<br>Goodyear, AZ 85395<br>Source: vera_institute<br>Divergence: 1 km<br>Accepted: Google (auto)","<b>CCA Central Arizona Detention Center<\/b> (ID 1210 · CCADCAZ)<br>1155 North Pinal Parkway<br>Florence, AZ 85132<br>Source: vera_institute<br>Divergence: 2.3 km<br>Accepted: Google (auto)","<b>Department Of Corrections<\/b> (ID 1212 · DEPCOGU)<br>3 Mashburn Lane<br>Mangilao, GU 96913<br>Source: vera_institute<br>Divergence: 1.8 km<br>Accepted: Google (auto)","<b>Philadelphia Field Office<\/b> (ID 2017 · PHIHOLD)<br>114 North 8th Street<br>Philadelphia, PA 19107<br>Source: vera_institute<br>Divergence: 1.2 km<br>Accepted: Google (auto)","<b>Salt Lake City Field Office<\/b> (ID 2019 · SLCHOLD)<br>2975 Decker Lake Drive, Suite 100<br>West Valley City, UT 84119-6096<br>Source: vera_institute<br>Divergence: 2.7 km<br>Accepted: Google (auto)","<b>White Memorial Hospital<\/b> (ID 3042 · WMHOSCA)<br>1720 E Cesar Chavez<br>Los Angeles, CA 90033<br>Source: vera_institute<br>Divergence: 1.7 km<br>Accepted: Google (auto)","<b>North Broward Medical Center<\/b> (ID 3060 · NBRMCFL)<br>201 East Sample Road<br>Pompano Beach, FL 33060<br>Source: vera_institute<br>Divergence: 2.4 km<br>Accepted: Google (auto)","<b>United Memorial Med Ctr<\/b> (ID 3140 · UMEMCNY)<br>127 North St<br>Batavia, NY 14020<br>Source: vera_institute<br>Divergence: 1.2 km<br>Accepted: Google (auto)","<b>Bayamon Hospital<\/b> (ID 3155 · BAYAMPR)<br>100 Laurel Avenue<br>Bayamon, PR 00956<br>Source: vera_institute<br>Divergence: 1.8 km<br>Accepted: Google (auto)","<b>Frio Regional Hospital<\/b> (ID 3173 · FRIRHTX)<br>200 Ih-35 South<br>Pearsall, TX 78061<br>Source: vera_institute<br>Divergence: 1.2 km<br>Accepted: Google (auto)","<b>Rio Grande St.Hospital<\/b> (ID 3201 · RGHOSTX)<br>1401 Rangerville Rd.<br>Harlingen, TX 78550<br>Source: vera_institute<br>Divergence: 1.6 km<br>Accepted: Google (auto)"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[31.5574938,30.624485,40.6457985,32.7676451,32.8388766,38.2131205,46.79672799999999,38.1116967,32.8460024,41.1508791,36.1683772,34.4181788,39.76134709999999,26.2963533,26.470298,30.8749079,35.257809,37.4890253,31.549304,32.2154049,30.3357896,28.8849772,28.8849772,36.8678591,36.0851558,25.7543477,32.8096576,35.3799739,43.5526943,30.3360804,31.7302787,36.6032101,32.4065312,37.2690407,32.4568901,31.5971028,33.43492120000001,37.2165677,37.1373633,31.8503103,40.7209523,42.3133107,42.4330027,38.3477524,39.630125,61.3584506,34.5707443,45.0564671,48.3672076,41.5677119,33.4700674,33.0435332,13.4497772,39.9538838,40.7062912,34.0438298,26.2767718,43.0048535,18.3721184,28.89640189999999,26.1592223],[-91.22170269999999,-92.783878,-80.24205549999999,-99.8880841,-93.74603530000002,-84.24984950000001,-100.7270462,-77.26721069999999,-80.01401620000001,-77.3499399,-86.7793245,-85.7729963,-104.8490165,-97.9178948,-97.7586475,-81.9806924,-81.1822263,-86.27049819999999,-97.081435,-92.7167189,-95.4480609,-97.9008355,-97.9008355,-97.0691621,-83.8402298,-80.4891143,-111.5320133,-119.0064452,-96.7304941,-95.4425066,-93.0994456,-92.4596506,-97.21167819999999,-89.16413559999999,-92.0784706,-91.55809739999999,-84.30644909999999,-76.60355729999999,-113.4079986,-92.7812108,-74.12711809999999,-83.20014809999999,-123.3033804,-98.20625440000001,-75.3569385,-149.9511741,-117.3623754,-92.81728990000001,-100.0036095,-75.4086123,-112.4365969,-111.3774191,144.8029416,-75.15313019999999,-111.9461895,-118.2010443,-80.12224959999999,-78.17666079999999,-66.1712278,-99.1172931,-97.7070494],7,null,"Google (accepted)",{"interactive":true,"className":"","stroke":true,"color":"steelblue","weight":1,"opacity":0.8,"fill":true,"fillColor":"steelblue","fillOpacity":0.8},null,null,["<b>Adams County Detention Center (Mississippi)<\/b> (ID 3 · ADAMSMS)<br>20 Hobo Fork Rd.<br>Natchez, MS 39120<br>Source: vera_institute<br>Divergence: 1.5 km<br>Accepted: Google (auto)","<b>Allen Parish Public Safety Complex<\/b> (ID 10 · APPSCLA)<br>7340 Highway 26 West<br>Oberlin, LA 70655<br>Source: vera_institute<br>Divergence: 2.6 km<br>Accepted: Google (auto)","<b>Beaver County Jail<\/b> (ID 18 · BEAVRPA)<br>6000 Woodlawn Boulevard<br>Aliquippa, PA 15001<br>Source: vera_institute<br>Divergence: 1.9 km<br>Accepted: Google (auto)","<b>Bluebonnet Detention Center<\/b> (ID 25 · BLBNATX)<br>400 2nd Street<br>Anson, TX 79501<br>Source: vera_institute<br>Divergence: 2.3 km<br>Accepted: Google (auto)","<b>Bossier Parish Cor. Center<\/b> (ID 27 · BOSSRLA)<br>2984 Old Plain Dealing Highway<br>Plain Dealing, LA 71064<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>Bourbon County Detention Center<\/b> (ID 28 · BOURBKY)<br>Bourbon Co Courthouse, Main Street<br>Paris, KY 40361<br>Source: vera_institute<br>Divergence: 1.3 km<br>Accepted: Google (auto)","<b>Burleigh County Detention Center<\/b> (ID 39 · BURLEND)<br>4000 Apple Creek Road<br>Bismarck, ND 58504<br>Source: vera_institute<br>Divergence: 2.5 km<br>Accepted: Google (auto)","<b>Caroline Detention Facility<\/b> (ID 53 · CARDFVA)<br>11093 S.w. Lewis Memorial Drive<br>Bowling Green, VA 22427<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>Charleston County Detention Center<\/b> (ID 64 · CHARLSC)<br>3841 Leeds Avenue<br>North Charleston, SC 29405<br>Source: vera_institute<br>Divergence: 1.5 km<br>Accepted: Google (auto)","<b>Clinton County Correctional Facility<\/b> (ID 80 · CLINTPA)<br>58 Pine Mountain Rd.<br>McElhattan, PA 17748<br>Source: vera_institute<br>Divergence: 1.2 km<br>Accepted: Google (auto)","<b>Davidson County Sheriff<\/b> (ID 94 · DAVIDTN)<br>448 2nd Avenue North<br>Nashville, TN 37210<br>Source: vera_institute<br>Divergence: 2.1 km<br>Accepted: Google (auto)","<b>Dekalb County Detention Center<\/b> (ID 98 · DEKALAL)<br>2801 Jordan Road<br>Fort Payne, AL 35968<br>Source: vera_institute<br>Divergence: 1.7 km<br>Accepted: Google (auto)","<b>Denver Contract Detention Facility<\/b> (ID 101 · DENICDF)<br>3130 Oakland St<br>Aurora, CO 80010<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>East Hidalgo Detention Center<\/b> (ID 115 · EHDLGTX)<br>1300 TX-107<br>La Villa, TX 78562<br>Source: vera_institute<br>Divergence: 1.6 km<br>Accepted: Google (auto)","<b>El Valle Detention Facility<\/b> (ID 120 · ELVDFTX)<br>1800 Industrial Drive<br>Raymondville, TX 78580<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Folkston Annex IPC<\/b> (ID 138 · FIPCAGA)<br>3424 Hwy 252 East<br>Folkston, GA 31537<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Gaston County Jail<\/b> (ID 148 · GASTNNC)<br>425 North Marietta Street<br>Gastonia, NC 28052<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>Grayson County Jail<\/b> (ID 153 · GRAYSKY)<br>320 Shaw Station Road<br>Leitchfield, KY 42754<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>Jack Harwell Detention Center<\/b> (ID 177 · JHRWLTX)<br>3101 Marlin Hwy<br>Waco, TX 76705<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Jackson Parish Correctional Center<\/b> (ID 178 · JKPCCLA)<br>327 Industrial Drive<br>Jonesboro, LA 71251<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>Joe Corley Processing Center<\/b> (ID 182 · JCRLYTX)<br>500 Hilbig Rd<br>Conroe, TX 77301<br>Source: vera_institute<br>Divergence: 1.5 km<br>Accepted: Google (auto)","<b>Karnes County Residential Center<\/b> (ID 190 · KCCDCTX)<br>409 FM 1144<br>Karnes City, TX 78118<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Karnes County Immigration Processing Center<\/b> (ID 191 · KRNRCTX)<br>409 FM 1144<br>Karnes City, TX 78118<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Kay County Justice Facility<\/b> (ID 192 · KCOJFOK)<br>1101 West Dry Road<br>Newkirk, OK 74647<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Knox County Detention Facility<\/b> (ID 196 · KNXDFTN)<br>5001 Maloneyville Rd<br>Knoxville, TN 37918<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>Krome North Service Processing Center<\/b> (ID 197 · KRO)<br>18201 SW 12th St<br>Miami, FL 33194<br>Source: vera_institute<br>Divergence: 1 km<br>Accepted: Google (auto)","<b>La Palma Correctional Center<\/b> (ID 199 · LPLCCAZ)<br>5501 North La Palma Road<br>Eloy, AZ 85131<br>Source: vera_institute<br>Divergence: 2 km<br>Accepted: Google (auto)","<b>Mesa Verde ICE Processing Center<\/b> (ID 231 · CACFMES)<br>425 Golden State Ave<br>Bakersfield, CA 93301<br>Source: vera_institute<br>Divergence: 2.4 km<br>Accepted: Google (auto)","<b>Minnehaha County Jail<\/b> (ID 238 · MINNESD)<br>500 North Minnesota Avenue<br>Sioux Falls, SD 57104<br>Source: vera_institute<br>Divergence: 2.9 km<br>Accepted: Google (auto)","<b>Montgomery ICE Processing Center<\/b> (ID 244 · MTGPCTX)<br>806 Hilbig Rd<br>Conroe, TX 77301<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>Natchitoches Parish Detention. Center<\/b> (ID 251 · NATCHLA)<br>299 Edwina Dr.<br>Natchitoches, LA 71457<br>Source: vera_institute<br>Divergence: 1.2 km<br>Accepted: Google (auto)","<b>Ozark County Sheriff's Office<\/b> (ID 284 · OZARKMO)<br>1818 County Road 806<br>Gainesville, MO 65655<br>Source: vera_institute<br>Divergence: 1 km<br>Accepted: Google (auto)","<b>Prairieland Detention Center<\/b> (ID 302 · PRLDCTX)<br>1209 Sunflower Ln<br>Alvarado, TX 76009<br>Source: vera_institute<br>Divergence: 2.1 km<br>Accepted: Google (auto)","<b>Pulaski County Jail<\/b> (ID 304 · PULASIL)<br>1026 Shawnee College Road<br>Ullin, IL 62992<br>Source: vera_institute<br>Divergence: 1 km<br>Accepted: Google (auto)","<b>Richwood Correctional Center<\/b> (ID 310 · RWCCMLA)<br>180 Pine Bayou Circle<br>Monroe, LA 71202<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>River Correctional Center<\/b> (ID 314 · RVRCCLA)<br>26362 Highway 15<br>Ferriday, LA 71334<br>Source: vera_institute<br>Divergence: 1.6 km<br>Accepted: Google (auto)","<b>Robert A. Deyton Detention Center<\/b> (ID 318 · RADDFGA)<br>11866 Hastings Bridge Road P.O. Box 429<br>Lovejoy, GA 30250<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Virginia Peninsula Regional Jail<\/b> (ID 373 · VPREGVA)<br>9320 Merrimac Trail<br>Williamsburg, VA 23185<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Washington County Jail (Purgatory Correctional Facility)<\/b> (ID 380 · WASHCUT)<br>750 South 5300 West<br>Hurricane, UT 84737<br>Source: vera_institute<br>Divergence: 2.4 km<br>Accepted: Google (auto)","<b>Winn Correctional Center<\/b> (ID 391 · LAWINCI)<br>180 Cca Blvd<br>Winnfield, LA 71483<br>Source: vera_institute<br>Divergence: 1.9 km<br>Accepted: Google (auto)","<b>Essex County Correctional Facility<\/b> (ID 399 · ESSEXNJ)<br>354 Doremus Avenue<br>Newark, NJ 7105<br>Source: vera_institute<br>Divergence: 1.3 km<br>Accepted: Google (auto)","<b>Dearborn Police Department<\/b> (ID 1009 · DEAPDMI)<br>16099 Michigan Ave<br>Dearborn, MI 48126<br>Source: vera_institute<br>Divergence: 2.5 km<br>Accepted: Google (auto)","<b>Josephine County Jail<\/b> (ID 1014 · JOSEPOR)<br>1901 Northeast F Street<br>Grants Pass, OR 97526<br>Source: vera_institute<br>Divergence: 1.5 km<br>Accepted: Google (auto)","<b>Rice County Detention Center<\/b> (ID 1048 · RICECKS)<br>1482 West United States Highway 56<br>Lyons, KS 67554<br>Source: vera_institute<br>Divergence: 1.5 km<br>Accepted: Google (auto)","<b>Salem County Correctional Facility<\/b> (ID 1049 · SALEMNJ)<br>125 Cemetery Road<br>Woodstown, NJ 80898<br>Source: vera_institute<br>Divergence: 1.7 km<br>Accepted: Google (auto)","<b>Goose Creek Correctional Center<\/b> (ID 1056 · AKGSCCC)<br>22301 Alsop Rd<br>Wasilla, AK 99654<br>Source: vera_institute<br>Divergence: 2.9 km<br>Accepted: Google (auto)","<b>FCI Victorville<\/b> (ID 1070 · BOPVIM)<br>13777 Air Base Rd<br>Victorville, CA 92392<br>Source: vera_institute<br>Divergence: 1.6 km<br>Accepted: Google (auto)","<b>Washington County Jail<\/b> (ID 1130 · WAJAIMN)<br>14900 North 612 Street<br>Stillwater, MN 55082<br>Source: vera_institute<br>Divergence: 2.4 km<br>Accepted: Google (auto)","<b>Pierce County Jail<\/b> (ID 1138 · PIERCND)<br>110 Industial Park Road<br>Rugby, ND 58368<br>Source: vera_institute<br>Divergence: 2.1 km<br>Accepted: Google (auto)","<b>USP Canaan<\/b> (ID 1153 · BOPCAA)<br>3057 Easton Turnpike<br>Waymart, PA 18472<br>Source: vera_institute<br>Divergence: 1 km<br>Accepted: Google (auto)","<b>Perryville State Prison<\/b> (ID 1205 · AZSPPER)<br>2105 North Citrus Rd<br>Goodyear, AZ 85395<br>Source: vera_institute<br>Divergence: 1 km<br>Accepted: Google (auto)","<b>CCA Central Arizona Detention Center<\/b> (ID 1210 · CCADCAZ)<br>1155 North Pinal Parkway<br>Florence, AZ 85132<br>Source: vera_institute<br>Divergence: 2.3 km<br>Accepted: Google (auto)","<b>Department Of Corrections<\/b> (ID 1212 · DEPCOGU)<br>3 Mashburn Lane<br>Mangilao, GU 96913<br>Source: vera_institute<br>Divergence: 1.8 km<br>Accepted: Google (auto)","<b>Philadelphia Field Office<\/b> (ID 2017 · PHIHOLD)<br>114 North 8th Street<br>Philadelphia, PA 19107<br>Source: vera_institute<br>Divergence: 1.2 km<br>Accepted: Google (auto)","<b>Salt Lake City Field Office<\/b> (ID 2019 · SLCHOLD)<br>2975 Decker Lake Drive, Suite 100<br>West Valley City, UT 84119-6096<br>Source: vera_institute<br>Divergence: 2.7 km<br>Accepted: Google (auto)","<b>White Memorial Hospital<\/b> (ID 3042 · WMHOSCA)<br>1720 E Cesar Chavez<br>Los Angeles, CA 90033<br>Source: vera_institute<br>Divergence: 1.7 km<br>Accepted: Google (auto)","<b>North Broward Medical Center<\/b> (ID 3060 · NBRMCFL)<br>201 East Sample Road<br>Pompano Beach, FL 33060<br>Source: vera_institute<br>Divergence: 2.4 km<br>Accepted: Google (auto)","<b>United Memorial Med Ctr<\/b> (ID 3140 · UMEMCNY)<br>127 North St<br>Batavia, NY 14020<br>Source: vera_institute<br>Divergence: 1.2 km<br>Accepted: Google (auto)","<b>Bayamon Hospital<\/b> (ID 3155 · BAYAMPR)<br>100 Laurel Avenue<br>Bayamon, PR 00956<br>Source: vera_institute<br>Divergence: 1.8 km<br>Accepted: Google (auto)","<b>Frio Regional Hospital<\/b> (ID 3173 · FRIRHTX)<br>200 Ih-35 South<br>Pearsall, TX 78061<br>Source: vera_institute<br>Divergence: 1.2 km<br>Accepted: Google (auto)","<b>Rio Grande St.Hospital<\/b> (ID 3201 · RGHOSTX)<br>1401 Rangerville Rd.<br>Harlingen, TX 78550<br>Source: vera_institute<br>Divergence: 1.6 km<br>Accepted: Google (auto)"],null,["Adams County Detention Center (Mississippi) (Natchez, MS)","Allen Parish Public Safety Complex (Oberlin, LA)","Beaver County Jail (Aliquippa, PA)","Bluebonnet Detention Center (Anson, TX)","Bossier Parish Cor. Center (Plain Dealing, LA)","Bourbon County Detention Center (Paris, KY)","Burleigh County Detention Center (Bismarck, ND)","Caroline Detention Facility (Bowling Green, VA)","Charleston County Detention Center (North Charleston, SC)","Clinton County Correctional Facility (McElhattan, PA)","Davidson County Sheriff (Nashville, TN)","Dekalb County Detention Center (Fort Payne, AL)","Denver Contract Detention Facility (Aurora, CO)","East Hidalgo Detention Center (La Villa, TX)","El Valle Detention Facility (Raymondville, TX)","Folkston Annex IPC (Folkston, GA)","Gaston County Jail (Gastonia, NC)","Grayson County Jail (Leitchfield, KY)","Jack Harwell Detention Center (Waco, TX)","Jackson Parish Correctional Center (Jonesboro, LA)","Joe Corley Processing Center (Conroe, TX)","Karnes County Residential Center (Karnes City, TX)","Karnes County Immigration Processing Center (Karnes City, TX)","Kay County Justice Facility (Newkirk, OK)","Knox County Detention Facility (Knoxville, TN)","Krome North Service Processing Center (Miami, FL)","La Palma Correctional Center (Eloy, AZ)","Mesa Verde ICE Processing Center (Bakersfield, CA)","Minnehaha County Jail (Sioux Falls, SD)","Montgomery ICE Processing Center (Conroe, TX)","Natchitoches Parish Detention. Center (Natchitoches, LA)","Ozark County Sheriff's Office (Gainesville, MO)","Prairieland Detention Center (Alvarado, TX)","Pulaski County Jail (Ullin, IL)","Richwood Correctional Center (Monroe, LA)","River Correctional Center (Ferriday, LA)","Robert A. Deyton Detention Center (Lovejoy, GA)","Virginia Peninsula Regional Jail (Williamsburg, VA)","Washington County Jail (Purgatory Correctional Facility) (Hurricane, UT)","Winn Correctional Center (Winnfield, LA)","Essex County Correctional Facility (Newark, NJ)","Dearborn Police Department (Dearborn, MI)","Josephine County Jail (Grants Pass, OR)","Rice County Detention Center (Lyons, KS)","Salem County Correctional Facility (Woodstown, NJ)","Goose Creek Correctional Center (Wasilla, AK)","FCI Victorville (Victorville, CA)","Washington County Jail (Stillwater, MN)","Pierce County Jail (Rugby, ND)","USP Canaan (Waymart, PA)","Perryville State Prison (Goodyear, AZ)","CCA Central Arizona Detention Center (Florence, AZ)","Department Of Corrections (Mangilao, GU)","Philadelphia Field Office (Philadelphia, PA)","Salt Lake City Field Office (West Valley City, UT)","White Memorial Hospital (Los Angeles, CA)","North Broward Medical Center (Pompano Beach, FL)","United Memorial Med Ctr (Batavia, NY)","Bayamon Hospital (Bayamon, PR)","Frio Regional Hospital (Pearsall, TX)","Rio Grande St.Hospital (Harlingen, TX)"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[31.569175,30.620368,40.629013,32.778038,32.842674,38.223999,46.794465,38.117272,32.858631,41.154871,36.186232,34.428756,39.766325,26.303264,26.480407,30.883369,35.2675,37.491073,31.546298,32.222096,30.34444,28.884651,28.884651,36.879621,36.093499,25.76032,32.824211,35.393033,43.57846,30.34444,31.737511,36.599931,32.420785,37.272085,32.463426,31.60661,33.440609,37.22158,37.158273,31.849565,40.730608,42.323147,42.438478,38.347486,39.614489,61.358309,34.572116,45.03786,48.37364,41.564966,33.463292,33.064366,13.448146,39.95995,40.684576,34.051291,26.275409,42.998116,18.36813,28.88813,26.172737],[-91.230469,-92.756652,-80.239052,-99.909668,-93.757324,-84.246082,-100.69387,-77.277832,-80.00879500000001,-77.336887,-86.785022,-85.760138,-104.864502,-97.932129,-97.76733400000001,-81.990967,-81.18208799999999,-86.25788,-97.067347,-92.724609,-95.46021,-97.91529800000001,-97.91529800000001,-97.07519499999999,-83.847656,-80.496826,-111.54419,-119.027482,-96.728557,-95.44922,-93.109131,-92.44906899999999,-97.19690199999999,-89.175133,-92.087402,-91.571045,-84.32006800000001,-76.618652,-113.412336,-92.801514,-74.13574199999999,-83.17259199999999,-123.319457,-98.223738,-75.35610200000001,-150.006177,-117.38012,-92.80171199999999,-99.977576,-75.420385,-112.444222,-111.378808,144.785942,-75.16547,-111.961248,-118.217121,-80.09863799999999,-78.187517,-66.1545,-99.10973300000001,-97.70071299999999],5,null,"Source (rejected)",{"interactive":true,"className":"","stroke":true,"color":"firebrick","weight":1,"opacity":0.6,"fill":true,"fillColor":"firebrick","fillOpacity":0.6},null,null,["<b>Adams County Detention Center (Mississippi)<\/b> (ID 3 · ADAMSMS)<br>20 Hobo Fork Rd.<br>Natchez, MS 39120<br>Source: vera_institute<br>Divergence: 1.5 km<br>Accepted: Google (auto)","<b>Allen Parish Public Safety Complex<\/b> (ID 10 · APPSCLA)<br>7340 Highway 26 West<br>Oberlin, LA 70655<br>Source: vera_institute<br>Divergence: 2.6 km<br>Accepted: Google (auto)","<b>Beaver County Jail<\/b> (ID 18 · BEAVRPA)<br>6000 Woodlawn Boulevard<br>Aliquippa, PA 15001<br>Source: vera_institute<br>Divergence: 1.9 km<br>Accepted: Google (auto)","<b>Bluebonnet Detention Center<\/b> (ID 25 · BLBNATX)<br>400 2nd Street<br>Anson, TX 79501<br>Source: vera_institute<br>Divergence: 2.3 km<br>Accepted: Google (auto)","<b>Bossier Parish Cor. Center<\/b> (ID 27 · BOSSRLA)<br>2984 Old Plain Dealing Highway<br>Plain Dealing, LA 71064<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>Bourbon County Detention Center<\/b> (ID 28 · BOURBKY)<br>Bourbon Co Courthouse, Main Street<br>Paris, KY 40361<br>Source: vera_institute<br>Divergence: 1.3 km<br>Accepted: Google (auto)","<b>Burleigh County Detention Center<\/b> (ID 39 · BURLEND)<br>4000 Apple Creek Road<br>Bismarck, ND 58504<br>Source: vera_institute<br>Divergence: 2.5 km<br>Accepted: Google (auto)","<b>Caroline Detention Facility<\/b> (ID 53 · CARDFVA)<br>11093 S.w. Lewis Memorial Drive<br>Bowling Green, VA 22427<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>Charleston County Detention Center<\/b> (ID 64 · CHARLSC)<br>3841 Leeds Avenue<br>North Charleston, SC 29405<br>Source: vera_institute<br>Divergence: 1.5 km<br>Accepted: Google (auto)","<b>Clinton County Correctional Facility<\/b> (ID 80 · CLINTPA)<br>58 Pine Mountain Rd.<br>McElhattan, PA 17748<br>Source: vera_institute<br>Divergence: 1.2 km<br>Accepted: Google (auto)","<b>Davidson County Sheriff<\/b> (ID 94 · DAVIDTN)<br>448 2nd Avenue North<br>Nashville, TN 37210<br>Source: vera_institute<br>Divergence: 2.1 km<br>Accepted: Google (auto)","<b>Dekalb County Detention Center<\/b> (ID 98 · DEKALAL)<br>2801 Jordan Road<br>Fort Payne, AL 35968<br>Source: vera_institute<br>Divergence: 1.7 km<br>Accepted: Google (auto)","<b>Denver Contract Detention Facility<\/b> (ID 101 · DENICDF)<br>3130 Oakland St<br>Aurora, CO 80010<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>East Hidalgo Detention Center<\/b> (ID 115 · EHDLGTX)<br>1300 TX-107<br>La Villa, TX 78562<br>Source: vera_institute<br>Divergence: 1.6 km<br>Accepted: Google (auto)","<b>El Valle Detention Facility<\/b> (ID 120 · ELVDFTX)<br>1800 Industrial Drive<br>Raymondville, TX 78580<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Folkston Annex IPC<\/b> (ID 138 · FIPCAGA)<br>3424 Hwy 252 East<br>Folkston, GA 31537<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Gaston County Jail<\/b> (ID 148 · GASTNNC)<br>425 North Marietta Street<br>Gastonia, NC 28052<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>Grayson County Jail<\/b> (ID 153 · GRAYSKY)<br>320 Shaw Station Road<br>Leitchfield, KY 42754<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>Jack Harwell Detention Center<\/b> (ID 177 · JHRWLTX)<br>3101 Marlin Hwy<br>Waco, TX 76705<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Jackson Parish Correctional Center<\/b> (ID 178 · JKPCCLA)<br>327 Industrial Drive<br>Jonesboro, LA 71251<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>Joe Corley Processing Center<\/b> (ID 182 · JCRLYTX)<br>500 Hilbig Rd<br>Conroe, TX 77301<br>Source: vera_institute<br>Divergence: 1.5 km<br>Accepted: Google (auto)","<b>Karnes County Residential Center<\/b> (ID 190 · KCCDCTX)<br>409 FM 1144<br>Karnes City, TX 78118<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Karnes County Immigration Processing Center<\/b> (ID 191 · KRNRCTX)<br>409 FM 1144<br>Karnes City, TX 78118<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Kay County Justice Facility<\/b> (ID 192 · KCOJFOK)<br>1101 West Dry Road<br>Newkirk, OK 74647<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Knox County Detention Facility<\/b> (ID 196 · KNXDFTN)<br>5001 Maloneyville Rd<br>Knoxville, TN 37918<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>Krome North Service Processing Center<\/b> (ID 197 · KRO)<br>18201 SW 12th St<br>Miami, FL 33194<br>Source: vera_institute<br>Divergence: 1 km<br>Accepted: Google (auto)","<b>La Palma Correctional Center<\/b> (ID 199 · LPLCCAZ)<br>5501 North La Palma Road<br>Eloy, AZ 85131<br>Source: vera_institute<br>Divergence: 2 km<br>Accepted: Google (auto)","<b>Mesa Verde ICE Processing Center<\/b> (ID 231 · CACFMES)<br>425 Golden State Ave<br>Bakersfield, CA 93301<br>Source: vera_institute<br>Divergence: 2.4 km<br>Accepted: Google (auto)","<b>Minnehaha County Jail<\/b> (ID 238 · MINNESD)<br>500 North Minnesota Avenue<br>Sioux Falls, SD 57104<br>Source: vera_institute<br>Divergence: 2.9 km<br>Accepted: Google (auto)","<b>Montgomery ICE Processing Center<\/b> (ID 244 · MTGPCTX)<br>806 Hilbig Rd<br>Conroe, TX 77301<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>Natchitoches Parish Detention. Center<\/b> (ID 251 · NATCHLA)<br>299 Edwina Dr.<br>Natchitoches, LA 71457<br>Source: vera_institute<br>Divergence: 1.2 km<br>Accepted: Google (auto)","<b>Ozark County Sheriff's Office<\/b> (ID 284 · OZARKMO)<br>1818 County Road 806<br>Gainesville, MO 65655<br>Source: vera_institute<br>Divergence: 1 km<br>Accepted: Google (auto)","<b>Prairieland Detention Center<\/b> (ID 302 · PRLDCTX)<br>1209 Sunflower Ln<br>Alvarado, TX 76009<br>Source: vera_institute<br>Divergence: 2.1 km<br>Accepted: Google (auto)","<b>Pulaski County Jail<\/b> (ID 304 · PULASIL)<br>1026 Shawnee College Road<br>Ullin, IL 62992<br>Source: vera_institute<br>Divergence: 1 km<br>Accepted: Google (auto)","<b>Richwood Correctional Center<\/b> (ID 310 · RWCCMLA)<br>180 Pine Bayou Circle<br>Monroe, LA 71202<br>Source: vera_institute<br>Divergence: 1.1 km<br>Accepted: Google (auto)","<b>River Correctional Center<\/b> (ID 314 · RVRCCLA)<br>26362 Highway 15<br>Ferriday, LA 71334<br>Source: vera_institute<br>Divergence: 1.6 km<br>Accepted: Google (auto)","<b>Robert A. Deyton Detention Center<\/b> (ID 318 · RADDFGA)<br>11866 Hastings Bridge Road P.O. Box 429<br>Lovejoy, GA 30250<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Virginia Peninsula Regional Jail<\/b> (ID 373 · VPREGVA)<br>9320 Merrimac Trail<br>Williamsburg, VA 23185<br>Source: vera_institute<br>Divergence: 1.4 km<br>Accepted: Google (auto)","<b>Washington County Jail (Purgatory Correctional Facility)<\/b> (ID 380 · WASHCUT)<br>750 South 5300 West<br>Hurricane, UT 84737<br>Source: vera_institute<br>Divergence: 2.4 km<br>Accepted: Google (auto)","<b>Winn Correctional Center<\/b> (ID 391 · LAWINCI)<br>180 Cca Blvd<br>Winnfield, LA 71483<br>Source: vera_institute<br>Divergence: 1.9 km<br>Accepted: Google (auto)","<b>Essex County Correctional Facility<\/b> (ID 399 · ESSEXNJ)<br>354 Doremus Avenue<br>Newark, NJ 7105<br>Source: vera_institute<br>Divergence: 1.3 km<br>Accepted: Google (auto)","<b>Dearborn Police Department<\/b> (ID 1009 · DEAPDMI)<br>16099 Michigan Ave<br>Dearborn, MI 48126<br>Source: vera_institute<br>Divergence: 2.5 km<br>Accepted: Google (auto)","<b>Josephine County Jail<\/b> (ID 1014 · JOSEPOR)<br>1901 Northeast F Street<br>Grants Pass, OR 97526<br>Source: vera_institute<br>Divergence: 1.5 km<br>Accepted: Google (auto)","<b>Rice County Detention Center<\/b> (ID 1048 · RICECKS)<br>1482 West United States Highway 56<br>Lyons, KS 67554<br>Source: vera_institute<br>Divergence: 1.5 km<br>Accepted: Google (auto)","<b>Salem County Correctional Facility<\/b> (ID 1049 · SALEMNJ)<br>125 Cemetery Road<br>Woodstown, NJ 80898<br>Source: vera_institute<br>Divergence: 1.7 km<br>Accepted: Google (auto)","<b>Goose Creek Correctional Center<\/b> (ID 1056 · AKGSCCC)<br>22301 Alsop Rd<br>Wasilla, AK 99654<br>Source: vera_institute<br>Divergence: 2.9 km<br>Accepted: Google (auto)","<b>FCI Victorville<\/b> (ID 1070 · BOPVIM)<br>13777 Air Base Rd<br>Victorville, CA 92392<br>Source: vera_institute<br>Divergence: 1.6 km<br>Accepted: Google (auto)","<b>Washington County Jail<\/b> (ID 1130 · WAJAIMN)<br>14900 North 612 Street<br>Stillwater, MN 55082<br>Source: vera_institute<br>Divergence: 2.4 km<br>Accepted: Google (auto)","<b>Pierce County Jail<\/b> (ID 1138 · PIERCND)<br>110 Industial Park Road<br>Rugby, ND 58368<br>Source: vera_institute<br>Divergence: 2.1 km<br>Accepted: Google (auto)","<b>USP Canaan<\/b> (ID 1153 · BOPCAA)<br>3057 Easton Turnpike<br>Waymart, PA 18472<br>Source: vera_institute<br>Divergence: 1 km<br>Accepted: Google (auto)","<b>Perryville State Prison<\/b> (ID 1205 · AZSPPER)<br>2105 North Citrus Rd<br>Goodyear, AZ 85395<br>Source: vera_institute<br>Divergence: 1 km<br>Accepted: Google (auto)","<b>CCA Central Arizona Detention Center<\/b> (ID 1210 · CCADCAZ)<br>1155 North Pinal Parkway<br>Florence, AZ 85132<br>Source: vera_institute<br>Divergence: 2.3 km<br>Accepted: Google (auto)","<b>Department Of Corrections<\/b> (ID 1212 · DEPCOGU)<br>3 Mashburn Lane<br>Mangilao, GU 96913<br>Source: vera_institute<br>Divergence: 1.8 km<br>Accepted: Google (auto)","<b>Philadelphia Field Office<\/b> (ID 2017 · PHIHOLD)<br>114 North 8th Street<br>Philadelphia, PA 19107<br>Source: vera_institute<br>Divergence: 1.2 km<br>Accepted: Google (auto)","<b>Salt Lake City Field Office<\/b> (ID 2019 · SLCHOLD)<br>2975 Decker Lake Drive, Suite 100<br>West Valley City, UT 84119-6096<br>Source: vera_institute<br>Divergence: 2.7 km<br>Accepted: Google (auto)","<b>White Memorial Hospital<\/b> (ID 3042 · WMHOSCA)<br>1720 E Cesar Chavez<br>Los Angeles, CA 90033<br>Source: vera_institute<br>Divergence: 1.7 km<br>Accepted: Google (auto)","<b>North Broward Medical Center<\/b> (ID 3060 · NBRMCFL)<br>201 East Sample Road<br>Pompano Beach, FL 33060<br>Source: vera_institute<br>Divergence: 2.4 km<br>Accepted: Google (auto)","<b>United Memorial Med Ctr<\/b> (ID 3140 · UMEMCNY)<br>127 North St<br>Batavia, NY 14020<br>Source: vera_institute<br>Divergence: 1.2 km<br>Accepted: Google (auto)","<b>Bayamon Hospital<\/b> (ID 3155 · BAYAMPR)<br>100 Laurel Avenue<br>Bayamon, PR 00956<br>Source: vera_institute<br>Divergence: 1.8 km<br>Accepted: Google (auto)","<b>Frio Regional Hospital<\/b> (ID 3173 · FRIRHTX)<br>200 Ih-35 South<br>Pearsall, TX 78061<br>Source: vera_institute<br>Divergence: 1.2 km<br>Accepted: Google (auto)","<b>Rio Grande St.Hospital<\/b> (ID 3201 · RGHOSTX)<br>1401 Rangerville Rd.<br>Harlingen, TX 78550<br>Source: vera_institute<br>Divergence: 1.6 km<br>Accepted: Google (auto)"],null,["Adams County Detention Center (Mississippi) (Natchez, MS)","Allen Parish Public Safety Complex (Oberlin, LA)","Beaver County Jail (Aliquippa, PA)","Bluebonnet Detention Center (Anson, TX)","Bossier Parish Cor. Center (Plain Dealing, LA)","Bourbon County Detention Center (Paris, KY)","Burleigh County Detention Center (Bismarck, ND)","Caroline Detention Facility (Bowling Green, VA)","Charleston County Detention Center (North Charleston, SC)","Clinton County Correctional Facility (McElhattan, PA)","Davidson County Sheriff (Nashville, TN)","Dekalb County Detention Center (Fort Payne, AL)","Denver Contract Detention Facility (Aurora, CO)","East Hidalgo Detention Center (La Villa, TX)","El Valle Detention Facility (Raymondville, TX)","Folkston Annex IPC (Folkston, GA)","Gaston County Jail (Gastonia, NC)","Grayson County Jail (Leitchfield, KY)","Jack Harwell Detention Center (Waco, TX)","Jackson Parish Correctional Center (Jonesboro, LA)","Joe Corley Processing Center (Conroe, TX)","Karnes County Residential Center (Karnes City, TX)","Karnes County Immigration Processing Center (Karnes City, TX)","Kay County Justice Facility (Newkirk, OK)","Knox County Detention Facility (Knoxville, TN)","Krome North Service Processing Center (Miami, FL)","La Palma Correctional Center (Eloy, AZ)","Mesa Verde ICE Processing Center (Bakersfield, CA)","Minnehaha County Jail (Sioux Falls, SD)","Montgomery ICE Processing Center (Conroe, TX)","Natchitoches Parish Detention. Center (Natchitoches, LA)","Ozark County Sheriff's Office (Gainesville, MO)","Prairieland Detention Center (Alvarado, TX)","Pulaski County Jail (Ullin, IL)","Richwood Correctional Center (Monroe, LA)","River Correctional Center (Ferriday, LA)","Robert A. Deyton Detention Center (Lovejoy, GA)","Virginia Peninsula Regional Jail (Williamsburg, VA)","Washington County Jail (Purgatory Correctional Facility) (Hurricane, UT)","Winn Correctional Center (Winnfield, LA)","Essex County Correctional Facility (Newark, NJ)","Dearborn Police Department (Dearborn, MI)","Josephine County Jail (Grants Pass, OR)","Rice County Detention Center (Lyons, KS)","Salem County Correctional Facility (Woodstown, NJ)","Goose Creek Correctional Center (Wasilla, AK)","FCI Victorville (Victorville, CA)","Washington County Jail (Stillwater, MN)","Pierce County Jail (Rugby, ND)","USP Canaan (Waymart, PA)","Perryville State Prison (Goodyear, AZ)","CCA Central Arizona Detention Center (Florence, AZ)","Department Of Corrections (Mangilao, GU)","Philadelphia Field Office (Philadelphia, PA)","Salt Lake City Field Office (West Valley City, UT)","White Memorial Hospital (Los Angeles, CA)","North Broward Medical Center (Pompano Beach, FL)","United Memorial Med Ctr (Batavia, NY)","Bayamon Hospital (Bayamon, PR)","Frio Regional Hospital (Pearsall, TX)","Rio Grande St.Hospital (Harlingen, TX)"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLayersControl","args":[[],["Divergence lines","Google (accepted)","Source (rejected)"],{"collapsed":false,"autoZIndex":true,"position":"topright"}]},{"method":"addSearchFeatures","args":[["Google (accepted)","Source (rejected)"],{"openPopup":true,"propertyName":"label","moveToLocation":true,"zoom":9,"container":"","minLength":1,"initial":false,"casesensitive":false,"autoType":true,"delayType":400,"tooltipLimit":-1,"tipAutoSubmit":true,"firstTipSubmit":false,"autoResize":true,"collapsed":true,"autoCollapse":false,"autoCollapseTime":1200,"textErr":"Location Not Found","textCancel":"Cancel","textPlaceholder":"Search...","position":"topleft","hideMarkerOnCollapse":true,"marker":{"animate":true,"circle":{"radius":10,"weight":3,"color":"#e03","stroke":true,"fill":false}}}]}],"limits":{"lat":[13.448146,61.3584506],"lng":[-150.006177,144.8029416]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="operational-context" class="level2">
+<h2 class="anchored" data-anchor-id="operational-context">Operational context</h2>
+<p>Presence in the FY26 annual-stats panel and/or DDP daily population data, with best-available peak ADP, to gauge which divergences matter most.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>facility_presence <span class="ot">&lt;-</span> <span class="fu">tar_read</span>(facility_presence)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>source_presence <span class="ot">&lt;-</span> <span class="fu">tar_read</span>(source_presence)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>facilities_panel <span class="ot">&lt;-</span> <span class="fu">tar_read</span>(facilities_panel)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>ddp_fy25_summary <span class="ot">&lt;-</span> <span class="fu">tar_read</span>(ddp_fy25_summary)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>detloc_lookup <span class="ot">&lt;-</span> <span class="fu">tar_read</span>(detloc_lookup)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>fy26_ids <span class="ot">&lt;-</span> facility_presence <span class="sc">|&gt;</span> <span class="fu">filter</span>(FY26) <span class="sc">|&gt;</span> <span class="fu">pull</span>(canonical_id)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>ddp_ids  <span class="ot">&lt;-</span> source_presence <span class="sc">|&gt;</span> <span class="fu">filter</span>(in_ddp) <span class="sc">|&gt;</span> <span class="fu">pull</span>(canonical_id)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>peak_adp_panel <span class="ot">&lt;-</span> facilities_panel <span class="sc">|&gt;</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(canonical_id) <span class="sc">|&gt;</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">peak_adp_panel =</span> <span class="fu">max</span>(adp, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">peak_adp_panel =</span> <span class="fu">ifelse</span>(<span class="fu">is.infinite</span>(peak_adp_panel), <span class="cn">NA_real_</span>, peak_adp_panel))</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>ddp_adp <span class="ot">&lt;-</span> ddp_fy25_summary <span class="sc">|&gt;</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(detloc_lookup, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"detention_facility_code"</span> <span class="ot">=</span> <span class="st">"detloc"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(canonical_id) <span class="sc">|&gt;</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">ddp_adp  =</span> <span class="fu">max</span>(adp_total, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">ddp_peak =</span> <span class="fu">max</span>(peak_population, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>unresolved_classified <span class="ot">&lt;-</span> unresolved <span class="sc">|&gt;</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">in_fy26 =</span> canonical_id <span class="sc">%in%</span> fy26_ids,</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">in_ddp  =</span> canonical_id <span class="sc">%in%</span> ddp_ids,</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">presence =</span> <span class="fu">case_when</span>(</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>      in_fy26 <span class="sc">&amp;</span> in_ddp  <span class="sc">~</span> <span class="st">"Both FY26 + DDP"</span>,</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>      in_fy26 <span class="sc">&amp;</span> <span class="sc">!</span>in_ddp <span class="sc">~</span> <span class="st">"FY26 only"</span>,</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>      <span class="sc">!</span>in_fy26 <span class="sc">&amp;</span> in_ddp <span class="sc">~</span> <span class="st">"DDP only"</span>,</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span>               <span class="sc">~</span> <span class="st">"Neither"</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(peak_adp_panel, <span class="at">by =</span> <span class="st">"canonical_id"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(ddp_adp, <span class="at">by =</span> <span class="st">"canonical_id"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">best_peak_adp =</span> <span class="fu">coalesce</span>(peak_adp_panel, ddp_peak))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>unresolved_classified <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(divergence_km)) <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">ID</span><span class="st">`</span> <span class="ot">=</span> canonical_id,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Facility</span><span class="st">`</span> <span class="ot">=</span> canonical_name,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Detloc</span><span class="st">`</span> <span class="ot">=</span> detloc,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Address</span><span class="st">`</span> <span class="ot">=</span> facility_address,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">City</span><span class="st">`</span> <span class="ot">=</span> facility_city,</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">State</span><span class="st">`</span> <span class="ot">=</span> facility_state,</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Source</span><span class="st">`</span> <span class="ot">=</span> source_name,</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Presence</span><span class="st">`</span> <span class="ot">=</span> presence,</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Divergence (km)</span><span class="st">`</span> <span class="ot">=</span> divergence_km,</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Peak ADP</span><span class="st">`</span> <span class="ot">=</span> best_peak_adp,</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Google lat</span><span class="st">`</span> <span class="ot">=</span> google_lat,</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Google lon</span><span class="st">`</span> <span class="ot">=</span> google_lon,</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Source lat</span><span class="st">`</span> <span class="ot">=</span> source_lat,</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Source lon</span><span class="st">`</span> <span class="ot">=</span> source_lon</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">4</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 2%">
+<col style="width: 21%">
+<col style="width: 4%">
+<col style="width: 12%">
+<col style="width: 4%">
+<col style="width: 3%">
+<col style="width: 8%">
+<col style="width: 4%">
+<col style="width: 8%">
+<col style="width: 4%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">ID</th>
+<th style="text-align: left;">Facility</th>
+<th style="text-align: left;">Detloc</th>
+<th style="text-align: left;">Address</th>
+<th style="text-align: left;">City</th>
+<th style="text-align: left;">State</th>
+<th style="text-align: left;">Source</th>
+<th style="text-align: left;">Presence</th>
+<th style="text-align: right;">Divergence (km)</th>
+<th style="text-align: right;">Peak ADP</th>
+<th style="text-align: right;">Google lat</th>
+<th style="text-align: right;">Google lon</th>
+<th style="text-align: right;">Source lat</th>
+<th style="text-align: right;">Source lon</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1030</td>
+<td style="text-align: left;">Taylor County Adult Detention Facility</td>
+<td style="text-align: left;">TAYLOTX</td>
+<td style="text-align: left;">910 South 27th Street</td>
+<td style="text-align: left;">Abilene</td>
+<td style="text-align: left;">TX</td>
+<td style="text-align: left;">vera_institute</td>
+<td style="text-align: left;">DDP only</td>
+<td style="text-align: right;">3.1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">32.4169</td>
+<td style="text-align: right;">-99.7349</td>
+<td style="text-align: right;">32.4179</td>
+<td style="text-align: right;">-99.7679</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="notes-on-individual-cases" class="level2">
+<h2 class="anchored" data-anchor-id="notes-on-individual-cases">Notes on individual cases</h2>
+<section id="migrant-ops-center-main-a-404-662-km" class="level3">
+<h3 class="anchored" data-anchor-id="migrant-ops-center-main-a-404-662-km">Migrant Ops Center Main A (404) — 662 km</h3>
+<p>The largest divergence by two orders of magnitude. The facility’s address is an APO/FPO routing address (“Avenue C Psc 1005 Box 55, FPO FL”), which Google resolves to a default mainland-Florida location (26.7°N, 80.9°W, near Port St.&nbsp;Lucie). Vera’s coordinate (21.5°N, 77.8°W) is the actual Guantánamo Bay site. The Vera coordinate is correct; resolving this case means adding <code>GTMODCU</code> to the <code>vera_institute</code> group in <code>geocode_source_preference()</code>.</p>
+</section>
+<section id="the-county-jail-cluster-316-km" class="level3">
+<h3 class="anchored" data-anchor-id="the-county-jail-cluster-316-km">The county-jail cluster (3–16 km)</h3>
+<p>The remaining cases are all mainland jails, prisons, and medical facilities where Vera and Google disagree by 3–16 km — typically rural-address geocoding differences, campus-boundary ambiguity, or a stale Vera address. Each needs an individual check of which coordinate lands on the actual facility.</p>
+</section>
+</section>
+<section id="facilities-with-no-coordinates-at-all" class="level2">
+<h2 class="anchored" data-anchor-id="facilities-with-no-coordinates-at-all">Facilities with no coordinates at all</h2>
+<p>Five roster facilities have neither an accepted coordinate nor enough address data to geocode. These need address research (not a source-preference decision); several are DDP-era stubs.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>facilities_geocoded_all <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>divergent, <span class="fu">is.na</span>(lat) <span class="sc">|</span> <span class="fu">is.na</span>(lon)) <span class="sc">|&gt;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">ID</span><span class="st">`</span> <span class="ot">=</span> canonical_id,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Facility</span><span class="st">`</span> <span class="ot">=</span> canonical_name,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Address</span><span class="st">`</span> <span class="ot">=</span> facility_address,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">City</span><span class="st">`</span> <span class="ot">=</span> facility_city,</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">State</span><span class="st">`</span> <span class="ot">=</span> facility_state,</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Source</span><span class="st">`</span> <span class="ot">=</span> source_name</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">ID</th>
+<th style="text-align: left;">Facility</th>
+<th style="text-align: left;">Address</th>
+<th style="text-align: left;">City</th>
+<th style="text-align: left;">State</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">344</td>
+<td style="text-align: left;">Southern Regional Jail</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1204</td>
+<td style="text-align: left;">CBP Movement Coordination Area</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">CA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1250</td>
+<td style="text-align: left;">Drt Cpc Holding</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">TX</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3135</td>
+<td style="text-align: left;">Sunrise Hospital</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NY</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3136</td>
+<td style="text-align: left;">Spring Valley Hospital</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NY</td>
+<td style="text-align: left;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

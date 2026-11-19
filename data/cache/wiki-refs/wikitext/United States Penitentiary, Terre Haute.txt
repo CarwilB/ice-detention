@@ -1,0 +1,81 @@
+{{short description|High-security federal prison in Indiana, US}}
+{{Use American English|date=August 2025}}
+{{Use mdy dates|date=February 2026}}
+{{Infobox prison
+| name = United States Penitentiary, Terre Haute
+| image = TerreHauteUSP.jpg
+| pushpin_map = USA Indiana#USA
+| pushpin_caption = Location in Indiana
+| location = [[Vigo County, Indiana]], U.S.
+| coordinates = {{Coord|39.4126|-87.4542|region:US_type:landmark|display=inline,title}}
+| status = Operational
+| classification = High-security (with minimum-security prison camp)
+| population = 1,171 (September 2023)
+| opened = [[FCI Terre Haute|Original facility:]] 1940<br>Current facility: 2005<ref>{{cite web |title=U.S. Bureau of Prisons dedicates new Terre Haute penitentiary |url=https://www.tribstar.com/news/u-s-bureau-of-prisons-dedicates-new-terre-haute-penitentiary/article_4564066b-3d3e-5e33-8863-274181479d6b.html |website=Terre Haute Tribune-Star |date=March 8, 2005 |language=en}}</ref>
+| closed =
+| managed_by = [[Federal Bureau of Prisons]]
+| warden =
+}}
+The '''United States Penitentiary, Terre Haute''' ('''USP Terre Haute''') is a high-security United States [[federal prison]] for male inmates in [[Terre Haute, Indiana]]. It is part of the [[Federal Correctional Complex, Terre Haute]] (FCC Terre Haute) and is operated by the [[Federal Bureau of Prisons]], a division of the [[United States Department of Justice]]. USP Terre Haute houses a Special Confinement Unit for male federal inmates who have been [[Capital punishment by the United States federal government|sentenced to death]] as well as the federal [[execution chamber]]. Two of the three inmates awaiting execution by the U.S. federal government are housed in USP Terre Haute.
+FCC Terre Haute is located in the city of Terre Haute, {{convert|70|mi|km}} west of [[Indianapolis]].<ref>{{cite web|url=http://www.bop.gov/locations/institutions/tha/index.jsp |title=BOP: FCI Terre Haute |publisher=Bop.gov |access-date=February 12, 2013}}</ref>
+
+==History==
+A new United States penitentiary was authorized by [[President of the United States]] [[Franklin D. Roosevelt]] in 1938 and established in Terre Haute, Indiana, in 1940 on {{convert|1126|acre|km2}} of land. The opening of the prison in this city was partly due to heavy promotion by Terre Haute's Chamber of Commerce, which eventually went on to raise $50,000 to pay for the property on which the prison was built.<ref name=tribstar>{{citation|last=Taylor|first=Zach|title=Penitentiary opened to great fanfare|newspaper=[[Tribune-Star]]|date=May 6, 2001|url=http://specials.tribstar.com/McVeigh/may6side.html|access-date=August 25, 2012|archive-date=February 6, 2012|archive-url=https://web.archive.org/web/20120206020614/http://specials.tribstar.com/McVeigh/may6side.html|url-status=dead}}</ref> The residents of Terre Haute initially embraced the prison due to the impression that it would provide jobs to local residents in addition to helping Terre Haute's economy while only housing non-violent offenders. E.B. Swope was the prison's first warden.
+
+The U.S. [[Public Works Administration]] issued a $3&nbsp;million grant to pay for construction of USP Terre Haute in 1938.<ref name=tribstar/> Construction cost of the institution at the time that it was built was $2,150,000.<ref name=tribstar/> The architectural design of the prison is a modified telephone pole design with all housing and other facilities opening onto a long central corridor. It was the first penitentiary for adult felons ever to be constructed without a wall. In 2004, the new USP was built on adjoining property, with the old penitentiary becoming the medium-security [[Federal Correctional Institution, Terre Haute]].
+
+USP Terre Haute was one of the first federal prisons to emphasize rehabilitation by providing psychological and psychiatric treatment, referring to prisoners by names as opposed to numbers, and allowing prisoners to talk during meals instead of eating in silence. The institution initiated the use of the word "inmate" as opposed to other less-appealing labels such as "convict" or "criminal". It also became one of the first federal prisons to implement educational programs in prisons with sessions devoted to improving the inmates' skills in reading, writing, maths, as well as trades.
+
+[[Camp five (Guantanamo)|Camp 5]], part of the [[Guantanamo Bay detention camp]]s, on the island of [[Cuba]], is reported to have been based on the design of USP Terre Haute.<ref name=Fox2009-01-31>
+{{cite news
+| url=https://www.foxnews.com/story/inside-guantanamo-bay-a-study-in-contrasts
+| title=Inside Guantanamo Bay, a Study in Contrasts
+| publisher=[[Fox News]]
+| author=Catherine Herridge
+| date=January 31, 2009
+| access-date=January 31, 2009
+}}
+</ref>
+
+==Facility==
+USP Terre Haute is a Care Level 3 facility, which means that any inmate sent to Terre Haute who has serious health problems that are not major enough to warrant hospitalization is sent to the USP. This facility is also a tobacco-free institution. This part of the FCC contains six housing units. One of the six housing units is a faith-based unit that can house 125 inmates. When the inmates are not working, they are partaking in faith-based activities.{{cn|date=November 2025}} All of the inmates in the USP are allotted seven visit-days a month and 300 minutes of telephone time, which they have to use in increments of 15 minutes or less. The inmates housed here can work at [[UNICOR]], which is a prison industry that makes towels and other accessories for the military. Inmates employed here earn an average of $6.50 to $7.50 a day and some can make up to $12 a day if they are paid by piece as opposed to by the hour.
+
+==Death row==
+On June 18, 1993, the director of the BOP designated USP Terre Haute as the site where executions under federal death sentences would be carried out.<ref>{{cite web|url=https://cdn.ca9.uscourts.gov/datastore/general/2020/08/19/20-99009replyToDeclaration.pdf|title=CA No. 20-99009 IN THE UNITED STATES COURT OF APPEALS FOR THE NINTH CIRCUIT|publisher=United States Courts (.gov website)|page=3 (PDF p. 9/43)|access-date=December 14, 2024}}</ref><!--The June 18 date is also stated in https://dpic-cdn.org/production/legacy/BOP%20Protocol%208-1-08.pdf PDF p. 8/59 --> The BOP itself established Terre Haute as a death row facility on July 19 of that year, including the establishment of the "Special Confinement Unit", the federal death row for men. The Bureau of Prisons modified USP Terre Haute in 1995 and 1996 so it could house death row functions. On July 13, 1999, the Special Confinement Unit at USP Terre Haute opened, and the BOP transferred male federal [[death row]] inmates from other federal prisons and from state prisons to USP Terre Haute.<ref>"[http://www.bop.gov/news/press/press_releases/ipaspec.jsp Special Confinement Unit Opens at USP Terre Haute] {{Webarchive|url=https://web.archive.org/web/20051127091740/http://www.bop.gov/news/press/press_releases/ipaspec.jsp |date=November 27, 2005 }}."<!--http://archive.today/2024.12.15-033900/http://web.archive.org/web/20051127091740/http://www.bop.gov/news/press/press_releases/ipaspec.jsp or https://archive.ph/dEKWv On Archive.today--> Federal Bureau of Prisons. July 13, 1999. Retrieved on December 14, 2024.</ref>
+
+Since 1963, sixteen people have been executed by the United States federal government. All sixteen were executed at USP Terre Haute. [[Timothy McVeigh]], who was convicted for his responsibility for the [[Oklahoma City bombing]], was the first prisoner executed by the U.S. federal government since the national moratorium on the death penalty was lifted in 1976 and the U.S. federal death penalty was reinstated in November 1988. Legal means of execution, as authorised by the United States Department of Justice in a 2026 memorandum, include [[lethal injection]], [[nitrogen hypoxia]], [[electric chair]], or [[Execution by firing squad|firing squad]].<ref>{{Cite web |date=2026-04-24 |title=The Justice Department Takes Actions to Strengthen the Federal Death Penalty |url=https://www.justice.gov/opa/pr/justice-department-takes-actions-strengthen-federal-death-penalty |access-date=2026-10-13 |website=United States Department of Justice |language=en}}</ref>
+
+As of December 2025, three men are on federal death row.<ref>{{Cite web |title=The Death Penalty in 2025 |url=https://deathpenaltyinfo.org/research/analysis/reports/year-end-reports/the-death-penalty-in-2025 |access-date=February 9, 2026 |website=Death Penalty Information Center |language=en-US}}</ref><ref>{{cite web|url=http://www.deathpenaltyinfo.org/federal-death-row-prisoners |title=Federal Death Row Prisoners &#124; Death Penalty Information Center |publisher=Deathpenaltyinfo.org |access-date=February 12, 2013}}</ref><ref>"[http://www.bop.gov/about/history/first_years.jsp The Bureau Celebrates 80th Anniversary] {{Webarchive|url=https://web.archive.org/web/20100528015805/http://www.bop.gov/about/history/first_years.jsp |date=May 28, 2010 }}." [[Federal Bureau of Prisons]]. May 14, 2010. Retrieved on October 3, 2010.</ref> Two of them are housed at USP Terre Haute. {{Asof|2024}}, due to security concerns, death row inmate [[Dzhokhar Tsarnaev]] is held at the [[United States Penitentiary Florence Administrative Maximum Facility]] (ADX Florence) near [[Florence, Colorado|Florence]], [[Colorado]].<ref>{{cite web|author=Trigg, Lisa|url=http://www.tribstar.com/news/local_news/time-drags-on-at-death-row-usp-terre-haute/article_1735f81a-6c88-5c54-b529-367d940c96c6.html|title=Time drags on at death row, USP Terre Haute |publisher=[[Tribune Star]]|date=April 29, 2017|accessdate=June 14, 2018}}</ref> The federal government chose Terre Haute as the location of the men's death row due to its central location within the United States.<ref name="Huppke">Huppke, Rex W. "[https://news.google.com/newspapers?id=6IsvAAAAIBAJ&sjid=otwFAAAAIBAJ&pg=4757,5002594&dq=timothy+mcveigh+moved+terre+haute&hl=en EXECUTION: Terre Haute, Ind. dreads execution of Timothy McVeigh]." ''[[Associated Press]]'' at the ''[[Southeast Missourian]]''. Friday April 6, 2001. 2A (continued from 1A). Retrieved from [[Google News]] (2/16) on October 14, 2010. "The planning for this day began when McVeigh was moved to Terre Haute along with the 19 other federal death row inmates in 1999[...]"</ref>
+
+==Notable inmates==
+{{main|List of inmates at the United States Penitentiary, Terre Haute}}
+
+==See also==
+*[[List of U.S. federal prisons]]
+*[[Federal Bureau of Prisons]]
+*[[Incarceration in the United States]]
+*[[Capital punishment by the United States federal government]]
+*[[List of people executed by the United States federal government]]
+{{Portalbar|United States|Politics|Indiana}}
+
+==References==
+{{Reflist|colwidth=30em}}
+
+==Further reading==
+* {{cite web|last=Crane|first=Tracy|url=https://www.news-gazette.com/news/in-terre-haute-prison-s-death-row-talk-of-the-town/article_1780af0b-6a3d-5754-90bc-0554a01ed858.html|title=In Terre Haute, prison's 'death row' talk of the town|newspaper=[[News Gazette]]|date=July 7, 2019|access-date=October 26, 2020}}
+
+==External links==
+{{Commons category}}
+*[http://www.bop.gov/locations/institutions/thp/ USP Terre Haute] Official Website
+{{Terre Haute, Indiana}}
+{{Federal Bureau of Prisons}}
+{{Execution sites in the United States}}
+
+<!--Designated execution site-->
+
+{{DEFAULTSORT:Terre Haute}}
+[[Category:United States Penitentiaries]]
+[[Category:Prisons in Indiana]]
+[[Category:Buildings and structures in Terre Haute, Indiana]]
+[[Category:Execution sites in the United States]]
+[[Category:1940 establishments in Indiana]]

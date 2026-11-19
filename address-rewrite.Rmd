@@ -31,9 +31,9 @@ The `build_hold_canonical()` function is designed to:
 
 The function identifies hold-type DDP codes using two complementary filters:
 
--   **Primary**: DETLOC pattern matching for codes containing "HOLD", "STAGING", or "CPC"
+- **Primary**: DETLOC pattern matching for codes containing "HOLD", "STAGING", or "CPC"
 
--   **Secondary**: Vera Institute classification for short-code staging facilities (STK, AGC, etc.) not caught by the regex pattern
+- **Secondary**: Vera Institute classification for short-code staging facilities (STK, AGC, etc.) not caught by the regex pattern
 
 Classified facilities are assigned a `facility_type` from 8 categories: sub_office, field_office, ero_hold, staging, command_center, cbp, custody_case, or hold_room.
 
@@ -49,17 +49,17 @@ This retrieves facility_address, facility_city, facility_county, facility_zip, l
 
 #### **Step 3: Split into Two Groups (Lines 258-261)**
 
--   **`hold_with_addr`**: Records with BOTH `facility_address` AND `facility_city` present
+- **`hold_with_addr`**: Records with BOTH `facility_address` AND `facility_city` present
 
--   **`hold_stubs`**: Records with EITHER missing (NAs trigger inclusion as stubs)
+- **`hold_stubs`**: Records with EITHER missing (NAs trigger inclusion as stubs)
 
 #### **Step 4: Manual Patches for Stubs (Lines 263-284)**
 
 The `hold_stub_address_patches()` function provides addresses for 6 facility codes that couldn't be matched by DETLOC but were confirmed through other sources:
 
--   **5 codes via ERO directory** (city/state matching): IMPHOLD, CINHOLD, PROHOLD, CBPHOLD, EPCPCTX
+- **5 codes via ERO directory** (city/state matching): IMPHOLD, CINHOLD, PROHOLD, CBPHOLD, EPCPCTX
 
--   **1 code via Marshall Project city match** (Batavia, NY): CMDHOLD
+- **1 code via Marshall Project city match** (Batavia, NY): CMDHOLD
 
 ### **Facilities WITHOUT Addresses (Why They End Up as Stubs)**
 
@@ -77,39 +77,39 @@ The `hold_stub_address_patches()` function provides addresses for 6 facility cod
 
 1.  **Not in Marshall Project database** (\~1,479 facilities, 1978-2017): These 27 hold facilities' DETLOCs either:
 
-    -   Don't exist in the Marshall Project CSV
+    - Don't exist in the Marshall Project CSV
 
-    -   Represent newer facilities (post-2017)
+    - Represent newer facilities (post-2017)
 
-    -   Are DDP-only codes without Marshall Project coverage
+    - Are DDP-only codes without Marshall Project coverage
 
 2.  **Not matched by manual patches**:
 
-    -   The 6 manual patches in `hold_stub_address_patches()` only cover those with confirmed ERO directory or city-level Marshall matches
+    - The 6 manual patches in `hold_stub_address_patches()` only cover those with confirmed ERO directory or city-level Marshall matches
 
-    -   Remaining 21 lack sufficient confirming evidence to justify manual patching
+    - Remaining 21 lack sufficient confirming evidence to justify manual patching
 
 3.  **DDP provides facility name + state only**:
 
-    -   DDP facility name: e.g., "Mobile Holdroom"
+    - DDP facility name: e.g., "Mobile Holdroom"
 
-    -   DDP state code: e.g., "AL"
+    - DDP state code: e.g., "AL"
 
-    -   No address, city, or geocoding provided by DDP
+    - No address, city, or geocoding provided by DDP
 
 ### **Canonical ID Assignment Strategy**
 
--   **IDs 2026-2121** (\~96 records): Hold facilities WITH addresses from Marshall Project or patches
+- **IDs 2026-2121** (\~96 records): Hold facilities WITH addresses from Marshall Project or patches
 
-    -   Includes patched ERO directory addresses (lat/lon left as NA)
+  - Includes patched ERO directory addresses (lat/lon left as NA)
 
-    -   `address_source = "marshall_project"` or specific patch source (ero_directory, marshall_city_match)
+  - `address_source = "marshall_project"` or specific patch source (ero_directory, marshall_city_match)
 
--   **IDs 2122-2173** (27 records): Hold facilities WITHOUT addresses (stubs)
+- **IDs 2122-2173** (27 records): Hold facilities WITHOUT addresses (stubs)
 
-    -   All fields (address, city, zip, county, lat, lon, aor, date_first_use, date_last_use) set to NA
+  - All fields (address, city, zip, county, lat, lon, aor, date_first_use, date_last_use) set to NA
 
-    -   `address_source = "ddp_stub"` (lowest priority)
+  - `address_source = "ddp_stub"` (lowest priority)
 
 ### **Key Design Insight**
 

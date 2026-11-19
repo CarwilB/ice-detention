@@ -1,0 +1,53 @@
+{{Short description|Private prison in Pinal County, Arizona}}
+{{Use American English|date=August 2025}}
+{{Infobox Prison
+| name           = Eloy Detention Center
+| image          = 
+| location       = 1705 E Hanna Road <br> [[Eloy, Arizona]]
+| coordinates    = 
+| status         = open
+| classification = minimum & medium
+| capacity       = 1596
+| opened         = 1994
+| closed         = 
+| managed_by     = [[CoreCivic]]
+| director       = 
+}}
+
+The '''Eloy Detention Center''' is a private prison located in [[Eloy, Arizona|Eloy]], [[Pinal County, Arizona]], owned and operated by [[CoreCivic]], formerly the Corrections Corporation of America, under contract with the [[U.S. Immigration and Customs Enforcement]] (ICE).<ref>{{cite web|title=Eloy Detention Center|url=http://www.cca.com/facilities/eloy-detention-center|website=Corrections Corporation of America|accessdate=18 August 2016}}</ref><ref>{{cite web|title=Eloy Detention Center|url=https://www.ice.gov/detention-facility/eloy-detention-center|website=U.S. Immigration and Customs Enforcement|accessdate=18 August 2016}}</ref>
+
+== History ==
+The facility opened in 1994 and approximately 1,550 male and female individuals being held for immigration violations at a mix of minimum and medium security levels. Each individual costs approximately $180 per day to house.<ref>{{Cite web|url=https://news.azpm.org/p/news-articles/2017/12/21/121748-report-raises-red-flags-over-treatment-of-immigrant-detainees/|title=Report Raises Red Flags Over Treatment of Immigrant Detainees|last=Montoya|first=Nancy|website=news.azpm.org|language=en|access-date=2018-12-14}}</ref> Eloy is adjacent to three other prisons also run by CoreCivic: the [[Red Rock Correctional Center]], the [[La Palma Correctional Facility]], and the [[Saguaro Correctional Center]].
+
+After the [[Trump administration family separation policy|Trump administration's]] controversial zero-tolerance family separation policy in 2018, the facility housed roughly 300 mothers separated from their children.<ref>{{Cite web|url=https://www.azcentral.com/story/news/politics/immigration/2018/07/12/separated-children-inside-eloy-detention-mothers-wait-ice-reunited/777922002/|title=Reunited or deported? Mother in ICE detention faces the inevitable|website=azcentral|language=en|access-date=2018-12-14}}</ref>
+
+== Suicides ==
+ICE's internal Office of Detention Oversight investigated the death of Eloy detainee Manuel Cota-Domingo in 2012, and found serious issues with the quality of medical care provided by CCA.<ref>{{cite news|last1=Predergast|first1=Curt|title=Medical care in Eloy detention center criticized|url=http://tucson.com/news/local/medical-care-in-eloy-detention-center-criticized/article_fbca130e-23fa-5a3c-bb9c-8cfe3448b5cf.html|accessdate=19 August 2016|agency=Arizona Daily Star|publisher=Tucson.com|date=7 July 2016}}</ref> The facility had 15 detainee deaths between 2003 and late 2016, including five suicides.<ref>[http://www.huffingtonpost.com/entry/guatemalan-detainee-dies-ice-arizona_us_583df6a6e4b0ae0e7cda81fa?section=politics Guatemalan Detainee Dies In ICE Custody In Arizona]. ''The Huffington Post.'' November 29, 2016.</ref>  Since 2003, Eloy alone represented 9% of the total inmate deaths in all 250 detention facilities in the United States.<ref name=":0">{{cite news|last1=Daniel Gonzalez|first1=Megan Jula|title=Eloy Detention Center: Why so many suicides?|url=http://www.azcentral.com/story/news/arizona/investigations/2015/07/28/eloy-detention-center-immigrant-suicides/30760545/|accessdate=19 August 2016|publisher=Arizona Republic / azcentral.com|date=29 July 2015}}</ref><ref>{{Cite web|url=https://www.azcentral.com/story/news/politics/border-issues/2016/11/28/another-death-eloy-migrant-detention-center/94574478/|title=Another death at Eloy migrant-detention center|website=azcentral|language=en|access-date=2018-12-14}}</ref>
+
+As a result of passing all inspections despite the facility's high suicide rate, the [[National Immigrant Justice Center]] found ICE and the [[Presidency of Barack Obama|Obama administration]] of being complicit in hiding maltreatment at the center in a 2015 report. Also in 2015, U.S. Representative [[Raúl Grijalva]] toured the facility, calling it "the deadliest immigration detention center in the U.S." In late July 2015, he called for an independent investigation into the most recent suicide.<ref>{{Cite web|url=https://tucson.com/news/local/border/report-ice-complicit-in-hiding-maltreatment-at-eloy-center/article_911d543f-2983-5108-a1a4-1a2d19353240.html|title=Report: ICE complicit in hiding maltreatment at Eloy center|last=Star|first=Perla Trevizo Arizona Daily|website=Arizona Daily Star|language=en|access-date=2018-12-14}}</ref><ref name=":0" />
+
+==Notable detainees==
+Year of detention listed in parentheses:
+* [[Binh Thai Luc]] (2006), Vietnamese plumber 
+* [[Ike Ibeabuchi]] (2014), Nigerian boxer
+* [[Nina Chaubal]] ({{c.|2016}}), Indian transgender rights activist
+* {{ill|Katja Bienert|de||fr||ru|Бинерт, Катя|vo}} (2017), German actress
+
+==References==
+{{reflist}}<br />
+
+{{authority control}}
+
+{{coord|32.817763|-111.520187|format=dms|display=title|type:landmark}}
+
+{{DEFAULTSORT:Eloy Detention Center}}
+{{CoreCivic Facilities}}
+
+[[Category:Prisons in Arizona]]
+[[Category:Buildings and structures in Pinal County, Arizona]]
+[[Category:CoreCivic]]
+[[Category:Eloy, Arizona]]
+[[Category:1994 establishments in Arizona]]
+[[Category:United States Immigration and Customs Enforcement]]
+[[Category:Immigration detention centers and prisons in the United States]]
+[[Category:Prisons completed in the 1990s]]

@@ -1,0 +1,59 @@
+{{Short description|Medium-security prison in New York, US}}
+{{Use American English|date=July 2025}}
+{{Infobox prison
+|name = Federal Correctional Institution, Ray Brook
+|image = FCI.RAY.BROOK.jpg
+|image_size = 250
+|location = [[North Elba, New York|North Elba]], [[Essex County, New York|Essex County]],<br />near [[Saranac Lake, New York]]
+|coordinates = {{coord|44|17|25|N|74|05|34|W|scale:10000|display=title,inline}}
+|status = Operational
+|classification = Medium security
+|population = approximately 1,000
+|opened = 1980
+|closed = 
+|managed_by = [[Federal Bureau of Prisons]]
+|warden = David Christensen
+}}
+
+The '''Federal Correctional Institution, Ray Brook (FCI Ray Brook)''', unofficially called the '''Olympic Prison''',<ref name=":0">{{Cite web |url=http://www.atlasobscura.com/articles/the-time-that-the-us-turned-an-olympic-village-into-a-prison |title=The Forgotten Tale of How America Converted Its 1980 Olympic Village Into a Prison |last=Nofil |first=Brianna |date=2016-08-16 |website=Atlas Obscura |language=en |access-date=2020-03-25 |archive-date=2025-10-27 |archive-url=https://web.archive.org/web/20251027120232/https://www.atlasobscura.com/articles/the-time-that-the-us-turned-an-olympic-village-into-a-prison |url-status=live }}</ref> is a medium-security United States [[federal prison]] for male inmates that is operated by the [[Federal Bureau of Prisons]], a division of the [[United States Department of Justice]]. The prison is located in [[Ray Brook, New York|Ray Brook]], a town in [[Essex County, New York]]. Although constructed as a prison, it initially served as the [[Olympic Village]] for the [[1980 Winter Olympics]], which were held in [[Lake Placid, New York|Lake Placid]].
+
+==History==
+The [[United States Olympic & Paralympic Committee]] needed congressional approval for funding to build an [[Olympic Village]] for the [[1980 Winter Olympics]]. Congress required an after-use contract for facilities, and Lake Placid's congressman [[Robert C. McEwen]] considered the possibilities of having it be repurposed as housing, a hospital, or a permanent athletic facility, but these plans all failed to materialize. As McEwen searched for possibilities, he learned that [[Norman Carlson]] of the [[Federal Bureau of Prisons]] had congressional approval to build a prison in the Northeastern United States. It was ultimately agreed to create the Village with the goal of repurposing it as a prison.<ref name=":0" /><ref name=":2">{{Cite web |last=Traci |first=Taylor |date=2022-02-03 |title=The 1980 Winter Games Village in New York Was Turned Into a Prison |url=https://981thehawk.com/winter-olympics-2022-schedule/ |access-date=2026-05-29 |website=98.1 The Hawk |language=en |archive-date=2026-05-29 |archive-url=https://web.archive.org/web/20260529175428/https://981thehawk.com/winter-olympics-2022-schedule/ |url-status=live }}</ref>
+
+At the time of construction, the Olympic Village had 937 small cells, each holding between 2 and 4 athletes. The majority of rooms had one barred window, although some had no windows at all, and they had heavy steel doors with peepholes for use by guards after conversion to a functional prison. The Village was surrounded by concentric chain fences. The fences were sensitized and sounded alarms if touched. The only entrance to the village was a surveilled double gate. The village saw widespread condemnation from International Olympic Committees, and multiple countries sought to rent housing in other locations. While National Olympic Committees typically need to pay on their own if they choose to find new accommodation, IOC Director [[Monique Berlioux]] said, "This time the accommodations are so poor that delegations will not have to pay for them if they move somewhere else."<ref name=":1">{{Cite web |last=Johnson |first=William Oscar |date=9 April 1979 |title=The Olympic Getaway |url=http://www.si.com/vault/1979/04/09/823524/the-olympic-getaway-lake-placid-is-proud-of-its-49-million-olympic-village-later-to-become-a-prison-but-many-countries-insist-its-a-jail-already-and-have-elected-not-to-be-penned-in |url-status=dead |archive-url=https://web.archive.org/web/20160821080637/http://www.si.com/vault/1979/04/09/823524/the-olympic-getaway-lake-placid-is-proud-of-its-49-million-olympic-village-later-to-become-a-prison-but-many-countries-insist-its-a-jail-already-and-have-elected-not-to-be-penned-in |archive-date=21 August 2016 |website=Smithsonian Magazine}}</ref>
+
+The delegations of Sweden, Italy, Austria, East Germany, West Germany, and other countries sought alternative accommodations. This created an unexpected boom in the local real estate market, increasing rent in some areas from {{USD|200|1980}} to {{USD|4000|1980}}. A tenant group called Renters Association of Concerned Citizens on Ousting Our Needed Services (RACCOONS) formed to avoid eviction in the face of the sharp rent increase.<ref name=":1" /> A coalition of religious and civil rights activists formed the group Stop the Olympic Prison (STOP) to protest the prison.<ref name=":0" /> Sixty-two local Christian clergymen, primarily Protestant, denounced the Village as "morally wrong" and "generally grotesque".<ref name=":1" /> Protestors appeared at the Olympic torch relay with signs opposing the prison.<ref name=":0" /> 
+
+The prison became operational following the conclusion of the Olympics and accepted its first inmates that same year.<ref name=":0" /> As of 2016, it housed approximately 1,000 inmates.<ref>{{Cite web|url=https://www.smithsonianmag.com/smart-news/why-1980-olympic-village-now-prison-180960161/|title=Why the 1980 Olympic Village Is Now a Prison|last=Lewis|first=Danny|date=August 18, 2016|website=Smithsonian Magazine|language=en|access-date=2020-03-25|archive-date=2025-10-27|archive-url=https://web.archive.org/web/20251027160303/https://www.smithsonianmag.com/smart-news/why-1980-olympic-village-now-prison-180960161/|url-status=live}}</ref> The majority of inmates come from New York City and Boston.<ref name=":0" /> The Bureau of Prisons has received numerous complaints regarding conditions at FCI Ray Brook. In 2013, the United States Court of Appeals for the Second Circuit reinstated a previously dismissed lawsuit filed against the Bureau of Prisons on behalf of six inmates who were allegedly housed in an extremely hot and cramped single room without adequate ventilation and cleaning supplies. The Court found that the evidence justified a claim of [[cruel and unusual punishment]].<ref>{{Cite web |last=Bailey |first=Lorraine |date=2013-05-30 |title='Horrifying' Condiitons May Leave Prison Liable |url=https://www.courthousenews.com/horrifying-condiitons-may-leave-prison-liable |access-date=2026-05-29 |website=Courthouse News Service |language=en-us |archive-date=2022-01-18 |archive-url=https://web.archive.org/web/20220118112642/https://www.courthousenews.com/horrifying-condiitons-may-leave-prison-liable/ |url-status=live }}</ref>
+
+In 2025, the prison terminated its contract with the Council of Prison Locals 33 union under the [[American Federation of Government Employees]].<ref>{{Cite web |last=Crowley |first=Peter |date=2025-10-11 |title=FCI Ray Brook union contract terminated |url=https://www.dailygazette.com/ade/news/local_news/fci-ray-brook-union-contract-terminated/article_eb7b655b-f4f6-5c5b-9281-08581ea30f1c.html |access-date=2026-05-29 |website=Gazette News Group, Inc. |language=en |archive-date=2026-05-29 |archive-url=https://web.archive.org/web/20260529153020/https://www.dailygazette.com/ade/news/local_news/fci-ray-brook-union-contract-terminated/article_eb7b655b-f4f6-5c5b-9281-08581ea30f1c.html |url-status=live }}</ref> Additionally, officers at the prison went unpaid during the [[2025 United States federal government shutdown]].<ref>{{Cite web |last=LaShomb |first=Alek |date=2025-10-15 |title=Federal corrections officers in NY struggle amid shutdown and canceled union contract |url=https://www.wwnytv.com/2025/10/15/federal-corrections-officers-ny-struggle-amid-shutdown-canceled-union-contract/ |access-date=2026-05-29 |website=WWNYTV |language=en |archive-date=2025-10-23 |archive-url=https://web.archive.org/web/20251023154937/https://www.wwnytv.com/2025/10/15/federal-corrections-officers-ny-struggle-amid-shutdown-canceled-union-contract/ |url-status=live }}</ref>
+
+== Notable past and present inmates ==
+
+* [[Eduardo Arellano Félix]]<ref name=":2" />
+* [[Rezwan Ferdaus]]<ref>{{Cite web |date=2025-10-23 |title=Olympics Village That Left Athletes 'Suffocated' Has Been Turned Into Prison |url=https://www.sportbible.com/other/olympic-village-turned-prison-815551-20251022 |access-date=2026-05-29 |website=SPORTbible |language=en |archive-date=2026-05-29 |archive-url=https://web.archive.org/web/20260529180224/https://www.sportbible.com/other/olympic-village-turned-prison-815551-20251022 |url-status=live }}</ref>
+* [[David Radler]]<ref name=":2" />
+* [[Sathajhan Sarachandran]]<ref name=":2" />
+* [[Ja Rule]]<ref name=":0" />
+* [[2006 Florida's Turnpike carjacking murders|Danny Varela]]<ref>{{cite web|url=https://www.bop.gov/mobile/find_inmate/byname.jsp#inmate_results |title=Find an inmate – DANNY VARELA |website=[[Federal Bureau of Prisons]] |access-date=October 25, 2026 }}</ref>
+
+== See also ==
+* [[List of U.S. federal prisons]]
+* [[List of Olympic Villages]]
+
+== References ==
+{{Reflist}}
+
+== External links ==
+* {{official|https://www.bop.gov/locations/institutions/rbk/}}
+{{Portal bar|Olympic Games|United States|Politics|Law}}
+{{1980 Winter Olympic venues}}
+{{Federal Bureau of Prisons}}
+
+[[Category:Buildings of the United States government in New York (state)]]
+[[Category:Buildings and structures in Essex County, New York]]
+[[Category:Federal Correctional Institutions in the United States|Ray Brook]]
+[[Category:Prisons in New York (state)]]
+[[Category:1980 establishments in New York (state)]]
+[[Category:Olympic Villages in the United States]]
+[[Category:Venues of the 1980 Winter Olympics]]

@@ -807,6 +807,50 @@
       "Maintainer": "Carson Sievert <carson@posit.co>",
       "Repository": "CRAN"
     },
+    "c2z": {
+      "Package": "c2z",
+      "Version": "0.2.0",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "A Reference Manager",
+      "Authors@R": "person(\"Øystein Olav\", \"Skaar\", , \"oeysan@gmail.com\", role = c(\"aut\", \"cre\", \"cph\"), comment = c(ORCID = \"0000-0001-5605-3492\"))",
+      "Maintainer": "Øystein Olav Skaar <oeysan@gmail.com>",
+      "Description": "'Cristin' to 'Zotero' ('c2z') aims at obtaining total dominion over 'Cristin' ('Current Research Information SysTem in Norway') and 'Zotero'. The package enables manipulating 'Zotero' libraries using 'R'.  Import references from 'Cristin', 'Regjeringen', 'CRAN', 'ISBN' ('Alma', 'LoC'), and 'DOI' ('CrossRef', 'DataCite') to a 'Zotero' library. Add, edit, copy, or delete items, including attachments and collections, and export references to 'BibLaTeX' (and other formats).",
+      "License": "MIT + file LICENSE",
+      "URL": "https://github.com/oeysan/c2z/, https://oeysan.github.io/c2z/",
+      "BugReports": "https://github.com/oeysan/c2z/issues/",
+      "Depends": [
+        "R (>= 4.1)"
+      ],
+      "Imports": [
+        "dplyr",
+        "httr",
+        "jsonlite",
+        "purrr",
+        "rlang",
+        "rvest",
+        "stats",
+        "tibble",
+        "tidyr",
+        "tidyselect",
+        "utils"
+      ],
+      "Suggests": [
+        "covr",
+        "knitr",
+        "readr",
+        "rmarkdown",
+        "testthat (>= 3.0.0)"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/testthat/edition": "3",
+      "Encoding": "UTF-8",
+      "LazyData": "true",
+      "RoxygenNote": "7.2.3",
+      "NeedsCompilation": "no",
+      "Author": "Øystein Olav Skaar [aut, cre, cph] (<https://orcid.org/0000-0001-5605-3492>)",
+      "Repository": "https://packagemanager.posit.co/cran/latest"
+    },
     "cachem": {
       "Package": "cachem",
       "Version": "1.1.0",
@@ -2655,7 +2699,8 @@
       "Maintainer": "Paul Murrell <paul@stat.auckland.ac.nz>",
       "License": "GPL",
       "NeedsCompilation": "no",
-      "Repository": "CRAN"
+      "Repository": "https://packagemanager.posit.co/cran/latest",
+      "Encoding": "UTF-8"
     },
     "gridExtra": {
       "Package": "gridExtra",
@@ -3841,7 +3886,7 @@
       "RoxygenNote": "7.1.1",
       "NeedsCompilation": "no",
       "Author": "Tim Appelhans [cre, aut], Florian Detsch [aut]",
-      "Repository": "CRAN"
+      "Repository": "https://packagemanager.posit.co/cran/latest"
     },
     "libr": {
       "Package": "libr",
@@ -5169,7 +5214,8 @@
       "SystemRequirements": "Java JDK 1.2 or higher (for JRI/REngine JDK 1.4 or higher), GNU make",
       "BugReports": "https://github.com/s-u/rJava/issues",
       "NeedsCompilation": "yes",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "ragg": {
       "Package": "ragg",
@@ -7283,7 +7329,7 @@
       "Encoding": "UTF-8",
       "NeedsCompilation": "no",
       "Author": "Martijn Tennekes [aut, cre], Peter Ellis [ctb]",
-      "Repository": "CRAN"
+      "Repository": "https://packagemanager.posit.co/cran/latest"
     },
     "treemapify": {
       "Package": "treemapify",

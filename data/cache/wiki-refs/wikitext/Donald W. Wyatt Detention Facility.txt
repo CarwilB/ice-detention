@@ -1,0 +1,145 @@
+{{short description|Detention facility in Central Falls, Rhode Island, U.S.}}
+{{Use American English|date=August 2025}}
+{{Infobox Prison
+| name           = Donald W. Wyatt Detention Facility
+| image          = 
+| location       = [[Central Falls, Rhode Island]]
+| coordinates    = {{Coord|41.8925|-71.3838|type:landmark_region:US-RI|display=inline,title}}
+| status         = 
+| classification = 
+| capacity       = 730 males, 40 females
+| opened         = 1993
+| closed         = 
+| managed_by     = Central Falls Detention Facility Corporation
+| director       = 
+}}
+The '''Donald W. Wyatt Detention Facility''' was established in 1993 as the United States' first publicly owned and privately operated adult secure correctional facility and is currently operated by the Central Falls Detention Facility Corporation. This special non-profit, quasi-public detention facility was developed for use by the [[United States Marshal Service]] (USMS) in the Northeast and was later extended to include [[United States Immigration and Customs Enforcement]] (ICE) from 2005 to 2008 and again starting in 2019.<ref name=ProJo-Timeline>
+{{cite news
+|url=https://www.providencejournal.com/news/20190815/wyatt-detention-facility-timeline-of-events-leading-to-protests-arrests-and-truck-driver-incident
+|title= Wyatt Detention Facility: A timeline of events leading to protests, arrests, and truck driver incident
+|publisher = [[Providence Journal]]
+|accessdate=2020-12-16
+|archive-url=https://web.archive.org/web/20201216203749/https://www.providencejournal.com/news/20190815/wyatt-detention-facility-timeline-of-events-leading-to-protests-arrests-and-truck-driver-incident
+|archive-date=2020-12-16 }}</ref>
+Beginning in October 2011, the facility began serving the [[United States Navy]], housing Navy personnel who have been placed in the custody of the General Court-Martial Convening Authority (GCMC).
+The facility operates at maximum security utilizing an architectural and high-tech design and construction containment system. A $47 million expansion was completed in December 2006 and increased the maximum occupancy from 300 all-male housing to its current capacity of 770 including a 40-bed unit for female detainees.<ref name=BostonHerald2009-04-28>
+{{cite news
+ |url          = http://www.bostonherald.com/news/national/northeast/view/2009_04_28_RI_mayor_fires_prison_leader_for_Guantanamo_remark/srvc=home&position=recent
+ |title        = RI mayor fires prison leader for Guantanamo remark
+ |date         = 2009-04-28
+ |publisher    = [[Boston Herald]]
+ |archive-url  = https://archive.today/20240524090913/https://www.webcitation.org/5gPGnDuAo?url=http://www.bostonherald.com/news/national/northeast/view/2009_04_28_RI_mayor_fires_prison_leader_for_Guantanamo_remark/srvc=home&position=recent
+ |archive-date = 2024-05-24
+ |url-status   = dead
+}}</ref>  It is the corporation's only facility. In July 2026, the prison filed for [[Chapter 11 bankruptcy]] protection after claiming that it could no longer continue to pay more than $167 million in debt.<ref>{{Cite web|url= https://news.bloomberglaw.com/bankruptcy-law/rhode-island-jail-operator-files-bankruptcy-to-cut-bond-debt?context=search&index=2|title= Rhode Island Jail Operator Files Bankruptcy to Cut Bond Debt|first=Steven|last=Church|date=2026-07-10|access-date=2026-07-11|website=Bloomberg Law|language=en}}</ref>
+
+== Overview ==
+
+The facility was the very first privately run detention center in the United States.<ref>{{cite book
+| url        = https://books.google.com/books?id=wuILmB9JcKoC&q=%22Donald+W.+Wyatt%22+%22Detention+Facility%22&pg=PA260
+| title      = Inside America's Concentration Camps: Two Centuries of Internment and Torture
+| publisher  = [[Chicago Review Press]]
+| author     = James L L Dickerson
+| date       = 2010
+| page       = 260
+| isbn       = 9781569767481
+| accessdate = 2013-09-06
+| quote      = The Donald W. Wyatt Detention Facility, the first privately owned detention center in the country, was built to house about six hundred federal prisoners designated by the U.S. Marshals Service as meeting one of three criteria: detainees awaiting trial on immigration charges, detainees awaiting deportation, or detainees awaiting transportation into the Federal Bureau of Prisons.
+}}
+</ref> The prison was built in the city of [[Central Falls]], Rhode Island. The city of Central Falls contributed funds towards its construction.<ref name=BostonHerald2009-04-28/> The prison was created to generate employment in order to replace industrial jobs from closed [[textile mills]].
+
+Officers are paid $27 an hour in conjunction with shift differentials and roll call incentives while completing their probationary first year of employment. Officers are given an additional wage increase upon successful completion of their one-year probationary period. 
+Officers and Sergeants employed by the Donald W. Wyatt Detention Facility are represented by the Fraternal Order of Police lodge # 50.
+
+[[File:Donald W. Wyatt Detention Facility.jpg|thumb]]
+
+==Protest==
+
+Protests against the Wyatt started when the facility renewed its contract with ICE in March, 2019.<ref name=ProJo-Timeline/> On March 28, a group of local activists from Central Falls led a march from City Hall to the detention center.<ref name=March-28-Protest>
+{{cite news
+|url=https://www.providencejournal.com/news/20190328/protesters-central-falls-officials-seek-wyatt-shutdown-over-ice-detainees-return
+|title= Protesters, Central Falls officials seek Wyatt shutdown over ICE detainees' return
+|publisher = [[Providence Journal]]
+|accessdate=2020-12-16
+|archive-url=https://web.archive.org/web/20190330212438/https://www.providencejournal.com/news/20190328/protesters-central-falls-officials-seek-wyatt-shutdown-over-ice-detainees-return
+|archive-date=2019-03-30 }}</ref>
+That summer, the Jewish organization [[Never Again Action]] organized a protest on July 3,<ref>{{Cite news|url=https://www.providencejournal.com/news/20190702/18-arrested-in-never-again-protest-of-wyatts-ice-role|title=18 arrested in Never Again protest of Wyatt's ICE role|date=July 2, 2019|work=Providence Journal|access-date=July 7, 2019}}</ref><ref>{{Cite news|url=https://www.wpri.com/news/local-news/blackstone-valley/18-arrested-during-immigration-protest-at-wyatt-detention-center/|title=18 arrested during immigration protest at Wyatt Detention Facility|date=July 3, 2019|work=WPRI Eyewitness News|access-date=July 4, 2019}}</ref> at which 18 people were arrested, and another protest on August 14, at which a Wyatt employee drove his truck into the crowd.<ref>{{Cite web|url=https://www.aclu.org/blog/immigrants-rights/immigrants-rights-and-detention/corrections-officer-who-struck-rhode-island|title = Corrections Officer Who Struck Rhode Island Protesters with Pickup Truck Resigns}}</ref> Since then, a variety of local groups have continued protesting the facility.<ref>
+{{cite news
+|url=https://www.providencejournal.com/news/20190328/protesters-central-falls-officials-seek-wyatt-shutdown-over-ice-detainees-return
+|title= Protesters call for Wyatt's abolition
+|publisher = [[Providence Journal]]
+|accessdate=2020-12-16
+|archive-url=https://web.archive.org/web/20200122221525/https://www.providencejournal.com/news/20191210/protesters-call-for-wyatts-abolition
+|archive-date=2020-01-22}}
+</ref>
+<ref>
+{{cite news
+|url=https://www.providencejournal.com/news/20200410/rsquocar-rallyrsquo-protests-central-falls-jail-asks-detaineesrsquo-release-because-of-coronavirus
+|title= 'Car rally' protests Central Falls jail, asks detainees' release because of coronavirus
+|publisher = [[Providence Journal]]
+|accessdate=2020-12-16
+|archive-url=https://web.archive.org/web/20200413211330if_/https://www.providencejournal.com/news/20200410/rsquocar-rallyrsquo-protests-central-falls-jail-asks-detaineesrsquo-release-because-of-coronavirus
+|archive-date=2020-04-13}}
+</ref>
+<ref>
+{{cite news
+|url= https://upriseri.com/2020-11-04-amor-wyatt/
+|title= We Keep Us Safe: The election day march to shut down the Wyatt
+|publisher = [[Uprise RI]]
+|accessdate=2020-12-16
+|archive-url=https://web.archive.org/web/20201119193438/https://upriseri.com/2020-11-04-amor-wyatt/
+|archive-date=2020-11-19}}
+</ref>
+<ref>
+{{cite news
+|url= https://upriseri.com/2020-11-07-shut-down-wyatt/
+|title= Demonstrators blockade roads to Wyatt Detention Center, Demand closure of the facility
+|publisher = [[Uprise RI]]
+|accessdate=2020-12-16
+|archive-url=https://web.archive.org/web/20201118213516/https://upriseri.com/2020-11-07-shut-down-wyatt/
+|archive-date=2020-11-18}}
+</ref> The Alliance to Mobilize Our Resistance (AMOR) is a nonprofit organization in Rhode Island that is advocating for the Wyatt to end its contract with ICE and for the prison to be shut down.<ref>{{Cite web |date=2020 |title=Initiatives: Shut Down Wyatt |url=https://amorri.org/initiatives/#shut-down |url-status=live |access-date=July 24, 2026 |website=AMOR RI}}</ref> Beginning in 2025, AMOR has published reports based on inside testimonies, oversight inspections, and community research about ICE detention,<ref name=":0">{{Cite web |date=April 2025 |title=Report on ICE Detention at the Wyatt Detention Facility |url=https://drive.google.com/file/d/1ezWbTWIVb5bEW2kB7EDL9S-zpeESgujM/view |url-status=live |access-date=July 24, 2026 |website=AMOR RI}}</ref> ICE transfers,<ref name=":1">{{Cite web |date=July 2025 |title=Report on Unprecedented ICE Transfers from the Wyatt Detention Facility |url=https://docs.google.com/document/d/1SGZKHq_2w8X_HxkLB2jFXOKCOmnRHIpIK9gg-CGoQVo/edit?usp=sharing |url-status=live |access-date=July 24, 2026 |website=AMOR RI}}</ref><ref name=":2">{{Cite web |date=November 2025 |title=Report on Transfers: Where is ICE sending Rhode Islanders? |url=https://drive.google.com/file/d/13QVHXsd-akY0oKhPohaSaplg5woCgaVI/view?usp=share_link |url-status=live |access-date=July 24, 2026 |website=AMOR RI}}</ref> and conditions at the Wyatt.<ref name=":3">{{Cite web |date=April 2026 |title=Report on Conditions at the Wyatt |url=https://drive.google.com/file/d/1WwNokqQ5tYZccRxDCKpwEYiiVcLVbPHf/view?usp=share_link |url-status=live |access-date=July 24, 2026 |website=AMOR RI}}</ref> These reports include documentation of the following:
+
+* Medical neglect<ref name=":0" /><ref name=":3" />
+* Imprisonment for profit<ref name=":0" />
+* Hunger and food service violations<ref name=":0" /><ref name=":3" />
+* Unsafe drinking water<ref name=":3" />
+* Racism and arbitrary punishment<ref name=":0" />
+* Theft of personal property<ref name=":3" />
+* Harassment and use of force<ref name=":3" />
+* Failure to provide access to legal resources<ref name=":3" />
+* Transfers as a tool of terror<ref name=":1" />
+* Transfers destroying due process<ref name=":1" />
+* Police influencing deportations<ref name=":1" />
+* Transfers separating people from families, lawyers, and resources<ref name=":2" />
+* Unsafe and unjust conditions<ref name=":0" /><ref name=":3" />
+
+== Deaths ==
+[[Hiu Lui Ng|Hiu Lui "Jason" Ng]], an immigrant from [[China]], was an ICE Detainee who died while in custody of the Donald W. Wyatt Facility.<ref name="BostonHerald2009-04-28" />  
+The official cause of his death was cancer. In February 2009, the Rhode Island [[American Civil Liberties Union|ACLU]] filed a lawsuit on behalf of Ng's family, alleging “cruel, inhumane, malicious and sadistic behavior” against him. In 2012, the lawsuit was settled, with a multi-million dollar payment to the family.<ref>{{Cite web|url=http://www.aclu.org/press-releases/aclu-settles-lawsuit-behalf-family-wyatt-center-detainee-who-died-custody-suit|title=ACLU Settles Lawsuit on Behalf of Family of Wyatt Center Detainee Who Died in Custody; Suit Alleged "Cruel, Inhumane, Malicious and Sadistic Behavior"}}</ref>
+
+The [[United States Immigration and Customs Enforcement]] Agency withdrew its remaining 153 prisoners from the facility in mid-December 2008, following an inquiry into Ng's death.<ref name="BostonHerald2009-04-28" />
+
+The prison continues to house inmates of the [[United States Marshal Service]] and of the United States Navy's General Court-Martial Convening Authority (GCMC), and on March 10, 2019, it renewed its contract with ICE.<ref name="ProJo-Timeline" /><ref>{{cite web |url=http://216.119.73.58/index.cfm?pg%3D20%26pgtitle%3DHistory |title=Wyatt Detention Facility &#124; History |accessdate=2014-02-19 |url-status=dead |archive-url=https://web.archive.org/web/20140326020602/http://216.119.73.58/index.cfm?pg=20&pgtitle=History |archive-date=2014-03-26 }}</ref>
+
+== Escapes ==
+James Morales was discovered missing from the Wyatt Detention Facility in [[Central Falls]] on Saturday, Dec. 31 2016, at around 10 p.m. He had been detained at the facility since Dec. 3, 2015, on federal criminal charges brought in U.S. District Court in [[Worcester, Massachusetts|Worcester]], [[Massachusetts]].<ref>{{cite web|url=http://www.valleybreeze.com/2017-01-01/pawtucket/update-police-recover-car-stolen-escaped-inmate#.WG1Hp1MrLIV|title=Hunt for 'extremely dangerous' inmate goes national|archive-url=https://web.archive.org/web/20170105084350/http://www.valleybreeze.com/2017-01-01/pawtucket/update-police-recover-car-stolen-escaped-inmate#.WG4HSNN9ZB0|archive-date=2017-01-05|access-date=2023-09-15}}</ref>
+
+Morales was captured five days after his escape by a Massachusetts State Trooper and two Somerville Police detectives in Somerville following a foot pursuit, after Morales attempted to rob a Bank of America in Somerville, Mass.
+
+==References==
+{{reflist}}
+
+==External links==
+*[http://www.wyattdetention.com Donald W. Wyatt Detention Facility]
+
+{{Central Falls, Rhode Island}}
+
+{{DEFAULTSORT:Wyatt, Donald W.}}
+[[Category:Prisons in Rhode Island]]
+[[Category:Buildings and structures in Central Falls, Rhode Island]]
+[[Category:Private prisons in the United States]]
+[[Category:Immigration detention centers and prisons in the United States]]
+[[Category:1993 establishments in Rhode Island]]
+[[Category:United States Immigration and Customs Enforcement]]
+[[Category:Companies that filed for Chapter 11 bankruptcy in 2026]]

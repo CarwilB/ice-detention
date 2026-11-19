@@ -1,0 +1,53 @@
+{{Distinguish|Williamson County Jail (Texas)}}
+{{Use American English|date=July 2025}}
+{{Use mdy dates|date=March 2025}}
+{{Infobox NRHP
+  | name = Williamson County Jail
+  | nrhp_type = 
+  | image = Williamson County Jail in Marion.jpg
+  | caption = 
+  | location= 105 S. Van Buren St.,<br>[[Marion, Illinois]]
+  | coordinates = {{coord|37|43|50|N|88|55|41|W|display=inline,title}}
+  | pushpin_map = Illinois#USA
+  | built = {{Start date|1913}}
+  | architect = Spencer, N.S. and Temple
+  | builder = Fuller and Pulley
+  | architecture = Prairie School
+  | added = May 30, 2007
+  | area = less than one acre
+  | ref_num = 07000476<ref name="nris">{{NRISref|version=2010a}}</ref>
+}}
+The '''Williamson County Jail''', located at 105 S. Van Buren St. in [[Marion, Illinois|Marion]], is the former county jail serving [[Williamson County, Illinois|Williamson County]], [[Illinois]]. The [[Prairie School]] building served as the county jail from 1913 to 1971. The jail housed prisoners involved with three violent conflicts in the 1920s: the [[Herrin massacre]], the Klan War, and a gang rivalry between the [[Shelton Brothers Gang]] and [[Charles Birger]]'s gang. The building is now a history museum and is listed on the [[National Register of Historic Places]].
+
+==History==
+The jail was built in 1913 to replace the county's previous jail, which suffered from flooding, overcrowding, and poor living conditions. It soon played a central role in a number of conflicts which engulfed Williamson County in the 1920s, giving the county the nickname "Bloody Williamson". In 1922, the jail housed the men arrested for their role in the Herrin massacre, a deadly riot between union and non-union coal miners. Of the 125 men originally indicted after the massacre, only five were tried before their release; a pro-union jury found these five men not guilty of murder. The riot and trial brought national attention to the county, leading President [[Warren Harding]] to refer to the massacre as "shocking", "shameful", and "butchery". A grand jury later indicted 214 defendants, eight of whom were held without bail at the jail; these men were provided with meals and entertainment by union supporters during their time at the jail.<ref name="NRHP nom">{{cite web|last=De Mattei|first=Clarence|title=National Register of Historic Places Registration Form: Williamson County Jail|url=http://gis.hpa.state.il.us/pdfs/223455.pdf|archive-url=https://web.archive.org/web/20140222194609/http://gis.hpa.state.il.us/pdfs/223455.pdf|url-status=dead|archive-date=2014-02-22|publisher=[[National Park Service]]|access-date=February 3, 2014|author2=Bob Jackson |author3=Christina White |date=August 2006}}</ref>
+
+Later in the 1920s, the jail became part of another conflict when the [[Ku Klux Klan]] assumed control of the Marion Law Enforcement League and hired S. Glenn Young to conduct violent raids on [[rum-running|bootleggers]]. Young's actions were divisive and sparked violence among Williamson County residents in a conflict which became known as the Klan War. The conflict escalated until state troopers were called to the jail to stabilize the county and protect the prisoners from [[Lynching|lynch mob]]s. The war ended when Young and Deputy Sheriff Ora Thomas killed each other in a shootout.<ref name="NRHP nom"/>
+
+The jail played a role in yet another conflict in the 1920s when a gang war arose between the Shelton Brothers Gang and Charles Birger's gang. The gangs, led by rival bootleggers, became notorious for exchanging murders. The majority of the members of both gangs spent time in the Williamson County Jail; fourteen members of the Shelton Brothers received life sentences for murder, and Rado Millich of Birger's gang became the last man to be hanged in Williamson County in 1927. Birger only spent a single night in the jail; after being arrested for murder, he was released after claiming he acted in self-defense, a claim which kept him out of the jail on two other occasions as well.<ref name="NRHP nom"/>
+
+The jail closed in 1971,<ref name="NRHP nom"/> and it was added to the National Register of Historic Places on May 30, 2007.<ref name="nris"/>
+
+==Williamson County Museum==
+The building is now owned by the Williamson County Illinois Historical Society and operated as the '''Williamson County Museum'''.  Several rooms have been restored to a Victorian-era period, and other rooms feature historic small businesses, military and clothing displays, a schoolroom and the original jail cells.  There is also a genealogical and historical research library.
+
+==Architecture==
+The architectural firm of N. S. Spencer and Temple designed the building in the Prairie School style. The three-story building was built with brick and stone. The building's design features an emphasis on horizontal lines, a low roof with an overhanging [[cornice]], and an [[art glass]] [[transom (architecture)|transom]] and [[sidelight]]s around the front entrance, all characteristic Prairie School elements. The jail was capable of housing 87 inmates, including 81 men and 6 women. The building also included the county sheriff's residence, which was separated from the jail by {{convert|13|in}} of concrete and two steel doors. A [[verandah]] over the jail's front porch was accessible from the sheriff's residence; the verandah was also used by armed guards during the Klan War.<ref name="NRHP nom"/>
+
+==References==
+{{reflist}}
+
+==External links==
+* [http://www.wcihs.org/ Williamson County Illinois Historical Society]
+
+{{National Register of Historic Places}}
+
+[[Category:Jails on the National Register of Historic Places in Illinois]]
+[[Category:Prairie School architecture in Illinois]]
+[[Category:Government buildings completed in 1913]]
+[[Category:Marion, Illinois]]
+[[Category:Buildings and structures in Williamson County, Illinois]]
+[[Category:Museums in Williamson County, Illinois]]
+[[Category:History museums in Illinois]]
+[[Category:1913 establishments in Illinois]]
+[[Category:National Register of Historic Places in Williamson County, Illinois]]

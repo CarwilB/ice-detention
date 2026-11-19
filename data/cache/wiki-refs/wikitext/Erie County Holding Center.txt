@@ -1,0 +1,40 @@
+{{short description|Pre-trial, maximum security detention facility in New York, US}}
+{{Use American English|date=August 2025}}
+{{Infobox prison
+| name            = Erie County Holding Center
+| image           = [[File:Erie County holding center.jpg|240px]]
+| location        = [[Buffalo, New York]]
+| coordinates     = {{coord|42.885|-78.879722|type:landmark|display=inline,title}}
+| status          = Operational
+| classification  = Maximum
+| capacity        = 680
+| population      = 
+| population_date = 
+| opened          = {{Start date|1938}}
+| closed          = 
+| former_name     = 
+| managed_by      = [[Erie County Sheriff's Office (New York)|Erie County Sheriff's Office]]
+| director        = 
+| governor        = 
+| warden          = 
+| tel             = 
+| website         = 
+| prisoners       = 
+}}
+The '''Erie County Holding Center''' in [[Buffalo, New York]] is a pre-trial, [[Incarceration in the United States#Security levels|maximum security]] [[Detention (imprisonment)|detention facility]] that serves [[Erie County, New York|Erie County]].  Capable of housing 680 [[Incarceration|inmate]]s, it is the second largest detention facility in [[New York State]] outside of [[New York City]].  Inmate "Over-flow" is housed at the Holding Center Annex at the [[Erie County Correctional Facility]] in [[Alden, New York]]. The Jail Management Division of the Erie County Sheriff's Office conducts regularly scheduled tours of the facility for [[high school]] and [[college]] student groups, [[police academy]] classes and groups of "At risk" teens.<ref>[http://www.erie.gov/sheriff/jail_manage_division.asp Erie County Sheriff's Office, Erie County, NY, USA ]</ref> The ECHC is staffed by approximately 500 Deputies whom are sworn police officers.  There are currently two operational k9 narcotics detection teams among them. The ECHC houses many high profile criminals and frequently has to deploy QET (quick entry team) to quell inmate disturbances and emergency situations.
+
+== Complaints ==
+According to a [[professor]] at [[University at Buffalo Law School]], "Erie County continues to operate the Holding Center with indifference to the basic medical needs of inmates."<ref>{{Cite web |url=http://artvoice.com/issues/v7n34/letters/county_holding_center |title=Artvoice.com: The County Holding Center |access-date=2009-02-18 |archive-url=https://web.archive.org/web/20100201232912/http://artvoice.com/issues/v7n34/letters/county_holding_center |archive-date=2010-02-01 |url-status=dead }}</ref>
+
+The suicide rate at the Holding Center has brought it unwanted attention.<ref>{{cite web |title=In Erie County Jail, Deaths Continue Despite High-Profile Tragedy |url=https://theappeal.org/erie-county-jail-deaths-continue/ |access-date=2024-01-16 |archive-url=https://web.archive.org/web/20231001182443/https://theappeal.org/erie-county-jail-deaths-continue/ |archive-date=2023-10-01 |url-status=live }}</ref><ref>{{cite web |url=https://newrepublic.com/article/171009/erie-county-sheriff-garcia-howard |title=Why Do People Keep Dying in Erie County’s Jails? |last=Lipsitz |first=Raina |website=The New Republic |access-date=2024-01-16 |archive-url=https://web.archive.org/web/20231128121105/https://newrepublic.com/article/171009/erie-county-sheriff-garcia-howard |archive-date=2023-11-28 |url-status=live }}</ref> The [http://ecprc.weebly.com/index.html Erie County Prisoners Rights Coalition]  [https://web.archive.org/web/20110914072739/http://buffalo.indymedia.org/content/people-come-out-protest-against-abuse-erie-county-holding-center-sheriff-and-county-official demonstrates in front of the Center] each Wednesday.
+
+==References==
+{{reflist}}
+
+{{Authority control }}
+
+[[Category:Prisons in New York (state)]]
+[[Category:Buildings and structures in Buffalo, New York]]
+[[Category:1938 establishments in New York (state)]]
+
+{{BuffaloNY-struct-stub}}

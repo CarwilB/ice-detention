@@ -131,7 +131,7 @@ canonical_wiki_manual_matches <- function() {
     "JTF Camp Six",                                  "Guantanamo Bay Migrant Operations Center",
     "Mccook Detention Center",                       "Cornhusker Clink",
     "Louisiana ICE Processing",                      "Louisiana State Penitentiary (Louisiana Lockup)",
-    "East Mesa Detention Facility",                  "Alligator Alcatraz",
+    "Florida Soft-Sided Facility",                   "Alligator Alcatraz",
     # Bad-redirect wiki links that user confirmed should be kept
     "Plymouth County Correctional Facility",         "Plymouth County Correctional(Plymouth House of Corrections)",
     "Pinellas County Jail",                          "Pinellas County Jail"
@@ -152,6 +152,97 @@ wiki_search_exclude_list <- function() {
   )
 }
 
+# ── Editor-learned cell overrides ─────────────────────────────────────────────
+
+# Cell values other editors added to the live Wikipedia list article
+# (List of immigrant detention sites in the United States; cumulative diff
+# oldid 1356058855 -> 1372812418, adopted 2026-10-24). Applied by
+# build_wiki_list_table() so regenerating the table preserves these additions
+# instead of clobbering them. Keyed by ICE facility_name; `column` matches
+# the output columns of build_wiki_list_table(). Editor errors (e.g.
+# [[Arizona|AR]] for Arkansas rows, [[Master of Arts|MA]] for Massachusetts)
+# are recorded in data/wiki-editor-changes.csv but NOT adopted here.
+wiki_editor_cell_overrides <- function() {
+  tibble::tribble(
+    ~facility_name,                                   ~column,             ~value,
+    "Krome North Service Processing Center",          "management",
+    "Akima (division of [[NANA Regional Corporation#Akima|NANA Regional Corporation]])<ref>[https://alaskapublic.org/news/politics/2025-10-23/lucrative-ice-detention-centers-bring-money-and-anger-to-an-alaska-native-community \"Lucrative ICE detention centers bring money — and anger — to an Alaska Native community\"] [[Bloomberg Business]] via [[Alaska Public Media]], October 23, 2025. Retrieved June 9, 2026.</ref>",
+    "Alexandria Staging Facility",                    "management",
+    "GEO Group<ref name=\"geogroup/alexandria-staging-facility\">{{cite web |title=Alexandria Staging Facility |url=https://www.geogroup.com/facilities/alexandria-staging-facility/ |website=GEO Group |access-date=1 September 2026 |location=[[Alexandria International Airport]], 96 George Thompson Dr, Alexandria, LA 71303}}</ref>",
+    "California City Immigration Processing Center",   "facility_name_wiki",
+    "[[California City Detention Facility]]",
+    "Denver Contract Detention Facility",             "facility_name_wiki",
+    "[[Denver Contract Detention Facility]] <small>(aka Aurora ICE Processing Center)</small>",
+    "Miami Correctional Center",                      "facility_name_wiki",
+    "[[Miami Correctional Facility]] (\"[[Speedway Slammer]]\")",
+    "McCook Detention Center",                        "facility_name_wiki",
+    "[[Cornhusker Clink|McCook Detention Center]] (\"[[Cornhusker Clink]]\")",
+    # ICE source name carries stray interior periods; editors cleaned them
+    "Correctional. Center of Northwest Ohio",         "facility_name_wiki",
+    "Correctional Center of Northwest Ohio",
+    "Alexandria Staging Facility",                    "city",
+    "[[Alexandria International Airport (Louisiana)|Alexandria International Airport]], [[Alexandria, LA]]",
+    # Camp East Montana: contractor changed after the Amentum acquisition;
+    # capacity sourced from June 2026 GAO / Washington Post reporting
+    "Camp East Montana",                              "management",
+    "[[Amentum Holdings|Amentum Services]]",
+    "Camp East Montana",                              "minimum_capacity",
+    "5000<ref>{{Cite news |last=MacMillan |first=Douglas |date=2026-06-09 |title=ICE detention camp endangered migrants and wasted millions, watchdog finds |url=https://www.washingtonpost.com/business/2026/06/09/ice-detention-camp-wasted-millions-endangered-migrants-gao-finds/ |access-date=2026-06-11 |work=The Washington Post |language=en-US |issn=0190-8286}}</ref>",
+    "Camp East Montana",                              "facility_type_wiki",
+    "Privately operated, government-owned [[U.S. Immigration and Customs Enforcement|ICE]] migrant detention center<ref>[https://kfoxtv.com/news/local/ice-el-pasos-camp-east-montana-stays-open-changing-contractors-will-improve-conditions-texas-tx-county-fort-bliss-immigration-migrant-kristi-noem-acquisition-logistics-llc \"ICE: El Paso's Camp East Montana stays open; promises to improve conditions\"] [[KFOX14]], March 11, 2026. Retrieved June 11, 2026.</ref>",
+    # Editor label decapitalization in the displayed link text
+    "Adelanto ICE Processing Center",                 "facility_name_wiki",
+    "[[Adelanto Detention Center|Adelanto ICE processing center]]",
+    # Editor-added HTML anchor on the Krome row
+    "Krome North Service Processing Center",          ".row_id",
+    "krome_north_service_processing_center"
+  )
+}
+
+# Editor-added rows that appear in the live article but in NO ICE spreadsheet
+# (verified against the FY26a/FY26b/FY26 keyed lists). Preserved verbatim,
+# refs included, so regenerating the table does not delete them. Cells use
+# the article's own wording and status labels.
+wiki_editor_extra_rows <- function() {
+  tibble::tribble(
+    ~facility_name_wiki, ~status, ~city, ~state, ~facility_type_wiki,
+    ~authority, ~management, ~average_daily_population, ~minimum_capacity,
+    ~demographics,
+    "[[Arizona Removal Operations Coordination Center]]<ref name=\"ice/AROCC-2022-08-3\">{{cite web |title=Subpart B PREA Audit: Corrective Action Plan Final Determination:  Arizona Removal Operations Coordination Center |url=https://www.ice.gov/doclib/foia/prea_audit/arizonaRemovalOpsCoordinationCntr_Aug2-3_2022.pdf |website=[[United States Immigration and Customs Enforcement]] |quote=Arizona Removal Operations Coordination Center, 6335 S Downwind Circle #101, Mesa, Arizona |access-date=14 April 2026 |archive-url=https://web.archive.org/web/20230424143311/https://www.ice.gov/doclib/foia/prea_audit/arizonaRemovalOpsCoordinationCntr_Aug2-3_2022.pdf |archive-date=2023-04-24}}</ref><ref name=\"hoodline/mesa-ice-hub\">{{cite news |title=Mesa ICE Holding Site Called 'Sickening' By Arizona Democrats |url=https://hoodline.com/2026/02/mesas-hidden-ice-hub-branded-sickening-after-surprise-lawmaker-tour/ |access-date=14 April 2026 |work=[[Hoodline]] |date=21 February 2026 |language=en}}</ref>",
+    "In use (FY26)",
+    "[[Mesa Gateway Airport]], [[Mesa, AZ]]",
+    "[[Arizona|AZ]]",
+    "ICE short-term migrant detention center",
+    "STAGING",
+    "",
+    "157<ref name=\"azmirror/ice-phoenix\">{{cite news |last1=MacDonald-Evoy |first1=Jerod |title=The ICE Facility in Phoenix you probably didn't know existed |url=https://azmirror.com/2025/08/29/the-ice-facility-in-phoenix-you-probably-didnt-know-existed/ |access-date=14 April 2026 |work=[[Arizona Mirror]] |date=29 August 2025}}</ref>",
+    "",
+    "Female/Male"
+  )
+}
+
+#' Apply editor-learned cell overrides to a prepared wiki list table
+#'
+#' Columns not yet present in `df` (e.g. the `.row_id` anchor column) are
+#' created as NA before updating.
+#'
+#' @param df Output of build_wiki_list_table() plus a `facility_name` column.
+#' @param overrides Override table (default `wiki_editor_cell_overrides()`).
+#'   Callers may pass a filtered table, e.g. without `.row_id` anchors.
+#' @return df with overridden cells updated, `facility_name` dropped.
+apply_wiki_editor_overrides <- function(df, overrides = wiki_editor_cell_overrides()) {
+  for (col in unique(overrides$column)) {
+    if (!col %in% names(df)) df[[col]] <- NA_character_
+    patch <- overrides |>
+      dplyr::filter(.data$column == col) |>
+      dplyr::select(facility_name, value) |>
+      stats::setNames(c("facility_name", col))
+    df <- dplyr::rows_update(df, patch, by = "facility_name",
+                             unmatched = "ignore")
+  }
+  dplyr::select(df, -facility_name)
+}
+
 # Name fixes for the contractors patch CSV: patch names that don't exactly
 # match ICE facility names.
 contractors_patch_name_fixes <- function() {
@@ -165,6 +256,34 @@ contractors_patch_name_fixes <- function() {
       "Western Tennessee Detention Facility"
     )
   )
+}
+
+
+#' Backfill contracted bed capacity from the 2017 DMCP facility listing
+#'
+#' Era tables covering FY10–FY17 draw on the DMCP listings, which report a
+#' single `facility_capacity` rather than the annual stats' contracted
+#' minimum. Fills missing `inspections_guaranteed_minimum` values by
+#' canonical_id from fl17 (creating the column when absent).
+#'
+#' @param df Facilities tibble, optionally without
+#'   `inspections_guaranteed_minimum`.
+#' @param fl17_keyed Output of the `faclist17_keyed` target.
+#' @return df with `inspections_guaranteed_minimum` filled from fl17 where NA.
+backfill_fl17_capacity <- function(df, fl17_keyed) {
+  if (!"inspections_guaranteed_minimum" %in% names(df)) {
+    df$inspections_guaranteed_minimum <- NA_real_
+  }
+  caps <- fl17_keyed |>
+    dplyr::select(canonical_id, fl17_capacity = facility_capacity) |>
+    dplyr::mutate(fl17_capacity = as.numeric(fl17_capacity))
+  df |>
+    dplyr::left_join(caps, by = "canonical_id") |>
+    dplyr::mutate(
+      inspections_guaranteed_minimum = dplyr::coalesce(
+        inspections_guaranteed_minimum, fl17_capacity)
+    ) |>
+    dplyr::select(-fl17_capacity)
 }
 
 # Hand-verified wiki_slug corrections for cases where the scraped link is a
@@ -265,10 +384,13 @@ scrape_wiki_detention_table <- function(
       )
     )
 
-  # Separate location into city/state
-  tbl <- tbl |>
-    tidyr::separate(location, into = c("city", "state"),
-                    sep = ",\\s*", extra = "merge", fill = "right")
+  # Separate location into city/state. Older revisions have a single
+  # Location column; current revisions already carry City and State columns.
+  if ("location" %in% names(tbl) && !"city" %in% names(tbl)) {
+    tbl <- tbl |>
+      tidyr::separate(location, into = c("city", "state"),
+                      sep = ",\\s*", extra = "merge", fill = "right")
+  }
 
   # Normalize the facility name column to "name" regardless of table version.
   # The old revision used "Name" (→ "name"); the current table uses
@@ -636,37 +758,43 @@ standardize_management <- function(df) {
 
 # ── Validation: Check Wikipedia article existence/redirects ────────────────
 
-#' Check whether Wikipedia article(s) exist and whether they are redirects
+#' Check whether Wikipedia article(s) exist, and whether they are redirects
+#' or disambiguation pages
 #'
 #' Queries the Wikipedia API for one or more page titles in batch (up to 50 per
 #' request). Returns a tibble with one row per title indicating whether the page
-#' exists, whether it is a redirect, and (if so) the resolved target article.
+#' exists, whether it is a redirect, whether it is a disambiguation page, and
+#' (if a redirect) the resolved target article.
 #'
 #' @param titles Character vector of Wikipedia article titles to check.
 #' @param lang Language code (default `"en"`).
 #' @param batch_size Number of titles per API request (max 50).
 #' @return A tibble with columns `title`, `exists` (logical), `redirect`
-#'   (logical), and `redirect_target` (character, NA if not a redirect).
+#'   (logical), `disambiguation` (logical), and `redirect_target` (character,
+#'   NA if not a redirect).
 check_wiki_articles <- function(titles, lang = "en", batch_size = 50) {
   api_url <- sprintf("https://%s.wikipedia.org/w/api.php", lang)
 
   batches <- split(titles, ceiling(seq_along(titles) / batch_size))
 
   purrr::map(batches, function(batch) {
-    # First pass: page info without following redirects
+    # First pass: page info (without following redirects) and the
+    # disambiguation pageprop, which is present only on dab pages
     resp_info <- httr::GET(api_url, query = list(
       action = "query",
       titles = paste(batch, collapse = "|"),
-      prop   = "info",
+      prop   = "info|pageprops",
+      ppprop = "disambiguation",
       format = "json"
     ))
     pages_info <- httr::content(resp_info)$query$pages
 
     info_map <- purrr::map(pages_info, function(p) {
       list(
-        title    = p$title,
-        exists   = is.null(p$missing),
-        redirect = !is.null(p$redirect)
+        title         = p$title,
+        exists        = is.null(p$missing),
+        redirect      = !is.null(p$redirect),
+        disambiguation = !is.null(p$pageprops$disambiguation)
       )
     }) |> purrr::set_names(purrr::map_chr(pages_info, "title"))
 
@@ -705,7 +833,8 @@ check_wiki_articles <- function(titles, lang = "en", batch_size = 50) {
           info <- info_map[[norm_to]]
         }
         if (is.null(info)) {
-          info <- list(title = t, exists = FALSE, redirect = FALSE)
+          info <- list(title = t, exists = FALSE, redirect = FALSE,
+                       disambiguation = FALSE)
         }
       }
 
@@ -713,10 +842,98 @@ check_wiki_articles <- function(titles, lang = "en", batch_size = 50) {
         title           = t,
         exists          = info$exists,
         redirect        = info$redirect,
+        disambiguation  = info$disambiguation,
         redirect_target = unname(redirect_targets[info$title]) %||% NA_character_
       )
     }) |> purrr::list_rbind()
   }) |> purrr::list_rbind()
+}
+
+
+#' Extract wikilink targets from wikitext cells
+#'
+#' Pulls the link target (the part before any `|`) out of every
+#' `[[target|label]]` or `[[target]]` in a character vector. Text outside
+#' links and piped labels are ignored.
+#'
+#' @param x Character vector of wikitext cell values.
+#' @return Character vector of link targets, unlisted across cells.
+extract_wikilink_targets <- function(x) {
+  matches <- regmatches(
+    x, gregexpr("\\[\\[([^\\]|]+)(?:\\|[^\\]]*)?\\]\\]", x, perl = TRUE)
+  )
+  # POSIX ERE does not treat "\" as an escape inside [...] — so strip the
+  # "[[" prefix and cut at the first "|" instead of one char-class regex
+  unlist(lapply(matches, function(m) {
+    m <- sub("\\|.*$", "", sub("\\]\\]$", "", sub("^\\[\\[", "", m)))
+  }), use.names = FALSE)
+}
+
+
+#' Scan City (or State) links in a generated list-article table for problems
+#'
+#' Extracts every wikilink target from a wikitext column of a table built by
+#' `build_wiki_list_table()` and checks each distinct target against the
+#' Wikipedia API: does the article exist, is it a redirect (and to where), and
+#' is it a disambiguation page? Redirect targets are checked too, so links
+#' that redirect into a dab page or a double redirect are caught. Use before
+#' each upload.
+#'
+#' Most "City, ST" links resolve through Wikipedia's standard comma-state
+#' redirects (e.g. Adelanto, CA -> Adelanto, California); those are reported
+#' in the `redirect`/`redirect_target` columns but are not `problem`s. The
+#' `problem` flag marks the actionable cases: non-existent articles,
+#' disambiguation pages, and redirects landing on a dab page or a missing
+#' article.
+#'
+#' @param wiki_df Tibble of wikitext-formatted cells (e.g. the output of
+#'   `build_wiki_list_table()`).
+#' @param column Column name to scan (default `"city"`).
+#' @param lang Language code (default `"en"`).
+#' @return A tibble with one row per distinct link target, with columns
+#'   `link_target`, `exists`, `redirect`, `disambiguation`, `redirect_target`,
+#'   `redirect_target_disambiguation` (TRUE when the redirect lands on a dab
+#'   page), and `problem`. Problem rows are sorted first.
+check_wiki_city_links <- function(wiki_df, column = "city", lang = "en") {
+  empty <- dplyr::tibble(
+    link_target = character(), exists = logical(),
+    redirect = logical(), disambiguation = logical(),
+    redirect_target = character(), redirect_target_disambiguation = logical(),
+    problem = logical()
+  )
+
+  targets <- unique(extract_wikilink_targets(wiki_df[[column]]))
+  if (length(targets) == 0) {
+    return(empty)
+  }
+
+  results <- check_wiki_articles(targets, lang = lang) |>
+    dplyr::rename(link_target = title)
+
+  # Second level: where do the redirects land? A comma-state redirect to the
+  # city article is fine; a redirect into a dab page, a missing page, or a
+  # double redirect is not.
+  redirect_dests <- unique(stats::na.omit(results$redirect_target[results$redirect]))
+  dest_flags <- if (length(redirect_dests) > 0) {
+    check_wiki_articles(redirect_dests, lang = lang) |>
+      dplyr::select(title, dest_disambiguation = disambiguation,
+                    dest_exists = exists, dest_redirect = redirect) |>
+      dplyr::mutate(
+        dest_disambiguation = dest_disambiguation | !dest_exists | dest_redirect
+      )
+  } else {
+    dplyr::tibble(title = character(), dest_disambiguation = logical(),
+                  dest_exists = logical(), dest_redirect = logical())
+  }
+
+  results |>
+    dplyr::left_join(dest_flags, by = c("redirect_target" = "title")) |>
+    dplyr::mutate(
+      redirect_target_disambiguation = dplyr::coalesce(dest_disambiguation, FALSE),
+      problem = !exists | disambiguation | redirect_target_disambiguation
+    ) |>
+    dplyr::select(-dest_disambiguation, -dest_exists, -dest_redirect) |>
+    dplyr::arrange(dplyr::desc(problem), redirect, link_target)
 }
 
 

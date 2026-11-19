@@ -1,0 +1,70 @@
+{{Short description|Federal prison in Mississippi, United States}}
+{{Use American English|date=August 2025}}
+{{Infobox Prison
+| name            = Adams County Correctional Center
+| image           = 
+| location        = 20 Hobo Fork Road, [[Natchez, Mississippi]], USA
+| pushpin_map     = USA Mississippi
+| pushpin_caption = Location in Mississippi
+| coordinates     = {{coord|31.55656|-91.22142|format=dms|display=it|type:landmark}}
+| status          = Open
+| classification  = 
+| capacity        = 2260
+| population      = 2162<ref name="ice-detention-fy26">{{Cite web | publisher = U.S. Department of Homeland Security | last = U.S. Immigration and Customs Enforcement | title = ICE Detention Statistics FY 2026 | date = 2026-02-02 | url = https://www.ice.gov/doclib/detention/FY26_detentionStats02022026.xlsx}}</ref>
+| population_date = FY 2026 (YTD)
+| opened          = FY 2019<ref name="ice-detention-fy19">{{Cite web | publisher = U.S. Department of Homeland Security | last = U.S. Immigration and Customs Enforcement | title = ICE Detention Statistics FY 2019 | date = 2019-09-30 | url = https://www.ice.gov/doclib/detention/FY19-detentionstats.xlsx}}</ref>
+| former_name     = Adams County Correctional Center<br>Adams County Detention Center
+| closed          = 
+| managed_by      = [[CoreCivic]]
+| warden          = Jason Streeval
+}}
+'''Adams County Correctional Center''' ('''ACCC''') is a medium security prison for men located  in [[unincorporated area|unincorporated]] [[Adams County, Mississippi]], near [[Natchez, Mississippi|Natchez]],<ref>"[http://www.corecivic.com/facilities/adams-county-correctional-center Adams County Correctional Center]." Retrieved on June 28, 2016.</ref> It is owned and operated by [[CoreCivic]] under contract with U.S. Immigration and Customs Enforcement since 2019.<ref>{{cite web|url=https://natchezdemocrat.com/2019/07/11/ice-detainees-housed-at-adams-county-correctional-center/7 |title=ICE detainees housed at Adams County Correctional Center |date=11 July 2019 }}</ref> After striking ground in August 2007 at 20 Hobo Fork Road, Adams Correctional Center opened in July 2009 under contract with the Federal Bureau of Prisons.
+
+The facility has a capacity of around 2,260 inmates.  Most of its prisoners are illegal immigrants charged with re-entering the United States after a deportation.<ref name="courthousenews.com">{{cite web|url=https://www.courthousenews.com/2013/05/10/57518.htm|title=CNS Archives|website=www.courthousenews.com|access-date=22 May 2017}}</ref> It currently holds the largest number of illegal migrants of all detention facilities in the United States with an average daily population of 2,154<ref>{{cite web|url=https://tracreports.org/immigration/detentionstats/facilities.html|title=TraceReports.org|website=www.tracreports.org|access-date=25 Feb 2025}}</ref> CoreCivic has owned the prison since 2007; the facility did not open until late in 2009.<ref>{{cite web|url=http://cca.com/facilities/adams-county-correctional-center#.UvQGIDeK4X8|title=CCA -|website=CCA|access-date=22 May 2017}}</ref><ref>[http://www.bizjournals.com/nashville/stories/2009/03/30/daily25.html Corrections Corp. opens Mississippi prison], ''[[Nashville Business Journal]]'', April 2, 2009. Retrieved 14 January 2017.</ref>
+
+According to an [[FBI]] affidavit dated to 2012, the majority of those incarcerated were Mexican nationals. The largest group of prisoners were "Paisas", an influential group of Mexican nationals who hold power over the prison population.<ref>"[http://jacksonfreepress.media.clients.ellingtoncms.com/news/documents/2012/08/14/ACCC_FBI_Affidavit.pdf ACCC_FBI_Affidavit.pdf]" ([https://web.archive.org/web/20160628133216/http://jacksonfreepress.media.clients.ellingtoncms.com/news/documents/2012/08/14/ACCC_FBI_Affidavit.pdf Archive]). Posted at the ''[[Jackson Free Press]]''. p. 2/5. Retrieved on June 28, 2016.</ref>
+
+==History==
+In May 2012 a riot at the facility claimed the life of Corrections Officer Catlin Hugh Carithers and left sixteen other staff members and three prisoners injured. Twenty-five employees were held hostage during the disturbance, which was ultimately quelled by facility staff with assistance from the [[Mississippi Highway Patrol]] and the [[Federal Bureau of Prisons]].<ref>{{cite news| url=http://www.cnn.com/2012/05/21/us/mississippi-prison-disturbance/index.html?hpt=hp_t2 | work=CNN | title=Sheriff: Anxiety ran high before Mississippi prison riot was quashed | date=22 May 2012}}</ref><ref name="courthousenews.com"/> According to a company statement, the fatality was the second time an employee had "lost his life to inmate assault."<ref>{{cite news |url=http://www.cbsnews.com/8301-501363_162-57438677/sheriff-gang-started-prison-riot-in-mississippi/ |title=Sheriff: Gang started prison riot in Mississippi |url-status=dead |archive-url=https://web.archive.org/web/20120522121158/http://www.cbsnews.com/8301-501363_162-57438677/sheriff-gang-started-prison-riot-in-mississippi/ |archive-date=2012-05-22 |access-date=August 7, 2013}}</ref>
+
+A federal court affidavit filed by the FBI claims the riots were triggered by protests against the abysmal food and medical care provided at the facility.<ref>Kirkham, Chris (September 27, 2012). [http://www.huffingtonpost.com/2012/09/27/private-prisons-immigration_n_1917636.html "Private Prisons: Immigration Convictions In Record Numbers Fueling Corporate Profits"]. ''[[The Huffington Post]].'' Retrieved November 10, 2014.</ref><ref>Aviva Shen (August 14, 2012). [http://thinkprogress.org/justice/2012/08/14/686361/fbi-agent-deadly-riot-in-corporate-run-prison-due-to-complaints-of-inadequate-food-and-health-care/ "FBI Agent: Deadly Riot In Corporate-Run Prison Due To Complaints Of Inadequate Food And Health Care"]. ''[[Think Progress]].'' Retrieved November 10, 2014.</ref> In January 2017, the last of 23 prisoners who were tried for organizing the May 2010 riot was sentenced to an additional 10 years in prison.<ref>[http://www.wtok.com/content/news/Last-organizer-of-Natchez-prison-riot-gets-10-year-sentence-410407645.html "Last organizer of Natchez prison riot gets 10 year sentence"], ''[[WTOK-TV]]'', January 11, 2017.</ref>
+
+In August 2016, Justice Department officials announced that the FBOP would be phasing out its use of contracted facilities, on the grounds that [[private prisons]] provided less safe and less effective services with no substantial cost savings.  The agency expects to allow current contracts on its thirteen remaining private facilities to expire.<ref>{{cite news|last1=Zapotosky|first1=Matt|title=Justice Department says it will end use of private prisons|url=https://www.washingtonpost.com/news/post-nation/wp/2016/08/18/justice-department-says-it-will-end-use-of-private-prisons/|access-date=19 August 2016|newspaper=Washington Post|date=18 Aug 2016}}</ref>
+
+{{Bar chart
+| title      = Average daily population at Adams County Detention Center (Mississippi)<ref name="ice-detention-fy19-fy26">{{Cite web | publisher = U.S. Department of Homeland Security | last = U.S. Immigration and Customs Enforcement | title = ICE Detention Statistics FY 2019 | date = 2019-09-30 | url = https://www.ice.gov/doclib/detention/FY19-detentionstats.xlsx}} Additional fiscal year data: [https://www.ice.gov/doclib/detention/FY20-detentionstats.xlsx FY20], [https://www.ice.gov/doclib/detention/FY21-detentionstats.xlsx FY21], [https://www.ice.gov/doclib/detention/FY22-detentionStats.xlsx FY22], [https://www.ice.gov/doclib/detention/FY23_detentionStats.xlsx FY23], [https://www.ice.gov/doclib/detention/FY24_detentionStats.xlsx FY24], [https://www.ice.gov/doclib/detention/FY25_detentionStats09242025.xlsx FY25], [https://www.ice.gov/doclib/detention/FY26_detentionStats02022026.xlsx FY26].</ref>
+| bar_width  = 35
+| data_max   = 2,280
+| label_type = Fiscal year
+| data_type  = ADP
+| label1     = FY 2019 | data1 = 109
+| label2     = FY 2020 | data2 = 891
+| label3     = FY 2021 | data3 = 716
+| label4     = FY 2022 | data4 = 830
+| label5     = FY 2023 | data5 = 909
+| label6     = FY 2024 | data6 = 1,536
+| label7     = FY 2025 | data7 = 2,171
+| label8     = FY 2026 | data8 = 2,162
+}}
+
+==See also==
+*[[List of immigrant detention sites in the United States]]
+
+==References==
+
+{{reflist}}
+
+==External links==
+*"[https://www.bop.gov/locations/ci/acc/ CI Adams County] {{Webarchive|url=https://web.archive.org/web/20160914030034/https://www.bop.gov/locations/ci/acc/ |date=2016-09-14 }}." [[Federal Bureau of Prisons]]
+*"[http://www.corecivic.com/facilities/adams-county-correctional-center Adams County Correctional Center]." [[Corrections Corporation of America]]
+* [http://www.correctionscorp.com/our-history Our History] {{Webarchive|url=https://web.archive.org/web/20180311011024/http://www.correctionscorp.com/our-history |date=2018-03-11 }}. [[Corrections Corporation of America|CorrectionCorp's]] timeline with ACCC history
+
+{{Federal Bureau of Prisons}}
+
+[[Category:CoreCivic]]
+[[Category:Prisons in Mississippi]]
+[[Category:Buildings and structures in Adams County, Mississippi]]
+[[Category:Private prisons in the United States]]
+[[Category:Immigration detention centers and prisons in the United States]]
+[[Category:2019 establishments in Mississippi]]
+[[Category:Prisons completed in the 2010s]]
